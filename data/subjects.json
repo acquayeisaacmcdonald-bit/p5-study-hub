@@ -1,0 +1,48 @@
+{
+  "class": "P5",
+  "subjects": [
+    {
+      "id": "maths",
+      "name": "Mathematics",
+      "icon": "🔢",
+      "file": "data/maths.json",
+      "available": true
+    },
+    {
+      "id": "english",
+      "name": "English Language",
+      "icon": "📖",
+      "available": false
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "icon": "🔬",
+      "available": false
+    },
+    {
+      "id": "social",
+      "name": "Social Studies",
+      "icon": "🌍",
+      "available": false
+    },
+    {
+      "id": "rme",
+      "name": "Religious & Moral Education",
+      "icon": "🕊️",
+      "available": false
+    },
+    {
+      "id": "computing",
+      "name": "Computing",
+      "icon": "💻",
+      "available": false
+    },
+    {
+      "id": "ghanaian",
+      "name": "Ghanaian Language",
+      "icon": "🗣️",
+      "available": false
+    }
+  ]
+}

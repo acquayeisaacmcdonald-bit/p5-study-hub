@@ -2,45 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flashcard & Quiz App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#1e3a8a" />
+  <meta name="description" content="P5 Study Hub — free study app for Primary 5 students in Ghana." />
+  <title>P5 Study Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
-    <header>
-      <h1>📚 Study Buddy</h1>
-      <div class="tabs">
-        <button class="tab active" data-tab="study">Study</button>
-        <button class="tab" data-tab="quiz">Quiz</button>
-        <button class="tab" data-tab="manage">Manage</button>
-        <button class="tab" data-tab="stats">Stats</button>
+
+    <!-- ================= HEADER ================= -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-icon">📚</span>
+        <div>
+          <h1>P5 Study Hub</h1>
+          <p class="tagline">Learn. Practice. Excel.</p>
+        </div>
       </div>
+      <button id="themeBtn" class="icon-btn" title="Change theme">🎨</button>
     </header>
 
-    <!-- ===== STUDY TAB ===== -->
-    <section class="tab-panel active" id="study">
-      <div class="filters">
-        <select id="studyCategory">
-          <option value="all">All categories</option>
-        </select>
-        <select id="studyDifficulty">
-          <option value="all">All difficulties</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
+    <!-- ================= HOME ================= -->
+    <section class="screen active" id="screen-home">
+      <p class="greeting" id="greeting">Welcome! 👋</p>
+
+      <h2>Choose a subject</h2>
+      <div class="subject-grid" id="subjectGrid"></div>
+
+      <h2>Topics</h2>
+      <div class="topic-list" id="homeTopicList"></div>
+
+      <button class="progress-link" id="progressLink">📊 View My Progress</button>
+    </section>
+
+    <!-- ================= TOPIC ================= -->
+    <section class="screen" id="screen-topic">
+      <button class="back-btn" data-back>← Back</button>
+      <h2 id="topicTitle">Topic</h2>
+      <p class="topic-meta" id="topicMeta"></p>
+
+      <div class="mode-grid">
+        <button class="mode-card" id="modeStudy">
+          <span class="mode-icon">🃏</span>
+          <span class="mode-name">Study</span>
+          <span class="mode-desc">Flip through the cards</span>
+        </button>
+        <button class="mode-card" id="modeQuiz">
+          <span class="mode-icon">🎯</span>
+          <span class="mode-name">Quiz</span>
+          <span class="mode-desc">Test yourself</span>
+        </button>
       </div>
+    </section>
+
+    <!-- ================= STUDY ================= -->
+    <section class="screen" id="screen-study">
+      <button class="back-btn" data-back>← Back</button>
+      <p class="study-topic" id="studyTopicLabel"></p>
 
       <div class="card-container">
         <div class="card" id="card">
           <div class="card-face card-front">
             <span class="badge" id="frontBadge"></span>
-            <p id="question">Question goes here</p>
+            <p id="question">Loading…</p>
           </div>
           <div class="card-face card-back">
             <span class="badge" id="backBadge"></span>
-            <p id="answer">Answer goes here</p>
+            <p id="answer">…</p>
           </div>
         </div>
       </div>
@@ -50,104 +79,78 @@
         <button id="flipBtn">Flip</button>
         <button id="nextBtn">Next ▶</button>
       </div>
-
       <p class="progress" id="progress">Card 1 of 1</p>
     </section>
 
-    <!-- ===== QUIZ TAB ===== -->
-    <section class="tab-panel" id="quiz">
-      <div id="quizSetup">
-        <h2>Quiz Setup</h2>
-        <label>Category
-          <select id="quizCategory">
-            <option value="all">All categories</option>
-          </select>
-        </label>
-        <label>Difficulty
-          <select id="quizDifficulty">
-            <option value="all">All difficulties</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </label>
-        <label>Number of questions
-          <input type="number" id="quizLength" value="5" min="1" max="50" />
-        </label>
-        <button id="startQuizBtn">Start Quiz</button>
-      </div>
+    <!-- ================= QUIZ ================= -->
+    <section class="screen" id="screen-quiz">
+      <button class="back-btn" data-back>← Back</button>
 
-      <div id="quizPlay" class="hidden">
+      <div id="quizPlay">
+        <p class="quiz-topic" id="quizTopicLabel"></p>
         <p class="progress" id="quizProgress">Question 1 of 5</p>
-        <div class="quiz-question" id="quizQuestion">Question</div>
+        <div class="quiz-question" id="quizQuestion">…</div>
         <div class="quiz-options" id="quizOptions"></div>
         <p class="quiz-feedback" id="quizFeedback"></p>
       </div>
 
       <div id="quizResult" class="hidden">
-        <h2>🎉 Quiz Complete!</h2>
-        <p class="score" id="finalScore">You scored 0 / 0</p>
+        <h2 id="resultTitle">Well done!</h2>
+        <p class="score" id="finalScore">0 / 0</p>
         <p id="scoreMessage"></p>
-        <button id="restartQuizBtn">Take Another Quiz</button>
+        <div class="result-actions">
+          <button id="retryQuizBtn">Try Again</button>
+          <button id="backHomeBtn" class="secondary">Home</button>
+        </div>
       </div>
     </section>
 
-    <!-- ===== MANAGE TAB ===== -->
-    <section class="tab-panel" id="manage">
-      <h2>Add a Card</h2>
-      <form id="addCardForm">
-        <label>Question
-          <input type="text" id="newQuestion" required />
-        </label>
-        <label>Answer
-          <input type="text" id="newAnswer" required />
-        </label>
-        <label>Category
-          <input type="text" id="newCategory" placeholder="e.g. Math, Science" required />
-        </label>
-        <label>Difficulty
-          <select id="newDifficulty">
-            <option value="easy">Easy</option>
-            <option value="medium" selected>Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </label>
-        <button type="submit">Add Card</button>
-      </form>
+    <!-- ================= PROGRESS ================= -->
+    <section class="screen" id="screen-progress">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>📊 My Progress</h2>
 
-      <h2>Your Cards (<span id="cardCount">0</span>)</h2>
-      <div class="card-list" id="cardList"></div>
-
-      <button id="resetBtn" class="danger">Reset to Default Cards</button>
-    </section>
-
-    <!-- ===== STATS TAB ===== -->
-    <section class="tab-panel" id="stats">
-      <h2>📊 Your Progress</h2>
       <div class="stat-grid">
         <div class="stat">
-          <span class="stat-value" id="statTotalCards">0</span>
-          <span class="stat-label">Total Cards</span>
+          <span class="stat-value" id="statTotalQuestions">0</span>
+          <span class="stat-label">Questions Answered</span>
         </div>
         <div class="stat">
-          <span class="stat-value" id="statQuizzes">0</span>
-          <span class="stat-label">Quizzes Taken</span>
+          <span class="stat-value" id="statCorrect">0</span>
+          <span class="stat-label">Correct</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="statAccuracy">0%</span>
+          <span class="stat-label">Accuracy</span>
         </div>
         <div class="stat">
           <span class="stat-value" id="statBest">0%</span>
-          <span class="stat-label">Best Score</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statAvg">0%</span>
-          <span class="stat-label">Average Score</span>
+          <span class="stat-label">Best Quiz</span>
         </div>
       </div>
 
       <h3>Recent Quizzes</h3>
       <ul class="history" id="quizHistory"></ul>
 
-      <button id="clearHistoryBtn" class="danger">Clear History</button>
+      <button id="clearProgressBtn" class="danger">Clear My Progress</button>
     </section>
+
+    <!-- ================= THEME PICKER MODAL ================= -->
+    <div class="modal hidden" id="themeModal">
+      <div class="modal-card">
+        <h2>Pick a theme</h2>
+        <p class="modal-sub">Choose a look that makes you happy.</p>
+        <div class="theme-grid" id="themeGrid"></div>
+        <button class="modal-close" id="themeClose">Done</button>
+      </div>
+    </div>
+
+    <!-- ================= LOADING ================= -->
+    <div class="loading hidden" id="loading">
+      <div class="spinner"></div>
+      <p>Loading…</p>
+    </div>
+
   </div>
 
   <script src="script.js"></script>

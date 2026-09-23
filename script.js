@@ -1,216 +1,264 @@
-// =========================================================
-// 1. DATA & STORAGE
-// =========================================================
+// ===================================================
+// P5 STUDY HUB — APP LOGIC
+// ===================================================
 
-const DEFAULT_CARDS = [
-  { question: "What is the capital of Ghana?", answer: "Accra", category: "Geography", difficulty: "easy" },
-  { question: "What is 7 × 8?", answer: "56", category: "Math", difficulty: "easy" },
-  { question: "Who wrote 'Things Fall Apart'?", answer: "Chinua Achebe", category: "Literature", difficulty: "medium" },
-  { question: "What is the chemical symbol for water?", answer: "H₂O", category: "Science", difficulty: "easy" },
-  { question: "What year did Ghana gain independence?", answer: "1957", category: "History", difficulty: "medium" },
-  { question: "What is the derivative of sin(x)?", answer: "cos(x)", category: "Math", difficulty: "hard" },
-  { question: "What is the largest planet in our solar system?", answer: "Jupiter", category: "Science", difficulty: "easy" },
-  { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci", category: "Art", difficulty: "medium" }
-];
-
+// ---------- CONFIG ----------
 const STORAGE_KEYS = {
-  cards: "flashcards.cards",
-  history: "flashcards.history"
+  theme: "p5hub.theme",
+  progress: "p5hub.progress",
+  history: "p5hub.history"
 };
 
-// Load from localStorage, or fall back to defaults
-function loadCards() {
-  const raw = localStorage.getItem(STORAGE_KEYS.cards);
-  if (!raw) return [...DEFAULT_CARDS];
-  try { return JSON.parse(raw); } catch { return [...DEFAULT_CARDS]; }
-}
-function saveCards() {
-  localStorage.setItem(STORAGE_KEYS.cards, JSON.stringify(cards));
-}
+const THEMES = [
+  { id: "classic", name: "Classic",   colors: ["#1e3a8a", "#0f172a"] },
+  { id: "rainbow", name: "Rainbow",   colors: ["#f97316", "#7c3aed"] },
+  { id: "space",   name: "Space",     colors: ["#0f172a", "#000000"] },
+  { id: "ocean",   name: "Ocean",     colors: ["#0e7490", "#082f49"] },
+  { id: "forest",  name: "Forest",    colors: ["#15803d", "#052e16"] },
+  { id: "ghana",   name: "Ghana",     colors: ["#166534", "#7f1d1d"] },
+  { id: "sunrise", name: "Sunrise",   colors: ["#fb923c", "#7c2d12"] },
+  { id: "sports",  name: "Sports",    colors: ["#1e40af", "#0c4a6e"] },
+  { id: "safari",  name: "Safari",    colors: ["#b45309", "#451a03"] },
+  { id: "purple",  name: "Purple",    colors: ["#7c3aed", "#2e1065"] },
+  { id: "paper",   name: "Paper",     colors: ["#f5f5f4", "#e7e5e4"] }
+];
 
-function loadHistory() {
-  const raw = localStorage.getItem(STORAGE_KEYS.history);
-  if (!raw) return [];
-  try { return JSON.parse(raw); } catch { return []; }
-}
-function saveHistory() {
-  localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(quizHistory));
-}
-
-let cards = loadCards();
-let quizHistory = loadHistory();
-
-// =========================================================
-// 2. TABS
-// =========================================================
-
-const tabButtons = document.querySelectorAll(".tab");
-const tabPanels = document.querySelectorAll(".tab-panel");
-
-tabButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    tabButtons.forEach(b => b.classList.remove("active"));
-    tabPanels.forEach(p => p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById(btn.dataset.tab).classList.add("active");
-
-    if (btn.dataset.tab === "manage") renderCardList();
-    if (btn.dataset.tab === "stats") renderStats();
-    if (btn.dataset.tab === "study") renderStudyCard();
-  });
-});
-
-// =========================================================
-// 3. STUDY MODE
-// =========================================================
-
+// ---------- STATE ----------
+let subjectsData = null;
+let currentSubject = null;   // the maths.json content
+let currentTopic = null;     // the chosen topic object
 let studyDeck = [];
 let studyIndex = 0;
-
-const cardEl = document.getElementById("card");
-const questionEl = document.getElementById("question");
-const answerEl = document.getElementById("answer");
-const frontBadge = document.getElementById("frontBadge");
-const backBadge = document.getElementById("backBadge");
-const progressEl = document.getElementById("progress");
-
-const studyCategory = document.getElementById("studyCategory");
-const studyDifficulty = document.getElementById("studyDifficulty");
-
-function buildStudyDeck() {
-  const cat = studyCategory.value;
-  const diff = studyDifficulty.value;
-  studyDeck = cards.filter(c =>
-    (cat === "all" || c.category === cat) &&
-    (diff === "all" || c.difficulty === diff)
-  );
-  studyIndex = 0;
-}
-
-function renderStudyCard() {
-  buildStudyDeck();
-
-  if (studyDeck.length === 0) {
-    questionEl.textContent = "No cards match your filters.";
-    answerEl.textContent = "Try different filters or add cards.";
-    frontBadge.textContent = "";
-    backBadge.textContent = "";
-    progressEl.textContent = "0 of 0";
-    return;
-  }
-
-  const card = studyDeck[studyIndex];
-  questionEl.textContent = card.question;
-  answerEl.textContent = card.answer;
-  frontBadge.textContent = `${card.category} • ${card.difficulty}`;
-  backBadge.textContent = card.category;
-  progressEl.textContent = `Card ${studyIndex + 1} of ${studyDeck.length}`;
-  cardEl.classList.remove("flipped");
-}
-
-function flipCard() { cardEl.classList.toggle("flipped"); }
-function nextCard() {
-  if (studyDeck.length === 0) return;
-  studyIndex = (studyIndex + 1) % studyDeck.length;
-  renderStudyCard();
-}
-function prevCard() {
-  if (studyDeck.length === 0) return;
-  studyIndex = (studyIndex - 1 + studyDeck.length) % studyDeck.length;
-  renderStudyCard();
-}
-
-document.getElementById("nextBtn").addEventListener("click", nextCard);
-document.getElementById("prevBtn").addEventListener("click", prevCard);
-document.getElementById("flipBtn").addEventListener("click", flipCard);
-cardEl.addEventListener("click", flipCard);
-studyCategory.addEventListener("change", renderStudyCard);
-studyDifficulty.addEventListener("change", renderStudyCard);
-
-// Keyboard shortcuts
-document.addEventListener("keydown", e => {
-  if (!document.getElementById("study").classList.contains("active")) return;
-  if (e.key === "ArrowRight") nextCard();
-  if (e.key === "ArrowLeft") prevCard();
-  if (e.key === " ") { e.preventDefault(); flipCard(); }
-});
-
-// =========================================================
-// 4. QUIZ MODE
-// =========================================================
-
 let quizDeck = [];
 let quizIndex = 0;
 let quizScore = 0;
 let quizLocked = false;
 
-const quizSetup = document.getElementById("quizSetup");
-const quizPlay = document.getElementById("quizPlay");
-const quizResult = document.getElementById("quizResult");
-const quizCategory = document.getElementById("quizCategory");
-const quizDifficulty = document.getElementById("quizDifficulty");
-const quizLength = document.getElementById("quizLength");
-const quizProgress = document.getElementById("quizProgress");
-const quizQuestion = document.getElementById("quizQuestion");
-const quizOptions = document.getElementById("quizOptions");
-const quizFeedback = document.getElementById("quizFeedback");
+let progress = loadProgress();
+let quizHistory = loadHistory();
 
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+// ---------- STORAGE HELPERS ----------
+function loadProgress() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEYS.progress)) || {
+      totalAnswered: 0,
+      totalCorrect: 0,
+      bestPercent: 0
+    };
+  } catch {
+    return { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 };
   }
-  return a;
+}
+function saveProgress() {
+  localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(progress));
+}
+function loadHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEYS.history)) || [];
+  } catch {
+    return [];
+  }
+}
+function saveHistory() {
+  localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(quizHistory));
+}
+function loadTheme() {
+  return localStorage.getItem(STORAGE_KEYS.theme) || "classic";
+}
+function saveTheme(id) {
+  localStorage.setItem(STORAGE_KEYS.theme, id);
 }
 
-function startQuiz() {
-  const cat = quizCategory.value;
-  const diff = quizDifficulty.value;
-  const pool = cards.filter(c =>
-    (cat === "all" || c.category === cat) &&
-    (diff === "all" || c.difficulty === diff)
-  );
+// ---------- DOM HELPERS ----------
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls) => {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  return e;
+};
 
-  if (pool.length < 2) {
-    alert("You need at least 2 cards in this filter to run a quiz.");
-    return;
+// ---------- SCREEN MANAGEMENT ----------
+function showScreen(id) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  $(id).classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// ---------- LOADING ----------
+function showLoading() { $("loading").classList.remove("hidden"); }
+function hideLoading() { $("loading").classList.add("hidden"); }
+
+// ===================================================
+// BOOT
+// ===================================================
+async function boot() {
+  applyTheme(loadTheme());
+  attachGlobalListeners();
+
+  try {
+    showLoading();
+    subjectsData = await fetchJSON("data/subjects.json");
+    currentSubject = await fetchJSON(subjectsData.subjects.find(s => s.id === "maths").file);
+    hideLoading();
+    renderHome();
+  } catch (err) {
+    hideLoading();
+    console.error(err);
+    alert("Could not load study content. Please refresh the page.");
   }
+}
 
-  const requested = Math.max(1, Math.min(parseInt(quizLength.value) || 5, pool.length));
-  quizDeck = shuffle(pool).slice(0, requested);
+async function fetchJSON(path) {
+  // Cache-busting: append a unique query so the browser always fetches fresh data.
+  // In production (Cloudflare Pages) this is harmless — the CDN handles caching.
+  const sep = path.includes("?") ? "&" : "?";
+  const url = `${path}${sep}t=${Date.now()}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
+  return res.json();
+}
+
+
+// ===================================================
+// HOME
+// ===================================================
+function renderHome() {
+  renderSubjects();
+  renderHomeTopics();
+  renderGreeting();
+}
+
+function renderGreeting() {
+  const hour = new Date().getHours();
+  let text = "Welcome";
+  if (hour < 12) text = "Good morning";
+  else if (hour < 17) text = "Good afternoon";
+  else text = "Good evening";
+  $("greeting").textContent = `${text}! Ready to study? 👋`;
+}
+
+function renderSubjects() {
+  const grid = $("subjectGrid");
+  grid.innerHTML = "";
+  subjectsData.subjects.forEach(sub => {
+    const card = el("button", "subject-card" + (sub.available ? "" : " disabled"));
+    card.disabled = !sub.available;
+    card.innerHTML = `
+      <span class="subject-icon">${sub.icon}</span>
+      <span>
+        <span class="subject-name">${sub.name}</span>
+        <span class="subject-tag">${sub.available ? "Available" : "Coming soon"}</span>
+      </span>
+    `;
+    if (sub.available) {
+      card.addEventListener("click", () => {
+        if (sub.id === "maths") {
+          renderHomeTopics();
+          document.querySelector(".topic-list")?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
+    grid.appendChild(card);
+  });
+}
+
+function renderHomeTopics() {
+  const list = $("homeTopicList");
+  list.innerHTML = "";
+  currentSubject.topics.forEach(topic => {
+    const item = el("button", "topic-item");
+    item.innerHTML = `
+      <span class="topic-item-left">
+        <span class="topic-item-icon">${topic.icon || "📘"}</span>
+        <span>
+          <div class="topic-item-name">${topic.name}</div>
+          <div class="topic-item-count">${topic.questions.length} questions</div>
+        </span>
+      </span>
+      <span class="topic-item-arrow">›</span>
+    `;
+    item.addEventListener("click", () => openTopic(topic));
+    list.appendChild(item);
+  });
+}
+
+// ===================================================
+// TOPIC
+// ===================================================
+function openTopic(topic) {
+  currentTopic = topic;
+  $("topicTitle").textContent = topic.name;
+  $("topicMeta").textContent = `${topic.questions.length} questions • ${currentSubject.subject}`;
+  showScreen("screen-topic");
+}
+
+// ===================================================
+// STUDY MODE
+// ===================================================
+function startStudy() {
+  studyDeck = [...currentTopic.questions];
+  studyIndex = 0;
+  $("studyTopicLabel").textContent = `${currentSubject.subject} • ${currentTopic.name}`;
+  renderStudyCard();
+  showScreen("screen-study");
+}
+
+function renderStudyCard() {
+  const q = studyDeck[studyIndex];
+  $("question").textContent = q.q;
+  $("answer").textContent = q.answer;
+  $("frontBadge").textContent = "Question";
+  $("backBadge").textContent = "Answer";
+  $("progress").textContent = `Card ${studyIndex + 1} of ${studyDeck.length}`;
+  $("card").classList.remove("flipped");
+}
+
+function flipCard() {
+  $("card").classList.toggle("flipped");
+}
+function nextCard() {
+  studyIndex = (studyIndex + 1) % studyDeck.length;
+  renderStudyCard();
+}
+function prevCard() {
+  studyIndex = (studyIndex - 1 + studyDeck.length) % studyDeck.length;
+  renderStudyCard();
+}
+
+// ===================================================
+// QUIZ MODE
+// ===================================================
+function startQuiz() {
+  quizDeck = shuffle([...currentTopic.questions]);
   quizIndex = 0;
   quizScore = 0;
   quizLocked = false;
 
-  quizSetup.classList.add("hidden");
-  quizResult.classList.add("hidden");
-  quizPlay.classList.remove("hidden");
+  $("quizTopicLabel").textContent = `${currentSubject.subject} • ${currentTopic.name}`;
+  $("quizPlay").classList.remove("hidden");
+  $("quizResult").classList.add("hidden");
   renderQuizQuestion();
+  showScreen("screen-quiz");
 }
 
 function renderQuizQuestion() {
   quizLocked = false;
-  quizFeedback.textContent = "";
-  const current = quizDeck[quizIndex];
+  $("quizFeedback").textContent = "";
+  $("quizFeedback").className = "quiz-feedback";
 
-  quizProgress.textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
-  quizQuestion.textContent = current.question;
+  const q = quizDeck[quizIndex];
+  $("quizProgress").textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
+  $("quizQuestion").textContent = q.q;
 
-  // Build options: correct answer + 3 distractors from other cards
-  const distractors = shuffle(
-    cards.filter(c => c.answer !== current.answer).map(c => c.answer)
-  ).slice(0, 3);
+  const options = shuffle([...q.options]);
+  const container = $("quizOptions");
+  container.innerHTML = "";
 
-  const options = shuffle([current.answer, ...distractors]);
-
-  quizOptions.innerHTML = "";
   options.forEach(opt => {
-    const btn = document.createElement("button");
-    btn.className = "quiz-option";
+    const btn = el("button", "quiz-option");
     btn.textContent = opt;
-    btn.addEventListener("click", () => handleAnswer(btn, opt, current.answer));
-    quizOptions.appendChild(btn);
+    btn.addEventListener("click", () => handleAnswer(btn, opt, q.answer));
+    container.appendChild(btn);
   });
 }
 
@@ -218,21 +266,27 @@ function handleAnswer(btn, chosen, correct) {
   if (quizLocked) return;
   quizLocked = true;
 
-  const buttons = quizOptions.querySelectorAll(".quiz-option");
+  const buttons = $("quizOptions").querySelectorAll(".quiz-option");
   buttons.forEach(b => {
     b.disabled = true;
     if (b.textContent === correct) b.classList.add("correct");
   });
 
-  if (chosen === correct) {
+  const isRight = chosen === correct;
+  if (isRight) {
     quizScore++;
-    quizFeedback.textContent = "✅ Correct!";
-    quizFeedback.style.color = "#34d399";
+    $("quizFeedback").textContent = "✅ Correct!";
+    $("quizFeedback").className = "quiz-feedback correct";
   } else {
     btn.classList.add("wrong");
-    quizFeedback.textContent = `❌ Wrong — the answer is "${correct}"`;
-    quizFeedback.style.color = "#f87171";
+    $("quizFeedback").textContent = `❌ Correct answer: ${correct}`;
+    $("quizFeedback").className = "quiz-feedback wrong";
   }
+
+  // Update progress
+  progress.totalAnswered += 1;
+  if (isRight) progress.totalCorrect += 1;
+  saveProgress();
 
   setTimeout(() => {
     quizIndex++;
@@ -241,175 +295,174 @@ function handleAnswer(btn, chosen, correct) {
     } else {
       finishQuiz();
     }
-  }, 1200);
+  }, 1300);
 }
 
 function finishQuiz() {
-  quizPlay.classList.add("hidden");
-  quizResult.classList.remove("hidden");
+  $("quizPlay").classList.add("hidden");
+  $("quizResult").classList.remove("hidden");
 
   const pct = Math.round((quizScore / quizDeck.length) * 100);
-  document.getElementById("finalScore").textContent =
-    `You scored ${quizScore} / ${quizDeck.length} (${pct}%)`;
+  $("finalScore").textContent = `${quizScore} / ${quizDeck.length}`;
 
+  let title = "Well done!";
   let msg = "";
-  if (pct === 100) msg = "Perfect! 🏆";
-  else if (pct >= 80) msg = "Excellent work! 🌟";
-  else if (pct >= 60) msg = "Good effort — keep practicing!";
-  else msg = "Keep going, you'll get there! 💪";
-  document.getElementById("scoreMessage").textContent = msg;
+  if (pct === 100) { title = "Perfect! 🏆"; msg = "You got every single question right."; }
+  else if (pct >= 80) { title = "Excellent! 🌟"; msg = "Great work — you really know this topic."; }
+  else if (pct >= 60) { title = "Good job! 👍"; msg = "You're getting there. Keep practising."; }
+  else { title = "Keep going! 💪"; msg = "Review the cards and try again. You'll improve."; }
+  $("resultTitle").textContent = title;
+  $("scoreMessage").textContent = msg;
 
-  // Save to history
+  if (pct > progress.bestPercent) {
+    progress.bestPercent = pct;
+    saveProgress();
+  }
+
   quizHistory.unshift({
     date: new Date().toLocaleString(),
+    topic: currentTopic.name,
     score: quizScore,
     total: quizDeck.length,
     pct
   });
-  quizHistory = quizHistory.slice(0, 20); // keep last 20
+  quizHistory = quizHistory.slice(0, 20);
   saveHistory();
 }
 
-document.getElementById("startQuizBtn").addEventListener("click", startQuiz);
-document.getElementById("restartQuizBtn").addEventListener("click", () => {
-  quizResult.classList.add("hidden");
-  quizSetup.classList.remove("hidden");
-});
+// ===================================================
+// PROGRESS SCREEN
+// ===================================================
+function renderProgress() {
+  const accuracy = progress.totalAnswered === 0
+    ? 0
+    : Math.round((progress.totalCorrect / progress.totalAnswered) * 100);
 
-// =========================================================
-// 5. MANAGE CARDS
-// =========================================================
+  $("statTotalQuestions").textContent = progress.totalAnswered;
+  $("statCorrect").textContent = progress.totalCorrect;
+  $("statAccuracy").textContent = `${accuracy}%`;
+  $("statBest").textContent = `${progress.bestPercent}%`;
 
-const addCardForm = document.getElementById("addCardForm");
-const cardList = document.getElementById("cardList");
-const cardCount = document.getElementById("cardCount");
-
-addCardForm.addEventListener("submit", e => {
-  e.preventDefault();
-  const newCard = {
-    question: document.getElementById("newQuestion").value.trim(),
-    answer: document.getElementById("newAnswer").value.trim(),
-    category: document.getElementById("newCategory").value.trim() || "General",
-    difficulty: document.getElementById("newDifficulty").value
-  };
-  if (!newCard.question || !newCard.answer) return;
-
-  cards.push(newCard);
-  saveCards();
-  addCardForm.reset();
-  document.getElementById("newDifficulty").value = "medium";
-  renderCardList();
-  populateCategoryDropdowns();
-});
-
-function renderCardList() {
-  cardCount.textContent = cards.length;
-  cardList.innerHTML = "";
-
-  if (cards.length === 0) {
-    cardList.innerHTML = '<p style="opacity:0.6;text-align:center;padding:12px">No cards yet.</p>';
+  const list = $("quizHistory");
+  list.innerHTML = "";
+  if (quizHistory.length === 0) {
+    const li = el("li", "empty");
+    li.textContent = "No quizzes taken yet.";
+    list.appendChild(li);
     return;
   }
-
-  cards.forEach((c, i) => {
-    const item = document.createElement("div");
-    item.className = "card-item";
-    item.innerHTML = `
-      <div class="card-item-info">
-        <div class="card-item-q">${escapeHtml(c.question)}</div>
-        <div class="card-item-meta">${escapeHtml(c.category)} • ${c.difficulty}</div>
-      </div>
-      <button data-index="${i}">Delete</button>
+  quizHistory.forEach(h => {
+    const li = el("li");
+    li.innerHTML = `
+      <span>
+        <div>${h.topic}</div>
+        <div class="hist-date">${h.date}</div>
+      </span>
+      <span>${h.score}/${h.total} (${h.pct}%)</span>
     `;
-    item.querySelector("button").addEventListener("click", () => {
-      cards.splice(i, 1);
-      saveCards();
-      renderCardList();
-      populateCategoryDropdowns();
-    });
-    cardList.appendChild(item);
+    list.appendChild(li);
   });
 }
 
-function escapeHtml(str) {
-  const div = document.createElement("div");
-  div.textContent = str;
-  return div.innerHTML;
+// ===================================================
+// THEME
+// ===================================================
+function applyTheme(id) {
+  document.body.className = `theme-${id}`;
+}
+function openThemeModal() {
+  const grid = $("themeGrid");
+  grid.innerHTML = "";
+  const current = loadTheme();
+  THEMES.forEach(t => {
+    const btn = el("button", "theme-swatch" + (t.id === current ? " selected" : ""));
+    btn.style.background = `linear-gradient(135deg, ${t.colors[0]}, ${t.colors[1]})`;
+    btn.innerHTML = `<span class="dot" style="background:${t.colors[0]}"></span>${t.name}`;
+    btn.addEventListener("click", () => {
+      saveTheme(t.id);
+      applyTheme(t.id);
+      grid.querySelectorAll(".theme-swatch").forEach(s => s.classList.remove("selected"));
+      btn.classList.add("selected");
+    });
+    grid.appendChild(btn);
+  });
+  $("themeModal").classList.remove("hidden");
+}
+function closeThemeModal() {
+  $("themeModal").classList.add("hidden");
 }
 
-document.getElementById("resetBtn").addEventListener("click", () => {
-  if (confirm("Reset to default cards? This will delete your custom cards.")) {
-    cards = [...DEFAULT_CARDS];
-    saveCards();
-    renderCardList();
-    populateCategoryDropdowns();
-  }
-});
-
-// =========================================================
-// 6. STATS
-// =========================================================
-
-function renderStats() {
-  document.getElementById("statTotalCards").textContent = cards.length;
-  document.getElementById("statQuizzes").textContent = quizHistory.length;
-
-  if (quizHistory.length === 0) {
-    document.getElementById("statBest").textContent = "0%";
-    document.getElementById("statAvg").textContent = "0%";
-  } else {
-    const best = Math.max(...quizHistory.map(h => h.pct));
-    const avg = Math.round(
-      quizHistory.reduce((sum, h) => sum + h.pct, 0) / quizHistory.length
-    );
-    document.getElementById("statBest").textContent = `${best}%`;
-    document.getElementById("statAvg").textContent = `${avg}%`;
-  }
-
-  const historyEl = document.getElementById("quizHistory");
-  historyEl.innerHTML = "";
-  if (quizHistory.length === 0) {
-    historyEl.innerHTML = '<li class="empty">No quizzes taken yet.</li>';
-  } else {
-    quizHistory.forEach(h => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${h.date}</span><span>${h.score}/${h.total} (${h.pct}%)</span>`;
-      historyEl.appendChild(li);
+// ===================================================
+// LISTENERS
+// ===================================================
+function attachGlobalListeners() {
+  // Back buttons
+  document.querySelectorAll("[data-back]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const active = document.querySelector(".screen.active").id;
+      if (active === "screen-topic") showScreen("screen-home");
+      else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
+      else if (active === "screen-progress") showScreen("screen-home");
     });
-  }
-}
+  });
 
-document.getElementById("clearHistoryBtn").addEventListener("click", () => {
-  if (confirm("Clear all quiz history?")) {
-    quizHistory = [];
-    saveHistory();
-    renderStats();
-  }
-});
+  // Mode buttons
+  $("modeStudy").addEventListener("click", startStudy);
+  $("modeQuiz").addEventListener("click", startQuiz);
 
-// =========================================================
-// 7. INIT
-// =========================================================
+  // Study controls
+  $("flipBtn").addEventListener("click", flipCard);
+  $("nextBtn").addEventListener("click", nextCard);
+  $("prevBtn").addEventListener("click", prevCard);
+  $("card").addEventListener("click", flipCard);
 
-function populateCategoryDropdowns() {
-  const categories = ["all", ...new Set(cards.map(c => c.category))];
-  [studyCategory, quizCategory].forEach(sel => {
-    const current = sel.value;
-    sel.innerHTML = "";
-    categories.forEach(cat => {
-      const opt = document.createElement("option");
-      opt.value = cat;
-      opt.textContent = cat === "all" ? "All categories" : cat;
-      sel.appendChild(opt);
-    });
-    if (categories.includes(current)) sel.value = current;
+  // Quiz result buttons
+  $("retryQuizBtn").addEventListener("click", startQuiz);
+  $("backHomeBtn").addEventListener("click", () => showScreen("screen-home"));
+
+  // Progress
+  $("progressLink").addEventListener("click", () => {
+    renderProgress();
+    showScreen("screen-progress");
+  });
+  $("clearProgressBtn").addEventListener("click", () => {
+    if (confirm("Clear all your progress and quiz history?")) {
+      progress = { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 };
+      quizHistory = [];
+      saveProgress();
+      saveHistory();
+      renderProgress();
+    }
+  });
+
+  // Theme
+  $("themeBtn").addEventListener("click", openThemeModal);
+  $("themeClose").addEventListener("click", closeThemeModal);
+  $("themeModal").addEventListener("click", e => {
+    if (e.target.id === "themeModal") closeThemeModal();
+  });
+
+  // Keyboard shortcuts on study screen
+  document.addEventListener("keydown", e => {
+    if (!$("screen-study").classList.contains("active")) return;
+    if (e.key === "ArrowRight") nextCard();
+    if (e.key === "ArrowLeft") prevCard();
+    if (e.key === " ") { e.preventDefault(); flipCard(); }
   });
 }
 
-function init() {
-  populateCategoryDropdowns();
-  renderStudyCard();
-  renderCardList();
+// ===================================================
+// UTIL
+// ===================================================
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
-init();
+// ===================================================
+// GO
+// ===================================================
+boot();
