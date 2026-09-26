@@ -1695,6 +1695,244 @@
             "Simplify by 4: 8÷4 / 20÷4 = 2/5",
             "Answer: 2/5"
           ]
+                }
+      ]
+    },
+    {
+      "id": "number-patterns",
+      "name": "Number Patterns",
+      "icon": "🔁",
+      "questions": [
+        {
+          "q": "What comes next: 2, 4, 6, 8, __?",
+          "options": ["9", "10", "11", "12"],
+          "answer": "10",
+          "explain": "The pattern adds 2 each time.",
+          "procedure": [
+            "Look at the difference: 4−2=2, 6−4=2, 8−6=2",
+            "The rule is 'add 2'",
+            "8 + 2 = 10",
+            "Answer: 10"
+          ]
+        },
+        {
+          "q": "What comes next: 5, 10, 15, 20, __?",
+          "options": ["22", "24", "25", "30"],
+          "answer": "25",
+          "explain": "Add 5 each time.",
+          "procedure": [
+            "Difference: 10−5=5, 15−10=5, 20−15=5",
+            "Rule: add 5",
+            "20 + 5 = 25",
+            "Answer: 25"
+          ]
+        },
+        {
+          "q": "What comes next: 1, 4, 9, 16, __?",
+          "options": ["20", "24", "25", "36"],
+          "answer": "25",
+          "explain": "Square numbers: 1², 2², 3², 4², 5².",
+          "procedure": [
+            "These are square numbers",
+            "1 = 1², 4 = 2², 9 = 3², 16 = 4²",
+            "Next = 5² = 25",
+            "Answer: 25"
+          ]
+        },
+        {
+          "q": "What comes next: 2, 4, 8, 16, __?",
+          "options": ["18", "24", "32", "64"],
+          "answer": "32",
+          "explain": "Double each time.",
+          "procedure": [
+            "Check: 2×2=4, 4×2=8, 8×2=16",
+            "Rule: multiply by 2",
+            "16 × 2 = 32",
+            "Answer: 32"
+          ]
+        },
+        {
+          "q": "What comes next: 100, 90, 80, 70, __?",
+          "options": ["50", "55", "60", "65"],
+          "answer": "60",
+          "explain": "Subtract 10 each time.",
+          "procedure": [
+            "Difference: 100−90=10, 90−80=10",
+            "Rule: subtract 10",
+            "70 − 10 = 60",
+            "Answer: 60"
+          ]
+        },
+        {
+          "q": "What comes next: 1, 3, 6, 10, 15, __?",
+          "options": ["18", "20", "21", "25"],
+          "answer": "21",
+          "explain": "Triangular numbers — differences are 2, 3, 4, 5, 6.",
+          "procedure": [
+            "Differences: 3−1=2, 6−3=3, 10−6=4, 15−10=5",
+            "Next difference is 6",
+            "15 + 6 = 21",
+            "Answer: 21"
+          ]
+        },
+        {
+          "q": "What comes next: 3, 6, 9, 12, __?",
+          "options": ["13", "14", "15", "16"],
+          "answer": "15",
+          "explain": "Multiples of 3.",
+          "procedure": [
+            "Rule: add 3",
+            "12 + 3 = 15",
+            "Answer: 15"
+          ]
+        },
+        {
+          "q": "What comes next: 20, 18, 16, 14, __?",
+          "options": ["10", "11", "12", "13"],
+          "answer": "12",
+          "explain": "Subtract 2 each time.",
+          "procedure": [
+            "Difference: 20−18=2, 18−16=2, 16−14=2",
+            "Rule: subtract 2",
+            "14 − 2 = 12",
+            "Answer: 12"
+          ]
+        },
+        {
+          "q": "What comes next: 1, 2, 4, 7, 11, __?",
+          "options": ["14", "15", "16", "17"],
+          "answer": "16",
+          "explain": "Differences are 1, 2, 3, 4, 5.",
+          "procedure": [
+            "Differences: 2−1=1, 4−2=2, 7−4=3, 11−7=4",
+            "Next difference = 5",
+            "11 + 5 = 16",
+            "Answer: 16"
+          ]
+        },
+        {
+          "q": "What comes next: 2, 3, 5, 7, 11, __?",
+          "options": ["12", "13", "14", "15"],
+          "answer": "13",
+          "explain": "Prime numbers in order.",
+          "procedure": [
+            "These are prime numbers",
+            "Next prime after 11 is 13",
+            "Answer: 13"
+          ]
+        },
+        {
+          "q": "What is the rule: 5, 10, 20, 40, 80?",
+          "options": ["Add 5", "Multiply by 2", "Add 10", "Multiply by 5"],
+          "answer": "Multiply by 2",
+          "explain": "Each term doubles the previous one.",
+          "procedure": [
+            "Check: 5×2=10, 10×2=20, 20×2=40",
+            "Rule = multiply by 2",
+            "Answer: Multiply by 2"
+          ]
+        },
+        {
+          "q": "What is the 10th term of 3, 6, 9, 12, …?",
+          "options": ["27", "30", "33", "36"],
+          "answer": "30",
+          "explain": "Multiples of 3: 10 × 3 = 30.",
+          "procedure": [
+            "The pattern is multiples of 3",
+            "10th term = 10 × 3 = 30",
+            "Answer: 30"
+          ]
+        },
+        {
+          "q": "Find the missing number: 4, 8, __, 16, 20",
+          "options": ["10", "12", "14", "15"],
+          "answer": "12",
+          "explain": "Add 4 each time.",
+          "procedure": [
+            "Check differences: 8−4=4, 20−16=4",
+            "Rule: add 4",
+            "8 + 4 = 12",
+            "Answer: 12"
+          ]
+        },
+        {
+          "q": "Find the missing number: 25, 20, __, 10, 5",
+          "options": ["12", "15", "17", "18"],
+          "answer": "15",
+          "explain": "Subtract 5 each time.",
+          "procedure": [
+            "Rule: subtract 5",
+            "20 − 5 = 15",
+            "Answer: 15"
+          ]
+        },
+        {
+          "q": "What comes next: 1, 8, 27, 64, __?",
+          "options": ["100", "125", "144", "216"],
+          "answer": "125",
+          "explain": "Cube numbers: 1³, 2³, 3³, 4³, 5³.",
+          "procedure": [
+            "These are cube numbers",
+            "1=1³, 8=2³, 27=3³, 64=4³",
+            "Next = 5³ = 125",
+            "Answer: 125"
+          ]
+        },
+        {
+          "q": "What comes next: 2, 6, 12, 20, 30, __?",
+          "options": ["36", "40", "42", "48"],
+          "answer": "42",
+          "explain": "Differences: 4, 6, 8, 10, 12.",
+          "procedure": [
+            "Differences: 6−2=4, 12−6=6, 20−12=8, 30−20=10",
+            "Next difference = 12",
+            "30 + 12 = 42",
+            "Answer: 42"
+          ]
+        },
+        {
+          "q": "What is the next term: 1, 1, 2, 3, 5, 8, __?",
+          "options": ["10", "11", "13", "15"],
+          "answer": "13",
+          "explain": "Fibonacci — each term is sum of previous two.",
+          "procedure": [
+            "Rule: add the last two numbers",
+            "5 + 8 = 13",
+            "Answer: 13"
+          ]
+        },
+        {
+          "q": "Find the rule: 100, 50, 25, 12.5",
+          "options": ["Subtract 50", "Divide by 2", "Divide by 5", "Subtract 25"],
+          "answer": "Divide by 2",
+          "explain": "Each term halves the previous one.",
+          "procedure": [
+            "Check: 100÷2=50, 50÷2=25, 25÷2=12.5",
+            "Rule = divide by 2",
+            "Answer: Divide by 2"
+          ]
+        },
+        {
+          "q": "What comes next: 10, 20, 40, 80, __?",
+          "options": ["100", "120", "160", "200"],
+          "answer": "160",
+          "explain": "Double each time.",
+          "procedure": [
+            "Rule: multiply by 2",
+            "80 × 2 = 160",
+            "Answer: 160"
+          ]
+        },
+        {
+          "q": "Find the missing number: 2, 4, 8, __, 32, 64",
+          "options": ["12", "14", "16", "24"],
+          "answer": "16",
+          "explain": "Double each time.",
+          "procedure": [
+            "Rule: multiply by 2",
+            "8 × 2 = 16",
+            "Answer: 16"
+          ]
         }
       ]
     }
