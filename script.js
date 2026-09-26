@@ -35,11 +35,17 @@ let quizIndex = 0;
 let quizScore = 0;
 let quizLocked = false;
 
-let quizPace = loadPace();       // "manual" or "timed"
-let nextTimer = null;             // handle for auto-advance timer
+let quizPace = loadPace();
+let nextTimer = null;
 
 let progress = loadProgress();
 let quizHistory = loadHistory();
+
+// ---------- CALCULATOR STATE ----------
+let calcDisplay = "0";
+let calcPrev = null;
+let calcOp = null;
+let calcWaitForNext = false;
 
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
@@ -139,6 +145,7 @@ async function fetchJSON(path) {
 function renderHome() {
   renderSubjects();
   renderHomeTopics();
+  renderTools();
   renderGreeting();
 }
 
@@ -194,6 +201,36 @@ function renderHomeTopics() {
   });
 }
 
+function renderTools() {
+  const grid = $("toolsGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const tools = [
+    { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
+    { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Coming soon", available: false },
+    { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Coming soon", available: false },
+    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: "Coming soon", available: false }
+  ];
+  tools.forEach(t => {
+    const card = el("button", "tool-card" + (t.available ? "" : " disabled"));
+    card.disabled = !t.available;
+    card.innerHTML = `
+      <span class="tool-icon">${t.icon}</span>
+      <span>
+        <span class="tool-name">${t.name}</span>
+        <span class="tool-tag">${t.tag}</span>
+      </span>
+    `;
+    if (t.available && t.id === "calculator") {
+      card.addEventListener("click", () => {
+        showScreen("screen-calculator");
+        renderCalc();
+      });
+    }
+    grid.appendChild(card);
+  });
+}
+
 // ===================================================
 // TOPIC
 // ===================================================
@@ -224,7 +261,6 @@ function renderStudyCard() {
   $("progress").textContent = `Card ${studyIndex + 1} of ${studyDeck.length}`;
   $("card").classList.remove("flipped");
 
-  // Show the procedure on the back of the card, if present
   const backEl = document.querySelector(".card-back");
   const old = backEl.querySelector(".card-procedure");
   if (old) old.remove();
@@ -326,21 +362,18 @@ function handleAnswer(btn, chosen, correct, q) {
     $("quizFeedback").className = "quiz-feedback wrong";
   }
 
-  // Show the step-by-step working
   showProcedure(q ? q.procedure : null, q ? q.explain : "");
 
   progress.totalAnswered += 1;
   if (isRight) progress.totalCorrect += 1;
   saveProgress();
 
-  // Reveal Next button and scroll working into view
   const nextBtn = $("nextQuestionBtn");
   nextBtn.classList.remove("hidden");
   setTimeout(() => {
     nextBtn.scrollIntoView({ behavior: "smooth", block: "center" });
   }, 120);
 
-  // If timed mode, auto-advance after 5 seconds
   clearTimeout(nextTimer);
   if (quizPace === "timed") {
     nextTimer = setTimeout(() => advanceQuiz(), 5000);
@@ -516,6 +549,96 @@ function closeThemeModal() {
 }
 
 // ===================================================
+// CALCULATOR
+// ===================================================
+function renderCalc() {
+  const displayEl = $("calcDisplay");
+  if (!displayEl) return;
+  displayEl.textContent = calcDisplay;
+  displayEl.scrollLeft = displayEl.scrollWidth;
+}
+
+function calcInput(value) {
+  if (value === "clear") {
+    calcDisplay = "0";
+    calcPrev = null;
+    calcOp = null;
+    calcWaitForNext = false;
+    return renderCalc();
+  }
+  if (value === "back") {
+    calcDisplay = calcDisplay.length > 1 ? calcDisplay.slice(0, -1) : "0";
+    return renderCalc();
+  }
+  if (value === "equals") {
+    return calcEquals();
+  }
+  if (value === "%") {
+    const n = parseFloat(calcDisplay);
+    if (!isNaN(n)) calcDisplay = formatNumber(n / 100);
+    return renderCalc();
+  }
+  if (["+", "-", "*", "/"].includes(value)) {
+    const n = parseFloat(calcDisplay);
+    if (calcOp && !calcWaitForNext) {
+      const result = calcCompute(calcPrev, n, calcOp);
+      calcDisplay = formatNumber(result);
+      calcPrev = result;
+    } else {
+      calcPrev = n;
+    }
+    calcOp = value;
+    calcWaitForNext = true;
+    return renderCalc();
+  }
+  if (value === ".") {
+    if (calcWaitForNext) {
+      calcDisplay = "0.";
+      calcWaitForNext = false;
+    } else if (!calcDisplay.includes(".")) {
+      calcDisplay += ".";
+    }
+    return renderCalc();
+  }
+  // digit
+  if (calcWaitForNext) {
+    calcDisplay = value;
+    calcWaitForNext = false;
+  } else {
+    calcDisplay = calcDisplay === "0" ? value : calcDisplay + value;
+  }
+  renderCalc();
+}
+
+function calcCompute(a, b, op) {
+  switch (op) {
+    case "+": return a + b;
+    case "-": return a - b;
+    case "*": return a * b;
+    case "/": return b === 0 ? NaN : a / b;
+    default: return b;
+  }
+}
+
+function calcEquals() {
+  if (calcOp === null || calcPrev === null) return;
+  const n = parseFloat(calcDisplay);
+  const result = calcCompute(calcPrev, n, calcOp);
+  calcDisplay = formatNumber(result);
+  calcPrev = null;
+  calcOp = null;
+  calcWaitForNext = true;
+  renderCalc();
+}
+
+function formatNumber(n) {
+  if (isNaN(n)) return "Error";
+  if (!isFinite(n)) return "∞";
+  const rounded = parseFloat(n.toPrecision(12));
+  return String(rounded);
+}
+
+// ===================================================
 // LISTENERS
 // ===================================================
 function attachGlobalListeners() {
@@ -524,7 +647,7 @@ function attachGlobalListeners() {
       const active = document.querySelector(".screen.active").id;
       if (active === "screen-topic") showScreen("screen-home");
       else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
-      else if (active === "screen-progress") showScreen("screen-home");
+      else if (active === "screen-progress" || active === "screen-calculator") showScreen("screen-home");
     });
   });
 
@@ -539,10 +662,8 @@ function attachGlobalListeners() {
   $("retryQuizBtn").addEventListener("click", startQuiz);
   $("backHomeBtn").addEventListener("click", () => showScreen("screen-home"));
 
-  // Next question button (manual pace)
   $("nextQuestionBtn").addEventListener("click", advanceQuiz);
 
-  // Pace toggle
   $("paceBtn").addEventListener("click", togglePace);
   refreshPaceLabel();
 
@@ -566,11 +687,30 @@ function attachGlobalListeners() {
     if (e.target.id === "themeModal") closeThemeModal();
   });
 
+  // Calculator buttons
+  document.querySelectorAll(".calc-btn").forEach(btn => {
+    btn.addEventListener("click", () => calcInput(btn.dataset.calc));
+  });
+
+  // Global keyboard shortcuts
   document.addEventListener("keydown", e => {
-    if (!$("screen-study").classList.contains("active")) return;
-    if (e.key === "ArrowRight") nextCard();
-    if (e.key === "ArrowLeft") prevCard();
-    if (e.key === " ") { e.preventDefault(); flipCard(); }
+    // Study screen shortcuts
+    if ($("screen-study").classList.contains("active")) {
+      if (e.key === "ArrowRight") nextCard();
+      if (e.key === "ArrowLeft") prevCard();
+      if (e.key === " ") { e.preventDefault(); flipCard(); }
+      return;
+    }
+    // Calculator screen shortcuts
+    if ($("screen-calculator").classList.contains("active")) {
+      const k = e.key;
+      if (/^[0-9]$/.test(k)) calcInput(k);
+      else if (k === ".") calcInput(".");
+      else if (["+", "-", "*", "/"].includes(k)) calcInput(k);
+      else if (k === "Enter" || k === "=") { e.preventDefault(); calcInput("equals"); }
+      else if (k === "Backspace") calcInput("back");
+      else if (k === "Escape") calcInput("clear");
+    }
   });
 }
 
