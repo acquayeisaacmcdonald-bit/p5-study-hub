@@ -1219,6 +1219,243 @@
           ]
         }
       ]
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "icon": "📐",
+      "questions": [
+        {
+          "q": "How many sides does a hexagon have?",
+          "options": ["4", "5", "6", "7"],
+          "answer": "6",
+          "explain": "A hexagon has 6 sides.",
+          "procedure": [
+            "Remember: 'hexa' means 6",
+            "A hexagon has 6 sides and 6 angles",
+            "Answer: 6"
+          ]
+        },
+        {
+          "q": "What is the sum of angles in a triangle?",
+          "options": ["90°", "180°", "270°", "360°"],
+          "answer": "180°",
+          "explain": "All angles in a triangle add up to 180°.",
+          "procedure": [
+            "Rule: the three angles of any triangle add up to 180°",
+            "Answer: 180°"
+          ]
+        },
+        {
+          "q": "Which shape has 4 equal sides and 4 right angles?",
+          "options": ["Rectangle", "Square", "Rhombus", "Trapezium"],
+          "answer": "Square",
+          "explain": "A square has equal sides and right angles.",
+          "procedure": [
+            "Rectangle has 4 right angles but sides may differ",
+            "Rhombus has equal sides but angles may not be 90°",
+            "Square has both: 4 equal sides and 4 right angles",
+            "Answer: Square"
+          ]
+        },
+        {
+          "q": "How many degrees in a right angle?",
+          "options": ["45°", "60°", "90°", "180°"],
+          "answer": "90°",
+          "explain": "A right angle is 90°.",
+          "procedure": [
+            "A right angle looks like the corner of a book",
+            "It measures exactly 90°",
+            "Answer: 90°"
+          ]
+        },
+        {
+          "q": "What do we call a triangle with all sides equal?",
+          "options": ["Isosceles", "Scalene", "Equilateral", "Right-angled"],
+          "answer": "Equilateral",
+          "explain": "All sides equal = equilateral.",
+          "procedure": [
+            "Equilateral = equal sides (all 3 equal)",
+            "Isosceles = 2 equal sides",
+            "Scalene = no equal sides",
+            "Answer: Equilateral"
+          ]
+        },
+        {
+          "q": "How many faces does a cube have?",
+          "options": ["4", "6", "8", "12"],
+          "answer": "6",
+          "explain": "A cube has 6 square faces.",
+          "procedure": [
+            "Think of a die — count the flat surfaces",
+            "Top, bottom, front, back, left, right = 6",
+            "Answer: 6"
+          ]
+        },
+        {
+          "q": "What is the name of a 5-sided polygon?",
+          "options": ["Quadrilateral", "Pentagon", "Hexagon", "Heptagon"],
+          "answer": "Pentagon",
+          "explain": "5 sides = pentagon.",
+          "procedure": [
+            "'Penta' means 5",
+            "5 sides = pentagon",
+            "Answer: Pentagon"
+          ]
+        },
+        {
+          "q": "Which is NOT a quadrilateral?",
+          "options": ["Square", "Rectangle", "Pentagon", "Trapezium"],
+          "answer": "Pentagon",
+          "explain": "Quadrilaterals have 4 sides; a pentagon has 5.",
+          "procedure": [
+            "'Quad' means 4 — quadrilaterals have 4 sides",
+            "Square, rectangle and trapezium all have 4 sides",
+            "Pentagon has 5 sides",
+            "Answer: Pentagon"
+          ]
+        },
+        {
+          "q": "How many edges does a cuboid have?",
+          "options": ["6", "8", "12", "16"],
+          "answer": "12",
+          "explain": "A cuboid has 12 edges.",
+          "procedure": [
+            "A cuboid has 6 faces and 8 vertices",
+            "Edges are the lines where faces meet",
+            "Count: 4 (top) + 4 (bottom) + 4 (vertical) = 12",
+            "Answer: 12"
+          ]
+        },
+        {
+          "q": "What is the name of the line that goes all around a circle?",
+          "options": ["Radius", "Diameter", "Circumference", "Chord"],
+          "answer": "Circumference",
+          "explain": "The perimeter of a circle is the circumference.",
+          "procedure": [
+            "Radius = centre to edge",
+            "Diameter = across through centre",
+            "Circumference = full distance around the circle",
+            "Answer: Circumference"
+          ]
+        },
+        {
+          "q": "If the radius of a circle is 5 cm, what is the diameter?",
+          "options": ["2.5 cm", "5 cm", "10 cm", "25 cm"],
+          "answer": "10 cm",
+          "explain": "Diameter = 2 × radius = 10 cm.",
+          "procedure": [
+            "Formula: Diameter = 2 × Radius",
+            "Substitute: 2 × 5 = 10",
+            "Answer: 10 cm"
+          ]
+        },
+        {
+          "q": "How many right angles in a square?",
+          "options": ["2", "3", "4", "6"],
+          "answer": "4",
+          "explain": "All 4 corners of a square are right angles.",
+          "procedure": [
+            "A square has 4 corners",
+            "Every corner is a right angle (90°)",
+            "Answer: 4"
+          ]
+        },
+        {
+          "q": "Which angle is greater than 90° but less than 180°?",
+          "options": ["Acute", "Right", "Obtuse", "Reflex"],
+          "answer": "Obtuse",
+          "explain": "Obtuse angles are between 90° and 180°.",
+          "procedure": [
+            "Acute = less than 90°",
+            "Right = exactly 90°",
+            "Obtuse = between 90° and 180°",
+            "Answer: Obtuse"
+          ]
+        },
+        {
+          "q": "How many vertices does a triangular prism have?",
+          "options": ["4", "6", "8", "12"],
+          "answer": "6",
+          "explain": "A triangular prism has 6 vertices.",
+          "procedure": [
+            "A triangular prism has 2 triangular faces",
+            "Each triangle has 3 vertices",
+            "Total: 3 + 3 = 6",
+            "Answer: 6"
+          ]
+        },
+        {
+          "q": "What is the sum of angles in a quadrilateral?",
+          "options": ["180°", "270°", "360°", "540°"],
+          "answer": "360°",
+          "explain": "Quadrilaterals have 360° total.",
+          "procedure": [
+            "A quadrilateral can be split into 2 triangles",
+            "Each triangle has 180°",
+            "Total: 180° × 2 = 360°",
+            "Answer: 360°"
+          ]
+        },
+        {
+          "q": "How many lines of symmetry does a square have?",
+          "options": ["1", "2", "3", "4"],
+          "answer": "4",
+          "explain": "A square has 4 lines of symmetry.",
+          "procedure": [
+            "Vertical line through middle = 1",
+            "Horizontal line through middle = 2",
+            "Two diagonals = 3 and 4",
+            "Answer: 4"
+          ]
+        },
+        {
+          "q": "What is the name of a 8-sided polygon?",
+          "options": ["Hexagon", "Heptagon", "Octagon", "Nonagon"],
+          "answer": "Octagon",
+          "explain": "8 sides = octagon.",
+          "procedure": [
+            "'Octa' means 8",
+            "8 sides = octagon",
+            "Answer: Octagon"
+          ]
+        },
+        {
+          "q": "How many faces does a triangular prism have?",
+          "options": ["3", "4", "5", "6"],
+          "answer": "5",
+          "explain": "A triangular prism has 5 faces.",
+          "procedure": [
+            "2 triangular faces (top and bottom)",
+            "3 rectangular faces (sides)",
+            "Total: 2 + 3 = 5",
+            "Answer: 5"
+          ]
+        },
+        {
+          "q": "Which of these is NOT a type of triangle?",
+          "options": ["Equilateral", "Isosceles", "Scalene", "Pentagon"],
+          "answer": "Pentagon",
+          "explain": "Pentagon has 5 sides — it's not a triangle.",
+          "procedure": [
+            "Triangle = 3 sides",
+            "Equilateral, isosceles, scalene are all triangles",
+            "Pentagon has 5 sides — not a triangle",
+            "Answer: Pentagon"
+          ]
+        },
+        {
+          "q": "What is the name of a line from the centre of a circle to its edge?",
+          "options": ["Diameter", "Radius", "Circumference", "Tangent"],
+          "answer": "Radius",
+          "explain": "The radius goes from centre to edge.",
+          "procedure": [
+            "Centre of circle to the edge = radius",
+            "Diameter goes right across through the centre",
+            "Answer: Radius"
+          ]
+        }
+      ]
     }
   ]
 }
