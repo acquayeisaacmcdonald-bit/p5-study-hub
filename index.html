@@ -87,11 +87,16 @@
       <button class="back-btn" data-back>← Back</button>
 
       <div id="quizPlay">
-        <p class="quiz-topic" id="quizTopicLabel"></p>
+        <div class="quiz-topbar">
+          <p class="quiz-topic" id="quizTopicLabel"></p>
+          <button class="pace-btn" id="paceBtn" title="Change pace">🐢 My pace</button>
+        </div>
         <p class="progress" id="quizProgress">Question 1 of 5</p>
         <div class="quiz-question" id="quizQuestion">…</div>
         <div class="quiz-options" id="quizOptions"></div>
         <p class="quiz-feedback" id="quizFeedback"></p>
+        <div id="procedureBox" class="procedure-box hidden"></div>
+        <button class="next-question-btn hidden" id="nextQuestionBtn">Next Question →</button>
       </div>
 
       <div id="quizResult" class="hidden">

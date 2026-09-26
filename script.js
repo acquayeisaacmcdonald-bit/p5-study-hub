@@ -6,7 +6,8 @@
 const STORAGE_KEYS = {
   theme: "p5hub.theme",
   progress: "p5hub.progress",
-  history: "p5hub.history"
+  history: "p5hub.history",
+  pace: "p5hub.pace"
 };
 
 const THEMES = [
@@ -25,14 +26,17 @@ const THEMES = [
 
 // ---------- STATE ----------
 let subjectsData = null;
-let currentSubject = null;   // the maths.json content
-let currentTopic = null;     // the chosen topic object
+let currentSubject = null;
+let currentTopic = null;
 let studyDeck = [];
 let studyIndex = 0;
 let quizDeck = [];
 let quizIndex = 0;
 let quizScore = 0;
 let quizLocked = false;
+
+let quizPace = loadPace();       // "manual" or "timed"
+let nextTimer = null;             // handle for auto-advance timer
 
 let progress = loadProgress();
 let quizHistory = loadHistory();
@@ -68,6 +72,12 @@ function loadTheme() {
 function saveTheme(id) {
   localStorage.setItem(STORAGE_KEYS.theme, id);
 }
+function loadPace() {
+  return localStorage.getItem(STORAGE_KEYS.pace) || "manual";
+}
+function savePace(p) {
+  localStorage.setItem(STORAGE_KEYS.pace, p);
+}
 
 // ---------- DOM HELPERS ----------
 const $ = (id) => document.getElementById(id);
@@ -81,7 +91,13 @@ const el = (tag, cls) => {
 function showScreen(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   $(id).classList.add("active");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  requestAnimationFrame(() => {
+    const screen = $(id);
+    if (screen.scrollHeight > window.innerHeight) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
 }
 
 // ---------- LOADING ----------
@@ -98,7 +114,8 @@ async function boot() {
   try {
     showLoading();
     subjectsData = await fetchJSON("data/subjects.json");
-    currentSubject = await fetchJSON(subjectsData.subjects.find(s => s.id === "maths").file);
+    const maths = subjectsData.subjects.find(s => s.id === "maths");
+    currentSubject = await fetchJSON(maths.file);
     hideLoading();
     renderHome();
   } catch (err) {
@@ -109,15 +126,12 @@ async function boot() {
 }
 
 async function fetchJSON(path) {
-  // Cache-busting: append a unique query so the browser always fetches fresh data.
-  // In production (Cloudflare Pages) this is harmless — the CDN handles caching.
   const sep = path.includes("?") ? "&" : "?";
   const url = `${path}${sep}t=${Date.now()}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
   return res.json();
 }
-
 
 // ===================================================
 // HOME
@@ -152,10 +166,8 @@ function renderSubjects() {
     `;
     if (sub.available) {
       card.addEventListener("click", () => {
-        if (sub.id === "maths") {
-          renderHomeTopics();
-          document.querySelector(".topic-list")?.scrollIntoView({ behavior: "smooth" });
-        }
+        renderHomeTopics();
+        document.querySelector(".topic-list")?.scrollIntoView({ behavior: "smooth" });
       });
     }
     grid.appendChild(card);
@@ -211,6 +223,33 @@ function renderStudyCard() {
   $("backBadge").textContent = "Answer";
   $("progress").textContent = `Card ${studyIndex + 1} of ${studyDeck.length}`;
   $("card").classList.remove("flipped");
+
+  // Show the procedure on the back of the card, if present
+  const backEl = document.querySelector(".card-back");
+  const old = backEl.querySelector(".card-procedure");
+  if (old) old.remove();
+
+  if (q.procedure || q.explain) {
+    const box = document.createElement("div");
+    box.className = "card-procedure";
+    if (Array.isArray(q.procedure) && q.procedure.length > 0) {
+      const title = document.createElement("div");
+      title.className = "procedure-title";
+      title.textContent = "📝 Working";
+      box.appendChild(title);
+
+      const ol = document.createElement("ol");
+      q.procedure.forEach(step => {
+        const li = document.createElement("li");
+        li.textContent = step;
+        ol.appendChild(li);
+      });
+      box.appendChild(ol);
+    } else {
+      box.textContent = q.explain;
+    }
+    backEl.appendChild(box);
+  }
 }
 
 function flipCard() {
@@ -237,6 +276,7 @@ function startQuiz() {
   $("quizTopicLabel").textContent = `${currentSubject.subject} • ${currentTopic.name}`;
   $("quizPlay").classList.remove("hidden");
   $("quizResult").classList.add("hidden");
+  refreshPaceLabel();
   renderQuizQuestion();
   showScreen("screen-quiz");
 }
@@ -245,6 +285,9 @@ function renderQuizQuestion() {
   quizLocked = false;
   $("quizFeedback").textContent = "";
   $("quizFeedback").className = "quiz-feedback";
+  hideProcedure();
+  $("nextQuestionBtn").classList.add("hidden");
+  clearTimeout(nextTimer);
 
   const q = quizDeck[quizIndex];
   $("quizProgress").textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
@@ -257,12 +300,12 @@ function renderQuizQuestion() {
   options.forEach(opt => {
     const btn = el("button", "quiz-option");
     btn.textContent = opt;
-    btn.addEventListener("click", () => handleAnswer(btn, opt, q.answer));
+    btn.addEventListener("click", () => handleAnswer(btn, opt, q.answer, q));
     container.appendChild(btn);
   });
 }
 
-function handleAnswer(btn, chosen, correct) {
+function handleAnswer(btn, chosen, correct, q) {
   if (quizLocked) return;
   quizLocked = true;
 
@@ -283,19 +326,35 @@ function handleAnswer(btn, chosen, correct) {
     $("quizFeedback").className = "quiz-feedback wrong";
   }
 
-  // Update progress
+  // Show the step-by-step working
+  showProcedure(q ? q.procedure : null, q ? q.explain : "");
+
   progress.totalAnswered += 1;
   if (isRight) progress.totalCorrect += 1;
   saveProgress();
 
+  // Reveal Next button and scroll working into view
+  const nextBtn = $("nextQuestionBtn");
+  nextBtn.classList.remove("hidden");
   setTimeout(() => {
-    quizIndex++;
-    if (quizIndex < quizDeck.length) {
-      renderQuizQuestion();
-    } else {
-      finishQuiz();
-    }
-  }, 1300);
+    nextBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 120);
+
+  // If timed mode, auto-advance after 5 seconds
+  clearTimeout(nextTimer);
+  if (quizPace === "timed") {
+    nextTimer = setTimeout(() => advanceQuiz(), 5000);
+  }
+}
+
+function advanceQuiz() {
+  clearTimeout(nextTimer);
+  quizIndex++;
+  if (quizIndex < quizDeck.length) {
+    renderQuizQuestion();
+  } else {
+    finishQuiz();
+  }
 }
 
 function finishQuiz() {
@@ -328,6 +387,70 @@ function finishQuiz() {
   });
   quizHistory = quizHistory.slice(0, 20);
   saveHistory();
+}
+
+// ===================================================
+// PACE TOGGLE
+// ===================================================
+function refreshPaceLabel() {
+  const paceBtn = $("paceBtn");
+  if (!paceBtn) return;
+  paceBtn.textContent = quizPace === "timed" ? "⏱️ Timed (5s)" : "🐢 My pace";
+}
+
+function togglePace() {
+  quizPace = quizPace === "timed" ? "manual" : "timed";
+  savePace(quizPace);
+  refreshPaceLabel();
+
+  if (quizPace === "timed" && quizLocked && !$("nextQuestionBtn").classList.contains("hidden")) {
+    clearTimeout(nextTimer);
+    nextTimer = setTimeout(() => advanceQuiz(), 5000);
+  } else {
+    clearTimeout(nextTimer);
+  }
+}
+
+// ===================================================
+// PROCEDURE DISPLAY
+// ===================================================
+function showProcedure(procedure, explain) {
+  const box = $("procedureBox");
+  if (!box) return;
+  box.innerHTML = "";
+
+  const h = document.createElement("div");
+  h.className = "procedure-title";
+  h.textContent = "📝 Working";
+  box.appendChild(h);
+
+  if (Array.isArray(procedure) && procedure.length > 0) {
+    const ol = document.createElement("ol");
+    ol.className = "procedure-steps";
+    procedure.forEach(step => {
+      const li = document.createElement("li");
+      li.textContent = step;
+      ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  } else if (explain) {
+    const p = document.createElement("p");
+    p.className = "procedure-explain";
+    p.textContent = explain;
+    box.appendChild(p);
+  } else {
+    box.appendChild(document.createTextNode("No working available."));
+  }
+
+  box.classList.remove("hidden");
+}
+
+function hideProcedure() {
+  const box = $("procedureBox");
+  if (box) {
+    box.classList.add("hidden");
+    box.innerHTML = "";
+  }
 }
 
 // ===================================================
@@ -396,7 +519,6 @@ function closeThemeModal() {
 // LISTENERS
 // ===================================================
 function attachGlobalListeners() {
-  // Back buttons
   document.querySelectorAll("[data-back]").forEach(btn => {
     btn.addEventListener("click", () => {
       const active = document.querySelector(".screen.active").id;
@@ -406,21 +528,24 @@ function attachGlobalListeners() {
     });
   });
 
-  // Mode buttons
   $("modeStudy").addEventListener("click", startStudy);
   $("modeQuiz").addEventListener("click", startQuiz);
 
-  // Study controls
   $("flipBtn").addEventListener("click", flipCard);
   $("nextBtn").addEventListener("click", nextCard);
   $("prevBtn").addEventListener("click", prevCard);
   $("card").addEventListener("click", flipCard);
 
-  // Quiz result buttons
   $("retryQuizBtn").addEventListener("click", startQuiz);
   $("backHomeBtn").addEventListener("click", () => showScreen("screen-home"));
 
-  // Progress
+  // Next question button (manual pace)
+  $("nextQuestionBtn").addEventListener("click", advanceQuiz);
+
+  // Pace toggle
+  $("paceBtn").addEventListener("click", togglePace);
+  refreshPaceLabel();
+
   $("progressLink").addEventListener("click", () => {
     renderProgress();
     showScreen("screen-progress");
@@ -435,14 +560,12 @@ function attachGlobalListeners() {
     }
   });
 
-  // Theme
   $("themeBtn").addEventListener("click", openThemeModal);
   $("themeClose").addEventListener("click", closeThemeModal);
   $("themeModal").addEventListener("click", e => {
     if (e.target.id === "themeModal") closeThemeModal();
   });
 
-  // Keyboard shortcuts on study screen
   document.addEventListener("keydown", e => {
     if (!$("screen-study").classList.contains("active")) return;
     if (e.key === "ArrowRight") nextCard();

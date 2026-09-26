@@ -719,3 +719,89 @@ button.danger:active { transform: scale(0.98); }
   .mode-card { padding: 18px 10px; }
   .mode-icon { font-size: 1.7rem; }
 }
+
+/* ---------- PROCEDURE (working shown after answer) ---------- */
+.procedure-box {
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease;
+}
+.procedure-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.procedure-steps {
+  margin: 0;
+  padding-left: 20px;
+}
+.procedure-steps li {
+  margin-bottom: 4px;
+}
+.procedure-explain {
+  margin: 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+.card-procedure {
+  margin-top: 14px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  text-align: left;
+  max-width: 100%;
+}
+.card-procedure ol {
+  margin: 0;
+  padding-left: 18px;
+}
+.card-procedure li {
+  margin-bottom: 3px;
+}
+
+/* ---------- QUIZ TOPBAR & PACE ---------- */
+.quiz-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pace-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.pace-btn:hover { background: var(--panel-strong); }
+
+/* ---------- NEXT QUESTION BUTTON ---------- */
+.next-question-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  animation: fadeIn 0.3s ease;
+}
+.next-question-btn:hover { background: var(--accent-2); }
+.next-question-btn:active { transform: scale(0.98); }
