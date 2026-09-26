@@ -753,6 +753,240 @@
           ]
         }
       ]
+    },
+    {
+      "id": "percentages",
+      "name": "Percentages & Ratios",
+      "icon": "％",
+      "questions": [
+        {
+          "q": "What is 25% as a fraction in simplest form?",
+          "options": ["1/4", "1/2", "2/5", "1/5"],
+          "answer": "1/4",
+          "explain": "25% = 25/100 = 1/4.",
+          "procedure": [
+            "Write 25% as 25/100",
+            "HCF of 25 and 100 is 25",
+            "Divide: 25 ÷ 25 = 1 and 100 ÷ 25 = 4",
+            "Answer: 1/4"
+          ]
+        },
+        {
+          "q": "What is 50% as a decimal?",
+          "options": ["0.5", "5.0", "0.05", "50"],
+          "answer": "0.5",
+          "explain": "50% = 50/100 = 0.5.",
+          "procedure": [
+            "50% means 50 out of 100",
+            "Divide by 100: 50 ÷ 100 = 0.5",
+            "Answer: 0.5"
+          ]
+        },
+        {
+          "q": "What is 10% of 200?",
+          "options": ["2", "20", "200", "2000"],
+          "answer": "20",
+          "explain": "10% of 200 = 200 ÷ 10 = 20.",
+          "procedure": [
+            "10% means divide by 10",
+            "200 ÷ 10 = 20",
+            "Answer: 20"
+          ]
+        },
+        {
+          "q": "What is 25% of 80?",
+          "options": ["15", "20", "25", "40"],
+          "answer": "20",
+          "explain": "25% of 80 = 80 ÷ 4 = 20.",
+          "procedure": [
+            "25% = 1/4",
+            "So find 1/4 of 80",
+            "80 ÷ 4 = 20",
+            "Answer: 20"
+          ]
+        },
+        {
+          "q": "What is 50% of 60?",
+          "options": ["20", "25", "30", "40"],
+          "answer": "30",
+          "explain": "50% is half of 60 = 30.",
+          "procedure": [
+            "50% = 1/2",
+            "Find half of 60",
+            "60 ÷ 2 = 30",
+            "Answer: 30"
+          ]
+        },
+        {
+          "q": "Express 3/4 as a percentage.",
+          "options": ["34%", "43%", "75%", "80%"],
+          "answer": "75%",
+          "explain": "3/4 = 75/100 = 75%.",
+          "procedure": [
+            "Multiply top and bottom by 25: 3×25 / 4×25 = 75/100",
+            "75/100 = 75%",
+            "Answer: 75%"
+          ]
+        },
+        {
+          "q": "Express 0.6 as a percentage.",
+          "options": ["6%", "16%", "60%", "600%"],
+          "answer": "60%",
+          "explain": "0.6 × 100 = 60%.",
+          "procedure": [
+            "Multiply decimal by 100 to get %",
+            "0.6 × 100 = 60",
+            "Answer: 60%"
+          ]
+        },
+        {
+          "q": "What is 20% of 150?",
+          "options": ["15", "20", "30", "45"],
+          "answer": "30",
+          "explain": "20% of 150 = 150 ÷ 5 = 30.",
+          "procedure": [
+            "20% = 1/5",
+            "So find 1/5 of 150",
+            "150 ÷ 5 = 30",
+            "Answer: 30"
+          ]
+        },
+        {
+          "q": "Simplify the ratio 6 : 8.",
+          "options": ["2 : 3", "3 : 4", "6 : 8", "1 : 2"],
+          "answer": "3 : 4",
+          "explain": "Divide both sides by 2.",
+          "procedure": [
+            "HCF of 6 and 8 is 2",
+            "Divide both: 6 ÷ 2 = 3 and 8 ÷ 2 = 4",
+            "Simplified ratio: 3 : 4"
+          ]
+        },
+        {
+          "q": "Simplify the ratio 10 : 15.",
+          "options": ["1 : 5", "2 : 3", "5 : 3", "10 : 15"],
+          "answer": "2 : 3",
+          "explain": "Divide both sides by 5.",
+          "procedure": [
+            "HCF of 10 and 15 is 5",
+            "Divide both: 10 ÷ 5 = 2 and 15 ÷ 5 = 3",
+            "Simplified ratio: 2 : 3"
+          ]
+        },
+        {
+          "q": "If 3 pencils cost GHS 6, what do 5 pencils cost?",
+          "options": ["GHS 8", "GHS 9", "GHS 10", "GHS 12"],
+          "answer": "GHS 10",
+          "explain": "Unit cost is GHS 2; 5 × 2 = 10.",
+          "procedure": [
+            "Find cost of 1 pencil: 6 ÷ 3 = GHS 2",
+            "Multiply by 5: 2 × 5 = GHS 10",
+            "Answer: GHS 10"
+          ]
+        },
+        {
+          "q": "Share GHS 100 in the ratio 2 : 3.",
+          "options": ["GHS 30 and GHS 70", "GHS 40 and GHS 60", "GHS 50 and GHS 50", "GHS 20 and GHS 80"],
+          "answer": "GHS 40 and GHS 60",
+          "explain": "2 + 3 = 5 parts; each part = 20; so 40 and 60.",
+          "procedure": [
+            "Total parts: 2 + 3 = 5",
+            "One part = 100 ÷ 5 = GHS 20",
+            "First share = 2 × 20 = GHS 40",
+            "Second share = 3 × 20 = GHS 60",
+            "Answer: GHS 40 and GHS 60"
+          ]
+        },
+        {
+          "q": "What is 5% of 400?",
+          "options": ["5", "10", "20", "40"],
+          "answer": "20",
+          "explain": "5% of 400 = 400 × 5/100 = 20.",
+          "procedure": [
+            "5% = 5/100 = 1/20",
+            "400 ÷ 20 = 20",
+            "Answer: 20"
+          ]
+        },
+        {
+          "q": "Express 1/5 as a percentage.",
+          "options": ["15%", "20%", "25%", "50%"],
+          "answer": "20%",
+          "explain": "1/5 = 20/100 = 20%.",
+          "procedure": [
+            "Multiply top and bottom by 20: 1×20 / 5×20 = 20/100",
+            "20/100 = 20%",
+            "Answer: 20%"
+          ]
+        },
+        {
+          "q": "A shirt costs GHS 80. It is reduced by 25%. What is the new price?",
+          "options": ["GHS 55", "GHS 60", "GHS 65", "GHS 75"],
+          "answer": "GHS 60",
+          "explain": "25% of 80 = 20; 80 − 20 = 60.",
+          "procedure": [
+            "Find 25% of 80: 80 ÷ 4 = GHS 20",
+            "Subtract discount: 80 − 20 = GHS 60",
+            "Answer: GHS 60"
+          ]
+        },
+        {
+          "q": "Express the ratio 4 : 12 in simplest form.",
+          "options": ["1 : 3", "1 : 4", "2 : 6", "4 : 12"],
+          "answer": "1 : 3",
+          "explain": "Divide both by 4.",
+          "procedure": [
+            "HCF of 4 and 12 is 4",
+            "Divide: 4 ÷ 4 = 1 and 12 ÷ 4 = 3",
+            "Simplified: 1 : 3"
+          ]
+        },
+        {
+          "q": "What is 100% of 45?",
+          "options": ["4.5", "45", "100", "450"],
+          "answer": "45",
+          "explain": "100% means the whole number.",
+          "procedure": [
+            "100% of a number = the number itself",
+            "Answer: 45"
+          ]
+        },
+        {
+          "q": "What is 75% of 40?",
+          "options": ["20", "25", "30", "35"],
+          "answer": "30",
+          "explain": "75% = 3/4; 40 ÷ 4 × 3 = 30.",
+          "procedure": [
+            "75% = 3/4",
+            "40 ÷ 4 = 10",
+            "10 × 3 = 30",
+            "Answer: 30"
+          ]
+        },
+        {
+          "q": "If the ratio of boys to girls is 3 : 2 and there are 30 pupils, how many boys?",
+          "options": ["12", "15", "18", "20"],
+          "answer": "18",
+          "explain": "Total parts = 5; each part = 6; boys = 3 × 6 = 18.",
+          "procedure": [
+            "Total parts: 3 + 2 = 5",
+            "One part = 30 ÷ 5 = 6",
+            "Boys = 3 × 6 = 18",
+            "Answer: 18"
+          ]
+        },
+        {
+          "q": "What is 1% of 250?",
+          "options": ["0.25", "2.5", "25", "250"],
+          "answer": "2.5",
+          "explain": "1% means divide by 100; 250 ÷ 100 = 2.5.",
+          "procedure": [
+            "1% = 1/100",
+            "250 ÷ 100 = 2.5",
+            "Answer: 2.5"
+          ]
+        }
+      ]
     }
   ]
 }
