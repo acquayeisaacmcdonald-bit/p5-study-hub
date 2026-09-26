@@ -2177,6 +2177,254 @@
             "135 + 75 = 210",
             "Answer: 210"
           ]
+                }
+      ]
+    },
+    {
+      "id": "sets",
+      "name": "Sets",
+      "icon": "🎯",
+      "questions": [
+        {
+          "q": "What is a set?",
+          "options": ["A collection of well-defined objects", "A random group of items", "A number", "A shape"],
+          "answer": "A collection of well-defined objects",
+          "explain": "A set is a collection of clearly defined items.",
+          "procedure": [
+            "A set is a group where it's clear what belongs and what doesn't",
+            "Example: 'fruits in a basket' is a set",
+            "'Nice things' is not a set — not well-defined",
+            "Answer: A collection of well-defined objects"
+          ]
+        },
+        {
+          "q": "Which of these is a set?",
+          "options": ["Days of the week", "Big numbers", "Nice colours", "Tall people"],
+          "answer": "Days of the week",
+          "explain": "Days of the week are clearly defined.",
+          "procedure": [
+            "A set must be well-defined — no confusion about what belongs",
+            "Days of the week: clearly Monday to Sunday",
+            "The others are vague ('big', 'nice', 'tall' mean different things to different people)",
+            "Answer: Days of the week"
+          ]
+        },
+        {
+          "q": "If A = {1, 2, 3, 4}, how many elements does A have?",
+          "options": ["2", "3", "4", "5"],
+          "answer": "4",
+          "explain": "A has 4 elements: 1, 2, 3, 4.",
+          "procedure": [
+            "Count the items inside the curly brackets",
+            "1, 2, 3, 4 → four items",
+            "n(A) = 4",
+            "Answer: 4"
+          ]
+        },
+        {
+          "q": "If B = {a, e, i, o, u}, what is n(B)?",
+          "options": ["3", "4", "5", "6"],
+          "answer": "5",
+          "explain": "There are 5 vowels.",
+          "procedure": [
+            "Count: a, e, i, o, u",
+            "5 items",
+            "n(B) = 5",
+            "Answer: 5"
+          ]
+        },
+        {
+          "q": "If A = {1, 2, 3} and B = {2, 3, 4}, what is A ∩ B?",
+          "options": ["{1, 4}", "{2, 3}", "{1, 2, 3, 4}", "{}"],
+          "answer": "{2, 3}",
+          "explain": "Common elements are 2 and 3.",
+          "procedure": [
+            "∩ means 'intersection' — items in BOTH sets",
+            "A = {1, 2, 3}, B = {2, 3, 4}",
+            "Common: 2 and 3",
+            "Answer: {2, 3}"
+          ]
+        },
+        {
+          "q": "If A = {1, 2, 3} and B = {2, 3, 4}, what is A ∪ B?",
+          "options": ["{2, 3}", "{1, 4}", "{1, 2, 3, 4}", "{}"],
+          "answer": "{1, 2, 3, 4}",
+          "explain": "Union has all elements from both.",
+          "procedure": [
+            "∪ means 'union' — everything in EITHER set",
+            "A has 1, 2, 3; B has 2, 3, 4",
+            "Combine: 1, 2, 3, 4 (don't repeat 2 and 3)",
+            "Answer: {1, 2, 3, 4}"
+          ]
+        },
+        {
+          "q": "If A = {1, 2, 3, 4, 5} and B = {2, 4}, which is true?",
+          "options": ["B ⊂ A", "A ⊂ B", "A = B", "B ⊄ A"],
+          "answer": "B ⊂ A",
+          "explain": "B is a subset of A.",
+          "procedure": [
+            "⊂ means 'is a subset of'",
+            "Every element of B (2 and 4) is also in A",
+            "So B ⊂ A",
+            "Answer: B ⊂ A"
+          ]
+        },
+        {
+          "q": "How many subsets does {a, b} have?",
+          "options": ["2", "3", "4", "5"],
+          "answer": "4",
+          "explain": "Subsets: {}, {a}, {b}, {a, b}.",
+          "procedure": [
+            "List all possible subsets:",
+            "{} (empty set)",
+            "{a}",
+            "{b}",
+            "{a, b}",
+            "Total = 4"
+          ]
+        },
+        {
+          "q": "What is the empty set?",
+          "options": ["A set with one element", "A set with no elements", "A set with two elements", "Any small set"],
+          "answer": "A set with no elements",
+          "explain": "The empty set has zero elements.",
+          "procedure": [
+            "The empty set has no items at all",
+            "Written as {} or ∅",
+            "n(∅) = 0",
+            "Answer: A set with no elements"
+          ]
+        },
+        {
+          "q": "If A = {2, 4, 6, 8}, which is NOT in A?",
+          "options": ["2", "4", "5", "6"],
+          "answer": "5",
+          "explain": "5 is not in the set of even numbers.",
+          "procedure": [
+            "Check each option",
+            "2 ✓, 4 ✓, 6 ✓, 8 ✓ are in A",
+            "5 is not in A",
+            "Answer: 5"
+          ]
+        },
+        {
+          "q": "If P = {1, 3, 5} and Q = {2, 4, 6}, what is P ∩ Q?",
+          "options": ["{1, 2, 3, 4, 5, 6}", "{1, 3, 5}", "{}", "{2, 4, 6}"],
+          "answer": "{}",
+          "explain": "No common elements — the intersection is empty.",
+          "procedure": [
+            "Intersection = items in BOTH sets",
+            "P has odd numbers, Q has even numbers",
+            "No overlap",
+            "Answer: {} (empty set)"
+          ]
+        },
+        {
+          "q": "In a class, 20 pupils like Maths and 15 like English. If 5 like both, how many like at least one?",
+          "options": ["30", "35", "40", "45"],
+          "answer": "30",
+          "explain": "20 + 15 − 5 = 30.",
+          "procedure": [
+            "Formula: n(M ∪ E) = n(M) + n(E) − n(M ∩ E)",
+            "Substitute: 20 + 15 − 5",
+            "20 + 15 = 35, then 35 − 5 = 30",
+            "Answer: 30"
+          ]
+        },
+        {
+          "q": "In a class of 40, 25 play football and 20 play cricket. If everyone plays at least one, how many play both?",
+          "options": ["3", "4", "5", "6"],
+          "answer": "5",
+          "explain": "25 + 20 − 40 = 5.",
+          "procedure": [
+            "Formula: n(F ∩ C) = n(F) + n(C) − n(F ∪ C)",
+            "Substitute: 25 + 20 − 40",
+            "45 − 40 = 5",
+            "Answer: 5"
+          ]
+        },
+        {
+          "q": "If A = {1, 2, 3} and B = {1, 2, 3}, what is A ∩ B?",
+          "options": ["{}", "{1, 2, 3}", "{3}", "{1}"],
+          "answer": "{1, 2, 3}",
+          "explain": "If A = B, the intersection is the whole set.",
+          "procedure": [
+            "Intersection = items in BOTH sets",
+            "All elements of A are also in B",
+            "Answer: {1, 2, 3}"
+          ]
+        },
+        {
+          "q": "Which symbol means 'is an element of'?",
+          "options": ["⊂", "∪", "∩", "∈"],
+          "answer": "∈",
+          "explain": "∈ means 'belongs to'.",
+          "procedure": [
+            "∈ means 'is an element of'",
+            "Example: 3 ∈ {1, 2, 3}",
+            "Answer: ∈"
+          ]
+        },
+        {
+          "q": "If D = {Monday, Tuesday, Wednesday}, what is n(D)?",
+          "options": ["2", "3", "4", "7"],
+          "answer": "3",
+          "explain": "D has 3 elements.",
+          "procedure": [
+            "Count the items: Monday, Tuesday, Wednesday",
+            "3 items",
+            "n(D) = 3",
+            "Answer: 3"
+          ]
+        },
+        {
+          "q": "If A = {a, b, c, d} and B = {c, d, e}, what is A ∩ B?",
+          "options": ["{a, b}", "{c, d}", "{e}", "{a, b, c, d, e}"],
+          "answer": "{c, d}",
+          "explain": "Common elements are c and d.",
+          "procedure": [
+            "List A: a, b, c, d",
+            "List B: c, d, e",
+            "Common: c and d",
+            "Answer: {c, d}"
+          ]
+        },
+        {
+          "q": "A set has 3 elements. How many subsets does it have?",
+          "options": ["3", "6", "8", "9"],
+          "answer": "8",
+          "explain": "Formula: 2³ = 8.",
+          "procedure": [
+            "Formula: number of subsets = 2ⁿ",
+            "n = 3",
+            "2³ = 8",
+            "Answer: 8"
+          ]
+        },
+        {
+          "q": "Which of these is the empty set?",
+          "options": ["{0}", "{ }", "{1}", "{a}"],
+          "answer": "{ }",
+          "explain": "{ } has no elements — it's the empty set.",
+          "procedure": [
+            "{0} contains the number 0 (one element)",
+            "{1} contains 1, {a} contains a",
+            "{ } has nothing inside",
+            "Answer: { }"
+          ]
+        },
+        {
+          "q": "In a class, 30 pupils like rice and 25 like beans. If 15 like both, how many like only rice?",
+          "options": ["10", "15", "20", "25"],
+          "answer": "15",
+          "explain": "30 − 15 = 15.",
+          "procedure": [
+            "'Only rice' means rice-likers who don't like beans",
+            "Total rice: 30",
+            "Both: 15",
+            "Only rice: 30 − 15 = 15",
+            "Answer: 15"
+          ]
         }
       ]
     }
