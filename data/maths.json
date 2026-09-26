@@ -11,7 +11,12 @@
           "q": "What is the place value of 7 in 4,752?",
           "options": ["7", "70", "700", "7000"],
           "answer": "700",
-          "explain": "The 7 is in the hundreds place, so its value is 700."
+          "explain": "The 7 is in the hundreds place, so its value is 700.",
+          "procedure": [
+            "Write the place values: 4 (thousands), 7 (hundreds), 5 (tens), 2 (ones)",
+            "The digit 7 sits in the hundreds column",
+            "Place value of 7 = 7 × 100 = 700"
+          ]
         },
         {
           "q": "Write 3,045 in words.",
@@ -22,43 +27,85 @@
             "Three hundred and forty-five"
           ],
           "answer": "Three thousand and forty-five",
-          "explain": "3,045 = three thousand and forty-five."
+          "explain": "3,045 = three thousand and forty-five.",
+          "procedure": [
+            "Break it up: 3,000 + 40 + 5",
+            "3,000 → three thousand",
+            "40 → forty",
+            "5 → five",
+            "Join them: three thousand and forty-five"
+          ]
         },
         {
           "q": "What is the value of the digit 6 in 56,213?",
           "options": ["6", "60", "600", "6000"],
           "answer": "6000",
-          "explain": "The 6 is in the thousands place."
+          "explain": "The 6 is in the thousands place.",
+          "procedure": [
+            "Place values: 5 (ten-thousands), 6 (thousands), 2 (hundreds), 1 (tens), 3 (ones)",
+            "The digit 6 sits in the thousands column",
+            "Value of 6 = 6 × 1,000 = 6,000"
+          ]
         },
         {
           "q": "Which number is the largest?",
           "options": ["9,899", "9,989", "9,998", "9,889"],
           "answer": "9,998",
-          "explain": "Compare digit by digit from the left."
+          "explain": "Compare digit by digit from the left.",
+          "procedure": [
+            "All four numbers start with 9 — move to the next digit",
+            "Second digits: 8, 9, 9, 8 → 9,989 and 9,998 lead",
+            "Third digits of those two: 8 and 9 → 9,998 leads",
+            "Largest is 9,998"
+          ]
         },
         {
           "q": "Round 4,678 to the nearest hundred.",
           "options": ["4,600", "4,700", "4,680", "5,000"],
           "answer": "4,700",
-          "explain": "78 rounds up to 100."
+          "explain": "78 rounds up to 100.",
+          "procedure": [
+            "Hundreds digit is 6, so our base is 4,600",
+            "Look at the tens digit: 7",
+            "7 is 5 or more, so we round up",
+            "4,600 + 100 = 4,700"
+          ]
         },
         {
           "q": "Round 8,341 to the nearest thousand.",
           "options": ["8,000", "8,300", "8,400", "9,000"],
           "answer": "8,000",
-          "explain": "341 is less than 500, so round down."
+          "explain": "341 is less than 500, so round down.",
+          "procedure": [
+            "Thousands digit is 8, so our base is 8,000",
+            "Look at the hundreds digit: 3",
+            "3 is less than 5, so we round down (keep the base)",
+            "Answer: 8,000"
+          ]
         },
         {
           "q": "What is the smallest 4-digit number?",
           "options": ["1000", "1111", "1001", "9999"],
           "answer": "1000",
-          "explain": "The smallest 4-digit number is 1000."
+          "explain": "The smallest 4-digit number is 1000.",
+          "procedure": [
+            "A 4-digit number must have a digit in the thousands place",
+            "The smallest thousands digit is 1 (0 would make it 3-digit)",
+            "The rest can be 0",
+            "Smallest 4-digit number = 1,000"
+          ]
         },
         {
           "q": "What is the largest 3-digit number?",
           "options": ["100", "900", "999", "990"],
           "answer": "999",
-          "explain": "999 is the largest 3-digit number."
+          "explain": "999 is the largest 3-digit number.",
+          "procedure": [
+            "A 3-digit number goes up to the hundreds place",
+            "To get the largest, use 9 in every column",
+            "Hundreds: 9, tens: 9, ones: 9",
+            "Largest 3-digit number = 999"
+          ]
         },
         {
           "q": "Arrange in ascending order: 7,204; 7,024; 7,240; 7,042",
@@ -69,73 +116,151 @@
             "7,204; 7,240; 7,024; 7,042"
           ],
           "answer": "7,024; 7,042; 7,204; 7,240",
-          "explain": "Start with the smallest and go up."
+          "explain": "Start with the smallest and go up.",
+          "procedure": [
+            "All start with 7 — move to the hundreds place",
+            "Hundreds digits: 2, 0, 2, 0 → the two with 0 come first",
+            "Between 7,024 and 7,042: compare tens — 2 vs 4 → 7,024 first",
+            "Between 7,204 and 7,240: compare tens — 0 vs 4 → 7,204 first",
+            "Ascending order: 7,024; 7,042; 7,204; 7,240"
+          ]
         },
         {
           "q": "What is the sum of 3,456 and 2,789?",
           "options": ["6,145", "6,245", "6,235", "6,345"],
           "answer": "6,245",
-          "explain": "3,456 + 2,789 = 6,245."
+          "explain": "3,456 + 2,789 = 6,245.",
+          "procedure": [
+            "Ones: 6 + 9 = 15 → write 5, carry 1",
+            "Tens: 5 + 8 + 1 = 14 → write 4, carry 1",
+            "Hundreds: 4 + 7 + 1 = 12 → write 2, carry 1",
+            "Thousands: 3 + 2 + 1 = 6 → write 6",
+            "Answer: 6,245"
+          ]
         },
         {
           "q": "What is 9,000 − 3,467?",
           "options": ["5,533", "5,633", "6,533", "5,433"],
           "answer": "5,533",
-          "explain": "9,000 − 3,467 = 5,533."
+          "explain": "9,000 − 3,467 = 5,533.",
+          "procedure": [
+            "Set up: 9,000 − 3,467",
+            "Borrow from the thousands: 9,000 becomes 8,000 and 1,000 is borrowed",
+            "Ones: 10 − 7 = 3",
+            "Tens: 9 − 6 = 3",
+            "Hundreds: 9 − 4 = 5",
+            "Thousands: 8 − 3 = 5",
+            "Answer: 5,533"
+          ]
         },
         {
           "q": "What is 234 × 5?",
           "options": ["1,070", "1,170", "1,270", "1,150"],
           "answer": "1,170",
-          "explain": "234 × 5 = 1,170."
+          "explain": "Multiply 234 by 5.",
+          "procedure": [
+            "Ones: 4 × 5 = 20 → write 0, carry 2",
+            "Tens: 3 × 5 = 15, + carry 2 = 17 → write 7, carry 1",
+            "Hundreds: 2 × 5 = 10, + carry 1 = 11 → write 11",
+            "Answer: 1,170"
+          ]
         },
         {
           "q": "What is 864 ÷ 8?",
           "options": ["106", "107", "108", "109"],
           "answer": "108",
-          "explain": "864 ÷ 8 = 108."
+          "explain": "864 ÷ 8 = 108.",
+          "procedure": [
+            "8 into 8 goes 1 time → write 1",
+            "Bring down 6 — 8 into 6 goes 0 times → write 0",
+            "Bring down 4 → 64 ÷ 8 = 8 → write 8",
+            "Answer: 108"
+          ]
         },
         {
           "q": "Which number is divisible by 3?",
           "options": ["124", "126", "128", "130"],
           "answer": "126",
-          "explain": "1 + 2 + 6 = 9, which is divisible by 3."
+          "explain": "1 + 2 + 6 = 9, which is divisible by 3.",
+          "procedure": [
+            "Rule: a number is divisible by 3 if the sum of its digits is divisible by 3",
+            "124 → 1 + 2 + 4 = 7 (not divisible by 3)",
+            "126 → 1 + 2 + 6 = 9 (divisible by 3 ✓)",
+            "128 → 1 + 2 + 8 = 11 (no)",
+            "130 → 1 + 3 + 0 = 4 (no)"
+          ]
         },
         {
           "q": "What is the LCM of 4 and 6?",
           "options": ["10", "12", "18", "24"],
           "answer": "12",
-          "explain": "The smallest number both 4 and 6 divide into is 12."
+          "explain": "The smallest number both 4 and 6 divide into is 12.",
+          "procedure": [
+            "Multiples of 4: 4, 8, 12, 16, 20, 24 …",
+            "Multiples of 6: 6, 12, 18, 24, 30 …",
+            "First common multiple = 12",
+            "LCM = 12"
+          ]
         },
         {
           "q": "What is the HCF of 24 and 36?",
           "options": ["6", "8", "12", "18"],
           "answer": "12",
-          "explain": "12 is the highest number that divides both 24 and 36."
+          "explain": "12 is the highest number that divides both 24 and 36.",
+          "procedure": [
+            "Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24",
+            "Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36",
+            "Common factors: 1, 2, 3, 4, 6, 12",
+            "Highest common factor = 12"
+          ]
         },
         {
           "q": "What is the product of 45 and 10?",
           "options": ["450", "405", "4,500", "4,050"],
           "answer": "450",
-          "explain": "45 × 10 = 450."
+          "explain": "45 × 10 = 450.",
+          "procedure": [
+            "Rule: multiplying by 10 adds a zero to the number",
+            "45 × 10 = 450",
+            "Answer: 450"
+          ]
         },
         {
           "q": "Which is a prime number?",
           "options": ["9", "15", "17", "21"],
           "answer": "17",
-          "explain": "17 has only 1 and itself as factors."
+          "explain": "17 has only 1 and itself as factors.",
+          "procedure": [
+            "A prime number has exactly two factors: 1 and itself",
+            "9 = 3 × 3 → not prime",
+            "15 = 3 × 5 → not prime",
+            "17 has no factors other than 1 and 17 → prime ✓",
+            "21 = 3 × 7 → not prime"
+          ]
         },
         {
           "q": "What is 1,000 less than 4,320?",
           "options": ["3,320", "3,420", "4,220", "3,220"],
           "answer": "3,320",
-          "explain": "4,320 − 1,000 = 3,320."
+          "explain": "4,320 − 1,000 = 3,320.",
+          "procedure": [
+            "Subtract 1,000 from 4,320",
+            "4,320 − 1,000 = 3,320",
+            "Answer: 3,320"
+          ]
         },
         {
           "q": "Add 6,789 + 4,321.",
           "options": ["11,010", "11,110", "10,110", "11,100"],
           "answer": "11,110",
-          "explain": "6,789 + 4,321 = 11,110."
+          "explain": "6,789 + 4,321 = 11,110.",
+          "procedure": [
+            "Ones: 9 + 1 = 10 → write 0, carry 1",
+            "Tens: 8 + 2 + 1 = 11 → write 1, carry 1",
+            "Hundreds: 7 + 3 + 1 = 11 → write 1, carry 1",
+            "Thousands: 6 + 4 + 1 = 11 → write 11",
+            "Answer: 11,110"
+          ]
         }
       ]
     },
@@ -148,121 +273,484 @@
           "q": "What is 1/2 + 1/4?",
           "options": ["2/6", "3/4", "2/4", "1/6"],
           "answer": "3/4",
-          "explain": "1/2 = 2/4, so 2/4 + 1/4 = 3/4."
+          "explain": "1/2 = 2/4, so 2/4 + 1/4 = 3/4.",
+          "procedure": [
+            "Find a common denominator — both 2 and 4 divide into 4",
+            "Change 1/2 to 2/4",
+            "Add: 2/4 + 1/4 = 3/4",
+            "Answer: 3/4"
+          ]
         },
         {
           "q": "Which fraction is equivalent to 2/3?",
           "options": ["4/6", "3/4", "2/6", "4/3"],
           "answer": "4/6",
-          "explain": "Multiply numerator and denominator by 2: 2×2 / 3×2 = 4/6."
+          "explain": "Multiply numerator and denominator by 2: 2×2 / 3×2 = 4/6.",
+          "procedure": [
+            "Multiply top and bottom by the same number",
+            "2 × 2 = 4 and 3 × 2 = 6",
+            "So 2/3 = 4/6",
+            "Answer: 4/6"
+          ]
         },
         {
           "q": "Simplify 8/12.",
           "options": ["2/3", "3/4", "4/6", "1/2"],
           "answer": "2/3",
-          "explain": "Divide top and bottom by 4: 8÷4 / 12÷4 = 2/3."
+          "explain": "Divide top and bottom by 4: 8÷4 / 12÷4 = 2/3.",
+          "procedure": [
+            "Find the HCF of 8 and 12 — that is 4",
+            "Divide numerator: 8 ÷ 4 = 2",
+            "Divide denominator: 12 ÷ 4 = 3",
+            "Simplified: 2/3"
+          ]
         },
         {
           "q": "What is 3/5 of 25?",
           "options": ["10", "12", "15", "20"],
           "answer": "15",
-          "explain": "25 ÷ 5 = 5, then 5 × 3 = 15."
+          "explain": "25 ÷ 5 = 5, then 5 × 3 = 15.",
+          "procedure": [
+            "Divide the whole by the denominator: 25 ÷ 5 = 5",
+            "Multiply by the numerator: 5 × 3 = 15",
+            "Answer: 15"
+          ]
         },
         {
           "q": "Which is larger: 2/3 or 3/5?",
           "options": ["2/3", "3/5", "They are equal", "Cannot compare"],
           "answer": "2/3",
-          "explain": "2/3 ≈ 0.667 and 3/5 = 0.6, so 2/3 is larger."
+          "explain": "2/3 ≈ 0.667 and 3/5 = 0.6, so 2/3 is larger.",
+          "procedure": [
+            "Convert to the same denominator — LCM of 3 and 5 is 15",
+            "2/3 = 10/15",
+            "3/5 = 9/15",
+            "10/15 > 9/15, so 2/3 is larger"
+          ]
         },
         {
           "q": "What is 5/8 − 2/8?",
           "options": ["3/8", "7/8", "3/16", "2/8"],
           "answer": "3/8",
-          "explain": "Same denominator: 5 − 2 = 3, so 3/8."
+          "explain": "Same denominator: 5 − 2 = 3, so 3/8.",
+          "procedure": [
+            "Denominators are the same (8) — no change needed",
+            "Subtract numerators: 5 − 2 = 3",
+            "Answer: 3/8"
+          ]
         },
         {
           "q": "Convert 7/4 to a mixed number.",
           "options": ["1 3/4", "1 1/4", "2 3/4", "3 1/4"],
           "answer": "1 3/4",
-          "explain": "7 ÷ 4 = 1 remainder 3, so 1 3/4."
+          "explain": "7 ÷ 4 = 1 remainder 3, so 1 3/4.",
+          "procedure": [
+            "Divide numerator by denominator: 7 ÷ 4 = 1 remainder 3",
+            "Whole number = 1",
+            "Remainder goes over the denominator: 3/4",
+            "Answer: 1 3/4"
+          ]
         },
         {
           "q": "What is 1/3 + 1/6?",
           "options": ["2/9", "1/2", "2/6", "1/9"],
           "answer": "1/2",
-          "explain": "1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2."
+          "explain": "1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2.",
+          "procedure": [
+            "Common denominator: 6",
+            "1/3 = 2/6",
+            "Add: 2/6 + 1/6 = 3/6",
+            "Simplify: 3/6 = 1/2"
+          ]
         },
         {
           "q": "Which is greater: 3/4 or 5/8?",
           "options": ["3/4", "5/8", "They are equal", "Cannot compare"],
           "answer": "3/4",
-          "explain": "3/4 = 6/8, which is greater than 5/8."
+          "explain": "3/4 = 6/8, which is greater than 5/8.",
+          "procedure": [
+            "Convert to the same denominator — LCM of 4 and 8 is 8",
+            "3/4 = 6/8",
+            "Compare: 6/8 vs 5/8",
+            "6/8 > 5/8, so 3/4 is greater"
+          ]
         },
         {
           "q": "What is 2/3 × 3/4?",
           "options": ["1/2", "6/7", "5/12", "2/4"],
           "answer": "1/2",
-          "explain": "(2 × 3) / (3 × 4) = 6/12 = 1/2."
+          "explain": "(2 × 3) / (3 × 4) = 6/12 = 1/2.",
+          "procedure": [
+            "Multiply numerators: 2 × 3 = 6",
+            "Multiply denominators: 3 × 4 = 12",
+            "Fraction: 6/12",
+            "Simplify: 6/12 = 1/2"
+          ]
         },
         {
           "q": "What is 1/2 ÷ 1/4?",
           "options": ["1/8", "2", "1/2", "4"],
           "answer": "2",
-          "explain": "1/2 × 4/1 = 2."
+          "explain": "1/2 × 4/1 = 2.",
+          "procedure": [
+            "To divide fractions, flip the second one and multiply",
+            "1/2 ÷ 1/4 becomes 1/2 × 4/1",
+            "Multiply: (1 × 4) / (2 × 1) = 4/2",
+            "Simplify: 4/2 = 2"
+          ]
         },
         {
           "q": "Which fraction is the smallest?",
           "options": ["1/2", "1/3", "1/4", "1/5"],
           "answer": "1/5",
-          "explain": "The larger the denominator, the smaller the fraction."
+          "explain": "The larger the denominator, the smaller the fraction.",
+          "procedure": [
+            "All have numerator 1",
+            "Rule: the bigger the denominator, the smaller the fraction",
+            "5 is the biggest denominator",
+            "Smallest fraction = 1/5"
+          ]
         },
         {
           "q": "What is 3 1/2 + 1 1/4?",
           "options": ["4 1/2", "4 3/4", "5 1/4", "4 1/4"],
           "answer": "4 3/4",
-          "explain": "3 + 1 = 4, and 1/2 + 1/4 = 3/4. Total = 4 3/4."
+          "explain": "3 + 1 = 4, and 1/2 + 1/4 = 3/4. Total = 4 3/4.",
+          "procedure": [
+            "Add whole numbers: 3 + 1 = 4",
+            "Add fractions: 1/2 + 1/4 → 2/4 + 1/4 = 3/4",
+            "Combine: 4 + 3/4 = 4 3/4"
+          ]
         },
         {
           "q": "Convert 0.75 to a fraction in simplest form.",
           "options": ["3/4", "7/5", "75/100", "1/4"],
           "answer": "3/4",
-          "explain": "0.75 = 75/100 = 3/4."
+          "explain": "0.75 = 75/100 = 3/4.",
+          "procedure": [
+            "0.75 = 75/100",
+            "HCF of 75 and 100 is 25",
+            "Divide: 75 ÷ 25 = 3 and 100 ÷ 25 = 4",
+            "Answer: 3/4"
+          ]
         },
         {
           "q": "What is 5/6 of 30?",
           "options": ["20", "24", "25", "30"],
           "answer": "25",
-          "explain": "30 ÷ 6 = 5, then 5 × 5 = 25."
+          "explain": "30 ÷ 6 = 5, then 5 × 5 = 25.",
+          "procedure": [
+            "Divide the whole by the denominator: 30 ÷ 6 = 5",
+            "Multiply by the numerator: 5 × 5 = 25",
+            "Answer: 25"
+          ]
         },
         {
           "q": "What is 3/4 + 1/8?",
           "options": ["4/12", "7/8", "4/8", "1/2"],
           "answer": "7/8",
-          "explain": "3/4 = 6/8, so 6/8 + 1/8 = 7/8."
+          "explain": "3/4 = 6/8, so 6/8 + 1/8 = 7/8.",
+          "procedure": [
+            "Common denominator: 8",
+            "3/4 = 6/8",
+            "Add: 6/8 + 1/8 = 7/8",
+            "Answer: 7/8"
+          ]
         },
         {
           "q": "Which fraction is equivalent to 3/5?",
           "options": ["6/10", "5/3", "9/20", "3/10"],
           "answer": "6/10",
-          "explain": "Multiply top and bottom by 2: 3×2 / 5×2 = 6/10."
+          "explain": "Multiply top and bottom by 2: 3×2 / 5×2 = 6/10.",
+          "procedure": [
+            "Multiply top and bottom by the same number",
+            "Try 2: 3 × 2 = 6 and 5 × 2 = 10",
+            "Result: 6/10",
+            "Answer: 6/10"
+          ]
         },
         {
           "q": "What is 4/9 + 2/9?",
           "options": ["6/18", "2/3", "6/9", "Both B and C"],
           "answer": "Both B and C",
-          "explain": "4/9 + 2/9 = 6/9, which simplifies to 2/3. So both are correct."
+          "explain": "4/9 + 2/9 = 6/9, which simplifies to 2/3. So both are correct.",
+          "procedure": [
+            "Same denominator — add numerators: 4 + 2 = 6",
+            "Sum: 6/9",
+            "Simplify 6/9 by dividing by 3: 2/3",
+            "6/9 = 2/3, so both answers are correct"
+          ]
         },
         {
           "q": "A pupil ate 2/5 of a cake. What fraction is left?",
           "options": ["1/5", "2/5", "3/5", "4/5"],
           "answer": "3/5",
-          "explain": "1 − 2/5 = 5/5 − 2/5 = 3/5."
+          "explain": "1 − 2/5 = 5/5 − 2/5 = 3/5.",
+          "procedure": [
+            "The whole cake = 1 = 5/5",
+            "Subtract what was eaten: 5/5 − 2/5",
+            "Subtract numerators: 5 − 2 = 3",
+            "Answer: 3/5"
+          ]
         },
         {
           "q": "What is 1/4 of 60?",
           "options": ["12", "15", "20", "24"],
           "answer": "15",
-          "explain": "60 ÷ 4 = 15."
+          "explain": "60 ÷ 4 = 15.",
+          "procedure": [
+            "Divide the whole by the denominator: 60 ÷ 4 = 15",
+            "Answer: 15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimals",
+      "name": "Decimals",
+      "icon": "🔟",
+      "questions": [
+        {
+          "q": "Write 0.7 as a fraction.",
+          "options": ["7/100", "7/10", "1/7", "70/10"],
+          "answer": "7/10",
+          "explain": "0.7 = seven tenths = 7/10.",
+          "procedure": [
+            "0.7 has one digit after the decimal point",
+            "That digit is in the tenths place",
+            "0.7 = 7/10",
+            "Answer: 7/10"
+          ]
+        },
+        {
+          "q": "What is 2.5 + 3.75?",
+          "options": ["6.25", "5.25", "6.15", "6.35"],
+          "answer": "6.25",
+          "explain": "Align decimal points: 2.50 + 3.75 = 6.25.",
+          "procedure": [
+            "Line up decimal points: 2.50 + 3.75",
+            "Hundredths: 0 + 5 = 5",
+            "Tenths: 5 + 7 = 12 → write 2, carry 1",
+            "Ones: 2 + 3 + 1 = 6",
+            "Answer: 6.25"
+          ]
+        },
+        {
+          "q": "What is 5.4 − 1.85?",
+          "options": ["3.55", "3.65", "4.55", "3.45"],
+          "answer": "3.55",
+          "explain": "5.40 − 1.85 = 3.55.",
+          "procedure": [
+            "Pad with zero: 5.40 − 1.85",
+            "Hundredths: 0 − 5 → borrow, 10 − 5 = 5",
+            "Tenths: 3 − 8 → borrow, 13 − 8 = 5",
+            "Ones: 4 − 1 = 3",
+            "Answer: 3.55"
+          ]
+        },
+        {
+          "q": "What is 0.6 × 4?",
+          "options": ["2.4", "2.6", "24", "0.24"],
+          "answer": "2.4",
+          "explain": "6 × 4 = 24, then place the decimal: 2.4.",
+          "procedure": [
+            "Ignore the decimal first: 6 × 4 = 24",
+            "Count decimal places in the question: 1 (in 0.6)",
+            "Place the decimal so the answer has 1 decimal place",
+            "Answer: 2.4"
+          ]
+        },
+        {
+          "q": "Round 3.467 to 2 decimal places.",
+          "options": ["3.46", "3.47", "3.5", "3.4"],
+          "answer": "3.47",
+          "explain": "The third decimal (7) rounds the second (6) up to 7.",
+          "procedure": [
+            "We want 2 decimal places: 3.46 or 3.47",
+            "Look at the third decimal: 7",
+            "7 is 5 or more, so round up",
+            "Answer: 3.47"
+          ]
+        },
+        {
+          "q": "Which is the largest: 0.5, 0.45, 0.505, 0.55?",
+          "options": ["0.5", "0.45", "0.505", "0.55"],
+          "answer": "0.55",
+          "explain": "0.55 has the largest decimal value.",
+          "procedure": [
+            "Pad all to 3 decimal places: 0.500, 0.450, 0.505, 0.550",
+            "Compare digit by digit from the left",
+            "The largest is 0.550",
+            "Answer: 0.55"
+          ]
+        },
+        {
+          "q": "What is 12.6 ÷ 3?",
+          "options": ["4.2", "4.02", "42", "0.42"],
+          "answer": "4.2",
+          "explain": "12.6 ÷ 3 = 4.2.",
+          "procedure": [
+            "Divide whole part: 12 ÷ 3 = 4",
+            "Divide decimal part: 0.6 ÷ 3 = 0.2",
+            "Combine: 4 + 0.2 = 4.2",
+            "Answer: 4.2"
+          ]
+        },
+        {
+          "q": "Write 3/4 as a decimal.",
+          "options": ["0.34", "0.75", "0.43", "7.5"],
+          "answer": "0.75",
+          "explain": "3 ÷ 4 = 0.75.",
+          "procedure": [
+            "Divide numerator by denominator: 3 ÷ 4",
+            "3 ÷ 4 = 0.75",
+            "Answer: 0.75"
+          ]
+        },
+        {
+          "q": "What is 0.25 + 0.75?",
+          "options": ["0.9", "1.0", "1.1", "0.10"],
+          "answer": "1.0",
+          "explain": "0.25 + 0.75 = 1.00.",
+          "procedure": [
+            "Line up decimal points: 0.25 + 0.75",
+            "Hundredths: 5 + 5 = 10 → write 0, carry 1",
+            "Tenths: 2 + 7 + 1 = 10 → write 0, carry 1",
+            "Ones: 0 + 0 + 1 = 1",
+            "Answer: 1.00 = 1.0"
+          ]
+        },
+        {
+          "q": "What is 100 × 0.23?",
+          "options": ["2.3", "23", "230", "0.23"],
+          "answer": "23",
+          "explain": "Multiplying by 100 moves the decimal point two places to the right.",
+          "procedure": [
+            "Multiplying by 100 shifts the decimal point 2 places right",
+            "0.23 → 02.3 → 23",
+            "Answer: 23"
+          ]
+        },
+        {
+          "q": "What is 0.08 as a fraction in simplest form?",
+          "options": ["8/100", "2/25", "8/10", "1/8"],
+          "answer": "2/25",
+          "explain": "0.08 = 8/100, which simplifies to 2/25.",
+          "procedure": [
+            "0.08 = 8/100",
+            "HCF of 8 and 100 is 4",
+            "Divide: 8 ÷ 4 = 2 and 100 ÷ 4 = 25",
+            "Answer: 2/25"
+          ]
+        },
+        {
+          "q": "Which decimal equals 1/5?",
+          "options": ["0.15", "0.2", "0.5", "0.05"],
+          "answer": "0.2",
+          "explain": "1 ÷ 5 = 0.2.",
+          "procedure": [
+            "Divide numerator by denominator: 1 ÷ 5",
+            "1 ÷ 5 = 0.2",
+            "Answer: 0.2"
+          ]
+        },
+        {
+          "q": "What is 4.5 × 2?",
+          "options": ["8", "9", "9.5", "8.5"],
+          "answer": "9",
+          "explain": "4.5 × 2 = 9.0.",
+          "procedure": [
+            "Ignore decimal first: 45 × 2 = 90",
+            "Question has 1 decimal place (in 4.5)",
+            "Place decimal with 1 decimal place: 9.0",
+            "Answer: 9"
+          ]
+        },
+        {
+          "q": "What is 6.03 − 0.9?",
+          "options": ["5.13", "5.93", "5.03", "6.93"],
+          "answer": "5.13",
+          "explain": "6.03 − 0.90 = 5.13.",
+          "procedure": [
+            "Pad with zero: 6.03 − 0.90",
+            "Hundredths: 3 − 0 = 3",
+            "Tenths: 0 − 9 → borrow, 10 − 9 = 1",
+            "Ones: 5 − 0 = 5",
+            "Answer: 5.13"
+          ]
+        },
+        {
+          "q": "Round 12.349 to 1 decimal place.",
+          "options": ["12.3", "12.4", "12.0", "12.35"],
+          "answer": "12.3",
+          "explain": "The second decimal (4) is less than 5, so round down.",
+          "procedure": [
+            "We want 1 decimal place: 12.3 or 12.4",
+            "Look at the second decimal: 4",
+            "4 is less than 5, so we round down",
+            "Answer: 12.3"
+          ]
+        },
+        {
+          "q": "Which decimal is smallest?",
+          "options": ["0.09", "0.1", "0.19", "0.9"],
+          "answer": "0.09",
+          "explain": "0.09 is less than 0.10, 0.19, and 0.90.",
+          "procedure": [
+            "Pad to 2 decimal places: 0.09, 0.10, 0.19, 0.90",
+            "Compare from the left",
+            "Smallest is 0.09",
+            "Answer: 0.09"
+          ]
+        },
+        {
+          "q": "What is 0.5 × 0.5?",
+          "options": ["0.25", "2.5", "1", "0.5"],
+          "answer": "0.25",
+          "explain": "0.5 × 0.5 = 0.25.",
+          "procedure": [
+            "Ignore decimals: 5 × 5 = 25",
+            "Count decimal places: 1 + 1 = 2",
+            "Place 2 decimal places: 0.25",
+            "Answer: 0.25"
+          ]
+        },
+        {
+          "q": "Add 1.05 + 2.95.",
+          "options": ["3.00", "4.00", "4.05", "3.95"],
+          "answer": "4.00",
+          "explain": "1.05 + 2.95 = 4.00.",
+          "procedure": [
+            "Line up decimal points: 1.05 + 2.95",
+            "Hundredths: 5 + 5 = 10 → write 0, carry 1",
+            "Tenths: 0 + 9 + 1 = 10 → write 0, carry 1",
+            "Ones: 1 + 2 + 1 = 4",
+            "Answer: 4.00 = 4"
+          ]
+        },
+        {
+          "q": "A pencil is 0.15 m long. What is its length in cm?",
+          "options": ["1.5 cm", "15 cm", "150 cm", "0.015 cm"],
+          "answer": "15 cm",
+          "explain": "0.15 × 100 = 15 cm.",
+          "procedure": [
+            "1 m = 100 cm",
+            "Multiply by 100: 0.15 × 100",
+            "Multiplying by 100 shifts decimal 2 places right: 15",
+            "Answer: 15 cm"
+          ]
+        },
+        {
+          "q": "Which is greater: 2.05 or 2.5?",
+          "options": ["2.05", "2.5", "Equal", "Cannot compare"],
+          "answer": "2.5",
+          "explain": "2.5 = 2.50, which is greater than 2.05.",
+          "procedure": [
+            "Pad with zero: 2.05 vs 2.50",
+            "Compare tenths: 0 vs 5",
+            "5 > 0, so 2.50 is larger",
+            "Answer: 2.5"
+          ]
         }
       ]
     }
