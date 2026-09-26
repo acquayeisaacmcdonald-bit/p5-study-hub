@@ -987,6 +987,238 @@
           ]
         }
       ]
+    },
+    {
+      "id": "measurement",
+      "name": "Measurement",
+      "icon": "📏",
+      "questions": [
+        {
+          "q": "How many centimetres are in 2.5 metres?",
+          "options": ["25 cm", "250 cm", "2,500 cm", "2500 cm"],
+          "answer": "250 cm",
+          "explain": "1 m = 100 cm, so 2.5 × 100 = 250.",
+          "procedure": [
+            "Remember: 1 m = 100 cm",
+            "Multiply: 2.5 × 100 = 250",
+            "Answer: 250 cm"
+          ]
+        },
+        {
+          "q": "How many grams are in 3.5 kilograms?",
+          "options": ["350 g", "3,500 g", "35,000 g", "3,050 g"],
+          "answer": "3,500 g",
+          "explain": "1 kg = 1000 g, so 3.5 × 1000 = 3,500.",
+          "procedure": [
+            "Remember: 1 kg = 1,000 g",
+            "Multiply: 3.5 × 1,000 = 3,500",
+            "Answer: 3,500 g"
+          ]
+        },
+        {
+          "q": "How many minutes are in 2 hours 30 minutes?",
+          "options": ["120", "150", "180", "210"],
+          "answer": "150",
+          "explain": "2 × 60 + 30 = 150.",
+          "procedure": [
+            "1 hour = 60 minutes",
+            "Convert hours: 2 × 60 = 120 minutes",
+            "Add the extra minutes: 120 + 30 = 150",
+            "Answer: 150 minutes"
+          ]
+        },
+        {
+          "q": "How many millilitres are in 4.2 litres?",
+          "options": ["42 ml", "420 ml", "4,200 ml", "42,000 ml"],
+          "answer": "4,200 ml",
+          "explain": "1 L = 1000 ml, so 4.2 × 1000 = 4,200.",
+          "procedure": [
+            "Remember: 1 L = 1,000 ml",
+            "Multiply: 4.2 × 1,000 = 4,200",
+            "Answer: 4,200 ml"
+          ]
+        },
+        {
+          "q": "A rope is 3.6 m long. Another is 2.85 m. What is the total?",
+          "options": ["6.45 m", "5.45 m", "6.55 m", "5.85 m"],
+          "answer": "6.45 m",
+          "explain": "3.60 + 2.85 = 6.45.",
+          "procedure": [
+            "Pad: 3.60 + 2.85",
+            "Hundredths: 0 + 5 = 5",
+            "Tenths: 6 + 8 = 14 → write 4, carry 1",
+            "Ones: 3 + 2 + 1 = 6",
+            "Answer: 6.45 m"
+          ]
+        },
+        {
+          "q": "What is the perimeter of a rectangle 8 cm × 5 cm?",
+          "options": ["13 cm", "26 cm", "40 cm", "30 cm"],
+          "answer": "26 cm",
+          "explain": "Perimeter = 2 × (8 + 5) = 26 cm.",
+          "procedure": [
+            "Formula: P = 2 × (length + width)",
+            "Add: 8 + 5 = 13",
+            "Multiply by 2: 13 × 2 = 26",
+            "Answer: 26 cm"
+          ]
+        },
+        {
+          "q": "What is the area of a square with side 7 cm?",
+          "options": ["14 cm²", "28 cm²", "49 cm²", "21 cm²"],
+          "answer": "49 cm²",
+          "explain": "Area of square = side × side = 7 × 7 = 49.",
+          "procedure": [
+            "Formula: Area = side × side",
+            "Multiply: 7 × 7 = 49",
+            "Answer: 49 cm²"
+          ]
+        },
+        {
+          "q": "If a bottle holds 750 ml, how much do 4 bottles hold?",
+          "options": ["2 L", "3 L", "3.5 L", "4 L"],
+          "answer": "3 L",
+          "explain": "750 × 4 = 3,000 ml = 3 L.",
+          "procedure": [
+            "Multiply: 750 × 4 = 3,000 ml",
+            "Convert to litres: 3,000 ÷ 1,000 = 3 L",
+            "Answer: 3 L"
+          ]
+        },
+        {
+          "q": "How many seconds are in 5 minutes?",
+          "options": ["250", "300", "350", "500"],
+          "answer": "300",
+          "explain": "5 × 60 = 300 seconds.",
+          "procedure": [
+            "1 minute = 60 seconds",
+            "Multiply: 5 × 60 = 300",
+            "Answer: 300 seconds"
+          ]
+        },
+        {
+          "q": "A car travels 240 km in 4 hours. What is its speed?",
+          "options": ["40 km/h", "50 km/h", "60 km/h", "80 km/h"],
+          "answer": "60 km/h",
+          "explain": "Speed = distance ÷ time = 240 ÷ 4.",
+          "procedure": [
+            "Formula: Speed = Distance ÷ Time",
+            "Substitute: 240 ÷ 4 = 60",
+            "Answer: 60 km/h"
+          ]
+        },
+        {
+          "q": "How many days are in 3 weeks?",
+          "options": ["15", "18", "21", "24"],
+          "answer": "21",
+          "explain": "3 × 7 = 21 days.",
+          "procedure": [
+            "1 week = 7 days",
+            "Multiply: 3 × 7 = 21",
+            "Answer: 21 days"
+          ]
+        },
+        {
+          "q": "Convert 1,500 m to km.",
+          "options": ["1.5 km", "15 km", "0.15 km", "150 km"],
+          "answer": "1.5 km",
+          "explain": "1,500 ÷ 1000 = 1.5 km.",
+          "procedure": [
+            "Remember: 1 km = 1,000 m",
+            "Divide: 1,500 ÷ 1,000 = 1.5",
+            "Answer: 1.5 km"
+          ]
+        },
+        {
+          "q": "A rectangular field is 12 m by 9 m. What is its area?",
+          "options": ["21 m²", "42 m²", "108 m²", "120 m²"],
+          "answer": "108 m²",
+          "explain": "Area = 12 × 9 = 108.",
+          "procedure": [
+            "Formula: Area = length × width",
+            "Multiply: 12 × 9 = 108",
+            "Answer: 108 m²"
+          ]
+        },
+        {
+          "q": "How many hours are in 4 days?",
+          "options": ["48", "72", "96", "120"],
+          "answer": "96",
+          "explain": "4 × 24 = 96 hours.",
+          "procedure": [
+            "1 day = 24 hours",
+            "Multiply: 4 × 24 = 96",
+            "Answer: 96 hours"
+          ]
+        },
+        {
+          "q": "How many millilitres in 0.25 L?",
+          "options": ["25 ml", "250 ml", "2,500 ml", "2.5 ml"],
+          "answer": "250 ml",
+          "explain": "0.25 × 1000 = 250 ml.",
+          "procedure": [
+            "Remember: 1 L = 1,000 ml",
+            "Multiply: 0.25 × 1,000 = 250",
+            "Answer: 250 ml"
+          ]
+        },
+        {
+          "q": "What is the perimeter of a triangle with sides 4 cm, 5 cm, and 6 cm?",
+          "options": ["12 cm", "15 cm", "18 cm", "20 cm"],
+          "answer": "15 cm",
+          "explain": "Add all sides: 4 + 5 + 6 = 15.",
+          "procedure": [
+            "Perimeter = sum of all sides",
+            "Add: 4 + 5 + 6 = 15",
+            "Answer: 15 cm"
+          ]
+        },
+        {
+          "q": "A bag weighs 2.5 kg. What is its weight in grams?",
+          "options": ["25 g", "250 g", "2,500 g", "25,000 g"],
+          "answer": "2,500 g",
+          "explain": "2.5 × 1000 = 2,500 g.",
+          "procedure": [
+            "Remember: 1 kg = 1,000 g",
+            "Multiply: 2.5 × 1,000 = 2,500",
+            "Answer: 2,500 g"
+          ]
+        },
+        {
+          "q": "How many weeks are in 42 days?",
+          "options": ["5", "6", "7", "8"],
+          "answer": "6",
+          "explain": "42 ÷ 7 = 6 weeks.",
+          "procedure": [
+            "1 week = 7 days",
+            "Divide: 42 ÷ 7 = 6",
+            "Answer: 6 weeks"
+          ]
+        },
+        {
+          "q": "A tank holds 500 L. How much is that in ml?",
+          "options": ["5,000 ml", "50,000 ml", "500,000 ml", "5,000,000 ml"],
+          "answer": "500,000 ml",
+          "explain": "500 × 1,000 = 500,000 ml.",
+          "procedure": [
+            "Remember: 1 L = 1,000 ml",
+            "Multiply: 500 × 1,000 = 500,000",
+            "Answer: 500,000 ml"
+          ]
+        },
+        {
+          "q": "A walk starts at 8:15 am and ends at 9:45 am. How long was the walk?",
+          "options": ["1 hour", "1 hour 30 min", "1 hour 45 min", "2 hours"],
+          "answer": "1 hour 30 min",
+          "explain": "9:45 − 8:15 = 1 hour 30 min.",
+          "procedure": [
+            "From 8:15 to 9:15 = 1 hour",
+            "From 9:15 to 9:45 = 30 minutes",
+            "Total: 1 hour 30 minutes",
+            "Answer: 1 hour 30 min"
+          ]
+        }
+      ]
     }
   ]
 }
