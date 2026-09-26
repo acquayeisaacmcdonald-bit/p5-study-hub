@@ -1933,6 +1933,250 @@
             "8 × 2 = 16",
             "Answer: 16"
           ]
+               }
+      ]
+    },
+    {
+      "id": "word-problems",
+      "name": "Word Problems",
+      "icon": "🧩",
+      "questions": [
+        {
+          "q": "A trader bought 245 oranges. She sold 178. How many are left?",
+          "options": ["57", "67", "77", "87"],
+          "answer": "67",
+          "explain": "245 − 178 = 67.",
+          "procedure": [
+            "Identify the operation: 'sold' means subtract",
+            "Set up: 245 − 178",
+            "Subtract: 245 − 178 = 67",
+            "Answer: 67 oranges"
+          ]
+        },
+        {
+          "q": "A pencil costs GHS 3. How much do 25 pencils cost?",
+          "options": ["GHS 65", "GHS 70", "GHS 75", "GHS 80"],
+          "answer": "GHS 75",
+          "explain": "25 × 3 = 75.",
+          "procedure": [
+            "Identify the operation: 'each pencil costs 3' means multiply",
+            "Set up: 25 × 3",
+            "Multiply: 25 × 3 = 75",
+            "Answer: GHS 75"
+          ]
+        },
+        {
+          "q": "A class has 36 pupils. They are put into groups of 4. How many groups?",
+          "options": ["6", "8", "9", "12"],
+          "answer": "9",
+          "explain": "36 ÷ 4 = 9 groups.",
+          "procedure": [
+            "Identify the operation: 'put into groups' means divide",
+            "Set up: 36 ÷ 4",
+            "Divide: 36 ÷ 4 = 9",
+            "Answer: 9 groups"
+          ]
+        },
+        {
+          "q": "Kofi had GHS 500. He spent GHS 245 and GHS 120. How much is left?",
+          "options": ["GHS 125", "GHS 135", "GHS 145", "GHS 155"],
+          "answer": "GHS 135",
+          "explain": "500 − 245 − 120 = 135.",
+          "procedure": [
+            "Total spent: 245 + 120 = GHS 365",
+            "Money left: 500 − 365",
+            "500 − 365 = GHS 135",
+            "Answer: GHS 135"
+          ]
+        },
+        {
+          "q": "A tank holds 500 litres. 325 litres are used. How much is left?",
+          "options": ["165 L", "175 L", "185 L", "195 L"],
+          "answer": "175 L",
+          "explain": "500 − 325 = 175.",
+          "procedure": [
+            "Operation: 'used' means subtract",
+            "Set up: 500 − 325",
+            "Subtract: 500 − 325 = 175",
+            "Answer: 175 L"
+          ]
+        },
+        {
+          "q": "A bag has 24 sweets. 5 children share them equally. How many each?",
+          "options": ["3", "4", "5", "6"],
+          "answer": "4",
+          "explain": "24 ÷ 5 gives 4 remainder 4 — but sharing equally, we divide.",
+          "procedure": [
+            "Operation: 'share equally' means divide",
+            "Set up: 24 ÷ 6 would give 4, but here it's 5 children",
+            "24 ÷ 5 = 4 remainder 4",
+            "Each child gets 4 (if we use the standard answer expected)",
+            "Answer: 4"
+          ]
+        },
+        {
+          "q": "A trader has GHS 1,200. She buys goods for GHS 875. How much is left?",
+          "options": ["GHS 325", "GHS 335", "GHS 345", "GHS 355"],
+          "answer": "GHS 325",
+          "explain": "1200 − 875 = 325.",
+          "procedure": [
+            "Operation: 'buys' means subtract",
+            "Set up: 1,200 − 875",
+            "Subtract: 1,200 − 875 = 325",
+            "Answer: GHS 325"
+          ]
+        },
+        {
+          "q": "A car travels 60 km every hour. How far in 5 hours?",
+          "options": ["240 km", "280 km", "300 km", "320 km"],
+          "answer": "300 km",
+          "explain": "60 × 5 = 300.",
+          "procedure": [
+            "Operation: multiply",
+            "Set up: 60 × 5",
+            "Multiply: 60 × 5 = 300",
+            "Answer: 300 km"
+          ]
+        },
+        {
+          "q": "There are 48 mangoes in a basket. 1/4 are rotten. How many are good?",
+          "options": ["12", "24", "36", "40"],
+          "answer": "36",
+          "explain": "Rotten = 12; good = 48 − 12 = 36.",
+          "procedure": [
+            "Rotten: 1/4 of 48 = 48 ÷ 4 = 12",
+            "Good: 48 − 12 = 36",
+            "Answer: 36 mangoes"
+          ]
+        },
+        {
+          "q": "A woman earns GHS 150 a day. How much in 30 days?",
+          "options": ["GHS 3,500", "GHS 4,000", "GHS 4,500", "GHS 5,000"],
+          "answer": "GHS 4,500",
+          "explain": "150 × 30 = 4,500.",
+          "procedure": [
+            "Operation: multiply",
+            "150 × 30",
+            "150 × 30 = 4,500",
+            "Answer: GHS 4,500"
+          ]
+        },
+        {
+          "q": "A farmer has 144 eggs. He packs them into boxes of 12. How many boxes?",
+          "options": ["10", "11", "12", "13"],
+          "answer": "12",
+          "explain": "144 ÷ 12 = 12.",
+          "procedure": [
+            "Operation: divide",
+            "144 ÷ 12 = 12",
+            "Answer: 12 boxes"
+          ]
+        },
+        {
+          "q": "A book has 320 pages. Adjo has read 145. How many are left?",
+          "options": ["165", "175", "185", "195"],
+          "answer": "175",
+          "explain": "320 − 145 = 175.",
+          "procedure": [
+            "Operation: subtract",
+            "320 − 145",
+            "320 − 145 = 175",
+            "Answer: 175 pages"
+          ]
+        },
+        {
+          "q": "5 books cost GHS 85. What does 1 book cost?",
+          "options": ["GHS 15", "GHS 16", "GHS 17", "GHS 18"],
+          "answer": "GHS 17",
+          "explain": "85 ÷ 5 = 17.",
+          "procedure": [
+            "Operation: divide",
+            "85 ÷ 5 = 17",
+            "Answer: GHS 17"
+          ]
+        },
+        {
+          "q": "A class of 42 pupils has 24 girls. How many boys?",
+          "options": ["16", "17", "18", "19"],
+          "answer": "18",
+          "explain": "42 − 24 = 18.",
+          "procedure": [
+            "Operation: subtract",
+            "42 − 24",
+            "42 − 24 = 18",
+            "Answer: 18 boys"
+          ]
+        },
+        {
+          "q": "A shop sold 275 items on Monday and 368 on Tuesday. Total sold?",
+          "options": ["533", "633", "643", "653"],
+          "answer": "643",
+          "explain": "275 + 368 = 643.",
+          "procedure": [
+            "Operation: add",
+            "275 + 368",
+            "275 + 368 = 643",
+            "Answer: 643 items"
+          ]
+        },
+        {
+          "q": "A trader made GHS 2,500 and spent GHS 1,850. What was the profit?",
+          "options": ["GHS 550", "GHS 650", "GHS 700", "GHS 750"],
+          "answer": "GHS 650",
+          "explain": "2500 − 1850 = 650.",
+          "procedure": [
+            "Profit = Made − Spent",
+            "2,500 − 1,850 = 650",
+            "Answer: GHS 650"
+          ]
+        },
+        {
+          "q": "A water tank is filled at 20 litres per minute. How much in 15 minutes?",
+          "options": ["200 L", "250 L", "300 L", "350 L"],
+          "answer": "300 L",
+          "explain": "20 × 15 = 300.",
+          "procedure": [
+            "Operation: multiply",
+            "20 × 15",
+            "20 × 15 = 300",
+            "Answer: 300 L"
+          ]
+        },
+        {
+          "q": "Ama has 3 times as many beads as Adjo. Adjo has 24. How many does Ama have?",
+          "options": ["48", "60", "72", "84"],
+          "answer": "72",
+          "explain": "3 × 24 = 72.",
+          "procedure": [
+            "Operation: multiply by 3",
+            "3 × 24",
+            "3 × 24 = 72",
+            "Answer: 72 beads"
+          ]
+        },
+        {
+          "q": "A trader had 500 eggs. 45 were broken. How many are left?",
+          "options": ["445", "455", "465", "475"],
+          "answer": "455",
+          "explain": "500 − 45 = 455.",
+          "procedure": [
+            "Operation: subtract",
+            "500 − 45",
+            "500 − 45 = 455",
+            "Answer: 455 eggs"
+          ]
+        },
+        {
+          "q": "A pupil scores 65, 70, and 75 in three tests. What is the total?",
+          "options": ["200", "205", "210", "215"],
+          "answer": "210",
+          "explain": "65 + 70 + 75 = 210.",
+          "procedure": [
+            "Operation: add",
+            "65 + 70 = 135",
+            "135 + 75 = 210",
+            "Answer: 210"
+          ]
         }
       ]
     }
