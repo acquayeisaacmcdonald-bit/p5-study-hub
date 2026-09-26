@@ -48,6 +48,9 @@ let calcPrev = null;
 let calcOp = null;
 let calcWaitForNext = false;
 
+// ---------- OFFLINE DICTIONARY ----------
+let offlineDictionary = null;
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -117,12 +120,23 @@ function hideLoading() { $("loading").classList.add("hidden"); }
 async function boot() {
   applyTheme(loadTheme());
   attachGlobalListeners();
+  attachDictionaryListeners();
+  warmUpVoices();
 
   try {
     showLoading();
     subjectsData = await fetchJSON("data/subjects.json");
     const maths = subjectsData.subjects.find(s => s.id === "maths");
     currentSubject = await fetchJSON(maths.file);
+
+    // Load offline dictionary (optional — won't break app if missing)
+    try {
+      offlineDictionary = await fetchJSON("data/dictionary.json");
+    } catch (dictErr) {
+      console.warn("Offline dictionary not available:", dictErr.message);
+      offlineDictionary = null;
+    }
+
     hideLoading();
     renderHome();
   } catch (err) {
@@ -208,8 +222,8 @@ function renderTools() {
   grid.innerHTML = "";
   const tools = [
     { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
-    { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Coming soon", available: false },
-    { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Coming soon", available: false },
+    { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Ready", available: true },
+    { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Ready", available: true },
     { id: "typing",     icon: "⌨️", name: "Typing Course", tag: "Coming soon", available: false }
   ];
   tools.forEach(t => {
@@ -226,6 +240,25 @@ function renderTools() {
       card.addEventListener("click", () => {
         showScreen("screen-calculator");
         renderCalc();
+      });
+    }
+    if (t.available && t.id === "dictionary") {
+      card.addEventListener("click", () => {
+        showScreen("screen-dictionary");
+        openDictionary();
+      });
+    }
+    if (t.available && t.id === "pronounce") {
+      card.addEventListener("click", () => {
+        showScreen("screen-dictionary");
+        openDictionary();
+        setTimeout(() => {
+          const input = $("dictInput");
+          if (input) {
+            input.placeholder = "Type any word to hear it pronounced";
+            input.focus();
+          }
+        }, 200);
       });
     }
     grid.appendChild(card);
@@ -664,6 +697,230 @@ function updateExprAfterDigit() {
 }
 
 // ===================================================
+// VOICE WARM-UP (for pronunciation)
+// ===================================================
+function warmUpVoices() {
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices();
+  };
+}
+
+// ===================================================
+// DICTIONARY + PRONUNCIATION (offline)
+// ===================================================
+function openDictionary() {
+  const input = $("dictInput");
+  const result = $("dictResult");
+  const error = $("dictError");
+  if (!input) return;
+  input.value = "";
+  result.classList.add("hidden");
+  result.innerHTML = "";
+  error.classList.add("hidden");
+  error.textContent = "";
+  setTimeout(() => input.focus(), 200);
+}
+
+function lookupWord(word) {
+  const result = $("dictResult");
+  const error = $("dictError");
+
+  word = (word || "").trim().toLowerCase();
+  if (!word) return;
+
+  if (!/^[a-z\-' ]+$/.test(word)) {
+    error.textContent = "Please enter a valid word (letters only).";
+    error.classList.remove("hidden");
+    result.classList.add("hidden");
+    return;
+  }
+
+  error.classList.add("hidden");
+  result.classList.remove("hidden");
+
+  if (!offlineDictionary) {
+    renderFallbackDictionary(word);
+    return;
+  }
+
+  const words = word.split(/\s+/);
+  const known = [];
+  const unknown = [];
+
+  words.forEach(w => {
+    const clean = w.replace(/[^a-z\-']/g, "");
+    if (offlineDictionary[clean]) {
+      known.push({ word: clean, definition: offlineDictionary[clean] });
+    } else {
+      unknown.push(w);
+    }
+  });
+
+  renderOfflineResult(word, known, unknown);
+}
+
+function renderFallbackDictionary(word) {
+  const result = $("dictResult");
+  result.innerHTML = "";
+
+  const header = document.createElement("div");
+  header.className = "dict-word-row";
+
+  const wordEl = document.createElement("div");
+  wordEl.className = "dict-word";
+  wordEl.textContent = word;
+  header.appendChild(wordEl);
+
+  const pronounceBtn = document.createElement("button");
+  pronounceBtn.className = "dict-pronounce";
+  pronounceBtn.title = "Play pronunciation";
+  pronounceBtn.textContent = "🔊";
+  pronounceBtn.addEventListener("click", () => speakWord(word, pronounceBtn));
+  header.appendChild(pronounceBtn);
+
+  result.appendChild(header);
+
+  const note = document.createElement("div");
+  note.className = "dict-def";
+  note.style.opacity = "0.7";
+  note.style.marginTop = "10px";
+  note.textContent = "Dictionary not loaded. You can still tap 🔊 to hear the word pronounced.";
+  result.appendChild(note);
+}
+
+function renderOfflineResult(phrase, known, unknown) {
+  const result = $("dictResult");
+  result.innerHTML = "";
+
+  const header = document.createElement("div");
+  header.className = "dict-word-row";
+
+  const wordEl = document.createElement("div");
+  wordEl.className = "dict-word";
+  wordEl.textContent = phrase;
+  header.appendChild(wordEl);
+
+  const pronounceBtn = document.createElement("button");
+  pronounceBtn.className = "dict-pronounce";
+  pronounceBtn.title = "Play pronunciation";
+  pronounceBtn.textContent = "🔊";
+  pronounceBtn.addEventListener("click", () => speakWord(phrase, pronounceBtn));
+  header.appendChild(pronounceBtn);
+
+  result.appendChild(header);
+
+  if (known.length > 1) {
+    const note = document.createElement("div");
+    note.className = "dict-phonetic";
+    note.textContent = `Meaning of each word in "${phrase}":`;
+    result.appendChild(note);
+  }
+
+  if (known.length === 0) {
+    const note = document.createElement("div");
+    note.className = "dict-def";
+    note.style.opacity = "0.7";
+    note.style.marginTop = "10px";
+    note.textContent = `No definition found for "${phrase}" yet. You can still tap 🔊 to hear it pronounced.`;
+    result.appendChild(note);
+    return;
+  }
+
+  known.forEach(k => {
+    const block = document.createElement("div");
+    block.className = "dict-meaning";
+
+    const word = document.createElement("div");
+    word.className = "dict-pos";
+    word.textContent = k.word;
+    block.appendChild(word);
+
+    const def = document.createElement("div");
+    def.className = "dict-def";
+    def.textContent = k.definition;
+    block.appendChild(def);
+
+    result.appendChild(block);
+  });
+
+  if (unknown.length > 0) {
+    const note = document.createElement("div");
+    note.className = "dict-def";
+    note.style.opacity = "0.6";
+    note.style.marginTop = "12px";
+    note.style.fontStyle = "italic";
+    note.textContent = `Not yet in our dictionary: ${unknown.join(", ")}`;
+    result.appendChild(note);
+  }
+}
+
+function speakWord(word, btn) {
+  if (!("speechSynthesis" in window)) {
+    alert("Your browser does not support speech. Try a different browser.");
+    return;
+  }
+
+  const clean = String(word)
+    .replace(/[–—]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!clean) return;
+
+  try { window.speechSynthesis.cancel(); } catch (e) { /* ignore */ }
+
+  const utterance = new SpeechSynthesisUtterance(clean);
+  utterance.lang = "en-GB";
+  utterance.rate = 0.85;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  try {
+    const voices = window.speechSynthesis.getVoices() || [];
+    const preferred = voices.find(v => /en-GB|en_GB/i.test(v.lang)) ||
+                      voices.find(v => /en-US|en_US/i.test(v.lang)) ||
+                      voices.find(v => /^en/i.test(v.lang));
+    if (preferred) {
+      utterance.voice = preferred;
+      utterance.lang = preferred.lang;
+    }
+  } catch (e) { /* use default voice */ }
+
+  if (btn) {
+    btn.classList.add("playing");
+    const clear = () => btn.classList.remove("playing");
+    utterance.onend = clear;
+    utterance.onerror = clear;
+    setTimeout(clear, 10000);
+  }
+
+  setTimeout(() => {
+    try {
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.error("speechSynthesis.speak failed:", e);
+    }
+  }, 60);
+}
+
+function attachDictionaryListeners() {
+  const input = $("dictInput");
+  const btn = $("dictSearchBtn");
+  if (!input || !btn) return;
+
+  btn.addEventListener("click", () => lookupWord(input.value));
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      lookupWord(input.value);
+    }
+  });
+}
+
+// ===================================================
 // LISTENERS
 // ===================================================
 function attachGlobalListeners() {
@@ -672,7 +929,7 @@ function attachGlobalListeners() {
       const active = document.querySelector(".screen.active").id;
       if (active === "screen-topic") showScreen("screen-home");
       else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
-      else if (active === "screen-progress" || active === "screen-calculator") showScreen("screen-home");
+      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary") showScreen("screen-home");
     });
   });
 
@@ -712,21 +969,17 @@ function attachGlobalListeners() {
     if (e.target.id === "themeModal") closeThemeModal();
   });
 
-  // Calculator buttons
   document.querySelectorAll(".calc-btn").forEach(btn => {
     btn.addEventListener("click", () => calcInput(btn.dataset.calc));
   });
 
-  // Global keyboard shortcuts
   document.addEventListener("keydown", e => {
-    // Study screen shortcuts
     if ($("screen-study").classList.contains("active")) {
       if (e.key === "ArrowRight") nextCard();
       if (e.key === "ArrowLeft") prevCard();
       if (e.key === " ") { e.preventDefault(); flipCard(); }
       return;
     }
-    // Calculator screen shortcuts
     if ($("screen-calculator").classList.contains("active")) {
       const k = e.key;
       if (/^[0-9]$/.test(k)) calcInput(k);

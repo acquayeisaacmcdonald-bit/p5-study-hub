@@ -147,6 +147,28 @@
       </div>
     </section>
 
+    <!-- ================= DICTIONARY ================= -->
+    <section class="screen" id="screen-dictionary">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>📖 Dictionary</h2>
+      <p class="dict-hint">Type a word to see its meaning.</p>
+
+      <div class="dict-search">
+        <input
+          type="text"
+          id="dictInput"
+          placeholder="e.g. photosynthesis"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <button id="dictSearchBtn" class="dict-search-btn">Search</button>
+      </div>
+
+      <div class="dict-result hidden" id="dictResult"></div>
+      <p class="dict-error hidden" id="dictError"></p>
+    </section>
+
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">
       <button class="back-btn" data-back>← Back</button>
