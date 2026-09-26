@@ -43,6 +43,7 @@ let quizHistory = loadHistory();
 
 // ---------- CALCULATOR STATE ----------
 let calcDisplay = "0";
+let calcExpression = "";
 let calcPrev = null;
 let calcOp = null;
 let calcWaitForNext = false;
@@ -554,13 +555,19 @@ function closeThemeModal() {
 function renderCalc() {
   const displayEl = $("calcDisplay");
   if (!displayEl) return;
-  displayEl.textContent = calcDisplay;
+
+  if (calcExpression) {
+    displayEl.innerHTML = `<span class="calc-expr">${calcExpression}</span>${calcDisplay}`;
+  } else {
+    displayEl.textContent = calcDisplay;
+  }
   displayEl.scrollLeft = displayEl.scrollWidth;
 }
 
 function calcInput(value) {
   if (value === "clear") {
     calcDisplay = "0";
+    calcExpression = "";
     calcPrev = null;
     calcOp = null;
     calcWaitForNext = false;
@@ -568,6 +575,7 @@ function calcInput(value) {
   }
   if (value === "back") {
     calcDisplay = calcDisplay.length > 1 ? calcDisplay.slice(0, -1) : "0";
+    updateExprAfterDigit();
     return renderCalc();
   }
   if (value === "equals") {
@@ -576,6 +584,7 @@ function calcInput(value) {
   if (value === "%") {
     const n = parseFloat(calcDisplay);
     if (!isNaN(n)) calcDisplay = formatNumber(n / 100);
+    updateExprAfterDigit();
     return renderCalc();
   }
   if (["+", "-", "*", "/"].includes(value)) {
@@ -589,6 +598,7 @@ function calcInput(value) {
     }
     calcOp = value;
     calcWaitForNext = true;
+    calcExpression = `${formatNumber(calcPrev)} ${displayOpSymbol(value)} `;
     return renderCalc();
   }
   if (value === ".") {
@@ -598,6 +608,7 @@ function calcInput(value) {
     } else if (!calcDisplay.includes(".")) {
       calcDisplay += ".";
     }
+    updateExprAfterDigit();
     return renderCalc();
   }
   // digit
@@ -607,6 +618,7 @@ function calcInput(value) {
   } else {
     calcDisplay = calcDisplay === "0" ? value : calcDisplay + value;
   }
+  updateExprAfterDigit();
   renderCalc();
 }
 
@@ -624,6 +636,7 @@ function calcEquals() {
   if (calcOp === null || calcPrev === null) return;
   const n = parseFloat(calcDisplay);
   const result = calcCompute(calcPrev, n, calcOp);
+  calcExpression = `${formatNumber(calcPrev)} ${displayOpSymbol(calcOp)} ${formatNumber(n)} =`;
   calcDisplay = formatNumber(result);
   calcPrev = null;
   calcOp = null;
@@ -636,6 +649,18 @@ function formatNumber(n) {
   if (!isFinite(n)) return "∞";
   const rounded = parseFloat(n.toPrecision(12));
   return String(rounded);
+}
+
+function displayOpSymbol(op) {
+  if (op === "*") return "×";
+  if (op === "/") return "÷";
+  if (op === "-") return "−";
+  return op;
+}
+
+function updateExprAfterDigit() {
+  if (!calcExpression) return;
+  calcExpression = calcExpression.replace(/[\d.]+$/, "") + calcDisplay;
 }
 
 // ===================================================
