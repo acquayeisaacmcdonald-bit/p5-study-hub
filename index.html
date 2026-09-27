@@ -387,6 +387,109 @@
         </div>
       </div>
     </section>
+	    <!-- ================= SPELLING BEE ================= -->
+    <section class="screen" id="screen-spellingbee">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>🐝 Spelling Bee</h2>
+
+      <!-- Setup -->
+      <div id="sbSetup">
+        <p class="ms-hint">Listen to the word, then spell it.</p>
+
+        <h3 style="margin-top: 16px;">Level</h3>
+        <div class="sb-level-grid" id="sbLevelGrid">
+          <button class="sb-level-card" data-level="easy">
+            <span class="sb-level-icon">🟢</span>
+            <span class="sb-level-name">Easy</span>
+            <span class="sb-level-desc">Short words</span>
+          </button>
+          <button class="sb-level-card" data-level="medium">
+            <span class="sb-level-icon">🟡</span>
+            <span class="sb-level-name">Medium</span>
+            <span class="sb-level-desc">Common words</span>
+          </button>
+          <button class="sb-level-card" data-level="hard">
+            <span class="sb-level-icon">🔴</span>
+            <span class="sb-level-name">Hard</span>
+            <span class="sb-level-desc">Long words</span>
+          </button>
+        </div>
+
+        <h3 style="margin-top: 20px;">Mode</h3>
+        <div class="ms-mode-grid">
+          <button class="ms-mode-card" id="sbSoloBtn">
+            <span class="ms-mode-icon">👤</span>
+            <span class="ms-mode-name">Solo</span>
+            <span class="ms-mode-desc">10 words</span>
+          </button>
+          <button class="ms-mode-card" id="sbTwoBtn">
+            <span class="ms-mode-icon">👥</span>
+            <span class="ms-mode-name">2 Players</span>
+            <span class="ms-mode-desc">Take turns</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-player name prompt -->
+      <div id="sbTwoSetup" class="hidden">
+        <p class="ms-hint">Player 2, what's your name?</p>
+        <input type="text" id="sbP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+        <div class="ms-actions">
+          <button class="typing-btn-secondary" id="sbBackToSetup">Cancel</button>
+          <button class="typing-btn-primary" id="sbStartTwoBtn">Start</button>
+        </div>
+      </div>
+
+      <!-- Pass-device screen -->
+      <div id="sbPassScreen" class="hidden ms-pass-screen">
+        <div class="ms-pass-icon">📱</div>
+        <h3 class="ms-pass-title">Pass to <span id="sbPassName">Player</span></h3>
+        <p class="ms-pass-msg">Tap when ready. Listen and spell.</p>
+        <button class="typing-btn-primary" id="sbReadyBtn">I'm ready →</button>
+      </div>
+
+      <!-- Play -->
+      <div id="sbPlay" class="hidden">
+        <div class="sb-topbar">
+          <span class="sb-current-player" id="sbCurrentPlayer">Kofi</span>
+          <span class="sb-progress-label" id="sbProgressLabel">Word 1 of 10</span>
+        </div>
+
+        <div class="sb-speaker-card">
+          <button class="sb-play-btn" id="sbPlayBtn" title="Hear the word">🔊</button>
+          <p class="sb-speaker-hint">Tap to hear the word</p>
+        </div>
+
+        <input
+          type="text"
+          id="sbInput"
+          class="sb-input"
+          placeholder="Type the word"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+
+        <p class="sb-feedback" id="sbFeedback"></p>
+
+        <div class="ms-actions" style="margin-top: 14px;">
+          <button class="typing-btn-secondary" id="sbSkipBtn">Skip</button>
+          <button class="typing-btn-primary" id="sbSubmitBtn">Submit</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div id="sbResult" class="hidden ms-result">
+        <div class="ms-result-icon" id="sbResultIcon">🎉</div>
+        <h3 class="ms-result-title" id="sbResultTitle">Round complete!</h3>
+        <p class="ms-result-msg" id="sbResultMsg">You got 7 of 10 correct.</p>
+        <div class="ms-result-actions">
+          <button class="typing-btn-secondary" id="sbPlayAgainBtn">Play Again</button>
+          <button class="typing-btn-primary" id="sbDoneBtn">Done</button>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">

@@ -118,6 +118,36 @@ const MM_PAIR_POOL = [
   { a: "Ice", b: "Frozen water" }
 ];
 
+// ---------- SPELLING BEE STATE ----------
+let sbLevel = null;              // "easy" | "medium" | "hard"
+let sbMode = null;               // "solo" | "two"
+let sbPlayers = [];              // [{ name, score }]
+let sbCurrentPlayerIndex = 0;
+let sbWords = [];                // array of words for the round
+let sbWordIndex = 0;
+let sbRoundActive = false;
+let sbWordLocked = false;
+let sbRoundLength = 10;
+
+// Word pools for each level
+const SB_WORDS = {
+  easy: [
+    "cat", "dog", "sun", "run", "book", "tree", "fish", "bird", "milk", "hand",
+    "blue", "green", "happy", "water", "house", "friend", "school", "teacher"
+  ],
+  medium: [
+    "garden", "subtract", "courage", "morning", "country", "village", "picture",
+    "kitchen", "library", "journey", "machine", "measure", "teacher", "greater",
+    "brother", "weather", "however", "instead", "understand", "important"
+  ],
+  hard: [
+    "photosynthesis", "government", "multiplication", "subtraction", "community",
+    "environment", "mathematics", "punctuation", "citizenship", "encyclopedia",
+    "electricity", "experiment", "information", "neighbourhood", "responsibility",
+    "communication", "organisation", "pronunciation", "vocabulary", "arithmetic"
+  ]
+};
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -302,6 +332,7 @@ async function boot() {
   attachGamesListeners();
   attachMathSprintListeners();
   attachMemoryMatchListeners();
+  attachSpellingBeeListeners();
   attachNameListeners();
   warmUpVoices();
 
@@ -1325,7 +1356,7 @@ function renderGamesGrid() {
   const games = [
     { id: "mathsprint", icon: "⏱️", name: "Math Sprint", tag: "Ready", available: true },
     { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Ready", available: true },
-    { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Coming soon", available: false },
+    { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Ready", available: true },
     { id: "tables", icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
   ];
   games.forEach(g => {
@@ -1345,6 +1376,11 @@ function renderGamesGrid() {
       card.addEventListener("click", () => {
         showScreen("screen-memorymatch");
         openMemoryMatch();
+      });
+    }    if (g.available && g.id === "spellingbee") {
+      card.addEventListener("click", () => {
+        showScreen("screen-spellingbee");
+        openSpellingBee();
       });
     }
     grid.appendChild(card);
@@ -1970,6 +2006,291 @@ function attachMemoryMatchListeners() {
     clearInterval(mmTimerInterval);
     showScreen("screen-games");
   });
+}// ===================================================
+// SPELLING BEE
+// ===================================================
+function openSpellingBee() {
+  sbLevel = null;
+  sbMode = null;
+  sbPlayers = [];
+  sbCurrentPlayerIndex = 0;
+  sbWords = [];
+  sbWordIndex = 0;
+  sbRoundActive = false;
+  sbWordLocked = false;
+
+  $("sbSetup").classList.remove("hidden");
+  $("sbTwoSetup").classList.add("hidden");
+  $("sbPassScreen").classList.add("hidden");
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.add("hidden");
+
+  // Reset level selection
+  document.querySelectorAll(".sb-level-card").forEach(c => c.classList.remove("selected"));
+  // Default to easy
+  selectSpellingLevel("easy");
+}
+
+function selectSpellingLevel(level) {
+  sbLevel = level;
+  document.querySelectorAll(".sb-level-card").forEach(c => {
+    c.classList.toggle("selected", c.dataset.level === level);
+  });
+}
+
+function startSpellingBeeSolo() {
+  if (!sbLevel) return;
+  sbMode = "solo";
+  sbPlayers = [{ name: playerName || "Player", score: 0 }];
+  sbCurrentPlayerIndex = 0;
+  prepareSpellingRound();
+  $("sbSetup").classList.add("hidden");
+  startSpellingPlay();
+}
+
+function startSpellingBeeTwo() {
+  if (!sbLevel) return;
+  const p2 = ($("sbP2Input").value || "").trim() || "Player 2";
+  sbMode = "two";
+  sbPlayers = [
+    { name: playerName || "Player 1", score: 0 },
+    { name: p2, score: 0 }
+  ];
+  sbCurrentPlayerIndex = 0;
+  prepareSpellingRound();
+  $("sbTwoSetup").classList.add("hidden");
+  showSpellingPassScreen();
+}
+
+function prepareSpellingRound() {
+  // Pick words at random from the level's pool
+  const pool = SB_WORDS[sbLevel] || SB_WORDS.easy;
+  const shuffled = shuffle([...pool]);
+  sbWords = shuffled.slice(0, Math.min(sbRoundLength, shuffled.length));
+  sbWordIndex = 0;
+}
+
+function showSpellingPassScreen() {
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.add("hidden");
+  $("sbPassScreen").classList.remove("hidden");
+  $("sbPassName").textContent = sbPlayers[sbCurrentPlayerIndex].name;
+}
+
+function startSpellingPlay() {
+  $("sbPassScreen").classList.add("hidden");
+  $("sbPlay").classList.remove("hidden");
+  $("sbResult").classList.add("hidden");
+  sbRoundActive = true;
+  sbWordLocked = false;
+  sbWordIndex = 0;
+  renderSpellingWord();
+}
+
+function renderSpellingWord() {
+  if (sbWordIndex >= sbWords.length) {
+    endSpellingRound();
+    return;
+  }
+
+  sbWordLocked = false;
+  const word = sbWords[sbWordIndex];
+
+  $("sbCurrentPlayer").textContent = sbPlayers[sbCurrentPlayerIndex].name;
+  $("sbProgressLabel").textContent = `Word ${sbWordIndex + 1} of ${sbWords.length}`;
+
+  const input = $("sbInput");
+  input.value = "";
+  input.disabled = false;
+  input.classList.remove("correct", "wrong");
+  $("sbFeedback").textContent = "";
+  $("sbFeedback").className = "sb-feedback";
+
+  // Auto-play the word after a short delay
+  setTimeout(() => {
+    if (sbRoundActive) speakWord(word, $("sbPlayBtn"));
+  }, 200);
+
+  setTimeout(() => input.focus(), 100);
+}
+
+function handleSpellingSubmit() {
+  if (sbWordLocked || !sbRoundActive) return;
+
+  const input = $("sbInput");
+  const typed = (input.value || "").trim().toLowerCase();
+  const correct = sbWords[sbWordIndex].toLowerCase();
+
+  if (!typed) return;
+
+  sbWordLocked = true;
+  input.disabled = true;
+
+  if (typed === correct) {
+    sbPlayers[sbCurrentPlayerIndex].score++;
+    input.classList.add("correct");
+    $("sbFeedback").textContent = "✅ Correct!";
+    $("sbFeedback").className = "sb-feedback correct";
+  } else {
+    input.classList.add("wrong");
+    $("sbFeedback").textContent = `❌ Correct spelling: ${correct}`;
+    $("sbFeedback").className = "sb-feedback wrong";
+  }
+
+  // Next word after a delay
+  setTimeout(() => {
+    if (!sbRoundActive) return;
+
+    if (sbMode === "two") {
+      // Alternate players each word
+      sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
+    }
+
+    sbWordIndex++;
+
+    if (sbWordIndex >= sbWords.length) {
+      endSpellingRound();
+    } else {
+      if (sbMode === "two") {
+        // Show pass screen between turns
+        showSpellingPassScreen();
+        // But we need to auto-resume from pass screen
+        // Rebind ready button for this flow
+        const readyBtn = $("sbReadyBtn");
+        readyBtn.onclick = () => startSpellingPlay();
+      } else {
+        renderSpellingWord();
+      }
+    }
+  }, 1400);
+}
+
+function handleSpellingSkip() {
+  if (sbWordLocked || !sbRoundActive) return;
+  sbWordLocked = true;
+
+  const correct = sbWords[sbWordIndex].toLowerCase();
+  $("sbInput").classList.add("wrong");
+  $("sbInput").disabled = true;
+  $("sbFeedback").textContent = `Skipped — correct spelling: ${correct}`;
+  $("sbFeedback").className = "sb-feedback wrong";
+
+  setTimeout(() => {
+    if (!sbRoundActive) return;
+    if (sbMode === "two") {
+      sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
+    }
+    sbWordIndex++;
+    if (sbWordIndex >= sbWords.length) endSpellingRound();
+    else if (sbMode === "two") {
+      showSpellingPassScreen();
+      $("sbReadyBtn").onclick = () => startSpellingPlay();
+    } else {
+      renderSpellingWord();
+    }
+  }, 1400);
+}
+
+function endSpellingRound() {
+  sbRoundActive = false;
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.remove("hidden");
+
+  if (sbMode === "solo") {
+    const score = sbPlayers[0].score;
+    const total = sbWords.length;
+    const pct = Math.round((score / total) * 100);
+
+    let title = "Well done!";
+    let icon = "🎉";
+    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
+    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
+    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
+    else { title = "Keep practising!"; icon = "💪"; }
+
+    $("sbResultIcon").textContent = icon;
+    $("sbResultTitle").textContent = title;
+    $("sbResultMsg").textContent = `You got ${score} of ${total} correct (${pct}%).`;
+  } else {
+    const p1 = sbPlayers[0];
+    const p2 = sbPlayers[1];
+    let winner;
+    if (p1.score > p2.score) winner = p1;
+    else if (p2.score > p1.score) winner = p2;
+    else winner = null;
+
+    $("sbResultIcon").textContent = winner ? "🏆" : "🤝";
+    $("sbResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+    $("sbResultMsg").textContent = `${p1.name}: ${p1.score} — ${p2.name}: ${p2.score}`;
+  }
+}
+
+function attachSpellingBeeListeners() {
+  document.querySelectorAll(".sb-level-card").forEach(card => {
+    card.addEventListener("click", () => selectSpellingLevel(card.dataset.level));
+  });
+
+  const soloBtn = $("sbSoloBtn");
+  const twoBtn = $("sbTwoBtn");
+  const backBtn = $("sbBackToSetup");
+  const startTwoBtn = $("sbStartTwoBtn");
+  const readyBtn = $("sbReadyBtn");
+  const submitBtn = $("sbSubmitBtn");
+  const skipBtn = $("sbSkipBtn");
+  const playBtn = $("sbPlayBtn");
+  const input = $("sbInput");
+  const playAgainBtn = $("sbPlayAgainBtn");
+  const doneBtn = $("sbDoneBtn");
+
+  if (soloBtn) soloBtn.addEventListener("click", startSpellingBeeSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("sbSetup").classList.add("hidden");
+      $("sbTwoSetup").classList.remove("hidden");
+      $("sbP2Input").value = "";
+      setTimeout(() => $("sbP2Input").focus(), 100);
+    });
+  }
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      $("sbTwoSetup").classList.add("hidden");
+      $("sbSetup").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startSpellingBeeTwo);
+  if (readyBtn) {
+    readyBtn.addEventListener("click", () => startSpellingPlay());
+  }
+  if (submitBtn) submitBtn.addEventListener("click", handleSpellingSubmit);
+  if (skipBtn) skipBtn.addEventListener("click", handleSpellingSkip);
+  if (playBtn) {
+    playBtn.addEventListener("click", () => {
+      if (sbRoundActive && !sbWordLocked) {
+        speakWord(sbWords[sbWordIndex], playBtn);
+      }
+    });
+  }
+  if (input) {
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        handleSpellingSubmit();
+      }
+    });
+  }
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener("click", () => {
+      if (sbMode === "solo") startSpellingBeeSolo();
+      else if (sbMode === "two") {
+        sbPlayers.forEach(p => p.score = 0);
+        sbCurrentPlayerIndex = 0;
+        prepareSpellingRound();
+        showSpellingPassScreen();
+        $("sbReadyBtn").onclick = () => startSpellingPlay();
+      }
+    });
+  }
+  if (doneBtn) doneBtn.addEventListener("click", () => showScreen("screen-games"));
 }
 // ===================================================
 // GO

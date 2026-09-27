@@ -1282,4 +1282,105 @@ button.danger:active { transform: scale(0.98); }
 @media (max-width: 380px) {
   .mm-card-inner { font-size: 0.78rem; }
   .mm-front { font-size: 1.4rem; }
+}/* ---------- SPELLING BEE ---------- */
+.sb-level-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
+.sb-level-card {
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+.sb-level-card:hover { background: var(--panel-strong); border-color: var(--accent); }
+.sb-level-card:active { transform: scale(0.98); }
+.sb-level-card.selected {
+  border-color: var(--accent);
+  background: var(--panel-strong);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.sb-level-icon { font-size: 1.3rem; }
+.sb-level-name { font-size: 0.85rem; font-weight: 700; }
+.sb-level-desc { font-size: 0.68rem; color: var(--text-muted); }
+
+.sb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+.sb-current-player { font-size: 0.95rem; font-weight: 700; }
+.sb-progress-label { font-size: 0.85rem; color: var(--text-muted); }
+
+.sb-speaker-card {
+  background: var(--card-front);
+  color: var(--card-front-text);
+  border-radius: var(--radius-lg);
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.sb-play-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 2.6rem;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.sb-play-btn:hover { background: var(--accent-2); }
+.sb-play-btn:active { transform: scale(0.94); }
+.sb-play-btn.playing { background: var(--card-back); animation: pulse 1.2s ease-in-out infinite; }
+.sb-speaker-hint {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.sb-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+  outline: none;
+  margin-bottom: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.sb-input:focus { border-color: var(--accent); background: var(--panel-strong); }
+.sb-input.correct { border-color: #10b981; background: rgba(16, 185, 129, 0.15); }
+.sb-input.wrong { border-color: #dc2626; background: rgba(220, 38, 38, 0.15); }
+
+.sb-feedback {
+  text-align: center;
+  min-height: 22px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+.sb-feedback.correct { color: var(--success); }
+.sb-feedback.wrong { color: var(--warning); }
