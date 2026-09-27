@@ -8,8 +8,13 @@ const STORAGE_KEYS = {
   progress: "p5hub.progress",
   history: "p5hub.history",
   pace: "p5hub.pace",
-  typing: "p5hub.typing"
+  typing: "p5hub.typing",
+  study: "p5hub.study"
 };
+
+const STUDY_REQUIRED_MIN = 45;
+const STUDY_REQUIRED_SEC = STUDY_REQUIRED_MIN * 60;
+const UNLOCK_DURATION_MS = 12 * 60 * 60 * 1000; // 12 hours
 
 const THEMES = [
   { id: "classic", name: "Classic",   colors: ["#1e3a8a", "#0f172a"] },
@@ -62,6 +67,10 @@ let typingTypedCount = 0;
 let typingDone = false;
 let typingStats = loadTypingStats();
 
+// ---------- STUDY TRACKER STATE ----------
+let studyTracker = loadStudyTracker();
+let studyTickInterval = null;
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -113,7 +122,96 @@ function saveTypingStats() {
   localStorage.setItem(STORAGE_KEYS.typing, JSON.stringify(typingStats));
 }
 
-// ---------- DOM HELPERS ----------
+// ---------- STUDY TRACKER ----------
+// Structure:
+// {
+//   secondsToday: number,          // seconds of study accumulated in current cycle
+//   unlockedAt: number | null,     // timestamp when games were unlocked
+//   unlocksTotal: number,          // count of times games have been unlocked
+//   lastUpdate: number             // timestamp of last save (for safety)
+// }
+function loadStudyTracker() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE_KEYS.study));
+    if (!raw) return { secondsToday: 0, unlockedAt: null, unlocksTotal: 0, lastUpdate: Date.now() };
+    return {
+      secondsToday: raw.secondsToday || 0,
+      unlockedAt: raw.unlockedAt || null,
+      unlocksTotal: raw.unlocksTotal || 0,
+      lastUpdate: raw.lastUpdate || Date.now()
+    };
+  } catch {
+    return { secondsToday: 0, unlockedAt: null, unlocksTotal: 0, lastUpdate: Date.now() };
+  }
+}
+function saveStudyTracker() {
+  studyTracker.lastUpdate = Date.now();
+  localStorage.setItem(STORAGE_KEYS.study, JSON.stringify(studyTracker));
+}
+
+// Check if the 12-hour unlock window has expired. If so, reset.
+function checkStudyReset() {
+  if (studyTracker.unlockedAt) {
+    const elapsed = Date.now() - studyTracker.unlockedAt;
+    if (elapsed >= UNLOCK_DURATION_MS) {
+      // Unlock window expired — reset everything
+      studyTracker.secondsToday = 0;
+      studyTracker.unlockedAt = null;
+      saveStudyTracker();
+    }
+  }
+}
+
+function isGamesUnlocked() {
+  checkStudyReset();
+  return studyTracker.unlockedAt !== null;
+}
+
+function getStudyProgressFraction() {
+  if (isGamesUnlocked()) return 1;
+  return Math.min(1, studyTracker.secondsToday / STUDY_REQUIRED_SEC);
+}
+
+function getUnlockTimeRemainingMs() {
+  if (!studyTracker.unlockedAt) return 0;
+  const elapsed = Date.now() - studyTracker.unlockedAt;
+  return Math.max(0, UNLOCK_DURATION_MS - elapsed);
+}
+
+function startStudyTimer() {
+  if (studyTickInterval) return; // already running
+  studyTickInterval = setInterval(() => {
+    const active = document.querySelector(".screen.active");
+    if (!active) return;
+    const id = active.id;
+
+    // Count only Study, Quiz, Typing screens as study time
+    if (id === "screen-study" || id === "screen-quiz" || id === "screen-typing") {
+      // If already unlocked, don't keep counting
+      if (isGamesUnlocked()) return;
+      studyTracker.secondsToday += 1;
+      // Unlock when threshold reached
+      if (studyTracker.secondsToday >= STUDY_REQUIRED_SEC) {
+        studyTracker.unlockedAt = Date.now();
+        studyTracker.unlocksTotal += 1;
+      }
+      saveStudyTracker();
+      updateStudyBanner();
+      updateGamesScreen();
+    }
+  }, 1000);
+}
+
+function stopStudyTimer() {
+  if (studyTickInterval) {
+    clearInterval(studyTickInterval);
+    studyTickInterval = null;
+  }
+}
+
+// ===================================================
+// DOM HELPERS
+// ===================================================
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls) => {
   const e = document.createElement(tag);
@@ -125,6 +223,14 @@ const el = (tag, cls) => {
 function showScreen(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   $(id).classList.add("active");
+
+  // If leaving a learn screen, save tracker
+  if (id !== "screen-study" && id !== "screen-quiz" && id !== "screen-typing") {
+    saveStudyTracker();
+  }
+
+  // Update study banner whenever screen changes (home)
+  updateStudyBanner();
 
   requestAnimationFrame(() => {
     const screen = $(id);
@@ -146,7 +252,13 @@ async function boot() {
   attachGlobalListeners();
   attachDictionaryListeners();
   attachTypingListeners();
+  attachGamesListeners();
   warmUpVoices();
+
+  // Safety check on load
+  checkStudyReset();
+  startStudyTimer();
+  updateStudyBanner();
 
   try {
     showLoading();
@@ -154,7 +266,6 @@ async function boot() {
     const maths = subjectsData.subjects.find(s => s.id === "maths");
     currentSubject = await fetchJSON(maths.file);
 
-    // Load offline dictionary (optional)
     try {
       offlineDictionary = await fetchJSON("data/dictionary.json");
     } catch (dictErr) {
@@ -162,7 +273,6 @@ async function boot() {
       offlineDictionary = null;
     }
 
-    // Load typing course
     try {
       typingData = await fetchJSON("data/typing.json");
     } catch (typeErr) {
@@ -195,6 +305,7 @@ function renderHome() {
   renderHomeTopics();
   renderTools();
   renderGreeting();
+  updateStudyBanner();
 }
 
 function renderGreeting() {
@@ -257,7 +368,8 @@ function renderTools() {
     { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
     { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Ready", available: true },
     { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Ready", available: true },
-    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: typingData ? "Ready" : "Unavailable", available: !!typingData }
+    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: typingData ? "Ready" : "Unavailable", available: !!typingData },
+    { id: "games",      icon: "🎮", name: "Games", tag: isGamesUnlocked() ? "Unlocked" : "Locked", available: true }
   ];
   tools.forEach(t => {
     const card = el("button", "tool-card" + (t.available ? "" : " disabled"));
@@ -300,8 +412,43 @@ function renderTools() {
         openTyping();
       });
     }
+    if (t.available && t.id === "games") {
+      card.addEventListener("click", () => {
+        showScreen("screen-games");
+        updateGamesScreen();
+      });
+    }
     grid.appendChild(card);
   });
+}
+
+// ===================================================
+// STUDY BANNER
+// ===================================================
+function updateStudyBanner() {
+  const banner = $("studyBanner");
+  const bannerIcon = $("studyBannerIcon");
+  const bannerText = $("studyBannerText");
+  const fill = $("studyProgressFill");
+  if (!banner || !bannerText) return;
+
+  if (isGamesUnlocked()) {
+    banner.classList.add("unlocked");
+    fill.classList.add("unlocked");
+    bannerIcon.textContent = "🎮";
+    const msLeft = getUnlockTimeRemainingMs();
+    const h = Math.floor(msLeft / 3600000);
+    const m = Math.floor((msLeft % 3600000) / 60000);
+    bannerText.textContent = `Games unlocked for ${h}h ${m}m`;
+  } else {
+    banner.classList.remove("unlocked");
+    fill.classList.remove("unlocked");
+    bannerIcon.textContent = "🔒";
+    const secondsLeft = Math.max(0, STUDY_REQUIRED_SEC - studyTracker.secondsToday);
+    const minLeft = Math.ceil(secondsLeft / 60);
+    bannerText.textContent = `Study ${minLeft} more min to unlock games`;
+    fill.style.width = `${getStudyProgressFraction() * 100}%`;
+  }
 }
 
 // ===================================================
@@ -574,6 +721,10 @@ function renderProgress() {
 
   $("statTypingLessons").textContent = typingStats.lessonsDone;
   $("statTypingWpm").textContent = typingStats.bestWpm;
+
+  const studyMin = Math.floor(studyTracker.secondsToday / 60);
+  $("statStudyMinutes").textContent = studyMin;
+  $("statGamesPlayed").textContent = studyTracker.unlocksTotal;
 
   const list = $("quizHistory");
   list.innerHTML = "";
@@ -1098,7 +1249,6 @@ function finishTypingLesson() {
   if (wpm > typingStats.bestWpm) typingStats.bestWpm = wpm;
   saveTypingStats();
 
-  // Visual: mark lesson as done, brief delay before user can advance
   $("typingNextBtn").textContent = "Next Lesson →";
   $("typingNextBtn").disabled = false;
 }
@@ -1109,7 +1259,6 @@ function nextTypingLesson() {
     typingLessonIndex++;
     startTypingLesson();
   } else {
-    // End of level — go back to level picker
     openTyping();
   }
 }
@@ -1131,6 +1280,68 @@ function attachTypingListeners() {
 }
 
 // ===================================================
+// GAMES (gatekeeper; games themselves come next)
+// ===================================================
+function updateGamesScreen() {
+  const lockedEl = $("gamesLocked");
+  const unlockedEl = $("gamesUnlocked");
+  if (!lockedEl || !unlockedEl) return;
+
+  const unlocked = isGamesUnlocked();
+
+  if (unlocked) {
+    lockedEl.classList.add("hidden");
+    unlockedEl.classList.remove("hidden");
+
+    const msLeft = getUnlockTimeRemainingMs();
+    const h = Math.floor(msLeft / 3600000);
+    const m = Math.floor((msLeft % 3600000) / 60000);
+    $("gamesUnlockedMsg").textContent = `You earned this! Time remaining: ${h}h ${m}m.`;
+    renderGamesGrid();
+  } else {
+    unlockedEl.classList.add("hidden");
+    lockedEl.classList.remove("hidden");
+
+    const secondsLeft = Math.max(0, STUDY_REQUIRED_SEC - studyTracker.secondsToday);
+    const minLeft = Math.ceil(secondsLeft / 60);
+    const doneMin = Math.floor(studyTracker.secondsToday / 60);
+
+    $("gamesLockedMsg").textContent = `Study for ${STUDY_REQUIRED_MIN} minutes to unlock games.`;
+    $("gamesLockedTime").textContent = `${doneMin} / ${STUDY_REQUIRED_MIN} min • ${minLeft} more to go`;
+    $("gamesProgressFill").style.width = `${getStudyProgressFraction() * 100}%`;
+  }
+}
+
+function renderGamesGrid() {
+  const grid = $("gamesGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const games = [
+    { icon: "➕", name: "Math Sprint", tag: "Coming soon", available: false },
+    { icon: "🧠", name: "Memory Match", tag: "Coming soon", available: false },
+    { icon: "🔤", name: "Spelling Bee", tag: "Coming soon", available: false },
+    { icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
+  ];
+  games.forEach(g => {
+    const card = el("button", "game-card" + (g.available ? "" : " disabled"));
+    card.disabled = !g.available;
+    card.innerHTML = `
+      <span class="game-icon">${g.icon}</span>
+      <span class="game-name">${g.name}</span>
+      <span class="game-tag">${g.tag}</span>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function attachGamesListeners() {
+  const goStudyBtn = $("gamesGoStudyBtn");
+  if (goStudyBtn) {
+    goStudyBtn.addEventListener("click", () => showScreen("screen-home"));
+  }
+}
+
+// ===================================================
 // LISTENERS
 // ===================================================
 function attachGlobalListeners() {
@@ -1139,7 +1350,7 @@ function attachGlobalListeners() {
       const active = document.querySelector(".screen.active").id;
       if (active === "screen-topic") showScreen("screen-home");
       else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
-      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary" || active === "screen-typing") showScreen("screen-home");
+      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary" || active === "screen-typing" || active === "screen-games") showScreen("screen-home");
     });
   });
 
@@ -1164,13 +1375,16 @@ function attachGlobalListeners() {
     showScreen("screen-progress");
   });
   $("clearProgressBtn").addEventListener("click", () => {
-    if (confirm("Clear all your progress and quiz history?")) {
+    if (confirm("Clear all your progress, study time, and quiz history?")) {
       progress = { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 };
       quizHistory = [];
       typingStats = { lessonsDone: 0, bestWpm: 0 };
+      studyTracker = { secondsToday: 0, unlockedAt: null, unlocksTotal: 0, lastUpdate: Date.now() };
       saveProgress();
       saveHistory();
       saveTypingStats();
+      saveStudyTracker();
+      updateStudyBanner();
       renderProgress();
     }
   });

@@ -27,6 +27,15 @@
     <section class="screen active" id="screen-home">
       <p class="greeting" id="greeting">Welcome! 👋</p>
 
+      <!-- STUDY TRACKER BANNER -->
+      <div class="study-banner" id="studyBanner">
+        <span class="study-banner-icon" id="studyBannerIcon">🔒</span>
+        <span class="study-banner-text" id="studyBannerText">Loading…</span>
+      </div>
+      <div class="study-progress-bar">
+        <div class="study-progress-fill" id="studyProgressFill"></div>
+      </div>
+
       <h2>Choose a subject</h2>
       <div class="subject-grid" id="subjectGrid"></div>
 
@@ -174,13 +183,11 @@
       <button class="back-btn" data-back>← Back</button>
       <h2>⌨️ Typing Course</h2>
 
-      <!-- Level picker -->
       <div id="typingLevelPicker">
         <p class="typing-hint">Pick a level. Practice a little every day.</p>
         <div class="typing-levels" id="typingLevels"></div>
       </div>
 
-      <!-- Active lesson -->
       <div id="typingLesson" class="hidden">
         <div class="typing-topbar">
           <p class="typing-level-name" id="typingLevelName"></p>
@@ -222,6 +229,32 @@
       </div>
     </section>
 
+    <!-- ================= GAMES ================= -->
+    <section class="screen" id="screen-games">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>🎮 Games</h2>
+
+      <!-- Locked state -->
+      <div id="gamesLocked" class="games-locked hidden">
+        <div class="games-locked-icon">🔒</div>
+        <h3 class="games-locked-title">Games locked</h3>
+        <p class="games-locked-msg" id="gamesLockedMsg">Study for 45 minutes to unlock games.</p>
+        <div class="study-progress-bar">
+          <div class="study-progress-fill" id="gamesProgressFill"></div>
+        </div>
+        <p class="games-locked-time" id="gamesLockedTime">0 / 45 min</p>
+        <button class="typing-btn-primary" id="gamesGoStudyBtn">Go study →</button>
+      </div>
+
+      <!-- Unlocked state -->
+      <div id="gamesUnlocked" class="games-unlocked hidden">
+        <div class="games-unlocked-icon">🎉</div>
+        <h3 class="games-unlocked-title">Games unlocked!</h3>
+        <p class="games-unlocked-msg" id="gamesUnlockedMsg">You have earned game time.</p>
+        <div class="games-grid" id="gamesGrid"></div>
+      </div>
+    </section>
+
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">
       <button class="back-btn" data-back>← Back</button>
@@ -255,6 +288,18 @@
         <div class="stat">
           <span class="stat-value" id="statTypingWpm">0</span>
           <span class="stat-label">Best WPM</span>
+        </div>
+      </div>
+
+      <h3>Study Time</h3>
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-value" id="statStudyMinutes">0</span>
+          <span class="stat-label">Minutes Today</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="statGamesPlayed">0</span>
+          <span class="stat-label">Games Unlocks</span>
         </div>
       </div>
 
