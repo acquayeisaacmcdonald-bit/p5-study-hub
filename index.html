@@ -169,6 +169,59 @@
       <p class="dict-error hidden" id="dictError"></p>
     </section>
 
+    <!-- ================= TYPING COURSE ================= -->
+    <section class="screen" id="screen-typing">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>⌨️ Typing Course</h2>
+
+      <!-- Level picker -->
+      <div id="typingLevelPicker">
+        <p class="typing-hint">Pick a level. Practice a little every day.</p>
+        <div class="typing-levels" id="typingLevels"></div>
+      </div>
+
+      <!-- Active lesson -->
+      <div id="typingLesson" class="hidden">
+        <div class="typing-topbar">
+          <p class="typing-level-name" id="typingLevelName"></p>
+          <p class="typing-lesson-count" id="typingLessonCount"></p>
+        </div>
+
+        <div class="typing-target" id="typingTarget"></div>
+
+        <input
+          type="text"
+          id="typingInput"
+          class="typing-input"
+          placeholder="Start typing…"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+
+        <div class="typing-stats">
+          <div class="typing-stat">
+            <span class="typing-stat-value" id="typingAccuracy">100%</span>
+            <span class="typing-stat-label">Accuracy</span>
+          </div>
+          <div class="typing-stat">
+            <span class="typing-stat-value" id="typingWpm">0</span>
+            <span class="typing-stat-label">Words/min</span>
+          </div>
+          <div class="typing-stat">
+            <span class="typing-stat-value" id="typingProgress">0/0</span>
+            <span class="typing-stat-label">Progress</span>
+          </div>
+        </div>
+
+        <div class="typing-actions">
+          <button id="typingRestartBtn" class="typing-btn-secondary">Restart</button>
+          <button id="typingNextBtn" class="typing-btn-primary">Next Lesson →</button>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">
       <button class="back-btn" data-back>← Back</button>
@@ -190,6 +243,18 @@
         <div class="stat">
           <span class="stat-value" id="statBest">0%</span>
           <span class="stat-label">Best Quiz</span>
+        </div>
+      </div>
+
+      <h3>Typing Practice</h3>
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-value" id="statTypingLessons">0</span>
+          <span class="stat-label">Lessons Done</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="statTypingWpm">0</span>
+          <span class="stat-label">Best WPM</span>
         </div>
       </div>
 

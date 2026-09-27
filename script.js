@@ -7,7 +7,8 @@ const STORAGE_KEYS = {
   theme: "p5hub.theme",
   progress: "p5hub.progress",
   history: "p5hub.history",
-  pace: "p5hub.pace"
+  pace: "p5hub.pace",
+  typing: "p5hub.typing"
 };
 
 const THEMES = [
@@ -51,6 +52,16 @@ let calcWaitForNext = false;
 // ---------- OFFLINE DICTIONARY ----------
 let offlineDictionary = null;
 
+// ---------- TYPING COURSE STATE ----------
+let typingData = null;
+let typingLevel = null;
+let typingLessonIndex = 0;
+let typingStartTime = null;
+let typingCorrectCount = 0;
+let typingTypedCount = 0;
+let typingDone = false;
+let typingStats = loadTypingStats();
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -88,6 +99,19 @@ function loadPace() {
 function savePace(p) {
   localStorage.setItem(STORAGE_KEYS.pace, p);
 }
+function loadTypingStats() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEYS.typing)) || {
+      lessonsDone: 0,
+      bestWpm: 0
+    };
+  } catch {
+    return { lessonsDone: 0, bestWpm: 0 };
+  }
+}
+function saveTypingStats() {
+  localStorage.setItem(STORAGE_KEYS.typing, JSON.stringify(typingStats));
+}
 
 // ---------- DOM HELPERS ----------
 const $ = (id) => document.getElementById(id);
@@ -121,6 +145,7 @@ async function boot() {
   applyTheme(loadTheme());
   attachGlobalListeners();
   attachDictionaryListeners();
+  attachTypingListeners();
   warmUpVoices();
 
   try {
@@ -129,12 +154,20 @@ async function boot() {
     const maths = subjectsData.subjects.find(s => s.id === "maths");
     currentSubject = await fetchJSON(maths.file);
 
-    // Load offline dictionary (optional — won't break app if missing)
+    // Load offline dictionary (optional)
     try {
       offlineDictionary = await fetchJSON("data/dictionary.json");
     } catch (dictErr) {
       console.warn("Offline dictionary not available:", dictErr.message);
       offlineDictionary = null;
+    }
+
+    // Load typing course
+    try {
+      typingData = await fetchJSON("data/typing.json");
+    } catch (typeErr) {
+      console.warn("Typing course not available:", typeErr.message);
+      typingData = null;
     }
 
     hideLoading();
@@ -224,7 +257,7 @@ function renderTools() {
     { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
     { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Ready", available: true },
     { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Ready", available: true },
-    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: "Coming soon", available: false }
+    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: typingData ? "Ready" : "Unavailable", available: !!typingData }
   ];
   tools.forEach(t => {
     const card = el("button", "tool-card" + (t.available ? "" : " disabled"));
@@ -259,6 +292,12 @@ function renderTools() {
             input.focus();
           }
         }, 200);
+      });
+    }
+    if (t.available && t.id === "typing") {
+      card.addEventListener("click", () => {
+        showScreen("screen-typing");
+        openTyping();
       });
     }
     grid.appendChild(card);
@@ -533,6 +572,9 @@ function renderProgress() {
   $("statAccuracy").textContent = `${accuracy}%`;
   $("statBest").textContent = `${progress.bestPercent}%`;
 
+  $("statTypingLessons").textContent = typingStats.lessonsDone;
+  $("statTypingWpm").textContent = typingStats.bestWpm;
+
   const list = $("quizHistory");
   list.innerHTML = "";
   if (quizHistory.length === 0) {
@@ -644,7 +686,6 @@ function calcInput(value) {
     updateExprAfterDigit();
     return renderCalc();
   }
-  // digit
   if (calcWaitForNext) {
     calcDisplay = value;
     calcWaitForNext = false;
@@ -697,7 +738,7 @@ function updateExprAfterDigit() {
 }
 
 // ===================================================
-// VOICE WARM-UP (for pronunciation)
+// VOICE WARM-UP
 // ===================================================
 function warmUpVoices() {
   if (!("speechSynthesis" in window)) return;
@@ -886,7 +927,7 @@ function speakWord(word, btn) {
       utterance.voice = preferred;
       utterance.lang = preferred.lang;
     }
-  } catch (e) { /* use default voice */ }
+  } catch (e) { /* default voice */ }
 
   if (btn) {
     btn.classList.add("playing");
@@ -921,6 +962,175 @@ function attachDictionaryListeners() {
 }
 
 // ===================================================
+// TYPING COURSE
+// ===================================================
+function openTyping() {
+  const picker = $("typingLevelPicker");
+  const lesson = $("typingLesson");
+  picker.classList.remove("hidden");
+  lesson.classList.add("hidden");
+  renderTypingLevels();
+}
+
+function renderTypingLevels() {
+  const container = $("typingLevels");
+  container.innerHTML = "";
+  if (!typingData || !typingData.levels) {
+    container.innerHTML = '<p class="dict-error">Typing data unavailable.</p>';
+    return;
+  }
+  typingData.levels.forEach((lvl, i) => {
+    const card = el("button", "typing-level-card");
+    card.innerHTML = `
+      <span class="typing-level-icon">${lvl.icon || "⌨️"}</span>
+      <span class="typing-level-info">
+        <div class="typing-level-title">${lvl.name}</div>
+        <div class="typing-level-desc">${lvl.desc || ""} • ${lvl.lessons.length} lessons</div>
+      </span>
+      <span class="typing-level-arrow">›</span>
+    `;
+    card.addEventListener("click", () => startTypingLevel(i));
+    container.appendChild(card);
+  });
+}
+
+function startTypingLevel(levelIndex) {
+  typingLevel = typingData.levels[levelIndex];
+  typingLessonIndex = 0;
+  $("typingLevelPicker").classList.add("hidden");
+  $("typingLesson").classList.remove("hidden");
+  $("typingLevelName").textContent = typingLevel.name;
+  startTypingLesson();
+}
+
+function startTypingLesson() {
+  typingDone = false;
+  typingCorrectCount = 0;
+  typingTypedCount = 0;
+  typingStartTime = null;
+
+  const text = typingLevel.lessons[typingLessonIndex].text;
+  $("typingLessonCount").textContent = `Lesson ${typingLessonIndex + 1} of ${typingLevel.lessons.length}`;
+  $("typingInput").value = "";
+  $("typingInput").disabled = false;
+  $("typingNextBtn").disabled = false;
+
+  renderTypingTarget(text, 0);
+  updateTypingStats();
+
+  setTimeout(() => $("typingInput").focus(), 100);
+}
+
+function renderTypingTarget(text, typedLength) {
+  const targetEl = $("typingTarget");
+  targetEl.innerHTML = "";
+  const typed = $("typingInput").value;
+
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement("span");
+    span.className = "char";
+    span.textContent = text[i] === " " ? "\u00A0" : text[i];
+
+    if (i < typed.length) {
+      if (typed[i] === text[i]) {
+        span.classList.add("correct");
+      } else {
+        span.classList.add("incorrect");
+      }
+    } else if (i === typed.length) {
+      span.classList.add("current");
+    }
+
+    targetEl.appendChild(span);
+  }
+}
+
+function handleTypingInput() {
+  if (typingDone) return;
+
+  const text = typingLevel.lessons[typingLessonIndex].text;
+  const typed = $("typingInput").value;
+
+  if (!typingStartTime && typed.length > 0) {
+    typingStartTime = Date.now();
+  }
+
+  let correct = 0;
+  for (let i = 0; i < typed.length; i++) {
+    if (typed[i] === text[i]) correct++;
+  }
+  typingCorrectCount = correct;
+  typingTypedCount = typed.length;
+
+  renderTypingTarget(text, typed.length);
+  updateTypingStats();
+
+  if (typed === text) {
+    finishTypingLesson();
+  }
+}
+
+function updateTypingStats() {
+  const accuracy = typingTypedCount === 0
+    ? 100
+    : Math.round((typingCorrectCount / typingTypedCount) * 100);
+  $("typingAccuracy").textContent = `${accuracy}%`;
+  $("typingProgress").textContent = `${typingTypedCount}/${typingLevel ? typingLevel.lessons[typingLessonIndex].text.length : 0}`;
+
+  const elapsed = typingStartTime ? (Date.now() - typingStartTime) / 1000 : 0;
+  const wpm = elapsed > 1
+    ? Math.round((typingCorrectCount / 5) / (elapsed / 60))
+    : 0;
+  $("typingWpm").textContent = wpm;
+}
+
+function finishTypingLesson() {
+  typingDone = true;
+  $("typingInput").disabled = true;
+
+  const accuracy = typingTypedCount === 0
+    ? 100
+    : Math.round((typingCorrectCount / typingTypedCount) * 100);
+  const elapsed = typingStartTime ? (Date.now() - typingStartTime) / 1000 : 1;
+  const wpm = Math.round((typingCorrectCount / 5) / (elapsed / 60));
+
+  typingStats.lessonsDone += 1;
+  if (wpm > typingStats.bestWpm) typingStats.bestWpm = wpm;
+  saveTypingStats();
+
+  // Visual: mark lesson as done, brief delay before user can advance
+  $("typingNextBtn").textContent = "Next Lesson →";
+  $("typingNextBtn").disabled = false;
+}
+
+function nextTypingLesson() {
+  if (!typingLevel) return;
+  if (typingLessonIndex < typingLevel.lessons.length - 1) {
+    typingLessonIndex++;
+    startTypingLesson();
+  } else {
+    // End of level — go back to level picker
+    openTyping();
+  }
+}
+
+function restartTypingLesson() {
+  startTypingLesson();
+}
+
+function attachTypingListeners() {
+  const input = $("typingInput");
+  const nextBtn = $("typingNextBtn");
+  const restartBtn = $("typingRestartBtn");
+  if (!input) return;
+
+  input.addEventListener("input", handleTypingInput);
+
+  nextBtn.addEventListener("click", nextTypingLesson);
+  restartBtn.addEventListener("click", restartTypingLesson);
+}
+
+// ===================================================
 // LISTENERS
 // ===================================================
 function attachGlobalListeners() {
@@ -929,7 +1139,7 @@ function attachGlobalListeners() {
       const active = document.querySelector(".screen.active").id;
       if (active === "screen-topic") showScreen("screen-home");
       else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
-      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary") showScreen("screen-home");
+      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary" || active === "screen-typing") showScreen("screen-home");
     });
   });
 
@@ -957,8 +1167,10 @@ function attachGlobalListeners() {
     if (confirm("Clear all your progress and quiz history?")) {
       progress = { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 };
       quizHistory = [];
+      typingStats = { lessonsDone: 0, bestWpm: 0 };
       saveProgress();
       saveHistory();
+      saveTypingStats();
       renderProgress();
     }
   });

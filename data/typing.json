@@ -1,0 +1,92 @@
+{
+  "title": "Typing Course",
+  "levels": [
+    {
+      "id": "home-row",
+      "name": "Level 1 — Home Row",
+      "icon": "🏠",
+      "desc": "The starting keys: a s d f j k l ;",
+      "lessons": [
+        { "text": "asdf jkl;" },
+        { "text": "aaa sss ddd fff" },
+        { "text": "jjj kkk lll ;;;" },
+        { "text": "asdf jkl; asdf jkl;" },
+        { "text": "fj fj dk dk sl sl a; a;" }
+      ]
+    },
+    {
+      "id": "common-words",
+      "name": "Level 2 — Common Words",
+      "icon": "✍️",
+      "desc": "Short words you see every day",
+      "lessons": [
+        { "text": "the and for you" },
+        { "text": "cat dog man run" },
+        { "text": "see see see all" },
+        { "text": "day sun sky fly" },
+        { "text": "book read page" },
+        { "text": "water food eat" },
+        { "text": "mother father son" },
+        { "text": "school class learn" },
+        { "text": "friend play happy" },
+        { "text": "house home door" },
+        { "text": "walk run jump" },
+        { "text": "green blue red" },
+        { "text": "one two three four" },
+        { "text": "yes no maybe" },
+        { "text": "big small tall short" }
+      ]
+    },
+    {
+      "id": "sentences",
+      "name": "Level 3 — Short Sentences",
+      "icon": "📝",
+      "desc": "Simple sentences in English",
+      "lessons": [
+        { "text": "The cat sat on the mat." },
+        { "text": "I like to read books." },
+        { "text": "The sun is very hot." },
+        { "text": "We play in the park." },
+        { "text": "My mother cooks rice." },
+        { "text": "The dog runs very fast." },
+        { "text": "She goes to school by bus." },
+        { "text": "Water is good for you." },
+        { "text": "The bird can fly high." },
+        { "text": "I love my family." },
+        { "text": "We learn new things at school." },
+        { "text": "The moon shines at night." },
+        { "text": "Rain falls from the clouds." },
+        { "text": "Trees give us fresh air." },
+        { "text": "Let us be kind to others." }
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "name": "Level 4 — P5 Vocabulary",
+      "icon": "🎓",
+      "desc": "Words from your school subjects",
+      "lessons": [
+        { "text": "subtract" },
+        { "text": "multiply" },
+        { "text": "fraction" },
+        { "text": "percent" },
+        { "text": "measurement" },
+        { "text": "geometry" },
+        { "text": "photosynthesis" },
+        { "text": "oxygen" },
+        { "text": "government" },
+        { "text": "citizenship" },
+        { "text": "environment" },
+        { "text": "community" },
+        { "text": "education" },
+        { "text": "vocabulary" },
+        { "text": "punctuation" },
+        { "text": "addition" },
+        { "text": "division" },
+        { "text": "subtraction" },
+        { "text": "multiplication" },
+        { "text": "mathematics" }
+      ]
+    }
+  ]
+}

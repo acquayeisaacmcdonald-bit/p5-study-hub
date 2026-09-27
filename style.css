@@ -720,7 +720,7 @@ button.danger:active { transform: scale(0.98); }
   .mode-icon { font-size: 1.7rem; }
 }
 
-/* ---------- PROCEDURE (working shown after answer) ---------- */
+/* ---------- PROCEDURE ---------- */
 .procedure-box {
   margin-top: 18px;
   background: rgba(255, 255, 255, 0.1);
@@ -806,7 +806,7 @@ button.danger:active { transform: scale(0.98); }
 .next-question-btn:hover { background: var(--accent-2); }
 .next-question-btn:active { transform: scale(0.98); }
 
-/* ---------- TOOLS GRID (home) ---------- */
+/* ---------- TOOLS GRID ---------- */
 .tools-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1044,4 +1044,172 @@ button.danger:active { transform: scale(0.98); }
   padding: 20px;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+/* ---------- TYPING COURSE ---------- */
+.typing-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.typing-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.typing-level-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+.typing-level-card:hover {
+  background: var(--panel-strong);
+  border-color: var(--accent);
+}
+.typing-level-card:active { transform: scale(0.99); }
+.typing-level-icon { font-size: 1.8rem; flex-shrink: 0; }
+.typing-level-info { flex: 1; }
+.typing-level-title { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+.typing-level-desc { font-size: 0.82rem; color: var(--text-muted); }
+.typing-level-arrow { color: var(--text-muted); font-size: 1.2rem; }
+
+.typing-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.typing-level-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.typing-lesson-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.typing-target {
+  background: var(--card-front);
+  color: var(--card-front-text);
+  border-radius: var(--radius-lg);
+  padding: 26px 20px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  font-family: "Consolas", "Monaco", monospace;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+.typing-target .char {
+  transition: color 0.1s, background 0.1s;
+}
+.typing-target .char.correct {
+  color: #10b981;
+}
+.typing-target .char.incorrect {
+  color: #ffffff;
+  background: #dc2626;
+  border-radius: 3px;
+}
+.typing-target .char.current {
+  border-bottom: 3px solid var(--accent);
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50% { border-bottom-color: var(--accent); }
+  51%, 100% { border-bottom-color: transparent; }
+}
+
+.typing-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 1.1rem;
+  outline: none;
+  margin-bottom: 16px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.typing-input:focus {
+  border-color: var(--accent);
+  background: var(--panel-strong);
+}
+
+.typing-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.typing-stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 8px;
+  text-align: center;
+}
+.typing-stat-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.typing-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.typing-actions {
+  display: flex;
+  gap: 10px;
+}
+.typing-btn-secondary,
+.typing-btn-primary {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.typing-btn-secondary {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.typing-btn-secondary:hover { background: var(--panel-strong); }
+.typing-btn-secondary:active { transform: scale(0.97); }
+
+.typing-btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.typing-btn-primary:hover { background: var(--accent-2); }
+.typing-btn-primary:active { transform: scale(0.97); }
+.typing-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
