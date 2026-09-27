@@ -1181,3 +1181,105 @@ button.danger:active { transform: scale(0.98); }
 .ms-result-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
 .ms-result-msg { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
 .ms-result-actions { display: flex; gap: 10px; }
+/* ---------- MEMORY MATCH ---------- */
+.mm-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+.mm-current-player { font-size: 0.95rem; font-weight: 700; }
+.mm-meta { font-size: 0.85rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+.mm-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mm-card {
+  aspect-ratio: 1 / 1;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s, background 0.2s, border-color 0.2s;
+  perspective: 600px;
+  padding: 0;
+  font-family: inherit;
+}
+.mm-card:hover:not(:disabled):not(.flipped):not(.matched) {
+  background: var(--panel-strong);
+  border-color: var(--accent);
+}
+
+.mm-card-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: opacity 0.3s, transform 0.4s;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.mm-front {
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.mm-back {
+  background: var(--card-front);
+  color: var(--card-front-text);
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.mm-card.flipped .mm-front { opacity: 0; transform: rotateY(180deg); }
+.mm-card.flipped .mm-back  { opacity: 1; transform: rotateY(0deg); }
+.mm-card.matched {
+  pointer-events: none;
+  border-color: var(--card-back);
+  box-shadow: 0 0 0 2px var(--card-back);
+}
+.mm-card.matched .mm-back { background: var(--card-back); color: var(--card-back-text); }
+
+.mm-scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+.mm-score {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.mm-score.active {
+  background: var(--panel-strong);
+  border-color: var(--accent);
+}
+.mm-score-name { font-weight: 700; display: block; margin-bottom: 2px; }
+.mm-score-val { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 380px) {
+  .mm-card-inner { font-size: 0.78rem; }
+  .mm-front { font-size: 1.4rem; }
+}

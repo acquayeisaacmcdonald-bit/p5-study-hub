@@ -319,6 +319,74 @@
         </div>
       </div>
     </section>
+	    <!-- ================= MEMORY MATCH ================= -->
+    <section class="screen" id="screen-memorymatch">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>🧠 Memory Match</h2>
+
+      <!-- Mode picker -->
+      <div id="mmModePicker">
+        <p class="ms-hint">Choose how you want to play.</p>
+        <div class="ms-mode-grid">
+          <button class="ms-mode-card" id="mmSoloBtn">
+            <span class="ms-mode-icon">👤</span>
+            <span class="ms-mode-name">Solo</span>
+            <span class="ms-mode-desc">Beat your own best time</span>
+          </button>
+          <button class="ms-mode-card" id="mmTwoBtn">
+            <span class="ms-mode-icon">👥</span>
+            <span class="ms-mode-name">2 Players</span>
+            <span class="ms-mode-desc">Take turns with a friend</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-player name prompt -->
+      <div id="mmTwoSetup" class="hidden">
+        <p class="ms-hint">Player 2, what's your name?</p>
+        <input type="text" id="mmP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+        <div class="ms-actions">
+          <button class="typing-btn-secondary" id="mmBackToModes">Cancel</button>
+          <button class="typing-btn-primary" id="mmStartTwoBtn">Start</button>
+        </div>
+      </div>
+
+      <!-- Pass-device screen -->
+      <div id="mmPassScreen" class="hidden ms-pass-screen">
+        <div class="ms-pass-icon">📱</div>
+        <h3 class="ms-pass-title">Pass to <span id="mmPassName">Player</span></h3>
+        <p class="ms-pass-msg">Tap when ready to take your turn.</p>
+        <button class="typing-btn-primary" id="mmReadyBtn">I'm ready →</button>
+      </div>
+
+      <!-- Active game -->
+      <div id="mmPlay" class="hidden">
+        <div class="mm-topbar">
+          <span class="mm-current-player" id="mmCurrentPlayer">Kofi</span>
+          <span class="mm-meta" id="mmMeta">Moves: 0 • 0s</span>
+        </div>
+
+        <div class="mm-board" id="mmBoard"></div>
+
+        <div class="mm-scores" id="mmScores"></div>
+
+        <div class="ms-actions" style="margin-top: 14px;">
+          <button class="typing-btn-secondary" id="mmQuitBtn">Quit</button>
+          <button class="typing-btn-primary" id="mmRestartBtn">Restart</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div id="mmResult" class="hidden ms-result">
+        <div class="ms-result-icon" id="mmResultIcon">🎉</div>
+        <h3 class="ms-result-title" id="mmResultTitle">Well done!</h3>
+        <p class="ms-result-msg" id="mmResultMsg">You finished in 12 moves.</p>
+        <div class="ms-result-actions">
+          <button class="typing-btn-secondary" id="mmPlayAgainBtn">Play Again</button>
+          <button class="typing-btn-primary" id="mmDoneBtn">Done</button>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">

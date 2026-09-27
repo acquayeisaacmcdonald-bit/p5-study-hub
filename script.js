@@ -86,6 +86,37 @@ let msTimerInterval = null;
 let msTimeLeft = 0;
 let msCurrentQuestion = null;
 let msQuestionLocked = false;
+// ---------- MEMORY MATCH STATE ----------
+let mmMode = null;              // "solo" | "two"
+let mmPlayers = [];             // [{ name, pairs }]
+let mmCurrentPlayerIndex = 0;
+let mmBoard = [];               // array of { id, pairId, text, matched }
+let mmFirstPick = null;         // index of first flipped card
+let mmLocked = false;
+let mmMoves = 0;
+let mmStartTime = null;
+let mmTimerInterval = null;
+let mmPairsFound = 0;
+let mmTotalPairs = 0;
+let mmExtraTurn = false;        // for 2-player: did the current player score a match?
+
+const MM_PAIR_POOL = [
+  { a: "1/2", b: "0.5" },
+  { a: "7 × 8", b: "56" },
+  { a: "100", b: "10²" },
+  { a: "H₂O", b: "Water" },
+  { a: "O₂", b: "Oxygen" },
+  { a: "9 × 9", b: "81" },
+  { a: "Quick", b: "Fast" },
+  { a: "Big", b: "Large" },
+  { a: "25%", b: "1/4" },
+  { a: "12 ÷ 3", b: "4" },
+  { a: "Happy", b: "Glad" },
+  { a: "Sun", b: "Star" },
+  { a: "3²", b: "9" },
+  { a: "5 + 5", b: "10" },
+  { a: "Ice", b: "Frozen water" }
+];
 
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
@@ -270,6 +301,7 @@ async function boot() {
   attachTypingListeners();
   attachGamesListeners();
   attachMathSprintListeners();
+  attachMemoryMatchListeners();
   attachNameListeners();
   warmUpVoices();
 
@@ -1292,7 +1324,7 @@ function renderGamesGrid() {
   grid.innerHTML = "";
   const games = [
     { id: "mathsprint", icon: "⏱️", name: "Math Sprint", tag: "Ready", available: true },
-    { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Coming soon", available: false },
+    { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Ready", available: true },
     { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Coming soon", available: false },
     { id: "tables", icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
   ];
@@ -1308,6 +1340,11 @@ function renderGamesGrid() {
       card.addEventListener("click", () => {
         showScreen("screen-mathsprint");
         openMathSprint();
+      });
+    }    if (g.available && g.id === "memorymatch") {
+      card.addEventListener("click", () => {
+        showScreen("screen-memorymatch");
+        openMemoryMatch();
       });
     }
     grid.appendChild(card);
@@ -1664,7 +1701,276 @@ function shuffle(arr) {
   }
   return arr;
 }
+// ===================================================
+// MEMORY MATCH
+// ===================================================
+function openMemoryMatch() {
+  mmMode = null;
+  mmPlayers = [];
+  mmCurrentPlayerIndex = 0;
+  mmFirstPick = null;
+  mmLocked = false;
+  mmMoves = 0;
+  mmPairsFound = 0;
+  mmExtraTurn = false;
+  clearInterval(mmTimerInterval);
+  mmStartTime = null;
 
+  $("mmModePicker").classList.remove("hidden");
+  $("mmTwoSetup").classList.add("hidden");
+  $("mmPassScreen").classList.add("hidden");
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.add("hidden");
+}
+
+function startMemoryMatchSolo() {
+  mmMode = "solo";
+  mmPlayers = [{ name: playerName || "Player", pairs: 0 }];
+  mmCurrentPlayerIndex = 0;
+  mmTotalPairs = 6;
+  $("mmModePicker").classList.add("hidden");
+  buildMemoryBoard();
+}
+
+function startMemoryMatchTwo() {
+  const p2 = ($("mmP2Input").value || "").trim() || "Player 2";
+  mmMode = "two";
+  mmPlayers = [
+    { name: playerName || "Player 1", pairs: 0 },
+    { name: p2, pairs: 0 }
+  ];
+  mmCurrentPlayerIndex = 0;
+  mmTotalPairs = 6;
+  $("mmTwoSetup").classList.add("hidden");
+  showMemoryPassScreen();
+}
+
+function showMemoryPassScreen() {
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.add("hidden");
+  $("mmPassScreen").classList.remove("hidden");
+  $("mmPassName").textContent = mmPlayers[mmCurrentPlayerIndex].name;
+}
+
+function buildMemoryBoard() {
+  $("mmPassScreen").classList.add("hidden");
+  $("mmPlay").classList.remove("hidden");
+  $("mmResult").classList.add("hidden");
+
+  // Pick pairs randomly
+  const pairs = shuffle([...MM_PAIR_POOL]).slice(0, mmTotalPairs);
+
+  // Build cards array — each pair has 2 cards
+  mmBoard = [];
+  pairs.forEach((pair, pairId) => {
+    mmBoard.push({ pairId, text: pair.a, matched: false });
+    mmBoard.push({ pairId, text: pair.b, matched: false });
+  });
+  mmBoard = shuffle(mmBoard);
+
+  // Reset state
+  mmFirstPick = null;
+  mmLocked = false;
+  mmMoves = 0;
+  mmPairsFound = 0;
+  mmExtraTurn = false;
+  mmStartTime = Date.now();
+
+  renderMemoryBoard();
+  updateMemoryTopbar();
+  renderMemoryScores();
+
+  clearInterval(mmTimerInterval);
+  mmTimerInterval = setInterval(updateMemoryTopbar, 500);
+}
+
+function renderMemoryBoard() {
+  const board = $("mmBoard");
+  board.innerHTML = "";
+
+  mmBoard.forEach((card, index) => {
+    const btn = el("button", "mm-card" + (card.matched ? " matched" : ""));
+    btn.dataset.index = index;
+    btn.innerHTML = `
+      <div class="mm-card-inner mm-front">?</div>
+      <div class="mm-card-inner mm-back">${card.text}</div>
+    `;
+    btn.addEventListener("click", () => handleMemoryCardClick(index));
+    board.appendChild(btn);
+  });
+}
+
+function updateMemoryTopbar() {
+  const nameEl = $("mmCurrentPlayer");
+  const metaEl = $("mmMeta");
+  if (!nameEl || !metaEl) return;
+
+  nameEl.textContent = mmPlayers[mmCurrentPlayerIndex]?.name || "Player";
+
+  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
+  const m = Math.floor(elapsed / 60);
+  const s = elapsed % 60;
+  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
+  metaEl.textContent = `Moves: ${mmMoves} • ${timeStr}`;
+}
+
+function renderMemoryScores() {
+  const scores = $("mmScores");
+  if (!scores) return;
+  scores.innerHTML = "";
+  if (mmMode !== "two") return;
+
+  mmPlayers.forEach((p, i) => {
+    const div = el("div", "mm-score" + (i === mmCurrentPlayerIndex ? " active" : ""));
+    div.innerHTML = `
+      <span class="mm-score-name">${p.name}</span>
+      <span class="mm-score-val">${p.pairs} pairs</span>
+    `;
+    scores.appendChild(div);
+  });
+}
+
+function handleMemoryCardClick(index) {
+  if (mmLocked) return;
+  const card = mmBoard[index];
+  if (card.matched) return;
+
+  const cardEl = document.querySelector(`.mm-card[data-index="${index}"]`);
+  if (!cardEl || cardEl.classList.contains("flipped")) return;
+
+  // Flip the card
+  cardEl.classList.add("flipped");
+
+  // First pick
+  if (mmFirstPick === null) {
+    mmFirstPick = index;
+    return;
+  }
+
+  // Second pick
+  mmMoves++;
+  const firstCard = mmBoard[mmFirstPick];
+  const firstEl = document.querySelector(`.mm-card[data-index="${mmFirstPick}"]`);
+
+  if (firstCard.pairId === card.pairId) {
+    // Match!
+    firstCard.matched = true;
+    card.matched = true;
+    firstEl.classList.add("matched");
+    cardEl.classList.add("matched");
+    mmPairsFound++;
+
+    if (mmMode === "two") {
+      mmPlayers[mmCurrentPlayerIndex].pairs++;
+      mmExtraTurn = true;
+    } else {
+      mmPlayers[0].pairs++;
+    }
+
+    mmFirstPick = null;
+    renderMemoryScores();
+    updateMemoryTopbar();
+
+    if (mmPairsFound >= mmTotalPairs) {
+      setTimeout(endMemoryMatch, 600);
+    }
+  } else {
+    // No match — flip back after a delay
+    mmLocked = true;
+    setTimeout(() => {
+      firstEl.classList.remove("flipped");
+      cardEl.classList.remove("flipped");
+      mmFirstPick = null;
+      mmLocked = false;
+
+      if (mmMode === "two" && !mmExtraTurn) {
+        // Next player's turn
+        mmCurrentPlayerIndex = (mmCurrentPlayerIndex + 1) % mmPlayers.length;
+        updateMemoryTopbar();
+        renderMemoryScores();
+      }
+      mmExtraTurn = false;
+    }, 900);
+  }
+}
+
+function endMemoryMatch() {
+  clearInterval(mmTimerInterval);
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.remove("hidden");
+
+  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
+  const m = Math.floor(elapsed / 60);
+  const s = elapsed % 60;
+  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
+
+  if (mmMode === "solo") {
+    $("mmResultIcon").textContent = "🎉";
+    $("mmResultTitle").textContent = "All pairs found!";
+    $("mmResultMsg").textContent = `Finished in ${mmMoves} moves (${timeStr}).`;
+  } else {
+    const p1 = mmPlayers[0];
+    const p2 = mmPlayers[1];
+    let winner;
+    if (p1.pairs > p2.pairs) winner = p1;
+    else if (p2.pairs > p1.pairs) winner = p2;
+    else winner = null;
+
+    $("mmResultIcon").textContent = winner ? "🏆" : "🤝";
+    $("mmResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+    $("mmResultMsg").textContent = `${p1.name}: ${p1.pairs} pairs — ${p2.name}: ${p2.pairs} pairs (${mmMoves} total moves)`;
+  }
+}
+
+function attachMemoryMatchListeners() {
+  const soloBtn = $("mmSoloBtn");
+  const twoBtn = $("mmTwoBtn");
+  const backToModes = $("mmBackToModes");
+  const startTwoBtn = $("mmStartTwoBtn");
+  const readyBtn = $("mmReadyBtn");
+  const quitBtn = $("mmQuitBtn");
+  const restartBtn = $("mmRestartBtn");
+  const playAgainBtn = $("mmPlayAgainBtn");
+  const doneBtn = $("mmDoneBtn");
+
+  if (soloBtn) soloBtn.addEventListener("click", startMemoryMatchSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("mmModePicker").classList.add("hidden");
+      $("mmTwoSetup").classList.remove("hidden");
+      $("mmP2Input").value = "";
+      setTimeout(() => $("mmP2Input").focus(), 100);
+    });
+  }
+  if (backToModes) {
+    backToModes.addEventListener("click", () => {
+      $("mmTwoSetup").classList.add("hidden");
+      $("mmModePicker").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startMemoryMatchTwo);
+  if (readyBtn) readyBtn.addEventListener("click", buildMemoryBoard);
+  if (quitBtn) quitBtn.addEventListener("click", () => {
+    clearInterval(mmTimerInterval);
+    showScreen("screen-games");
+  });
+  if (restartBtn) restartBtn.addEventListener("click", () => {
+    clearInterval(mmTimerInterval);
+    openMemoryMatch();
+  });
+  if (playAgainBtn) playAgainBtn.addEventListener("click", () => {
+    if (mmMode === "solo") startMemoryMatchSolo();
+    else if (mmMode === "two") {
+      mmPlayers.forEach(p => p.pairs = 0);
+      mmCurrentPlayerIndex = 0;
+      showMemoryPassScreen();
+    }
+  });
+  if (doneBtn) doneBtn.addEventListener("click", () => {
+    clearInterval(mmTimerInterval);
+    showScreen("screen-games");
+  });
+}
 // ===================================================
 // GO
 // ===================================================
