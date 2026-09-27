@@ -9,12 +9,15 @@ const STORAGE_KEYS = {
   history: "p5hub.history",
   pace: "p5hub.pace",
   typing: "p5hub.typing",
-  study: "p5hub.study"
+  study: "p5hub.study",
+  playerName: "p5hub.playerName",
+  mathSprintBest: "p5hub.mathSprintBest"
 };
 
 const STUDY_REQUIRED_MIN = 45;
 const STUDY_REQUIRED_SEC = STUDY_REQUIRED_MIN * 60;
-const UNLOCK_DURATION_MS = 12 * 60 * 60 * 1000; // 12 hours
+const UNLOCK_DURATION_MS = 12 * 60 * 60 * 1000;
+const MATH_SPRINT_SECONDS = 30;
 
 const THEMES = [
   { id: "classic", name: "Classic",   colors: ["#1e3a8a", "#0f172a"] },
@@ -71,6 +74,19 @@ let typingStats = loadTypingStats();
 let studyTracker = loadStudyTracker();
 let studyTickInterval = null;
 
+// ---------- PLAYER PROFILE ----------
+let playerName = loadPlayerName();
+
+// ---------- MATH SPRINT STATE ----------
+let msMode = null;           // "solo" | "two"
+let msPlayers = [];          // [{ name, score }]
+let msCurrentPlayerIndex = 0;
+let msRoundActive = false;
+let msTimerInterval = null;
+let msTimeLeft = 0;
+let msCurrentQuestion = null;
+let msQuestionLocked = false;
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -121,15 +137,24 @@ function loadTypingStats() {
 function saveTypingStats() {
   localStorage.setItem(STORAGE_KEYS.typing, JSON.stringify(typingStats));
 }
+function loadPlayerName() {
+  return localStorage.getItem(STORAGE_KEYS.playerName) || "";
+}
+function savePlayerName(name) {
+  localStorage.setItem(STORAGE_KEYS.playerName, name);
+}
+function loadMathSprintBest() {
+  const v = localStorage.getItem(STORAGE_KEYS.mathSprintBest);
+  return v ? parseInt(v, 10) : 0;
+}
+function saveMathSprintBest(score) {
+  const current = loadMathSprintBest();
+  if (score > current) {
+    localStorage.setItem(STORAGE_KEYS.mathSprintBest, String(score));
+  }
+}
 
 // ---------- STUDY TRACKER ----------
-// Structure:
-// {
-//   secondsToday: number,          // seconds of study accumulated in current cycle
-//   unlockedAt: number | null,     // timestamp when games were unlocked
-//   unlocksTotal: number,          // count of times games have been unlocked
-//   lastUpdate: number             // timestamp of last save (for safety)
-// }
 function loadStudyTracker() {
   try {
     const raw = JSON.parse(localStorage.getItem(STORAGE_KEYS.study));
@@ -149,12 +174,10 @@ function saveStudyTracker() {
   localStorage.setItem(STORAGE_KEYS.study, JSON.stringify(studyTracker));
 }
 
-// Check if the 12-hour unlock window has expired. If so, reset.
 function checkStudyReset() {
   if (studyTracker.unlockedAt) {
     const elapsed = Date.now() - studyTracker.unlockedAt;
     if (elapsed >= UNLOCK_DURATION_MS) {
-      // Unlock window expired — reset everything
       studyTracker.secondsToday = 0;
       studyTracker.unlockedAt = null;
       saveStudyTracker();
@@ -179,18 +202,15 @@ function getUnlockTimeRemainingMs() {
 }
 
 function startStudyTimer() {
-  if (studyTickInterval) return; // already running
+  if (studyTickInterval) return;
   studyTickInterval = setInterval(() => {
     const active = document.querySelector(".screen.active");
     if (!active) return;
     const id = active.id;
 
-    // Count only Study, Quiz, Typing screens as study time
     if (id === "screen-study" || id === "screen-quiz" || id === "screen-typing") {
-      // If already unlocked, don't keep counting
       if (isGamesUnlocked()) return;
       studyTracker.secondsToday += 1;
-      // Unlock when threshold reached
       if (studyTracker.secondsToday >= STUDY_REQUIRED_SEC) {
         studyTracker.unlockedAt = Date.now();
         studyTracker.unlocksTotal += 1;
@@ -209,9 +229,7 @@ function stopStudyTimer() {
   }
 }
 
-// ===================================================
-// DOM HELPERS
-// ===================================================
+// ---------- DOM HELPERS ----------
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls) => {
   const e = document.createElement(tag);
@@ -224,12 +242,10 @@ function showScreen(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   $(id).classList.add("active");
 
-  // If leaving a learn screen, save tracker
   if (id !== "screen-study" && id !== "screen-quiz" && id !== "screen-typing") {
     saveStudyTracker();
   }
 
-  // Update study banner whenever screen changes (home)
   updateStudyBanner();
 
   requestAnimationFrame(() => {
@@ -253,12 +269,21 @@ async function boot() {
   attachDictionaryListeners();
   attachTypingListeners();
   attachGamesListeners();
+  attachMathSprintListeners();
+  attachNameListeners();
   warmUpVoices();
 
-  // Safety check on load
   checkStudyReset();
   startStudyTimer();
   updateStudyBanner();
+  updateGreeting();
+
+  // Name prompt on first visit
+  if (!playerName) {
+    setTimeout(() => {
+      $("nameModal").classList.remove("hidden");
+    }, 600);
+  }
 
   try {
     showLoading();
@@ -298,23 +323,78 @@ async function fetchJSON(path) {
 }
 
 // ===================================================
+// PLAYER NAME
+// ===================================================
+function updateGreeting() {
+  const hour = new Date().getHours();
+  let text = "Welcome";
+  if (hour < 12) text = "Good morning";
+  else if (hour < 17) text = "Good afternoon";
+  else text = "Good evening";
+
+  if (playerName) {
+    $("greeting").textContent = `${text}, ${playerName}! 👋`;
+  } else {
+    $("greeting").textContent = `${text}! Ready to study? 👋`;
+  }
+}
+
+function attachNameListeners() {
+  const saveBtn = $("nameSaveBtn");
+  const skipBtn = $("nameSkipBtn");
+  const changeBtn = $("changeNameBtn");
+  const input = $("nameInput");
+
+  if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
+      const val = (input.value || "").trim();
+      if (val) {
+        playerName = val;
+        savePlayerName(val);
+      }
+      $("nameModal").classList.add("hidden");
+      updateGreeting();
+      updateProgressNameDisplay();
+    });
+  }
+
+  if (skipBtn) {
+    skipBtn.addEventListener("click", () => {
+      $("nameModal").classList.add("hidden");
+    });
+  }
+
+  if (changeBtn) {
+    changeBtn.addEventListener("click", () => {
+      $("nameInput").value = playerName;
+      $("nameModal").classList.remove("hidden");
+    });
+  }
+
+  if (input) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        saveBtn.click();
+      }
+    });
+  }
+}
+
+function updateProgressNameDisplay() {
+  const el = $("progressName");
+  if (el) el.textContent = playerName || "Player";
+}
+
+// ===================================================
 // HOME
 // ===================================================
 function renderHome() {
   renderSubjects();
   renderHomeTopics();
   renderTools();
-  renderGreeting();
+  updateGreeting();
   updateStudyBanner();
-}
-
-function renderGreeting() {
-  const hour = new Date().getHours();
-  let text = "Welcome";
-  if (hour < 12) text = "Good morning";
-  else if (hour < 17) text = "Good afternoon";
-  else text = "Good evening";
-  $("greeting").textContent = `${text}! Ready to study? 👋`;
 }
 
 function renderSubjects() {
@@ -508,9 +588,7 @@ function renderStudyCard() {
   }
 }
 
-function flipCard() {
-  $("card").classList.toggle("flipped");
-}
+function flipCard() { $("card").classList.toggle("flipped"); }
 function nextCard() {
   studyIndex = (studyIndex + 1) % studyDeck.length;
   renderStudyCard();
@@ -726,6 +804,8 @@ function renderProgress() {
   $("statStudyMinutes").textContent = studyMin;
   $("statGamesPlayed").textContent = studyTracker.unlocksTotal;
 
+  updateProgressNameDisplay();
+
   const list = $("quizHistory");
   list.innerHTML = "";
   if (quizHistory.length === 0) {
@@ -750,9 +830,8 @@ function renderProgress() {
 // ===================================================
 // THEME
 // ===================================================
-function applyTheme(id) {
-  document.body.className = `theme-${id}`;
-}
+function applyTheme(id) { document.body.className = `theme-${id}`; }
+
 function openThemeModal() {
   const grid = $("themeGrid");
   grid.innerHTML = "";
@@ -771,9 +850,7 @@ function openThemeModal() {
   });
   $("themeModal").classList.remove("hidden");
 }
-function closeThemeModal() {
-  $("themeModal").classList.add("hidden");
-}
+function closeThemeModal() { $("themeModal").classList.add("hidden"); }
 
 // ===================================================
 // CALCULATOR
@@ -781,7 +858,6 @@ function closeThemeModal() {
 function renderCalc() {
   const displayEl = $("calcDisplay");
   if (!displayEl) return;
-
   if (calcExpression) {
     displayEl.innerHTML = `<span class="calc-expr">${calcExpression}</span>${calcDisplay}`;
   } else {
@@ -792,11 +868,7 @@ function renderCalc() {
 
 function calcInput(value) {
   if (value === "clear") {
-    calcDisplay = "0";
-    calcExpression = "";
-    calcPrev = null;
-    calcOp = null;
-    calcWaitForNext = false;
+    calcDisplay = "0"; calcExpression = ""; calcPrev = null; calcOp = null; calcWaitForNext = false;
     return renderCalc();
   }
   if (value === "back") {
@@ -804,9 +876,7 @@ function calcInput(value) {
     updateExprAfterDigit();
     return renderCalc();
   }
-  if (value === "equals") {
-    return calcEquals();
-  }
+  if (value === "equals") return calcEquals();
   if (value === "%") {
     const n = parseFloat(calcDisplay);
     if (!isNaN(n)) calcDisplay = formatNumber(n / 100);
@@ -828,21 +898,13 @@ function calcInput(value) {
     return renderCalc();
   }
   if (value === ".") {
-    if (calcWaitForNext) {
-      calcDisplay = "0.";
-      calcWaitForNext = false;
-    } else if (!calcDisplay.includes(".")) {
-      calcDisplay += ".";
-    }
+    if (calcWaitForNext) { calcDisplay = "0."; calcWaitForNext = false; }
+    else if (!calcDisplay.includes(".")) calcDisplay += ".";
     updateExprAfterDigit();
     return renderCalc();
   }
-  if (calcWaitForNext) {
-    calcDisplay = value;
-    calcWaitForNext = false;
-  } else {
-    calcDisplay = calcDisplay === "0" ? value : calcDisplay + value;
-  }
+  if (calcWaitForNext) { calcDisplay = value; calcWaitForNext = false; }
+  else calcDisplay = calcDisplay === "0" ? value : calcDisplay + value;
   updateExprAfterDigit();
   renderCalc();
 }
@@ -856,33 +918,27 @@ function calcCompute(a, b, op) {
     default: return b;
   }
 }
-
 function calcEquals() {
   if (calcOp === null || calcPrev === null) return;
   const n = parseFloat(calcDisplay);
   const result = calcCompute(calcPrev, n, calcOp);
   calcExpression = `${formatNumber(calcPrev)} ${displayOpSymbol(calcOp)} ${formatNumber(n)} =`;
   calcDisplay = formatNumber(result);
-  calcPrev = null;
-  calcOp = null;
-  calcWaitForNext = true;
+  calcPrev = null; calcOp = null; calcWaitForNext = true;
   renderCalc();
 }
-
 function formatNumber(n) {
   if (isNaN(n)) return "Error";
   if (!isFinite(n)) return "∞";
   const rounded = parseFloat(n.toPrecision(12));
   return String(rounded);
 }
-
 function displayOpSymbol(op) {
   if (op === "*") return "×";
   if (op === "/") return "÷";
   if (op === "-") return "−";
   return op;
 }
-
 function updateExprAfterDigit() {
   if (!calcExpression) return;
   calcExpression = calcExpression.replace(/[\d.]+$/, "") + calcDisplay;
@@ -900,7 +956,7 @@ function warmUpVoices() {
 }
 
 // ===================================================
-// DICTIONARY + PRONUNCIATION (offline)
+// DICTIONARY
 // ===================================================
 function openDictionary() {
   const input = $("dictInput");
@@ -918,29 +974,20 @@ function openDictionary() {
 function lookupWord(word) {
   const result = $("dictResult");
   const error = $("dictError");
-
   word = (word || "").trim().toLowerCase();
   if (!word) return;
-
   if (!/^[a-z\-' ]+$/.test(word)) {
     error.textContent = "Please enter a valid word (letters only).";
     error.classList.remove("hidden");
     result.classList.add("hidden");
     return;
   }
-
   error.classList.add("hidden");
   result.classList.remove("hidden");
-
-  if (!offlineDictionary) {
-    renderFallbackDictionary(word);
-    return;
-  }
-
+  if (!offlineDictionary) { renderFallbackDictionary(word); return; }
   const words = word.split(/\s+/);
   const known = [];
   const unknown = [];
-
   words.forEach(w => {
     const clean = w.replace(/[^a-z\-']/g, "");
     if (offlineDictionary[clean]) {
@@ -949,31 +996,24 @@ function lookupWord(word) {
       unknown.push(w);
     }
   });
-
   renderOfflineResult(word, known, unknown);
 }
 
 function renderFallbackDictionary(word) {
   const result = $("dictResult");
   result.innerHTML = "";
-
   const header = document.createElement("div");
   header.className = "dict-word-row";
-
   const wordEl = document.createElement("div");
   wordEl.className = "dict-word";
   wordEl.textContent = word;
   header.appendChild(wordEl);
-
   const pronounceBtn = document.createElement("button");
   pronounceBtn.className = "dict-pronounce";
-  pronounceBtn.title = "Play pronunciation";
   pronounceBtn.textContent = "🔊";
   pronounceBtn.addEventListener("click", () => speakWord(word, pronounceBtn));
   header.appendChild(pronounceBtn);
-
   result.appendChild(header);
-
   const note = document.createElement("div");
   note.className = "dict-def";
   note.style.opacity = "0.7";
@@ -985,22 +1025,17 @@ function renderFallbackDictionary(word) {
 function renderOfflineResult(phrase, known, unknown) {
   const result = $("dictResult");
   result.innerHTML = "";
-
   const header = document.createElement("div");
   header.className = "dict-word-row";
-
   const wordEl = document.createElement("div");
   wordEl.className = "dict-word";
   wordEl.textContent = phrase;
   header.appendChild(wordEl);
-
   const pronounceBtn = document.createElement("button");
   pronounceBtn.className = "dict-pronounce";
-  pronounceBtn.title = "Play pronunciation";
   pronounceBtn.textContent = "🔊";
   pronounceBtn.addEventListener("click", () => speakWord(phrase, pronounceBtn));
   header.appendChild(pronounceBtn);
-
   result.appendChild(header);
 
   if (known.length > 1) {
@@ -1023,17 +1058,14 @@ function renderOfflineResult(phrase, known, unknown) {
   known.forEach(k => {
     const block = document.createElement("div");
     block.className = "dict-meaning";
-
     const word = document.createElement("div");
     word.className = "dict-pos";
     word.textContent = k.word;
     block.appendChild(word);
-
     const def = document.createElement("div");
     def.className = "dict-def";
     def.textContent = k.definition;
     block.appendChild(def);
-
     result.appendChild(block);
   });
 
@@ -1053,22 +1085,14 @@ function speakWord(word, btn) {
     alert("Your browser does not support speech. Try a different browser.");
     return;
   }
-
-  const clean = String(word)
-    .replace(/[–—]/g, "-")
-    .replace(/\s+/g, " ")
-    .trim();
-
+  const clean = String(word).replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
   if (!clean) return;
-
-  try { window.speechSynthesis.cancel(); } catch (e) { /* ignore */ }
-
+  try { window.speechSynthesis.cancel(); } catch (e) {}
   const utterance = new SpeechSynthesisUtterance(clean);
   utterance.lang = "en-GB";
   utterance.rate = 0.85;
   utterance.pitch = 1;
   utterance.volume = 1;
-
   try {
     const voices = window.speechSynthesis.getVoices() || [];
     const preferred = voices.find(v => /en-GB|en_GB/i.test(v.lang)) ||
@@ -1078,8 +1102,7 @@ function speakWord(word, btn) {
       utterance.voice = preferred;
       utterance.lang = preferred.lang;
     }
-  } catch (e) { /* default voice */ }
-
+  } catch (e) {}
   if (btn) {
     btn.classList.add("playing");
     const clear = () => btn.classList.remove("playing");
@@ -1087,13 +1110,9 @@ function speakWord(word, btn) {
     utterance.onerror = clear;
     setTimeout(clear, 10000);
   }
-
   setTimeout(() => {
-    try {
-      window.speechSynthesis.speak(utterance);
-    } catch (e) {
-      console.error("speechSynthesis.speak failed:", e);
-    }
+    try { window.speechSynthesis.speak(utterance); }
+    catch (e) { console.error("speechSynthesis.speak failed:", e); }
   }, 60);
 }
 
@@ -1101,14 +1120,9 @@ function attachDictionaryListeners() {
   const input = $("dictInput");
   const btn = $("dictSearchBtn");
   if (!input || !btn) return;
-
   btn.addEventListener("click", () => lookupWord(input.value));
-
   input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      lookupWord(input.value);
-    }
+    if (e.key === "Enter") { e.preventDefault(); lookupWord(input.value); }
   });
 }
 
@@ -1159,96 +1173,65 @@ function startTypingLesson() {
   typingCorrectCount = 0;
   typingTypedCount = 0;
   typingStartTime = null;
-
   const text = typingLevel.lessons[typingLessonIndex].text;
   $("typingLessonCount").textContent = `Lesson ${typingLessonIndex + 1} of ${typingLevel.lessons.length}`;
   $("typingInput").value = "";
   $("typingInput").disabled = false;
   $("typingNextBtn").disabled = false;
-
   renderTypingTarget(text, 0);
   updateTypingStats();
-
   setTimeout(() => $("typingInput").focus(), 100);
 }
 
-function renderTypingTarget(text, typedLength) {
+function renderTypingTarget(text) {
   const targetEl = $("typingTarget");
   targetEl.innerHTML = "";
   const typed = $("typingInput").value;
-
   for (let i = 0; i < text.length; i++) {
     const span = document.createElement("span");
     span.className = "char";
     span.textContent = text[i] === " " ? "\u00A0" : text[i];
-
     if (i < typed.length) {
-      if (typed[i] === text[i]) {
-        span.classList.add("correct");
-      } else {
-        span.classList.add("incorrect");
-      }
+      if (typed[i] === text[i]) span.classList.add("correct");
+      else span.classList.add("incorrect");
     } else if (i === typed.length) {
       span.classList.add("current");
     }
-
     targetEl.appendChild(span);
   }
 }
 
 function handleTypingInput() {
   if (typingDone) return;
-
   const text = typingLevel.lessons[typingLessonIndex].text;
   const typed = $("typingInput").value;
-
-  if (!typingStartTime && typed.length > 0) {
-    typingStartTime = Date.now();
-  }
-
+  if (!typingStartTime && typed.length > 0) typingStartTime = Date.now();
   let correct = 0;
-  for (let i = 0; i < typed.length; i++) {
-    if (typed[i] === text[i]) correct++;
-  }
+  for (let i = 0; i < typed.length; i++) if (typed[i] === text[i]) correct++;
   typingCorrectCount = correct;
   typingTypedCount = typed.length;
-
-  renderTypingTarget(text, typed.length);
+  renderTypingTarget(text);
   updateTypingStats();
-
-  if (typed === text) {
-    finishTypingLesson();
-  }
+  if (typed === text) finishTypingLesson();
 }
 
 function updateTypingStats() {
-  const accuracy = typingTypedCount === 0
-    ? 100
-    : Math.round((typingCorrectCount / typingTypedCount) * 100);
+  const accuracy = typingTypedCount === 0 ? 100 : Math.round((typingCorrectCount / typingTypedCount) * 100);
   $("typingAccuracy").textContent = `${accuracy}%`;
   $("typingProgress").textContent = `${typingTypedCount}/${typingLevel ? typingLevel.lessons[typingLessonIndex].text.length : 0}`;
-
   const elapsed = typingStartTime ? (Date.now() - typingStartTime) / 1000 : 0;
-  const wpm = elapsed > 1
-    ? Math.round((typingCorrectCount / 5) / (elapsed / 60))
-    : 0;
+  const wpm = elapsed > 1 ? Math.round((typingCorrectCount / 5) / (elapsed / 60)) : 0;
   $("typingWpm").textContent = wpm;
 }
 
 function finishTypingLesson() {
   typingDone = true;
   $("typingInput").disabled = true;
-
-  const accuracy = typingTypedCount === 0
-    ? 100
-    : Math.round((typingCorrectCount / typingTypedCount) * 100);
   const elapsed = typingStartTime ? (Date.now() - typingStartTime) / 1000 : 1;
   const wpm = Math.round((typingCorrectCount / 5) / (elapsed / 60));
-
   typingStats.lessonsDone += 1;
   if (wpm > typingStats.bestWpm) typingStats.bestWpm = wpm;
   saveTypingStats();
-
   $("typingNextBtn").textContent = "Next Lesson →";
   $("typingNextBtn").disabled = false;
 }
@@ -1263,36 +1246,29 @@ function nextTypingLesson() {
   }
 }
 
-function restartTypingLesson() {
-  startTypingLesson();
-}
+function restartTypingLesson() { startTypingLesson(); }
 
 function attachTypingListeners() {
   const input = $("typingInput");
   const nextBtn = $("typingNextBtn");
   const restartBtn = $("typingRestartBtn");
   if (!input) return;
-
   input.addEventListener("input", handleTypingInput);
-
   nextBtn.addEventListener("click", nextTypingLesson);
   restartBtn.addEventListener("click", restartTypingLesson);
 }
 
 // ===================================================
-// GAMES (gatekeeper; games themselves come next)
+// GAMES HUB
 // ===================================================
 function updateGamesScreen() {
   const lockedEl = $("gamesLocked");
   const unlockedEl = $("gamesUnlocked");
   if (!lockedEl || !unlockedEl) return;
 
-  const unlocked = isGamesUnlocked();
-
-  if (unlocked) {
+  if (isGamesUnlocked()) {
     lockedEl.classList.add("hidden");
     unlockedEl.classList.remove("hidden");
-
     const msLeft = getUnlockTimeRemainingMs();
     const h = Math.floor(msLeft / 3600000);
     const m = Math.floor((msLeft % 3600000) / 60000);
@@ -1301,11 +1277,9 @@ function updateGamesScreen() {
   } else {
     unlockedEl.classList.add("hidden");
     lockedEl.classList.remove("hidden");
-
     const secondsLeft = Math.max(0, STUDY_REQUIRED_SEC - studyTracker.secondsToday);
     const minLeft = Math.ceil(secondsLeft / 60);
     const doneMin = Math.floor(studyTracker.secondsToday / 60);
-
     $("gamesLockedMsg").textContent = `Study for ${STUDY_REQUIRED_MIN} minutes to unlock games.`;
     $("gamesLockedTime").textContent = `${doneMin} / ${STUDY_REQUIRED_MIN} min • ${minLeft} more to go`;
     $("gamesProgressFill").style.width = `${getStudyProgressFraction() * 100}%`;
@@ -1317,10 +1291,10 @@ function renderGamesGrid() {
   if (!grid) return;
   grid.innerHTML = "";
   const games = [
-    { icon: "➕", name: "Math Sprint", tag: "Coming soon", available: false },
-    { icon: "🧠", name: "Memory Match", tag: "Coming soon", available: false },
-    { icon: "🔤", name: "Spelling Bee", tag: "Coming soon", available: false },
-    { icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
+    { id: "mathsprint", icon: "⏱️", name: "Math Sprint", tag: "Ready", available: true },
+    { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Coming soon", available: false },
+    { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Coming soon", available: false },
+    { id: "tables", icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
   ];
   games.forEach(g => {
     const card = el("button", "game-card" + (g.available ? "" : " disabled"));
@@ -1330,19 +1304,272 @@ function renderGamesGrid() {
       <span class="game-name">${g.name}</span>
       <span class="game-tag">${g.tag}</span>
     `;
+    if (g.available && g.id === "mathsprint") {
+      card.addEventListener("click", () => {
+        showScreen("screen-mathsprint");
+        openMathSprint();
+      });
+    }
     grid.appendChild(card);
   });
 }
 
 function attachGamesListeners() {
   const goStudyBtn = $("gamesGoStudyBtn");
-  if (goStudyBtn) {
-    goStudyBtn.addEventListener("click", () => showScreen("screen-home"));
-  }
+  if (goStudyBtn) goStudyBtn.addEventListener("click", () => showScreen("screen-home"));
 }
 
 // ===================================================
-// LISTENERS
+// MATH SPRINT
+// ===================================================
+function openMathSprint() {
+  msMode = null;
+  msPlayers = [];
+  msCurrentPlayerIndex = 0;
+  msRoundActive = false;
+  clearInterval(msTimerInterval);
+  $("msModePicker").classList.remove("hidden");
+  $("msTwoSetup").classList.add("hidden");
+  $("msPassScreen").classList.add("hidden");
+  $("msPlay").classList.add("hidden");
+  $("msRoundResult").classList.add("hidden");
+}
+
+function startMathSprintSolo() {
+  msMode = "solo";
+  msPlayers = [{ name: playerName || "Player", score: 0 }];
+  msCurrentPlayerIndex = 0;
+  $("msModePicker").classList.add("hidden");
+  startMathSprintRound();
+}
+
+function startMathSprintTwo() {
+  const p2 = ($("msP2Input").value || "").trim() || "Player 2";
+  msMode = "two";
+  msPlayers = [
+    { name: playerName || "Player 1", score: 0 },
+    { name: p2, score: 0 }
+  ];
+  msCurrentPlayerIndex = 0;
+  $("msTwoSetup").classList.add("hidden");
+  showPassScreen();
+}
+
+function showPassScreen() {
+  $("msPlay").classList.add("hidden");
+  $("msRoundResult").classList.add("hidden");
+  $("msPassScreen").classList.remove("hidden");
+  $("msPassName").textContent = msPlayers[msCurrentPlayerIndex].name;
+}
+
+function startMathSprintRound() {
+  $("msPassScreen").classList.add("hidden");
+  $("msPlay").classList.remove("hidden");
+  $("msRoundResult").classList.add("hidden");
+
+  msRoundActive = true;
+  msQuestionLocked = false;
+  msTimeLeft = MATH_SPRINT_SECONDS;
+  $("msTimer").textContent = msTimeLeft;
+  $("msTimer").classList.remove("warning");
+  $("msCurrentPlayer").textContent = msPlayers[msCurrentPlayerIndex].name;
+  $("msScore").textContent = msPlayers[msCurrentPlayerIndex].score;
+
+  nextMathSprintQuestion();
+
+  clearInterval(msTimerInterval);
+  msTimerInterval = setInterval(() => {
+    msTimeLeft--;
+    $("msTimer").textContent = msTimeLeft;
+    if (msTimeLeft <= 10) $("msTimer").classList.add("warning");
+    if (msTimeLeft <= 0) {
+      clearInterval(msTimerInterval);
+      endMathSprintRound();
+    }
+  }, 1000);
+}
+
+function generateMathQuestion() {
+  const ops = ["+", "-", "×", "÷"];
+  const op = ops[Math.floor(Math.random() * ops.length)];
+  let a, b, answer;
+
+  switch (op) {
+    case "+":
+      a = Math.floor(Math.random() * 90) + 10;
+      b = Math.floor(Math.random() * 90) + 10;
+      answer = a + b;
+      break;
+    case "-":
+      a = Math.floor(Math.random() * 90) + 10;
+      b = Math.floor(Math.random() * a) + 1;
+      answer = a - b;
+      break;
+    case "×":
+      a = Math.floor(Math.random() * 11) + 2;
+      b = Math.floor(Math.random() * 11) + 2;
+      answer = a * b;
+      break;
+    case "÷":
+      b = Math.floor(Math.random() * 10) + 2;
+      answer = Math.floor(Math.random() * 10) + 2;
+      a = b * answer;
+      break;
+  }
+
+  const options = new Set([answer]);
+  while (options.size < 4) {
+    const delta = Math.floor(Math.random() * 20) - 10;
+    const wrong = answer + delta;
+    if (wrong !== answer && wrong > 0) options.add(wrong);
+  }
+
+  return {
+    question: `${a} ${op} ${b}`,
+    answer: answer,
+    options: shuffle([...options])
+  };
+}
+
+function nextMathSprintQuestion() {
+  msCurrentQuestion = generateMathQuestion();
+  msQuestionLocked = false;
+  $("msQuestion").textContent = msCurrentQuestion.question;
+
+  const container = $("msOptions");
+  container.innerHTML = "";
+  msCurrentQuestion.options.forEach(opt => {
+    const btn = el("button", "ms-option");
+    btn.textContent = opt;
+    btn.addEventListener("click", () => handleMathSprintAnswer(btn, opt));
+    container.appendChild(btn);
+  });
+}
+
+function handleMathSprintAnswer(btn, chosen) {
+  if (msQuestionLocked || !msRoundActive) return;
+  msQuestionLocked = true;
+
+  const correct = msCurrentQuestion.answer;
+  const buttons = $("msOptions").querySelectorAll(".ms-option");
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (parseInt(b.textContent, 10) === correct) b.classList.add("correct");
+  });
+
+  if (chosen === correct) {
+    msPlayers[msCurrentPlayerIndex].score++;
+    $("msScore").textContent = msPlayers[msCurrentPlayerIndex].score;
+  } else {
+    btn.classList.add("wrong");
+  }
+
+  setTimeout(() => {
+    if (msRoundActive) nextMathSprintQuestion();
+  }, 350);
+}
+
+function endMathSprintRound() {
+  msRoundActive = false;
+  clearInterval(msTimerInterval);
+  $("msPlay").classList.add("hidden");
+  $("msRoundResult").classList.remove("hidden");
+
+  const score = msPlayers[msCurrentPlayerIndex].score;
+
+  if (msMode === "solo") {
+    const best = loadMathSprintBest();
+    saveMathSprintBest(score);
+    const isNewBest = score > best;
+
+    $("msResultIcon").textContent = isNewBest ? "🏆" : "🎉";
+    $("msResultTitle").textContent = isNewBest ? "New best score!" : "Time's up!";
+    $("msResultMsg").textContent = isNewBest
+      ? `You scored ${score} points — beating your old record of ${best}!`
+      : `You scored ${score} points. Best: ${Math.max(score, best)}.`;
+    $("msNextBtn").textContent = "Done";
+  } else {
+    const isLastPlayer = msCurrentPlayerIndex >= msPlayers.length - 1;
+
+    if (!isLastPlayer) {
+      $("msResultIcon").textContent = "🎯";
+      $("msResultTitle").textContent = `${msPlayers[msCurrentPlayerIndex].name} scored ${score}!`;
+      $("msResultMsg").textContent = `Pass the device to ${msPlayers[msCurrentPlayerIndex + 1].name}.`;
+      $("msNextBtn").textContent = `Pass to ${msPlayers[msCurrentPlayerIndex + 1].name} →`;
+    } else {
+      // Final result — determine winner
+      const p1 = msPlayers[0];
+      const p2 = msPlayers[1];
+      let winner;
+      if (p1.score > p2.score) winner = p1;
+      else if (p2.score > p1.score) winner = p2;
+      else winner = null;
+
+      $("msResultIcon").textContent = winner ? "🏆" : "🤝";
+      $("msResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+      $("msResultMsg").textContent = `${p1.name}: ${p1.score} — ${p2.name}: ${p2.score}`;
+      $("msNextBtn").textContent = "Play Again";
+    }
+  }
+}
+
+function handleMathSprintNext() {
+  if (msMode === "solo") {
+    openMathSprint();
+    return;
+  }
+  // Two-player: advance to next player or restart
+  const isLastPlayer = msCurrentPlayerIndex >= msPlayers.length - 1;
+  if (!isLastPlayer) {
+    msCurrentPlayerIndex++;
+    showPassScreen();
+  } else {
+    openMathSprint();
+  }
+}
+
+function handleMathSprintPlayAgain() {
+  if (msMode === "solo") startMathSprintSolo();
+  else if (msMode === "two") {
+    msPlayers.forEach(p => p.score = 0);
+    msCurrentPlayerIndex = 0;
+    $("msRoundResult").classList.add("hidden");
+    showPassScreen();
+  }
+}
+
+function attachMathSprintListeners() {
+  const soloBtn = $("msSoloBtn");
+  const twoBtn = $("msTwoBtn");
+  const backToModes = $("msBackToModes");
+  const startTwoBtn = $("msStartTwoBtn");
+  const readyBtn = $("msReadyBtn");
+  const nextBtn = $("msNextBtn");
+  const playAgainBtn = $("msPlayAgainBtn");
+
+  if (soloBtn) soloBtn.addEventListener("click", startMathSprintSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("msModePicker").classList.add("hidden");
+      $("msTwoSetup").classList.remove("hidden");
+      $("msP2Input").value = "";
+      setTimeout(() => $("msP2Input").focus(), 100);
+    });
+  }
+  if (backToModes) {
+    backToModes.addEventListener("click", () => {
+      $("msTwoSetup").classList.add("hidden");
+      $("msModePicker").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startMathSprintTwo);
+  if (readyBtn) readyBtn.addEventListener("click", startMathSprintRound);
+  if (nextBtn) nextBtn.addEventListener("click", handleMathSprintNext);
+  if (playAgainBtn) playAgainBtn.addEventListener("click", handleMathSprintPlayAgain);
+}
+
+// ===================================================
+// GLOBAL LISTENERS
 // ===================================================
 function attachGlobalListeners() {
   document.querySelectorAll("[data-back]").forEach(btn => {
@@ -1350,7 +1577,16 @@ function attachGlobalListeners() {
       const active = document.querySelector(".screen.active").id;
       if (active === "screen-topic") showScreen("screen-home");
       else if (active === "screen-study" || active === "screen-quiz") showScreen("screen-topic");
-      else if (active === "screen-progress" || active === "screen-calculator" || active === "screen-dictionary" || active === "screen-typing" || active === "screen-games") showScreen("screen-home");
+      else if (active === "screen-progress" ||
+               active === "screen-calculator" ||
+               active === "screen-dictionary" ||
+               active === "screen-typing" ||
+               active === "screen-games") showScreen("screen-home");
+      else if (active === "screen-mathsprint") {
+        clearInterval(msTimerInterval);
+        msRoundActive = false;
+        showScreen("screen-games");
+      }
     });
   });
 

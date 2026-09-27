@@ -27,7 +27,6 @@
     <section class="screen active" id="screen-home">
       <p class="greeting" id="greeting">Welcome! 👋</p>
 
-      <!-- STUDY TRACKER BANNER -->
       <div class="study-banner" id="studyBanner">
         <span class="study-banner-icon" id="studyBannerIcon">🔒</span>
         <span class="study-banner-text" id="studyBannerText">Loading…</span>
@@ -229,12 +228,11 @@
       </div>
     </section>
 
-    <!-- ================= GAMES ================= -->
+    <!-- ================= GAMES HUB ================= -->
     <section class="screen" id="screen-games">
       <button class="back-btn" data-back>← Back</button>
       <h2>🎮 Games</h2>
 
-      <!-- Locked state -->
       <div id="gamesLocked" class="games-locked hidden">
         <div class="games-locked-icon">🔒</div>
         <h3 class="games-locked-title">Games locked</h3>
@@ -246,7 +244,6 @@
         <button class="typing-btn-primary" id="gamesGoStudyBtn">Go study →</button>
       </div>
 
-      <!-- Unlocked state -->
       <div id="gamesUnlocked" class="games-unlocked hidden">
         <div class="games-unlocked-icon">🎉</div>
         <h3 class="games-unlocked-title">Games unlocked!</h3>
@@ -255,10 +252,84 @@
       </div>
     </section>
 
+    <!-- ================= MATH SPRINT ================= -->
+    <section class="screen" id="screen-mathsprint">
+      <button class="back-btn" data-back>← Back</button>
+      <h2>⏱️ Math Sprint</h2>
+
+      <!-- Mode picker -->
+      <div id="msModePicker">
+        <p class="ms-hint">Choose how you want to play.</p>
+        <div class="ms-mode-grid">
+          <button class="ms-mode-card" id="msSoloBtn">
+            <span class="ms-mode-icon">👤</span>
+            <span class="ms-mode-name">Solo</span>
+            <span class="ms-mode-desc">Beat your own best score</span>
+          </button>
+          <button class="ms-mode-card" id="msTwoBtn">
+            <span class="ms-mode-icon">👥</span>
+            <span class="ms-mode-name">2 Players</span>
+            <span class="ms-mode-desc">Pass and play with a friend</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-player name prompt -->
+      <div id="msTwoSetup" class="hidden">
+        <p class="ms-hint">Player 2, what's your name?</p>
+        <input type="text" id="msP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+        <div class="ms-actions">
+          <button class="typing-btn-secondary" id="msBackToModes">Cancel</button>
+          <button class="typing-btn-primary" id="msStartTwoBtn">Start</button>
+        </div>
+      </div>
+
+      <!-- Pass-device screen -->
+      <div id="msPassScreen" class="hidden ms-pass-screen">
+        <div class="ms-pass-icon">📱</div>
+        <h3 class="ms-pass-title">Pass to <span id="msPassName">Player</span></h3>
+        <p class="ms-pass-msg">Tap when ready to play your 30 seconds.</p>
+        <button class="typing-btn-primary" id="msReadyBtn">I'm ready →</button>
+      </div>
+
+      <!-- Active play -->
+      <div id="msPlay" class="hidden">
+        <div class="ms-play-topbar">
+          <span class="ms-current-player" id="msCurrentPlayer">Kofi</span>
+          <span class="ms-timer" id="msTimer">30</span>
+        </div>
+
+        <div class="ms-question" id="msQuestion">7 × 8</div>
+
+        <div class="ms-options" id="msOptions"></div>
+
+        <div class="ms-score-inline">
+          <span>Score: <strong id="msScore">0</strong></span>
+        </div>
+      </div>
+
+      <!-- Round result (solo = final; 2P = between turns) -->
+      <div id="msRoundResult" class="hidden ms-result">
+        <div class="ms-result-icon" id="msResultIcon">🎉</div>
+        <h3 class="ms-result-title" id="msResultTitle">Time's up!</h3>
+        <p class="ms-result-msg" id="msResultMsg">You scored 8 points.</p>
+        <div class="ms-result-actions">
+          <button class="typing-btn-secondary" id="msPlayAgainBtn">Play Again</button>
+          <button class="typing-btn-primary" id="msNextBtn">Continue</button>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= PROGRESS ================= -->
     <section class="screen" id="screen-progress">
       <button class="back-btn" data-back>← Back</button>
       <h2>📊 My Progress</h2>
+
+      <div class="progress-name-row">
+        <span class="progress-name-label">Playing as:</span>
+        <span class="progress-name-value" id="progressName">Player</span>
+        <button class="progress-name-edit" id="changeNameBtn">Change</button>
+      </div>
 
       <div class="stat-grid">
         <div class="stat">
@@ -308,6 +379,26 @@
 
       <button id="clearProgressBtn" class="danger">Clear My Progress</button>
     </section>
+
+    <!-- ================= NAME PROMPT MODAL ================= -->
+    <div class="modal hidden" id="nameModal">
+      <div class="modal-card">
+        <h2>What's your name? 👋</h2>
+        <p class="modal-sub">So we can cheer you on by name.</p>
+        <input
+          type="text"
+          id="nameInput"
+          class="ms-input"
+          placeholder="e.g. Kofi"
+          maxlength="20"
+          autocomplete="off"
+        />
+        <div class="name-modal-actions">
+          <button class="typing-btn-secondary" id="nameSkipBtn">Skip</button>
+          <button class="typing-btn-primary" id="nameSaveBtn">Save</button>
+        </div>
+      </div>
+    </div>
 
     <!-- ================= THEME PICKER MODAL ================= -->
     <div class="modal hidden" id="themeModal">
