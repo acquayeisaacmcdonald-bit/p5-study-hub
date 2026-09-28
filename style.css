@@ -1384,3 +1384,14 @@ button.danger:active { transform: scale(0.98); }
 }
 .sb-feedback.correct { color: var(--success); }
 .sb-feedback.wrong { color: var(--warning); }
+/* ---------- TIMES TABLES ---------- */
+.tt-level-card.selected {
+  border-color: var(--accent);
+  background: var(--panel-strong);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+@media (max-width: 380px) {
+  .tt-level-card .ms-mode-name { font-size: 0.9rem; }
+  .tt-level-card .ms-mode-desc { font-size: 0.65rem; }
+}

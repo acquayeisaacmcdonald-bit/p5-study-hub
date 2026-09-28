@@ -148,6 +148,27 @@ const SB_WORDS = {
   ]
 };
 
+
+// ---------- TIMES TABLES STATE ----------
+let ttLevel = null;
+let ttMode = null;
+let ttPlayers = [];
+let ttCurrentPlayerIndex = 0;
+let ttQuestions = [];
+let ttQuestionIndex = 0;
+let ttRoundActive = false;
+let ttQuestionLocked = false;
+let ttTimeLeft = 0;
+let ttTimerInterval = null;
+let ttStartTime = null;
+let ttTotalSeconds = null;
+
+const TT_LEVELS = {
+  easy:   { tables: [2,3,4,5],    seconds: null, label: "Easy (×2 – ×5)" },
+  medium: { tables: [6,7,8,9],    seconds: 60,   label: "Medium (×6 – ×9)" },
+  hard:   { tables: [10,11,12],   seconds: 45,   label: "Hard (×10 – ×12)" }
+};
+
 // ---------- STORAGE HELPERS ----------
 function loadProgress() {
   try {
@@ -333,6 +354,7 @@ async function boot() {
   attachMathSprintListeners();
   attachMemoryMatchListeners();
   attachSpellingBeeListeners();
+  attachTimesTablesListeners();
   attachNameListeners();
   warmUpVoices();
 
@@ -1357,7 +1379,7 @@ function renderGamesGrid() {
     { id: "mathsprint", icon: "⏱️", name: "Math Sprint", tag: "Ready", available: true },
     { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Ready", available: true },
     { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Ready", available: true },
-    { id: "tables", icon: "🔢", name: "Times Tables", tag: "Coming soon", available: false }
+    { id: "tables", icon: "🔢", name: "Times Tables", tag: "Ready", available: true },
   ];
   games.forEach(g => {
     const card = el("button", "game-card" + (g.available ? "" : " disabled"));
@@ -1381,6 +1403,12 @@ function renderGamesGrid() {
       card.addEventListener("click", () => {
         showScreen("screen-spellingbee");
         openSpellingBee();
+      });
+    }  
+	if (g.available && g.id === "tables") {
+      card.addEventListener("click", () => {
+        showScreen("screen-timestables");
+        openTimesTables();
       });
     }
     grid.appendChild(card);
@@ -2293,6 +2321,297 @@ function attachSpellingBeeListeners() {
   if (doneBtn) doneBtn.addEventListener("click", () => showScreen("screen-games"));
 }
 // ===================================================
-// GO
+// ===================================================
+// TIMES TABLES
+// ===================================================
+function openTimesTables() {
+  ttLevel = null;
+  ttMode = null;
+  ttPlayers = [];
+  ttCurrentPlayerIndex = 0;
+  ttQuestions = [];
+  ttQuestionIndex = 0;
+  ttRoundActive = false;
+  ttQuestionLocked = false;
+  clearInterval(ttTimerInterval);
+
+  document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
+
+  $("ttLevelPicker").classList.remove("hidden");
+  $("ttModePicker").classList.add("hidden");
+  $("ttTwoSetup").classList.add("hidden");
+  $("ttPassScreen").classList.add("hidden");
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.add("hidden");
+}
+
+function selectTimesLevel(level) {
+  ttLevel = level;
+  document.querySelectorAll(".tt-level-card").forEach(c => {
+    c.classList.toggle("selected", c.dataset.level === level);
+  });
+  $("ttLevelLabel").textContent = TT_LEVELS[level].label;
+  $("ttLevelPicker").classList.add("hidden");
+  $("ttModePicker").classList.remove("hidden");
+}
+
+function buildTimesQuestions() {
+  const tables = TT_LEVELS[ttLevel].tables;
+  const questions = [];
+
+  for (let i = 0; i < 12; i++) {
+    const table = tables[Math.floor(Math.random() * tables.length)];
+    const multiplier = Math.floor(Math.random() * 12) + 1;
+    questions.push({
+      a: table,
+      b: multiplier,
+      answer: table * multiplier
+    });
+  }
+  return questions;
+}
+
+function makeTimesOptions(answer) {
+  const options = new Set([answer]);
+  while (options.size < 4) {
+    const delta = Math.floor(Math.random() * 20) - 10;
+    const wrong = answer + delta;
+    if (wrong > 0 && wrong !== answer) options.add(wrong);
+  }
+  return shuffle([...options]);
+}
+
+function startTimesTablesSolo() {
+  ttMode = "solo";
+  ttPlayers = [{ name: playerName || "Player", score: 0 }];
+  ttCurrentPlayerIndex = 0;
+  $("ttModePicker").classList.add("hidden");
+  startTimesRound();
+}
+
+function startTimesTablesTwo() {
+  const p2 = ($("ttP2Input").value || "").trim() || "Player 2";
+  ttMode = "two";
+  ttPlayers = [
+    { name: playerName || "Player 1", score: 0 },
+    { name: p2, score: 0 }
+  ];
+  ttCurrentPlayerIndex = 0;
+  $("ttTwoSetup").classList.add("hidden");
+  showTimesPassScreen();
+}
+
+function showTimesPassScreen() {
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.add("hidden");
+  $("ttPassScreen").classList.remove("hidden");
+  $("ttPassName").textContent = ttPlayers[ttCurrentPlayerIndex].name;
+}
+
+function startTimesRound() {
+  $("ttPassScreen").classList.add("hidden");
+  $("ttPlay").classList.remove("hidden");
+  $("ttResult").classList.add("hidden");
+
+  ttRoundActive = true;
+  ttQuestionLocked = false;
+  ttQuestionIndex = 0;
+  ttQuestions = buildTimesQuestions();
+  ttStartTime = Date.now();
+
+  ttPlayers[ttCurrentPlayerIndex].score = 0;
+
+  $("ttCurrentPlayer").textContent = ttPlayers[ttCurrentPlayerIndex].name;
+  $("ttScore").textContent = 0;
+
+  clearInterval(ttTimerInterval);
+  const seconds = TT_LEVELS[ttLevel].seconds;
+  if (seconds) {
+    ttTotalSeconds = seconds;
+    ttTimeLeft = seconds;
+    $("ttTimer").textContent = `${ttTimeLeft}s`;
+    $("ttTimer").classList.remove("warning");
+    ttTimerInterval = setInterval(() => {
+      ttTimeLeft--;
+      $("ttTimer").textContent = `${ttTimeLeft}s`;
+      if (ttTimeLeft <= 10) $("ttTimer").classList.add("warning");
+      if (ttTimeLeft <= 0) {
+        clearInterval(ttTimerInterval);
+        endTimesRound();
+      }
+    }, 1000);
+  } else {
+    $("ttTimer").textContent = "";
+    $("ttTimer").classList.remove("warning");
+  }
+
+  renderTimesQuestion();
+}
+
+function renderTimesQuestion() {
+  if (ttQuestionIndex >= ttQuestions.length) {
+    endTimesRound();
+    return;
+  }
+
+  ttQuestionLocked = false;
+  const q = ttQuestions[ttQuestionIndex];
+  $("ttProgressLabel").textContent = `Question ${ttQuestionIndex + 1} of ${ttQuestions.length}`;
+  $("ttQuestion").textContent = `${q.a} × ${q.b}`;
+
+  const options = makeTimesOptions(q.answer);
+  const container = $("ttOptions");
+  container.innerHTML = "";
+  options.forEach(opt => {
+    const btn = el("button", "ms-option");
+    btn.textContent = opt;
+    btn.addEventListener("click", () => handleTimesAnswer(btn, opt));
+    container.appendChild(btn);
+  });
+}
+
+function handleTimesAnswer(btn, chosen) {
+  if (ttQuestionLocked || !ttRoundActive) return;
+  ttQuestionLocked = true;
+
+  const q = ttQuestions[ttQuestionIndex];
+  const correct = q.answer;
+  const buttons = $("ttOptions").querySelectorAll(".ms-option");
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (parseInt(b.textContent, 10) === correct) b.classList.add("correct");
+  });
+
+  if (chosen === correct) {
+    ttPlayers[ttCurrentPlayerIndex].score++;
+    $("ttScore").textContent = ttPlayers[ttCurrentPlayerIndex].score;
+  } else {
+    btn.classList.add("wrong");
+  }
+
+  setTimeout(() => {
+    if (!ttRoundActive) return;
+    ttQuestionIndex++;
+    if (ttQuestionIndex >= ttQuestions.length) {
+      endTimesRound();
+    } else {
+      renderTimesQuestion();
+    }
+  }, 400);
+}
+
+function endTimesRound() {
+  ttRoundActive = false;
+  clearInterval(ttTimerInterval);
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.remove("hidden");
+
+  const totalTime = ttStartTime ? Math.floor((Date.now() - ttStartTime) / 1000) : 0;
+  const score = ttPlayers[ttCurrentPlayerIndex].score;
+  const total = ttQuestions.length;
+
+  if (ttMode === "solo") {
+    const pct = Math.round((score / total) * 100);
+    let title = "Well done!";
+    let icon = "🎉";
+    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
+    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
+    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
+    else { title = "Keep practising!"; icon = "💪"; }
+
+    $("ttResultIcon").textContent = icon;
+    $("ttResultTitle").textContent = title;
+    $("ttResultMsg").textContent = `You scored ${score} out of ${total} in ${totalTime}s.`;
+    $("ttPlayAgainBtn").textContent = "Play Again";
+    $("ttDoneBtn").textContent = "Done";
+  } else {
+    const isLast = ttCurrentPlayerIndex >= ttPlayers.length - 1;
+    if (!isLast) {
+      $("ttResultIcon").textContent = "🎯";
+      $("ttResultTitle").textContent = `${ttPlayers[ttCurrentPlayerIndex].name} scored ${score}/${total}`;
+      $("ttResultMsg").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name}.`;
+      $("ttPlayAgainBtn").textContent = "Restart Level";
+      $("ttDoneBtn").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name} →`;
+    } else {
+      const p1 = ttPlayers[0];
+      const p2 = ttPlayers[1];
+      let winner;
+      if (p1.score > p2.score) winner = p1;
+      else if (p2.score > p1.score) winner = p2;
+      else winner = null;
+
+      $("ttResultIcon").textContent = winner ? "🏆" : "🤝";
+      $("ttResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+      $("ttResultMsg").textContent = `${p1.name}: ${p1.score}/${total} — ${p2.name}: ${p2.score}/${total}`;
+      $("ttPlayAgainBtn").textContent = "Play Again";
+      $("ttDoneBtn").textContent = "Done";
+    }
+  }
+}
+
+function handleTimesPlayAgain() {
+  if (ttMode === "solo") {
+    startTimesRound();
+  } else {
+    if (ttCurrentPlayerIndex >= ttPlayers.length - 1) {
+      ttPlayers.forEach(p => p.score = 0);
+      ttCurrentPlayerIndex = 0;
+      showTimesPassScreen();
+    } else {
+      startTimesRound();
+    }
+  }
+}
+
+function handleTimesDone() {
+  if (ttMode === "two" && ttCurrentPlayerIndex < ttPlayers.length - 1) {
+    ttCurrentPlayerIndex++;
+    showTimesPassScreen();
+  } else {
+    showScreen("screen-games");
+  }
+}
+
+function attachTimesTablesListeners() {
+  document.querySelectorAll(".tt-level-card").forEach(card => {
+    card.addEventListener("click", () => selectTimesLevel(card.dataset.level));
+  });
+
+  const backToLevels = $("ttBackToLevels");
+  const soloBtn = $("ttSoloBtn");
+  const twoBtn = $("ttTwoBtn");
+  const cancelTwo = $("ttCancelTwo");
+  const startTwoBtn = $("ttStartTwoBtn");
+  const readyBtn = $("ttReadyBtn");
+  const playAgainBtn = $("ttPlayAgainBtn");
+  const doneBtn = $("ttDoneBtn");
+
+  if (backToLevels) {
+    backToLevels.addEventListener("click", () => {
+      $("ttModePicker").classList.add("hidden");
+      $("ttLevelPicker").classList.remove("hidden");
+      document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
+    });
+  }
+  if (soloBtn) soloBtn.addEventListener("click", startTimesTablesSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("ttModePicker").classList.add("hidden");
+      $("ttTwoSetup").classList.remove("hidden");
+      $("ttP2Input").value = "";
+      setTimeout(() => $("ttP2Input").focus(), 100);
+    });
+  }
+  if (cancelTwo) {
+    cancelTwo.addEventListener("click", () => {
+      $("ttTwoSetup").classList.add("hidden");
+      $("ttModePicker").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startTimesTablesTwo);
+  if (readyBtn) readyBtn.addEventListener("click", startTimesRound);
+  if (playAgainBtn) playAgainBtn.addEventListener("click", handleTimesPlayAgain);
+  if (doneBtn) doneBtn.addEventListener("click", handleTimesDone);
+}// GO
 // ===================================================
 boot();
