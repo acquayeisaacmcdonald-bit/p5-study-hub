@@ -3,7 +3,7 @@
 // Enables offline use and installability
 // ===================================================
 
-const CACHE_NAME = "p5-study-hub-v1";
+const CACHE_NAME = "p5-study-hub-v2";
 
 // Files to cache on first visit
 const CORE_ASSETS = [
@@ -13,6 +13,9 @@ const CORE_ASSETS = [
   "./script.js",
   "./manifest.json",
   "./assets/immanuel.png",
+  "./assets/icon-192.png",
+  "./assets/icon-512.png",
+  "./assets/icon-maskable.png",
   "./data/subjects.json",
   "./data/maths.json",
   "./data/dictionary.json",
@@ -49,16 +52,12 @@ self.addEventListener("activate", (event) => {
 
 // Fetch — serve from cache first, fall back to network
 self.addEventListener("fetch", (event) => {
-  // Only handle GET requests
   if (event.request.method !== "GET") return;
-
-  // Skip cross-origin requests
   if (!event.request.url.startsWith(self.location.origin)) return;
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) {
-        // Serve cached, and refresh in background
         fetch(event.request)
           .then((response) => {
             if (response && response.status === 200) {
@@ -71,7 +70,6 @@ self.addEventListener("fetch", (event) => {
         return cached;
       }
 
-      // Not cached — fetch and cache
       return fetch(event.request)
         .then((response) => {
           if (response && response.status === 200) {
@@ -83,7 +81,6 @@ self.addEventListener("fetch", (event) => {
           return response;
         })
         .catch(() => {
-          // Offline fallback for navigation
           if (event.request.mode === "navigate") {
             return caches.match("./index.html");
           }
