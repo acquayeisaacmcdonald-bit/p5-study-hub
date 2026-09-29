@@ -8,6 +8,10 @@
   <title>P5 Study Hub — Learn. Practice. Excel.</title>
   <link rel="icon" type="image/png" href="assets/immanuel.png" />
   <link rel="apple-touch-icon" href="assets/immanuel.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="P5 Study Hub" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -800,5 +804,15 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Register service worker for PWA (offline + installable)
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+          .then((reg) => console.log("Service Worker registered:", reg.scope))
+          .catch((err) => console.log("Service Worker registration failed:", err));
+      });
+    }
+  </script>
 </body>
 </html>
