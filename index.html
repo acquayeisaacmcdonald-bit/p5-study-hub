@@ -2,687 +2,802 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta name="theme-color" content="#1e3a8a" />
-  <meta name="description" content="P5 Study Hub — free study app for Primary 5 students in Ghana." />
-  <title>P5 Study Hub</title>
+  <meta name="description" content="P5 Study Hub — free study app for Primary 5 students in Ghana. Built by Adom Nkansah Acquaye and Friends, designed by Crisol Studios Ltd." />
+  <title>P5 Study Hub — Learn. Practice. Excel.</title>
+  <link rel="icon" type="image/png" href="assets/immanuel.png" />
+  <link rel="apple-touch-icon" href="assets/immanuel.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
 
-    <!-- ================= HEADER ================= -->
-    <header class="app-header">
-      <div class="brand">
-        <span class="brand-icon">📚</span>
-        <div>
-          <h1>P5 Study Hub</h1>
-          <p class="tagline">Learn. Practice. Excel.</p>
+  <!-- ================= SITE HEADER / NAV ================= -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="#" class="site-logo" id="logoLink">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text">
+          <strong>P5 Study Hub</strong>
+          <small>Learn. Practice. Excel.</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#" data-nav="home">Home</a>
+        <a href="#" data-nav="subjects">Subjects</a>
+        <a href="#" data-nav="tools">Tools</a>
+        <a href="#" data-nav="games">Games</a>
+        <a href="#" data-nav="about">About</a>
+        <a href="#" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="site-header-actions">
+        <a href="#" data-nav="contact" class="site-header-cta">Get in touch</a>
+        <button class="site-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SITE HERO ================= -->
+  <section class="site-hero" id="top">
+    <div class="site-hero-inner">
+      <div class="site-hero-text">
+        <p class="site-hero-eyebrow">Free for every Ghanaian child</p>
+        <h1 class="site-hero-title">
+          Learn. Practice.<br>Excel.
+        </h1>
+        <p class="site-hero-sub">
+          P5 study tools, games, and quizzes — built by parents, for our children.
+          Works offline. No ads. No cost. Just learning.
+        </p>
+        <div class="site-hero-buttons">
+          <button class="site-btn site-btn-primary" data-nav="subjects">Start studying →</button>
+          <button class="site-btn site-btn-secondary" data-nav="games">Play games</button>
         </div>
       </div>
-      <button id="themeBtn" class="icon-btn" title="Change theme">🎨</button>
-    </header>
-
-    <!-- ================= HOME ================= -->
-    <section class="screen active" id="screen-home">
-      <p class="greeting" id="greeting">Welcome! 👋</p>
-
-      <div class="study-banner" id="studyBanner">
-        <span class="study-banner-icon" id="studyBannerIcon">🔒</span>
-        <span class="study-banner-text" id="studyBannerText">Loading…</span>
+      <div class="site-hero-image">
+        <img src="assets/immanuel.png" alt="A young learner using P5 Study Hub" />
+        <p class="site-hero-caption">
+          Adom Nkansah Acquaye and Friends
+        </p>
       </div>
-      <div class="study-progress-bar">
-        <div class="study-progress-fill" id="studyProgressFill"></div>
-      </div>
+    </div>
+  </section>
 
-      <h2>Choose a subject</h2>
-      <div class="subject-grid" id="subjectGrid"></div>
+  <!-- ================= MAIN APP ================= -->
+  <main class="site-main" id="app-anchor">
+    <div class="app" id="app">
 
-      <h2>Topics</h2>
-      <div class="topic-list" id="homeTopicList"></div>
-
-      <h2>Tools</h2>
-      <div class="tools-grid" id="toolsGrid"></div>
-
-      <button class="progress-link" id="progressLink">📊 View My Progress</button>
-    </section>
-
-    <!-- ================= TOPIC ================= -->
-    <section class="screen" id="screen-topic">
-      <button class="back-btn" data-back>← Back</button>
-      <h2 id="topicTitle">Topic</h2>
-      <p class="topic-meta" id="topicMeta"></p>
-
-      <div class="mode-grid">
-        <button class="mode-card" id="modeStudy">
-          <span class="mode-icon">🃏</span>
-          <span class="mode-name">Study</span>
-          <span class="mode-desc">Flip through the cards</span>
-        </button>
-        <button class="mode-card" id="modeQuiz">
-          <span class="mode-icon">🎯</span>
-          <span class="mode-name">Quiz</span>
-          <span class="mode-desc">Test yourself</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- ================= STUDY ================= -->
-    <section class="screen" id="screen-study">
-      <button class="back-btn" data-back>← Back</button>
-      <p class="study-topic" id="studyTopicLabel"></p>
-
-      <div class="card-container">
-        <div class="card" id="card">
-          <div class="card-face card-front">
-            <span class="badge" id="frontBadge"></span>
-            <p id="question">Loading…</p>
-          </div>
-          <div class="card-face card-back">
-            <span class="badge" id="backBadge"></span>
-            <p id="answer">…</p>
+      <!-- ---------- APP HEADER ---------- -->
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-icon">📚</span>
+          <div>
+            <h1>P5 Study Hub</h1>
+            <p class="tagline">Learn. Practice. Excel.</p>
           </div>
         </div>
-      </div>
+        <button id="themeBtn" class="icon-btn" title="Change theme">🎨</button>
+      </header>
 
-      <div class="controls">
-        <button id="prevBtn">◀ Prev</button>
-        <button id="flipBtn">Flip</button>
-        <button id="nextBtn">Next ▶</button>
-      </div>
-      <p class="progress" id="progress">Card 1 of 1</p>
-    </section>
+      <!-- ---------- HOME ---------- -->
+      <section class="screen active" id="screen-home">
+        <p class="greeting" id="greeting">Welcome! 👋</p>
 
-    <!-- ================= QUIZ ================= -->
-    <section class="screen" id="screen-quiz">
-      <button class="back-btn" data-back>← Back</button>
-
-      <div id="quizPlay">
-        <div class="quiz-topbar">
-          <p class="quiz-topic" id="quizTopicLabel"></p>
-          <button class="pace-btn" id="paceBtn" title="Change pace">🐢 My pace</button>
+        <div class="study-banner" id="studyBanner">
+          <span class="study-banner-icon" id="studyBannerIcon">🔒</span>
+          <span class="study-banner-text" id="studyBannerText">Loading…</span>
         </div>
-        <p class="progress" id="quizProgress">Question 1 of 5</p>
-        <div class="quiz-question" id="quizQuestion">…</div>
-        <div class="quiz-options" id="quizOptions"></div>
-        <p class="quiz-feedback" id="quizFeedback"></p>
-        <div id="procedureBox" class="procedure-box hidden"></div>
-        <button class="next-question-btn hidden" id="nextQuestionBtn">Next Question →</button>
-      </div>
-
-      <div id="quizResult" class="hidden">
-        <h2 id="resultTitle">Well done!</h2>
-        <p class="score" id="finalScore">0 / 0</p>
-        <p id="scoreMessage"></p>
-        <div class="result-actions">
-          <button id="retryQuizBtn">Try Again</button>
-          <button id="backHomeBtn" class="secondary">Home</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CALCULATOR ================= -->
-    <section class="screen" id="screen-calculator">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>🧮 Calculator</h2>
-
-      <div class="calc-display" id="calcDisplay">0</div>
-
-      <div class="calc-grid">
-        <button class="calc-btn calc-fn" data-calc="clear">C</button>
-        <button class="calc-btn calc-fn" data-calc="back">⌫</button>
-        <button class="calc-btn calc-fn" data-calc="%">%</button>
-        <button class="calc-btn calc-op" data-calc="/">÷</button>
-
-        <button class="calc-btn" data-calc="7">7</button>
-        <button class="calc-btn" data-calc="8">8</button>
-        <button class="calc-btn" data-calc="9">9</button>
-        <button class="calc-btn calc-op" data-calc="*">×</button>
-
-        <button class="calc-btn" data-calc="4">4</button>
-        <button class="calc-btn" data-calc="5">5</button>
-        <button class="calc-btn" data-calc="6">6</button>
-        <button class="calc-btn calc-op" data-calc="-">−</button>
-
-        <button class="calc-btn" data-calc="1">1</button>
-        <button class="calc-btn" data-calc="2">2</button>
-        <button class="calc-btn" data-calc="3">3</button>
-        <button class="calc-btn calc-op" data-calc="+">+</button>
-
-        <button class="calc-btn calc-zero" data-calc="0">0</button>
-        <button class="calc-btn" data-calc=".">.</button>
-        <button class="calc-btn calc-equal" data-calc="equals">=</button>
-      </div>
-    </section>
-
-    <!-- ================= DICTIONARY ================= -->
-    <section class="screen" id="screen-dictionary">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>📖 Dictionary</h2>
-      <p class="dict-hint">Type a word to see its meaning.</p>
-
-      <div class="dict-search">
-        <input
-          type="text"
-          id="dictInput"
-          placeholder="e.g. photosynthesis"
-          autocomplete="off"
-          autocapitalize="off"
-          spellcheck="false"
-        />
-        <button id="dictSearchBtn" class="dict-search-btn">Search</button>
-      </div>
-
-      <div class="dict-result hidden" id="dictResult"></div>
-      <p class="dict-error hidden" id="dictError"></p>
-    </section>
-
-    <!-- ================= TYPING COURSE ================= -->
-    <section class="screen" id="screen-typing">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>⌨️ Typing Course</h2>
-
-      <div id="typingLevelPicker">
-        <p class="typing-hint">Pick a level. Practice a little every day.</p>
-        <div class="typing-levels" id="typingLevels"></div>
-      </div>
-
-      <div id="typingLesson" class="hidden">
-        <div class="typing-topbar">
-          <p class="typing-level-name" id="typingLevelName"></p>
-          <p class="typing-lesson-count" id="typingLessonCount"></p>
-        </div>
-
-        <div class="typing-target" id="typingTarget"></div>
-
-        <input
-          type="text"
-          id="typingInput"
-          class="typing-input"
-          placeholder="Start typing…"
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
-        />
-
-        <div class="typing-stats">
-          <div class="typing-stat">
-            <span class="typing-stat-value" id="typingAccuracy">100%</span>
-            <span class="typing-stat-label">Accuracy</span>
-          </div>
-          <div class="typing-stat">
-            <span class="typing-stat-value" id="typingWpm">0</span>
-            <span class="typing-stat-label">Words/min</span>
-          </div>
-          <div class="typing-stat">
-            <span class="typing-stat-value" id="typingProgress">0/0</span>
-            <span class="typing-stat-label">Progress</span>
-          </div>
-        </div>
-
-        <div class="typing-actions">
-          <button id="typingRestartBtn" class="typing-btn-secondary">Restart</button>
-          <button id="typingNextBtn" class="typing-btn-primary">Next Lesson →</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= GAMES HUB ================= -->
-    <section class="screen" id="screen-games">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>🎮 Games</h2>
-
-      <div id="gamesLocked" class="games-locked hidden">
-        <div class="games-locked-icon">🔒</div>
-        <h3 class="games-locked-title">Games locked</h3>
-        <p class="games-locked-msg" id="gamesLockedMsg">Study for 45 minutes to unlock games.</p>
         <div class="study-progress-bar">
-          <div class="study-progress-fill" id="gamesProgressFill"></div>
+          <div class="study-progress-fill" id="studyProgressFill"></div>
         </div>
-        <p class="games-locked-time" id="gamesLockedTime">0 / 45 min</p>
-        <button class="typing-btn-primary" id="gamesGoStudyBtn">Go study →</button>
-      </div>
 
-      <div id="gamesUnlocked" class="games-unlocked hidden">
-        <div class="games-unlocked-icon">🎉</div>
-        <h3 class="games-unlocked-title">Games unlocked!</h3>
-        <p class="games-unlocked-msg" id="gamesUnlockedMsg">You have earned game time.</p>
-        <div class="games-grid" id="gamesGrid"></div>
-      </div>
-    </section>
+        <div id="subjects" class="home-section">
+          <h2>Choose a subject</h2>
+          <div class="subject-grid" id="subjectGrid"></div>
+        </div>
 
-    <!-- ================= MATH SPRINT ================= -->
-    <section class="screen" id="screen-mathsprint">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>⏱️ Math Sprint</h2>
+        <div id="topics" class="home-section">
+          <h2>Topics</h2>
+          <div class="topic-list" id="homeTopicList"></div>
+        </div>
 
-      <!-- Mode picker -->
-      <div id="msModePicker">
-        <p class="ms-hint">Choose how you want to play.</p>
-        <div class="ms-mode-grid">
-          <button class="ms-mode-card" id="msSoloBtn">
-            <span class="ms-mode-icon">👤</span>
-            <span class="ms-mode-name">Solo</span>
-            <span class="ms-mode-desc">Beat your own best score</span>
+        <div id="tools" class="home-section">
+          <h2>Tools</h2>
+          <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+
+        <button class="progress-link" id="progressLink">📊 View My Progress</button>
+      </section>
+
+      <!-- ---------- TOPIC ---------- -->
+      <section class="screen" id="screen-topic">
+        <button class="back-btn" data-back>← Back</button>
+        <h2 id="topicTitle">Topic</h2>
+        <p class="topic-meta" id="topicMeta"></p>
+
+        <div class="mode-grid">
+          <button class="mode-card" id="modeStudy">
+            <span class="mode-icon">🃏</span>
+            <span class="mode-name">Study</span>
+            <span class="mode-desc">Flip through the cards</span>
           </button>
-          <button class="ms-mode-card" id="msTwoBtn">
-            <span class="ms-mode-icon">👥</span>
-            <span class="ms-mode-name">2 Players</span>
-            <span class="ms-mode-desc">Pass and play with a friend</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Two-player name prompt -->
-      <div id="msTwoSetup" class="hidden">
-        <p class="ms-hint">Player 2, what's your name?</p>
-        <input type="text" id="msP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
-        <div class="ms-actions">
-          <button class="typing-btn-secondary" id="msBackToModes">Cancel</button>
-          <button class="typing-btn-primary" id="msStartTwoBtn">Start</button>
-        </div>
-      </div>
-
-      <!-- Pass-device screen -->
-      <div id="msPassScreen" class="hidden ms-pass-screen">
-        <div class="ms-pass-icon">📱</div>
-        <h3 class="ms-pass-title">Pass to <span id="msPassName">Player</span></h3>
-        <p class="ms-pass-msg">Tap when ready to play your 30 seconds.</p>
-        <button class="typing-btn-primary" id="msReadyBtn">I'm ready →</button>
-      </div>
-
-      <!-- Active play -->
-      <div id="msPlay" class="hidden">
-        <div class="ms-play-topbar">
-          <span class="ms-current-player" id="msCurrentPlayer">Kofi</span>
-          <span class="ms-timer" id="msTimer">30</span>
-        </div>
-
-        <div class="ms-question" id="msQuestion">7 × 8</div>
-
-        <div class="ms-options" id="msOptions"></div>
-
-        <div class="ms-score-inline">
-          <span>Score: <strong id="msScore">0</strong></span>
-        </div>
-      </div>
-
-      <!-- Round result (solo = final; 2P = between turns) -->
-      <div id="msRoundResult" class="hidden ms-result">
-        <div class="ms-result-icon" id="msResultIcon">🎉</div>
-        <h3 class="ms-result-title" id="msResultTitle">Time's up!</h3>
-        <p class="ms-result-msg" id="msResultMsg">You scored 8 points.</p>
-        <div class="ms-result-actions">
-          <button class="typing-btn-secondary" id="msPlayAgainBtn">Play Again</button>
-          <button class="typing-btn-primary" id="msNextBtn">Continue</button>
-        </div>
-      </div>
-    </section>
-	    <!-- ================= MEMORY MATCH ================= -->
-    <section class="screen" id="screen-memorymatch">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>🧠 Memory Match</h2>
-
-      <!-- Mode picker -->
-      <div id="mmModePicker">
-        <p class="ms-hint">Choose how you want to play.</p>
-        <div class="ms-mode-grid">
-          <button class="ms-mode-card" id="mmSoloBtn">
-            <span class="ms-mode-icon">👤</span>
-            <span class="ms-mode-name">Solo</span>
-            <span class="ms-mode-desc">Beat your own best time</span>
-          </button>
-          <button class="ms-mode-card" id="mmTwoBtn">
-            <span class="ms-mode-icon">👥</span>
-            <span class="ms-mode-name">2 Players</span>
-            <span class="ms-mode-desc">Take turns with a friend</span>
+          <button class="mode-card" id="modeQuiz">
+            <span class="mode-icon">🎯</span>
+            <span class="mode-name">Quiz</span>
+            <span class="mode-desc">Test yourself</span>
           </button>
         </div>
-      </div>
+      </section>
 
-      <!-- Two-player name prompt -->
-      <div id="mmTwoSetup" class="hidden">
-        <p class="ms-hint">Player 2, what's your name?</p>
-        <input type="text" id="mmP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
-        <div class="ms-actions">
-          <button class="typing-btn-secondary" id="mmBackToModes">Cancel</button>
-          <button class="typing-btn-primary" id="mmStartTwoBtn">Start</button>
+      <!-- ---------- STUDY ---------- -->
+      <section class="screen" id="screen-study">
+        <button class="back-btn" data-back>← Back</button>
+        <p class="study-topic" id="studyTopicLabel"></p>
+
+        <div class="card-container">
+          <div class="card" id="card">
+            <div class="card-face card-front">
+              <span class="badge" id="frontBadge"></span>
+              <p id="question">Loading…</p>
+            </div>
+            <div class="card-face card-back">
+              <span class="badge" id="backBadge"></span>
+              <p id="answer">…</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="prevBtn">◀ Prev</button>
+          <button id="flipBtn">Flip</button>
+          <button id="nextBtn">Next ▶</button>
+        </div>
+        <p class="progress" id="progress">Card 1 of 1</p>
+      </section>
+
+      <!-- ---------- QUIZ ---------- -->
+      <section class="screen" id="screen-quiz">
+        <button class="back-btn" data-back>← Back</button>
+
+        <div id="quizPlay">
+          <div class="quiz-topbar">
+            <p class="quiz-topic" id="quizTopicLabel"></p>
+            <button class="pace-btn" id="paceBtn" title="Change pace">🐢 My pace</button>
+          </div>
+          <p class="progress" id="quizProgress">Question 1 of 5</p>
+          <div class="quiz-question" id="quizQuestion">…</div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <p class="quiz-feedback" id="quizFeedback"></p>
+          <div id="procedureBox" class="procedure-box hidden"></div>
+          <button class="next-question-btn hidden" id="nextQuestionBtn">Next Question →</button>
+        </div>
+
+        <div id="quizResult" class="hidden">
+          <h2 id="resultTitle">Well done!</h2>
+          <p class="score" id="finalScore">0 / 0</p>
+          <p id="scoreMessage"></p>
+          <div class="result-actions">
+            <button id="retryQuizBtn">Try Again</button>
+            <button id="backHomeBtn" class="secondary">Home</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- CALCULATOR ---------- -->
+      <section class="screen" id="screen-calculator">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>🧮 Calculator</h2>
+
+        <div class="calc-display" id="calcDisplay">0</div>
+
+        <div class="calc-grid">
+          <button class="calc-btn calc-fn" data-calc="clear">C</button>
+          <button class="calc-btn calc-fn" data-calc="back">⌫</button>
+          <button class="calc-btn calc-fn" data-calc="%">%</button>
+          <button class="calc-btn calc-op" data-calc="/">÷</button>
+
+          <button class="calc-btn" data-calc="7">7</button>
+          <button class="calc-btn" data-calc="8">8</button>
+          <button class="calc-btn" data-calc="9">9</button>
+          <button class="calc-btn calc-op" data-calc="*">×</button>
+
+          <button class="calc-btn" data-calc="4">4</button>
+          <button class="calc-btn" data-calc="5">5</button>
+          <button class="calc-btn" data-calc="6">6</button>
+          <button class="calc-btn calc-op" data-calc="-">−</button>
+
+          <button class="calc-btn" data-calc="1">1</button>
+          <button class="calc-btn" data-calc="2">2</button>
+          <button class="calc-btn" data-calc="3">3</button>
+          <button class="calc-btn calc-op" data-calc="+">+</button>
+
+          <button class="calc-btn calc-zero" data-calc="0">0</button>
+          <button class="calc-btn" data-calc=".">.</button>
+          <button class="calc-btn calc-equal" data-calc="equals">=</button>
+        </div>
+      </section>
+
+      <!-- ---------- DICTIONARY ---------- -->
+      <section class="screen" id="screen-dictionary">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>📖 Dictionary</h2>
+        <p class="dict-hint">Type a word to see its meaning.</p>
+
+        <div class="dict-search">
+          <input type="text" id="dictInput" placeholder="e.g. photosynthesis" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          <button id="dictSearchBtn" class="dict-search-btn">Search</button>
+        </div>
+
+        <div class="dict-result hidden" id="dictResult"></div>
+        <p class="dict-error hidden" id="dictError"></p>
+      </section>
+
+      <!-- ---------- TYPING ---------- -->
+      <section class="screen" id="screen-typing">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>⌨️ Typing Course</h2>
+
+        <div id="typingLevelPicker">
+          <p class="typing-hint">Pick a level. Practice a little every day.</p>
+          <div class="typing-levels" id="typingLevels"></div>
+        </div>
+
+        <div id="typingLesson" class="hidden">
+          <div class="typing-topbar">
+            <p class="typing-level-name" id="typingLevelName"></p>
+            <p class="typing-lesson-count" id="typingLessonCount"></p>
+          </div>
+
+          <div class="typing-target" id="typingTarget"></div>
+
+          <input type="text" id="typingInput" class="typing-input" placeholder="Start typing…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+
+          <div class="typing-stats">
+            <div class="typing-stat">
+              <span class="typing-stat-value" id="typingAccuracy">100%</span>
+              <span class="typing-stat-label">Accuracy</span>
+            </div>
+            <div class="typing-stat">
+              <span class="typing-stat-value" id="typingWpm">0</span>
+              <span class="typing-stat-label">Words/min</span>
+            </div>
+            <div class="typing-stat">
+              <span class="typing-stat-value" id="typingProgress">0/0</span>
+              <span class="typing-stat-label">Progress</span>
+            </div>
+          </div>
+
+          <div class="typing-actions">
+            <button id="typingRestartBtn" class="typing-btn-secondary">Restart</button>
+            <button id="typingNextBtn" class="typing-btn-primary">Next Lesson →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- GAMES ---------- -->
+      <section class="screen" id="screen-games">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>🎮 Games</h2>
+
+        <div id="gamesLocked" class="games-locked hidden">
+          <div class="games-locked-icon">🔒</div>
+          <h3 class="games-locked-title">Games locked</h3>
+          <p class="games-locked-msg" id="gamesLockedMsg">Study for 45 minutes to unlock games.</p>
+          <div class="study-progress-bar">
+            <div class="study-progress-fill" id="gamesProgressFill"></div>
+          </div>
+          <p class="games-locked-time" id="gamesLockedTime">0 / 45 min</p>
+          <button class="typing-btn-primary" id="gamesGoStudyBtn">Go study →</button>
+        </div>
+
+        <div id="gamesUnlocked" class="games-unlocked hidden">
+          <div class="games-unlocked-icon">🎉</div>
+          <h3 class="games-unlocked-title">Games unlocked!</h3>
+          <p class="games-unlocked-msg" id="gamesUnlockedMsg">You have earned game time.</p>
+          <div class="games-grid" id="gamesGrid"></div>
+        </div>
+      </section>
+
+      <!-- ---------- MATH SPRINT ---------- -->
+      <section class="screen" id="screen-mathsprint">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>⏱️ Math Sprint</h2>
+
+        <div id="msModePicker">
+          <p class="ms-hint">Choose how you want to play.</p>
+          <div class="ms-mode-grid">
+            <button class="ms-mode-card" id="msSoloBtn">
+              <span class="ms-mode-icon">👤</span>
+              <span class="ms-mode-name">Solo</span>
+              <span class="ms-mode-desc">Beat your own best score</span>
+            </button>
+            <button class="ms-mode-card" id="msTwoBtn">
+              <span class="ms-mode-icon">👥</span>
+              <span class="ms-mode-name">2 Players</span>
+              <span class="ms-mode-desc">Pass and play with a friend</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="msTwoSetup" class="hidden">
+          <p class="ms-hint">Player 2, what's your name?</p>
+          <input type="text" id="msP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+          <div class="ms-actions">
+            <button class="typing-btn-secondary" id="msBackToModes">Cancel</button>
+            <button class="typing-btn-primary" id="msStartTwoBtn">Start</button>
+          </div>
+        </div>
+
+        <div id="msPassScreen" class="hidden ms-pass-screen">
+          <div class="ms-pass-icon">📱</div>
+          <h3 class="ms-pass-title">Pass to <span id="msPassName">Player</span></h3>
+          <p class="ms-pass-msg">Tap when ready to play your 30 seconds.</p>
+          <button class="typing-btn-primary" id="msReadyBtn">I'm ready →</button>
+        </div>
+
+        <div id="msPlay" class="hidden">
+          <div class="ms-play-topbar">
+            <span class="ms-current-player" id="msCurrentPlayer">Kofi</span>
+            <span class="ms-timer" id="msTimer">30</span>
+          </div>
+
+          <div class="ms-question" id="msQuestion">7 × 8</div>
+
+          <div class="ms-options" id="msOptions"></div>
+
+          <div class="ms-score-inline">
+            <span>Score: <strong id="msScore">0</strong></span>
+          </div>
+        </div>
+
+        <div id="msRoundResult" class="hidden ms-result">
+          <div class="ms-result-icon" id="msResultIcon">🎉</div>
+          <h3 class="ms-result-title" id="msResultTitle">Time's up!</h3>
+          <p class="ms-result-msg" id="msResultMsg">You scored 8 points.</p>
+          <div class="ms-result-actions">
+            <button class="typing-btn-secondary" id="msPlayAgainBtn">Play Again</button>
+            <button class="typing-btn-primary" id="msNextBtn">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- MEMORY MATCH ---------- -->
+      <section class="screen" id="screen-memorymatch">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>🧠 Memory Match</h2>
+
+        <div id="mmModePicker">
+          <p class="ms-hint">Choose how you want to play.</p>
+          <div class="ms-mode-grid">
+            <button class="ms-mode-card" id="mmSoloBtn">
+              <span class="ms-mode-icon">👤</span>
+              <span class="ms-mode-name">Solo</span>
+              <span class="ms-mode-desc">Beat your own best time</span>
+            </button>
+            <button class="ms-mode-card" id="mmTwoBtn">
+              <span class="ms-mode-icon">👥</span>
+              <span class="ms-mode-name">2 Players</span>
+              <span class="ms-mode-desc">Take turns with a friend</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="mmTwoSetup" class="hidden">
+          <p class="ms-hint">Player 2, what's your name?</p>
+          <input type="text" id="mmP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+          <div class="ms-actions">
+            <button class="typing-btn-secondary" id="mmBackToModes">Cancel</button>
+            <button class="typing-btn-primary" id="mmStartTwoBtn">Start</button>
+          </div>
+        </div>
+
+        <div id="mmPassScreen" class="hidden ms-pass-screen">
+          <div class="ms-pass-icon">📱</div>
+          <h3 class="ms-pass-title">Pass to <span id="mmPassName">Player</span></h3>
+          <p class="ms-pass-msg">Tap when ready to take your turn.</p>
+          <button class="typing-btn-primary" id="mmReadyBtn">I'm ready →</button>
+        </div>
+
+        <div id="mmPlay" class="hidden">
+          <div class="mm-topbar">
+            <span class="mm-current-player" id="mmCurrentPlayer">Kofi</span>
+            <span class="mm-meta" id="mmMeta">Moves: 0 • 0s</span>
+          </div>
+
+          <div class="mm-board" id="mmBoard"></div>
+
+          <div class="mm-scores" id="mmScores"></div>
+
+          <div class="ms-actions" style="margin-top: 14px;">
+            <button class="typing-btn-secondary" id="mmQuitBtn">Quit</button>
+            <button class="typing-btn-primary" id="mmRestartBtn">Restart</button>
+          </div>
+        </div>
+
+        <div id="mmResult" class="hidden ms-result">
+          <div class="ms-result-icon" id="mmResultIcon">🎉</div>
+          <h3 class="ms-result-title" id="mmResultTitle">Well done!</h3>
+          <p class="ms-result-msg" id="mmResultMsg">You finished in 12 moves.</p>
+          <div class="ms-result-actions">
+            <button class="typing-btn-secondary" id="mmPlayAgainBtn">Play Again</button>
+            <button class="typing-btn-primary" id="mmDoneBtn">Done</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SPELLING BEE ---------- -->
+      <section class="screen" id="screen-spellingbee">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>🐝 Spelling Bee</h2>
+
+        <div id="sbSetup">
+          <p class="ms-hint">Listen to the word, then spell it.</p>
+
+          <h3 style="margin-top: 16px;">Level</h3>
+          <div class="sb-level-grid" id="sbLevelGrid">
+            <button class="sb-level-card" data-level="easy">
+              <span class="sb-level-icon">🟢</span>
+              <span class="sb-level-name">Easy</span>
+              <span class="sb-level-desc">Short words</span>
+            </button>
+            <button class="sb-level-card" data-level="medium">
+              <span class="sb-level-icon">🟡</span>
+              <span class="sb-level-name">Medium</span>
+              <span class="sb-level-desc">Common words</span>
+            </button>
+            <button class="sb-level-card" data-level="hard">
+              <span class="sb-level-icon">🔴</span>
+              <span class="sb-level-name">Hard</span>
+              <span class="sb-level-desc">Long words</span>
+            </button>
+          </div>
+
+          <h3 style="margin-top: 20px;">Mode</h3>
+          <div class="ms-mode-grid">
+            <button class="ms-mode-card" id="sbSoloBtn">
+              <span class="ms-mode-icon">👤</span>
+              <span class="ms-mode-name">Solo</span>
+              <span class="ms-mode-desc">10 words</span>
+            </button>
+            <button class="ms-mode-card" id="sbTwoBtn">
+              <span class="ms-mode-icon">👥</span>
+              <span class="ms-mode-name">2 Players</span>
+              <span class="ms-mode-desc">Take turns</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="sbTwoSetup" class="hidden">
+          <p class="ms-hint">Player 2, what's your name?</p>
+          <input type="text" id="sbP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+          <div class="ms-actions">
+            <button class="typing-btn-secondary" id="sbBackToSetup">Cancel</button>
+            <button class="typing-btn-primary" id="sbStartTwoBtn">Start</button>
+          </div>
+        </div>
+
+        <div id="sbPassScreen" class="hidden ms-pass-screen">
+          <div class="ms-pass-icon">📱</div>
+          <h3 class="ms-pass-title">Pass to <span id="sbPassName">Player</span></h3>
+          <p class="ms-pass-msg">Tap when ready. Listen and spell.</p>
+          <button class="typing-btn-primary" id="sbReadyBtn">I'm ready →</button>
+        </div>
+
+        <div id="sbPlay" class="hidden">
+          <div class="sb-topbar">
+            <span class="sb-current-player" id="sbCurrentPlayer">Kofi</span>
+            <span class="sb-progress-label" id="sbProgressLabel">Word 1 of 10</span>
+          </div>
+
+          <div class="sb-speaker-card">
+            <button class="sb-play-btn" id="sbPlayBtn" title="Hear the word">🔊</button>
+            <p class="sb-speaker-hint">Tap to hear the word</p>
+          </div>
+
+          <input type="text" id="sbInput" class="sb-input" placeholder="Type the word" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+
+          <p class="sb-feedback" id="sbFeedback"></p>
+
+          <div class="ms-actions" style="margin-top: 14px;">
+            <button class="typing-btn-secondary" id="sbSkipBtn">Skip</button>
+            <button class="typing-btn-primary" id="sbSubmitBtn">Submit</button>
+          </div>
+        </div>
+
+        <div id="sbResult" class="hidden ms-result">
+          <div class="ms-result-icon" id="sbResultIcon">🎉</div>
+          <h3 class="ms-result-title" id="sbResultTitle">Round complete!</h3>
+          <p class="ms-result-msg" id="sbResultMsg">You got 7 of 10 correct.</p>
+          <div class="ms-result-actions">
+            <button class="typing-btn-secondary" id="sbPlayAgainBtn">Play Again</button>
+            <button class="typing-btn-primary" id="sbDoneBtn">Done</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- TIMES TABLES ---------- -->
+      <section class="screen" id="screen-timestables">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>🔢 Times Tables</h2>
+
+        <div id="ttLevelPicker">
+          <p class="ms-hint">Pick a level to practice.</p>
+          <div class="ms-mode-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+            <button class="ms-mode-card tt-level-card" data-level="easy">
+              <span class="ms-mode-icon">🟢</span>
+              <span class="ms-mode-name">Easy</span>
+              <span class="ms-mode-desc">×2 – ×5 · No timer</span>
+            </button>
+            <button class="ms-mode-card tt-level-card" data-level="medium">
+              <span class="ms-mode-icon">🟡</span>
+              <span class="ms-mode-name">Medium</span>
+              <span class="ms-mode-desc">×6 – ×9 · 60s</span>
+            </button>
+            <button class="ms-mode-card tt-level-card" data-level="hard">
+              <span class="ms-mode-icon">🔴</span>
+              <span class="ms-mode-name">Hard</span>
+              <span class="ms-mode-desc">×10 – ×12 · 45s</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="ttModePicker" class="hidden">
+          <h3 id="ttLevelLabel">Easy</h3>
+          <p class="ms-hint">Choose how you want to play.</p>
+          <div class="ms-mode-grid">
+            <button class="ms-mode-card" id="ttSoloBtn">
+              <span class="ms-mode-icon">👤</span>
+              <span class="ms-mode-name">Solo</span>
+              <span class="ms-mode-desc">Beat your best</span>
+            </button>
+            <button class="ms-mode-card" id="ttTwoBtn">
+              <span class="ms-mode-icon">👥</span>
+              <span class="ms-mode-name">2 Players</span>
+              <span class="ms-mode-desc">Pass and play</span>
+            </button>
+          </div>
+          <div class="ms-actions" style="margin-top: 16px;">
+            <button class="typing-btn-secondary" id="ttBackToLevels">← Change level</button>
+          </div>
+        </div>
+
+        <div id="ttTwoSetup" class="hidden">
+          <p class="ms-hint">Player 2, what's your name?</p>
+          <input type="text" id="ttP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
+          <div class="ms-actions">
+            <button class="typing-btn-secondary" id="ttCancelTwo">Cancel</button>
+            <button class="typing-btn-primary" id="ttStartTwoBtn">Start</button>
+          </div>
+        </div>
+
+        <div id="ttPassScreen" class="hidden ms-pass-screen">
+          <div class="ms-pass-icon">📱</div>
+          <h3 class="ms-pass-title">Pass to <span id="ttPassName">Player</span></h3>
+          <p class="ms-pass-msg">Tap when ready to play.</p>
+          <button class="typing-btn-primary" id="ttReadyBtn">I'm ready →</button>
+        </div>
+
+        <div id="ttPlay" class="hidden">
+          <div class="ms-play-topbar">
+            <span class="ms-current-player" id="ttCurrentPlayer">Kofi</span>
+            <span class="ms-timer" id="ttTimer"></span>
+          </div>
+
+          <p class="progress" id="ttProgressLabel">Question 1 of 12</p>
+
+          <div class="ms-question" id="ttQuestion">2 × 3</div>
+
+          <div class="ms-options" id="ttOptions"></div>
+
+          <div class="ms-score-inline">
+            <span>Score: <strong id="ttScore">0</strong></span>
+          </div>
+        </div>
+
+        <div id="ttResult" class="hidden ms-result">
+          <div class="ms-result-icon" id="ttResultIcon">🎉</div>
+          <h3 class="ms-result-title" id="ttResultTitle">Well done!</h3>
+          <p class="ms-result-msg" id="ttResultMsg">You scored 10 out of 12.</p>
+          <div class="ms-result-actions">
+            <button class="typing-btn-secondary" id="ttPlayAgainBtn">Play Again</button>
+            <button class="typing-btn-primary" id="ttDoneBtn">Done</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- PROGRESS ---------- -->
+      <section class="screen" id="screen-progress">
+        <button class="back-btn" data-back>← Back</button>
+        <h2>📊 My Progress</h2>
+
+        <div class="progress-name-row">
+          <span class="progress-name-label">Playing as:</span>
+          <span class="progress-name-value" id="progressName">Player</span>
+          <button class="progress-name-edit" id="changeNameBtn">Change</button>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-value" id="statTotalQuestions">0</span>
+            <span class="stat-label">Questions Answered</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statCorrect">0</span>
+            <span class="stat-label">Correct</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statAccuracy">0%</span>
+            <span class="stat-label">Accuracy</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statBest">0%</span>
+            <span class="stat-label">Best Quiz</span>
+          </div>
+        </div>
+
+        <h3>Typing Practice</h3>
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-value" id="statTypingLessons">0</span>
+            <span class="stat-label">Lessons Done</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statTypingWpm">0</span>
+            <span class="stat-label">Best WPM</span>
+          </div>
+        </div>
+
+        <h3>Study Time</h3>
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-value" id="statStudyMinutes">0</span>
+            <span class="stat-label">Minutes Today</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statGamesPlayed">0</span>
+            <span class="stat-label">Games Unlocks</span>
+          </div>
+        </div>
+
+        <h3>Recent Quizzes</h3>
+        <ul class="history" id="quizHistory"></ul>
+
+        <button id="clearProgressBtn" class="danger">Clear My Progress</button>
+      </section>
+
+      <!-- ---------- NAME MODAL ---------- -->
+      <div class="modal hidden" id="nameModal">
+        <div class="modal-card">
+          <h2>What's your name? 👋</h2>
+          <p class="modal-sub">So we can cheer you on by name.</p>
+          <input type="text" id="nameInput" class="ms-input" placeholder="e.g. Kofi" maxlength="20" autocomplete="off" />
+          <div class="name-modal-actions">
+            <button class="typing-btn-secondary" id="nameSkipBtn">Skip</button>
+            <button class="typing-btn-primary" id="nameSaveBtn">Save</button>
+          </div>
         </div>
       </div>
 
-      <!-- Pass-device screen -->
-      <div id="mmPassScreen" class="hidden ms-pass-screen">
-        <div class="ms-pass-icon">📱</div>
-        <h3 class="ms-pass-title">Pass to <span id="mmPassName">Player</span></h3>
-        <p class="ms-pass-msg">Tap when ready to take your turn.</p>
-        <button class="typing-btn-primary" id="mmReadyBtn">I'm ready →</button>
-      </div>
-
-      <!-- Active game -->
-      <div id="mmPlay" class="hidden">
-        <div class="mm-topbar">
-          <span class="mm-current-player" id="mmCurrentPlayer">Kofi</span>
-          <span class="mm-meta" id="mmMeta">Moves: 0 • 0s</span>
-        </div>
-
-        <div class="mm-board" id="mmBoard"></div>
-
-        <div class="mm-scores" id="mmScores"></div>
-
-        <div class="ms-actions" style="margin-top: 14px;">
-          <button class="typing-btn-secondary" id="mmQuitBtn">Quit</button>
-          <button class="typing-btn-primary" id="mmRestartBtn">Restart</button>
+      <!-- ---------- THEME MODAL ---------- -->
+      <div class="modal hidden" id="themeModal">
+        <div class="modal-card">
+          <h2>Pick a theme</h2>
+          <p class="modal-sub">Choose a look that makes you happy.</p>
+          <div class="theme-grid" id="themeGrid"></div>
+          <button class="modal-close" id="themeClose">Done</button>
         </div>
       </div>
 
-      <!-- Result -->
-      <div id="mmResult" class="hidden ms-result">
-        <div class="ms-result-icon" id="mmResultIcon">🎉</div>
-        <h3 class="ms-result-title" id="mmResultTitle">Well done!</h3>
-        <p class="ms-result-msg" id="mmResultMsg">You finished in 12 moves.</p>
-        <div class="ms-result-actions">
-          <button class="typing-btn-secondary" id="mmPlayAgainBtn">Play Again</button>
-          <button class="typing-btn-primary" id="mmDoneBtn">Done</button>
-        </div>
-      </div>
-    </section>
-	    <!-- ================= SPELLING BEE ================= -->
-    <section class="screen" id="screen-spellingbee">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>🐝 Spelling Bee</h2>
-
-      <!-- Setup -->
-      <div id="sbSetup">
-        <p class="ms-hint">Listen to the word, then spell it.</p>
-
-        <h3 style="margin-top: 16px;">Level</h3>
-        <div class="sb-level-grid" id="sbLevelGrid">
-          <button class="sb-level-card" data-level="easy">
-            <span class="sb-level-icon">🟢</span>
-            <span class="sb-level-name">Easy</span>
-            <span class="sb-level-desc">Short words</span>
-          </button>
-          <button class="sb-level-card" data-level="medium">
-            <span class="sb-level-icon">🟡</span>
-            <span class="sb-level-name">Medium</span>
-            <span class="sb-level-desc">Common words</span>
-          </button>
-          <button class="sb-level-card" data-level="hard">
-            <span class="sb-level-icon">🔴</span>
-            <span class="sb-level-name">Hard</span>
-            <span class="sb-level-desc">Long words</span>
-          </button>
-        </div>
-
-        <h3 style="margin-top: 20px;">Mode</h3>
-        <div class="ms-mode-grid">
-          <button class="ms-mode-card" id="sbSoloBtn">
-            <span class="ms-mode-icon">👤</span>
-            <span class="ms-mode-name">Solo</span>
-            <span class="ms-mode-desc">10 words</span>
-          </button>
-          <button class="ms-mode-card" id="sbTwoBtn">
-            <span class="ms-mode-icon">👥</span>
-            <span class="ms-mode-name">2 Players</span>
-            <span class="ms-mode-desc">Take turns</span>
-          </button>
-        </div>
+      <!-- ---------- LOADING ---------- -->
+      <div class="loading hidden" id="loading">
+        <div class="spinner"></div>
+        <p>Loading…</p>
       </div>
 
-      <!-- Two-player name prompt -->
-      <div id="sbTwoSetup" class="hidden">
-        <p class="ms-hint">Player 2, what's your name?</p>
-        <input type="text" id="sbP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
-        <div class="ms-actions">
-          <button class="typing-btn-secondary" id="sbBackToSetup">Cancel</button>
-          <button class="typing-btn-primary" id="sbStartTwoBtn">Start</button>
+    </div>
+  </main>
+
+  <!-- ================= PROMO SECTION ================= -->
+  <section class="site-promo" id="about">
+    <div class="site-promo-inner">
+      <div class="site-promo-text">
+        <p class="site-promo-eyebrow">Built with love in Ghana</p>
+        <h2>Love this app?<br>We can build one like it for you.</h2>
+        <p class="site-promo-body">
+          <strong>Adom Nkansah Acquaye and Friends</strong> build educational
+          and business websites. School portals, online learning tools,
+          business sites, blogs, e-commerce — designed and delivered by
+          <strong>Crisol Studios Ltd</strong>.
+        </p>
+        <div class="site-promo-buttons">
+          <a
+            href="https://wa.me/233245399914?text=Hi%2C%20I%20saw%20P5%20Study%20Hub%20and%20I%27d%20like%20to%20build%20a%20website%20too."
+            target="_blank"
+            rel="noopener"
+            class="site-btn site-btn-whatsapp"
+          >
+            💬 Message us on WhatsApp
+          </a>
+          <a href="tel:+233538886563" class="site-btn site-btn-secondary">
+            📞 Call 0538 886 563
+          </a>
         </div>
       </div>
-
-      <!-- Pass-device screen -->
-      <div id="sbPassScreen" class="hidden ms-pass-screen">
-        <div class="ms-pass-icon">📱</div>
-        <h3 class="ms-pass-title">Pass to <span id="sbPassName">Player</span></h3>
-        <p class="ms-pass-msg">Tap when ready. Listen and spell.</p>
-        <button class="typing-btn-primary" id="sbReadyBtn">I'm ready →</button>
-      </div>
-
-      <!-- Play -->
-      <div id="sbPlay" class="hidden">
-        <div class="sb-topbar">
-          <span class="sb-current-player" id="sbCurrentPlayer">Kofi</span>
-          <span class="sb-progress-label" id="sbProgressLabel">Word 1 of 10</span>
-        </div>
-
-        <div class="sb-speaker-card">
-          <button class="sb-play-btn" id="sbPlayBtn" title="Hear the word">🔊</button>
-          <p class="sb-speaker-hint">Tap to hear the word</p>
-        </div>
-
-        <input
-          type="text"
-          id="sbInput"
-          class="sb-input"
-          placeholder="Type the word"
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
-        />
-
-        <p class="sb-feedback" id="sbFeedback"></p>
-
-        <div class="ms-actions" style="margin-top: 14px;">
-          <button class="typing-btn-secondary" id="sbSkipBtn">Skip</button>
-          <button class="typing-btn-primary" id="sbSubmitBtn">Submit</button>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div id="sbResult" class="hidden ms-result">
-        <div class="ms-result-icon" id="sbResultIcon">🎉</div>
-        <h3 class="ms-result-title" id="sbResultTitle">Round complete!</h3>
-        <p class="ms-result-msg" id="sbResultMsg">You got 7 of 10 correct.</p>
-        <div class="ms-result-actions">
-          <button class="typing-btn-secondary" id="sbPlayAgainBtn">Play Again</button>
-          <button class="typing-btn-primary" id="sbDoneBtn">Done</button>
-        </div>
-      </div>
-    </section>
-	    <!-- ================= TIMES TABLES ================= -->
-    <section class="screen" id="screen-timestables">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>🔢 Times Tables</h2>
-
-      <!-- Level picker -->
-      <div id="ttLevelPicker">
-        <p class="ms-hint">Pick a level to practice.</p>
-        <div class="ms-mode-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-          <button class="ms-mode-card tt-level-card" data-level="easy">
-            <span class="ms-mode-icon">🟢</span>
-            <span class="ms-mode-name">Easy</span>
-            <span class="ms-mode-desc">×2 – ×5 · No timer</span>
-          </button>
-          <button class="ms-mode-card tt-level-card" data-level="medium">
-            <span class="ms-mode-icon">🟡</span>
-            <span class="ms-mode-name">Medium</span>
-            <span class="ms-mode-desc">×6 – ×9 · 60s</span>
-          </button>
-          <button class="ms-mode-card tt-level-card" data-level="hard">
-            <span class="ms-mode-icon">🔴</span>
-            <span class="ms-mode-name">Hard</span>
-            <span class="ms-mode-desc">×10 – ×12 · 45s</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mode picker -->
-      <div id="ttModePicker" class="hidden">
-        <h3 id="ttLevelLabel">Easy</h3>
-        <p class="ms-hint">Choose how you want to play.</p>
-        <div class="ms-mode-grid">
-          <button class="ms-mode-card" id="ttSoloBtn">
-            <span class="ms-mode-icon">👤</span>
-            <span class="ms-mode-name">Solo</span>
-            <span class="ms-mode-desc">Beat your best</span>
-          </button>
-          <button class="ms-mode-card" id="ttTwoBtn">
-            <span class="ms-mode-icon">👥</span>
-            <span class="ms-mode-name">2 Players</span>
-            <span class="ms-mode-desc">Pass and play</span>
-          </button>
-        </div>
-        <div class="ms-actions" style="margin-top: 16px;">
-          <button class="typing-btn-secondary" id="ttBackToLevels">← Change level</button>
-        </div>
-      </div>
-
-      <!-- Two-player name prompt -->
-      <div id="ttTwoSetup" class="hidden">
-        <p class="ms-hint">Player 2, what's your name?</p>
-        <input type="text" id="ttP2Input" class="ms-input" placeholder="e.g. Ama" maxlength="20" />
-        <div class="ms-actions">
-          <button class="typing-btn-secondary" id="ttCancelTwo">Cancel</button>
-          <button class="typing-btn-primary" id="ttStartTwoBtn">Start</button>
-        </div>
-      </div>
-
-      <!-- Pass-device screen -->
-      <div id="ttPassScreen" class="hidden ms-pass-screen">
-        <div class="ms-pass-icon">📱</div>
-        <h3 class="ms-pass-title">Pass to <span id="ttPassName">Player</span></h3>
-        <p class="ms-pass-msg">Tap when ready to play.</p>
-        <button class="typing-btn-primary" id="ttReadyBtn">I'm ready →</button>
-      </div>
-
-      <!-- Play -->
-      <div id="ttPlay" class="hidden">
-        <div class="ms-play-topbar">
-          <span class="ms-current-player" id="ttCurrentPlayer">Kofi</span>
-          <span class="ms-timer" id="ttTimer"></span>
-        </div>
-
-        <p class="progress" id="ttProgressLabel">Question 1 of 12</p>
-
-        <div class="ms-question" id="ttQuestion">2 × 3</div>
-
-        <div class="ms-options" id="ttOptions"></div>
-
-        <div class="ms-score-inline">
-          <span>Score: <strong id="ttScore">0</strong></span>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div id="ttResult" class="hidden ms-result">
-        <div class="ms-result-icon" id="ttResultIcon">🎉</div>
-        <h3 class="ms-result-title" id="ttResultTitle">Well done!</h3>
-        <p class="ms-result-msg" id="ttResultMsg">You scored 10 out of 12.</p>
-        <div class="ms-result-actions">
-          <button class="typing-btn-secondary" id="ttPlayAgainBtn">Play Again</button>
-          <button class="typing-btn-primary" id="ttDoneBtn">Done</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PROGRESS ================= -->
-    <section class="screen" id="screen-progress">
-      <button class="back-btn" data-back>← Back</button>
-      <h2>📊 My Progress</h2>
-
-      <div class="progress-name-row">
-        <span class="progress-name-label">Playing as:</span>
-        <span class="progress-name-value" id="progressName">Player</span>
-        <button class="progress-name-edit" id="changeNameBtn">Change</button>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat">
-          <span class="stat-value" id="statTotalQuestions">0</span>
-          <span class="stat-label">Questions Answered</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statCorrect">0</span>
-          <span class="stat-label">Correct</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statAccuracy">0%</span>
-          <span class="stat-label">Accuracy</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statBest">0%</span>
-          <span class="stat-label">Best Quiz</span>
-        </div>
-      </div>
-
-      <h3>Typing Practice</h3>
-      <div class="stat-grid">
-        <div class="stat">
-          <span class="stat-value" id="statTypingLessons">0</span>
-          <span class="stat-label">Lessons Done</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statTypingWpm">0</span>
-          <span class="stat-label">Best WPM</span>
-        </div>
-      </div>
-
-      <h3>Study Time</h3>
-      <div class="stat-grid">
-        <div class="stat">
-          <span class="stat-value" id="statStudyMinutes">0</span>
-          <span class="stat-label">Minutes Today</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value" id="statGamesPlayed">0</span>
-          <span class="stat-label">Games Unlocks</span>
-        </div>
-      </div>
-
-      <h3>Recent Quizzes</h3>
-      <ul class="history" id="quizHistory"></ul>
-
-      <button id="clearProgressBtn" class="danger">Clear My Progress</button>
-    </section>
-
-    <!-- ================= NAME PROMPT MODAL ================= -->
-    <div class="modal hidden" id="nameModal">
-      <div class="modal-card">
-        <h2>What's your name? 👋</h2>
-        <p class="modal-sub">So we can cheer you on by name.</p>
-        <input
-          type="text"
-          id="nameInput"
-          class="ms-input"
-          placeholder="e.g. Kofi"
-          maxlength="20"
-          autocomplete="off"
-        />
-        <div class="name-modal-actions">
-          <button class="typing-btn-secondary" id="nameSkipBtn">Skip</button>
-          <button class="typing-btn-primary" id="nameSaveBtn">Save</button>
-        </div>
+      <div class="site-promo-image">
+        <img src="assets/immanuel.png" alt="Adom Nkansah Acquaye and Friends" />
       </div>
     </div>
+  </section>
 
-    <!-- ================= THEME PICKER MODAL ================= -->
-    <div class="modal hidden" id="themeModal">
-      <div class="modal-card">
-        <h2>Pick a theme</h2>
-        <p class="modal-sub">Choose a look that makes you happy.</p>
-        <div class="theme-grid" id="themeGrid"></div>
-        <button class="modal-close" id="themeClose">Done</button>
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="site-footer-inner">
+
+      <div class="site-footer-col site-footer-brand">
+        <div class="site-footer-logo">
+          <span>📚</span>
+          <strong>P5 Study Hub</strong>
+        </div>
+        <p class="site-footer-tag">Learning tools for every Ghanaian child.</p>
+        <div class="site-footer-photo">
+          <img src="assets/immanuel.png" alt="Adom Nkansah Acquaye and Friends" />
+        </div>
+        <p class="site-footer-credit-line">
+          <strong>Adom Nkansah Acquaye and Friends</strong><br>
+          <span class="muted">The reason this exists.</span>
+        </p>
       </div>
+
+      <div class="site-footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" data-nav="home">Home</a></li>
+          <li><a href="#" data-nav="subjects">Subjects</a></li>
+          <li><a href="#" data-nav="tools">Tools</a></li>
+          <li><a href="#" data-nav="games">Games</a></li>
+          <li><a href="#" data-nav="about">About</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer-col">
+        <h4>Created By</h4>
+        <p><strong>Adom Nkansah Acquaye and Friends</strong></p>
+        <h4 style="margin-top: 18px;">Designed & Developed By</h4>
+        <p><strong>Crisol Studios Ltd</strong></p>
+      </div>
+
+      <div class="site-footer-col">
+        <h4>Contact Us</h4>
+        <p>
+          <a href="https://wa.me/233245399914" target="_blank" rel="noopener">💬 WhatsApp: 0245 399 914</a>
+        </p>
+        <p>
+          <a href="tel:+233538886563">📞 Call: 0538 886 563</a>
+        </p>
+        <p>
+          <a href="https://web.facebook.com/profile.php?id=61572926297789" target="_blank" rel="noopener">📘 Facebook</a>
+        </p>
+        <a
+          href="https://wa.me/233245399914?text=Hi%2C%20I%20saw%20P5%20Study%20Hub%20and%20I%27d%20like%20to%20build%20a%20website%20too."
+          target="_blank"
+          rel="noopener"
+          class="site-btn site-btn-whatsapp site-footer-cta"
+        >
+          Start a project →
+        </a>
+      </div>
+
     </div>
 
-    <!-- ================= LOADING ================= -->
-    <div class="loading hidden" id="loading">
-      <div class="spinner"></div>
-      <p>Loading…</p>
+    <div class="site-footer-bottom">
+      <p>
+        © 2026 Adom Nkansah Acquaye and Friends.
+        Designed and developed by Crisol Studios Ltd. All rights reserved.
+      </p>
     </div>
-
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

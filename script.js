@@ -78,27 +78,28 @@ let studyTickInterval = null;
 let playerName = loadPlayerName();
 
 // ---------- MATH SPRINT STATE ----------
-let msMode = null;           // "solo" | "two"
-let msPlayers = [];          // [{ name, score }]
+let msMode = null;
+let msPlayers = [];
 let msCurrentPlayerIndex = 0;
 let msRoundActive = false;
 let msTimerInterval = null;
 let msTimeLeft = 0;
 let msCurrentQuestion = null;
 let msQuestionLocked = false;
+
 // ---------- MEMORY MATCH STATE ----------
-let mmMode = null;              // "solo" | "two"
-let mmPlayers = [];             // [{ name, pairs }]
+let mmMode = null;
+let mmPlayers = [];
 let mmCurrentPlayerIndex = 0;
-let mmBoard = [];               // array of { id, pairId, text, matched }
-let mmFirstPick = null;         // index of first flipped card
+let mmBoard = [];
+let mmFirstPick = null;
 let mmLocked = false;
 let mmMoves = 0;
 let mmStartTime = null;
 let mmTimerInterval = null;
 let mmPairsFound = 0;
 let mmTotalPairs = 0;
-let mmExtraTurn = false;        // for 2-player: did the current player score a match?
+let mmExtraTurn = false;
 
 const MM_PAIR_POOL = [
   { a: "1/2", b: "0.5" },
@@ -119,35 +120,21 @@ const MM_PAIR_POOL = [
 ];
 
 // ---------- SPELLING BEE STATE ----------
-let sbLevel = null;              // "easy" | "medium" | "hard"
-let sbMode = null;               // "solo" | "two"
-let sbPlayers = [];              // [{ name, score }]
+let sbLevel = null;
+let sbMode = null;
+let sbPlayers = [];
 let sbCurrentPlayerIndex = 0;
-let sbWords = [];                // array of words for the round
+let sbWords = [];
 let sbWordIndex = 0;
 let sbRoundActive = false;
 let sbWordLocked = false;
 let sbRoundLength = 10;
 
-// Word pools for each level
 const SB_WORDS = {
-  easy: [
-    "cat", "dog", "sun", "run", "book", "tree", "fish", "bird", "milk", "hand",
-    "blue", "green", "happy", "water", "house", "friend", "school", "teacher"
-  ],
-  medium: [
-    "garden", "subtract", "courage", "morning", "country", "village", "picture",
-    "kitchen", "library", "journey", "machine", "measure", "teacher", "greater",
-    "brother", "weather", "however", "instead", "understand", "important"
-  ],
-  hard: [
-    "photosynthesis", "government", "multiplication", "subtraction", "community",
-    "environment", "mathematics", "punctuation", "citizenship", "encyclopedia",
-    "electricity", "experiment", "information", "neighbourhood", "responsibility",
-    "communication", "organisation", "pronunciation", "vocabulary", "arithmetic"
-  ]
+  easy: ["cat","dog","sun","run","book","tree","fish","bird","milk","hand","blue","green","happy","water","house","friend","school","teacher"],
+  medium: ["garden","subtract","courage","morning","country","village","picture","kitchen","library","journey","machine","measure","teacher","greater","brother","weather","however","instead","understand","important"],
+  hard: ["photosynthesis","government","multiplication","subtraction","community","environment","mathematics","punctuation","citizenship","encyclopedia","electricity","experiment","information","neighbourhood","responsibility","communication","organisation","pronunciation","vocabulary","arithmetic"]
 };
-
 
 // ---------- TIMES TABLES STATE ----------
 let ttLevel = null;
@@ -164,79 +151,50 @@ let ttStartTime = null;
 let ttTotalSeconds = null;
 
 const TT_LEVELS = {
-  easy:   { tables: [2,3,4,5],    seconds: null, label: "Easy (×2 – ×5)" },
-  medium: { tables: [6,7,8,9],    seconds: 60,   label: "Medium (×6 – ×9)" },
-  hard:   { tables: [10,11,12],   seconds: 45,   label: "Hard (×10 – ×12)" }
+  easy:   { tables: [2,3,4,5],  seconds: null, label: "Easy (×2 – ×5)" },
+  medium: { tables: [6,7,8,9],  seconds: 60,   label: "Medium (×6 – ×9)" },
+  hard:   { tables: [10,11,12], seconds: 45,   label: "Hard (×10 – ×12)" }
 };
 
-// ---------- STORAGE HELPERS ----------
+// ===================================================
+// STORAGE HELPERS
+// ===================================================
 function loadProgress() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEYS.progress)) || {
-      totalAnswered: 0,
-      totalCorrect: 0,
-      bestPercent: 0
-    };
-  } catch {
-    return { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 };
-  }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEYS.progress)) || { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 }; }
+  catch { return { totalAnswered: 0, totalCorrect: 0, bestPercent: 0 }; }
 }
-function saveProgress() {
-  localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(progress));
-}
+function saveProgress() { localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(progress)); }
+
 function loadHistory() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEYS.history)) || [];
-  } catch {
-    return [];
-  }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEYS.history)) || []; }
+  catch { return []; }
 }
-function saveHistory() {
-  localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(quizHistory));
-}
-function loadTheme() {
-  return localStorage.getItem(STORAGE_KEYS.theme) || "classic";
-}
-function saveTheme(id) {
-  localStorage.setItem(STORAGE_KEYS.theme, id);
-}
-function loadPace() {
-  return localStorage.getItem(STORAGE_KEYS.pace) || "manual";
-}
-function savePace(p) {
-  localStorage.setItem(STORAGE_KEYS.pace, p);
-}
+function saveHistory() { localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(quizHistory)); }
+
+function loadTheme() { return localStorage.getItem(STORAGE_KEYS.theme) || "classic"; }
+function saveTheme(id) { localStorage.setItem(STORAGE_KEYS.theme, id); }
+
+function loadPace() { return localStorage.getItem(STORAGE_KEYS.pace) || "manual"; }
+function savePace(p) { localStorage.setItem(STORAGE_KEYS.pace, p); }
+
 function loadTypingStats() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEYS.typing)) || {
-      lessonsDone: 0,
-      bestWpm: 0
-    };
-  } catch {
-    return { lessonsDone: 0, bestWpm: 0 };
-  }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEYS.typing)) || { lessonsDone: 0, bestWpm: 0 }; }
+  catch { return { lessonsDone: 0, bestWpm: 0 }; }
 }
-function saveTypingStats() {
-  localStorage.setItem(STORAGE_KEYS.typing, JSON.stringify(typingStats));
-}
-function loadPlayerName() {
-  return localStorage.getItem(STORAGE_KEYS.playerName) || "";
-}
-function savePlayerName(name) {
-  localStorage.setItem(STORAGE_KEYS.playerName, name);
-}
+function saveTypingStats() { localStorage.setItem(STORAGE_KEYS.typing, JSON.stringify(typingStats)); }
+
+function loadPlayerName() { return localStorage.getItem(STORAGE_KEYS.playerName) || ""; }
+function savePlayerName(name) { localStorage.setItem(STORAGE_KEYS.playerName, name); }
+
 function loadMathSprintBest() {
   const v = localStorage.getItem(STORAGE_KEYS.mathSprintBest);
   return v ? parseInt(v, 10) : 0;
 }
 function saveMathSprintBest(score) {
   const current = loadMathSprintBest();
-  if (score > current) {
-    localStorage.setItem(STORAGE_KEYS.mathSprintBest, String(score));
-  }
+  if (score > current) localStorage.setItem(STORAGE_KEYS.mathSprintBest, String(score));
 }
 
-// ---------- STUDY TRACKER ----------
 function loadStudyTracker() {
   try {
     const raw = JSON.parse(localStorage.getItem(STORAGE_KEYS.study));
@@ -266,30 +224,22 @@ function checkStudyReset() {
     }
   }
 }
-
-function isGamesUnlocked() {
-  checkStudyReset();
-  return studyTracker.unlockedAt !== null;
-}
-
+function isGamesUnlocked() { checkStudyReset(); return studyTracker.unlockedAt !== null; }
 function getStudyProgressFraction() {
   if (isGamesUnlocked()) return 1;
   return Math.min(1, studyTracker.secondsToday / STUDY_REQUIRED_SEC);
 }
-
 function getUnlockTimeRemainingMs() {
   if (!studyTracker.unlockedAt) return 0;
   const elapsed = Date.now() - studyTracker.unlockedAt;
   return Math.max(0, UNLOCK_DURATION_MS - elapsed);
 }
-
 function startStudyTimer() {
   if (studyTickInterval) return;
   studyTickInterval = setInterval(() => {
     const active = document.querySelector(".screen.active");
     if (!active) return;
     const id = active.id;
-
     if (id === "screen-study" || id === "screen-quiz" || id === "screen-typing") {
       if (isGamesUnlocked()) return;
       studyTracker.secondsToday += 1;
@@ -304,14 +254,9 @@ function startStudyTimer() {
   }, 1000);
 }
 
-function stopStudyTimer() {
-  if (studyTickInterval) {
-    clearInterval(studyTickInterval);
-    studyTickInterval = null;
-  }
-}
-
-// ---------- DOM HELPERS ----------
+// ===================================================
+// DOM HELPERS
+// ===================================================
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls) => {
   const e = document.createElement(tag);
@@ -319,26 +264,34 @@ const el = (tag, cls) => {
   return e;
 };
 
-// ---------- SCREEN MANAGEMENT ----------
-function showScreen(id) {
+// ===================================================
+// SCREEN MANAGEMENT
+// ===================================================
+function showScreen(id, opts) {
+  opts = opts || {};
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  $(id).classList.add("active");
+  const target = $(id);
+  if (target) target.classList.add("active");
 
   if (id !== "screen-study" && id !== "screen-quiz" && id !== "screen-typing") {
     saveStudyTracker();
   }
-
   updateStudyBanner();
 
+  // Scroll to the top of the app container reliably
   requestAnimationFrame(() => {
-    const screen = $(id);
-    if (screen.scrollHeight > window.innerHeight) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    const anchor = $("app-anchor");
+    if (anchor && !opts.keepScroll) {
+      const headerOffset = 80;
+      const y = anchor.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
     }
   });
 }
 
-// ---------- LOADING ----------
+// ===================================================
+// LOADING
+// ===================================================
 function showLoading() { $("loading").classList.remove("hidden"); }
 function hideLoading() { $("loading").classList.add("hidden"); }
 
@@ -348,6 +301,7 @@ function hideLoading() { $("loading").classList.add("hidden"); }
 async function boot() {
   applyTheme(loadTheme());
   attachGlobalListeners();
+  attachSiteNavListeners();
   attachDictionaryListeners();
   attachTypingListeners();
   attachGamesListeners();
@@ -363,11 +317,8 @@ async function boot() {
   updateStudyBanner();
   updateGreeting();
 
-  // Name prompt on first visit
   if (!playerName) {
-    setTimeout(() => {
-      $("nameModal").classList.remove("hidden");
-    }, 600);
+    setTimeout(() => { $("nameModal").classList.remove("hidden"); }, 600);
   }
 
   try {
@@ -376,19 +327,11 @@ async function boot() {
     const maths = subjectsData.subjects.find(s => s.id === "maths");
     currentSubject = await fetchJSON(maths.file);
 
-    try {
-      offlineDictionary = await fetchJSON("data/dictionary.json");
-    } catch (dictErr) {
-      console.warn("Offline dictionary not available:", dictErr.message);
-      offlineDictionary = null;
-    }
+    try { offlineDictionary = await fetchJSON("data/dictionary.json"); }
+    catch (dictErr) { console.warn("Offline dictionary not available:", dictErr.message); offlineDictionary = null; }
 
-    try {
-      typingData = await fetchJSON("data/typing.json");
-    } catch (typeErr) {
-      console.warn("Typing course not available:", typeErr.message);
-      typingData = null;
-    }
+    try { typingData = await fetchJSON("data/typing.json"); }
+    catch (typeErr) { console.warn("Typing course not available:", typeErr.message); typingData = null; }
 
     hideLoading();
     renderHome();
@@ -416,12 +359,8 @@ function updateGreeting() {
   if (hour < 12) text = "Good morning";
   else if (hour < 17) text = "Good afternoon";
   else text = "Good evening";
-
-  if (playerName) {
-    $("greeting").textContent = `${text}, ${playerName}! 👋`;
-  } else {
-    $("greeting").textContent = `${text}! Ready to study? 👋`;
-  }
+  if (playerName) $("greeting").textContent = `${text}, ${playerName}! 👋`;
+  else $("greeting").textContent = `${text}! Ready to study? 👋`;
 }
 
 function attachNameListeners() {
@@ -433,35 +372,22 @@ function attachNameListeners() {
   if (saveBtn) {
     saveBtn.addEventListener("click", () => {
       const val = (input.value || "").trim();
-      if (val) {
-        playerName = val;
-        savePlayerName(val);
-      }
+      if (val) { playerName = val; savePlayerName(val); }
       $("nameModal").classList.add("hidden");
       updateGreeting();
       updateProgressNameDisplay();
     });
   }
-
-  if (skipBtn) {
-    skipBtn.addEventListener("click", () => {
-      $("nameModal").classList.add("hidden");
-    });
-  }
-
+  if (skipBtn) skipBtn.addEventListener("click", () => $("nameModal").classList.add("hidden"));
   if (changeBtn) {
     changeBtn.addEventListener("click", () => {
       $("nameInput").value = playerName;
       $("nameModal").classList.remove("hidden");
     });
   }
-
   if (input) {
     input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        saveBtn.click();
-      }
+      if (e.key === "Enter") { e.preventDefault(); saveBtn.click(); }
     });
   }
 }
@@ -497,8 +423,18 @@ function renderSubjects() {
     `;
     if (sub.available) {
       card.addEventListener("click", () => {
-        renderHomeTopics();
-        document.querySelector(".topic-list")?.scrollIntoView({ behavior: "smooth" });
+        // Ensure the Home screen is showing first
+        if (!$("screen-home").classList.contains("active")) {
+          showScreen("screen-home", { keepScroll: true });
+        }
+        // Then scroll to the topic list
+        setTimeout(() => {
+          const topics = $("topics");
+          if (topics) {
+            const y = topics.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+          }
+        }, 100);
       });
     }
     grid.appendChild(card);
@@ -547,16 +483,10 @@ function renderTools() {
       </span>
     `;
     if (t.available && t.id === "calculator") {
-      card.addEventListener("click", () => {
-        showScreen("screen-calculator");
-        renderCalc();
-      });
+      card.addEventListener("click", () => { showScreen("screen-calculator"); renderCalc(); });
     }
     if (t.available && t.id === "dictionary") {
-      card.addEventListener("click", () => {
-        showScreen("screen-dictionary");
-        openDictionary();
-      });
+      card.addEventListener("click", () => { showScreen("screen-dictionary"); openDictionary(); });
     }
     if (t.available && t.id === "pronounce") {
       card.addEventListener("click", () => {
@@ -564,22 +494,18 @@ function renderTools() {
         openDictionary();
         setTimeout(() => {
           const input = $("dictInput");
-          if (input) {
-            input.placeholder = "Type any word to hear it pronounced";
-            input.focus();
-          }
+          if (input) { input.placeholder = "Type any word to hear it pronounced"; input.focus(); }
         }, 200);
       });
     }
     if (t.available && t.id === "typing") {
-      card.addEventListener("click", () => {
-        showScreen("screen-typing");
-        openTyping();
-      });
+      card.addEventListener("click", () => { showScreen("screen-typing"); openTyping(); });
     }
     if (t.available && t.id === "games") {
       card.addEventListener("click", () => {
-        showScreen("screen-games");
+        // Scroll to top FIRST, then switch to games screen
+        window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+        showScreen("screen-games", { keepScroll: true });
         updateGamesScreen();
       });
     }
@@ -658,7 +584,6 @@ function renderStudyCard() {
       title.className = "procedure-title";
       title.textContent = "📝 Working";
       box.appendChild(title);
-
       const ol = document.createElement("ol");
       q.procedure.forEach(step => {
         const li = document.createElement("li");
@@ -674,14 +599,8 @@ function renderStudyCard() {
 }
 
 function flipCard() { $("card").classList.toggle("flipped"); }
-function nextCard() {
-  studyIndex = (studyIndex + 1) % studyDeck.length;
-  renderStudyCard();
-}
-function prevCard() {
-  studyIndex = (studyIndex - 1 + studyDeck.length) % studyDeck.length;
-  renderStudyCard();
-}
+function nextCard() { studyIndex = (studyIndex + 1) % studyDeck.length; renderStudyCard(); }
+function prevCard() { studyIndex = (studyIndex - 1 + studyDeck.length) % studyDeck.length; renderStudyCard(); }
 
 // ===================================================
 // QUIZ MODE
@@ -691,7 +610,6 @@ function startQuiz() {
   quizIndex = 0;
   quizScore = 0;
   quizLocked = false;
-
   $("quizTopicLabel").textContent = `${currentSubject.subject} • ${currentTopic.name}`;
   $("quizPlay").classList.remove("hidden");
   $("quizResult").classList.add("hidden");
@@ -708,6 +626,15 @@ function renderQuizQuestion() {
   $("nextQuestionBtn").classList.add("hidden");
   clearTimeout(nextTimer);
 
+  // Scroll to top of quiz area so the new question is visible
+  requestAnimationFrame(() => {
+    const anchor = $("app-anchor");
+    if (anchor) {
+      const y = anchor.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+    }
+  });
+
   const q = quizDeck[quizIndex];
   $("quizProgress").textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
   $("quizQuestion").textContent = q.q;
@@ -715,7 +642,6 @@ function renderQuizQuestion() {
   const options = shuffle([...q.options]);
   const container = $("quizOptions");
   container.innerHTML = "";
-
   options.forEach(opt => {
     const btn = el("button", "quiz-option");
     btn.textContent = opt;
@@ -727,7 +653,6 @@ function renderQuizQuestion() {
 function handleAnswer(btn, chosen, correct, q) {
   if (quizLocked) return;
   quizLocked = true;
-
   const buttons = $("quizOptions").querySelectorAll(".quiz-option");
   buttons.forEach(b => {
     b.disabled = true;
@@ -746,16 +671,12 @@ function handleAnswer(btn, chosen, correct, q) {
   }
 
   showProcedure(q ? q.procedure : null, q ? q.explain : "");
-
   progress.totalAnswered += 1;
   if (isRight) progress.totalCorrect += 1;
   saveProgress();
 
   const nextBtn = $("nextQuestionBtn");
   nextBtn.classList.remove("hidden");
-  setTimeout(() => {
-    nextBtn.scrollIntoView({ behavior: "smooth", block: "center" });
-  }, 120);
 
   clearTimeout(nextTimer);
   if (quizPace === "timed") {
@@ -766,17 +687,13 @@ function handleAnswer(btn, chosen, correct, q) {
 function advanceQuiz() {
   clearTimeout(nextTimer);
   quizIndex++;
-  if (quizIndex < quizDeck.length) {
-    renderQuizQuestion();
-  } else {
-    finishQuiz();
-  }
+  if (quizIndex < quizDeck.length) renderQuizQuestion();
+  else finishQuiz();
 }
 
 function finishQuiz() {
   $("quizPlay").classList.add("hidden");
   $("quizResult").classList.remove("hidden");
-
   const pct = Math.round((quizScore / quizDeck.length) * 100);
   $("finalScore").textContent = `${quizScore} / ${quizDeck.length}`;
 
@@ -789,11 +706,7 @@ function finishQuiz() {
   $("resultTitle").textContent = title;
   $("scoreMessage").textContent = msg;
 
-  if (pct > progress.bestPercent) {
-    progress.bestPercent = pct;
-    saveProgress();
-  }
-
+  if (pct > progress.bestPercent) { progress.bestPercent = pct; saveProgress(); }
   quizHistory.unshift({
     date: new Date().toLocaleString(),
     topic: currentTopic.name,
@@ -813,12 +726,10 @@ function refreshPaceLabel() {
   if (!paceBtn) return;
   paceBtn.textContent = quizPace === "timed" ? "⏱️ Timed (5s)" : "🐢 My pace";
 }
-
 function togglePace() {
   quizPace = quizPace === "timed" ? "manual" : "timed";
   savePace(quizPace);
   refreshPaceLabel();
-
   if (quizPace === "timed" && quizLocked && !$("nextQuestionBtn").classList.contains("hidden")) {
     clearTimeout(nextTimer);
     nextTimer = setTimeout(() => advanceQuiz(), 5000);
@@ -834,12 +745,10 @@ function showProcedure(procedure, explain) {
   const box = $("procedureBox");
   if (!box) return;
   box.innerHTML = "";
-
   const h = document.createElement("div");
   h.className = "procedure-title";
   h.textContent = "📝 Working";
   box.appendChild(h);
-
   if (Array.isArray(procedure) && procedure.length > 0) {
     const ol = document.createElement("ol");
     ol.className = "procedure-steps";
@@ -857,38 +766,27 @@ function showProcedure(procedure, explain) {
   } else {
     box.appendChild(document.createTextNode("No working available."));
   }
-
   box.classList.remove("hidden");
 }
-
 function hideProcedure() {
   const box = $("procedureBox");
-  if (box) {
-    box.classList.add("hidden");
-    box.innerHTML = "";
-  }
+  if (box) { box.classList.add("hidden"); box.innerHTML = ""; }
 }
 
 // ===================================================
 // PROGRESS SCREEN
 // ===================================================
 function renderProgress() {
-  const accuracy = progress.totalAnswered === 0
-    ? 0
-    : Math.round((progress.totalCorrect / progress.totalAnswered) * 100);
-
+  const accuracy = progress.totalAnswered === 0 ? 0 : Math.round((progress.totalCorrect / progress.totalAnswered) * 100);
   $("statTotalQuestions").textContent = progress.totalAnswered;
   $("statCorrect").textContent = progress.totalCorrect;
   $("statAccuracy").textContent = `${accuracy}%`;
   $("statBest").textContent = `${progress.bestPercent}%`;
-
   $("statTypingLessons").textContent = typingStats.lessonsDone;
   $("statTypingWpm").textContent = typingStats.bestWpm;
-
   const studyMin = Math.floor(studyTracker.secondsToday / 60);
   $("statStudyMinutes").textContent = studyMin;
   $("statGamesPlayed").textContent = studyTracker.unlocksTotal;
-
   updateProgressNameDisplay();
 
   const list = $("quizHistory");
@@ -902,10 +800,7 @@ function renderProgress() {
   quizHistory.forEach(h => {
     const li = el("li");
     li.innerHTML = `
-      <span>
-        <div>${h.topic}</div>
-        <div class="hist-date">${h.date}</div>
-      </span>
+      <span><div>${h.topic}</div><div class="hist-date">${h.date}</div></span>
       <span>${h.score}/${h.total} (${h.pct}%)</span>
     `;
     list.appendChild(li);
@@ -916,7 +811,6 @@ function renderProgress() {
 // THEME
 // ===================================================
 function applyTheme(id) { document.body.className = `theme-${id}`; }
-
 function openThemeModal() {
   const grid = $("themeGrid");
   grid.innerHTML = "";
@@ -926,8 +820,7 @@ function openThemeModal() {
     btn.style.background = `linear-gradient(135deg, ${t.colors[0]}, ${t.colors[1]})`;
     btn.innerHTML = `<span class="dot" style="background:${t.colors[0]}"></span>${t.name}`;
     btn.addEventListener("click", () => {
-      saveTheme(t.id);
-      applyTheme(t.id);
+      saveTheme(t.id); applyTheme(t.id);
       grid.querySelectorAll(".theme-swatch").forEach(s => s.classList.remove("selected"));
       btn.classList.add("selected");
     });
@@ -943,42 +836,20 @@ function closeThemeModal() { $("themeModal").classList.add("hidden"); }
 function renderCalc() {
   const displayEl = $("calcDisplay");
   if (!displayEl) return;
-  if (calcExpression) {
-    displayEl.innerHTML = `<span class="calc-expr">${calcExpression}</span>${calcDisplay}`;
-  } else {
-    displayEl.textContent = calcDisplay;
-  }
+  if (calcExpression) displayEl.innerHTML = `<span class="calc-expr">${calcExpression}</span>${calcDisplay}`;
+  else displayEl.textContent = calcDisplay;
   displayEl.scrollLeft = displayEl.scrollWidth;
 }
-
 function calcInput(value) {
-  if (value === "clear") {
-    calcDisplay = "0"; calcExpression = ""; calcPrev = null; calcOp = null; calcWaitForNext = false;
-    return renderCalc();
-  }
-  if (value === "back") {
-    calcDisplay = calcDisplay.length > 1 ? calcDisplay.slice(0, -1) : "0";
-    updateExprAfterDigit();
-    return renderCalc();
-  }
+  if (value === "clear") { calcDisplay = "0"; calcExpression = ""; calcPrev = null; calcOp = null; calcWaitForNext = false; return renderCalc(); }
+  if (value === "back") { calcDisplay = calcDisplay.length > 1 ? calcDisplay.slice(0, -1) : "0"; updateExprAfterDigit(); return renderCalc(); }
   if (value === "equals") return calcEquals();
-  if (value === "%") {
-    const n = parseFloat(calcDisplay);
-    if (!isNaN(n)) calcDisplay = formatNumber(n / 100);
-    updateExprAfterDigit();
-    return renderCalc();
-  }
+  if (value === "%") { const n = parseFloat(calcDisplay); if (!isNaN(n)) calcDisplay = formatNumber(n / 100); updateExprAfterDigit(); return renderCalc(); }
   if (["+", "-", "*", "/"].includes(value)) {
     const n = parseFloat(calcDisplay);
-    if (calcOp && !calcWaitForNext) {
-      const result = calcCompute(calcPrev, n, calcOp);
-      calcDisplay = formatNumber(result);
-      calcPrev = result;
-    } else {
-      calcPrev = n;
-    }
-    calcOp = value;
-    calcWaitForNext = true;
+    if (calcOp && !calcWaitForNext) { const result = calcCompute(calcPrev, n, calcOp); calcDisplay = formatNumber(result); calcPrev = result; }
+    else calcPrev = n;
+    calcOp = value; calcWaitForNext = true;
     calcExpression = `${formatNumber(calcPrev)} ${displayOpSymbol(value)} `;
     return renderCalc();
   }
@@ -990,10 +861,8 @@ function calcInput(value) {
   }
   if (calcWaitForNext) { calcDisplay = value; calcWaitForNext = false; }
   else calcDisplay = calcDisplay === "0" ? value : calcDisplay + value;
-  updateExprAfterDigit();
-  renderCalc();
+  updateExprAfterDigit(); renderCalc();
 }
-
 function calcCompute(a, b, op) {
   switch (op) {
     case "+": return a + b;
@@ -1035,9 +904,7 @@ function updateExprAfterDigit() {
 function warmUpVoices() {
   if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.getVoices();
-  window.speechSynthesis.onvoiceschanged = () => {
-    window.speechSynthesis.getVoices();
-  };
+  window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
 }
 
 // ===================================================
@@ -1055,7 +922,6 @@ function openDictionary() {
   error.textContent = "";
   setTimeout(() => input.focus(), 200);
 }
-
 function lookupWord(word) {
   const result = $("dictResult");
   const error = $("dictError");
@@ -1071,19 +937,14 @@ function lookupWord(word) {
   result.classList.remove("hidden");
   if (!offlineDictionary) { renderFallbackDictionary(word); return; }
   const words = word.split(/\s+/);
-  const known = [];
-  const unknown = [];
+  const known = []; const unknown = [];
   words.forEach(w => {
     const clean = w.replace(/[^a-z\-']/g, "");
-    if (offlineDictionary[clean]) {
-      known.push({ word: clean, definition: offlineDictionary[clean] });
-    } else {
-      unknown.push(w);
-    }
+    if (offlineDictionary[clean]) known.push({ word: clean, definition: offlineDictionary[clean] });
+    else unknown.push(w);
   });
   renderOfflineResult(word, known, unknown);
 }
-
 function renderFallbackDictionary(word) {
   const result = $("dictResult");
   result.innerHTML = "";
@@ -1106,7 +967,6 @@ function renderFallbackDictionary(word) {
   note.textContent = "Dictionary not loaded. You can still tap 🔊 to hear the word pronounced.";
   result.appendChild(note);
 }
-
 function renderOfflineResult(phrase, known, unknown) {
   const result = $("dictResult");
   result.innerHTML = "";
@@ -1129,7 +989,6 @@ function renderOfflineResult(phrase, known, unknown) {
     note.textContent = `Meaning of each word in "${phrase}":`;
     result.appendChild(note);
   }
-
   if (known.length === 0) {
     const note = document.createElement("div");
     note.className = "dict-def";
@@ -1139,7 +998,6 @@ function renderOfflineResult(phrase, known, unknown) {
     result.appendChild(note);
     return;
   }
-
   known.forEach(k => {
     const block = document.createElement("div");
     block.className = "dict-meaning";
@@ -1153,7 +1011,6 @@ function renderOfflineResult(phrase, known, unknown) {
     block.appendChild(def);
     result.appendChild(block);
   });
-
   if (unknown.length > 0) {
     const note = document.createElement("div");
     note.className = "dict-def";
@@ -1164,35 +1021,24 @@ function renderOfflineResult(phrase, known, unknown) {
     result.appendChild(note);
   }
 }
-
 function speakWord(word, btn) {
-  if (!("speechSynthesis" in window)) {
-    alert("Your browser does not support speech. Try a different browser.");
-    return;
-  }
+  if (!("speechSynthesis" in window)) { alert("Your browser does not support speech. Try a different browser."); return; }
   const clean = String(word).replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
   if (!clean) return;
   try { window.speechSynthesis.cancel(); } catch (e) {}
   const utterance = new SpeechSynthesisUtterance(clean);
-  utterance.lang = "en-GB";
-  utterance.rate = 0.85;
-  utterance.pitch = 1;
-  utterance.volume = 1;
+  utterance.lang = "en-GB"; utterance.rate = 0.85; utterance.pitch = 1; utterance.volume = 1;
   try {
     const voices = window.speechSynthesis.getVoices() || [];
     const preferred = voices.find(v => /en-GB|en_GB/i.test(v.lang)) ||
                       voices.find(v => /en-US|en_US/i.test(v.lang)) ||
                       voices.find(v => /^en/i.test(v.lang));
-    if (preferred) {
-      utterance.voice = preferred;
-      utterance.lang = preferred.lang;
-    }
+    if (preferred) { utterance.voice = preferred; utterance.lang = preferred.lang; }
   } catch (e) {}
   if (btn) {
     btn.classList.add("playing");
     const clear = () => btn.classList.remove("playing");
-    utterance.onend = clear;
-    utterance.onerror = clear;
+    utterance.onend = clear; utterance.onerror = clear;
     setTimeout(clear, 10000);
   }
   setTimeout(() => {
@@ -1200,7 +1046,6 @@ function speakWord(word, btn) {
     catch (e) { console.error("speechSynthesis.speak failed:", e); }
   }, 60);
 }
-
 function attachDictionaryListeners() {
   const input = $("dictInput");
   const btn = $("dictSearchBtn");
@@ -1221,14 +1066,10 @@ function openTyping() {
   lesson.classList.add("hidden");
   renderTypingLevels();
 }
-
 function renderTypingLevels() {
   const container = $("typingLevels");
   container.innerHTML = "";
-  if (!typingData || !typingData.levels) {
-    container.innerHTML = '<p class="dict-error">Typing data unavailable.</p>';
-    return;
-  }
+  if (!typingData || !typingData.levels) { container.innerHTML = '<p class="dict-error">Typing data unavailable.</p>'; return; }
   typingData.levels.forEach((lvl, i) => {
     const card = el("button", "typing-level-card");
     card.innerHTML = `
@@ -1243,7 +1084,6 @@ function renderTypingLevels() {
     container.appendChild(card);
   });
 }
-
 function startTypingLevel(levelIndex) {
   typingLevel = typingData.levels[levelIndex];
   typingLessonIndex = 0;
@@ -1252,7 +1092,6 @@ function startTypingLevel(levelIndex) {
   $("typingLevelName").textContent = typingLevel.name;
   startTypingLesson();
 }
-
 function startTypingLesson() {
   typingDone = false;
   typingCorrectCount = 0;
@@ -1263,11 +1102,10 @@ function startTypingLesson() {
   $("typingInput").value = "";
   $("typingInput").disabled = false;
   $("typingNextBtn").disabled = false;
-  renderTypingTarget(text, 0);
+  renderTypingTarget(text);
   updateTypingStats();
   setTimeout(() => $("typingInput").focus(), 100);
 }
-
 function renderTypingTarget(text) {
   const targetEl = $("typingTarget");
   targetEl.innerHTML = "";
@@ -1279,13 +1117,10 @@ function renderTypingTarget(text) {
     if (i < typed.length) {
       if (typed[i] === text[i]) span.classList.add("correct");
       else span.classList.add("incorrect");
-    } else if (i === typed.length) {
-      span.classList.add("current");
-    }
+    } else if (i === typed.length) span.classList.add("current");
     targetEl.appendChild(span);
   }
 }
-
 function handleTypingInput() {
   if (typingDone) return;
   const text = typingLevel.lessons[typingLessonIndex].text;
@@ -1299,7 +1134,6 @@ function handleTypingInput() {
   updateTypingStats();
   if (typed === text) finishTypingLesson();
 }
-
 function updateTypingStats() {
   const accuracy = typingTypedCount === 0 ? 100 : Math.round((typingCorrectCount / typingTypedCount) * 100);
   $("typingAccuracy").textContent = `${accuracy}%`;
@@ -1308,7 +1142,6 @@ function updateTypingStats() {
   const wpm = elapsed > 1 ? Math.round((typingCorrectCount / 5) / (elapsed / 60)) : 0;
   $("typingWpm").textContent = wpm;
 }
-
 function finishTypingLesson() {
   typingDone = true;
   $("typingInput").disabled = true;
@@ -1320,19 +1153,12 @@ function finishTypingLesson() {
   $("typingNextBtn").textContent = "Next Lesson →";
   $("typingNextBtn").disabled = false;
 }
-
 function nextTypingLesson() {
   if (!typingLevel) return;
-  if (typingLessonIndex < typingLevel.lessons.length - 1) {
-    typingLessonIndex++;
-    startTypingLesson();
-  } else {
-    openTyping();
-  }
+  if (typingLessonIndex < typingLevel.lessons.length - 1) { typingLessonIndex++; startTypingLesson(); }
+  else openTyping();
 }
-
 function restartTypingLesson() { startTypingLesson(); }
-
 function attachTypingListeners() {
   const input = $("typingInput");
   const nextBtn = $("typingNextBtn");
@@ -1350,7 +1176,6 @@ function updateGamesScreen() {
   const lockedEl = $("gamesLocked");
   const unlockedEl = $("gamesUnlocked");
   if (!lockedEl || !unlockedEl) return;
-
   if (isGamesUnlocked()) {
     lockedEl.classList.add("hidden");
     unlockedEl.classList.remove("hidden");
@@ -1370,7 +1195,6 @@ function updateGamesScreen() {
     $("gamesProgressFill").style.width = `${getStudyProgressFraction() * 100}%`;
   }
 }
-
 function renderGamesGrid() {
   const grid = $("gamesGrid");
   if (!grid) return;
@@ -1379,7 +1203,7 @@ function renderGamesGrid() {
     { id: "mathsprint", icon: "⏱️", name: "Math Sprint", tag: "Ready", available: true },
     { id: "memorymatch", icon: "🧠", name: "Memory Match", tag: "Ready", available: true },
     { id: "spellingbee", icon: "🐝", name: "Spelling Bee", tag: "Ready", available: true },
-    { id: "tables", icon: "🔢", name: "Times Tables", tag: "Ready", available: true },
+    { id: "tables", icon: "🔢", name: "Times Tables", tag: "Ready", available: true }
   ];
   games.forEach(g => {
     const card = el("button", "game-card" + (g.available ? "" : " disabled"));
@@ -1389,32 +1213,13 @@ function renderGamesGrid() {
       <span class="game-name">${g.name}</span>
       <span class="game-tag">${g.tag}</span>
     `;
-    if (g.available && g.id === "mathsprint") {
-      card.addEventListener("click", () => {
-        showScreen("screen-mathsprint");
-        openMathSprint();
-      });
-    }    if (g.available && g.id === "memorymatch") {
-      card.addEventListener("click", () => {
-        showScreen("screen-memorymatch");
-        openMemoryMatch();
-      });
-    }    if (g.available && g.id === "spellingbee") {
-      card.addEventListener("click", () => {
-        showScreen("screen-spellingbee");
-        openSpellingBee();
-      });
-    }  
-	if (g.available && g.id === "tables") {
-      card.addEventListener("click", () => {
-        showScreen("screen-timestables");
-        openTimesTables();
-      });
-    }
+    if (g.available && g.id === "mathsprint") card.addEventListener("click", () => { showScreen("screen-mathsprint"); openMathSprint(); });
+    if (g.available && g.id === "memorymatch") card.addEventListener("click", () => { showScreen("screen-memorymatch"); openMemoryMatch(); });
+    if (g.available && g.id === "spellingbee") card.addEventListener("click", () => { showScreen("screen-spellingbee"); openSpellingBee(); });
+    if (g.available && g.id === "tables") card.addEventListener("click", () => { showScreen("screen-timestables"); openTimesTables(); });
     grid.appendChild(card);
   });
 }
-
 function attachGamesListeners() {
   const goStudyBtn = $("gamesGoStudyBtn");
   if (goStudyBtn) goStudyBtn.addEventListener("click", () => showScreen("screen-home"));
@@ -1424,10 +1229,7 @@ function attachGamesListeners() {
 // MATH SPRINT
 // ===================================================
 function openMathSprint() {
-  msMode = null;
-  msPlayers = [];
-  msCurrentPlayerIndex = 0;
-  msRoundActive = false;
+  msMode = null; msPlayers = []; msCurrentPlayerIndex = 0; msRoundActive = false;
   clearInterval(msTimerInterval);
   $("msModePicker").classList.remove("hidden");
   $("msTwoSetup").classList.add("hidden");
@@ -1435,7 +1237,6 @@ function openMathSprint() {
   $("msPlay").classList.add("hidden");
   $("msRoundResult").classList.add("hidden");
 }
-
 function startMathSprintSolo() {
   msMode = "solo";
   msPlayers = [{ name: playerName || "Player", score: 0 }];
@@ -1443,100 +1244,60 @@ function startMathSprintSolo() {
   $("msModePicker").classList.add("hidden");
   startMathSprintRound();
 }
-
 function startMathSprintTwo() {
   const p2 = ($("msP2Input").value || "").trim() || "Player 2";
   msMode = "two";
-  msPlayers = [
-    { name: playerName || "Player 1", score: 0 },
-    { name: p2, score: 0 }
-  ];
+  msPlayers = [{ name: playerName || "Player 1", score: 0 }, { name: p2, score: 0 }];
   msCurrentPlayerIndex = 0;
   $("msTwoSetup").classList.add("hidden");
   showPassScreen();
 }
-
 function showPassScreen() {
   $("msPlay").classList.add("hidden");
   $("msRoundResult").classList.add("hidden");
   $("msPassScreen").classList.remove("hidden");
   $("msPassName").textContent = msPlayers[msCurrentPlayerIndex].name;
 }
-
 function startMathSprintRound() {
   $("msPassScreen").classList.add("hidden");
   $("msPlay").classList.remove("hidden");
   $("msRoundResult").classList.add("hidden");
-
-  msRoundActive = true;
-  msQuestionLocked = false;
-  msTimeLeft = MATH_SPRINT_SECONDS;
+  msRoundActive = true; msQuestionLocked = false; msTimeLeft = MATH_SPRINT_SECONDS;
   $("msTimer").textContent = msTimeLeft;
   $("msTimer").classList.remove("warning");
   $("msCurrentPlayer").textContent = msPlayers[msCurrentPlayerIndex].name;
   $("msScore").textContent = msPlayers[msCurrentPlayerIndex].score;
-
   nextMathSprintQuestion();
-
   clearInterval(msTimerInterval);
   msTimerInterval = setInterval(() => {
     msTimeLeft--;
     $("msTimer").textContent = msTimeLeft;
     if (msTimeLeft <= 10) $("msTimer").classList.add("warning");
-    if (msTimeLeft <= 0) {
-      clearInterval(msTimerInterval);
-      endMathSprintRound();
-    }
+    if (msTimeLeft <= 0) { clearInterval(msTimerInterval); endMathSprintRound(); }
   }, 1000);
 }
-
 function generateMathQuestion() {
   const ops = ["+", "-", "×", "÷"];
   const op = ops[Math.floor(Math.random() * ops.length)];
   let a, b, answer;
-
   switch (op) {
-    case "+":
-      a = Math.floor(Math.random() * 90) + 10;
-      b = Math.floor(Math.random() * 90) + 10;
-      answer = a + b;
-      break;
-    case "-":
-      a = Math.floor(Math.random() * 90) + 10;
-      b = Math.floor(Math.random() * a) + 1;
-      answer = a - b;
-      break;
-    case "×":
-      a = Math.floor(Math.random() * 11) + 2;
-      b = Math.floor(Math.random() * 11) + 2;
-      answer = a * b;
-      break;
-    case "÷":
-      b = Math.floor(Math.random() * 10) + 2;
-      answer = Math.floor(Math.random() * 10) + 2;
-      a = b * answer;
-      break;
+    case "+": a = Math.floor(Math.random() * 90) + 10; b = Math.floor(Math.random() * 90) + 10; answer = a + b; break;
+    case "-": a = Math.floor(Math.random() * 90) + 10; b = Math.floor(Math.random() * a) + 1; answer = a - b; break;
+    case "×": a = Math.floor(Math.random() * 11) + 2; b = Math.floor(Math.random() * 11) + 2; answer = a * b; break;
+    case "÷": b = Math.floor(Math.random() * 10) + 2; answer = Math.floor(Math.random() * 10) + 2; a = b * answer; break;
   }
-
   const options = new Set([answer]);
   while (options.size < 4) {
     const delta = Math.floor(Math.random() * 20) - 10;
     const wrong = answer + delta;
     if (wrong !== answer && wrong > 0) options.add(wrong);
   }
-
-  return {
-    question: `${a} ${op} ${b}`,
-    answer: answer,
-    options: shuffle([...options])
-  };
+  return { question: `${a} ${op} ${b}`, answer, options: shuffle([...options]) };
 }
-
 function nextMathSprintQuestion() {
   msCurrentQuestion = generateMathQuestion();
   msQuestionLocked = false;
   $("msQuestion").textContent = msCurrentQuestion.question;
-
   const container = $("msOptions");
   container.innerHTML = "";
   msCurrentQuestion.options.forEach(opt => {
@@ -1546,43 +1307,29 @@ function nextMathSprintQuestion() {
     container.appendChild(btn);
   });
 }
-
 function handleMathSprintAnswer(btn, chosen) {
   if (msQuestionLocked || !msRoundActive) return;
   msQuestionLocked = true;
-
   const correct = msCurrentQuestion.answer;
   const buttons = $("msOptions").querySelectorAll(".ms-option");
   buttons.forEach(b => {
     b.disabled = true;
     if (parseInt(b.textContent, 10) === correct) b.classList.add("correct");
   });
-
-  if (chosen === correct) {
-    msPlayers[msCurrentPlayerIndex].score++;
-    $("msScore").textContent = msPlayers[msCurrentPlayerIndex].score;
-  } else {
-    btn.classList.add("wrong");
-  }
-
-  setTimeout(() => {
-    if (msRoundActive) nextMathSprintQuestion();
-  }, 350);
+  if (chosen === correct) { msPlayers[msCurrentPlayerIndex].score++; $("msScore").textContent = msPlayers[msCurrentPlayerIndex].score; }
+  else btn.classList.add("wrong");
+  setTimeout(() => { if (msRoundActive) nextMathSprintQuestion(); }, 350);
 }
-
 function endMathSprintRound() {
   msRoundActive = false;
   clearInterval(msTimerInterval);
   $("msPlay").classList.add("hidden");
   $("msRoundResult").classList.remove("hidden");
-
   const score = msPlayers[msCurrentPlayerIndex].score;
-
   if (msMode === "solo") {
     const best = loadMathSprintBest();
     saveMathSprintBest(score);
     const isNewBest = score > best;
-
     $("msResultIcon").textContent = isNewBest ? "🏆" : "🎉";
     $("msResultTitle").textContent = isNewBest ? "New best score!" : "Time's up!";
     $("msResultMsg").textContent = isNewBest
@@ -1591,21 +1338,17 @@ function endMathSprintRound() {
     $("msNextBtn").textContent = "Done";
   } else {
     const isLastPlayer = msCurrentPlayerIndex >= msPlayers.length - 1;
-
     if (!isLastPlayer) {
       $("msResultIcon").textContent = "🎯";
       $("msResultTitle").textContent = `${msPlayers[msCurrentPlayerIndex].name} scored ${score}!`;
       $("msResultMsg").textContent = `Pass the device to ${msPlayers[msCurrentPlayerIndex + 1].name}.`;
       $("msNextBtn").textContent = `Pass to ${msPlayers[msCurrentPlayerIndex + 1].name} →`;
     } else {
-      // Final result — determine winner
-      const p1 = msPlayers[0];
-      const p2 = msPlayers[1];
+      const p1 = msPlayers[0], p2 = msPlayers[1];
       let winner;
       if (p1.score > p2.score) winner = p1;
       else if (p2.score > p1.score) winner = p2;
       else winner = null;
-
       $("msResultIcon").textContent = winner ? "🏆" : "🤝";
       $("msResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
       $("msResultMsg").textContent = `${p1.name}: ${p1.score} — ${p2.name}: ${p2.score}`;
@@ -1613,22 +1356,12 @@ function endMathSprintRound() {
     }
   }
 }
-
 function handleMathSprintNext() {
-  if (msMode === "solo") {
-    openMathSprint();
-    return;
-  }
-  // Two-player: advance to next player or restart
+  if (msMode === "solo") { openMathSprint(); return; }
   const isLastPlayer = msCurrentPlayerIndex >= msPlayers.length - 1;
-  if (!isLastPlayer) {
-    msCurrentPlayerIndex++;
-    showPassScreen();
-  } else {
-    openMathSprint();
-  }
+  if (!isLastPlayer) { msCurrentPlayerIndex++; showPassScreen(); }
+  else openMathSprint();
 }
-
 function handleMathSprintPlayAgain() {
   if (msMode === "solo") startMathSprintSolo();
   else if (msMode === "two") {
@@ -1638,16 +1371,10 @@ function handleMathSprintPlayAgain() {
     showPassScreen();
   }
 }
-
 function attachMathSprintListeners() {
-  const soloBtn = $("msSoloBtn");
-  const twoBtn = $("msTwoBtn");
-  const backToModes = $("msBackToModes");
-  const startTwoBtn = $("msStartTwoBtn");
-  const readyBtn = $("msReadyBtn");
-  const nextBtn = $("msNextBtn");
-  const playAgainBtn = $("msPlayAgainBtn");
-
+  const soloBtn = $("msSoloBtn"), twoBtn = $("msTwoBtn"), backToModes = $("msBackToModes"),
+        startTwoBtn = $("msStartTwoBtn"), readyBtn = $("msReadyBtn"),
+        nextBtn = $("msNextBtn"), playAgainBtn = $("msPlayAgainBtn");
   if (soloBtn) soloBtn.addEventListener("click", startMathSprintSolo);
   if (twoBtn) {
     twoBtn.addEventListener("click", () => {
@@ -1670,6 +1397,709 @@ function attachMathSprintListeners() {
 }
 
 // ===================================================
+// MEMORY MATCH
+// ===================================================
+function openMemoryMatch() {
+  mmMode = null; mmPlayers = []; mmCurrentPlayerIndex = 0;
+  mmFirstPick = null; mmLocked = false; mmMoves = 0; mmPairsFound = 0; mmExtraTurn = false;
+  clearInterval(mmTimerInterval); mmStartTime = null;
+  $("mmModePicker").classList.remove("hidden");
+  $("mmTwoSetup").classList.add("hidden");
+  $("mmPassScreen").classList.add("hidden");
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.add("hidden");
+}
+function startMemoryMatchSolo() {
+  mmMode = "solo";
+  mmPlayers = [{ name: playerName || "Player", pairs: 0 }];
+  mmCurrentPlayerIndex = 0; mmTotalPairs = 6;
+  $("mmModePicker").classList.add("hidden");
+  buildMemoryBoard();
+}
+function startMemoryMatchTwo() {
+  const p2 = ($("mmP2Input").value || "").trim() || "Player 2";
+  mmMode = "two";
+  mmPlayers = [{ name: playerName || "Player 1", pairs: 0 }, { name: p2, pairs: 0 }];
+  mmCurrentPlayerIndex = 0; mmTotalPairs = 6;
+  $("mmTwoSetup").classList.add("hidden");
+  showMemoryPassScreen();
+}
+function showMemoryPassScreen() {
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.add("hidden");
+  $("mmPassScreen").classList.remove("hidden");
+  $("mmPassName").textContent = mmPlayers[mmCurrentPlayerIndex].name;
+}
+function buildMemoryBoard() {
+  $("mmPassScreen").classList.add("hidden");
+  $("mmPlay").classList.remove("hidden");
+  $("mmResult").classList.add("hidden");
+  const pairs = shuffle([...MM_PAIR_POOL]).slice(0, mmTotalPairs);
+  mmBoard = [];
+  pairs.forEach((pair, pairId) => {
+    mmBoard.push({ pairId, text: pair.a, matched: false });
+    mmBoard.push({ pairId, text: pair.b, matched: false });
+  });
+  mmBoard = shuffle(mmBoard);
+  mmFirstPick = null; mmLocked = false; mmMoves = 0; mmPairsFound = 0; mmExtraTurn = false;
+  mmStartTime = Date.now();
+  renderMemoryBoard();
+  updateMemoryTopbar();
+  renderMemoryScores();
+  clearInterval(mmTimerInterval);
+  mmTimerInterval = setInterval(updateMemoryTopbar, 500);
+}
+function renderMemoryBoard() {
+  const board = $("mmBoard");
+  board.innerHTML = "";
+  mmBoard.forEach((card, index) => {
+    const btn = el("button", "mm-card" + (card.matched ? " matched" : ""));
+    btn.dataset.index = index;
+    btn.innerHTML = `
+      <div class="mm-card-inner mm-front">?</div>
+      <div class="mm-card-inner mm-back">${card.text}</div>
+    `;
+    btn.addEventListener("click", () => handleMemoryCardClick(index));
+    board.appendChild(btn);
+  });
+}
+function updateMemoryTopbar() {
+  const nameEl = $("mmCurrentPlayer");
+  const metaEl = $("mmMeta");
+  if (!nameEl || !metaEl) return;
+  nameEl.textContent = mmPlayers[mmCurrentPlayerIndex]?.name || "Player";
+  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
+  const m = Math.floor(elapsed / 60);
+  const s = elapsed % 60;
+  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
+  metaEl.textContent = `Moves: ${mmMoves} • ${timeStr}`;
+}
+function renderMemoryScores() {
+  const scores = $("mmScores");
+  if (!scores) return;
+  scores.innerHTML = "";
+  if (mmMode !== "two") return;
+  mmPlayers.forEach((p, i) => {
+    const div = el("div", "mm-score" + (i === mmCurrentPlayerIndex ? " active" : ""));
+    div.innerHTML = `<span class="mm-score-name">${p.name}</span><span class="mm-score-val">${p.pairs} pairs</span>`;
+    scores.appendChild(div);
+  });
+}
+function handleMemoryCardClick(index) {
+  if (mmLocked) return;
+  const card = mmBoard[index];
+  if (card.matched) return;
+  const cardEl = document.querySelector(`.mm-card[data-index="${index}"]`);
+  if (!cardEl || cardEl.classList.contains("flipped")) return;
+  cardEl.classList.add("flipped");
+  if (mmFirstPick === null) { mmFirstPick = index; return; }
+  mmMoves++;
+  const firstCard = mmBoard[mmFirstPick];
+  const firstEl = document.querySelector(`.mm-card[data-index="${mmFirstPick}"]`);
+  if (firstCard.pairId === card.pairId) {
+    firstCard.matched = true;
+    card.matched = true;
+    firstEl.classList.add("matched");
+    cardEl.classList.add("matched");
+    mmPairsFound++;
+    if (mmMode === "two") { mmPlayers[mmCurrentPlayerIndex].pairs++; mmExtraTurn = true; }
+    else mmPlayers[0].pairs++;
+    mmFirstPick = null;
+    renderMemoryScores();
+    updateMemoryTopbar();
+    if (mmPairsFound >= mmTotalPairs) setTimeout(endMemoryMatch, 600);
+  } else {
+    mmLocked = true;
+    setTimeout(() => {
+      firstEl.classList.remove("flipped");
+      cardEl.classList.remove("flipped");
+      mmFirstPick = null;
+      mmLocked = false;
+      if (mmMode === "two" && !mmExtraTurn) {
+        mmCurrentPlayerIndex = (mmCurrentPlayerIndex + 1) % mmPlayers.length;
+        updateMemoryTopbar();
+        renderMemoryScores();
+      }
+      mmExtraTurn = false;
+    }, 900);
+  }
+}
+function endMemoryMatch() {
+  clearInterval(mmTimerInterval);
+  $("mmPlay").classList.add("hidden");
+  $("mmResult").classList.remove("hidden");
+  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
+  const m = Math.floor(elapsed / 60);
+  const s = elapsed % 60;
+  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
+  if (mmMode === "solo") {
+    $("mmResultIcon").textContent = "🎉";
+    $("mmResultTitle").textContent = "All pairs found!";
+    $("mmResultMsg").textContent = `Finished in ${mmMoves} moves (${timeStr}).`;
+  } else {
+    const p1 = mmPlayers[0], p2 = mmPlayers[1];
+    let winner;
+    if (p1.pairs > p2.pairs) winner = p1;
+    else if (p2.pairs > p1.pairs) winner = p2;
+    else winner = null;
+    $("mmResultIcon").textContent = winner ? "🏆" : "🤝";
+    $("mmResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+    $("mmResultMsg").textContent = `${p1.name}: ${p1.pairs} pairs — ${p2.name}: ${p2.pairs} pairs (${mmMoves} total moves)`;
+  }
+}
+function attachMemoryMatchListeners() {
+  const soloBtn = $("mmSoloBtn"), twoBtn = $("mmTwoBtn"), backToModes = $("mmBackToModes"),
+        startTwoBtn = $("mmStartTwoBtn"), readyBtn = $("mmReadyBtn"), quitBtn = $("mmQuitBtn"),
+        restartBtn = $("mmRestartBtn"), playAgainBtn = $("mmPlayAgainBtn"), doneBtn = $("mmDoneBtn");
+  if (soloBtn) soloBtn.addEventListener("click", startMemoryMatchSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("mmModePicker").classList.add("hidden");
+      $("mmTwoSetup").classList.remove("hidden");
+      $("mmP2Input").value = "";
+      setTimeout(() => $("mmP2Input").focus(), 100);
+    });
+  }
+  if (backToModes) {
+    backToModes.addEventListener("click", () => {
+      $("mmTwoSetup").classList.add("hidden");
+      $("mmModePicker").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startMemoryMatchTwo);
+  if (readyBtn) readyBtn.addEventListener("click", buildMemoryBoard);
+  if (quitBtn) quitBtn.addEventListener("click", () => { clearInterval(mmTimerInterval); showScreen("screen-games"); });
+  if (restartBtn) restartBtn.addEventListener("click", () => { clearInterval(mmTimerInterval); openMemoryMatch(); });
+  if (playAgainBtn) playAgainBtn.addEventListener("click", () => {
+    if (mmMode === "solo") startMemoryMatchSolo();
+    else if (mmMode === "two") {
+      mmPlayers.forEach(p => p.pairs = 0);
+      mmCurrentPlayerIndex = 0;
+      showMemoryPassScreen();
+    }
+  });
+  if (doneBtn) doneBtn.addEventListener("click", () => { clearInterval(mmTimerInterval); showScreen("screen-games"); });
+}
+
+// ===================================================
+// SPELLING BEE
+// ===================================================
+function openSpellingBee() {
+  sbLevel = null; sbMode = null; sbPlayers = []; sbCurrentPlayerIndex = 0;
+  sbWords = []; sbWordIndex = 0; sbRoundActive = false; sbWordLocked = false;
+  $("sbSetup").classList.remove("hidden");
+  $("sbTwoSetup").classList.add("hidden");
+  $("sbPassScreen").classList.add("hidden");
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.add("hidden");
+  document.querySelectorAll(".sb-level-card").forEach(c => c.classList.remove("selected"));
+  selectSpellingLevel("easy");
+}
+function selectSpellingLevel(level) {
+  sbLevel = level;
+  document.querySelectorAll(".sb-level-card").forEach(c => {
+    c.classList.toggle("selected", c.dataset.level === level);
+  });
+}
+function startSpellingBeeSolo() {
+  if (!sbLevel) return;
+  sbMode = "solo";
+  sbPlayers = [{ name: playerName || "Player", score: 0 }];
+  sbCurrentPlayerIndex = 0;
+  prepareSpellingRound();
+  $("sbSetup").classList.add("hidden");
+  startSpellingPlay();
+}
+function startSpellingBeeTwo() {
+  if (!sbLevel) return;
+  const p2 = ($("sbP2Input").value || "").trim() || "Player 2";
+  sbMode = "two";
+  sbPlayers = [{ name: playerName || "Player 1", score: 0 }, { name: p2, score: 0 }];
+  sbCurrentPlayerIndex = 0;
+  prepareSpellingRound();
+  $("sbTwoSetup").classList.add("hidden");
+  showSpellingPassScreen();
+}
+function prepareSpellingRound() {
+  const pool = SB_WORDS[sbLevel] || SB_WORDS.easy;
+  const shuffled = shuffle([...pool]);
+  sbWords = shuffled.slice(0, Math.min(sbRoundLength, shuffled.length));
+  sbWordIndex = 0;
+}
+function showSpellingPassScreen() {
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.add("hidden");
+  $("sbPassScreen").classList.remove("hidden");
+  $("sbPassName").textContent = sbPlayers[sbCurrentPlayerIndex].name;
+}
+function startSpellingPlay() {
+  $("sbPassScreen").classList.add("hidden");
+  $("sbPlay").classList.remove("hidden");
+  $("sbResult").classList.add("hidden");
+  sbRoundActive = true; sbWordLocked = false;
+  sbWordIndex = 0;
+  renderSpellingWord();
+}
+function renderSpellingWord() {
+  if (sbWordIndex >= sbWords.length) { endSpellingRound(); return; }
+  sbWordLocked = false;
+  const word = sbWords[sbWordIndex];
+  $("sbCurrentPlayer").textContent = sbPlayers[sbCurrentPlayerIndex].name;
+  $("sbProgressLabel").textContent = `Word ${sbWordIndex + 1} of ${sbWords.length}`;
+  const input = $("sbInput");
+  input.value = "";
+  input.disabled = false;
+  input.classList.remove("correct", "wrong");
+  $("sbFeedback").textContent = "";
+  $("sbFeedback").className = "sb-feedback";
+  setTimeout(() => { if (sbRoundActive) speakWord(word, $("sbPlayBtn")); }, 200);
+  setTimeout(() => input.focus(), 100);
+}
+function handleSpellingSubmit() {
+  if (sbWordLocked || !sbRoundActive) return;
+  const input = $("sbInput");
+  const typed = (input.value || "").trim().toLowerCase();
+  const correct = sbWords[sbWordIndex].toLowerCase();
+  if (!typed) return;
+  sbWordLocked = true;
+  input.disabled = true;
+  if (typed === correct) {
+    sbPlayers[sbCurrentPlayerIndex].score++;
+    input.classList.add("correct");
+    $("sbFeedback").textContent = "✅ Correct!";
+    $("sbFeedback").className = "sb-feedback correct";
+  } else {
+    input.classList.add("wrong");
+    $("sbFeedback").textContent = `❌ Correct spelling: ${correct}`;
+    $("sbFeedback").className = "sb-feedback wrong";
+  }
+  setTimeout(() => {
+    if (!sbRoundActive) return;
+    if (sbMode === "two") sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
+    sbWordIndex++;
+    if (sbWordIndex >= sbWords.length) { endSpellingRound(); return; }
+    if (sbMode === "two") {
+      showSpellingPassScreen();
+      $("sbReadyBtn").onclick = () => startSpellingPlay();
+    } else renderSpellingWord();
+  }, 1400);
+}
+function handleSpellingSkip() {
+  if (sbWordLocked || !sbRoundActive) return;
+  sbWordLocked = true;
+  const correct = sbWords[sbWordIndex].toLowerCase();
+  $("sbInput").classList.add("wrong");
+  $("sbInput").disabled = true;
+  $("sbFeedback").textContent = `Skipped — correct spelling: ${correct}`;
+  $("sbFeedback").className = "sb-feedback wrong";
+  setTimeout(() => {
+    if (!sbRoundActive) return;
+    if (sbMode === "two") sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
+    sbWordIndex++;
+    if (sbWordIndex >= sbWords.length) endSpellingRound();
+    else if (sbMode === "two") {
+      showSpellingPassScreen();
+      $("sbReadyBtn").onclick = () => startSpellingPlay();
+    } else renderSpellingWord();
+  }, 1400);
+}
+function endSpellingRound() {
+  sbRoundActive = false;
+  $("sbPlay").classList.add("hidden");
+  $("sbResult").classList.remove("hidden");
+  if (sbMode === "solo") {
+    const score = sbPlayers[0].score;
+    const total = sbWords.length;
+    const pct = Math.round((score / total) * 100);
+    let title = "Well done!", icon = "🎉";
+    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
+    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
+    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
+    else { title = "Keep practising!"; icon = "💪"; }
+    $("sbResultIcon").textContent = icon;
+    $("sbResultTitle").textContent = title;
+    $("sbResultMsg").textContent = `You got ${score} of ${total} correct (${pct}%).`;
+  } else {
+    const p1 = sbPlayers[0], p2 = sbPlayers[1];
+    let winner;
+    if (p1.score > p2.score) winner = p1;
+    else if (p2.score > p1.score) winner = p2;
+    else winner = null;
+    $("sbResultIcon").textContent = winner ? "🏆" : "🤝";
+    $("sbResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+    $("sbResultMsg").textContent = `${p1.name}: ${p1.score} — ${p2.name}: ${p2.score}`;
+  }
+}
+function attachSpellingBeeListeners() {
+  document.querySelectorAll(".sb-level-card").forEach(card => {
+    card.addEventListener("click", () => selectSpellingLevel(card.dataset.level));
+  });
+  const soloBtn = $("sbSoloBtn"), twoBtn = $("sbTwoBtn"), backBtn = $("sbBackToSetup"),
+        startTwoBtn = $("sbStartTwoBtn"), readyBtn = $("sbReadyBtn"), submitBtn = $("sbSubmitBtn"),
+        skipBtn = $("sbSkipBtn"), playBtn = $("sbPlayBtn"), input = $("sbInput"),
+        playAgainBtn = $("sbPlayAgainBtn"), doneBtn = $("sbDoneBtn");
+  if (soloBtn) soloBtn.addEventListener("click", startSpellingBeeSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("sbSetup").classList.add("hidden");
+      $("sbTwoSetup").classList.remove("hidden");
+      $("sbP2Input").value = "";
+      setTimeout(() => $("sbP2Input").focus(), 100);
+    });
+  }
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      $("sbTwoSetup").classList.add("hidden");
+      $("sbSetup").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startSpellingBeeTwo);
+  if (readyBtn) readyBtn.addEventListener("click", () => startSpellingPlay());
+  if (submitBtn) submitBtn.addEventListener("click", handleSpellingSubmit);
+  if (skipBtn) skipBtn.addEventListener("click", handleSpellingSkip);
+  if (playBtn) {
+    playBtn.addEventListener("click", () => {
+      if (sbRoundActive && !sbWordLocked) speakWord(sbWords[sbWordIndex], playBtn);
+    });
+  }
+  if (input) {
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") { e.preventDefault(); handleSpellingSubmit(); }
+    });
+  }
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener("click", () => {
+      if (sbMode === "solo") startSpellingBeeSolo();
+      else if (sbMode === "two") {
+        sbPlayers.forEach(p => p.score = 0);
+        sbCurrentPlayerIndex = 0;
+        prepareSpellingRound();
+        showSpellingPassScreen();
+        $("sbReadyBtn").onclick = () => startSpellingPlay();
+      }
+    });
+  }
+  if (doneBtn) doneBtn.addEventListener("click", () => showScreen("screen-games"));
+}
+
+// ===================================================
+// TIMES TABLES
+// ===================================================
+function openTimesTables() {
+  ttLevel = null; ttMode = null; ttPlayers = []; ttCurrentPlayerIndex = 0;
+  ttQuestions = []; ttQuestionIndex = 0; ttRoundActive = false; ttQuestionLocked = false;
+  clearInterval(ttTimerInterval);
+  document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
+  $("ttLevelPicker").classList.remove("hidden");
+  $("ttModePicker").classList.add("hidden");
+  $("ttTwoSetup").classList.add("hidden");
+  $("ttPassScreen").classList.add("hidden");
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.add("hidden");
+}
+function selectTimesLevel(level) {
+  ttLevel = level;
+  document.querySelectorAll(".tt-level-card").forEach(c => {
+    c.classList.toggle("selected", c.dataset.level === level);
+  });
+  $("ttLevelLabel").textContent = TT_LEVELS[level].label;
+  $("ttLevelPicker").classList.add("hidden");
+  $("ttModePicker").classList.remove("hidden");
+}
+function buildTimesQuestions() {
+  const tables = TT_LEVELS[ttLevel].tables;
+  const questions = [];
+  for (let i = 0; i < 12; i++) {
+    const table = tables[Math.floor(Math.random() * tables.length)];
+    const multiplier = Math.floor(Math.random() * 12) + 1;
+    questions.push({ a: table, b: multiplier, answer: table * multiplier });
+  }
+  return questions;
+}
+function makeTimesOptions(answer) {
+  const options = new Set([answer]);
+  while (options.size < 4) {
+    const delta = Math.floor(Math.random() * 20) - 10;
+    const wrong = answer + delta;
+    if (wrong > 0 && wrong !== answer) options.add(wrong);
+  }
+  return shuffle([...options]);
+}
+function startTimesTablesSolo() {
+  ttMode = "solo";
+  ttPlayers = [{ name: playerName || "Player", score: 0 }];
+  ttCurrentPlayerIndex = 0;
+  $("ttModePicker").classList.add("hidden");
+  startTimesRound();
+}
+function startTimesTablesTwo() {
+  const p2 = ($("ttP2Input").value || "").trim() || "Player 2";
+  ttMode = "two";
+  ttPlayers = [{ name: playerName || "Player 1", score: 0 }, { name: p2, score: 0 }];
+  ttCurrentPlayerIndex = 0;
+  $("ttTwoSetup").classList.add("hidden");
+  showTimesPassScreen();
+}
+function showTimesPassScreen() {
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.add("hidden");
+  $("ttPassScreen").classList.remove("hidden");
+  $("ttPassName").textContent = ttPlayers[ttCurrentPlayerIndex].name;
+}
+function startTimesRound() {
+  $("ttPassScreen").classList.add("hidden");
+  $("ttPlay").classList.remove("hidden");
+  $("ttResult").classList.add("hidden");
+  ttRoundActive = true; ttQuestionLocked = false; ttQuestionIndex = 0;
+  ttQuestions = buildTimesQuestions();
+  ttStartTime = Date.now();
+  ttPlayers[ttCurrentPlayerIndex].score = 0;
+  $("ttCurrentPlayer").textContent = ttPlayers[ttCurrentPlayerIndex].name;
+  $("ttScore").textContent = 0;
+  clearInterval(ttTimerInterval);
+  const seconds = TT_LEVELS[ttLevel].seconds;
+  if (seconds) {
+    ttTotalSeconds = seconds;
+    ttTimeLeft = seconds;
+    $("ttTimer").textContent = `${ttTimeLeft}s`;
+    $("ttTimer").classList.remove("warning");
+    ttTimerInterval = setInterval(() => {
+      ttTimeLeft--;
+      $("ttTimer").textContent = `${ttTimeLeft}s`;
+      if (ttTimeLeft <= 10) $("ttTimer").classList.add("warning");
+      if (ttTimeLeft <= 0) { clearInterval(ttTimerInterval); endTimesRound(); }
+    }, 1000);
+  } else {
+    $("ttTimer").textContent = "";
+    $("ttTimer").classList.remove("warning");
+  }
+  renderTimesQuestion();
+}
+function renderTimesQuestion() {
+  if (ttQuestionIndex >= ttQuestions.length) { endTimesRound(); return; }
+  ttQuestionLocked = false;
+  const q = ttQuestions[ttQuestionIndex];
+  $("ttProgressLabel").textContent = `Question ${ttQuestionIndex + 1} of ${ttQuestions.length}`;
+  $("ttQuestion").textContent = `${q.a} × ${q.b}`;
+  const options = makeTimesOptions(q.answer);
+  const container = $("ttOptions");
+  container.innerHTML = "";
+  options.forEach(opt => {
+    const btn = el("button", "ms-option");
+    btn.textContent = opt;
+    btn.addEventListener("click", () => handleTimesAnswer(btn, opt));
+    container.appendChild(btn);
+  });
+}
+function handleTimesAnswer(btn, chosen) {
+  if (ttQuestionLocked || !ttRoundActive) return;
+  ttQuestionLocked = true;
+  const q = ttQuestions[ttQuestionIndex];
+  const correct = q.answer;
+  const buttons = $("ttOptions").querySelectorAll(".ms-option");
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (parseInt(b.textContent, 10) === correct) b.classList.add("correct");
+  });
+  if (chosen === correct) {
+    ttPlayers[ttCurrentPlayerIndex].score++;
+    $("ttScore").textContent = ttPlayers[ttCurrentPlayerIndex].score;
+  } else btn.classList.add("wrong");
+  setTimeout(() => {
+    if (!ttRoundActive) return;
+    ttQuestionIndex++;
+    if (ttQuestionIndex >= ttQuestions.length) endTimesRound();
+    else renderTimesQuestion();
+  }, 400);
+}
+function endTimesRound() {
+  ttRoundActive = false;
+  clearInterval(ttTimerInterval);
+  $("ttPlay").classList.add("hidden");
+  $("ttResult").classList.remove("hidden");
+  const totalTime = ttStartTime ? Math.floor((Date.now() - ttStartTime) / 1000) : 0;
+  const score = ttPlayers[ttCurrentPlayerIndex].score;
+  const total = ttQuestions.length;
+  if (ttMode === "solo") {
+    const pct = Math.round((score / total) * 100);
+    let title = "Well done!", icon = "🎉";
+    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
+    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
+    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
+    else { title = "Keep practising!"; icon = "💪"; }
+    $("ttResultIcon").textContent = icon;
+    $("ttResultTitle").textContent = title;
+    $("ttResultMsg").textContent = `You scored ${score} out of ${total} in ${totalTime}s.`;
+    $("ttPlayAgainBtn").textContent = "Play Again";
+    $("ttDoneBtn").textContent = "Done";
+  } else {
+    const isLast = ttCurrentPlayerIndex >= ttPlayers.length - 1;
+    if (!isLast) {
+      $("ttResultIcon").textContent = "🎯";
+      $("ttResultTitle").textContent = `${ttPlayers[ttCurrentPlayerIndex].name} scored ${score}/${total}`;
+      $("ttResultMsg").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name}.`;
+      $("ttPlayAgainBtn").textContent = "Restart Level";
+      $("ttDoneBtn").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name} →`;
+    } else {
+      const p1 = ttPlayers[0], p2 = ttPlayers[1];
+      let winner;
+      if (p1.score > p2.score) winner = p1;
+      else if (p2.score > p1.score) winner = p2;
+      else winner = null;
+      $("ttResultIcon").textContent = winner ? "🏆" : "🤝";
+      $("ttResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
+      $("ttResultMsg").textContent = `${p1.name}: ${p1.score}/${total} — ${p2.name}: ${p2.score}/${total}`;
+      $("ttPlayAgainBtn").textContent = "Play Again";
+      $("ttDoneBtn").textContent = "Done";
+    }
+  }
+}
+function handleTimesPlayAgain() {
+  if (ttMode === "solo") { startTimesRound(); return; }
+  if (ttCurrentPlayerIndex >= ttPlayers.length - 1) {
+    ttPlayers.forEach(p => p.score = 0);
+    ttCurrentPlayerIndex = 0;
+    showTimesPassScreen();
+  } else startTimesRound();
+}
+function handleTimesDone() {
+  if (ttMode === "two" && ttCurrentPlayerIndex < ttPlayers.length - 1) {
+    ttCurrentPlayerIndex++;
+    showTimesPassScreen();
+  } else showScreen("screen-games");
+}
+function attachTimesTablesListeners() {
+  document.querySelectorAll(".tt-level-card").forEach(card => {
+    card.addEventListener("click", () => selectTimesLevel(card.dataset.level));
+  });
+  const backToLevels = $("ttBackToLevels"), soloBtn = $("ttSoloBtn"), twoBtn = $("ttTwoBtn"),
+        cancelTwo = $("ttCancelTwo"), startTwoBtn = $("ttStartTwoBtn"), readyBtn = $("ttReadyBtn"),
+        playAgainBtn = $("ttPlayAgainBtn"), doneBtn = $("ttDoneBtn");
+  if (backToLevels) {
+    backToLevels.addEventListener("click", () => {
+      $("ttModePicker").classList.add("hidden");
+      $("ttLevelPicker").classList.remove("hidden");
+      document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
+    });
+  }
+  if (soloBtn) soloBtn.addEventListener("click", startTimesTablesSolo);
+  if (twoBtn) {
+    twoBtn.addEventListener("click", () => {
+      $("ttModePicker").classList.add("hidden");
+      $("ttTwoSetup").classList.remove("hidden");
+      $("ttP2Input").value = "";
+      setTimeout(() => $("ttP2Input").focus(), 100);
+    });
+  }
+  if (cancelTwo) {
+    cancelTwo.addEventListener("click", () => {
+      $("ttTwoSetup").classList.add("hidden");
+      $("ttModePicker").classList.remove("hidden");
+    });
+  }
+  if (startTwoBtn) startTwoBtn.addEventListener("click", startTimesTablesTwo);
+  if (readyBtn) readyBtn.addEventListener("click", startTimesRound);
+  if (playAgainBtn) playAgainBtn.addEventListener("click", handleTimesPlayAgain);
+  if (doneBtn) doneBtn.addEventListener("click", handleTimesDone);
+}
+
+// ===================================================
+// SITE NAV
+// ===================================================
+function attachSiteNavListeners() {
+  // Logo click → always go home
+  const logo = $("logoLink");
+  if (logo) {
+    logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      showScreen("screen-home");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Every [data-nav] link or button
+  document.querySelectorAll("[data-nav]").forEach(node => {
+    node.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = node.dataset.nav;
+
+      // Close mobile menu if open
+      const nav = $("siteNav");
+      if (nav) nav.classList.remove("mobile-open");
+
+      if (target === "home") {
+        showScreen("screen-home");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      if (target === "subjects") {
+        showScreen("screen-home", { keepScroll: true });
+        setTimeout(() => {
+          const node = $("subjects");
+          if (node) {
+            const y = node.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+          }
+        }, 150);
+        return;
+      }
+      if (target === "tools") {
+        showScreen("screen-home", { keepScroll: true });
+        setTimeout(() => {
+          const node = $("tools");
+          if (node) {
+            const y = node.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+          }
+        }, 150);
+        return;
+      }
+      if (target === "games") {
+        window.scrollTo({ top: 0, behavior: "auto" });
+        showScreen("screen-games", { keepScroll: true });
+        updateGamesScreen();
+        return;
+      }
+      if (target === "about") {
+        const node = $("about");
+        if (node) {
+          const y = node.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        }
+        return;
+      }
+      if (target === "contact") {
+        const node = $("contact");
+        if (node) {
+          const y = node.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        }
+        return;
+      }
+    });
+  });
+
+  // Mobile hamburger toggle
+  const menuBtn = $("menuBtn");
+  const siteNav = $("siteNav");
+  if (menuBtn && siteNav) {
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      siteNav.classList.toggle("mobile-open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.classList.contains("mobile-open")) return;
+      if (!siteNav.contains(e.target) && e.target !== menuBtn) {
+        siteNav.classList.remove("mobile-open");
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1025) siteNav.classList.remove("mobile-open");
+    });
+  }
+}
+
+// ===================================================
 // GLOBAL LISTENERS
 // ===================================================
 function attachGlobalListeners() {
@@ -1683,11 +2113,10 @@ function attachGlobalListeners() {
                active === "screen-dictionary" ||
                active === "screen-typing" ||
                active === "screen-games") showScreen("screen-home");
-      else if (active === "screen-mathsprint") {
-        clearInterval(msTimerInterval);
-        msRoundActive = false;
-        showScreen("screen-games");
-      }
+      else if (active === "screen-mathsprint") { clearInterval(msTimerInterval); msRoundActive = false; showScreen("screen-games"); }
+      else if (active === "screen-memorymatch") { clearInterval(mmTimerInterval); showScreen("screen-games"); }
+      else if (active === "screen-spellingbee") { sbRoundActive = false; showScreen("screen-games"); }
+      else if (active === "screen-timestables") { clearInterval(ttTimerInterval); ttRoundActive = false; showScreen("screen-games"); }
     });
   });
 
@@ -1717,10 +2146,7 @@ function attachGlobalListeners() {
       quizHistory = [];
       typingStats = { lessonsDone: 0, bestWpm: 0 };
       studyTracker = { secondsToday: 0, unlockedAt: null, unlocksTotal: 0, lastUpdate: Date.now() };
-      saveProgress();
-      saveHistory();
-      saveTypingStats();
-      saveStudyTracker();
+      saveProgress(); saveHistory(); saveTypingStats(); saveStudyTracker();
       updateStudyBanner();
       renderProgress();
     }
@@ -1765,853 +2191,8 @@ function shuffle(arr) {
   }
   return arr;
 }
+
 // ===================================================
-// MEMORY MATCH
-// ===================================================
-function openMemoryMatch() {
-  mmMode = null;
-  mmPlayers = [];
-  mmCurrentPlayerIndex = 0;
-  mmFirstPick = null;
-  mmLocked = false;
-  mmMoves = 0;
-  mmPairsFound = 0;
-  mmExtraTurn = false;
-  clearInterval(mmTimerInterval);
-  mmStartTime = null;
-
-  $("mmModePicker").classList.remove("hidden");
-  $("mmTwoSetup").classList.add("hidden");
-  $("mmPassScreen").classList.add("hidden");
-  $("mmPlay").classList.add("hidden");
-  $("mmResult").classList.add("hidden");
-}
-
-function startMemoryMatchSolo() {
-  mmMode = "solo";
-  mmPlayers = [{ name: playerName || "Player", pairs: 0 }];
-  mmCurrentPlayerIndex = 0;
-  mmTotalPairs = 6;
-  $("mmModePicker").classList.add("hidden");
-  buildMemoryBoard();
-}
-
-function startMemoryMatchTwo() {
-  const p2 = ($("mmP2Input").value || "").trim() || "Player 2";
-  mmMode = "two";
-  mmPlayers = [
-    { name: playerName || "Player 1", pairs: 0 },
-    { name: p2, pairs: 0 }
-  ];
-  mmCurrentPlayerIndex = 0;
-  mmTotalPairs = 6;
-  $("mmTwoSetup").classList.add("hidden");
-  showMemoryPassScreen();
-}
-
-function showMemoryPassScreen() {
-  $("mmPlay").classList.add("hidden");
-  $("mmResult").classList.add("hidden");
-  $("mmPassScreen").classList.remove("hidden");
-  $("mmPassName").textContent = mmPlayers[mmCurrentPlayerIndex].name;
-}
-
-function buildMemoryBoard() {
-  $("mmPassScreen").classList.add("hidden");
-  $("mmPlay").classList.remove("hidden");
-  $("mmResult").classList.add("hidden");
-
-  // Pick pairs randomly
-  const pairs = shuffle([...MM_PAIR_POOL]).slice(0, mmTotalPairs);
-
-  // Build cards array — each pair has 2 cards
-  mmBoard = [];
-  pairs.forEach((pair, pairId) => {
-    mmBoard.push({ pairId, text: pair.a, matched: false });
-    mmBoard.push({ pairId, text: pair.b, matched: false });
-  });
-  mmBoard = shuffle(mmBoard);
-
-  // Reset state
-  mmFirstPick = null;
-  mmLocked = false;
-  mmMoves = 0;
-  mmPairsFound = 0;
-  mmExtraTurn = false;
-  mmStartTime = Date.now();
-
-  renderMemoryBoard();
-  updateMemoryTopbar();
-  renderMemoryScores();
-
-  clearInterval(mmTimerInterval);
-  mmTimerInterval = setInterval(updateMemoryTopbar, 500);
-}
-
-function renderMemoryBoard() {
-  const board = $("mmBoard");
-  board.innerHTML = "";
-
-  mmBoard.forEach((card, index) => {
-    const btn = el("button", "mm-card" + (card.matched ? " matched" : ""));
-    btn.dataset.index = index;
-    btn.innerHTML = `
-      <div class="mm-card-inner mm-front">?</div>
-      <div class="mm-card-inner mm-back">${card.text}</div>
-    `;
-    btn.addEventListener("click", () => handleMemoryCardClick(index));
-    board.appendChild(btn);
-  });
-}
-
-function updateMemoryTopbar() {
-  const nameEl = $("mmCurrentPlayer");
-  const metaEl = $("mmMeta");
-  if (!nameEl || !metaEl) return;
-
-  nameEl.textContent = mmPlayers[mmCurrentPlayerIndex]?.name || "Player";
-
-  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
-  const m = Math.floor(elapsed / 60);
-  const s = elapsed % 60;
-  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
-  metaEl.textContent = `Moves: ${mmMoves} • ${timeStr}`;
-}
-
-function renderMemoryScores() {
-  const scores = $("mmScores");
-  if (!scores) return;
-  scores.innerHTML = "";
-  if (mmMode !== "two") return;
-
-  mmPlayers.forEach((p, i) => {
-    const div = el("div", "mm-score" + (i === mmCurrentPlayerIndex ? " active" : ""));
-    div.innerHTML = `
-      <span class="mm-score-name">${p.name}</span>
-      <span class="mm-score-val">${p.pairs} pairs</span>
-    `;
-    scores.appendChild(div);
-  });
-}
-
-function handleMemoryCardClick(index) {
-  if (mmLocked) return;
-  const card = mmBoard[index];
-  if (card.matched) return;
-
-  const cardEl = document.querySelector(`.mm-card[data-index="${index}"]`);
-  if (!cardEl || cardEl.classList.contains("flipped")) return;
-
-  // Flip the card
-  cardEl.classList.add("flipped");
-
-  // First pick
-  if (mmFirstPick === null) {
-    mmFirstPick = index;
-    return;
-  }
-
-  // Second pick
-  mmMoves++;
-  const firstCard = mmBoard[mmFirstPick];
-  const firstEl = document.querySelector(`.mm-card[data-index="${mmFirstPick}"]`);
-
-  if (firstCard.pairId === card.pairId) {
-    // Match!
-    firstCard.matched = true;
-    card.matched = true;
-    firstEl.classList.add("matched");
-    cardEl.classList.add("matched");
-    mmPairsFound++;
-
-    if (mmMode === "two") {
-      mmPlayers[mmCurrentPlayerIndex].pairs++;
-      mmExtraTurn = true;
-    } else {
-      mmPlayers[0].pairs++;
-    }
-
-    mmFirstPick = null;
-    renderMemoryScores();
-    updateMemoryTopbar();
-
-    if (mmPairsFound >= mmTotalPairs) {
-      setTimeout(endMemoryMatch, 600);
-    }
-  } else {
-    // No match — flip back after a delay
-    mmLocked = true;
-    setTimeout(() => {
-      firstEl.classList.remove("flipped");
-      cardEl.classList.remove("flipped");
-      mmFirstPick = null;
-      mmLocked = false;
-
-      if (mmMode === "two" && !mmExtraTurn) {
-        // Next player's turn
-        mmCurrentPlayerIndex = (mmCurrentPlayerIndex + 1) % mmPlayers.length;
-        updateMemoryTopbar();
-        renderMemoryScores();
-      }
-      mmExtraTurn = false;
-    }, 900);
-  }
-}
-
-function endMemoryMatch() {
-  clearInterval(mmTimerInterval);
-  $("mmPlay").classList.add("hidden");
-  $("mmResult").classList.remove("hidden");
-
-  const elapsed = mmStartTime ? Math.floor((Date.now() - mmStartTime) / 1000) : 0;
-  const m = Math.floor(elapsed / 60);
-  const s = elapsed % 60;
-  const timeStr = m > 0 ? `${m}m ${s}s` : `${s}s`;
-
-  if (mmMode === "solo") {
-    $("mmResultIcon").textContent = "🎉";
-    $("mmResultTitle").textContent = "All pairs found!";
-    $("mmResultMsg").textContent = `Finished in ${mmMoves} moves (${timeStr}).`;
-  } else {
-    const p1 = mmPlayers[0];
-    const p2 = mmPlayers[1];
-    let winner;
-    if (p1.pairs > p2.pairs) winner = p1;
-    else if (p2.pairs > p1.pairs) winner = p2;
-    else winner = null;
-
-    $("mmResultIcon").textContent = winner ? "🏆" : "🤝";
-    $("mmResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
-    $("mmResultMsg").textContent = `${p1.name}: ${p1.pairs} pairs — ${p2.name}: ${p2.pairs} pairs (${mmMoves} total moves)`;
-  }
-}
-
-function attachMemoryMatchListeners() {
-  const soloBtn = $("mmSoloBtn");
-  const twoBtn = $("mmTwoBtn");
-  const backToModes = $("mmBackToModes");
-  const startTwoBtn = $("mmStartTwoBtn");
-  const readyBtn = $("mmReadyBtn");
-  const quitBtn = $("mmQuitBtn");
-  const restartBtn = $("mmRestartBtn");
-  const playAgainBtn = $("mmPlayAgainBtn");
-  const doneBtn = $("mmDoneBtn");
-
-  if (soloBtn) soloBtn.addEventListener("click", startMemoryMatchSolo);
-  if (twoBtn) {
-    twoBtn.addEventListener("click", () => {
-      $("mmModePicker").classList.add("hidden");
-      $("mmTwoSetup").classList.remove("hidden");
-      $("mmP2Input").value = "";
-      setTimeout(() => $("mmP2Input").focus(), 100);
-    });
-  }
-  if (backToModes) {
-    backToModes.addEventListener("click", () => {
-      $("mmTwoSetup").classList.add("hidden");
-      $("mmModePicker").classList.remove("hidden");
-    });
-  }
-  if (startTwoBtn) startTwoBtn.addEventListener("click", startMemoryMatchTwo);
-  if (readyBtn) readyBtn.addEventListener("click", buildMemoryBoard);
-  if (quitBtn) quitBtn.addEventListener("click", () => {
-    clearInterval(mmTimerInterval);
-    showScreen("screen-games");
-  });
-  if (restartBtn) restartBtn.addEventListener("click", () => {
-    clearInterval(mmTimerInterval);
-    openMemoryMatch();
-  });
-  if (playAgainBtn) playAgainBtn.addEventListener("click", () => {
-    if (mmMode === "solo") startMemoryMatchSolo();
-    else if (mmMode === "two") {
-      mmPlayers.forEach(p => p.pairs = 0);
-      mmCurrentPlayerIndex = 0;
-      showMemoryPassScreen();
-    }
-  });
-  if (doneBtn) doneBtn.addEventListener("click", () => {
-    clearInterval(mmTimerInterval);
-    showScreen("screen-games");
-  });
-}// ===================================================
-// SPELLING BEE
-// ===================================================
-function openSpellingBee() {
-  sbLevel = null;
-  sbMode = null;
-  sbPlayers = [];
-  sbCurrentPlayerIndex = 0;
-  sbWords = [];
-  sbWordIndex = 0;
-  sbRoundActive = false;
-  sbWordLocked = false;
-
-  $("sbSetup").classList.remove("hidden");
-  $("sbTwoSetup").classList.add("hidden");
-  $("sbPassScreen").classList.add("hidden");
-  $("sbPlay").classList.add("hidden");
-  $("sbResult").classList.add("hidden");
-
-  // Reset level selection
-  document.querySelectorAll(".sb-level-card").forEach(c => c.classList.remove("selected"));
-  // Default to easy
-  selectSpellingLevel("easy");
-}
-
-function selectSpellingLevel(level) {
-  sbLevel = level;
-  document.querySelectorAll(".sb-level-card").forEach(c => {
-    c.classList.toggle("selected", c.dataset.level === level);
-  });
-}
-
-function startSpellingBeeSolo() {
-  if (!sbLevel) return;
-  sbMode = "solo";
-  sbPlayers = [{ name: playerName || "Player", score: 0 }];
-  sbCurrentPlayerIndex = 0;
-  prepareSpellingRound();
-  $("sbSetup").classList.add("hidden");
-  startSpellingPlay();
-}
-
-function startSpellingBeeTwo() {
-  if (!sbLevel) return;
-  const p2 = ($("sbP2Input").value || "").trim() || "Player 2";
-  sbMode = "two";
-  sbPlayers = [
-    { name: playerName || "Player 1", score: 0 },
-    { name: p2, score: 0 }
-  ];
-  sbCurrentPlayerIndex = 0;
-  prepareSpellingRound();
-  $("sbTwoSetup").classList.add("hidden");
-  showSpellingPassScreen();
-}
-
-function prepareSpellingRound() {
-  // Pick words at random from the level's pool
-  const pool = SB_WORDS[sbLevel] || SB_WORDS.easy;
-  const shuffled = shuffle([...pool]);
-  sbWords = shuffled.slice(0, Math.min(sbRoundLength, shuffled.length));
-  sbWordIndex = 0;
-}
-
-function showSpellingPassScreen() {
-  $("sbPlay").classList.add("hidden");
-  $("sbResult").classList.add("hidden");
-  $("sbPassScreen").classList.remove("hidden");
-  $("sbPassName").textContent = sbPlayers[sbCurrentPlayerIndex].name;
-}
-
-function startSpellingPlay() {
-  $("sbPassScreen").classList.add("hidden");
-  $("sbPlay").classList.remove("hidden");
-  $("sbResult").classList.add("hidden");
-  sbRoundActive = true;
-  sbWordLocked = false;
-  sbWordIndex = 0;
-  renderSpellingWord();
-}
-
-function renderSpellingWord() {
-  if (sbWordIndex >= sbWords.length) {
-    endSpellingRound();
-    return;
-  }
-
-  sbWordLocked = false;
-  const word = sbWords[sbWordIndex];
-
-  $("sbCurrentPlayer").textContent = sbPlayers[sbCurrentPlayerIndex].name;
-  $("sbProgressLabel").textContent = `Word ${sbWordIndex + 1} of ${sbWords.length}`;
-
-  const input = $("sbInput");
-  input.value = "";
-  input.disabled = false;
-  input.classList.remove("correct", "wrong");
-  $("sbFeedback").textContent = "";
-  $("sbFeedback").className = "sb-feedback";
-
-  // Auto-play the word after a short delay
-  setTimeout(() => {
-    if (sbRoundActive) speakWord(word, $("sbPlayBtn"));
-  }, 200);
-
-  setTimeout(() => input.focus(), 100);
-}
-
-function handleSpellingSubmit() {
-  if (sbWordLocked || !sbRoundActive) return;
-
-  const input = $("sbInput");
-  const typed = (input.value || "").trim().toLowerCase();
-  const correct = sbWords[sbWordIndex].toLowerCase();
-
-  if (!typed) return;
-
-  sbWordLocked = true;
-  input.disabled = true;
-
-  if (typed === correct) {
-    sbPlayers[sbCurrentPlayerIndex].score++;
-    input.classList.add("correct");
-    $("sbFeedback").textContent = "✅ Correct!";
-    $("sbFeedback").className = "sb-feedback correct";
-  } else {
-    input.classList.add("wrong");
-    $("sbFeedback").textContent = `❌ Correct spelling: ${correct}`;
-    $("sbFeedback").className = "sb-feedback wrong";
-  }
-
-  // Next word after a delay
-  setTimeout(() => {
-    if (!sbRoundActive) return;
-
-    if (sbMode === "two") {
-      // Alternate players each word
-      sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
-    }
-
-    sbWordIndex++;
-
-    if (sbWordIndex >= sbWords.length) {
-      endSpellingRound();
-    } else {
-      if (sbMode === "two") {
-        // Show pass screen between turns
-        showSpellingPassScreen();
-        // But we need to auto-resume from pass screen
-        // Rebind ready button for this flow
-        const readyBtn = $("sbReadyBtn");
-        readyBtn.onclick = () => startSpellingPlay();
-      } else {
-        renderSpellingWord();
-      }
-    }
-  }, 1400);
-}
-
-function handleSpellingSkip() {
-  if (sbWordLocked || !sbRoundActive) return;
-  sbWordLocked = true;
-
-  const correct = sbWords[sbWordIndex].toLowerCase();
-  $("sbInput").classList.add("wrong");
-  $("sbInput").disabled = true;
-  $("sbFeedback").textContent = `Skipped — correct spelling: ${correct}`;
-  $("sbFeedback").className = "sb-feedback wrong";
-
-  setTimeout(() => {
-    if (!sbRoundActive) return;
-    if (sbMode === "two") {
-      sbCurrentPlayerIndex = (sbCurrentPlayerIndex + 1) % sbPlayers.length;
-    }
-    sbWordIndex++;
-    if (sbWordIndex >= sbWords.length) endSpellingRound();
-    else if (sbMode === "two") {
-      showSpellingPassScreen();
-      $("sbReadyBtn").onclick = () => startSpellingPlay();
-    } else {
-      renderSpellingWord();
-    }
-  }, 1400);
-}
-
-function endSpellingRound() {
-  sbRoundActive = false;
-  $("sbPlay").classList.add("hidden");
-  $("sbResult").classList.remove("hidden");
-
-  if (sbMode === "solo") {
-    const score = sbPlayers[0].score;
-    const total = sbWords.length;
-    const pct = Math.round((score / total) * 100);
-
-    let title = "Well done!";
-    let icon = "🎉";
-    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
-    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
-    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
-    else { title = "Keep practising!"; icon = "💪"; }
-
-    $("sbResultIcon").textContent = icon;
-    $("sbResultTitle").textContent = title;
-    $("sbResultMsg").textContent = `You got ${score} of ${total} correct (${pct}%).`;
-  } else {
-    const p1 = sbPlayers[0];
-    const p2 = sbPlayers[1];
-    let winner;
-    if (p1.score > p2.score) winner = p1;
-    else if (p2.score > p1.score) winner = p2;
-    else winner = null;
-
-    $("sbResultIcon").textContent = winner ? "🏆" : "🤝";
-    $("sbResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
-    $("sbResultMsg").textContent = `${p1.name}: ${p1.score} — ${p2.name}: ${p2.score}`;
-  }
-}
-
-function attachSpellingBeeListeners() {
-  document.querySelectorAll(".sb-level-card").forEach(card => {
-    card.addEventListener("click", () => selectSpellingLevel(card.dataset.level));
-  });
-
-  const soloBtn = $("sbSoloBtn");
-  const twoBtn = $("sbTwoBtn");
-  const backBtn = $("sbBackToSetup");
-  const startTwoBtn = $("sbStartTwoBtn");
-  const readyBtn = $("sbReadyBtn");
-  const submitBtn = $("sbSubmitBtn");
-  const skipBtn = $("sbSkipBtn");
-  const playBtn = $("sbPlayBtn");
-  const input = $("sbInput");
-  const playAgainBtn = $("sbPlayAgainBtn");
-  const doneBtn = $("sbDoneBtn");
-
-  if (soloBtn) soloBtn.addEventListener("click", startSpellingBeeSolo);
-  if (twoBtn) {
-    twoBtn.addEventListener("click", () => {
-      $("sbSetup").classList.add("hidden");
-      $("sbTwoSetup").classList.remove("hidden");
-      $("sbP2Input").value = "";
-      setTimeout(() => $("sbP2Input").focus(), 100);
-    });
-  }
-  if (backBtn) {
-    backBtn.addEventListener("click", () => {
-      $("sbTwoSetup").classList.add("hidden");
-      $("sbSetup").classList.remove("hidden");
-    });
-  }
-  if (startTwoBtn) startTwoBtn.addEventListener("click", startSpellingBeeTwo);
-  if (readyBtn) {
-    readyBtn.addEventListener("click", () => startSpellingPlay());
-  }
-  if (submitBtn) submitBtn.addEventListener("click", handleSpellingSubmit);
-  if (skipBtn) skipBtn.addEventListener("click", handleSpellingSkip);
-  if (playBtn) {
-    playBtn.addEventListener("click", () => {
-      if (sbRoundActive && !sbWordLocked) {
-        speakWord(sbWords[sbWordIndex], playBtn);
-      }
-    });
-  }
-  if (input) {
-    input.addEventListener("keydown", e => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        handleSpellingSubmit();
-      }
-    });
-  }
-  if (playAgainBtn) {
-    playAgainBtn.addEventListener("click", () => {
-      if (sbMode === "solo") startSpellingBeeSolo();
-      else if (sbMode === "two") {
-        sbPlayers.forEach(p => p.score = 0);
-        sbCurrentPlayerIndex = 0;
-        prepareSpellingRound();
-        showSpellingPassScreen();
-        $("sbReadyBtn").onclick = () => startSpellingPlay();
-      }
-    });
-  }
-  if (doneBtn) doneBtn.addEventListener("click", () => showScreen("screen-games"));
-}
-// ===================================================
-// ===================================================
-// TIMES TABLES
-// ===================================================
-function openTimesTables() {
-  ttLevel = null;
-  ttMode = null;
-  ttPlayers = [];
-  ttCurrentPlayerIndex = 0;
-  ttQuestions = [];
-  ttQuestionIndex = 0;
-  ttRoundActive = false;
-  ttQuestionLocked = false;
-  clearInterval(ttTimerInterval);
-
-  document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
-
-  $("ttLevelPicker").classList.remove("hidden");
-  $("ttModePicker").classList.add("hidden");
-  $("ttTwoSetup").classList.add("hidden");
-  $("ttPassScreen").classList.add("hidden");
-  $("ttPlay").classList.add("hidden");
-  $("ttResult").classList.add("hidden");
-}
-
-function selectTimesLevel(level) {
-  ttLevel = level;
-  document.querySelectorAll(".tt-level-card").forEach(c => {
-    c.classList.toggle("selected", c.dataset.level === level);
-  });
-  $("ttLevelLabel").textContent = TT_LEVELS[level].label;
-  $("ttLevelPicker").classList.add("hidden");
-  $("ttModePicker").classList.remove("hidden");
-}
-
-function buildTimesQuestions() {
-  const tables = TT_LEVELS[ttLevel].tables;
-  const questions = [];
-
-  for (let i = 0; i < 12; i++) {
-    const table = tables[Math.floor(Math.random() * tables.length)];
-    const multiplier = Math.floor(Math.random() * 12) + 1;
-    questions.push({
-      a: table,
-      b: multiplier,
-      answer: table * multiplier
-    });
-  }
-  return questions;
-}
-
-function makeTimesOptions(answer) {
-  const options = new Set([answer]);
-  while (options.size < 4) {
-    const delta = Math.floor(Math.random() * 20) - 10;
-    const wrong = answer + delta;
-    if (wrong > 0 && wrong !== answer) options.add(wrong);
-  }
-  return shuffle([...options]);
-}
-
-function startTimesTablesSolo() {
-  ttMode = "solo";
-  ttPlayers = [{ name: playerName || "Player", score: 0 }];
-  ttCurrentPlayerIndex = 0;
-  $("ttModePicker").classList.add("hidden");
-  startTimesRound();
-}
-
-function startTimesTablesTwo() {
-  const p2 = ($("ttP2Input").value || "").trim() || "Player 2";
-  ttMode = "two";
-  ttPlayers = [
-    { name: playerName || "Player 1", score: 0 },
-    { name: p2, score: 0 }
-  ];
-  ttCurrentPlayerIndex = 0;
-  $("ttTwoSetup").classList.add("hidden");
-  showTimesPassScreen();
-}
-
-function showTimesPassScreen() {
-  $("ttPlay").classList.add("hidden");
-  $("ttResult").classList.add("hidden");
-  $("ttPassScreen").classList.remove("hidden");
-  $("ttPassName").textContent = ttPlayers[ttCurrentPlayerIndex].name;
-}
-
-function startTimesRound() {
-  $("ttPassScreen").classList.add("hidden");
-  $("ttPlay").classList.remove("hidden");
-  $("ttResult").classList.add("hidden");
-
-  ttRoundActive = true;
-  ttQuestionLocked = false;
-  ttQuestionIndex = 0;
-  ttQuestions = buildTimesQuestions();
-  ttStartTime = Date.now();
-
-  ttPlayers[ttCurrentPlayerIndex].score = 0;
-
-  $("ttCurrentPlayer").textContent = ttPlayers[ttCurrentPlayerIndex].name;
-  $("ttScore").textContent = 0;
-
-  clearInterval(ttTimerInterval);
-  const seconds = TT_LEVELS[ttLevel].seconds;
-  if (seconds) {
-    ttTotalSeconds = seconds;
-    ttTimeLeft = seconds;
-    $("ttTimer").textContent = `${ttTimeLeft}s`;
-    $("ttTimer").classList.remove("warning");
-    ttTimerInterval = setInterval(() => {
-      ttTimeLeft--;
-      $("ttTimer").textContent = `${ttTimeLeft}s`;
-      if (ttTimeLeft <= 10) $("ttTimer").classList.add("warning");
-      if (ttTimeLeft <= 0) {
-        clearInterval(ttTimerInterval);
-        endTimesRound();
-      }
-    }, 1000);
-  } else {
-    $("ttTimer").textContent = "";
-    $("ttTimer").classList.remove("warning");
-  }
-
-  renderTimesQuestion();
-}
-
-function renderTimesQuestion() {
-  if (ttQuestionIndex >= ttQuestions.length) {
-    endTimesRound();
-    return;
-  }
-
-  ttQuestionLocked = false;
-  const q = ttQuestions[ttQuestionIndex];
-  $("ttProgressLabel").textContent = `Question ${ttQuestionIndex + 1} of ${ttQuestions.length}`;
-  $("ttQuestion").textContent = `${q.a} × ${q.b}`;
-
-  const options = makeTimesOptions(q.answer);
-  const container = $("ttOptions");
-  container.innerHTML = "";
-  options.forEach(opt => {
-    const btn = el("button", "ms-option");
-    btn.textContent = opt;
-    btn.addEventListener("click", () => handleTimesAnswer(btn, opt));
-    container.appendChild(btn);
-  });
-}
-
-function handleTimesAnswer(btn, chosen) {
-  if (ttQuestionLocked || !ttRoundActive) return;
-  ttQuestionLocked = true;
-
-  const q = ttQuestions[ttQuestionIndex];
-  const correct = q.answer;
-  const buttons = $("ttOptions").querySelectorAll(".ms-option");
-  buttons.forEach(b => {
-    b.disabled = true;
-    if (parseInt(b.textContent, 10) === correct) b.classList.add("correct");
-  });
-
-  if (chosen === correct) {
-    ttPlayers[ttCurrentPlayerIndex].score++;
-    $("ttScore").textContent = ttPlayers[ttCurrentPlayerIndex].score;
-  } else {
-    btn.classList.add("wrong");
-  }
-
-  setTimeout(() => {
-    if (!ttRoundActive) return;
-    ttQuestionIndex++;
-    if (ttQuestionIndex >= ttQuestions.length) {
-      endTimesRound();
-    } else {
-      renderTimesQuestion();
-    }
-  }, 400);
-}
-
-function endTimesRound() {
-  ttRoundActive = false;
-  clearInterval(ttTimerInterval);
-  $("ttPlay").classList.add("hidden");
-  $("ttResult").classList.remove("hidden");
-
-  const totalTime = ttStartTime ? Math.floor((Date.now() - ttStartTime) / 1000) : 0;
-  const score = ttPlayers[ttCurrentPlayerIndex].score;
-  const total = ttQuestions.length;
-
-  if (ttMode === "solo") {
-    const pct = Math.round((score / total) * 100);
-    let title = "Well done!";
-    let icon = "🎉";
-    if (pct === 100) { title = "Perfect!"; icon = "🏆"; }
-    else if (pct >= 80) { title = "Excellent!"; icon = "🌟"; }
-    else if (pct >= 60) { title = "Good job!"; icon = "👍"; }
-    else { title = "Keep practising!"; icon = "💪"; }
-
-    $("ttResultIcon").textContent = icon;
-    $("ttResultTitle").textContent = title;
-    $("ttResultMsg").textContent = `You scored ${score} out of ${total} in ${totalTime}s.`;
-    $("ttPlayAgainBtn").textContent = "Play Again";
-    $("ttDoneBtn").textContent = "Done";
-  } else {
-    const isLast = ttCurrentPlayerIndex >= ttPlayers.length - 1;
-    if (!isLast) {
-      $("ttResultIcon").textContent = "🎯";
-      $("ttResultTitle").textContent = `${ttPlayers[ttCurrentPlayerIndex].name} scored ${score}/${total}`;
-      $("ttResultMsg").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name}.`;
-      $("ttPlayAgainBtn").textContent = "Restart Level";
-      $("ttDoneBtn").textContent = `Pass to ${ttPlayers[ttCurrentPlayerIndex + 1].name} →`;
-    } else {
-      const p1 = ttPlayers[0];
-      const p2 = ttPlayers[1];
-      let winner;
-      if (p1.score > p2.score) winner = p1;
-      else if (p2.score > p1.score) winner = p2;
-      else winner = null;
-
-      $("ttResultIcon").textContent = winner ? "🏆" : "🤝";
-      $("ttResultTitle").textContent = winner ? `${winner.name} wins!` : "It's a tie!";
-      $("ttResultMsg").textContent = `${p1.name}: ${p1.score}/${total} — ${p2.name}: ${p2.score}/${total}`;
-      $("ttPlayAgainBtn").textContent = "Play Again";
-      $("ttDoneBtn").textContent = "Done";
-    }
-  }
-}
-
-function handleTimesPlayAgain() {
-  if (ttMode === "solo") {
-    startTimesRound();
-  } else {
-    if (ttCurrentPlayerIndex >= ttPlayers.length - 1) {
-      ttPlayers.forEach(p => p.score = 0);
-      ttCurrentPlayerIndex = 0;
-      showTimesPassScreen();
-    } else {
-      startTimesRound();
-    }
-  }
-}
-
-function handleTimesDone() {
-  if (ttMode === "two" && ttCurrentPlayerIndex < ttPlayers.length - 1) {
-    ttCurrentPlayerIndex++;
-    showTimesPassScreen();
-  } else {
-    showScreen("screen-games");
-  }
-}
-
-function attachTimesTablesListeners() {
-  document.querySelectorAll(".tt-level-card").forEach(card => {
-    card.addEventListener("click", () => selectTimesLevel(card.dataset.level));
-  });
-
-  const backToLevels = $("ttBackToLevels");
-  const soloBtn = $("ttSoloBtn");
-  const twoBtn = $("ttTwoBtn");
-  const cancelTwo = $("ttCancelTwo");
-  const startTwoBtn = $("ttStartTwoBtn");
-  const readyBtn = $("ttReadyBtn");
-  const playAgainBtn = $("ttPlayAgainBtn");
-  const doneBtn = $("ttDoneBtn");
-
-  if (backToLevels) {
-    backToLevels.addEventListener("click", () => {
-      $("ttModePicker").classList.add("hidden");
-      $("ttLevelPicker").classList.remove("hidden");
-      document.querySelectorAll(".tt-level-card").forEach(c => c.classList.remove("selected"));
-    });
-  }
-  if (soloBtn) soloBtn.addEventListener("click", startTimesTablesSolo);
-  if (twoBtn) {
-    twoBtn.addEventListener("click", () => {
-      $("ttModePicker").classList.add("hidden");
-      $("ttTwoSetup").classList.remove("hidden");
-      $("ttP2Input").value = "";
-      setTimeout(() => $("ttP2Input").focus(), 100);
-    });
-  }
-  if (cancelTwo) {
-    cancelTwo.addEventListener("click", () => {
-      $("ttTwoSetup").classList.add("hidden");
-      $("ttModePicker").classList.remove("hidden");
-    });
-  }
-  if (startTwoBtn) startTwoBtn.addEventListener("click", startTimesTablesTwo);
-  if (readyBtn) readyBtn.addEventListener("click", startTimesRound);
-  if (playAgainBtn) playAgainBtn.addEventListener("click", handleTimesPlayAgain);
-  if (doneBtn) doneBtn.addEventListener("click", handleTimesDone);
-}// GO
+// GO
 // ===================================================
 boot();
