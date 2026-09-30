@@ -9,7 +9,7 @@
       "questions": [
         {
           "q": "What is the main function of the sepal in a flower?",
-		  "image": "assets/science/flower-labeled.png",
+          "image": "assets/science/flower-labeled.png",
           "options": ["To attract insects", "To protect the flower bud", "To produce pollen", "To make seeds"],
           "answer": "To protect the flower bud",
           "explain": "The sepal protects the flower while it is still a bud.",
@@ -23,6 +23,7 @@
         },
         {
           "q": "What is the coloured part of a flower called?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Sepal", "Petal", "Stamen", "Pistil"],
           "answer": "Petal",
           "explain": "Petals are the bright, coloured parts of a flower.",
@@ -35,6 +36,7 @@
         },
         {
           "q": "Which part of a flower produces pollen?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Sepal", "Petal", "Stamen", "Pistil"],
           "answer": "Stamen",
           "explain": "The stamen is the male part of the flower and produces pollen.",
@@ -47,6 +49,7 @@
         },
         {
           "q": "Which part of the flower receives pollen during pollination?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Anther", "Stigma", "Sepal", "Petal"],
           "answer": "Stigma",
           "explain": "The stigma is the top of the pistil and receives pollen grains.",
@@ -59,6 +62,7 @@
         },
         {
           "q": "What is the male part of a flower called?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Pistil", "Stamen", "Petal", "Sepal"],
           "answer": "Stamen",
           "explain": "The stamen is the male part of a flower.",
@@ -71,6 +75,7 @@
         },
         {
           "q": "What is the female part of a flower called?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Stamen", "Pistil", "Petal", "Sepal"],
           "answer": "Pistil",
           "explain": "The pistil is the female part of a flower.",
@@ -83,6 +88,7 @@
         },
         {
           "q": "Which part of the pistil contains the egg cells?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Stigma", "Style", "Ovary", "Anther"],
           "answer": "Ovary",
           "explain": "The ovary is at the base of the pistil and contains the egg cells.",
@@ -146,6 +152,7 @@
         },
         {
           "q": "Which of these is NOT a part of the stamen?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Anther", "Filament", "Stigma", "Both A and B"],
           "answer": "Stigma",
           "explain": "The stigma is part of the pistil, not the stamen.",
@@ -158,6 +165,7 @@
         },
         {
           "q": "What is the stalk that supports the anther called?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Style", "Filament", "Stigma", "Sepal"],
           "answer": "Filament",
           "explain": "The filament is the thin stalk that holds up the anther.",
@@ -170,6 +178,7 @@
         },
         {
           "q": "What is the stalk that supports the stigma called?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Filament", "Style", "Sepal", "Anther"],
           "answer": "Style",
           "explain": "The style is the tube that connects the stigma to the ovary.",
@@ -209,6 +218,7 @@
         },
         {
           "q": "Which part of the flower is usually green and found at the base?",
+          "image": "assets/science/flower-labeled.png",
           "options": ["Petal", "Sepal", "Stamen", "Stigma"],
           "answer": "Sepal",
           "explain": "The sepal is the green, leaf-like part at the base of the flower.",
@@ -243,19 +253,6 @@
             "This transfer is called pollination",
             "The bee is helping the flowers reproduce",
             "Answer: Pollinating the flowers"
-          ]
-        },
-        {
-          "q": "Which part of the flower protects it while it is still a bud?",
-          "options": ["Petal", "Stamen", "Sepal", "Ovary"],
-          "answer": "Sepal",
-          "explain": "The sepal wraps around and protects the flower bud.",
-          "procedure": [
-            "Before the flower opens, it is called a bud",
-            "The green sepals wrap around the bud",
-            "They protect the inner parts from weather and damage",
-            "Once the flower opens, the sepals are visible at the base",
-            "Answer: Sepal"
           ]
         },
         {
