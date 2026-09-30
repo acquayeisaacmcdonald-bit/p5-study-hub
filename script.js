@@ -36,6 +36,7 @@ const THEMES = [
 // ---------- STATE ----------
 let subjectsData = null;
 let currentSubject = null;
+let currentSubjectId = null;
 let currentTopic = null;
 let studyDeck = [];
 let studyIndex = 0;
@@ -278,7 +279,6 @@ function showScreen(id, opts) {
   }
   updateStudyBanner();
 
-  // Scroll to the top of the app container reliably
   requestAnimationFrame(() => {
     const anchor = $("app-anchor");
     if (anchor && !opts.keepScroll) {
@@ -324,8 +324,13 @@ async function boot() {
   try {
     showLoading();
     subjectsData = await fetchJSON("data/subjects.json");
-    const maths = subjectsData.subjects.find(s => s.id === "maths");
-    currentSubject = await fetchJSON(maths.file);
+
+    const defaultSub = subjectsData.subjects.find(s => s.id === "maths") ||
+                       subjectsData.subjects.find(s => s.available);
+    if (defaultSub) {
+      currentSubject = await fetchJSON(defaultSub.file);
+      currentSubjectId = defaultSub.id;
+    }
 
     try { offlineDictionary = await fetchJSON("data/dictionary.json"); }
     catch (dictErr) { console.warn("Offline dictionary not available:", dictErr.message); offlineDictionary = null; }
@@ -422,12 +427,24 @@ function renderSubjects() {
       </span>
     `;
     if (sub.available) {
-      card.addEventListener("click", () => {
-        // Ensure the Home screen is showing first
+      card.addEventListener("click", async () => {
+        if (sub.id !== currentSubjectId) {
+          try {
+            showLoading();
+            currentSubject = await fetchJSON(sub.file);
+            currentSubjectId = sub.id;
+            hideLoading();
+            renderHomeTopics();
+          } catch (err) {
+            hideLoading();
+            console.error("Failed to load subject:", err);
+            alert("Could not load " + sub.name + ". Please try again.");
+            return;
+          }
+        }
         if (!$("screen-home").classList.contains("active")) {
           showScreen("screen-home", { keepScroll: true });
         }
-        // Then scroll to the topic list
         setTimeout(() => {
           const topics = $("topics");
           if (topics) {
@@ -444,6 +461,7 @@ function renderSubjects() {
 function renderHomeTopics() {
   const list = $("homeTopicList");
   list.innerHTML = "";
+  if (!currentSubject || !currentSubject.topics) return;
   currentSubject.topics.forEach(topic => {
     const item = el("button", "topic-item");
     item.innerHTML = `
@@ -503,8 +521,7 @@ function renderTools() {
     }
     if (t.available && t.id === "games") {
       card.addEventListener("click", () => {
-        // Scroll to top FIRST, then switch to games screen
-        window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+        window.scrollTo({ top: 0, behavior: "auto" });
         showScreen("screen-games", { keepScroll: true });
         updateGamesScreen();
       });
@@ -626,7 +643,6 @@ function renderQuizQuestion() {
   $("nextQuestionBtn").classList.add("hidden");
   clearTimeout(nextTimer);
 
-  // Scroll to top of quiz area so the new question is visible
   requestAnimationFrame(() => {
     const anchor = $("app-anchor");
     if (anchor) {
@@ -710,6 +726,7 @@ function finishQuiz() {
   quizHistory.unshift({
     date: new Date().toLocaleString(),
     topic: currentTopic.name,
+    subject: currentSubject.subject,
     score: quizScore,
     total: quizDeck.length,
     pct
@@ -799,8 +816,9 @@ function renderProgress() {
   }
   quizHistory.forEach(h => {
     const li = el("li");
+    const subjectLabel = h.subject ? `${h.subject} • ` : "";
     li.innerHTML = `
-      <span><div>${h.topic}</div><div class="hist-date">${h.date}</div></span>
+      <span><div>${subjectLabel}${h.topic}</div><div class="hist-date">${h.date}</div></span>
       <span>${h.score}/${h.total} (${h.pct}%)</span>
     `;
     list.appendChild(li);
@@ -2007,7 +2025,6 @@ function attachTimesTablesListeners() {
 // SITE NAV
 // ===================================================
 function attachSiteNavListeners() {
-  // Logo click → always go home
   const logo = $("logoLink");
   if (logo) {
     logo.addEventListener("click", (e) => {
@@ -2017,13 +2034,11 @@ function attachSiteNavListeners() {
     });
   }
 
-  // Every [data-nav] link or button
   document.querySelectorAll("[data-nav]").forEach(node => {
     node.addEventListener("click", (e) => {
       e.preventDefault();
       const target = node.dataset.nav;
 
-      // Close mobile menu if open
       const nav = $("siteNav");
       if (nav) nav.classList.remove("mobile-open");
 
@@ -2079,7 +2094,6 @@ function attachSiteNavListeners() {
     });
   });
 
-  // Mobile hamburger toggle
   const menuBtn = $("menuBtn");
   const siteNav = $("siteNav");
   if (menuBtn && siteNav) {
