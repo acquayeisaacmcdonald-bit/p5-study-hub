@@ -1419,3 +1419,23 @@ button.danger:active { transform: scale(0.98); }
   .tt-level-card .ms-mode-name { font-size: 0.9rem; }
   .tt-level-card .ms-mode-desc { font-size: 0.65rem; }
 }
+/* ---------- QUESTION IMAGES ---------- */
+.question-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  object-fit: contain;
+}
+.card-front .question-image {
+  max-height: 140px;
+  margin-bottom: 12px;
+}
+@media (max-width: 380px) {
+  .question-image { max-height: 180px; }
+  .card-front .question-image { max-height: 110px; }
+}

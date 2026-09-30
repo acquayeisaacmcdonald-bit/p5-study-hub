@@ -9,6 +9,7 @@
       "questions": [
         {
           "q": "What is the main function of the sepal in a flower?",
+		  "image": "assets/science/flower-labeled.png",
           "options": ["To attract insects", "To protect the flower bud", "To produce pollen", "To make seeds"],
           "answer": "To protect the flower bud",
           "explain": "The sepal protects the flower while it is still a bud.",

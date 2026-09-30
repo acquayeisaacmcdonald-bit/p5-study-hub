@@ -582,7 +582,24 @@ function startStudy() {
 
 function renderStudyCard() {
   const q = studyDeck[studyIndex];
-  $("question").textContent = q.q;
+  const frontEl = document.querySelector(".card-front");
+  const questionEl = $("question");
+
+  // Remove any old image
+  const oldImg = frontEl.querySelector(".question-image");
+  if (oldImg) oldImg.remove();
+
+  // Insert image above the question text if present
+  if (q.image) {
+    const img = document.createElement("img");
+    img.className = "question-image";
+    img.src = q.image;
+    img.alt = "Question illustration";
+    img.loading = "lazy";
+    frontEl.insertBefore(img, questionEl);
+  }
+
+  questionEl.textContent = q.q;
   $("answer").textContent = q.answer;
   $("frontBadge").textContent = "Question";
   $("backBadge").textContent = "Answer";
@@ -653,7 +670,23 @@ function renderQuizQuestion() {
 
   const q = quizDeck[quizIndex];
   $("quizProgress").textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
-  $("quizQuestion").textContent = q.q;
+  const quizQuestionEl = $("quizQuestion");
+
+  // Remove any previous image
+  const oldImg = quizQuestionEl.parentNode.querySelector(".question-image");
+  if (oldImg) oldImg.remove();
+
+  // Insert image above the question text if present
+  if (q.image) {
+    const img = document.createElement("img");
+    img.className = "question-image";
+    img.src = q.image;
+    img.alt = "Question illustration";
+    img.loading = "lazy";
+    quizQuestionEl.parentNode.insertBefore(img, quizQuestionEl);
+  }
+
+  quizQuestionEl.textContent = q.q;
 
   const options = shuffle([...q.options]);
   const container = $("quizOptions");
