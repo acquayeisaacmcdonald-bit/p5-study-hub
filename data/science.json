@@ -1,0 +1,282 @@
+{
+  "subject": "Science",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "parts-of-flowers",
+      "name": "Parts of Flowers",
+      "icon": "🌸",
+      "questions": [
+        {
+          "q": "What is the main function of the sepal in a flower?",
+          "options": ["To attract insects", "To protect the flower bud", "To produce pollen", "To make seeds"],
+          "answer": "To protect the flower bud",
+          "explain": "The sepal protects the flower while it is still a bud.",
+          "procedure": [
+            "The sepal is the green, leaf-like part at the base of the flower",
+            "While the flower is still a bud, the sepal wraps around it",
+            "This protects the delicate inner parts from damage and weather",
+            "Once the flower opens, the sepal stays at the base",
+            "Answer: To protect the flower bud"
+          ]
+        },
+        {
+          "q": "What is the coloured part of a flower called?",
+          "options": ["Sepal", "Petal", "Stamen", "Pistil"],
+          "answer": "Petal",
+          "explain": "Petals are the bright, coloured parts of a flower.",
+          "procedure": [
+            "Look at any flower — the colourful leaves you see are petals",
+            "Petals are usually bright and attractive",
+            "Their colour and scent attract insects and birds",
+            "Answer: Petal"
+          ]
+        },
+        {
+          "q": "Which part of a flower produces pollen?",
+          "options": ["Sepal", "Petal", "Stamen", "Pistil"],
+          "answer": "Stamen",
+          "explain": "The stamen is the male part of the flower and produces pollen.",
+          "procedure": [
+            "The stamen is the male part of the flower",
+            "It has two parts: the anther and the filament",
+            "The anther at the top produces the yellow pollen grains",
+            "Answer: Stamen"
+          ]
+        },
+        {
+          "q": "Which part of the flower receives pollen during pollination?",
+          "options": ["Anther", "Stigma", "Sepal", "Petal"],
+          "answer": "Stigma",
+          "explain": "The stigma is the top of the pistil and receives pollen grains.",
+          "procedure": [
+            "The pistil is the female part of the flower",
+            "Its top is called the stigma",
+            "The stigma is sticky, so pollen grains stick to it",
+            "Answer: Stigma"
+          ]
+        },
+        {
+          "q": "What is the male part of a flower called?",
+          "options": ["Pistil", "Stamen", "Petal", "Sepal"],
+          "answer": "Stamen",
+          "explain": "The stamen is the male part of a flower.",
+          "procedure": [
+            "Flowers have both male and female parts",
+            "The male part is called the stamen",
+            "It produces pollen, which contains the male sex cells",
+            "Answer: Stamen"
+          ]
+        },
+        {
+          "q": "What is the female part of a flower called?",
+          "options": ["Stamen", "Pistil", "Petal", "Sepal"],
+          "answer": "Pistil",
+          "explain": "The pistil is the female part of a flower.",
+          "procedure": [
+            "The female part of a flower is the pistil",
+            "It has three parts: stigma, style, and ovary",
+            "The ovary contains the egg cells (ovules)",
+            "Answer: Pistil"
+          ]
+        },
+        {
+          "q": "Which part of the pistil contains the egg cells?",
+          "options": ["Stigma", "Style", "Ovary", "Anther"],
+          "answer": "Ovary",
+          "explain": "The ovary is at the base of the pistil and contains the egg cells.",
+          "procedure": [
+            "The pistil has three parts: stigma (top), style (middle), and ovary (bottom)",
+            "The ovary is the swollen base of the pistil",
+            "Inside the ovary are the ovules (egg cells)",
+            "After fertilization, the ovary becomes the fruit",
+            "Answer: Ovary"
+          ]
+        },
+        {
+          "q": "What is the transfer of pollen from the anther to the stigma called?",
+          "options": ["Fertilization", "Pollination", "Germination", "Photosynthesis"],
+          "answer": "Pollination",
+          "explain": "Pollination is the transfer of pollen to the stigma.",
+          "procedure": [
+            "Pollination = movement of pollen from anther to stigma",
+            "It can happen within the same flower or between flowers",
+            "Wind, insects, birds, and water can carry pollen",
+            "Answer: Pollination"
+          ]
+        },
+        {
+          "q": "After pollination, what happens to the pollen grain on the stigma?",
+          "options": ["It dries up", "It grows a tube down to the ovary", "It turns into a seed", "It falls off"],
+          "answer": "It grows a tube down to the ovary",
+          "explain": "The pollen grain grows a pollen tube down through the style to reach the ovary.",
+          "procedure": [
+            "A pollen grain lands on the sticky stigma",
+            "It grows a long tube called the pollen tube",
+            "The tube grows down through the style to the ovary",
+            "The male sex cell travels down the tube to join the egg cell",
+            "Answer: It grows a tube down to the ovary"
+          ]
+        },
+        {
+          "q": "What is formed when the male and female sex cells join?",
+          "options": ["A petal", "A seed", "A sepal", "A stamen"],
+          "answer": "A seed",
+          "explain": "The joining of male and female cells forms a seed.",
+          "procedure": [
+            "Fertilization = when male and female cells join",
+            "The fertilized egg cell develops into a seed",
+            "The ovary around it becomes the fruit",
+            "Answer: A seed"
+          ]
+        },
+        {
+          "q": "Which part of the flower becomes the fruit after fertilization?",
+          "options": ["The sepal", "The petal", "The ovary", "The stigma"],
+          "answer": "The ovary",
+          "explain": "After fertilization, the ovary grows into the fruit.",
+          "procedure": [
+            "Before fertilization: the ovary holds the ovules (egg cells)",
+            "After fertilization: the ovules become seeds",
+            "The ovary itself grows and becomes the fruit",
+            "This is why every fruit contains seeds",
+            "Answer: The ovary"
+          ]
+        },
+        {
+          "q": "Which of these is NOT a part of the stamen?",
+          "options": ["Anther", "Filament", "Stigma", "Both A and B"],
+          "answer": "Stigma",
+          "explain": "The stigma is part of the pistil, not the stamen.",
+          "procedure": [
+            "Stamen = anther + filament (male parts)",
+            "Pistil = stigma + style + ovary (female parts)",
+            "The stigma belongs to the pistil, not the stamen",
+            "Answer: Stigma"
+          ]
+        },
+        {
+          "q": "What is the stalk that supports the anther called?",
+          "options": ["Style", "Filament", "Stigma", "Sepal"],
+          "answer": "Filament",
+          "explain": "The filament is the thin stalk that holds up the anther.",
+          "procedure": [
+            "The stamen has two parts: anther and filament",
+            "The anther is at the top — it holds pollen",
+            "The filament is the thin stalk that supports the anther",
+            "Answer: Filament"
+          ]
+        },
+        {
+          "q": "What is the stalk that supports the stigma called?",
+          "options": ["Filament", "Style", "Sepal", "Anther"],
+          "answer": "Style",
+          "explain": "The style is the tube that connects the stigma to the ovary.",
+          "procedure": [
+            "The pistil has three parts: stigma, style, ovary",
+            "The stigma is at the top",
+            "The style is the middle tube that connects stigma to ovary",
+            "Answer: Style"
+          ]
+        },
+        {
+          "q": "Which of the following is NOT a way pollen can be transferred?",
+          "options": ["Wind", "Insects", "Birds", "Electricity"],
+          "answer": "Electricity",
+          "explain": "Pollen is transferred by wind, insects, birds, or water — not electricity.",
+          "procedure": [
+            "Pollination happens through natural agents",
+            "Wind carries light pollen grains",
+            "Insects and birds carry pollen as they visit flowers",
+            "Water can carry pollen in some water plants",
+            "Electricity is not a pollinating agent",
+            "Answer: Electricity"
+          ]
+        },
+        {
+          "q": "Why are petals usually brightly coloured?",
+          "options": ["To make the flower look nice for humans", "To attract insects and birds for pollination", "To protect the flower from rain", "To help the flower grow taller"],
+          "answer": "To attract insects and birds for pollination",
+          "explain": "Bright petals attract pollinators, which help the flower reproduce.",
+          "procedure": [
+            "Many flowers need insects or birds to carry pollen",
+            "Bright colours and pleasant scents attract these pollinators",
+            "The pollinators come for nectar, but leave with pollen on their bodies",
+            "They carry the pollen to the next flower",
+            "Answer: To attract insects and birds for pollination"
+          ]
+        },
+        {
+          "q": "Which part of the flower is usually green and found at the base?",
+          "options": ["Petal", "Sepal", "Stamen", "Stigma"],
+          "answer": "Sepal",
+          "explain": "The sepal is the green, leaf-like part at the base of the flower.",
+          "procedure": [
+            "Look at a flower from the outside",
+            "The green, leaf-like parts at the bottom are sepals",
+            "They protect the flower bud before it opens",
+            "Answer: Sepal"
+          ]
+        },
+        {
+          "q": "What do flowers produce that we often enjoy for their beauty and smell?",
+          "options": ["Fruits", "Nectar and scent", "Roots", "Leaves"],
+          "answer": "Nectar and scent",
+          "explain": "Flowers produce nectar and scent that attract pollinators.",
+          "procedure": [
+            "Flowers make nectar (a sweet liquid) inside them",
+            "They also release scent through their petals",
+            "Both are used to attract insects and birds",
+            "Nectar also provides food for the pollinators",
+            "Answer: Nectar and scent"
+          ]
+        },
+        {
+          "q": "A bee visits a flower and later visits another. What is the bee doing?",
+          "options": ["Making honey only", "Pollinating the flowers", "Eating the petals", "Making a nest"],
+          "answer": "Pollinating the flowers",
+          "explain": "The bee carries pollen from one flower to another.",
+          "procedure": [
+            "As a bee collects nectar, pollen sticks to its hairy body",
+            "When it visits the next flower, some of that pollen rubs off onto the stigma",
+            "This transfer is called pollination",
+            "The bee is helping the flowers reproduce",
+            "Answer: Pollinating the flowers"
+          ]
+        },
+        {
+          "q": "Which part of the flower protects it while it is still a bud?",
+          "options": ["Petal", "Stamen", "Sepal", "Ovary"],
+          "answer": "Sepal",
+          "explain": "The sepal wraps around and protects the flower bud.",
+          "procedure": [
+            "Before the flower opens, it is called a bud",
+            "The green sepals wrap around the bud",
+            "They protect the inner parts from weather and damage",
+            "Once the flower opens, the sepals are visible at the base",
+            "Answer: Sepal"
+          ]
+        },
+        {
+          "q": "Which of the following is the correct order of the flower's life from bud to seed?",
+          "options": [
+            "Seed → Flower → Pollination → Fertilization → Fruit",
+            "Pollination → Bud → Flower → Fruit → Seed",
+            "Flower → Bud → Fruit → Seed → Pollination",
+            "Bud → Flower → Pollination → Fertilization → Fruit and Seed"
+          ],
+          "answer": "Bud → Flower → Pollination → Fertilization → Fruit and Seed",
+          "explain": "The flower grows from a bud, opens, gets pollinated, fertilized, and produces fruit and seeds.",
+          "procedure": [
+            "1. Bud forms (protected by sepals)",
+            "2. Bud opens into a flower with petals",
+            "3. Pollination happens (pollen reaches stigma)",
+            "4. Fertilization happens (sex cells join)",
+            "5. Ovary becomes fruit, ovules become seeds",
+            "Answer: Bud → Flower → Pollination → Fertilization → Fruit and Seed"
+          ]
+        }
+      ]
+    }
+  ]
+}

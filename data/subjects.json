@@ -9,15 +9,16 @@
       "available": true
     },
     {
-      "id": "english",
-      "name": "English Language",
-      "icon": "📖",
-      "available": false
-    },
-    {
       "id": "science",
       "name": "Science",
       "icon": "🔬",
+      "file": "data/science.json",
+      "available": true
+    },
+    {
+      "id": "english",
+      "name": "English Language",
+      "icon": "📖",
       "available": false
     },
     {
