@@ -585,6 +585,379 @@
           ]
         }
       ]
+    },
+    {
+      "id": "human-body-systems",
+      "name": "Human Body Systems",
+      "icon": "🫀",
+      "questions": [
+        {
+          "q": "What is the main job of the digestive system?",
+          "image": "assets/science/digestive-system.png",
+          "options": [
+            "To pump blood around the body",
+            "To break down food so the body can use it",
+            "To help us breathe",
+            "To support the body"
+          ],
+          "answer": "To break down food so the body can use it",
+          "explain": "The digestive system breaks down food into nutrients the body can absorb.",
+          "procedure": [
+            "Food enters the body through the mouth",
+            "It travels through the digestive system",
+            "The body breaks it down into nutrients",
+            "These nutrients are absorbed and used for energy and growth",
+            "Answer: To break down food so the body can use it"
+          ]
+        },
+        {
+          "q": "Where does digestion begin?",
+          "image": "assets/science/digestive-system.png",
+          "options": ["In the stomach", "In the mouth", "In the small intestine", "In the large intestine"],
+          "answer": "In the mouth",
+          "explain": "Digestion begins in the mouth where teeth chew food and saliva starts breaking it down.",
+          "procedure": [
+            "Food enters the mouth first",
+            "Teeth chew and grind the food into smaller pieces",
+            "Saliva mixes with the food and starts breaking it down",
+            "Then the food is swallowed",
+            "Answer: In the mouth"
+          ]
+        },
+        {
+          "q": "What is the oesophagus?",
+          "image": "assets/science/digestive-system.png",
+          "options": [
+            "A tube that carries food from the mouth to the stomach",
+            "An organ that pumps blood",
+            "The organ that helps us breathe",
+            "The bone that protects the heart"
+          ],
+          "answer": "A tube that carries food from the mouth to the stomach",
+          "explain": "The oesophagus is the food pipe connecting the mouth to the stomach.",
+          "procedure": [
+            "After swallowing, food travels down the oesophagus",
+            "The oesophagus is also called the food pipe",
+            "It connects the mouth to the stomach",
+            "Muscles push the food down to the stomach",
+            "Answer: A tube that carries food from the mouth to the stomach"
+          ]
+        },
+        {
+          "q": "What happens to food inside the stomach?",
+          "image": "assets/science/stomach-closeup.png",
+          "options": [
+            "It is stored without change",
+            "It is churned and mixed with digestive juices",
+            "It is sent directly to the heart",
+            "It turns into air"
+          ],
+          "answer": "It is churned and mixed with digestive juices",
+          "explain": "The stomach churns food and mixes it with juices that break it down further.",
+          "procedure": [
+            "Food arrives in the stomach from the oesophagus",
+            "The stomach muscles churn the food",
+            "Digestive juices mix with the food",
+            "The food becomes a thick liquid before moving on",
+            "Answer: It is churned and mixed with digestive juices"
+          ]
+        },
+        {
+          "q": "Where are most nutrients absorbed into the body?",
+          "image": "assets/science/digestive-system.png",
+          "options": ["In the mouth", "In the stomach", "In the small intestine", "In the large intestine"],
+          "answer": "In the small intestine",
+          "explain": "Most nutrients are absorbed into the blood in the small intestine.",
+          "procedure": [
+            "After the stomach, food moves into the small intestine",
+            "The small intestine is long and coiled",
+            "Its walls absorb nutrients from the food",
+            "These nutrients enter the blood and go to the body",
+            "Answer: In the small intestine"
+          ]
+        },
+        {
+          "q": "What is the main job of the large intestine?",
+          "image": "assets/science/digestive-system.png",
+          "options": [
+            "To absorb water from what is left",
+            "To pump blood",
+            "To make food",
+            "To store oxygen"
+          ],
+          "answer": "To absorb water from what is left",
+          "explain": "The large intestine absorbs water and forms solid waste.",
+          "procedure": [
+            "After the small intestine, what is left moves to the large intestine",
+            "The large intestine absorbs water from it",
+            "The remaining waste becomes solid",
+            "It is then removed from the body",
+            "Answer: To absorb water from what is left"
+          ]
+        },
+        {
+          "q": "What is digestion?",
+          "options": [
+            "The process of breathing",
+            "The process of breaking down food into nutrients",
+            "The process of pumping blood",
+            "The process of growing taller"
+          ],
+          "answer": "The process of breaking down food into nutrients",
+          "explain": "Digestion is how the body breaks food into useful nutrients.",
+          "procedure": [
+            "Food must be broken down to be useful",
+            "This happens through chewing, churning, and digestive juices",
+            "The food becomes nutrients small enough to absorb",
+            "This whole process is called digestion",
+            "Answer: The process of breaking down food into nutrients"
+          ]
+        },
+        {
+          "q": "What is the main job of the heart?",
+          "image": "assets/science/heart-closeup.png",
+          "options": [
+            "To digest food",
+            "To pump blood around the body",
+            "To help us breathe",
+            "To protect the brain"
+          ],
+          "answer": "To pump blood around the body",
+          "explain": "The heart pumps blood that carries oxygen and nutrients to every part of the body.",
+          "procedure": [
+            "The heart is a strong muscle in the chest",
+            "It pumps blood through tubes called blood vessels",
+            "Blood carries oxygen and nutrients",
+            "These reach every part of the body",
+            "Answer: To pump blood around the body"
+          ]
+        },
+        {
+          "q": "What is the circulatory system?",
+          "image": "assets/science/circulatory-system.png",
+          "options": [
+            "The bones of the body",
+            "The heart, blood, and blood vessels working together",
+            "The lungs and windpipe",
+            "The stomach and intestines"
+          ],
+          "answer": "The heart, blood, and blood vessels working together",
+          "explain": "The circulatory system moves blood around the body.",
+          "procedure": [
+            "The circulatory system includes the heart, blood, and blood vessels",
+            "The heart pumps the blood",
+            "Blood vessels are the tubes that carry the blood",
+            "Together they move blood around the body",
+            "Answer: The heart, blood, and blood vessels working together"
+          ]
+        },
+        {
+          "q": "What do arteries and veins do?",
+          "image": "assets/science/circulatory-system.png",
+          "options": [
+            "They carry food to the stomach",
+            "They carry blood around the body",
+            "They help us see",
+            "They help us hear"
+          ],
+          "answer": "They carry blood around the body",
+          "explain": "Arteries and veins are blood vessels that carry blood.",
+          "procedure": [
+            "Blood vessels are tubes that carry blood",
+            "Arteries carry blood away from the heart",
+            "Veins carry blood back to the heart",
+            "Together they carry blood all around the body",
+            "Answer: They carry blood around the body"
+          ]
+        },
+        {
+          "q": "What is circulation?",
+          "options": [
+            "The movement of blood around the body",
+            "The movement of food through the body",
+            "The movement of air into the lungs",
+            "The movement of bones at a joint"
+          ],
+          "answer": "The movement of blood around the body",
+          "explain": "Circulation is the continuous movement of blood through the body.",
+          "procedure": [
+            "The heart pumps blood",
+            "Blood travels through blood vessels",
+            "It delivers oxygen and nutrients to the body",
+            "Then it returns to the heart and repeats",
+            "This continuous movement is called circulation",
+            "Answer: The movement of blood around the body"
+          ]
+        },
+        {
+          "q": "Where does air enter the body?",
+          "image": "assets/science/respiratory-system.png",
+          "options": ["Through the ears", "Through the nose and mouth", "Through the skin", "Through the eyes"],
+          "answer": "Through the nose and mouth",
+          "explain": "Air enters the body through the nose or mouth.",
+          "procedure": [
+            "We breathe in air through the nose or mouth",
+            "The nose filters and warms the air",
+            "The air then travels down the windpipe",
+            "It eventually reaches the lungs",
+            "Answer: Through the nose and mouth"
+          ]
+        },
+        {
+          "q": "What is the windpipe?",
+          "image": "assets/science/respiratory-system.png",
+          "options": [
+            "A tube that carries air from the throat to the lungs",
+            "A tube that carries food to the stomach",
+            "A tube that carries blood",
+            "A bone in the chest"
+          ],
+          "answer": "A tube that carries air from the throat to the lungs",
+          "explain": "The windpipe (trachea) carries air from the throat to the lungs.",
+          "procedure": [
+            "After entering the nose or mouth, air goes into the windpipe",
+            "The windpipe is also called the trachea",
+            "It is a tube that leads down to the lungs",
+            "Air passes through it with every breath",
+            "Answer: A tube that carries air from the throat to the lungs"
+          ]
+        },
+        {
+          "q": "What happens inside the lungs?",
+          "image": "assets/science/lungs-closeup.png",
+          "options": [
+            "Food is digested",
+            "Oxygen from the air enters the blood",
+            "Blood is pumped",
+            "Bones are made"
+          ],
+          "answer": "Oxygen from the air enters the blood",
+          "explain": "In the lungs, oxygen passes into the blood and carbon dioxide leaves it.",
+          "procedure": [
+            "Air reaches the lungs through the windpipe",
+            "Inside the lungs, air fills tiny air sacs",
+            "Oxygen from the air passes into the blood",
+            "At the same time, carbon dioxide leaves the blood to be breathed out",
+            "Answer: Oxygen from the air enters the blood"
+          ]
+        },
+        {
+          "q": "Why do we need to breathe?",
+          "options": [
+            "To make our chest move",
+            "To get oxygen into the body and remove carbon dioxide",
+            "To make us taller",
+            "To keep us awake"
+          ],
+          "answer": "To get oxygen into the body and remove carbon dioxide",
+          "explain": "Breathing brings in oxygen and removes carbon dioxide.",
+          "procedure": [
+            "Every cell in the body needs oxygen",
+            "Oxygen comes from the air we breathe in",
+            "The body also makes carbon dioxide as waste",
+            "Breathing out removes carbon dioxide",
+            "Answer: To get oxygen into the body and remove carbon dioxide"
+          ]
+        },
+        {
+          "q": "What is the skeleton for?",
+          "image": "assets/science/skeletal-system.png",
+          "options": [
+            "To digest food",
+            "To support the body, protect organs, and help it move",
+            "To pump blood",
+            "To carry oxygen"
+          ],
+          "answer": "To support the body, protect organs, and help it move",
+          "explain": "The skeleton supports the body, protects organs, and works with muscles for movement.",
+          "procedure": [
+            "The skeleton is made of bones",
+            "Bones support the body and give it shape",
+            "They protect important organs — like the skull protects the brain and the ribs protect the heart",
+            "Muscles pull on bones to help us move",
+            "Answer: To support the body, protect organs, and help it move"
+          ]
+        },
+        {
+          "q": "What is a joint?",
+          "image": "assets/science/joints-diagram.png",
+          "options": [
+            "A place where two bones meet",
+            "A type of bone",
+            "A muscle in the body",
+            "A blood vessel"
+          ],
+          "answer": "A place where two bones meet",
+          "explain": "A joint is where two bones meet and allow movement.",
+          "procedure": [
+            "Bones join together at joints",
+            "Joints allow the bones to move",
+            "The knee, elbow, shoulder, and neck all have joints",
+            "Without joints, the body could not bend or move",
+            "Answer: A place where two bones meet"
+          ]
+        },
+        {
+          "q": "Which of these is a type of joint?",
+          "image": "assets/science/joints-diagram.png",
+          "options": [
+            "Ball-and-socket joint",
+            "Red blood cell",
+            "Windpipe",
+            "Stomach"
+          ],
+          "answer": "Ball-and-socket joint",
+          "explain": "Ball-and-socket is one of the main types of joints in the body.",
+          "procedure": [
+            "There are several types of joints in the body",
+            "Ball-and-socket joints — like at the shoulder — allow movement in all directions",
+            "Hinge joints — like the knee — allow back-and-forth movement",
+            "Pivot joints — like the neck — allow turning",
+            "Answer: Ball-and-socket joint"
+          ]
+        },
+        {
+          "q": "What does the brain do?",
+          "image": "assets/science/nervous-system.png",
+          "options": [
+            "It pumps blood",
+            "It controls the whole body and helps us think",
+            "It digests food",
+            "It carries oxygen"
+          ],
+          "answer": "It controls the whole body and helps us think",
+          "explain": "The brain is the control centre of the body — it directs everything we do.",
+          "procedure": [
+            "The brain is inside the skull",
+            "It sends messages through nerves to every part of the body",
+            "It controls movement, breathing, thinking, and feeling",
+            "It is the control centre of the whole body",
+            "Answer: It controls the whole body and helps us think"
+          ]
+        },
+        {
+          "q": "How do the body systems work together?",
+          "image": "assets/science/body-systems-overview.png",
+          "options": [
+            "They work alone and never help each other",
+            "They work as a team to keep the body alive and healthy",
+            "Only one system works at a time",
+            "They only work when we sleep"
+          ],
+          "answer": "They work as a team to keep the body alive and healthy",
+          "explain": "The body systems work together — for example, the digestive system provides nutrients that the circulatory system delivers to every cell.",
+          "procedure": [
+            "Each body system has its own job",
+            "But no system works alone",
+            "The digestive system provides nutrients",
+            "The circulatory system carries them around",
+            "The respiratory system brings in oxygen",
+            "The nervous system controls everything",
+            "Together they keep the body alive and healthy",
+            "Answer: They work as a team to keep the body alive and healthy"
+          ]
+        }
+      ]
     }
   ]
 }
