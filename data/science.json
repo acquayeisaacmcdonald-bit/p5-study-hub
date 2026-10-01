@@ -275,6 +275,316 @@
           ]
         }
       ]
+    },
+    {
+      "id": "water-cycle",
+      "name": "Water Cycle",
+      "icon": "💧",
+      "questions": [
+        {
+          "q": "What is the water cycle?",
+          "options": [
+            "Water moving through pipes in a house",
+            "The continuous movement of water between land, sea, and air",
+            "Water being created from nothing",
+            "Water disappearing forever"
+          ],
+          "answer": "The continuous movement of water between land, sea, and air",
+          "explain": "The water cycle is the never-ending movement of water on Earth.",
+          "procedure": [
+            "The water cycle is also called the hydrological cycle",
+            "Water moves between the oceans, the sky, and the land",
+            "It changes form: liquid → gas → liquid",
+            "This movement never stops",
+            "Answer: The continuous movement of water between land, sea, and air"
+          ]
+        },
+        {
+          "q": "What is it called when water changes from liquid to gas?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Condensation", "Evaporation", "Precipitation", "Collection"],
+          "answer": "Evaporation",
+          "explain": "Evaporation is when water changes from liquid to gas (water vapour).",
+          "procedure": [
+            "The sun heats water in oceans, rivers, and lakes",
+            "When water is heated enough, it changes into water vapour (a gas)",
+            "This process is called evaporation",
+            "You can see it when puddles dry up on a hot day",
+            "Answer: Evaporation"
+          ]
+        },
+        {
+          "q": "What is the main source of energy that drives the water cycle?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["The moon", "The sun", "Wind", "The stars"],
+          "answer": "The sun",
+          "explain": "The sun provides the heat energy that powers the water cycle.",
+          "procedure": [
+            "The water cycle needs energy to keep going",
+            "That energy comes from the sun",
+            "The sun heats water in oceans, lakes, and rivers",
+            "This causes evaporation to happen",
+            "Answer: The sun"
+          ]
+        },
+        {
+          "q": "What is it called when water vapour cools and turns back into liquid?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
+          "answer": "Condensation",
+          "explain": "Condensation is when water vapour cools and becomes liquid water.",
+          "procedure": [
+            "Water vapour rises into the sky",
+            "As it goes higher, the air is colder",
+            "The cool air makes the water vapour turn back into tiny droplets",
+            "This process is called condensation",
+            "Answer: Condensation"
+          ]
+        },
+        {
+          "q": "What do we call the tiny water droplets that form in the sky?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Rain", "Clouds", "Steam", "Wind"],
+          "answer": "Clouds",
+          "explain": "Clouds are made of tiny water droplets that form from condensation.",
+          "procedure": [
+            "When water vapour condenses high in the sky, it forms tiny droplets",
+            "Millions of these droplets together form clouds",
+            "Clouds look white or grey depending on the light and thickness",
+            "Answer: Clouds"
+          ]
+        },
+        {
+          "q": "What is it called when water falls from clouds as rain, hail, or snow?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
+          "answer": "Precipitation",
+          "explain": "Precipitation is water falling from clouds to the ground.",
+          "procedure": [
+            "Cloud droplets grow bigger and heavier",
+            "When they become too heavy, they fall as precipitation",
+            "Precipitation can be rain, hail, or snow",
+            "Answer: Precipitation"
+          ]
+        },
+        {
+          "q": "What is transpiration?",
+          "options": [
+            "Water moving from soil to plant roots",
+            "Water vapour released from plant leaves into the air",
+            "Rain falling on plants",
+            "Water freezing on leaves"
+          ],
+          "answer": "Water vapour released from plant leaves into the air",
+          "explain": "Transpiration is the release of water vapour from plants.",
+          "procedure": [
+            "Plants take in water through their roots",
+            "Some of this water travels up to the leaves",
+            "The leaves release extra water as vapour into the air",
+            "This release is called transpiration",
+            "Answer: Water vapour released from plant leaves into the air"
+          ]
+        },
+        {
+          "q": "Which of these is NOT part of the water cycle?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Evaporation", "Condensation", "Precipitation", "Electricity"],
+          "answer": "Electricity",
+          "explain": "Electricity is not part of the water cycle.",
+          "procedure": [
+            "The main stages of the water cycle are: evaporation, condensation, precipitation, and collection",
+            "Transpiration is also part of the cycle",
+            "Electricity is not involved in the water cycle",
+            "Answer: Electricity"
+          ]
+        },
+        {
+          "q": "Where does the water that falls as rain go?",
+          "options": ["Nowhere — it disappears", "It is soaked into the ground or flows into rivers and lakes", "It goes to the moon", "It turns into clouds immediately"],
+          "answer": "It is soaked into the ground or flows into rivers and lakes",
+          "explain": "Rainwater is collected in the ground, rivers, lakes, and oceans.",
+          "procedure": [
+            "When rain falls, some water sinks into the ground",
+            "Some water flows over the land into streams and rivers",
+            "Rivers carry the water into lakes and oceans",
+            "This step is called collection",
+            "Answer: It is soaked into the ground or flows into rivers and lakes"
+          ]
+        },
+        {
+          "q": "Why is the water cycle important for life on Earth?",
+          "options": [
+            "It makes the sky look pretty",
+            "It continuously supplies fresh water for plants, animals, and humans",
+            "It creates wind",
+            "It makes the sun shine"
+          ],
+          "answer": "It continuously supplies fresh water for plants, animals, and humans",
+          "explain": "The water cycle gives us a constant supply of fresh water.",
+          "procedure": [
+            "All living things need water",
+            "The water cycle moves water from the oceans to the land as rain",
+            "Plants, animals, and humans use this fresh water",
+            "The cycle keeps repeating, so water is never used up",
+            "Answer: It continuously supplies fresh water for plants, animals, and humans"
+          ]
+        },
+        {
+          "q": "Which state of matter is water vapour?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["Solid", "Liquid", "Gas", "Plasma"],
+          "answer": "Gas",
+          "explain": "Water vapour is water in its gas form.",
+          "procedure": [
+            "Water can exist in three states: solid (ice), liquid (water), gas (vapour)",
+            "Water vapour is the gas form of water",
+            "It is invisible — you cannot see water vapour directly",
+            "Answer: Gas"
+          ]
+        },
+        {
+          "q": "When you boil water in a pot, what do you see rising?",
+          "options": ["Ice", "Steam (water vapour)", "Dust", "Sand"],
+          "answer": "Steam (water vapour)",
+          "explain": "Steam rises when water is heated — that's water vapour.",
+          "procedure": [
+            "When water is heated, it changes into gas",
+            "The gas rises as steam",
+            "The white mist you see is actually tiny water droplets that form when steam hits cooler air",
+            "This is a real-life example of evaporation and condensation",
+            "Answer: Steam (water vapour)"
+          ]
+        },
+        {
+          "q": "Why does wet ground dry up faster on a sunny day?",
+          "options": [
+            "Because the sun drinks the water",
+            "Because the heat makes water evaporate faster",
+            "Because wind blows the water away",
+            "Because the ground absorbs it"
+          ],
+          "answer": "Because the heat makes water evaporate faster",
+          "explain": "Heat from the sun speeds up evaporation.",
+          "procedure": [
+            "Evaporation happens all the time, but faster when it's hot",
+            "The sun heats the wet ground",
+            "The heat gives water molecules energy to escape as vapour",
+            "So the water dries up faster on a sunny day",
+            "Answer: Because the heat makes water evaporate faster"
+          ]
+        },
+        {
+          "q": "Where does most evaporation happen on Earth?",
+          "image": "assets/science/water-cycle.png",
+          "options": ["In the deserts", "In the oceans", "In the forests", "In the mountains"],
+          "answer": "In the oceans",
+          "explain": "Oceans cover most of Earth, so most evaporation happens there.",
+          "procedure": [
+            "Oceans cover about 71% of Earth's surface",
+            "Because they are so large, most evaporation happens there",
+            "The sun heats the ocean surface, causing water to turn into vapour",
+            "Answer: In the oceans"
+          ]
+        },
+        {
+          "q": "What causes rain to fall from clouds?",
+          "options": [
+            "The clouds open up like doors",
+            "Water droplets in clouds get too heavy and fall",
+            "The moon pulls the rain down",
+            "The clouds get scared"
+          ],
+          "answer": "Water droplets in clouds get too heavy and fall",
+          "explain": "When cloud droplets combine and become heavy, they fall as rain.",
+          "procedure": [
+            "Clouds are made of tiny water droplets",
+            "Droplets bump into each other and join together",
+            "They grow bigger and heavier",
+            "When they become too heavy to float, they fall as rain",
+            "Answer: Water droplets in clouds get too heavy and fall"
+          ]
+        },
+        {
+          "q": "Which process returns water to the sky from plants?",
+          "options": ["Precipitation", "Transpiration", "Collection", "Condensation"],
+          "answer": "Transpiration",
+          "explain": "Transpiration is the release of water vapour from plant leaves.",
+          "procedure": [
+            "Plants absorb water through their roots",
+            "Some water is used for food-making (photosynthesis)",
+            "The rest is released as vapour through small holes in the leaves",
+            "This release is called transpiration",
+            "Answer: Transpiration"
+          ]
+        },
+        {
+          "q": "If we cut down too many trees, how does it affect the water cycle?",
+          "options": [
+            "It makes more rain",
+            "Less transpiration happens, which can affect rainfall patterns",
+            "It speeds up evaporation",
+            "It has no effect"
+          ],
+          "answer": "Less transpiration happens, which can affect rainfall patterns",
+          "explain": "Fewer trees means less transpiration and less moisture in the air.",
+          "procedure": [
+            "Trees release water vapour into the air through transpiration",
+            "This vapour helps form clouds and rain",
+            "When many trees are cut down, less vapour is released",
+            "This can lead to less rainfall in the area",
+            "Answer: Less transpiration happens, which can affect rainfall patterns"
+          ]
+        },
+        {
+          "q": "Which of these is a good way to conserve water?",
+          "options": [
+            "Leave taps running",
+            "Use a bucket instead of a hose when washing a car",
+            "Wash dishes under running water",
+            "Take very long showers"
+          ],
+          "answer": "Use a bucket instead of a hose when washing a car",
+          "explain": "Using a bucket uses much less water than a running hose.",
+          "procedure": [
+            "Water conservation means using less water",
+            "A hose can waste many litres per minute",
+            "A bucket uses only a few litres total",
+            "Small choices save a lot of water over time",
+            "Answer: Use a bucket instead of a hose when washing a car"
+          ]
+        },
+        {
+          "q": "What happens to water when it freezes?",
+          "options": ["It becomes a gas", "It becomes a solid (ice)", "It disappears", "It turns into vapour"],
+          "answer": "It becomes a solid (ice)",
+          "explain": "When water freezes, it becomes solid ice.",
+          "procedure": [
+            "Water exists in three states: solid, liquid, gas",
+            "When water cools below 0°C, it freezes",
+            "It becomes solid ice",
+            "When it warms up again, it melts back to liquid water",
+            "Answer: It becomes a solid (ice)"
+          ]
+        },
+        {
+          "q": "Which of the following is a real-life example of condensation?",
+          "options": [
+            "Water boiling in a pot",
+            "Water droplets on the outside of a cold glass",
+            "Rain falling",
+            "Ice melting"
+          ],
+          "answer": "Water droplets on the outside of a cold glass",
+          "explain": "Water vapour in the air cools on the cold glass and turns into droplets.",
+          "procedure": [
+            "A cold glass makes the air around it cool",
+            "Water vapour in the air touches the cold glass",
+            "The vapour cools and turns into liquid droplets",
+            "This is condensation — the same process that forms clouds",
+            "Answer: Water droplets on the outside of a cold glass"
+          ]
+        }
+      ]
     }
   ]
 }
