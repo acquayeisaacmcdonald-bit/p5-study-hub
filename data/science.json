@@ -1140,6 +1140,277 @@
           ]
         }
       ]
+    },
+    {
+      "id": "magnetism",
+      "name": "Magnetism",
+      "icon": "🧲",
+      "questions": [
+        {
+          "q": "What is a magnet?",
+          "options": ["A type of metal", "An object that attracts iron and steel", "A kind of light", "A form of energy"],
+          "answer": "An object that attracts iron and steel",
+          "explain": "A magnet is an object that attracts magnetic materials like iron and steel.",
+          "procedure": [
+            "A magnet produces a magnetic field around it",
+            "This field attracts certain metals",
+            "Iron and steel are the most common magnetic materials",
+            "Answer: An object that attracts iron and steel"
+          ]
+        },
+        {
+          "q": "Which of these materials is attracted by a magnet?",
+          "image": "assets/science/magnet-materials.png",
+          "options": ["Wood", "Iron nail", "Plastic", "Glass"],
+          "answer": "Iron nail",
+          "explain": "Iron is a magnetic material — a magnet will attract it.",
+          "procedure": [
+            "Magnetic materials are attracted to magnets",
+            "Wood, plastic, and glass are NOT magnetic",
+            "Iron is magnetic — a magnet will pull an iron nail",
+            "Answer: Iron nail"
+          ]
+        },
+        {
+          "q": "Which of these is NOT attracted by a magnet?",
+          "image": "assets/science/magnet-materials.png",
+          "options": ["Paper clip", "Steel spoon", "Wooden pencil", "Iron key"],
+          "answer": "Wooden pencil",
+          "explain": "Wood is not magnetic — it is not attracted by magnets.",
+          "procedure": [
+            "Paper clips, steel spoons, and iron keys are all made of magnetic metals",
+            "Wood is not a metal — it is not attracted",
+            "Answer: Wooden pencil"
+          ]
+        },
+        {
+          "q": "How many poles does a bar magnet have?",
+          "image": "assets/science/bar-magnet.png",
+          "options": ["1", "2", "3", "4"],
+          "answer": "2",
+          "explain": "A bar magnet has two poles — North and South.",
+          "procedure": [
+            "Every magnet has two poles",
+            "One end is the North pole",
+            "The other end is the South pole",
+            "Answer: 2"
+          ]
+        },
+        {
+          "q": "What are the two poles of a magnet called?",
+          "image": "assets/science/bar-magnet.png",
+          "options": ["East and West", "North and South", "Left and Right", "Top and Bottom"],
+          "answer": "North and South",
+          "explain": "The two poles of a magnet are called North and South.",
+          "procedure": [
+            "The poles are the strongest parts of a magnet",
+            "One is called the North pole",
+            "The other is called the South pole",
+            "Answer: North and South"
+          ]
+        },
+        {
+          "q": "Where is a magnet the strongest?",
+          "image": "assets/science/bar-magnet.png",
+          "options": ["In the middle", "At the ends (the poles)", "At the sides", "It is the same everywhere"],
+          "answer": "At the ends (the poles)",
+          "explain": "A magnet is strongest at its two poles — the ends.",
+          "procedure": [
+            "The magnetic force is strongest at the poles",
+            "You can see this if you sprinkle iron filings on a magnet",
+            "Most filings stick to the ends",
+            "Answer: At the ends (the poles)"
+          ]
+        },
+        {
+          "q": "What happens when two North poles are brought together?",
+          "image": "assets/science/magnetic-repulsion.png",
+          "options": ["They attract each other", "They repel each other", "Nothing happens", "They both disappear"],
+          "answer": "They repel each other",
+          "explain": "Like poles repel — North repels North, South repels South.",
+          "procedure": [
+            "There is a rule: like poles repel",
+            "Two North poles are the same — so they push apart",
+            "You can feel this if you try it with two magnets",
+            "Answer: They repel each other"
+          ]
+        },
+        {
+          "q": "What happens when a North pole and a South pole are brought together?",
+          "image": "assets/science/magnetic-attraction.png",
+          "options": ["They repel each other", "They attract each other", "Nothing happens", "They turn into metal"],
+          "answer": "They attract each other",
+          "explain": "Opposite poles attract — North attracts South.",
+          "procedure": [
+            "There is a rule: opposite poles attract",
+            "North and South are opposite",
+            "So they pull toward each other",
+            "Answer: They attract each other"
+          ]
+        },
+        {
+          "q": "What is a magnetic field?",
+          "image": "assets/science/bar-magnet.png",
+          "options": ["A field where crops grow", "The invisible area around a magnet where its force acts", "A football field with magnets", "A type of metal"],
+          "answer": "The invisible area around a magnet where its force acts",
+          "explain": "A magnetic field is the invisible space around a magnet where it can attract or repel.",
+          "procedure": [
+            "Magnets have an invisible force around them",
+            "This force is called the magnetic field",
+            "Inside this field, the magnet can pull or push other magnetic materials",
+            "You can see the field's shape with iron filings",
+            "Answer: The invisible area around a magnet where its force acts"
+          ]
+        },
+        {
+          "q": "What is a horseshoe magnet?",
+          "image": "assets/science/horseshoe-magnet.png",
+          "options": ["A magnet shaped like a horse", "A magnet bent into a U-shape", "A magnet for horses", "A magnet made of horseshoe metal"],
+          "answer": "A magnet bent into a U-shape",
+          "explain": "A horseshoe magnet is a magnet shaped like a U (or horseshoe).",
+          "procedure": [
+            "A horseshoe magnet is bent into a U-shape",
+            "Both poles are at the ends of the U",
+            "The U-shape brings the poles close together",
+            "This makes the magnetic force stronger between them",
+            "Answer: A magnet bent into a U-shape"
+          ]
+        },
+        {
+          "q": "Where are the poles on a horseshoe magnet?",
+          "image": "assets/science/horseshoe-magnet.png",
+          "options": ["Both on the same end", "At the two ends of the U", "In the middle", "On the sides"],
+          "answer": "At the two ends of the U",
+          "explain": "The two poles of a horseshoe magnet are at the two ends of the U-shape.",
+          "procedure": [
+            "The horseshoe magnet is bent so both poles face the same way",
+            "One end is the North pole",
+            "The other end is the South pole",
+            "Answer: At the two ends of the U"
+          ]
+        },
+        {
+          "q": "What is a compass?",
+          "image": "assets/science/compass.png",
+          "options": ["A device for measuring length", "A device that uses a magnet to show direction", "A device for measuring temperature", "A device for weighing objects"],
+          "answer": "A device that uses a magnet to show direction",
+          "explain": "A compass has a tiny magnet inside that always points north.",
+          "procedure": [
+            "A compass has a small magnetic needle inside",
+            "The needle is free to turn",
+            "It lines up with the Earth's magnetic field",
+            "One end always points North",
+            "Answer: A device that uses a magnet to show direction"
+          ]
+        },
+        {
+          "q": "Which direction does a compass needle always point?",
+          "image": "assets/science/compass.png",
+          "options": ["East", "North", "Up", "Down"],
+          "answer": "North",
+          "explain": "The compass needle always points toward the North pole.",
+          "procedure": [
+            "Earth itself acts like a giant magnet",
+            "The compass needle lines up with Earth's magnetic field",
+            "Because of this, it always points North",
+            "Answer: North"
+          ]
+        },
+        {
+          "q": "Why does a compass work?",
+          "options": ["It has a tiny battery", "It uses the Earth's magnetic field", "It uses sunlight", "It uses sound waves"],
+          "answer": "It uses the Earth's magnetic field",
+          "explain": "A compass works because Earth itself has a magnetic field.",
+          "procedure": [
+            "Earth has a magnetic field, like a giant magnet",
+            "This field has a North and a South end",
+            "The compass needle lines up with it",
+            "That is why the needle always points North",
+            "Answer: It uses the Earth's magnetic field"
+          ]
+        },
+        {
+          "q": "Which of these is a common use of magnets?",
+          "image": "assets/science/magnet-uses.png",
+          "options": ["Fridge doors", "Shoelaces", "Pillows", "Pencils"],
+          "answer": "Fridge doors",
+          "explain": "Fridge doors use magnets to stay closed.",
+          "procedure": [
+            "Fridge doors have magnets in the seal",
+            "This keeps the door closed tight",
+            "Magnets are also used in speakers, motors, and bank cards",
+            "Answer: Fridge doors"
+          ]
+        },
+        {
+          "q": "Which of these uses magnets?",
+          "image": "assets/science/magnet-uses.png",
+          "options": ["A wooden chair", "A loudspeaker", "A paper bag", "A glass bottle"],
+          "answer": "A loudspeaker",
+          "explain": "Loudspeakers use magnets to make sound.",
+          "procedure": [
+            "Inside a loudspeaker there is a magnet and a coil",
+            "The magnet and coil work together",
+            "This makes the speaker vibrate",
+            "The vibration makes sound",
+            "Answer: A loudspeaker"
+          ]
+        },
+        {
+          "q": "Which of these is a magnetic material?",
+          "image": "assets/science/magnet-materials.png",
+          "options": ["Copper", "Steel", "Aluminium", "Plastic"],
+          "answer": "Steel",
+          "explain": "Steel is made mostly of iron, so it is magnetic.",
+          "procedure": [
+            "Steel is mostly iron",
+            "Iron is magnetic",
+            "So steel is magnetic too",
+            "Copper, aluminium, and plastic are not magnetic",
+            "Answer: Steel"
+          ]
+        },
+        {
+          "q": "What happens to iron filings sprinkled near a magnet?",
+          "image": "assets/science/bar-magnet.png",
+          "options": ["They are not affected", "They move and form a pattern around the magnet", "They turn into plastic", "They disappear"],
+          "answer": "They move and form a pattern around the magnet",
+          "explain": "Iron filings form a pattern that shows the magnetic field.",
+          "procedure": [
+            "Iron filings are tiny bits of iron",
+            "When sprinkled near a magnet, they are attracted",
+            "They form lines and curves around the magnet",
+            "This pattern shows the shape of the magnetic field",
+            "Answer: They move and form a pattern around the magnet"
+          ]
+        },
+        {
+          "q": "Which of these will a magnet NOT attract?",
+          "image": "assets/science/magnet-materials.png",
+          "options": ["An iron nail", "A steel paper clip", "A copper coin", "An iron key"],
+          "answer": "A copper coin",
+          "explain": "Copper is not a magnetic material.",
+          "procedure": [
+            "Magnets attract iron, steel, nickel, and cobalt",
+            "Copper is NOT magnetic",
+            "So a magnet will not attract a copper coin",
+            "Answer: A copper coin"
+          ]
+        },
+        {
+          "q": "If you cut a bar magnet in half, what happens?",
+          "options": ["You get one North pole and one South pole", "Each half becomes a smaller magnet with its own North and South poles", "The magnet loses its magnetism", "The magnet becomes non-magnetic"],
+          "answer": "Each half becomes a smaller magnet with its own North and South poles",
+          "explain": "Every piece of a magnet is itself a magnet with two poles.",
+          "procedure": [
+            "Cut a bar magnet in half",
+            "You might expect one half to be North and the other South",
+            "But no — each half becomes its own complete magnet",
+            "Both halves have a North AND a South pole",
+            "Answer: Each half becomes a smaller magnet with its own North and South poles"
+          ]
+        }
+      ]
     }
   ]
 }
