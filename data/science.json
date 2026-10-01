@@ -594,12 +594,7 @@
         {
           "q": "What is the main job of the digestive system?",
           "image": "assets/science/digestive-system.png",
-          "options": [
-            "To pump blood around the body",
-            "To break down food so the body can use it",
-            "To help us breathe",
-            "To support the body"
-          ],
+          "options": ["To pump blood around the body", "To break down food so the body can use it", "To help us breathe", "To support the body"],
           "answer": "To break down food so the body can use it",
           "explain": "The digestive system breaks down food into nutrients the body can absorb.",
           "procedure": [
@@ -627,12 +622,7 @@
         {
           "q": "What is the oesophagus?",
           "image": "assets/science/digestive-system.png",
-          "options": [
-            "A tube that carries food from the mouth to the stomach",
-            "An organ that pumps blood",
-            "The organ that helps us breathe",
-            "The bone that protects the heart"
-          ],
+          "options": ["A tube that carries food from the mouth to the stomach", "An organ that pumps blood", "The organ that helps us breathe", "The bone that protects the heart"],
           "answer": "A tube that carries food from the mouth to the stomach",
           "explain": "The oesophagus is the food pipe connecting the mouth to the stomach.",
           "procedure": [
@@ -646,12 +636,7 @@
         {
           "q": "What happens to food inside the stomach?",
           "image": "assets/science/stomach-closeup.png",
-          "options": [
-            "It is stored without change",
-            "It is churned and mixed with digestive juices",
-            "It is sent directly to the heart",
-            "It turns into air"
-          ],
+          "options": ["It is stored without change", "It is churned and mixed with digestive juices", "It is sent directly to the heart", "It turns into air"],
           "answer": "It is churned and mixed with digestive juices",
           "explain": "The stomach churns food and mixes it with juices that break it down further.",
           "procedure": [
@@ -679,12 +664,7 @@
         {
           "q": "What is the main job of the large intestine?",
           "image": "assets/science/digestive-system.png",
-          "options": [
-            "To absorb water from what is left",
-            "To pump blood",
-            "To make food",
-            "To store oxygen"
-          ],
+          "options": ["To absorb water from what is left", "To pump blood", "To make food", "To store oxygen"],
           "answer": "To absorb water from what is left",
           "explain": "The large intestine absorbs water and forms solid waste.",
           "procedure": [
@@ -697,12 +677,7 @@
         },
         {
           "q": "What is digestion?",
-          "options": [
-            "The process of breathing",
-            "The process of breaking down food into nutrients",
-            "The process of pumping blood",
-            "The process of growing taller"
-          ],
+          "options": ["The process of breathing", "The process of breaking down food into nutrients", "The process of pumping blood", "The process of growing taller"],
           "answer": "The process of breaking down food into nutrients",
           "explain": "Digestion is how the body breaks food into useful nutrients.",
           "procedure": [
@@ -716,12 +691,7 @@
         {
           "q": "What is the main job of the heart?",
           "image": "assets/science/heart-closeup.png",
-          "options": [
-            "To digest food",
-            "To pump blood around the body",
-            "To help us breathe",
-            "To protect the brain"
-          ],
+          "options": ["To digest food", "To pump blood around the body", "To help us breathe", "To protect the brain"],
           "answer": "To pump blood around the body",
           "explain": "The heart pumps blood that carries oxygen and nutrients to every part of the body.",
           "procedure": [
@@ -735,12 +705,7 @@
         {
           "q": "What is the circulatory system?",
           "image": "assets/science/circulatory-system.png",
-          "options": [
-            "The bones of the body",
-            "The heart, blood, and blood vessels working together",
-            "The lungs and windpipe",
-            "The stomach and intestines"
-          ],
+          "options": ["The bones of the body", "The heart, blood, and blood vessels working together", "The lungs and windpipe", "The stomach and intestines"],
           "answer": "The heart, blood, and blood vessels working together",
           "explain": "The circulatory system moves blood around the body.",
           "procedure": [
@@ -754,12 +719,7 @@
         {
           "q": "What do arteries and veins do?",
           "image": "assets/science/circulatory-system.png",
-          "options": [
-            "They carry food to the stomach",
-            "They carry blood around the body",
-            "They help us see",
-            "They help us hear"
-          ],
+          "options": ["They carry food to the stomach", "They carry blood around the body", "They help us see", "They help us hear"],
           "answer": "They carry blood around the body",
           "explain": "Arteries and veins are blood vessels that carry blood.",
           "procedure": [
@@ -772,12 +732,7 @@
         },
         {
           "q": "What is circulation?",
-          "options": [
-            "The movement of blood around the body",
-            "The movement of food through the body",
-            "The movement of air into the lungs",
-            "The movement of bones at a joint"
-          ],
+          "options": ["The movement of blood around the body", "The movement of food through the body", "The movement of air into the lungs", "The movement of bones at a joint"],
           "answer": "The movement of blood around the body",
           "explain": "Circulation is the continuous movement of blood through the body.",
           "procedure": [
@@ -806,12 +761,7 @@
         {
           "q": "What is the windpipe?",
           "image": "assets/science/respiratory-system.png",
-          "options": [
-            "A tube that carries air from the throat to the lungs",
-            "A tube that carries food to the stomach",
-            "A tube that carries blood",
-            "A bone in the chest"
-          ],
+          "options": ["A tube that carries air from the throat to the lungs", "A tube that carries food to the stomach", "A tube that carries blood", "A bone in the chest"],
           "answer": "A tube that carries air from the throat to the lungs",
           "explain": "The windpipe (trachea) carries air from the throat to the lungs.",
           "procedure": [
@@ -825,12 +775,7 @@
         {
           "q": "What happens inside the lungs?",
           "image": "assets/science/lungs-closeup.png",
-          "options": [
-            "Food is digested",
-            "Oxygen from the air enters the blood",
-            "Blood is pumped",
-            "Bones are made"
-          ],
+          "options": ["Food is digested", "Oxygen from the air enters the blood", "Blood is pumped", "Bones are made"],
           "answer": "Oxygen from the air enters the blood",
           "explain": "In the lungs, oxygen passes into the blood and carbon dioxide leaves it.",
           "procedure": [
@@ -843,12 +788,7 @@
         },
         {
           "q": "Why do we need to breathe?",
-          "options": [
-            "To make our chest move",
-            "To get oxygen into the body and remove carbon dioxide",
-            "To make us taller",
-            "To keep us awake"
-          ],
+          "options": ["To make our chest move", "To get oxygen into the body and remove carbon dioxide", "To make us taller", "To keep us awake"],
           "answer": "To get oxygen into the body and remove carbon dioxide",
           "explain": "Breathing brings in oxygen and removes carbon dioxide.",
           "procedure": [
@@ -862,12 +802,7 @@
         {
           "q": "What is the skeleton for?",
           "image": "assets/science/skeletal-system.png",
-          "options": [
-            "To digest food",
-            "To support the body, protect organs, and help it move",
-            "To pump blood",
-            "To carry oxygen"
-          ],
+          "options": ["To digest food", "To support the body, protect organs, and help it move", "To pump blood", "To carry oxygen"],
           "answer": "To support the body, protect organs, and help it move",
           "explain": "The skeleton supports the body, protects organs, and works with muscles for movement.",
           "procedure": [
@@ -881,12 +816,7 @@
         {
           "q": "What is a joint?",
           "image": "assets/science/joints-diagram.png",
-          "options": [
-            "A place where two bones meet",
-            "A type of bone",
-            "A muscle in the body",
-            "A blood vessel"
-          ],
+          "options": ["A place where two bones meet", "A type of bone", "A muscle in the body", "A blood vessel"],
           "answer": "A place where two bones meet",
           "explain": "A joint is where two bones meet and allow movement.",
           "procedure": [
@@ -900,12 +830,7 @@
         {
           "q": "Which of these is a type of joint?",
           "image": "assets/science/joints-diagram.png",
-          "options": [
-            "Ball-and-socket joint",
-            "Red blood cell",
-            "Windpipe",
-            "Stomach"
-          ],
+          "options": ["Ball-and-socket joint", "Red blood cell", "Windpipe", "Stomach"],
           "answer": "Ball-and-socket joint",
           "explain": "Ball-and-socket is one of the main types of joints in the body.",
           "procedure": [
@@ -919,12 +844,7 @@
         {
           "q": "What does the brain do?",
           "image": "assets/science/nervous-system.png",
-          "options": [
-            "It pumps blood",
-            "It controls the whole body and helps us think",
-            "It digests food",
-            "It carries oxygen"
-          ],
+          "options": ["It pumps blood", "It controls the whole body and helps us think", "It digests food", "It carries oxygen"],
           "answer": "It controls the whole body and helps us think",
           "explain": "The brain is the control centre of the body — it directs everything we do.",
           "procedure": [
@@ -938,12 +858,7 @@
         {
           "q": "How do the body systems work together?",
           "image": "assets/science/body-systems-overview.png",
-          "options": [
-            "They work alone and never help each other",
-            "They work as a team to keep the body alive and healthy",
-            "Only one system works at a time",
-            "They only work when we sleep"
-          ],
+          "options": ["They work alone and never help each other", "They work as a team to keep the body alive and healthy", "Only one system works at a time", "They only work when we sleep"],
           "answer": "They work as a team to keep the body alive and healthy",
           "explain": "The body systems work together — for example, the digestive system provides nutrients that the circulatory system delivers to every cell.",
           "procedure": [
@@ -955,6 +870,273 @@
             "The nervous system controls everything",
             "Together they keep the body alive and healthy",
             "Answer: They work as a team to keep the body alive and healthy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forms-of-energy",
+      "name": "Forms of Energy",
+      "icon": "⚡",
+      "questions": [
+        {
+          "q": "What is kinetic energy?",
+          "image": "assets/science/kinetic-energy.png",
+          "options": ["Energy that is stored", "Energy of movement", "Energy from food", "Energy of sound"],
+          "answer": "Energy of movement",
+          "explain": "Kinetic energy is the energy an object has because it is moving.",
+          "procedure": [
+            "Kinetic comes from the Greek word for 'motion'",
+            "Anything that moves has kinetic energy",
+            "The faster it moves, the more kinetic energy it has",
+            "Answer: Energy of movement"
+          ]
+        },
+        {
+          "q": "Which of these shows kinetic energy?",
+          "image": "assets/science/kinetic-energy.png",
+          "options": ["A ball sitting on the ground", "A child running", "A book on a shelf", "A parked car"],
+          "answer": "A child running",
+          "explain": "Running is movement, so a running child has kinetic energy.",
+          "procedure": [
+            "Kinetic energy = energy of movement",
+            "A child running is moving — so they have kinetic energy",
+            "A ball on the ground, a book on a shelf, and a parked car are all still",
+            "Answer: A child running"
+          ]
+        },
+        {
+          "q": "What is potential energy?",
+          "image": "assets/science/potential-energy.png",
+          "options": ["Energy of movement", "Stored energy waiting to be used", "Energy of light", "Energy of sound"],
+          "answer": "Stored energy waiting to be used",
+          "explain": "Potential energy is energy that is stored and ready to be released.",
+          "procedure": [
+            "Potential energy is stored energy",
+            "It is waiting to be used or released",
+            "A ball on a hill has potential energy — it can roll down",
+            "Answer: Stored energy waiting to be used"
+          ]
+        },
+        {
+          "q": "Which of these shows potential energy?",
+          "image": "assets/science/potential-energy.png",
+          "options": ["A ball rolling down a hill", "A ball at the top of a hill", "A car moving fast", "Water flowing in a river"],
+          "answer": "A ball at the top of a hill",
+          "explain": "A ball at the top of a hill is not moving yet — it has stored (potential) energy.",
+          "procedure": [
+            "A ball at the top of a hill has not started moving yet",
+            "But it has stored energy ready to be released",
+            "This stored energy is potential energy",
+            "Once it starts rolling, the potential energy becomes kinetic energy",
+            "Answer: A ball at the top of a hill"
+          ]
+        },
+        {
+          "q": "What is heat energy?",
+          "image": "assets/science/heat-energy.png",
+          "options": ["Energy from light", "Energy from warm or hot objects", "Energy from sound", "Energy from electricity"],
+          "answer": "Energy from warm or hot objects",
+          "explain": "Heat energy comes from warm or hot objects and makes things warmer.",
+          "procedure": [
+            "Heat is a form of energy",
+            "Warm or hot objects give off heat energy",
+            "Heat makes things warmer",
+            "Answer: Energy from warm or hot objects"
+          ]
+        },
+        {
+          "q": "Which of these is a source of heat energy?",
+          "image": "assets/science/heat-energy.png",
+          "options": ["A book", "A fire", "A mirror", "A stone"],
+          "answer": "A fire",
+          "explain": "Fire produces heat energy.",
+          "procedure": [
+            "Heat energy comes from warm or hot objects",
+            "A fire is very hot — it gives off lots of heat energy",
+            "A book, mirror, and stone at room temperature do not produce noticeable heat",
+            "Answer: A fire"
+          ]
+        },
+        {
+          "q": "What is light energy?",
+          "image": "assets/science/light-energy.png",
+          "options": ["Energy that we can see", "Energy that we can hear", "Energy that is stored", "Energy that moves objects"],
+          "answer": "Energy that we can see",
+          "explain": "Light energy is the energy we can see with our eyes.",
+          "procedure": [
+            "Light is a form of energy",
+            "We can see it with our eyes",
+            "It comes from sources like the sun, bulbs, and candles",
+            "Answer: Energy that we can see"
+          ]
+        },
+        {
+          "q": "Which of these is a source of light energy?",
+          "image": "assets/science/light-energy.png",
+          "options": ["A stone", "The sun", "A pillow", "A spoon"],
+          "answer": "The sun",
+          "explain": "The sun is our main natural source of light.",
+          "procedure": [
+            "Light energy comes from light sources",
+            "The sun is the biggest natural light source",
+            "Other sources include torches, bulbs, and candles",
+            "Answer: The sun"
+          ]
+        },
+        {
+          "q": "What is sound energy?",
+          "image": "assets/science/sound-energy.png",
+          "options": ["Energy we can see", "Energy we can hear", "Energy stored in food", "Energy of heat"],
+          "answer": "Energy we can hear",
+          "explain": "Sound energy is the energy we hear — produced by vibrations.",
+          "procedure": [
+            "Sound is a form of energy",
+            "It is made when something vibrates",
+            "Our ears pick up these vibrations as sound",
+            "Answer: Energy we can hear"
+          ]
+        },
+        {
+          "q": "Which of these produces sound energy?",
+          "image": "assets/science/sound-energy.png",
+          "options": ["A silent book", "A drum being beaten", "A still picture", "A quiet room"],
+          "answer": "A drum being beaten",
+          "explain": "A drum vibrates when beaten, producing sound energy.",
+          "procedure": [
+            "Sound is made when something vibrates",
+            "When a drum is beaten, the skin vibrates",
+            "These vibrations travel through the air as sound",
+            "Answer: A drum being beaten"
+          ]
+        },
+        {
+          "q": "What is electrical energy?",
+          "image": "assets/science/electrical-energy.png",
+          "options": ["Energy from water", "Energy that flows as electric current", "Energy from food", "Energy of sound"],
+          "answer": "Energy that flows as electric current",
+          "explain": "Electrical energy is carried by moving electric charges (current).",
+          "procedure": [
+            "Electrical energy is carried by electric current",
+            "It flows through wires and circuits",
+            "Batteries and sockets are sources of electrical energy",
+            "Answer: Energy that flows as electric current"
+          ]
+        },
+        {
+          "q": "Which of these is a source of electrical energy?",
+          "image": "assets/science/electrical-energy.png",
+          "options": ["A book", "A battery", "A cup of water", "A spoon"],
+          "answer": "A battery",
+          "explain": "A battery stores chemical energy that can become electrical energy.",
+          "procedure": [
+            "A battery stores energy inside it",
+            "When connected in a circuit, it releases electrical energy",
+            "Other sources include power sockets and generators",
+            "Answer: A battery"
+          ]
+        },
+        {
+          "q": "What is chemical energy?",
+          "image": "assets/science/chemical-energy.png",
+          "options": ["Energy from movement", "Energy stored in substances like food and fuel", "Energy of light", "Energy of heat"],
+          "answer": "Energy stored in substances like food and fuel",
+          "explain": "Chemical energy is stored in the bonds of substances like food and fuel.",
+          "procedure": [
+            "Chemical energy is stored inside substances",
+            "Food contains chemical energy we use when we eat",
+            "Fuel contains chemical energy that is released when it burns",
+            "Answer: Energy stored in substances like food and fuel"
+          ]
+        },
+        {
+          "q": "Where is chemical energy stored in our body?",
+          "image": "assets/science/chemical-energy.png",
+          "options": ["In our hair", "In the food we eat", "In our shadow", "In our shoes"],
+          "answer": "In the food we eat",
+          "explain": "Food contains chemical energy that our body uses.",
+          "procedure": [
+            "The food we eat contains chemical energy",
+            "Our body breaks it down and releases the energy",
+            "We use this energy to move, think, and grow",
+            "Answer: In the food we eat"
+          ]
+        },
+        {
+          "q": "What is energy conversion?",
+          "image": "assets/science/energy-conversion.png",
+          "options": ["When energy is destroyed", "When energy changes from one form to another", "When energy is created", "When energy disappears"],
+          "answer": "When energy changes from one form to another",
+          "explain": "Energy conversion is when energy changes form — like electrical energy becoming light.",
+          "procedure": [
+            "Energy can change from one form to another",
+            "For example, a torch changes chemical energy into light energy",
+            "This change is called energy conversion",
+            "Answer: When energy changes from one form to another"
+          ]
+        },
+        {
+          "q": "In a torch, what energy change happens?",
+          "image": "assets/science/energy-conversion.png",
+          "options": ["Light energy → chemical energy", "Chemical energy → light energy", "Sound energy → light energy", "Heat energy → sound energy"],
+          "answer": "Chemical energy → light energy",
+          "explain": "A torch converts chemical energy in its battery into light energy.",
+          "procedure": [
+            "The battery in a torch stores chemical energy",
+            "When the torch is switched on, this energy is released",
+            "It changes into light energy (the beam)",
+            "Some is also lost as heat energy",
+            "Answer: Chemical energy → light energy"
+          ]
+        },
+        {
+          "q": "What is energy?",
+          "options": ["A type of food", "The ability to do work or cause change", "A kind of machine", "A form of metal"],
+          "answer": "The ability to do work or cause change",
+          "explain": "Energy is the ability to do work or make things happen.",
+          "procedure": [
+            "Energy lets things move, warm up, light up, or make sound",
+            "Without energy, nothing would work",
+            "Energy can change form but is never lost",
+            "Answer: The ability to do work or cause change"
+          ]
+        },
+        {
+          "q": "Can energy be created or destroyed?",
+          "options": ["Yes, energy can be created", "Yes, energy can be destroyed", "No, energy cannot be created or destroyed — it only changes form", "Energy only exists in the sun"],
+          "answer": "No, energy cannot be created or destroyed — it only changes form",
+          "explain": "Energy is never created or destroyed — it only converts from one form to another.",
+          "procedure": [
+            "This is called the law of conservation of energy",
+            "Energy cannot be created from nothing",
+            "It cannot be destroyed either",
+            "It only changes from one form to another",
+            "Answer: No, energy cannot be created or destroyed — it only changes form"
+          ]
+        },
+        {
+          "q": "Which form of energy do we get from the sun?",
+          "options": ["Sound energy", "Light and heat energy", "Chemical energy only", "Electrical energy"],
+          "answer": "Light and heat energy",
+          "explain": "The sun gives us both light and heat energy.",
+          "procedure": [
+            "The sun is our main natural source of energy",
+            "It gives off light energy (we can see everything)",
+            "It also gives off heat energy (it warms the Earth)",
+            "Answer: Light and heat energy"
+          ]
+        },
+        {
+          "q": "Why do we need energy?",
+          "options": ["Only to run machines", "To do work, move, grow, and stay alive", "Only to sleep", "Only for plants"],
+          "answer": "To do work, move, grow, and stay alive",
+          "explain": "All living things need energy to move, grow, and function.",
+          "procedure": [
+            "Everything we do uses energy",
+            "Walking, talking, thinking, and even sleeping use energy",
+            "Plants need energy from sunlight to grow",
+            "Machines need energy to work",
+            "Answer: To do work, move, grow, and stay alive"
           ]
         }
       ]
