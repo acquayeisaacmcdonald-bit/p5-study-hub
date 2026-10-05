@@ -1706,6 +1706,26 @@
             "Magnetic separation sorts metals in recycling plants",
             "Evaporation is used to get salt from sea water",
             "Answer: So we can purify water, sort recycling, and get useful substances"
+          ]      
+		},
+        {
+          "q": "How can you separate a mixture of salt and sand?",
+          "options": [
+            "Add water, then filter and evaporate",
+            "Use a magnet",
+            "Use a sieve",
+            "Use a spoon"
+          ],
+          "answer": "Add water, then filter and evaporate",
+          "explain": "Salt dissolves in water but sand does not, so we can filter and evaporate to separate them.",
+          "procedure": [
+            "First, add water to the salt and sand mixture and stir",
+            "The salt dissolves in the water, but the sand does not",
+            "Pour the mixture through filter paper",
+            "The sand stays in the filter paper; the salty water passes through",
+            "Then heat the salty water to evaporate it",
+            "The water becomes vapour and the salt crystals are left behind",
+            "Answer: Add water, then filter and evaporate"
           ]
         }
       ]
