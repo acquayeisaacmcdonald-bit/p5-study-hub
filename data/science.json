@@ -1411,6 +1411,304 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mixtures",
+      "name": "Mixtures",
+      "icon": "🥤",
+      "questions": [
+        {
+          "q": "What is a mixture?",
+          "options": [
+            "A single pure substance",
+            "Two or more substances combined but not chemically joined",
+            "A type of chemical reaction",
+            "A type of atom"
+          ],
+          "answer": "Two or more substances combined but not chemically joined",
+          "explain": "A mixture is made of two or more substances mixed together without a chemical bond.",
+          "procedure": [
+            "A mixture contains two or more substances",
+            "Each substance keeps its own properties",
+            "They are not chemically combined",
+            "They can usually be separated again",
+            "Answer: Two or more substances combined but not chemically joined"
+          ]
+        },
+        {
+          "q": "Which of these is an example of a mixture?",
+          "image": "assets/science/mixture-examples.png",
+          "options": ["Pure water", "Tea with a tea bag", "A gold ring", "A copper wire"],
+          "answer": "Tea with a tea bag",
+          "explain": "Tea is a mixture of tea leaves and water.",
+          "procedure": [
+            "Pure water is a single substance",
+            "Tea contains tea leaves and water mixed together",
+            "Both substances are still present in tea",
+            "So tea is a mixture",
+            "Answer: Tea with a tea bag"
+          ]
+        },
+        {
+          "q": "What is a solution?",
+          "options": [
+            "A mixture where a solid is mixed with a liquid and dissolves",
+            "A type of chemical reaction",
+            "A rock",
+            "A gas"
+          ],
+          "answer": "A mixture where a solid is mixed with a liquid and dissolves",
+          "explain": "A solution is a mixture where one substance dissolves into another.",
+          "procedure": [
+            "In a solution, one substance dissolves into another",
+            "For example, sugar dissolving in water makes a sugar solution",
+            "The sugar is no longer visible but is still there",
+            "The solution looks clear",
+            "Answer: A mixture where a solid is mixed with a liquid and dissolves"
+          ]
+        },
+        {
+          "q": "When sugar is stirred into water, what happens?",
+          "image": "assets/science/solution.png",
+          "options": ["The sugar disappears forever", "The sugar dissolves and forms a solution", "The water turns solid", "The sugar and water become one new substance"],
+          "answer": "The sugar dissolves and forms a solution",
+          "explain": "Sugar dissolves in water to form a solution.",
+          "procedure": [
+            "The sugar grains break apart into tiny particles",
+            "These particles mix evenly through the water",
+            "We say the sugar has dissolved",
+            "This forms a sugar solution",
+            "Answer: The sugar dissolves and forms a solution"
+          ]
+        },
+        {
+          "q": "Which method separates stones from sand?",
+          "image": "assets/science/sieving.png",
+          "options": ["Filtration", "Sieving", "Evaporation", "Boiling"],
+          "answer": "Sieving",
+          "explain": "Sieving separates solids of different sizes — like stones from sand.",
+          "procedure": [
+            "Sand grains are smaller than stones",
+            "A sieve has small holes",
+            "Fine sand falls through the holes",
+            "Larger stones stay on top",
+            "Answer: Sieving"
+          ]
+        },
+        {
+          "q": "What is sieving used for?",
+          "image": "assets/science/sieving.png",
+          "options": [
+            "Separating solids of different sizes",
+            "Separating liquids from liquids",
+            "Making new substances",
+            "Cooling things down"
+          ],
+          "answer": "Separating solids of different sizes",
+          "explain": "Sieving separates solid particles by size.",
+          "procedure": [
+            "A sieve has a mesh with holes of a certain size",
+            "Smaller particles pass through the holes",
+            "Larger particles stay on top",
+            "This is used for sand, flour, and gravel",
+            "Answer: Separating solids of different sizes"
+          ]
+        },
+        {
+          "q": "Which method separates sand from water?",
+          "image": "assets/science/filtration.png",
+          "options": ["Sieving", "Filtration", "Evaporation", "Distillation"],
+          "answer": "Filtration",
+          "explain": "Filtration separates an insoluble solid from a liquid.",
+          "procedure": [
+            "Sand does not dissolve in water",
+            "We can pour the mixture through filter paper",
+            "The filter paper traps the sand",
+            "Clear water passes through",
+            "Answer: Filtration"
+          ]
+        },
+        {
+          "q": "What is filtration?",
+          "image": "assets/science/filtration.png",
+          "options": [
+            "Separating a solid from a liquid using filter paper",
+            "Separating two solids of different sizes",
+            "Heating a liquid until it evaporates",
+            "Using a magnet to separate metals"
+          ],
+          "answer": "Separating a solid from a liquid using filter paper",
+          "explain": "Filtration uses filter paper to trap solids from a liquid.",
+          "procedure": [
+            "Filter paper has tiny holes",
+            "Liquid can pass through the holes",
+            "Solid particles are too big to pass",
+            "They get trapped in the filter paper",
+            "Answer: Separating a solid from a liquid using filter paper"
+          ]
+        },
+        {
+          "q": "Which method separates salt from salty water?",
+          "image": "assets/science/evaporation-separation.png",
+          "options": ["Filtration", "Sieving", "Evaporation", "Magnetic separation"],
+          "answer": "Evaporation",
+          "explain": "Evaporation removes the water, leaving the salt behind.",
+          "procedure": [
+            "Salt dissolves in water — you cannot filter it out",
+            "If you heat the salty water, the water evaporates",
+            "The water turns into vapour and goes into the air",
+            "The salt crystals are left behind",
+            "Answer: Evaporation"
+          ]
+        },
+        {
+          "q": "What is left behind after evaporating salty water?",
+          "image": "assets/science/evaporation-separation.png",
+          "options": ["Nothing", "Water", "Salt crystals", "Sugar"],
+          "answer": "Salt crystals",
+          "explain": "When the water evaporates, the salt is left as crystals.",
+          "procedure": [
+            "Salt is dissolved in the water",
+            "When water evaporates, it leaves as vapour",
+            "The salt does not evaporate with it",
+            "Salt crystals form in the container",
+            "Answer: Salt crystals"
+          ]
+        },
+        {
+          "q": "Which method separates iron filings from sand?",
+          "image": "assets/science/magnetic-separation.png",
+          "options": ["Sieving", "Filtration", "Evaporation", "Using a magnet"],
+          "answer": "Using a magnet",
+          "explain": "Iron is magnetic, so a magnet attracts the iron filings, leaving the sand behind.",
+          "procedure": [
+            "Iron is magnetic — sand is not",
+            "Hold a magnet above the mixture",
+            "The iron filings jump to the magnet",
+            "The sand stays on the table",
+            "Answer: Using a magnet"
+          ]
+        },
+        {
+          "q": "What is magnetic separation?",
+          "image": "assets/science/magnetic-separation.png",
+          "options": [
+            "Separating magnetic materials using a magnet",
+            "Separating liquids using heat",
+            "Separating solids using a sieve",
+            "Separating colours using light"
+          ],
+          "answer": "Separating magnetic materials using a magnet",
+          "explain": "Magnetic separation uses a magnet to pull out magnetic materials.",
+          "procedure": [
+            "In magnetic separation, we use a magnet",
+            "The magnet attracts iron, steel, or other magnetic materials",
+            "Non-magnetic materials stay behind",
+            "This is used in recycling plants to sort metals",
+            "Answer: Separating magnetic materials using a magnet"
+          ]
+        },
+        {
+          "q": "Which method uses a magnet?",
+          "image": "assets/science/magnetic-separation.png",
+          "options": ["Evaporation", "Filtration", "Magnetic separation", "Sieving"],
+          "answer": "Magnetic separation",
+          "explain": "Magnetic separation uses a magnet to remove magnetic materials.",
+          "procedure": [
+            "Only one of the methods uses a magnet",
+            "Evaporation uses heat",
+            "Filtration uses filter paper",
+            "Sieving uses a mesh",
+            "Magnetic separation uses a magnet",
+            "Answer: Magnetic separation"
+          ]
+        },
+        {
+          "q": "What is the difference between a mixture and a pure substance?",
+          "options": [
+            "A mixture is one substance; a pure substance is many",
+            "A mixture contains two or more substances; a pure substance is only one",
+            "A mixture is always a liquid",
+            "They are the same thing"
+          ],
+          "answer": "A mixture contains two or more substances; a pure substance is only one",
+          "explain": "A mixture has two or more substances, while a pure substance has only one.",
+          "procedure": [
+            "A pure substance is made of only one thing",
+            "A mixture is made of two or more substances",
+            "The substances in a mixture keep their own properties",
+            "Answer: A mixture contains two or more substances; a pure substance is only one"
+          ]
+        },
+        {
+          "q": "Is salt water a mixture?",
+          "options": ["No, it is a pure substance", "Yes, it is a mixture of salt and water", "Only if it is cold", "Only if you can see the salt"],
+          "answer": "Yes, it is a mixture of salt and water",
+          "explain": "Salt water is a mixture of salt dissolved in water.",
+          "procedure": [
+            "Salt water contains salt and water",
+            "The salt is dissolved but still there",
+            "They are not chemically joined",
+            "So salt water is a mixture",
+            "Answer: Yes, it is a mixture of salt and water"
+          ]
+        },
+        {
+          "q": "When salt dissolves in water, is the salt still there?",
+          "options": ["No, it disappears", "Yes, it is still there but dissolved", "Yes, but only when the water is hot", "It depends on the weather"],
+          "answer": "Yes, it is still there but dissolved",
+          "explain": "The salt is still in the water — you just can't see it.",
+          "procedure": [
+            "The salt grains break into tiny particles",
+            "These mix with the water",
+            "You cannot see them but they are there",
+            "If you evaporate the water, the salt returns",
+            "Answer: Yes, it is still there but dissolved"
+          ]
+        },
+        {
+          "q": "Which of these is NOT a way to separate a mixture?",
+          "options": ["Sieving", "Filtration", "Evaporation", "Adding more ingredients"],
+          "answer": "Adding more ingredients",
+          "explain": "Adding more ingredients makes the mixture bigger, not separated.",
+          "procedure": [
+            "Separation methods take parts of the mixture apart",
+            "Sieving, filtration, and evaporation all separate mixtures",
+            "Adding more ingredients does the opposite — it makes the mixture larger",
+            "Answer: Adding more ingredients"
+          ]
+        },
+        {
+          "q": "What happens to the water during evaporation?",
+          "options": ["It becomes ice", "It becomes water vapour and goes into the air", "It turns into salt", "It disappears completely"],
+          "answer": "It becomes water vapour and goes into the air",
+          "explain": "During evaporation, water turns into vapour and escapes into the air.",
+          "procedure": [
+            "When water is heated, it changes into gas",
+            "The gas is called water vapour",
+            "The vapour rises into the air",
+            "The solid that was dissolved is left behind",
+            "Answer: It becomes water vapour and goes into the air"
+          ]
+        },
+        {
+          "q": "Why is it useful to know how to separate mixtures?",
+          "options": [
+            "So we can mix more things together",
+            "So we can purify water, sort recycling, and get useful substances",
+            "So we can make mixtures more complicated",
+            "It has no real use"
+          ],
+          "answer": "So we can purify water, sort recycling, and get useful substances",
+          "explain": "Separating mixtures is used to purify water, recycle materials, and extract useful substances.",
+          "procedure": [
+            "Filtration purifies drinking water",
+            "Magnetic separation sorts metals in recycling plants",
+            "Evaporation is used to get salt from sea water",
+            "Answer: So we can purify water, sort recycling, and get useful substances"
+          ]
+        }
+      ]
     }
   ]
 }
