@@ -2109,6 +2109,353 @@
           ]
         }
       ]
+    },
+    {
+      "id": "change-of-state",
+      "name": "Change of State of Matter",
+      "icon": "❄️",
+      "questions": [
+        {
+          "q": "What are the three states of matter?",
+          "image": "assets/science/states-of-matter.png",
+          "options": ["Solid, liquid, and gas", "Hot, cold, and warm", "Big, medium, and small", "Hard, soft, and smooth"],
+          "answer": "Solid, liquid, and gas",
+          "explain": "Matter exists in three states: solid, liquid, and gas.",
+          "procedure": [
+            "Matter is anything that has mass and takes up space",
+            "It can exist in three states",
+            "Solid — has a fixed shape (like ice)",
+            "Liquid — takes the shape of its container (like water)",
+            "Gas — spreads out to fill any space (like steam)",
+            "Answer: Solid, liquid, and gas"
+          ]
+        },
+        {
+          "q": "What is melting?",
+          "image": "assets/science/melting.png",
+          "options": [
+            "When a solid changes to a liquid",
+            "When a liquid changes to a solid",
+            "When a liquid changes to a gas",
+            "When a gas changes to a liquid"
+          ],
+          "answer": "When a solid changes to a liquid",
+          "explain": "Melting is when a solid turns into a liquid by heating.",
+          "procedure": [
+            "When a solid is heated, it can turn into a liquid",
+            "This change is called melting",
+            "Example: ice melts into water",
+            "The temperature at which this happens is called the melting point",
+            "Answer: When a solid changes to a liquid"
+          ]
+        },
+        {
+          "q": "What is freezing?",
+          "image": "assets/science/freezing.png",
+          "options": [
+            "When a solid changes to a liquid",
+            "When a liquid changes to a solid",
+            "When a liquid changes to a gas",
+            "When a gas changes to a liquid"
+          ],
+          "answer": "When a liquid changes to a solid",
+          "explain": "Freezing is when a liquid turns into a solid by cooling.",
+          "procedure": [
+            "When a liquid is cooled, it can turn into a solid",
+            "This change is called freezing",
+            "Example: water freezes into ice",
+            "The temperature at which this happens is called the freezing point",
+            "Answer: When a liquid changes to a solid"
+          ]
+        },
+        {
+          "q": "What is evaporation?",
+          "image": "assets/science/evaporation-state.png",
+          "options": [
+            "When a solid changes to a liquid",
+            "When a liquid changes to a solid",
+            "When a liquid changes to a gas",
+            "When a gas changes to a liquid"
+          ],
+          "answer": "When a liquid changes to a gas",
+          "explain": "Evaporation is when a liquid turns into a gas by heating.",
+          "procedure": [
+            "When a liquid is heated, it can turn into a gas",
+            "This change is called evaporation",
+            "Example: water in a pot turns into steam when heated",
+            "The gas formed is called water vapour",
+            "Answer: When a liquid changes to a gas"
+          ]
+        },
+        {
+          "q": "What is condensation?",
+          "image": "assets/science/condensation-state.png",
+          "options": [
+            "When a solid changes to a liquid",
+            "When a liquid changes to a solid",
+            "When a liquid changes to a gas",
+            "When a gas changes to a liquid"
+          ],
+          "answer": "When a gas changes to a liquid",
+          "explain": "Condensation is when a gas turns into a liquid by cooling.",
+          "procedure": [
+            "When a gas is cooled, it can turn back into a liquid",
+            "This change is called condensation",
+            "Example: steam from a kettle touches a cold mirror and forms water droplets",
+            "The liquid that forms is water",
+            "Answer: When a gas changes to a liquid"
+          ]
+        },
+        {
+          "q": "What happens when ice is left outside on a hot day?",
+          "image": "assets/science/melting.png",
+          "options": [
+            "It stays the same",
+            "It melts into water",
+            "It becomes steam directly",
+            "It grows bigger"
+          ],
+          "answer": "It melts into water",
+          "explain": "Heat from the sun makes the ice melt into liquid water.",
+          "procedure": [
+            "Ice is the solid form of water",
+            "The sun provides heat",
+            "When ice is heated, it changes to liquid water",
+            "This process is called melting",
+            "Answer: It melts into water"
+          ]
+        },
+        {
+          "q": "What happens when water is placed in a freezer?",
+          "image": "assets/science/freezing.png",
+          "options": [
+            "It stays liquid",
+            "It becomes steam",
+            "It freezes into ice",
+            "It turns into gas"
+          ],
+          "answer": "It freezes into ice",
+          "explain": "The cold temperature in the freezer causes water to freeze into ice.",
+          "procedure": [
+            "The freezer is very cold (below 0°C)",
+            "When liquid water is cooled below 0°C, it changes into a solid",
+            "This solid is called ice",
+            "This process is called freezing",
+            "Answer: It freezes into ice"
+          ]
+        },
+        {
+          "q": "What happens to water when you boil it in a pot?",
+          "image": "assets/science/evaporation-state.png",
+          "options": [
+            "It freezes",
+            "It evaporates into steam",
+            "It turns into ice",
+            "It disappears completely"
+          ],
+          "answer": "It evaporates into steam",
+          "explain": "Boiling water turns into steam (water vapour).",
+          "procedure": [
+            "Boiling heats the water to 100°C",
+            "At this temperature, water changes from liquid to gas",
+            "The gas is called water vapour or steam",
+            "This process is called evaporation",
+            "Answer: It evaporates into steam"
+          ]
+        },
+        {
+          "q": "Where do you see condensation in everyday life?",
+          "image": "assets/science/condensation-state.png",
+          "options": [
+            "Ice melting in a glass",
+            "Water droplets on a cold glass",
+            "Water boiling in a pot",
+            "Rain falling from clouds"
+          ],
+          "answer": "Water droplets on a cold glass",
+          "explain": "Water vapour in the air touches a cold surface and turns into droplets — that's condensation.",
+          "procedure": [
+            "The air around us contains water vapour",
+            "When air touches a cold surface (like a glass of cold water), the vapour cools",
+            "Cool vapour turns into liquid water droplets",
+            "These droplets form on the outside of the glass",
+            "Answer: Water droplets on a cold glass"
+          ]
+        },
+        {
+          "q": "How are the particles arranged in a solid?",
+          "image": "assets/science/solid-particles.png",
+          "options": [
+            "Tightly packed in fixed positions",
+            "Loosely packed and sliding past each other",
+            "Far apart and moving freely",
+            "Randomly scattered with no pattern"
+          ],
+          "answer": "Tightly packed in fixed positions",
+          "explain": "In a solid, particles are tightly packed and only vibrate in place.",
+          "procedure": [
+            "Particles in a solid are packed very close together",
+            "They are arranged in a fixed pattern",
+            "They vibrate but do not move from place to place",
+            "This is why solids have a fixed shape",
+            "Answer: Tightly packed in fixed positions"
+          ]
+        },
+        {
+          "q": "How are the particles arranged in a liquid?",
+          "image": "assets/science/liquid-particles.png",
+          "options": [
+            "Tightly packed in fixed positions",
+            "Loosely packed and sliding past each other",
+            "Far apart and moving freely",
+            "Randomly scattered with no pattern"
+          ],
+          "answer": "Loosely packed and sliding past each other",
+          "explain": "In a liquid, particles are close but can slide past each other.",
+          "procedure": [
+            "Particles in a liquid are close together",
+            "But they are not in fixed positions",
+            "They can slide past each other",
+            "This is why liquids take the shape of their container",
+            "Answer: Loosely packed and sliding past each other"
+          ]
+        },
+        {
+          "q": "How are the particles arranged in a gas?",
+          "image": "assets/science/gas-particles.png",
+          "options": [
+            "Tightly packed in fixed positions",
+            "Loosely packed and sliding past each other",
+            "Far apart and moving freely",
+            "Randomly scattered with no pattern"
+          ],
+          "answer": "Far apart and moving freely",
+          "explain": "In a gas, particles are far apart and move quickly in all directions.",
+          "procedure": [
+            "Particles in a gas are very far apart",
+            "They move quickly in all directions",
+            "There is lots of empty space between them",
+            "This is why gases spread out to fill any container",
+            "Answer: Far apart and moving freely"
+          ]
+        },
+        {
+          "q": "What happens to particles when a solid is heated?",
+          "options": [
+            "They stop moving",
+            "They vibrate faster and move further apart",
+            "They disappear",
+            "They turn into light"
+          ],
+          "answer": "They vibrate faster and move further apart",
+          "explain": "Heating gives particles more energy, so they vibrate faster and spread apart.",
+          "procedure": [
+            "Heating gives particles more energy",
+            "They vibrate faster and faster",
+            "Eventually they break free from their fixed positions",
+            "This is what causes melting",
+            "Answer: They vibrate faster and move further apart"
+          ]
+        },
+        {
+          "q": "What happens to particles when a gas is cooled?",
+          "options": [
+            "They move faster",
+            "They slow down and come closer together",
+            "They turn into light",
+            "They disappear"
+          ],
+          "answer": "They slow down and come closer together",
+          "explain": "Cooling removes energy from particles, so they slow down and pack closer.",
+          "procedure": [
+            "Cooling removes energy from particles",
+            "They slow down and lose their free movement",
+            "They come closer together",
+            "Eventually they form a liquid — this is condensation",
+            "Answer: They slow down and come closer together"
+          ]
+        },
+        {
+          "q": "Which of these is an example of a solid?",
+          "image": "assets/science/matter-examples.png",
+          "options": ["Water", "Steam", "Ice block", "Air"],
+          "answer": "Ice block",
+          "explain": "An ice block is a solid — it has a fixed shape and volume.",
+          "procedure": [
+            "Solids have a fixed shape and volume",
+            "Water is a liquid",
+            "Steam and air are gases",
+            "An ice block is a solid — it keeps its shape",
+            "Answer: Ice block"
+          ]
+        },
+        {
+          "q": "Which of these is an example of a liquid?",
+          "image": "assets/science/matter-examples.png",
+          "options": ["Rock", "Ice", "Water", "Steam"],
+          "answer": "Water",
+          "explain": "Water is a liquid — it takes the shape of its container.",
+          "procedure": [
+            "Liquids take the shape of their container",
+            "Rocks and ice are solids",
+            "Steam is a gas",
+            "Water is a liquid",
+            "Answer: Water"
+          ]
+        },
+        {
+          "q": "Which of these is an example of a gas?",
+          "image": "assets/science/matter-examples.png",
+          "options": ["Sand", "Milk", "Steam", "Ice"],
+          "answer": "Steam",
+          "explain": "Steam is a gas — it spreads out to fill space.",
+          "procedure": [
+            "Gases spread out to fill any container",
+            "Sand and ice are solids",
+            "Milk is a liquid",
+            "Steam is a gas",
+            "Answer: Steam"
+          ]
+        },
+        {
+          "q": "What is the melting point of ice?",
+          "options": ["0°C", "100°C", "50°C", "-10°C"],
+          "answer": "0°C",
+          "explain": "Ice melts at 0°C — that is its melting point.",
+          "procedure": [
+            "The melting point is the temperature at which a solid turns into a liquid",
+            "For ice, this is 0°C",
+            "At 0°C, ice changes into liquid water",
+            "Answer: 0°C"
+          ]
+        },
+        {
+          "q": "What is the boiling point of water?",
+          "options": ["0°C", "50°C", "100°C", "200°C"],
+          "answer": "100°C",
+          "explain": "Water boils at 100°C — at this temperature, it turns into steam.",
+          "procedure": [
+            "The boiling point is the temperature at which a liquid turns into a gas",
+            "For water, this is 100°C",
+            "At 100°C, water changes into steam (water vapour)",
+            "Answer: 100°C"
+          ]
+        },
+        {
+          "q": "Which process happens when water vapour turns back into liquid water?",
+          "image": "assets/science/water-states.png",
+          "options": ["Evaporation", "Condensation", "Melting", "Freezing"],
+          "answer": "Condensation",
+          "explain": "When water vapour cools, it condenses back into liquid water.",
+          "procedure": [
+            "Water vapour is a gas",
+            "When the gas cools, it loses energy",
+            "The particles slow down and come together",
+            "The gas turns into a liquid — this is condensation",
+            "Answer: Condensation"
+          ]
+        }
+      ]
     }
   ]
 }
