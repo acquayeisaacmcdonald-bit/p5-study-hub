@@ -1451,6 +1451,7 @@
         },
         {
           "q": "What is a solution?",
+          "image": "assets/science/solution.png",
           "options": [
             "A mixture where a solid is mixed with a liquid and dissolves",
             "A type of chemical reaction",
@@ -1706,8 +1707,8 @@
             "Magnetic separation sorts metals in recycling plants",
             "Evaporation is used to get salt from sea water",
             "Answer: So we can purify water, sort recycling, and get useful substances"
-          ]      
-		},
+          ]
+        },
         {
           "q": "How can you separate a mixture of salt and sand?",
           "options": [
@@ -1726,6 +1727,385 @@
             "Then heat the salty water to evaporate it",
             "The water becomes vapour and the salt crystals are left behind",
             "Answer: Add water, then filter and evaporate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water-diseases",
+      "name": "Water-Related Diseases",
+      "icon": "🚱",
+      "questions": [
+        {
+          "q": "What is a water-related disease?",
+          "options": [
+            "A disease caused by drinking clean water",
+            "A disease caused by drinking or touching dirty water",
+            "A disease caused by too much water",
+            "A disease caused by rain"
+          ],
+          "answer": "A disease caused by drinking or touching dirty water",
+          "explain": "Water-related diseases come from dirty water that contains germs.",
+          "procedure": [
+            "Dirty water contains tiny germs (bacteria and viruses)",
+            "When people drink or touch dirty water, germs enter the body",
+            "The germs cause illness",
+            "These illnesses are called water-related diseases",
+            "Answer: A disease caused by drinking or touching dirty water"
+          ]
+        },
+        {
+          "q": "Which of these is a water-related disease?",
+          "image": "assets/science/sick-child.png",
+          "options": ["Malaria", "Cholera", "Measles", "Chickenpox"],
+          "answer": "Cholera",
+          "explain": "Cholera is a serious disease spread through dirty water.",
+          "procedure": [
+            "Cholera is caused by bacteria in dirty water",
+            "People get it by drinking contaminated water",
+            "It causes severe diarrhoea and vomiting",
+            "It can be prevented by drinking clean water",
+            "Answer: Cholera"
+          ]
+        },
+        {
+          "q": "How do most water-related diseases spread?",
+          "image": "assets/science/dirty-water.png",
+          "options": [
+            "Through the air",
+            "Through drinking or touching dirty water",
+            "Through sunlight",
+            "Through music"
+          ],
+          "answer": "Through drinking or touching dirty water",
+          "explain": "Water-related diseases spread when germs in dirty water enter the body.",
+          "procedure": [
+            "Dirty water contains germs",
+            "People drink the water or wash with it",
+            "The germs enter the body through the mouth or skin",
+            "This is how the disease spreads",
+            "Answer: Through drinking or touching dirty water"
+          ]
+        },
+        {
+          "q": "Which water is safe to drink?",
+          "image": "assets/science/dirty-water.png",
+          "options": [
+            "Water from a dirty pond",
+            "Water from a river with leaves and mud",
+            "Clean water that has been boiled or treated",
+            "Rainwater collected from the roof without treatment"
+          ],
+          "answer": "Clean water that has been boiled or treated",
+          "explain": "Only clean, boiled, or treated water is safe to drink.",
+          "procedure": [
+            "Dirty water contains germs",
+            "Boiling water kills the germs",
+            "Treating water (with chlorine tablets) also kills germs",
+            "Only treated or boiled water is safe",
+            "Answer: Clean water that has been boiled or treated"
+          ]
+        },
+        {
+          "q": "Why is it dangerous to drink water from a dirty pond?",
+          "image": "assets/science/dirty-water.png",
+          "options": [
+            "It tastes bad",
+            "It contains germs that can make you sick",
+            "It is too cold",
+            "It is too much water"
+          ],
+          "answer": "It contains germs that can make you sick",
+          "explain": "Dirty pond water has germs that cause disease.",
+          "procedure": [
+            "Ponds collect water from many places",
+            "The water picks up germs from animals and waste",
+            "The germs stay in the water",
+            "Drinking it puts those germs into your body",
+            "Answer: It contains germs that can make you sick"
+          ]
+        },
+        {
+          "q": "What is the best way to kill germs in drinking water?",
+          "image": "assets/science/boiling-water.png",
+          "options": [
+            "Add sugar",
+            "Boil the water",
+            "Stir it well",
+            "Leave it in the sun"
+          ],
+          "answer": "Boil the water",
+          "explain": "Boiling water kills the germs that cause disease.",
+          "procedure": [
+            "Heating water to boiling point (100°C) kills most germs",
+            "Boil the water for at least 1 minute",
+            "Let it cool before drinking",
+            "The water is now safe",
+            "Answer: Boil the water"
+          ]
+        },
+        {
+          "q": "Why should we boil water before drinking it?",
+          "image": "assets/science/boiling-water.png",
+          "options": [
+            "To make it taste better",
+            "To kill the germs in the water",
+            "To make it cold",
+            "To change its colour"
+          ],
+          "answer": "To kill the germs in the water",
+          "explain": "Boiling water kills germs and makes it safe to drink.",
+          "procedure": [
+            "Raw water can contain germs",
+            "Germs cannot survive at high temperatures",
+            "Boiling for 1 minute kills them",
+            "This makes the water safe to drink",
+            "Answer: To kill the germs in the water"
+          ]
+        },
+        {
+          "q": "How should you store drinking water at home?",
+          "image": "assets/science/covered-container.png",
+          "options": [
+            "In an open bucket",
+            "In a clean container with a lid",
+            "In a dirty pot",
+            "In a hole in the ground"
+          ],
+          "answer": "In a clean container with a lid",
+          "explain": "Water should be stored in a clean, covered container to keep it safe.",
+          "procedure": [
+            "Covered containers keep out dust and flies",
+            "Flies carry germs that can fall into open water",
+            "A lid keeps the water clean",
+            "Always use a clean container with a lid",
+            "Answer: In a clean container with a lid"
+          ]
+        },
+        {
+          "q": "Why should drinking water containers be covered?",
+          "image": "assets/science/covered-container.png",
+          "options": [
+            "To make them look nice",
+            "To keep out dust and germs",
+            "To make the water cold",
+            "To make the water hot"
+          ],
+          "answer": "To keep out dust and germs",
+          "explain": "Covering water keeps dust, flies, and germs out.",
+          "procedure": [
+            "Open water collects dust and dirt",
+            "Flies land on the water and leave germs",
+            "A lid keeps them out",
+            "This keeps the water safe to drink",
+            "Answer: To keep out dust and germs"
+          ]
+        },
+        {
+          "q": "When should you wash your hands?",
+          "image": "assets/science/handwashing.png",
+          "options": [
+            "Only in the morning",
+            "Before eating and after using the toilet",
+            "Only after playing",
+            "Only once a week"
+          ],
+          "answer": "Before eating and after using the toilet",
+          "explain": "Washing hands at these key times prevents the spread of disease.",
+          "procedure": [
+            "Germs get on our hands from many places",
+            "The toilet and dirty surfaces have many germs",
+            "If we eat without washing, the germs go into our food",
+            "Washing before eating and after the toilet stops this",
+            "Answer: Before eating and after using the toilet"
+          ]
+        },
+        {
+          "q": "Why is washing your hands important?",
+          "image": "assets/science/handwashing.png",
+          "options": [
+            "To make hands look clean",
+            "To remove germs that can cause disease",
+            "To keep hands warm",
+            "To make hands softer"
+          ],
+          "answer": "To remove germs that can cause disease",
+          "explain": "Soap and water remove germs from hands.",
+          "procedure": [
+            "Our hands carry germs from many places",
+            "Soap and water wash the germs away",
+            "This prevents germs entering the mouth",
+            "Washing hands protects us from disease",
+            "Answer: To remove germs that can cause disease"
+          ]
+        },
+        {
+          "q": "How long should you wash your hands?",
+          "image": "assets/science/handwashing.png",
+          "options": [
+            "1 second",
+            "About 20 seconds",
+            "About 5 minutes",
+            "10 seconds"
+          ],
+          "answer": "About 20 seconds",
+          "explain": "Washing for about 20 seconds with soap removes most germs.",
+          "procedure": [
+            "Wet your hands with clean water",
+            "Apply soap",
+            "Rub hands together for about 20 seconds",
+            "Rinse with clean water",
+            "Answer: About 20 seconds"
+          ]
+        },
+        {
+          "q": "Why are clean toilets important?",
+          "image": "assets/science/proper-toilet.png",
+          "options": [
+            "They look nice",
+            "They stop germs from spreading in the community",
+            "They cost a lot of money",
+            "They make the house bigger"
+          ],
+          "answer": "They stop germs from spreading in the community",
+          "explain": "Clean toilets keep human waste away from drinking water and food.",
+          "procedure": [
+            "Human waste contains many germs",
+            "If waste gets into water or food, it causes disease",
+            "Clean toilets keep waste in one safe place",
+            "This stops germs spreading in the community",
+            "Answer: They stop germs from spreading in the community"
+          ]
+        },
+        {
+          "q": "What makes a toilet safe to use?",
+          "image": "assets/science/proper-toilet.png",
+          "options": [
+            "It is far from the house",
+            "It is clean and has a cover or lid",
+            "It has no walls",
+            "It is in a river"
+          ],
+          "answer": "It is clean and has a cover or lid",
+          "explain": "A safe toilet keeps waste covered and away from people.",
+          "procedure": [
+            "A safe toilet has a proper cover or lid",
+            "It keeps flies and smells inside",
+            "It is cleaned regularly",
+            "It keeps waste away from water sources",
+            "Answer: It is clean and has a cover or lid"
+          ]
+        },
+        {
+          "q": "What are common symptoms of a water-related disease?",
+          "image": "assets/science/sick-child.png",
+          "options": [
+            "Strong bones and muscles",
+            "Diarrhoea, vomiting, and dehydration",
+            "Sharp eyesight",
+            "Long hair"
+          ],
+          "answer": "Diarrhoea, vomiting, and dehydration",
+          "explain": "Water-related diseases often cause diarrhoea, vomiting, and dehydration.",
+          "procedure": [
+            "Water-related germs attack the stomach and intestines",
+            "This causes diarrhoea (frequent loose stools)",
+            "Vomiting may also happen",
+            "The body loses water and becomes dehydrated",
+            "Answer: Diarrhoea, vomiting, and dehydration"
+          ]
+        },
+        {
+          "q": "What should you do if a child has diarrhoea?",
+          "image": "assets/science/sick-child.png",
+          "options": [
+            "Give them less water",
+            "Give them plenty of safe water or ORS and see a health worker",
+            "Leave them alone",
+            "Give them soda"
+          ],
+          "answer": "Give them plenty of safe water or ORS and see a health worker",
+          "explain": "Diarrhoea causes the body to lose water, so the child needs to drink and see a health worker.",
+          "procedure": [
+            "Diarrhoea drains water from the body",
+            "The child needs to drink safe water",
+            "ORS (Oral Rehydration Solution) replaces lost salts",
+            "Always take the child to a health worker",
+            "Answer: Give them plenty of safe water or ORS and see a health worker"
+          ]
+        },
+        {
+          "q": "What is ORS used for?",
+          "options": [
+            "To make water taste sweet",
+            "To replace lost water and salts in the body",
+            "To clean clothes",
+            "To cool the body"
+          ],
+          "answer": "To replace lost water and salts in the body",
+          "explain": "ORS replaces water and salts lost during diarrhoea or vomiting.",
+          "procedure": [
+            "ORS stands for Oral Rehydration Solution",
+            "It contains water, sugar, and salt",
+            "It replaces what the body loses",
+            "It is used to treat dehydration",
+            "Answer: To replace lost water and salts in the body"
+          ]
+        },
+        {
+          "q": "Which of these is a good way to prevent water-related diseases?",
+          "image": "assets/science/proper-toilet.png",
+          "options": [
+            "Drink water from any source",
+            "Drink only clean or boiled water",
+            "Store water in open buckets",
+            "Skip washing hands"
+          ],
+          "answer": "Drink only clean or boiled water",
+          "explain": "Drinking clean or boiled water prevents most water-related diseases.",
+          "procedure": [
+            "Clean or boiled water has no germs",
+            "Germs cannot enter the body through clean water",
+            "This prevents many diseases",
+            "Answer: Drink only clean or boiled water"
+          ]
+        },
+        {
+          "q": "Why should we keep our surroundings clean?",
+          "image": "assets/science/proper-toilet.png",
+          "options": [
+            "To look good for visitors",
+            "To stop germs and pests from spreading disease",
+            "To have more space",
+            "To grow more food"
+          ],
+          "answer": "To stop germs and pests from spreading disease",
+          "explain": "A clean environment keeps away germs, flies, and mosquitoes.",
+          "procedure": [
+            "Dirty surroundings attract flies and mosquitoes",
+            "These insects carry germs",
+            "They can land on food and water",
+            "Cleaning up removes their breeding places",
+            "Answer: To stop germs and pests from spreading disease"
+          ]
+        },
+        {
+          "q": "Why is clean water important for the whole community?",
+          "image": "assets/science/dirty-water.png",
+          "options": [
+            "Only for drinking",
+            "For drinking, cooking, washing, and staying healthy",
+            "Only for cooking",
+            "Only for washing clothes"
+          ],
+          "answer": "For drinking, cooking, washing, and staying healthy",
+          "explain": "Clean water is needed for many daily activities that keep us healthy.",
+          "procedure": [
+            "We use water for drinking",
+            "We use water for cooking",
+            "We use water for washing and cleaning",
+            "Without clean water, the whole community gets sick",
+            "Answer: For drinking, cooking, washing, and staying healthy"
           ]
         }
       ]
