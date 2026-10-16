@@ -1,5 +1,13 @@
-const CACHE_NAME = "p5-study-hub-v4";
-const ASSETS = [
+// ============================================================
+// Study Hub — Service Worker
+// Cache per-file so a single 404 doesn't kill the whole install.
+// Skip caching for data/*.json so the app always gets fresh content.
+// ============================================================
+
+const CACHE_NAME = "p5-study-hub-v6";
+
+// Only static shell assets — no data/*.json
+const SHELL_ASSETS = [
   "./",
   "./index.html",
   "./profile-picker.html",
@@ -8,50 +16,69 @@ const ASSETS = [
   "./class-picker.html",
   "./style.css",
   "./script.js",
-  "./manifest.json",
-  "./data/profiles.json",
-  "./data/dictionary.json",
-  "./data/typing.json",
-  "./data/p1/subjects.json",
-  "./data/p2/subjects.json",
-  "./data/p3/subjects.json",
-  "./data/p4/subjects.json",
-  "./data/p5/subjects.json",
-  "./data/p5/maths.json",
-  "./data/p5/science.json",
-  "./data/p6/subjects.json",
-  "./data/jhs1/subjects.json",
-  "./data/jhs2/subjects.json",
-  "./data/jhs3/subjects.json"
+  "./manifest.json"
 ];
 
+// Install: cache each file individually, tolerate failures
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        SHELL_ASSETS.map(url =>
+          cache.add(url).catch(err => {
+            console.warn("[SW] Skipped caching:", url, err.message);
+          })
+        )
+      );
+    })
   );
   self.skipWaiting();
 });
 
+// Activate: delete old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+      Promise.all(
+        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
+      )
     )
   );
   self.clients.claim();
 });
 
+// Fetch: network-first for everything, cache fallback only if offline
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
-  if (event.request.mode === "navigate") {
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match("./index.html"))
-    );
-    return;
-  }
-
+  // Always go to network first — falls back to cache only if offline
   event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request))
+    fetch(event.request)
+      .then(response => {
+        // Cache successful GET responses for offline
+        if (response && response.status === 200) {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, copy).catch(() => {});
+          });
+        }
+        return response;
+      })
+      .catch(() => {
+        // Offline: serve from cache
+        return caches.match(event.request).then(cached => {
+          if (cached) return cached;
+          // Last resort for navigations
+          if (event.request.mode === "navigate") {
+            return caches.match("./index.html");
+          }
+          return new Response("Offline", { status: 503 });
+        });
+      })
   );
+});
+
+// Allow page to trigger immediate update
+self.addEventListener("message", (event) => {
+  if (event.data === "SKIP_WAITING") self.skipWaiting();
 });
