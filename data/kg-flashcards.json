@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "id": "animals",
+      "name": "Animals",
+      "icon": "🐘",
+      "description": "Common animals in Ghana and around the world",
+      "cards": [
+        { "en": "Elephant", "twi": "Ɔsono", "emoji": "🐘", "fact": "Elephants are the largest land animals." },
+        { "en": "Lion", "twi": "Gyata", "emoji": "🦁", "fact": "Lions live in groups called prides." },
+        { "en": "Goat", "twi": "Abirekyie", "emoji": "🐐", "fact": "Goats eat almost anything." },
+        { "en": "Cow", "twi": "Nantwie", "emoji": "🐄", "fact": "Cows give us milk." },
+        { "en": "Dog", "twi": "Kraman", "emoji": "🐕", "fact": "Dogs are loyal friends." },
+        { "en": "Cat", "twi": "Agyinamoa", "emoji": "🐈", "fact": "Cats sleep for many hours a day." },
+        { "en": "Bird", "twi": "Anoma", "emoji": "🐦", "fact": "Birds have wings and feathers." },
+        { "en": "Fish", "twi": "Apataa", "emoji": "🐟", "fact": "Fish live in water." },
+        { "en": "Monkey", "twi": "Akwantu", "emoji": "🐒", "fact": "Monkeys love climbing trees." },
+        { "en": "Snake", "twi": "Ɔwɔ", "emoji": "🐍", "fact": "Snakes have no legs." },
+        { "en": "Frog", "twi": "Apɔ", "emoji": "🐸", "fact": "Frogs can jump very high." },
+        { "en": "Butterfly", "twi": "Afrafra", "emoji": "🦋", "fact": "Butterflies were once caterpillars." },
+        { "en": "Bee", "twi": "Nwɔ", "emoji": "🐝", "fact": "Bees make honey." },
+        { "en": "Ant", "twi": "Akura", "emoji": "🐜", "fact": "Ants work together in groups." },
+        { "en": "Chicken", "twi": "Akɔkɔ", "emoji": "🐔", "fact": "Chickens lay eggs." },
+        { "en": "Sheep", "twi": "Odwan", "emoji": "🐑", "fact": "Sheep give us wool." },
+        { "en": "Horse", "twi": "Ɔpɔn", "emoji": "🐴", "fact": "Horses can run very fast." },
+        { "en": "Pig", "twi": "Prako", "emoji": "🐖", "fact": "Pigs love rolling in mud." },
+        { "en": "Duck", "twi": "Abɔdwe", "emoji": "🦆", "fact": "Ducks can swim and fly." },
+        { "en": "Crocodile", "twi": "Ɔdɛnkyɛm", "emoji": "🐊", "fact": "Crocodiles have strong jaws." },
+        { "en": "Tortoise", "twi": "Ɔkɛtɛ", "emoji": "🐢", "fact": "Tortoises live for many years." },
+        { "en": "Spider", "twi": "Ananse", "emoji": "🕷️", "fact": "Spiders spin webs to catch food." },
+        { "en": "Rabbit", "twi": "Adanko", "emoji": "🐰", "fact": "Rabbits have long ears." },
+        { "en": "Rat", "twi": "Ɔkura", "emoji": "🐀", "fact": "Rats are clever and quick." }
+      ]
+    }
+  ]
+}

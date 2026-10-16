@@ -1,0 +1,159 @@
+{
+  "intro": "The Ghana Education Service (GES) Kindergarten curriculum is designed for children aged 4–6 years. It focuses on play-based learning across six key areas, helping children develop physically, socially, emotionally, and intellectually.",
+  "ageRange": "4–6 years",
+  "classes": [
+    {
+      "id": "kg1",
+      "name": "KG 1",
+      "ageRange": "4–5 years",
+      "focus": "Introduction to structured learning through play and exploration."
+    },
+    {
+      "id": "kg2",
+      "name": "KG 2",
+      "ageRange": "5–6 years",
+      "focus": "Building on KG 1 foundations, preparing for Primary 1."
+    }
+  ],
+  "learningAreas": [
+    {
+      "id": "language",
+      "name": "Language and Literacy",
+      "icon": "📖",
+      "description": "Listening, speaking, early reading and writing.",
+      "kg1": [
+        "Listening to and following simple instructions",
+        "Recognising and writing own name",
+        "Identifying letters of the alphabet",
+        "Rhyming words and songs",
+        "Telling simple stories from pictures"
+      ],
+      "kg2": [
+        "Recognising all letters and their sounds",
+        "Blending sounds to read simple words",
+        "Writing simple words and short sentences",
+        "Retelling a story in own words",
+        "Reading simple sentences aloud"
+      ]
+    },
+    {
+      "id": "numeracy",
+      "name": "Numeracy",
+      "icon": "🔢",
+      "description": "Numbers, counting, shapes, and patterns.",
+      "kg1": [
+        "Counting numbers 1–20",
+        "Recognising and writing numbers 1–10",
+        "Identifying basic shapes (circle, square, triangle)",
+        "Sorting objects by size, colour, shape",
+        "Understanding more / less / same"
+      ],
+      "kg2": [
+        "Counting numbers 1–100",
+        "Recognising and writing numbers 1–50",
+        "Simple addition and subtraction (1–10)",
+        "Recognising coins and their values",
+        "Patterns and sequencing"
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "Creative Arts",
+      "icon": "🎨",
+      "description": "Drawing, music, dance, drama, and imaginative play.",
+      "kg1": [
+        "Drawing simple pictures",
+        "Singing songs and rhymes",
+        "Free movement and dance",
+        "Colouring within lines",
+        "Playing with clay, sand, water"
+      ],
+      "kg2": [
+        "Drawing recognisable objects",
+        "Performing simple role-play",
+        "Learning traditional songs and dances",
+        "Making simple crafts with paper and glue",
+        "Copying simple patterns and designs"
+      ]
+    },
+    {
+      "id": "owop",
+      "name": "Our World Our People",
+      "icon": "🌍",
+      "description": "Understanding self, family, community, and environment.",
+      "kg1": [
+        "Naming parts of the body",
+        "Recognising family members",
+        "Learning about the home and school",
+        "Identifying common animals and plants",
+        "Understanding day and night"
+      ],
+      "kg2": [
+        "Understanding roles in family and community",
+        "Learning about Ghana — our country",
+        "Naming common foods and their sources",
+        "Care for the environment (plants, animals, water)",
+        "Recognising safety rules at home and school"
+      ]
+    },
+    {
+      "id": "physical",
+      "name": "Physical Development",
+      "icon": "🏃",
+      "description": "Gross motor skills, fine motor skills, and healthy habits.",
+      "kg1": [
+        "Running, jumping, hopping",
+        "Throwing and catching a ball",
+        "Balancing on one foot",
+        "Holding a pencil correctly",
+        "Using scissors safely"
+      ],
+      "kg2": [
+        "Coordinated movement games",
+        "Climbing, skipping, dancing",
+        "Tying shoelaces and buttons",
+        "Drawing shapes and letters neatly",
+        "Understanding personal hygiene (washing hands, brushing teeth)"
+      ]
+    },
+    {
+      "id": "writing",
+      "name": "Writing",
+      "icon": "✍️",
+      "description": "Pre-writing skills building toward handwriting.",
+      "kg1": [
+        "Holding a pencil / crayon correctly",
+        "Tracing lines and curves",
+        "Colouring inside shapes",
+        "Scribbling with purpose",
+        "Copying simple patterns"
+      ],
+      "kg2": [
+        "Writing letters of the alphabet",
+        "Writing numbers 1–20",
+        "Writing own name",
+        "Forming simple words",
+        "Sitting correctly and spacing letters"
+      ]
+    }
+  ],
+  "themes": [
+    { "name": "All About Me", "icon": "🧒", "description": "My body, my senses, my feelings, my name." },
+    { "name": "My Family and Community", "icon": "👨‍👩‍👧", "description": "Family members, neighbours, helpers in the community." },
+    { "name": "Our World and Environment", "icon": "🌳", "description": "Plants, animals, weather, water, and caring for our world." },
+    { "name": "Festivals and Celebrations", "icon": "🎉", "description": "Ghanaian festivals, national days, and cultural celebrations." },
+    { "name": "Health and Safety", "icon": "🧼", "description": "Personal hygiene, healthy habits, and safety rules." },
+    { "name": "Food and Nutrition", "icon": "🍲", "description": "Common foods, where they come from, and healthy eating." },
+    { "name": "Transport and Communication", "icon": "🚌", "description": "Ways we travel, ways we communicate." }
+  ],
+  "teachingApproach": [
+    "Learning through play — songs, games, stories",
+    "Hands-on activities, not just sitting and listening",
+    "Small group work and one-on-one attention",
+    "Regular movement and outdoor time",
+    "Positive encouragement and praise",
+    "Use of local language and materials",
+    "Parental involvement in learning"
+  ],
+  "assessmentNote": "KG assessment is observation-based. Teachers watch how children play, talk, and interact — not formal tests. The goal is growth, confidence, and a love of learning."
+}

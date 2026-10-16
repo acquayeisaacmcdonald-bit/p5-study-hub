@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GES KG Curriculum — Study Hub</title>
+  <link rel="icon" type="image/png" href="assets/immanuel.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .kg-hero { padding: 60px 20px 30px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15), transparent 60%); }
+    .kg-hero .kg-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(168, 85, 247, 0.2); border: 1px solid rgba(168, 85, 247, 0.4); color: #c084fc; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .kg-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; line-height: 1.15; }
+    .kg-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 680px; margin: 0 auto; line-height: 1.6; }
+    .kg-wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
+    .kg-intro { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 22px 24px; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.85); }
+    .kg-intro strong { color: #c084fc; }
+    .kg-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .kg-cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 0.95rem; text-decoration: none; font-family: inherit; cursor: pointer; border: none; transition: transform 0.1s, background 0.2s; }
+    .kg-cta-primary { background: #a855f7; color: #fff; }
+    .kg-cta-primary:hover { background: #9333ea; }
+    .kg-classes { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+    @media (min-width: 600px) { .kg-classes { grid-template-columns: 1fr 1fr; } }
+    .kg-class-card { background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05)); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 16px; padding: 20px 22px; }
+    .kg-class-name { font-size: 1.4rem; font-weight: 800; color: #c084fc; margin-bottom: 4px; }
+    .kg-class-age { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+    .kg-class-focus { font-size: 0.92rem; line-height: 1.6; color: rgba(255,255,255,0.85); }
+    .kg-section-title { font-size: 1.5rem; font-weight: 800; margin: 40px 0 18px; display: flex; align-items: center; gap: 10px; }
+    .kg-section-title span:first-child { font-size: 1.8rem; }
+    .kg-area { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; margin-bottom: 14px; overflow: hidden; }
+    .kg-area-header { display: flex; align-items: center; gap: 14px; padding: 18px 20px; cursor: pointer; user-select: none; }
+    .kg-area-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; flex-shrink: 0; }
+    .kg-area-title { flex: 1; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+    .kg-area-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 3px; font-weight: 400; }
+    .kg-area-arrow { font-size: 1.2rem; color: rgba(255,255,255,0.5); transition: transform 0.25s; }
+    .kg-area.open .kg-area-arrow { transform: rotate(90deg); }
+    .kg-area-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .kg-area.open .kg-area-body { max-height: 3000px; }
+    .kg-area-content { padding: 4px 20px 22px; border-top: 1px solid rgba(255,255,255,0.08); display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 700px) { .kg-area-content { grid-template-columns: 1fr 1fr; } }
+    .kg-level-block h4 { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #facc15; margin: 16px 0 10px; }
+    .kg-level-block ul { list-style: none; padding: 0; margin: 0; }
+    .kg-level-block li { padding: 6px 0 6px 22px; position: relative; font-size: 0.9rem; line-height: 1.55; color: rgba(255,255,255,0.85); }
+    .kg-level-block li::before { content: "•"; position: absolute; left: 6px; color: #c084fc; font-weight: 800; }
+    .kg-themes-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 600px) { .kg-themes-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .kg-themes-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .kg-theme { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 16px 18px; }
+    .kg-theme-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .kg-theme-name { font-size: 0.98rem; font-weight: 700; margin-bottom: 5px; }
+    .kg-theme-desc { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .kg-approach { background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(59, 130, 246, 0.04)); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 16px; padding: 22px 24px; margin-top: 20px; }
+    .kg-approach h4 { font-size: 1rem; font-weight: 800; color: #60a5fa; margin-bottom: 14px; }
+    .kg-approach ul { list-style: none; padding: 0; margin: 0; }
+    .kg-approach li { padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.85); }
+    .kg-approach li::before { content: "✓"; position: absolute; left: 4px; color: #34d399; font-weight: 800; }
+    .kg-note { margin-top: 30px; padding: 20px 22px; background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.3); border-left: 4px solid #facc15; border-radius: 12px; font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.88); }
+    .kg-note strong { color: #facc15; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="profile-picker.html" class="site-logo">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text">
+          <strong>Study Hub</strong>
+          <small>GES KG Curriculum</small>
+        </span>
+      </a>
+      <nav class="site-nav" id="siteNav">
+        <a href="profile-picker.html">← Back</a>
+        <a href="kg-learn.html">🎮 KG Play</a>
+        <a href="stories.html">📖 Stories</a>
+        <a href="timetable.html">📅 Timetable</a>
+        <a href="child-safety.html">🛡️ Safety</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="profile-picker.html" class="site-header-cta">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="kg-hero">
+    <div class="kg-badge">🎓 GES Curriculum</div>
+    <h1>Kindergarten Curriculum</h1>
+    <p id="kgIntro">Loading…</p>
+  </section>
+
+  <main class="kg-wrap">
+
+    <div class="kg-cta-row">
+      <a href="kg-learn.html" class="kg-cta kg-cta-primary">🎮 Start Learning — Play with Cards</a>
+    </div>
+
+    <div class="kg-intro" id="kgIntroBox" style="display:none;"></div>
+    <div class="kg-classes" id="kgClasses"></div>
+    <h2 class="kg-section-title"><span>📚</span> <span>Learning Areas</span></h2>
+    <div id="kgAreas"></div>
+    <h2 class="kg-section-title"><span>🌈</span> <span>Themes We Explore</span></h2>
+    <div class="kg-themes-grid" id="kgThemes"></div>
+    <h2 class="kg-section-title"><span>👩‍🏫</span> <span>How KG Children Learn</span></h2>
+    <div class="kg-approach" id="kgApproach"></div>
+    <div class="kg-note" id="kgNote" style="display:none;"></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-bottom">
+      © 2026 Study Hub. GES Kindergarten Curriculum reference.
+    </div>
+  </footer>
+
+  <script>
+    async function loadCurriculum() {
+      try {
+        const res = await fetch("data/kg-curriculum.json?t=" + Date.now());
+        return await res.json();
+      } catch (e) {
+        console.warn("Could not load KG curriculum:", e.message);
+        return null;
+      }
+    }
+
+    function render(data) {
+      if (!data) {
+        document.getElementById("kgIntro").textContent = "Curriculum data unavailable.";
+        return;
+      }
+      document.getElementById("kgIntro").textContent = data.intro || "";
+      const introBox = document.getElementById("kgIntroBox");
+      introBox.style.display = "";
+      introBox.innerHTML = `<strong>Age range:</strong> ${data.ageRange}. ${data.intro}`;
+
+      const classesEl = document.getElementById("kgClasses");
+      classesEl.innerHTML = "";
+      (data.classes || []).forEach(c => {
+        const card = document.createElement("div");
+        card.className = "kg-class-card";
+        card.innerHTML = `
+          <div class="kg-class-name">${c.name}</div>
+          <div class="kg-class-age">${c.ageRange}</div>
+          <div class="kg-class-focus">${c.focus}</div>
+        `;
+        classesEl.appendChild(card);
+      });
+
+      const areasEl = document.getElementById("kgAreas");
+      areasEl.innerHTML = "";
+      (data.learningAreas || []).forEach(area => {
+        const card = document.createElement("div");
+        card.className = "kg-area";
+        card.innerHTML = `
+          <div class="kg-area-header" data-toggle>
+            <div class="kg-area-icon">${area.icon}</div>
+            <div style="flex:1;">
+              <div class="kg-area-title">${area.name}</div>
+              <div class="kg-area-desc">${area.description}</div>
+            </div>
+            <div class="kg-area-arrow">›</div>
+          </div>
+          <div class="kg-area-body">
+            <div class="kg-area-content">
+              <div class="kg-level-block">
+                <h4>KG 1 · Ages 4–5</h4>
+                <ul>${(area.kg1 || []).map(x => `<li>${x}</li>`).join("")}</ul>
+              </div>
+              <div class="kg-level-block">
+                <h4>KG 2 · Ages 5–6</h4>
+                <ul>${(area.kg2 || []).map(x => `<li>${x}</li>`).join("")}</ul>
+              </div>
+            </div>
+          </div>
+        `;
+        areasEl.appendChild(card);
+      });
+
+      areasEl.querySelectorAll("[data-toggle]").forEach(h => {
+        h.addEventListener("click", () => h.closest(".kg-area").classList.toggle("open"));
+      });
+
+      const themesEl = document.getElementById("kgThemes");
+      themesEl.innerHTML = "";
+      (data.themes || []).forEach(t => {
+        const card = document.createElement("div");
+        card.className = "kg-theme";
+        card.innerHTML = `
+          <div class="kg-theme-icon">${t.icon}</div>
+          <div class="kg-theme-name">${t.name}</div>
+          <div class="kg-theme-desc">${t.description}</div>
+        `;
+        themesEl.appendChild(card);
+      });
+
+      const approachEl = document.getElementById("kgApproach");
+      approachEl.innerHTML = `
+        <h4>💡 How KG Children Learn Best</h4>
+        <ul>${(data.teachingApproach || []).map(x => `<li>${x}</li>`).join("")}</ul>
+      `;
+
+      const noteEl = document.getElementById("kgNote");
+      if (data.assessmentNote) {
+        noteEl.style.display = "";
+        noteEl.innerHTML = `<strong>About assessment:</strong> ${data.assessmentNote}`;
+      }
+    }
+
+    (async function init() {
+      const data = await loadCurriculum();
+      render(data);
+    })();
+  </script>
+</body>
+</html>

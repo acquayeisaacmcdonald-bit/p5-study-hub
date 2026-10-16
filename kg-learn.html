@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KG Learning — Study Hub</title>
+  <link rel="icon" type="image/png" href="assets/immanuel.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .kg-play-hero {
+      padding: 40px 20px 20px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15), transparent 60%);
+    }
+    .kg-play-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .kg-play-hero p { color: rgba(255,255,255,0.7); font-size: 1rem; }
+
+    .kg-play-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Category picker */
+    .kg-cats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .kg-cat-btn {
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #fff;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+    .kg-cat-btn:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+    .kg-cat-btn.active {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: #3b82f6;
+    }
+    .kg-cat-icon { font-size: 2.2rem; }
+    .kg-cat-name { font-size: 1rem; font-weight: 700; }
+    .kg-cat-count { font-size: 0.75rem; color: rgba(255,255,255,0.6); }
+
+    /* Lesson screen */
+    .kg-lesson {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .kg-lesson-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .kg-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 20px;
+      margin-bottom: 20px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .kg-card:active { transform: scale(0.98); }
+
+    .kg-card-emoji {
+      font-size: 7rem;
+      line-height: 1;
+      animation: gentle-bounce 2s ease-in-out infinite;
+    }
+    @keyframes gentle-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .kg-card-word-en {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .kg-card-word-twi {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3b82f6;
+      font-style: italic;
+    }
+    .kg-card-fact {
+      font-size: 0.9rem;
+      color: #475569;
+      max-width: 320px;
+      line-height: 1.5;
+      padding-top: 8px;
+      border-top: 1px dashed #cbd5e1;
+    }
+
+    .kg-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .kg-ctrl-btn {
+      flex: 1;
+      padding: 16px;
+      border-radius: 14px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .kg-ctrl-btn:hover { background: rgba(255,255,255,0.18); }
+    .kg-ctrl-btn.primary {
+      background: #3b82f6;
+      flex: 2;
+    }
+    .kg-ctrl-btn.primary:hover { background: #2563eb; }
+
+    .kg-progress-bar {
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .kg-progress-fill {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .kg-progress-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .kg-back-link {
+      display: block;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .kg-back-link:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="kg-curriculum.html" class="site-logo">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text">
+          <strong>Study Hub</strong>
+          <small>KG Learning</small>
+        </span>
+      </a>
+      <nav class="site-nav" id="siteNav">
+        <a href="kg-curriculum.html">🎓 KG Curriculum</a>
+        <a href="profile-picker.html">← Home</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="kg-curriculum.html" class="site-header-cta">← Back</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="kg-play-hero">
+    <h1 id="kgHeroTitle">KG Learning</h1>
+    <p id="kgHeroSub">Tap a card to hear the word. Play and learn together!</p>
+  </section>
+
+  <main class="kg-play-wrap">
+    <div id="kgCats" class="kg-cats"></div>
+
+    <div id="kgLessonArea" style="display:none;">
+      <div class="kg-lesson">
+        <div class="kg-lesson-header">
+          <span id="kgCategoryName">Animals</span>
+          <span id="kgCardCounter">Card 1 of 24</span>
+        </div>
+
+        <div class="kg-card" id="kgCard">
+          <div class="kg-card-emoji" id="kgEmoji">🐘</div>
+          <div class="kg-card-word-en" id="kgWordEn">Elephant</div>
+          <div class="kg-card-word-twi" id="kgWordTwi">Ɔsono</div>
+          <div class="kg-card-fact" id="kgFact">Elephants are the largest land animals.</div>
+        </div>
+
+        <div class="kg-controls">
+          <button class="kg-ctrl-btn" id="kgPrevBtn">←</button>
+          <button class="kg-ctrl-btn primary" id="kgPlayBtn">🔊 Say it</button>
+          <button class="kg-ctrl-btn" id="kgNextBtn">→</button>
+        </div>
+
+        <div class="kg-progress-bar">
+          <div class="kg-progress-fill" id="kgProgressFill" style="width: 0%;"></div>
+        </div>
+        <div class="kg-progress-label" id="kgProgressLabel">1 / 24</div>
+      </div>
+
+      <a class="kg-back-link" id="kgChangeCat">← Choose another category</a>
+    </div>
+  </main>
+
+  <script>
+    let kgData = null;
+    let currentCat = null;
+    let currentCard = 0;
+
+    async function loadKG() {
+      try {
+        const res = await fetch("data/kg-flashcards.json?t=" + Date.now());
+        kgData = await res.json();
+      } catch (e) {
+        console.warn("Could not load KG flashcards:", e.message);
+      }
+    }
+
+    function renderCategories() {
+      const wrap = document.getElementById("kgCats");
+      wrap.innerHTML = "";
+      if (!kgData || !kgData.categories) return;
+
+      kgData.categories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = "kg-cat-btn";
+        btn.innerHTML = `
+          <span class="kg-cat-icon">${cat.icon}</span>
+          <span class="kg-cat-name">${cat.name}</span>
+          <span class="kg-cat-count">${cat.cards.length} cards</span>
+        `;
+        btn.addEventListener("click", () => startLesson(cat));
+        wrap.appendChild(btn);
+      });
+    }
+
+    function startLesson(cat) {
+      currentCat = cat;
+      currentCard = 0;
+      document.getElementById("kgCats").style.display = "none";
+      document.getElementById("kgLessonArea").style.display = "";
+      document.getElementById("kgCategoryName").textContent = cat.name;
+      renderCard();
+    }
+
+    function renderCard() {
+      if (!currentCat) return;
+      const card = currentCat.cards[currentCard];
+
+      document.getElementById("kgEmoji").textContent = card.emoji;
+      document.getElementById("kgWordEn").textContent = card.en;
+      document.getElementById("kgWordTwi").textContent = card.twi;
+      document.getElementById("kgFact").textContent = card.fact;
+      document.getElementById("kgCardCounter").textContent = `Card ${currentCard + 1} of ${currentCat.cards.length}`;
+      document.getElementById("kgProgressLabel").textContent = `${currentCard + 1} / ${currentCat.cards.length}`;
+      document.getElementById("kgProgressFill").style.width = `${((currentCard + 1) / currentCat.cards.length) * 100}%`;
+
+      // Auto-speak the English word when a card loads
+      setTimeout(() => speakWord(card.en), 300);
+    }
+
+    function speakWord(text) {
+      if (!("speechSynthesis" in window)) return;
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-GB";
+      u.rate = 0.8;
+      window.speechSynthesis.speak(u);
+    }
+
+    function nextCard() {
+      if (!currentCat) return;
+      if (currentCard < currentCat.cards.length - 1) {
+        currentCard++;
+        renderCard();
+      } else {
+        speakWord("Well done!");
+        setTimeout(changeCategory, 1500);
+      }
+    }
+
+    function prevCard() {
+      if (!currentCat) return;
+      if (currentCard > 0) {
+        currentCard--;
+        renderCard();
+      }
+    }
+
+    function changeCategory() {
+      document.getElementById("kgCats").style.display = "";
+      document.getElementById("kgLessonArea").style.display = "none";
+      currentCat = null;
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      await loadKG();
+      renderCategories();
+
+      document.getElementById("kgPrevBtn").addEventListener("click", prevCard);
+      document.getElementById("kgNextBtn").addEventListener("click", nextCard);
+      document.getElementById("kgPlayBtn").addEventListener("click", () => {
+        if (currentCat) speakWord(currentCat.cards[currentCard].en);
+      });
+      document.getElementById("kgCard").addEventListener("click", () => {
+        if (currentCat) speakWord(currentCat.cards[currentCard].en);
+      });
+      document.getElementById("kgChangeCat").addEventListener("click", changeCategory);
+    });
+  </script>
+</body>
+</html>
