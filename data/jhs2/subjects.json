@@ -1,0 +1,6 @@
+{
+  "class": "JHS2",
+  "subjects": [
+    { "id": "coming-soon", "name": "Coming soon", "icon": "🚧", "available": false }
+  ]
+}

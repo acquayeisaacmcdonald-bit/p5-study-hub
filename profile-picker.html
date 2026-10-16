@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Hub — Who is studying?</title>
+  <link rel="stylesheet" href="profile-picker.css">
+</head>
+<body>
+
+  <div class="picker-wrap">
+    <header class="picker-header">
+      <h1>Study Hub</h1>
+      <p class="subtitle">Who is studying today?</p>
+    </header>
+
+    <div id="profileGrid" class="profile-grid">
+      <!-- profile cards injected here -->
+    </div>
+
+    <footer class="picker-footer">
+      <button id="managePhotosBtn" class="link-btn">Manage photos</button>
+    </footer>
+  </div>
+
+  <!-- Hidden file input for uploading photos -->
+  <input type="file" id="photoInput" accept="image/*" hidden>
+
+  <!-- Photo management modal -->
+  <div id="photoModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>Manage Photos</h2>
+      <p class="modal-note">
+        Photos are stored only on this device. They never leave your browser.
+      </p>
+      <div id="photoList" class="photo-list"></div>
+      <button id="closeModalBtn" class="btn-secondary">Done</button>
+    </div>
+  </div>
+
+  <script src="profile-picker.js"></script>
+</body>
+</html>

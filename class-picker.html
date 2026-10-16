@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Hub — Choose a class</title>
+  <link rel="stylesheet" href="profile-picker.css">
+  <style>
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .class-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .class-btn:hover {
+      transform: translateY(-3px);
+      border-color: #3b82f6;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .class-btn:active { transform: translateY(-1px) scale(0.98); }
+    @media (max-width: 500px) {
+      .class-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="picker-wrap">
+    <header class="picker-header">
+      <h1>Choose a class</h1>
+      <p class="subtitle">Pick a class to study</p>
+    </header>
+
+    <div class="class-grid" id="classGrid"></div>
+
+    <footer class="picker-footer">
+      <button class="link-btn" onclick="window.location.href='profile-picker.html'">
+        ← Back
+      </button>
+    </footer>
+  </div>
+
+  <script>
+    const CLASSES = [
+      { id: "p1",   name: "P1",   label: "Primary 1" },
+      { id: "p2",   name: "P2",   label: "Primary 2" },
+      { id: "p3",   name: "P3",   label: "Primary 3" },
+      { id: "p4",   name: "P4",   label: "Primary 4" },
+      { id: "p5",   name: "P5",   label: "Primary 5" },
+      { id: "p6",   name: "P6",   label: "Primary 6" },
+      { id: "jhs1", name: "JHS 1", label: "JHS 1" },
+      { id: "jhs2", name: "JHS 2", label: "JHS 2" },
+      { id: "jhs3", name: "JHS 3", label: "JHS 3" }
+    ];
+
+    const grid = document.getElementById("classGrid");
+    for (const c of CLASSES) {
+      const btn = document.createElement("button");
+      btn.className = "class-btn";
+      btn.textContent = c.name;
+      btn.onclick = () => {
+        localStorage.setItem("activeProfile", JSON.stringify({
+          id: "guest",
+          name: "Guest",
+          class: c.id,
+          className: c.label,
+          colour: "#ccc",
+          photoKey: null
+        }));
+        sessionStorage.setItem("cameFromPicker", "1");
+        window.location.href = `index.html?class=${c.id}&profile=guest`;
+      };
+      grid.appendChild(btn);
+    }
+  </script>
+</body>
+</html>

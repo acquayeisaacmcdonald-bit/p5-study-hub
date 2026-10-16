@@ -1,0 +1,80 @@
+{
+  "family": "Study Hub",
+  "profiles": [
+    {
+      "id": "papa",
+      "name": "Papa",
+      "class": "p1",
+      "className": "Primary 1",
+      "emoji": "🧒",
+      "colour": "#FFB6C1",
+      "photoKey": "photo_papa",
+      "heroImage": "assets/heroes/papa.jpg",
+      "tagline": "Learning is an adventure!",
+      "aboutHeading": "Meet Papa",
+      "aboutText": "Papa is in Primary 1. He loves counting, colours, and singing songs. Every day he learns something new and exciting.",
+      "favSubjects": ["Numbers", "Colours", "Songs"],
+      "theme": "sunrise"
+    },
+    {
+      "id": "kukus",
+      "name": "Kukus",
+      "class": "p4",
+      "className": "Primary 4",
+      "emoji": "👦",
+      "colour": "#87CEEB",
+      "photoKey": "photo_kukus",
+      "heroImage": "assets/heroes/kukus.jpg",
+      "tagline": "Ready to solve anything!",
+      "aboutHeading": "Meet Kukus",
+      "aboutText": "Kukus is in Primary 4. He enjoys Maths puzzles, reading stories, and discovering how things work. He's always up for a challenge.",
+      "favSubjects": ["Mathematics", "Science", "Reading"],
+      "theme": "ocean"
+    },
+    {
+      "id": "adom",
+      "name": "Adom",
+      "class": "p5",
+      "className": "Primary 5",
+      "emoji": "👦",
+      "colour": "#98FB98",
+      "photoKey": "photo_adom",
+      "heroImage": "assets/heroes/adom.jpg",
+      "tagline": "Learn. Practice. Excel.",
+      "aboutHeading": "Meet Adom",
+      "aboutText": "Adom is in Primary 5. He's passionate about Science and loves exploring how the world works — from flowers to electricity. This Study Hub was built for him and his siblings.",
+      "favSubjects": ["Science", "Mathematics", "English"],
+      "theme": "ghana"
+    },
+    {
+      "id": "kiki",
+      "name": "KiKI",
+      "class": "jhs2",
+      "className": "JHS 2",
+      "emoji": "👧",
+      "colour": "#DDA0DD",
+      "photoKey": "photo_kiki",
+      "heroImage": "assets/heroes/kiki.jpg",
+      "tagline": "Aiming for the top!",
+      "aboutHeading": "Meet KiKI",
+      "aboutText": "KiKI is in JHS 2. She's focused on preparing for BECE and loves studying Mathematics and Integrated Science. She's also great at helping her younger siblings.",
+      "favSubjects": ["Mathematics", "Integrated Science", "Social Studies"],
+      "theme": "purple"
+    },
+    {
+      "id": "guest",
+      "name": "Guest",
+      "class": null,
+      "className": "Choose a class",
+      "emoji": "👤",
+      "colour": "#CCCCCC",
+      "photoKey": null,
+      "heroImage": "assets/heroes/guest.jpg",
+      "tagline": "Free for every Ghanaian child",
+      "aboutHeading": "About Study Hub",
+      "aboutText": "Study Hub is a free learning app for Ghanaian students. No ads. No cost. Works offline. Built by parents, for our children.",
+      "favSubjects": [],
+      "theme": "classic"
+    }
+  ]
+}

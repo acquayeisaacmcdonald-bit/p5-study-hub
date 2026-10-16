@@ -1,6 +1,55 @@
 // ===================================================
 // P5 STUDY HUB — APP LOGIC
 // ===================================================
+// ============================================================
+// ACTIVE PROFILE & CLASS — read from URL or default to p5
+// ============================================================
+const urlParams  = new URLSearchParams(window.location.search);
+const ACTIVE_CLASS   = (urlParams.get("class")   || "p5").toLowerCase();
+const ACTIVE_PROFILE = (urlParams.get("profile") || "guest").toLowerCase();
+
+// Read profile from localStorage, but only trust it if it matches the URL
+let activeProfile = null;
+try {
+  const stored = JSON.parse(localStorage.getItem("activeProfile") || "null");
+  if (stored && stored.id && stored.id.toLowerCase() === ACTIVE_PROFILE) {
+    activeProfile = stored;
+  }
+} catch (e) {
+  activeProfile = null;
+}
+
+// Fallback: build minimal profile from URL
+if (!activeProfile) {
+  activeProfile = {
+    id: ACTIVE_PROFILE,
+    name: ACTIVE_PROFILE === "guest" ? "Guest" : (ACTIVE_PROFILE.charAt(0).toUpperCase() + ACTIVE_PROFILE.slice(1)),
+    class: ACTIVE_CLASS,
+    className: ACTIVE_CLASS.toUpperCase()
+  };
+}
+
+// Async: hydrate full profile from profiles.json
+async function hydrateProfile() {
+  try {
+    const res = await fetch("data/profiles.json?t=" + Date.now());
+    const data = await res.json();
+    const match = (data.profiles || []).find(
+      p => String(p.id).toLowerCase() === ACTIVE_PROFILE
+    );
+    if (match) {
+      activeProfile = { ...match, class: ACTIVE_CLASS };
+    }
+    console.log("[Study Hub] profile:", activeProfile.name, "| class:", ACTIVE_CLASS);
+  } catch (e) {
+    console.warn("Could not load profiles.json:", e.message);
+  }
+}
+
+// Path to this class's data folder
+const CLASS_DATA_DIR = `data/${ACTIVE_CLASS}`;
+
+console.log(`[Study Hub] class=${ACTIVE_CLASS} profile=${ACTIVE_PROFILE} dir=${CLASS_DATA_DIR}`);
 
 // ---------- CONFIG ----------
 const STORAGE_KEYS = {
@@ -299,6 +348,7 @@ function hideLoading() { $("loading").classList.add("hidden"); }
 // BOOT
 // ===================================================
 async function boot() {
+  await hydrateProfile();
   applyTheme(loadTheme());
   attachGlobalListeners();
   attachSiteNavListeners();
@@ -316,6 +366,8 @@ async function boot() {
   startStudyTimer();
   updateStudyBanner();
   updateGreeting();
+  updateHeaderForProfile();
+  applyProfilePersonalization();
 
   if (!playerName) {
     setTimeout(() => { $("nameModal").classList.remove("hidden"); }, 600);
@@ -323,13 +375,20 @@ async function boot() {
 
   try {
     showLoading();
-    subjectsData = await fetchJSON("data/subjects.json");
+    subjectsData = await fetchJSON(`${CLASS_DATA_DIR}/subjects.json`);
 
-    const defaultSub = subjectsData.subjects.find(s => s.id === "maths") ||
+    const defaultSub = subjectsData.subjects.find(s => s.id === "maths" && s.available) ||
                        subjectsData.subjects.find(s => s.available);
-    if (defaultSub) {
-      currentSubject = await fetchJSON(defaultSub.file);
-      currentSubjectId = defaultSub.id;
+
+    if (defaultSub && defaultSub.file) {
+      try {
+        currentSubject = await fetchJSON(`${CLASS_DATA_DIR}/${defaultSub.file}`);
+        currentSubjectId = defaultSub.id;
+      } catch (subErr) {
+        console.warn(`Could not load default subject "${defaultSub.id}":`, subErr.message);
+        currentSubject = null;
+        currentSubjectId = null;
+      }
     }
 
     try { offlineDictionary = await fetchJSON("data/dictionary.json"); }
@@ -340,6 +399,8 @@ async function boot() {
 
     hideLoading();
     renderHome();
+    updateHeaderForProfile();
+    applyProfilePersonalization();
   } catch (err) {
     hideLoading();
     console.error(err);
@@ -356,6 +417,144 @@ async function fetchJSON(path) {
 }
 
 // ===================================================
+// HERO & ABOUT PERSONALIZATION
+// ===================================================
+function applyProfilePersonalization() {
+  if (!activeProfile) return;
+
+  const name = activeProfile.name || "Study Hub";
+  const isGuest = (name === "Guest") || !activeProfile.class;
+
+  // ---- HERO ----
+  const heroEyebrow = $("heroEyebrow");
+  const heroTitle   = $("heroTitle");
+  const heroTagline = $("heroTagline");
+  const heroImage   = $("heroImage");
+  const heroCredit  = $("heroCredit");
+
+  if (heroEyebrow) {
+    heroEyebrow.textContent = isGuest
+      ? "Free for every Ghanaian child"
+      : (activeProfile.className || "Welcome");
+  }
+
+  if (heroTitle) {
+    heroTitle.innerHTML = isGuest
+      ? "Learn. Practice.<br>Excel."
+      : `Hi, ${name}!<br>Ready to learn?`;
+  }
+
+  if (heroTagline) {
+    heroTagline.textContent = activeProfile.tagline
+      || "P5 study tools, games, and quizzes — built by parents, for our children. Works offline. No ads. No cost. Just learning.";
+  }
+
+  if (heroImage) {
+    const imgPath = activeProfile.heroImage || "assets/heroes/guest.jpg";
+    heroImage.src = imgPath;
+    heroImage.alt = isGuest ? "Study Hub" : `${name} — Study Hub`;
+    heroImage.onerror = () => {
+      heroImage.src = "assets/heroes/guest.jpg";
+      heroImage.onerror = null;
+    };
+  }
+
+  if (heroCredit) {
+    heroCredit.textContent = isGuest
+      ? "Adom Nkansah Acquaye and Friends"
+      : `${name} • ${activeProfile.className || ""}`;
+  }
+
+  // ---- LOGO ----
+  const logoTitle    = $("logoTitle");
+  const logoSubtitle = $("logoSubtitle");
+
+  if (logoTitle) {
+    logoTitle.textContent = isGuest ? "P5 Study Hub" : `${name}'s Study Hub`;
+  }
+    const appBrandTitle = $("appBrandTitle");
+  const appBrandTagline = $("appBrandTagline");
+  if (appBrandTitle) {
+    appBrandTitle.textContent = isGuest ? "Study Hub" : `${name}'s Study Hub`;
+  }
+  if (appBrandTagline) {
+    appBrandTagline.textContent = activeProfile.tagline || "Learn. Practice. Excel.";
+  }
+  if (logoSubtitle) {
+    logoSubtitle.textContent = activeProfile.tagline || "Learn. Practice. Excel.";
+  }
+
+  // ---- PERSONAL ABOUT SECTION ----
+  const aboutSection = $("childAbout");
+  const aboutHeading = $("aboutHeading");
+  const aboutText    = $("aboutText");
+  const aboutFav     = $("aboutFavSubjects");
+
+  if (aboutSection) {
+    if (isGuest) {
+      aboutSection.style.display = "none";
+    } else {
+      aboutSection.style.display = "";
+    }
+  }
+
+  if (aboutHeading && activeProfile.aboutHeading) {
+    aboutHeading.textContent = activeProfile.aboutHeading;
+  }
+  if (aboutText && activeProfile.aboutText) {
+    aboutText.textContent = activeProfile.aboutText;
+  }
+  if (aboutFav) {
+    aboutFav.innerHTML = "";
+    const favs = activeProfile.favSubjects || [];
+    if (favs.length > 0 && !isGuest) {
+      const label = document.createElement("div");
+      label.className = "about-fav-label";
+      label.textContent = "Favourite subjects";
+      aboutFav.appendChild(label);
+
+      const list = document.createElement("div");
+      list.className = "about-fav-list";
+      favs.forEach(f => {
+        const chip = document.createElement("span");
+        chip.className = "about-fav-chip";
+        chip.textContent = f;
+        list.appendChild(chip);
+      });
+      aboutFav.appendChild(list);
+    }
+  }
+
+  // ---- THEME ----
+  if (activeProfile.theme && !isGuest) {
+    applyTheme(activeProfile.theme);
+    saveTheme(activeProfile.theme);
+  }
+
+  // ---- PAGE TITLE ----
+  document.title = isGuest
+    ? "P5 Study Hub — Learn. Practice. Excel."
+    : `${name} • P5 Study Hub`;
+}
+
+// ===================================================
+// PROFILE-AWARE HEADER
+// ===================================================
+function updateHeaderForProfile() {
+  if (activeProfile && activeProfile.name && activeProfile.name !== "Guest") {
+    const greetingEl = $("greeting");
+    if (greetingEl) {
+      const hour = new Date().getHours();
+      let timeGreeting = "Welcome";
+      if (hour < 12) timeGreeting = "Good morning";
+      else if (hour < 17) timeGreeting = "Good afternoon";
+      else timeGreeting = "Good evening";
+      greetingEl.textContent = `${timeGreeting}, ${activeProfile.name}! 👋`;
+    }
+  }
+}
+
+// ===================================================
 // PLAYER NAME
 // ===================================================
 function updateGreeting() {
@@ -364,7 +563,12 @@ function updateGreeting() {
   if (hour < 12) text = "Good morning";
   else if (hour < 17) text = "Good afternoon";
   else text = "Good evening";
-  if (playerName) $("greeting").textContent = `${text}, ${playerName}! 👋`;
+
+  const displayName = (activeProfile && activeProfile.name && activeProfile.name !== "Guest")
+    ? activeProfile.name
+    : playerName;
+
+  if (displayName) $("greeting").textContent = `${text}, ${displayName}! 👋`;
   else $("greeting").textContent = `${text}! Ready to study? 👋`;
 }
 
@@ -399,7 +603,12 @@ function attachNameListeners() {
 
 function updateProgressNameDisplay() {
   const el = $("progressName");
-  if (el) el.textContent = playerName || "Player";
+  if (el) {
+    const displayName = (activeProfile && activeProfile.name && activeProfile.name !== "Guest")
+      ? activeProfile.name
+      : (playerName || "Player");
+    el.textContent = displayName;
+  }
 }
 
 // ===================================================
@@ -415,23 +624,25 @@ function renderHome() {
 
 function renderSubjects() {
   const grid = $("subjectGrid");
+  if (!grid) return;
   grid.innerHTML = "";
   subjectsData.subjects.forEach(sub => {
-    const card = el("button", "subject-card" + (sub.available ? "" : " disabled"));
-    card.disabled = !sub.available;
+    const isAvailable = sub.available && !!sub.file;
+    const card = el("button", "subject-card" + (isAvailable ? "" : " disabled"));
+    card.disabled = !isAvailable;
     card.innerHTML = `
       <span class="subject-icon">${sub.icon}</span>
       <span>
         <span class="subject-name">${sub.name}</span>
-        <span class="subject-tag">${sub.available ? "Available" : "Coming soon"}</span>
+        <span class="subject-tag">${isAvailable ? "Available" : "Coming soon"}</span>
       </span>
     `;
-    if (sub.available) {
+    if (isAvailable) {
       card.addEventListener("click", async () => {
         if (sub.id !== currentSubjectId) {
           try {
             showLoading();
-            currentSubject = await fetchJSON(sub.file);
+            currentSubject = await fetchJSON(`${CLASS_DATA_DIR}/${sub.file}`);
             currentSubjectId = sub.id;
             hideLoading();
             renderHomeTopics();
@@ -460,6 +671,7 @@ function renderSubjects() {
 
 function renderHomeTopics() {
   const list = $("homeTopicList");
+  if (!list) return;
   list.innerHTML = "";
   if (!currentSubject || !currentSubject.topics) return;
   currentSubject.topics.forEach(topic => {
@@ -585,11 +797,9 @@ function renderStudyCard() {
   const frontEl = document.querySelector(".card-front");
   const questionEl = $("question");
 
-  // Remove any old image
   const oldImg = frontEl.querySelector(".question-image");
   if (oldImg) oldImg.remove();
 
-  // Insert image above the question text if present
   if (q.image) {
     const img = document.createElement("img");
     img.className = "question-image";
@@ -672,11 +882,9 @@ function renderQuizQuestion() {
   $("quizProgress").textContent = `Question ${quizIndex + 1} of ${quizDeck.length}`;
   const quizQuestionEl = $("quizQuestion");
 
-  // Remove any previous image
   const oldImg = quizQuestionEl.parentNode.querySelector(".question-image");
   if (oldImg) oldImg.remove();
 
-  // Insert image above the question text if present
   if (q.image) {
     const img = document.createElement("img");
     img.className = "question-image";

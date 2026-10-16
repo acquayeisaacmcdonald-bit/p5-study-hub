@@ -1,90 +1,57 @@
-// ===================================================
-// P5 STUDY HUB — SERVICE WORKER
-// Enables offline use and installability
-// ===================================================
-
-const CACHE_NAME = "p5-study-hub-v2";
-
-// Files to cache on first visit
-const CORE_ASSETS = [
+const CACHE_NAME = "p5-study-hub-v4";
+const ASSETS = [
   "./",
   "./index.html",
+  "./profile-picker.html",
+  "./profile-picker.css",
+  "./profile-picker.js",
+  "./class-picker.html",
   "./style.css",
   "./script.js",
   "./manifest.json",
-  "./assets/immanuel.png",
-  "./assets/icon-192.png",
-  "./assets/icon-512.png",
-  "./assets/icon-maskable.png",
-  "./data/subjects.json",
-  "./data/maths.json",
+  "./data/profiles.json",
   "./data/dictionary.json",
-  "./data/typing.json"
+  "./data/typing.json",
+  "./data/p1/subjects.json",
+  "./data/p2/subjects.json",
+  "./data/p3/subjects.json",
+  "./data/p4/subjects.json",
+  "./data/p5/subjects.json",
+  "./data/p5/maths.json",
+  "./data/p5/science.json",
+  "./data/p6/subjects.json",
+  "./data/jhs1/subjects.json",
+  "./data/jhs2/subjects.json",
+  "./data/jhs3/subjects.json"
 ];
 
-// Install — cache core assets
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(CORE_ASSETS).catch((err) => {
-        console.warn("Some assets failed to cache:", err);
-      });
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
   );
   self.skipWaiting();
 });
 
-// Activate — clean up old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((names) => {
-      return Promise.all(
-        names.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
-          }
-        })
-      );
-    })
+    caches.keys().then(keys =>
+      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+    )
   );
   self.clients.claim();
 });
 
-// Fetch — serve from cache first, fall back to network
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
-  if (!event.request.url.startsWith(self.location.origin)) return;
+
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match("./index.html"))
+    );
+    return;
+  }
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) {
-        fetch(event.request)
-          .then((response) => {
-            if (response && response.status === 200) {
-              caches.open(CACHE_NAME).then((cache) => {
-                cache.put(event.request, response.clone());
-              });
-            }
-          })
-          .catch(() => {});
-        return cached;
-      }
-
-      return fetch(event.request)
-        .then((response) => {
-          if (response && response.status === 200) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, clone);
-            });
-          }
-          return response;
-        })
-        .catch(() => {
-          if (event.request.mode === "navigate") {
-            return caches.match("./index.html");
-          }
-        });
-    })
+    caches.match(event.request).then(cached => cached || fetch(event.request))
   );
 });
