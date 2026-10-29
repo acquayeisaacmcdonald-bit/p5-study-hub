@@ -1,0 +1,1499 @@
+{
+  "subject": "Social Studies",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "ghana-history",
+      "name": "Ghana's History",
+      "icon": "🏛️",
+      "questions": [
+        {
+          "q": "What is the capital city of Ghana?",
+          "options": ["Kumasi", "Accra", "Tamale", "Cape Coast"],
+          "answer": "Accra",
+          "explain": "Accra is the capital city of Ghana.",
+          "procedure": ["Ghana's capital is Accra", "It's on the coast", "It's the seat of government", "Answer: Accra"]
+        },
+        {
+          "q": "Who was the first president of Ghana?",
+          "image": "assets/social/kwame-nkrumah.png",
+          "options": ["Jerry Rawlings", "Kwame Nkrumah", "John Kufuor", "Nana Addo"],
+          "answer": "Kwame Nkrumah",
+          "explain": "Kwame Nkrumah led Ghana to independence and became its first president.",
+          "procedure": ["Ghana gained independence 6 March 1957", "Kwame Nkrumah led the movement", "He became first president", "Answer: Kwame Nkrumah"]
+        },
+        {
+          "q": "When did Ghana gain independence?",
+          "image": "assets/social/independence-arch.png",
+          "options": ["1957", "1960", "1947", "1950"],
+          "answer": "1957",
+          "explain": "Ghana gained independence on 6 March 1957.",
+          "procedure": ["First African country south of the Sahara to gain independence", "6 March 1957", "Answer: 1957"]
+        },
+        {
+          "q": "Which European country colonized Ghana (then Gold Coast)?",
+          "options": ["France", "Portugal", "Britain", "Germany"],
+          "answer": "Britain",
+          "explain": "Ghana was a British colony known as the Gold Coast.",
+          "procedure": ["Ghana was called the Gold Coast", "British colony", "Answer: Britain"]
+        },
+        {
+          "q": "What was Ghana called before independence?",
+          "options": ["Gold Coast", "Ivory Coast", "Slave Coast", "Upper Volta"],
+          "answer": "Gold Coast",
+          "explain": "Ghana was called the Gold Coast because of its gold deposits.",
+          "procedure": ["Name came from gold wealth", "Answer: Gold Coast"]
+        },
+        {
+          "q": "What does the word 'Ghana' mean?",
+          "options": ["Land of gold", "Warrior King", "Peaceful country", "Land of rivers"],
+          "answer": "Warrior King",
+          "explain": "'Ghana' means 'Warrior King' — after the ancient Ghana Empire.",
+          "procedure": ["From the ancient Ghana Empire", "Means 'Warrior King'", "Answer: Warrior King"]
+        },
+        {
+          "q": "How many regions did Ghana have at independence?",
+          "options": ["5", "10", "16", "12"],
+          "answer": "5",
+          "explain": "Ghana had 5 regions at independence.",
+          "procedure": ["5 regions in 1957", "Now 16", "Answer: 5"]
+        },
+        {
+          "q": "How many regions does Ghana have today?",
+          "image": "assets/social/ghana-regions-map.png",
+          "options": ["10", "12", "16", "5"],
+          "answer": "16",
+          "explain": "Ghana currently has 16 administrative regions.",
+          "procedure": ["As of 2019, 16 regions", "Answer: 16"]
+        },
+        {
+          "q": "In what year did Ghana become a republic?",
+          "options": ["1957", "1960", "1966", "1959"],
+          "answer": "1960",
+          "explain": "Ghana became a republic on 1 July 1960.",
+          "procedure": ["Independence 1957", "Republic 1960", "Answer: 1960"]
+        },
+        {
+          "q": "What is Ghana's currency?",
+          "options": ["Cedi", "Naira", "Dollar", "Pound"],
+          "answer": "Cedi",
+          "explain": "Ghana's currency is the Ghana Cedi (GHS).",
+          "procedure": ["Divided into pesewas", "Answer: Cedi"]
+        },
+        {
+          "q": "What is the national motto of Ghana?",
+          "image": "assets/social/ghana-coat-of-arms.png",
+          "options": ["Freedom and Justice", "One Nation One People", "Unity and Progress", "God Bless Ghana"],
+          "answer": "Freedom and Justice",
+          "explain": "Ghana's national motto is 'Freedom and Justice'.",
+          "procedure": ["On the coat of arms", "Answer: Freedom and Justice"]
+        },
+        {
+          "q": "What are the colours of Ghana's flag?",
+          "image": "assets/social/ghana-flag.png",
+          "options": ["Red, yellow, green, black", "Red, white, blue", "Green, white, orange", "Black, yellow, red"],
+          "answer": "Red, yellow, green, black",
+          "explain": "Red, yellow, green horizontal stripes with a black star in the middle.",
+          "procedure": ["Three horizontal stripes", "Black star in the middle", "Answer: Red, yellow, green, black"]
+        },
+        {
+          "q": "What does the black star on Ghana's flag represent?",
+          "image": "assets/social/ghana-flag.png",
+          "options": ["Darkness", "Unity and freedom for Africa", "The night sky", "Sadness"],
+          "answer": "Unity and freedom for Africa",
+          "explain": "The black star represents African unity and freedom.",
+          "procedure": ["In the middle of the flag", "Symbolises unity and freedom", "Answer: Unity and freedom for Africa"]
+        },
+        {
+          "q": "Who designed Ghana's flag?",
+          "options": ["Kwame Nkrumah", "Theodosia Okoh", "Kofi Annan", "Jerry Rawlings"],
+          "answer": "Theodosia Okoh",
+          "explain": "Theodosia Okoh designed Ghana's flag.",
+          "procedure": ["Ghanaian artist", "Answer: Theodosia Okoh"]
+        },
+        {
+          "q": "Who was the first Prime Minister of Ghana?",
+          "options": ["Kwame Nkrumah", "Kofi Annan", "Jerry Rawlings", "John Kufuor"],
+          "answer": "Kwame Nkrumah",
+          "explain": "Kwame Nkrumah was the first Prime Minister and later first President.",
+          "procedure": ["Prime Minister in 1957", "President in 1960", "Answer: Kwame Nkrumah"]
+        },
+        {
+          "q": "What is the name of Ghana's parliament?",
+          "options": ["House of Representatives", "Parliament of Ghana", "National Assembly", "Senate"],
+          "answer": "Parliament of Ghana",
+          "explain": "Ghana's parliament is called the Parliament of Ghana.",
+          "procedure": ["Makes laws for the country", "Answer: Parliament of Ghana"]
+        },
+        {
+          "q": "Which ancient empire is Ghana named after?",
+          "options": ["Mali Empire", "Songhai Empire", "Ghana Empire", "Asante Empire"],
+          "answer": "Ghana Empire",
+          "explain": "Modern Ghana is named after the ancient Ghana Empire.",
+          "procedure": ["Ancient West African empire", "Kwame Nkrumah chose the name", "Answer: Ghana Empire"]
+        },
+        {
+          "q": "What year did Ghana host the Africa Cup of Nations for the first time?",
+          "options": ["1963", "1978", "1983", "2008"],
+          "answer": "1963",
+          "explain": "Ghana hosted and won the Africa Cup of Nations in 1963.",
+          "procedure": ["Hosted and won in 1963", "Answer: 1963"]
+        },
+        {
+          "q": "What was the capital of Ghana before Accra?",
+          "options": ["Kumasi", "Cape Coast", "Tamale", "Sekondi"],
+          "answer": "Cape Coast",
+          "explain": "Cape Coast was the capital from 1821 to 1877.",
+          "procedure": ["Cape Coast capital (1821–1877)", "Moved to Accra in 1877", "Answer: Cape Coast"]
+        },
+        {
+          "q": "Who was Ghana's first woman Chief Justice?",
+          "options": ["Georgina Wood", "Justice Sophia Akuffo", "Hannah Tetteh", "Nana Konadu Agyeman"],
+          "answer": "Georgina Wood",
+          "explain": "Georgina Wood was Ghana's first female Chief Justice (2007–2017).",
+          "procedure": ["Chief Justice 2007–2017", "First woman in this role", "Answer: Georgina Wood"]
+        }
+      ]
+    },
+    {
+      "id": "ghana-geography",
+      "name": "Ghana's Geography",
+      "icon": "🗺️",
+      "questions": [
+        {
+          "q": "What continent is Ghana in?",
+          "options": ["Asia", "Africa", "Europe", "South America"],
+          "answer": "Africa",
+          "explain": "Ghana is in West Africa.",
+          "procedure": ["West Africa", "African continent", "Answer: Africa"]
+        },
+        {
+          "q": "Which ocean lies to the south of Ghana?",
+          "options": ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Arctic Ocean"],
+          "answer": "Atlantic Ocean",
+          "explain": "The Atlantic Ocean lies to the south of Ghana.",
+          "procedure": ["Ghana is bordered by the Atlantic", "Specifically the Gulf of Guinea", "Answer: Atlantic Ocean"]
+        },
+        {
+          "q": "Which country borders Ghana to the west?",
+          "image": "assets/social/ghana-map.png",
+          "options": ["Togo", "Nigeria", "Burkina Faso", "Côte d'Ivoire"],
+          "answer": "Côte d'Ivoire",
+          "explain": "Côte d'Ivoire borders Ghana to the west.",
+          "procedure": ["West border: Côte d'Ivoire", "Also called Ivory Coast", "Answer: Côte d'Ivoire"]
+        },
+        {
+          "q": "Which country borders Ghana to the east?",
+          "image": "assets/social/ghana-map.png",
+          "options": ["Togo", "Benin", "Nigeria", "Côte d'Ivoire"],
+          "answer": "Togo",
+          "explain": "Togo borders Ghana to the east.",
+          "procedure": ["East border: Togo", "French-speaking", "Answer: Togo"]
+        },
+        {
+          "q": "Which country borders Ghana to the north?",
+          "image": "assets/social/ghana-map.png",
+          "options": ["Mali", "Niger", "Burkina Faso", "Côte d'Ivoire"],
+          "answer": "Burkina Faso",
+          "explain": "Burkina Faso borders Ghana to the north.",
+          "procedure": ["North border: Burkina Faso", "Formerly Upper Volta", "Answer: Burkina Faso"]
+        },
+        {
+          "q": "What is the highest mountain in Ghana?",
+          "image": "assets/social/mount-afadjato.png",
+          "options": ["Mount Kilimanjaro", "Mount Afadja (Afadjato)", "Mount Everest", "Mount Akuapem"],
+          "answer": "Mount Afadja (Afadjato)",
+          "explain": "Mount Afadja (Afadjato) is the highest mountain in Ghana, at about 885 metres.",
+          "procedure": ["In the Volta Region", "~885m tall", "Answer: Mount Afadja (Afadjato)"]
+        },
+        {
+          "q": "What is the largest lake in Ghana?",
+          "image": "assets/social/lake-volta.png",
+          "options": ["Lake Bosomtwe", "Lake Volta", "Lake Chad", "Lake Victoria"],
+          "answer": "Lake Volta",
+          "explain": "Lake Volta is the largest lake in Ghana and the largest artificial lake in the world.",
+          "procedure": ["Created by the Akosombo Dam", "Largest in Ghana", "Answer: Lake Volta"]
+        },
+        {
+          "q": "Which river is the longest in Ghana?",
+          "options": ["Volta River", "Pra River", "Tano River", "Ankobra River"],
+          "answer": "Volta River",
+          "explain": "The Volta River is the longest river in Ghana.",
+          "procedure": ["Flows into the Atlantic", "Answer: Volta River"]
+        },
+        {
+          "q": "What is the capital of the Ashanti Region?",
+          "options": ["Accra", "Kumasi", "Tamale", "Cape Coast"],
+          "answer": "Kumasi",
+          "explain": "Kumasi is the capital of the Ashanti Region.",
+          "procedure": ["Second-largest city", "Known as 'Garden City'", "Answer: Kumasi"]
+        },
+        {
+          "q": "Which region is known as the 'Garden City'?",
+          "options": ["Greater Accra", "Ashanti (Kumasi)", "Northern", "Volta"],
+          "answer": "Ashanti (Kumasi)",
+          "explain": "Kumasi in the Ashanti Region is known as the Garden City.",
+          "procedure": ["Kumasi has beautiful gardens", "Answer: Ashanti (Kumasi)"]
+        },
+        {
+          "q": "What is the climate of Ghana?",
+          "options": ["Tropical", "Desert", "Polar", "Temperate"],
+          "answer": "Tropical",
+          "explain": "Ghana has a tropical climate — hot and humid.",
+          "procedure": ["Near the equator", "Hot and humid", "Two seasons: rainy and dry", "Answer: Tropical"]
+        },
+        {
+          "q": "What is the Akosombo Dam used for?",
+          "image": "assets/social/akosombo-dam.png",
+          "options": ["Fishing only", "Generating electricity", "Irrigation only", "Tourism only"],
+          "answer": "Generating electricity",
+          "explain": "The Akosombo Dam generates hydroelectric power for Ghana.",
+          "procedure": ["On the Volta River", "Hydroelectric power", "Created Lake Volta", "Answer: Generating electricity"]
+        },
+        {
+          "q": "Which region is the capital city Accra in?",
+          "options": ["Ashanti", "Greater Accra", "Central", "Western"],
+          "answer": "Greater Accra",
+          "explain": "Accra is in the Greater Accra Region.",
+          "procedure": ["Capital of Ghana", "Greater Accra Region", "Answer: Greater Accra"]
+        },
+        {
+          "q": "Which region is the largest in Ghana by land area?",
+          "options": ["Ashanti", "Northern", "Western", "Greater Accra"],
+          "answer": "Northern",
+          "explain": "The Northern Region is the largest region by land area.",
+          "procedure": ["Capital is Tamale", "Answer: Northern"]
+        },
+        {
+          "q": "Which region has the famous Cape Coast Castle?",
+          "image": "assets/social/cape-coast-castle.png",
+          "options": ["Greater Accra", "Central", "Western", "Ashanti"],
+          "answer": "Central",
+          "explain": "Cape Coast Castle is in the Central Region.",
+          "procedure": ["Historical site", "Major slave trade site", "Answer: Central"]
+        },
+        {
+          "q": "What is the name of the traditional ruler of the Ashanti Kingdom?",
+          "options": ["King", "Asantehene", "Ohene", "Chief"],
+          "answer": "Asantehene",
+          "explain": "The traditional ruler of the Ashanti Kingdom is called the Asantehene.",
+          "procedure": ["Current Asantehene is Otumfuo Osei Tutu II", "Answer: Asantehene"]
+        },
+        {
+          "q": "How many regions are in the northern part of Ghana?",
+          "options": ["1", "3", "5", "2"],
+          "answer": "3",
+          "explain": "There are 3 regions in the north: Northern, Upper East, Upper West.",
+          "procedure": ["Northern Region", "Upper East Region", "Upper West Region", "Answer: 3"]
+        },
+        {
+          "q": "Which of these is a border country of Ghana?",
+          "options": ["Nigeria", "Togo", "Cameroon", "Senegal"],
+          "answer": "Togo",
+          "explain": "Togo is one of Ghana's border countries.",
+          "procedure": ["West: Côte d'Ivoire", "East: Togo", "North: Burkina Faso", "Answer: Togo"]
+        },
+        {
+          "q": "What does the word 'Sahel' refer to?",
+          "options": ["A rainy region", "The dry belt south of the Sahara", "An ocean", "A type of crop"],
+          "answer": "The dry belt south of the Sahara",
+          "explain": "The Sahel is the dry belt south of the Sahara — northern Ghana is part of the wider Sahel region.",
+          "procedure": ["Semi-arid region", "South of Sahara", "Northern Ghana is close to it", "Answer: The dry belt south of the Sahara"]
+        },
+        {
+          "q": "Which of these is a major river in Ghana?",
+          "options": ["Nile", "Congo", "Volta", "Niger"],
+          "answer": "Volta",
+          "explain": "The Volta River is the main river system in Ghana.",
+          "procedure": ["Main river in Ghana", "Created Lake Volta", "Answer: Volta"]
+        }
+      ]
+    },
+    {
+      "id": "ghana-government",
+      "name": "Ghana's Government",
+      "icon": "🏛️",
+      "questions": [
+        {
+          "q": "What type of government does Ghana have?",
+          "options": ["Monarchy", "Democracy", "Dictatorship", "Communist"],
+          "answer": "Democracy",
+          "explain": "Ghana is a democratic republic.",
+          "procedure": ["People elect leaders", "Regular elections", "Answer: Democracy"]
+        },
+        {
+          "q": "Who is the head of state in Ghana?",
+          "options": ["The King", "The President", "The Chief Justice", "The Speaker"],
+          "answer": "The President",
+          "explain": "The President is the head of state and government.",
+          "procedure": ["Elected by the people", "4-year term", "Answer: The President"]
+        },
+        {
+          "q": "How long is a presidential term in Ghana?",
+          "options": ["2 years", "4 years", "6 years", "5 years"],
+          "answer": "4 years",
+          "explain": "A presidential term in Ghana is 4 years.",
+          "procedure": ["Elections every 4 years", "Maximum 2 terms", "Answer: 4 years"]
+        },
+        {
+          "q": "What is the maximum number of terms a Ghanaian president can serve?",
+          "options": ["1 term", "2 terms", "3 terms", "No limit"],
+          "answer": "2 terms",
+          "explain": "A Ghanaian president can serve a maximum of 2 terms (8 years).",
+          "procedure": ["2 terms × 4 years = 8 years", "Answer: 2 terms"]
+        },
+        {
+          "q": "How many arms of government does Ghana have?",
+          "options": ["1", "2", "3", "4"],
+          "answer": "3",
+          "explain": "Ghana's government has 3 arms: Executive, Legislature, Judiciary.",
+          "procedure": ["Executive (President)", "Legislature (Parliament)", "Judiciary (courts)", "Answer: 3"]
+        },
+        {
+          "q": "What is the role of Parliament?",
+          "options": ["Enforce laws", "Make laws", "Interpret laws", "Elect the President"],
+          "answer": "Make laws",
+          "explain": "Parliament makes the laws of the country.",
+          "procedure": ["Legislative arm", "Makes laws", "Approves budget", "Answer: Make laws"]
+        },
+        {
+          "q": "Who is the head of the Judiciary in Ghana?",
+          "image": "assets/social/supreme-court.png",
+          "options": ["The President", "The Chief Justice", "The Speaker", "The Attorney General"],
+          "answer": "The Chief Justice",
+          "explain": "The Chief Justice is the head of the judiciary.",
+          "procedure": ["Appointed by the President", "Confirmed by Parliament", "Answer: The Chief Justice"]
+        },
+        {
+          "q": "What is the minimum voting age in Ghana?",
+          "options": ["16", "18", "21", "25"],
+          "answer": "18",
+          "explain": "The minimum voting age in Ghana is 18.",
+          "procedure": ["18+ can vote", "Answer: 18"]
+        },
+        {
+          "q": "Who is the head of the Executive arm of government?",
+          "options": ["Chief Justice", "President", "Speaker", "Chief of Staff"],
+          "answer": "President",
+          "explain": "The President heads the Executive arm.",
+          "procedure": ["Appoints ministers", "Answer: President"]
+        },
+        {
+          "q": "What is the role of the Judiciary?",
+          "options": ["Make laws", "Interpret and apply the law", "Collect taxes", "Elect the President"],
+          "answer": "Interpret and apply the law",
+          "explain": "The Judiciary interprets and applies the law.",
+          "procedure": ["Made up of courts", "Settles disputes", "Answer: Interpret and apply the law"]
+        },
+        {
+          "q": "Which body is responsible for organising elections in Ghana?",
+          "options": ["Parliament", "Electoral Commission", "Supreme Court", "Ministry of Interior"],
+          "answer": "Electoral Commission",
+          "explain": "The Electoral Commission organises all national elections.",
+          "procedure": ["Registers voters", "Conducts elections", "Announces results", "Answer: Electoral Commission"]
+        },
+        {
+          "q": "When are Ghana's national elections usually held?",
+          "options": ["January", "March", "July", "December"],
+          "answer": "December",
+          "explain": "Ghana holds national elections in December every 4 years.",
+          "procedure": ["Every 4 years", "Held in December", "Answer: December"]
+        },
+        {
+          "q": "What is the name of Ghana's current constitution?",
+          "options": ["The 1957 Constitution", "The 1960 Constitution", "The 1992 Constitution", "The 1979 Constitution"],
+          "answer": "The 1992 Constitution",
+          "explain": "Ghana currently operates under the 1992 Constitution.",
+          "procedure": ["Fourth Republic", "Took effect 1992", "Answer: The 1992 Constitution"]
+        },
+        {
+          "q": "What is the role of the Speaker of Parliament?",
+          "options": ["To lead the Executive", "To preside over Parliament", "To lead the Judiciary", "To be the military head"],
+          "answer": "To preside over Parliament",
+          "explain": "The Speaker presides over sittings of Parliament.",
+          "procedure": ["Leads Parliament's sittings", "Elected by MPs", "Answer: To preside over Parliament"]
+        },
+        {
+          "q": "Which of these is a duty of a Ghanaian citizen?",
+          "options": ["Only paying taxes", "Only voting", "Paying taxes and obeying the law", "Only serving in the military"],
+          "answer": "Paying taxes and obeying the law",
+          "explain": "Citizens have duties like paying taxes, obeying the law, and voting.",
+          "procedure": ["Pay taxes", "Obey the law", "Vote", "Answer: Paying taxes and obeying the law"]
+        },
+        {
+          "q": "What does 'the rule of law' mean?",
+          "options": ["The President makes all the laws", "Everyone must obey the law, including leaders", "Only citizens must obey the law", "The rich have different laws"],
+          "answer": "Everyone must obey the law, including leaders",
+          "explain": "The rule of law means everyone is equal under the law.",
+          "procedure": ["Key democratic principle", "Even leaders must obey the law", "Answer: Everyone must obey the law, including leaders"]
+        },
+        {
+          "q": "What is Ghana's Fourth Republic?",
+          "options": ["Its first democratic period", "The current democratic period starting in 1992", "The colonial period", "The military period"],
+          "answer": "The current democratic period starting in 1992",
+          "explain": "Ghana's Fourth Republic began in 1992.",
+          "procedure": ["4 republics in Ghana's history", "Fourth started 1992", "Answer: The current democratic period starting in 1992"]
+        },
+        {
+          "q": "Which of these is NOT an arm of government in Ghana?",
+          "options": ["Executive", "Legislature", "Judiciary", "Military"],
+          "answer": "Military",
+          "explain": "The military is not one of the 3 arms of government.",
+          "procedure": ["3 arms: Executive, Legislature, Judiciary", "Military is under Executive, but not separate arm", "Answer: Military"]
+        },
+        {
+          "q": "What is the name of the official residence of Ghana's president?",
+          "image": "assets/social/flagstaff-house.png",
+          "options": ["Flagstaff House", "Parliament House", "State Tower", "Independence House"],
+          "answer": "Flagstaff House",
+          "explain": "The Flagstaff House (Jubilee House) is the official residence of Ghana's president.",
+          "procedure": ["Official residence", "Also called Jubilee House", "Answer: Flagstaff House"]
+        },
+        {
+          "q": "What is the function of the Attorney General in Ghana?",
+          "options": ["Commands the army", "Chief legal advisor to the government", "Manages elections", "Leads the police"],
+          "answer": "Chief legal advisor to the government",
+          "explain": "The Attorney General is the chief legal advisor to the government.",
+          "procedure": ["Legal advisor", "Represents government in court", "Answer: Chief legal advisor to the government"]
+        }
+      ]
+    },
+    {
+      "id": "ghana-culture",
+      "name": "Ghana's Culture",
+      "icon": "🎭",
+      "questions": [
+        {
+          "q": "What is Ghana's most popular festival?",
+          "options": ["Homowo", "Aboakyer", "Damba", "Different festivals in different regions"],
+          "answer": "Different festivals in different regions",
+          "explain": "Ghana has many festivals — Homowo, Aboakyer, Damba, and more.",
+          "procedure": ["Each ethnic group has its own", "Homowo — Ga", "Aboakyer — Effutu", "Damba — Northern", "Answer: Different festivals in different regions"]
+        },
+        {
+          "q": "Which festival is celebrated by the Ga people of Accra?",
+          "image": "assets/social/homowo-festival.png",
+          "options": ["Homowo", "Aboakyer", "Damba", "Akatam"],
+          "answer": "Homowo",
+          "explain": "Homowo is the Ga festival celebrating the harvest.",
+          "procedure": ["Means 'hooting at hunger'", "Ga people of Accra", "Answer: Homowo"]
+        },
+        {
+          "q": "Which festival is celebrated by the Ashanti people?",
+          "options": ["Homowo", "Aboakyer", "Akwasidae", "Damba"],
+          "answer": "Akwasidae",
+          "explain": "Akwasidae is the main Ashanti festival, celebrated every 6 weeks.",
+          "procedure": ["Every 6 weeks", "Honours ancestors and Golden Stool", "Answer: Akwasidae"]
+        },
+        {
+          "q": "Which is Ghana's most famous traditional cloth?",
+          "image": "assets/social/kente-cloth.png",
+          "options": ["Kente", "Ankara", "Batik", "Adinkra"],
+          "answer": "Kente",
+          "explain": "Kente is Ghana's most famous traditional handwoven cloth.",
+          "procedure": ["Handwoven", "Famous worldwide", "Answer: Kente"]
+        },
+        {
+          "q": "Who weaves Kente cloth traditionally?",
+          "options": ["The Ashanti and Ewe people", "Only the Ga people", "Only the Fante people", "Foreigners"],
+          "answer": "The Ashanti and Ewe people",
+          "explain": "Kente is traditionally woven by the Ashanti and Ewe peoples.",
+          "procedure": ["Ashanti and Ewe weavers", "Answer: The Ashanti and Ewe people"]
+        },
+        {
+          "q": "What are Adinkra symbols?",
+          "image": "assets/social/adinkra-symbols.png",
+          "options": ["Ghanaian writing system", "Symbols with meanings used by the Ashanti people", "A type of music", "A type of dance"],
+          "answer": "Symbols with meanings used by the Ashanti people",
+          "explain": "Adinkra are symbols that represent concepts and proverbs.",
+          "procedure": ["Used by the Ashanti", "Each has a meaning", "Answer: Symbols with meanings used by the Ashanti people"]
+        },
+        {
+          "q": "What is the most popular sport in Ghana?",
+          "options": ["Basketball", "Football", "Athletics", "Boxing"],
+          "answer": "Football",
+          "explain": "Football is the most popular sport in Ghana.",
+          "procedure": ["National team: Black Stars", "Answer: Football"]
+        },
+        {
+          "q": "What is the name of Ghana's national football team?",
+          "options": ["Black Stars", "Black Cats", "Super Eagles", "Indomitable Lions"],
+          "answer": "Black Stars",
+          "explain": "Ghana's national football team is called the Black Stars.",
+          "procedure": ["Inspired by the black star on the flag", "Answer: Black Stars"]
+        },
+        {
+          "q": "Which of these is a famous Ghanaian dish?",
+          "options": ["Banku and tilapia", "Sushi", "Pizza", "Tacos"],
+          "answer": "Banku and tilapia",
+          "explain": "Banku and tilapia is a famous Ghanaian dish.",
+          "procedure": ["Made from fermented corn and cassava", "Often served with fish", "Answer: Banku and tilapia"]
+        },
+        {
+          "q": "What is Fufu made from?",
+          "options": ["Rice and beans", "Pounded cassava and plantain", "Wheat flour", "Maize only"],
+          "answer": "Pounded cassava and plantain",
+          "explain": "Fufu is made from pounded cassava and plantain.",
+          "procedure": ["Cassava + plantain", "Pounded until smooth", "Answer: Pounded cassava and plantain"]
+        },
+        {
+          "q": "What is the traditional dance of the Ashanti people?",
+          "options": ["Kpanlogo", "Adowa", "Borborbor", "Agbadza"],
+          "answer": "Adowa",
+          "explain": "Adowa is the traditional dance of the Ashanti people.",
+          "procedure": ["Ashanti dance", "Performed at ceremonies", "Answer: Adowa"]
+        },
+        {
+          "q": "What is the traditional dance of the Ewe people?",
+          "options": ["Adowa", "Agbadza", "Kpanlogo", "Apatampa"],
+          "answer": "Agbadza",
+          "explain": "Agbadza is the traditional dance of the Ewe people.",
+          "procedure": ["Ewe people dance", "Answer: Agbadza"]
+        },
+        {
+          "q": "What is 'Kpanlogo'?",
+          "options": ["A food", "A traditional Ga dance", "A type of cloth", "A festival"],
+          "answer": "A traditional Ga dance",
+          "explain": "Kpanlogo is a traditional dance of the Ga people.",
+          "procedure": ["Originated from the Ga people of Accra", "Answer: A traditional Ga dance"]
+        },
+        {
+          "q": "What is the name of Ghana's national anthem?",
+          "options": ["God Bless Our Homeland Ghana", "God Save the King", "Lift Every Voice", "Oh Ghana"],
+          "answer": "God Bless Our Homeland Ghana",
+          "explain": "'God Bless Our Homeland Ghana' is the national anthem.",
+          "procedure": ["Written by Philip Gbeho", "Adopted 1957", "Answer: God Bless Our Homeland Ghana"]
+        },
+        {
+          "q": "Which of these ethnic groups is NOT native to Ghana?",
+          "options": ["Akan", "Ewe", "Ga", "Zulu"],
+          "answer": "Zulu",
+          "explain": "The Zulu are from South Africa, not Ghana.",
+          "procedure": ["Ghana's ethnic groups: Akan, Ewe, Ga, Mole-Dagbani, Gurma, Guan, Grusi", "Zulu are South African", "Answer: Zulu"]
+        },
+        {
+          "q": "Which is the largest ethnic group in Ghana?",
+          "options": ["Ewe", "Akan", "Ga", "Mole-Dagbani"],
+          "answer": "Akan",
+          "explain": "The Akan is the largest ethnic group in Ghana.",
+          "procedure": ["Most populous ethnic group", "Answer: Akan"]
+        },
+        {
+          "q": "What is the traditional name for the Ashanti king?",
+          "options": ["Ohene", "Asantehene", "Omanhene", "Chief"],
+          "answer": "Asantehene",
+          "explain": "The Ashanti king is called the Asantehene.",
+          "procedure": ["Current: Otumfuo Osei Tutu II", "Answer: Asantehene"]
+        },
+        {
+          "q": "What is Kweku Ananse known for in Ghanaian folktales?",
+          "options": ["Being slow", "Being wise and clever", "Being tall", "Being wealthy"],
+          "answer": "Being wise and clever",
+          "explain": "Kweku Ananse is the famous spider in Ghanaian folktales, known for wisdom and cleverness.",
+          "procedure": ["Spider trickster", "Smart and cunning", "Answer: Being wise and clever"]
+        },
+        {
+          "q": "Which of these is a traditional Ghanaian musical instrument?",
+          "options": ["Piano", "Kora", "Kpanlogo drum", "Guitar"],
+          "answer": "Kpanlogo drum",
+          "explain": "Kpanlogo is a traditional Ghanaian drum.",
+          "procedure": ["Traditional drum", "Used in Ga music", "Answer: Kpanlogo drum"]
+        },
+        {
+          "q": "What does 'Akwaaba' mean in Ghana?",
+          "options": ["Goodbye", "Welcome", "Thank you", "Please"],
+          "answer": "Welcome",
+          "explain": "'Akwaaba' means 'Welcome' in Twi.",
+          "procedure": ["Akan/Twi word", "Answer: Welcome"]
+        }
+      ]
+    },
+    {
+      "id": "family-community",
+      "name": "The Family & Community",
+      "icon": "👨‍👩‍👧",
+      "questions": [
+        {
+          "q": "What is a family?",
+          "options": ["Only parents", "A group of people related by blood, marriage, or adoption", "Only children", "A group of friends"],
+          "answer": "A group of people related by blood, marriage, or adoption",
+          "explain": "A family is a group related by blood, marriage, or adoption.",
+          "procedure": ["Basic social unit", "Answer: A group of people related by blood, marriage, or adoption"]
+        },
+        {
+          "q": "What is the nuclear family?",
+          "image": "assets/social/nuclear-family.png",
+          "options": ["Grandparents and grandchildren", "Father, mother, and children", "Only brothers and sisters", "The whole extended family"],
+          "answer": "Father, mother, and children",
+          "explain": "A nuclear family is made up of father, mother, and their children.",
+          "procedure": ["Parents + children", "Answer: Father, mother, and children"]
+        },
+        {
+          "q": "What is the extended family?",
+          "image": "assets/social/extended-family.png",
+          "options": ["Only father, mother, and children", "All relatives — grandparents, aunts, uncles, cousins", "Only parents", "Only siblings"],
+          "answer": "All relatives — grandparents, aunts, uncles, cousins",
+          "explain": "An extended family includes all relatives.",
+          "procedure": ["Beyond parents + children", "Includes grandparents, aunts, uncles", "Answer: All relatives — grandparents, aunts, uncles, cousins"]
+        },
+        {
+          "q": "Who is the head of a traditional Ghanaian family?",
+          "options": ["The youngest child", "The father or eldest male relative", "The mother", "The school teacher"],
+          "answer": "The father or eldest male relative",
+          "explain": "Traditionally, the father or eldest male relative heads the family.",
+          "procedure": ["In traditional families", "Father or eldest male", "Answer: The father or eldest male relative"]
+        },
+        {
+          "q": "What is a community?",
+          "options": ["Only one family", "A group of people living in the same area and sharing resources", "Only a village", "A type of government"],
+          "answer": "A group of people living in the same area and sharing resources",
+          "explain": "A community is a group living in the same area and sharing resources.",
+          "procedure": ["Shared location and resources", "Answer: A group of people living in the same area and sharing resources"]
+        },
+        {
+          "q": "What is a responsibility of a family member?",
+          "options": ["To ignore others", "To help and care for each other", "To only take, not give", "To always be alone"],
+          "answer": "To help and care for each other",
+          "explain": "Family members are responsible for helping and caring for each other.",
+          "procedure": ["Help each other", "Care for each other", "Answer: To help and care for each other"]
+        },
+        {
+          "q": "Why is the family important?",
+          "options": ["It teaches us first values and skills", "It provides only food", "It's just a place to sleep", "It has no purpose"],
+          "answer": "It teaches us first values and skills",
+          "explain": "The family is where we learn our first values, skills, and behaviours.",
+          "procedure": ["First teachers", "Values and skills", "Answer: It teaches us first values and skills"]
+        },
+        {
+          "q": "What is a duty of children in the family?",
+          "options": ["To be disrespectful", "To obey parents and help at home", "To never help", "To boss parents around"],
+          "answer": "To obey parents and help at home",
+          "explain": "Children should obey parents and help with household work.",
+          "procedure": ["Obey parents", "Help at home", "Answer: To obey parents and help at home"]
+        },
+        {
+          "q": "What is a duty of parents in the family?",
+          "options": ["To leave children alone", "To provide food, shelter, education, and love", "To only work", "To only discipline"],
+          "answer": "To provide food, shelter, education, and love",
+          "explain": "Parents provide for their children's physical and emotional needs.",
+          "procedure": ["Food, shelter, education, love", "Answer: To provide food, shelter, education, and love"]
+        },
+        {
+          "q": "What is an example of community cooperation?",
+          "options": ["Everyone staying at home", "Community cleanup, shared schools, festivals", "Fighting with neighbours", "Never helping anyone"],
+          "answer": "Community cleanup, shared schools, festivals",
+          "explain": "Community cooperation includes cleanup projects, shared schools, and festivals.",
+          "procedure": ["Cleanup projects", "Shared schools", "Festivals", "Answer: Community cleanup, shared schools, festivals"]
+        },
+        {
+          "q": "What is a chieftaincy in Ghana?",
+          "options": ["A type of school", "The traditional system of chiefs governing communities", "A type of government ministry", "A sports team"],
+          "answer": "The traditional system of chiefs governing communities",
+          "explain": "Chieftaincy is the traditional system of chiefs governing communities.",
+          "procedure": ["Traditional governance", "Chiefs lead communities", "Answer: The traditional system of chiefs governing communities"]
+        },
+        {
+          "q": "What is the role of a chief in a community?",
+          "options": ["Only to collect taxes", "To lead and settle disputes", "To be a teacher", "To be a farmer"],
+          "answer": "To lead and settle disputes",
+          "explain": "Chiefs lead their communities and settle disputes.",
+          "procedure": ["Community leader", "Settles disputes", "Answer: To lead and settle disputes"]
+        },
+        {
+          "q": "What is 'extended family' support in Ghana?",
+          "options": ["Never helping", "Helping relatives with childcare, money, and other needs", "Only giving food", "Only being there for holidays"],
+          "answer": "Helping relatives with childcare, money, and other needs",
+          "explain": "Extended families support each other in many ways.",
+          "procedure": ["Childcare", "Financial help", "Various kinds of support", "Answer: Helping relatives with childcare, money, and other needs"]
+        },
+        {
+          "q": "What is a value that families should teach?",
+          "options": ["Selfishness", "Honesty", "Dishonesty", "Irresponsibility"],
+          "answer": "Honesty",
+          "explain": "Honesty is an important value families should teach.",
+          "procedure": ["Core value", "Family teaches values", "Answer: Honesty"]
+        },
+        {
+          "q": "What is a rite of passage?",
+          "options": ["A school exam", "A ceremony marking an important life change", "A type of food", "A type of game"],
+          "answer": "A ceremony marking an important life change",
+          "explain": "A rite of passage marks an important life change.",
+          "procedure": ["Marks important life change", "Birth, puberty, marriage", "Answer: A ceremony marking an important life change"]
+        },
+        {
+          "q": "What is 'outdooring' in Ghana?",
+          "options": ["A type of farming", "A ceremony where a baby is officially presented to the community", "A type of dance", "A type of school"],
+          "answer": "A ceremony where a baby is officially presented to the community",
+          "explain": "Outdooring is a ceremony that presents a baby to the community.",
+          "procedure": ["Baby presentation ceremony", "Usually in the first week after birth", "Answer: A ceremony where a baby is officially presented to the community"]
+        },
+        {
+          "q": "Why do communities need rules?",
+          "options": ["To limit freedom", "To keep peace, order, and safety", "To cause conflicts", "They don't need rules"],
+          "answer": "To keep peace, order, and safety",
+          "explain": "Communities need rules to maintain peace, order, and safety.",
+          "procedure": ["Peace", "Order", "Safety", "Answer: To keep peace, order, and safety"]
+        },
+        {
+          "q": "What is a 'nuclear family' typical size?",
+          "options": ["1 person", "2-6 people (parents and children)", "10+ people", "100 people"],
+          "answer": "2-6 people (parents and children)",
+          "explain": "A nuclear family typically has 2 parents and their children.",
+          "procedure": ["Smaller unit", "Parents + children", "Answer: 2-6 people (parents and children)"]
+        },
+        {
+          "q": "What is communal labour?",
+          "options": ["Sitting at home", "People in a community working together on shared projects", "A type of music", "A type of food"],
+          "answer": "People in a community working together on shared projects",
+          "explain": "Communal labour is when a community works together.",
+          "procedure": ["Working together", "Shared projects", "Answer: People in a community working together on shared projects"]
+        },
+        {
+          "q": "What is 'respect for elders'?",
+          "options": ["Ignoring old people", "Treating older people with honour and listening to their advice", "Only obeying parents", "Only obeying teachers"],
+          "answer": "Treating older people with honour and listening to their advice",
+          "explain": "Respect for elders means treating older people with honour.",
+          "procedure": ["Honour elders", "Listen to their advice", "Answer: Treating older people with honour and listening to their advice"]
+        }
+      ]
+    },
+    {
+      "id": "authority-obedience",
+      "name": "Authority & Obedience",
+      "icon": "👮",
+      "questions": [
+        {
+          "q": "What is authority?",
+          "options": ["The right to give orders and make decisions", "A type of food", "A type of dance", "A type of coin"],
+          "answer": "The right to give orders and make decisions",
+          "explain": "Authority is the right to give orders and make decisions.",
+          "procedure": ["Right to give orders", "Right to make decisions", "Answer: The right to give orders and make decisions"]
+        },
+        {
+          "q": "Why is obedience important?",
+          "options": ["It causes chaos", "It maintains order and safety", "It's not important", "It removes freedom"],
+          "answer": "It maintains order and safety",
+          "explain": "Obedience maintains order and safety in society.",
+          "procedure": ["Order", "Safety", "Answer: It maintains order and safety"]
+        },
+        {
+          "q": "Who has authority in the home?",
+          "options": ["The youngest child", "Parents and guardians", "Neighbours", "Strangers"],
+          "answer": "Parents and guardians",
+          "explain": "Parents and guardians have authority in the home.",
+          "procedure": ["Adults in the home", "Parents/guardians", "Answer: Parents and guardians"]
+        },
+        {
+          "q": "Who has authority in the school?",
+          "options": ["Students", "Teachers and headteacher", "The cleaner", "Other parents"],
+          "answer": "Teachers and headteacher",
+          "explain": "Teachers and the headteacher have authority in school.",
+          "procedure": ["Teachers", "Headteacher", "Answer: Teachers and headteacher"]
+        },
+        {
+          "q": "Who has authority in the community?",
+          "options": ["Children", "Chiefs, elders, and assembly members", "Foreigners", "Strangers"],
+          "answer": "Chiefs, elders, and assembly members",
+          "explain": "Chiefs, elders, and assembly members have authority in the community.",
+          "procedure": ["Chiefs", "Elders", "Assembly members", "Answer: Chiefs, elders, and assembly members"]
+        },
+        {
+          "q": "Who has authority in the country?",
+          "options": ["Only the President", "The government and law enforcement", "Only the military", "Only traditional rulers"],
+          "answer": "The government and law enforcement",
+          "explain": "The government (with police and courts) has national authority.",
+          "procedure": ["Government", "Police", "Courts", "Answer: The government and law enforcement"]
+        },
+        {
+          "q": "What are the police responsible for?",
+          "options": ["Teaching in schools", "Keeping law and order", "Farming", "Running businesses"],
+          "answer": "Keeping law and order",
+          "explain": "The police maintain law and order.",
+          "procedure": ["Law and order", "Protect people", "Answer: Keeping law and order"]
+        },
+        {
+          "q": "What does a traffic warden do?",
+          "options": ["Cooks food", "Controls traffic to keep people safe", "Teaches school", "Farms"],
+          "answer": "Controls traffic to keep people safe",
+          "explain": "Traffic wardens control traffic for safety.",
+          "procedure": ["Traffic control", "Safety", "Answer: Controls traffic to keep people safe"]
+        },
+        {
+          "q": "What is the role of the headteacher?",
+          "options": ["To teach students only", "To lead the school and ensure discipline", "To cook for students", "To sell books"],
+          "answer": "To lead the school and ensure discipline",
+          "explain": "The headteacher leads the school and ensures discipline.",
+          "procedure": ["Leads the school", "Ensures discipline", "Answer: To lead the school and ensure discipline"]
+        },
+        {
+          "q": "What does 'obeying the law' mean?",
+          "options": ["Doing only what you want", "Following the rules set by the government", "Ignoring rules", "Making your own rules"],
+          "answer": "Following the rules set by the government",
+          "explain": "Obeying the law means following the rules set by the government.",
+          "procedure": ["Follow government rules", "Answer: Following the rules set by the government"]
+        },
+        {
+          "q": "What are consequences of disobeying the law?",
+          "options": ["Rewards", "Punishment or fines", "Nothing", "Praise"],
+          "answer": "Punishment or fines",
+          "explain": "Disobeying the law brings punishment or fines.",
+          "procedure": ["Punishment", "Fines", "Answer: Punishment or fines"]
+        },
+        {
+          "q": "What should you do if a police officer gives you instructions?",
+          "options": ["Run away", "Obey respectfully", "Ignore them", "Argue"],
+          "answer": "Obey respectfully",
+          "explain": "You should obey police instructions respectfully.",
+          "procedure": ["Respect authority", "Follow instructions", "Answer: Obey respectfully"]
+        },
+        {
+          "q": "Why should children obey their parents?",
+          "options": ["Because parents are annoying", "Because parents guide and protect them", "Because children have no choice", "Only if they get money"],
+          "answer": "Because parents guide and protect them",
+          "explain": "Children obey parents because parents guide and protect them.",
+          "procedure": ["Guidance", "Protection", "Answer: Because parents guide and protect them"]
+        },
+        {
+          "q": "What is a traditional authority in Ghana?",
+          "options": ["The President", "Chiefs and elders", "Parliament", "The military"],
+          "answer": "Chiefs and elders",
+          "explain": "Chiefs and elders hold traditional authority.",
+          "procedure": ["Traditional leaders", "Answer: Chiefs and elders"]
+        },
+        {
+          "q": "What is a result of obedience?",
+          "options": ["Chaos", "Harmony and peace", "Conflict", "Confusion"],
+          "answer": "Harmony and peace",
+          "explain": "Obedience creates harmony and peace.",
+          "procedure": ["Harmony", "Peace", "Answer: Harmony and peace"]
+        },
+        {
+          "q": "What should you do if you see someone breaking the law?",
+          "options": ["Join them", "Report to the police or a trusted adult", "Ignore it", "Laugh"],
+          "answer": "Report to the police or a trusted adult",
+          "explain": "Report lawbreakers to the police or a trusted adult.",
+          "procedure": ["Do not join", "Report", "Answer: Report to the police or a trusted adult"]
+        },
+        {
+          "q": "What is the role of the military?",
+          "options": ["Teaching in schools", "Protecting the country from external threats", "Controlling traffic", "Running schools"],
+          "answer": "Protecting the country from external threats",
+          "explain": "The military protects the country from external threats.",
+          "procedure": ["National defence", "Answer: Protecting the country from external threats"]
+        },
+        {
+          "q": "Why do schools have rules?",
+          "options": ["To punish students", "To maintain order and effective learning", "To make students unhappy", "They don't need rules"],
+          "answer": "To maintain order and effective learning",
+          "explain": "School rules maintain order and allow effective learning.",
+          "procedure": ["Order", "Learning", "Answer: To maintain order and effective learning"]
+        },
+        {
+          "q": "What is 'respect for authority'?",
+          "options": ["Ignoring authority", "Treating leaders with honour and following their instructions", "Fearing authority", "Only obeying when watched"],
+          "answer": "Treating leaders with honour and following their instructions",
+          "explain": "Respect for authority means honouring leaders and following their instructions.",
+          "procedure": ["Honour leaders", "Follow instructions", "Answer: Treating leaders with honour and following their instructions"]
+        },
+        {
+          "q": "Who is the head of Ghana's military?",
+          "options": ["The Chief of Defence Staff", "The President", "The Inspector General of Police", "The Speaker"],
+          "answer": "The Chief of Defence Staff",
+          "explain": "The Chief of Defence Staff heads Ghana's military.",
+          "procedure": ["Highest military officer", "Answer: The Chief of Defence Staff"]
+        }
+      ]
+    },
+    {
+      "id": "economic-activities",
+      "name": "Economic Activities in Ghana",
+      "icon": "💰",
+      "questions": [
+        {
+          "q": "What are economic activities?",
+          "options": ["Activities that produce goods and services", "Activities that only cost money", "Only farming", "Only selling"],
+          "answer": "Activities that produce goods and services",
+          "explain": "Economic activities produce goods and services.",
+          "procedure": ["Goods", "Services", "Answer: Activities that produce goods and services"]
+        },
+        {
+          "q": "What is agriculture?",
+          "options": ["Farming", "Building", "Teaching", "Trading"],
+          "answer": "Farming",
+          "explain": "Agriculture is the practice of farming.",
+          "procedure": ["Growing crops", "Raising animals", "Answer: Farming"]
+        },
+        {
+          "q": "Which is Ghana's largest export crop?",
+          "options": ["Cocoa", "Rice", "Wheat", "Barley"],
+          "answer": "Cocoa",
+          "explain": "Cocoa is Ghana's largest export crop.",
+          "procedure": ["Ghana is world's 2nd-largest cocoa producer", "Answer: Cocoa"]
+        },
+        {
+          "q": "What is the main export mineral of Ghana?",
+          "options": ["Copper", "Gold", "Silver", "Iron"],
+          "answer": "Gold",
+          "explain": "Gold is Ghana's main mineral export.",
+          "procedure": ["Formerly called Gold Coast", "Answer: Gold"]
+        },
+        {
+          "q": "What is 'fishing' an example of?",
+          "options": ["Primary activity", "Service activity", "Manufacturing", "Trade"],
+          "answer": "Primary activity",
+          "explain": "Fishing is a primary activity (extracting directly from nature).",
+          "procedure": ["Extracts from nature", "Primary sector", "Answer: Primary activity"]
+        },
+        {
+          "q": "What is 'trading'?",
+          "options": ["Farming", "Buying and selling of goods", "Building", "Teaching"],
+          "answer": "Buying and selling of goods",
+          "explain": "Trading is the buying and selling of goods.",
+          "procedure": ["Buy and sell", "Commerce", "Answer: Buying and selling of goods"]
+        },
+        {
+          "q": "What is an 'entrepreneur'?",
+          "options": ["Someone who only works for others", "Someone who starts and runs a business", "A type of farmer", "A type of teacher"],
+          "answer": "Someone who starts and runs a business",
+          "explain": "An entrepreneur starts and runs a business.",
+          "procedure": ["Business starter", "Business owner", "Answer: Someone who starts and runs a business"]
+        },
+        {
+          "q": "Which of these is a service industry?",
+          "options": ["Farming", "Mining", "Banking", "Fishing"],
+          "answer": "Banking",
+          "explain": "Banking is a service industry (provides a service, not goods).",
+          "procedure": ["Provides services", "Answer: Banking"]
+        },
+        {
+          "q": "What is 'mining'?",
+          "options": ["Growing crops", "Extracting minerals from the ground", "Fishing", "Building"],
+          "answer": "Extracting minerals from the ground",
+          "explain": "Mining is extracting minerals from the earth.",
+          "procedure": ["Extract minerals", "Gold, bauxite, etc.", "Answer: Extracting minerals from the ground"]
+        },
+        {
+          "q": "Which of these is an example of a primary activity?",
+          "options": ["Teaching", "Farming", "Banking", "Doctor"],
+          "answer": "Farming",
+          "explain": "Farming is a primary activity — extracting directly from nature.",
+          "procedure": ["Primary sector", "Extracts from nature", "Answer: Farming"]
+        },
+        {
+          "q": "What is the market?",
+          "options": ["A place where only banks are", "A place where goods and services are bought and sold", "A school", "A hospital"],
+          "answer": "A place where goods and services are bought and sold",
+          "explain": "A market is where goods and services are bought and sold.",
+          "procedure": ["Trading place", "Buy and sell", "Answer: A place where goods and services are bought and sold"]
+        },
+        {
+          "q": "Which is Ghana's largest market?",
+          "options": ["Makola Market", "Kejetia Market", "Madina Market", "Agbogbloshie"],
+          "answer": "Kejetia Market",
+          "explain": "Kejetia Market in Kumasi is Ghana's largest market.",
+          "procedure": ["In Kumasi", "Largest in Ghana", "Answer: Kejetia Market"]
+        },
+        {
+          "q": "What is 'industry'?",
+          "options": ["Only farming", "The production of goods and services at scale", "Only trade", "Only banking"],
+          "answer": "The production of goods and services at scale",
+          "explain": "Industry is the production of goods and services at scale.",
+          "procedure": ["Large-scale production", "Answer: The production of goods and services at scale"]
+        },
+        {
+          "q": "What is the main source of electricity in Ghana?",
+          "options": ["Coal", "Hydroelectric power", "Nuclear", "Wind"],
+          "answer": "Hydroelectric power",
+          "explain": "Ghana's main source of electricity is hydroelectric power.",
+          "procedure": ["Akosombo Dam", "Hydroelectric", "Answer: Hydroelectric power"]
+        },
+        {
+          "q": "What is a 'cooperative'?",
+          "options": ["A type of bank", "A group of people working together for mutual benefit", "A type of government", "A type of family"],
+          "answer": "A group of people working together for mutual benefit",
+          "explain": "A cooperative is a group working together for mutual benefit.",
+          "procedure": ["Group effort", "Mutual benefit", "Answer: A group of people working together for mutual benefit"]
+        },
+        {
+          "q": "What is the value of tourism to Ghana?",
+          "options": ["No value", "Brings income from visitors and creates jobs", "Only bad for the economy", "Only for foreigners"],
+          "answer": "Brings income from visitors and creates jobs",
+          "explain": "Tourism brings foreign income and creates jobs.",
+          "procedure": ["Income", "Jobs", "Answer: Brings income from visitors and creates jobs"]
+        },
+        {
+          "q": "Which is a tourist attraction in Ghana?",
+          "image": "assets/social/cape-coast-castle.png",
+          "options": ["Cape Coast Castle", "The Sahara Desert", "The Nile River", "The Pyramids"],
+          "answer": "Cape Coast Castle",
+          "explain": "Cape Coast Castle is a famous Ghanaian tourist attraction.",
+          "procedure": ["Historical site", "Central Region", "Answer: Cape Coast Castle"]
+        },
+        {
+          "q": "What is a 'tax'?",
+          "options": ["Gift from government", "Money paid to the government for public services", "A type of food", "A type of coin"],
+          "answer": "Money paid to the government for public services",
+          "explain": "A tax is money paid to the government to fund public services.",
+          "procedure": ["Government revenue", "Funds public services", "Answer: Money paid to the government for public services"]
+        },
+        {
+          "q": "Why is trade important?",
+          "options": ["Only for the rich", "It allows goods and services to be exchanged", "It has no purpose", "It only hurts the economy"],
+          "answer": "It allows goods and services to be exchanged",
+          "explain": "Trade allows goods and services to be exchanged.",
+          "procedure": ["Exchange of goods/services", "Answer: It allows goods and services to be exchanged"]
+        },
+        {
+          "q": "What is 'unemployment'?",
+          "options": ["Having a job", "Being without a job when you want one", "Going to school", "Being rich"],
+          "answer": "Being without a job when you want one",
+          "explain": "Unemployment is being without a job when you want one.",
+          "procedure": ["No job", "Wanting one", "Answer: Being without a job when you want one"]
+        }
+      ]
+    },
+    {
+      "id": "natural-resources",
+      "name": "Natural Resources of Ghana",
+      "icon": "⛏️",
+      "questions": [
+        {
+          "q": "What are natural resources?",
+          "options": ["Man-made goods", "Things found in nature that are useful to humans", "Only gold", "Only oil"],
+          "answer": "Things found in nature that are useful to humans",
+          "explain": "Natural resources are things from nature useful to humans.",
+          "procedure": ["Found in nature", "Useful to humans", "Answer: Things found in nature that are useful to humans"]
+        },
+        {
+          "q": "Which of these is a natural resource in Ghana?",
+          "options": ["Gold", "Plastic", "Cars", "Houses"],
+          "answer": "Gold",
+          "explain": "Gold is a natural resource found in Ghana.",
+          "procedure": ["Found in nature", "Answer: Gold"]
+        },
+        {
+          "q": "What minerals are found in Ghana?",
+          "options": ["Only gold", "Gold, bauxite, manganese, diamonds", "Only oil", "Only salt"],
+          "answer": "Gold, bauxite, manganese, diamonds",
+          "explain": "Ghana has gold, bauxite, manganese, and diamonds.",
+          "procedure": ["Gold", "Bauxite", "Manganese", "Diamonds", "Answer: Gold, bauxite, manganese, diamonds"]
+        },
+        {
+          "q": "Where is oil produced in Ghana?",
+          "options": ["In the north", "Along the coast (offshore)", "Inland only", "Only in Accra"],
+          "answer": "Along the coast (offshore)",
+          "explain": "Oil is produced offshore along Ghana's coast.",
+          "procedure": ["Offshore oil fields", "Jubilee Field", "Answer: Along the coast (offshore)"]
+        },
+        {
+          "q": "What is the Jubilee Field?",
+          "options": ["A festival venue", "Ghana's major oil field", "A school", "A gold mine"],
+          "answer": "Ghana's major oil field",
+          "explain": "The Jubilee Field is Ghana's major oil field.",
+          "procedure": ["Offshore oil field", "Discovered 2007", "Answer: Ghana's major oil field"]
+        },
+        {
+          "q": "What are forests used for?",
+          "options": ["Only for beauty", "Timber, medicinal plants, habitats, and oxygen", "Only for timber", "Only for animals"],
+          "answer": "Timber, medicinal plants, habitats, and oxygen",
+          "explain": "Forests provide timber, medicines, habitats, and oxygen.",
+          "procedure": ["Timber", "Medicines", "Habitats", "Oxygen", "Answer: Timber, medicinal plants, habitats, and oxygen"]
+        },
+        {
+          "q": "Why are rivers important natural resources?",
+          "options": ["Only for drinking", "For water, fishing, farming, and electricity", "Only for beauty", "They are not important"],
+          "answer": "For water, fishing, farming, and electricity",
+          "explain": "Rivers provide water, fish, irrigation, and hydroelectric power.",
+          "procedure": ["Water", "Fishing", "Irrigation", "Hydroelectricity", "Answer: For water, fishing, farming, and electricity"]
+        },
+        {
+          "q": "What is 'deforestation'?",
+          "options": ["Planting trees", "Cutting down forests", "Protecting trees", "Watering trees"],
+          "answer": "Cutting down forests",
+          "explain": "Deforestation is cutting down forests.",
+          "procedure": ["Cutting forests", "Answer: Cutting down forests"]
+        },
+        {
+          "q": "Why is deforestation a problem?",
+          "options": ["It has no effect", "It destroys habitats and causes soil erosion", "It helps the environment", "It creates more trees"],
+          "answer": "It destroys habitats and causes soil erosion",
+          "explain": "Deforestation destroys habitats and causes erosion.",
+          "procedure": ["Habitat loss", "Soil erosion", "Answer: It destroys habitats and causes soil erosion"]
+        },
+        {
+          "q": "What is 'conservation'?",
+          "options": ["Wasting resources", "Protecting and using resources wisely", "Destroying nature", "Buying resources"],
+          "answer": "Protecting and using resources wisely",
+          "explain": "Conservation is protecting and using resources wisely.",
+          "procedure": ["Protect resources", "Use wisely", "Answer: Protecting and using resources wisely"]
+        },
+        {
+          "q": "Which of these is a renewable natural resource?",
+          "options": ["Gold", "Oil", "Sunlight", "Diamond"],
+          "answer": "Sunlight",
+          "explain": "Sunlight is renewable — it never runs out.",
+          "procedure": ["Sunlight is renewable", "Gold, oil, diamond are non-renewable", "Answer: Sunlight"]
+        },
+        {
+          "q": "What are 'non-renewable' resources?",
+          "options": ["Resources that always exist", "Resources that will run out one day", "Resources made by humans", "Resources from space"],
+          "answer": "Resources that will run out one day",
+          "explain": "Non-renewable resources will eventually run out (like oil, gold).",
+          "procedure": ["Limited", "Will run out", "Answer: Resources that will run out one day"]
+        },
+        {
+          "q": "What is a 'renewable' resource?",
+          "options": ["One that runs out quickly", "One that can be replaced naturally", "One that doesn't exist", "One made in a factory"],
+          "answer": "One that can be replaced naturally",
+          "explain": "Renewable resources can be replaced naturally.",
+          "procedure": ["Sunlight, wind, water", "Can be replaced", "Answer: One that can be replaced naturally"]
+        },
+        {
+          "q": "What does the Akosombo Dam use to generate electricity?",
+          "image": "assets/social/akosombo-dam.png",
+          "options": ["Coal", "Water", "Wind", "Sunlight"],
+          "answer": "Water",
+          "explain": "The Akosombo Dam uses water from the Volta River.",
+          "procedure": ["Hydroelectric power", "Water-powered", "Answer: Water"]
+        },
+        {
+          "q": "What is 'soil erosion'?",
+          "options": ["Adding soil to land", "The wearing away of top soil by wind and water", "Watering plants", "Planting crops"],
+          "answer": "The wearing away of top soil by wind and water",
+          "explain": "Soil erosion is the wearing away of top soil.",
+          "procedure": ["Wind and water", "Wears away soil", "Answer: The wearing away of top soil by wind and water"]
+        },
+        {
+          "q": "What is a 'wildlife reserve' in Ghana?",
+          "options": ["A place for hunting", "A protected area for wild animals", "A school", "A market"],
+          "answer": "A protected area for wild animals",
+          "explain": "A wildlife reserve protects wild animals.",
+          "procedure": ["Protected area", "Wild animals", "Answer: A protected area for wild animals"]
+        },
+        {
+          "q": "Which of these is a wildlife reserve in Ghana?",
+          "options": ["Mole National Park", "Yellowstone", "Serengeti", "Kruger"],
+          "answer": "Mole National Park",
+          "explain": "Mole National Park is Ghana's largest wildlife reserve.",
+          "procedure": ["In the Northern Region", "Largest in Ghana", "Answer: Mole National Park"]
+        },
+        {
+          "q": "Why is it important to protect natural resources?",
+          "options": ["They are unlimited", "They can be used up and future generations need them", "They are not useful", "It has no benefit"],
+          "answer": "They can be used up and future generations need them",
+          "explain": "Natural resources can be used up, so we protect them for the future.",
+          "procedure": ["Limited resources", "Future generations", "Answer: They can be used up and future generations need them"]
+        },
+        {
+          "q": "What is 'bauxite' used for?",
+          "options": ["Making aluminum", "Making glass", "Making paper", "Making cloth"],
+          "answer": "Making aluminum",
+          "explain": "Bauxite is used to make aluminum.",
+          "procedure": ["Aluminum production", "Answer: Making aluminum"]
+        },
+        {
+          "q": "Why is clean water a precious resource?",
+          "options": ["It is unlimited", "Only a small part of Earth's water is fresh and usable", "It is not useful", "Nobody needs it"],
+          "answer": "Only a small part of Earth's water is fresh and usable",
+          "explain": "Clean water is precious because only a small amount is fresh and usable.",
+          "procedure": ["Fresh water is limited", "Needed by everyone", "Answer: Only a small part of Earth's water is fresh and usable"]
+        }
+      ]
+    },
+    {
+      "id": "ghana-neighbours",
+      "name": "Ghana & Her Neighbours",
+      "icon": "🌍",
+      "questions": [
+        {
+          "q": "Which countries border Ghana?",
+          "image": "assets/social/ghana-map.png",
+          "options": ["Côte d'Ivoire, Burkina Faso, Togo", "Nigeria, Benin, Cameroon", "Senegal, Mali, Niger", "Kenya, Tanzania, Uganda"],
+          "answer": "Côte d'Ivoire, Burkina Faso, Togo",
+          "explain": "Ghana is bordered by Côte d'Ivoire, Burkina Faso, and Togo.",
+          "procedure": ["West: Côte d'Ivoire", "North: Burkina Faso", "East: Togo", "Answer: Côte d'Ivoire, Burkina Faso, Togo"]
+        },
+        {
+          "q": "Which country is to the west of Ghana?",
+          "options": ["Togo", "Côte d'Ivoire", "Burkina Faso", "Nigeria"],
+          "answer": "Côte d'Ivoire",
+          "explain": "Côte d'Ivoire is to the west of Ghana.",
+          "procedure": ["West border", "Answer: Côte d'Ivoire"]
+        },
+        {
+          "q": "Which country is to the north of Ghana?",
+          "options": ["Côte d'Ivoire", "Togo", "Burkina Faso", "Benin"],
+          "answer": "Burkina Faso",
+          "explain": "Burkina Faso is to the north of Ghana.",
+          "procedure": ["North border", "Answer: Burkina Faso"]
+        },
+        {
+          "q": "Which country is to the east of Ghana?",
+          "options": ["Côte d'Ivoire", "Burkina Faso", "Togo", "Nigeria"],
+          "answer": "Togo",
+          "explain": "Togo is to the east of Ghana.",
+          "procedure": ["East border", "Answer: Togo"]
+        },
+        {
+          "q": "What is ECOWAS?",
+          "options": ["A soccer tournament", "The Economic Community of West African States", "A type of government", "A type of food"],
+          "answer": "The Economic Community of West African States",
+          "explain": "ECOWAS is the Economic Community of West African States.",
+          "procedure": ["West African regional group", "Economic and political cooperation", "Answer: The Economic Community of West African States"]
+        },
+        {
+          "q": "How many countries are in ECOWAS?",
+          "options": ["10", "15", "20", "25"],
+          "answer": "15",
+          "explain": "ECOWAS has 15 member countries.",
+          "procedure": ["15 member states", "Founded 1975", "Answer: 15"]
+        },
+        {
+          "q": "What is the capital of Togo?",
+          "options": ["Accra", "Lomé", "Abidjan", "Ouagadougou"],
+          "answer": "Lomé",
+          "explain": "Lomé is the capital of Togo.",
+          "procedure": ["Togo's capital", "Coastal city", "Answer: Lomé"]
+        },
+        {
+          "q": "What is the capital of Côte d'Ivoire?",
+          "options": ["Yamoussoukro", "Abidjan", "Lomé", "Ouagadougou"],
+          "answer": "Yamoussoukro",
+          "explain": "Yamoussoukro is the capital of Côte d'Ivoire.",
+          "procedure": ["Political capital is Yamoussoukro", "Largest city is Abidjan", "Answer: Yamoussoukro"]
+        },
+        {
+          "q": "What is the capital of Burkina Faso?",
+          "options": ["Ouagadougou", "Bobo-Dioulasso", "Lomé", "Abidjan"],
+          "answer": "Ouagadougou",
+          "explain": "Ouagadougou is the capital of Burkina Faso.",
+          "procedure": ["Burkina Faso capital", "Answer: Ouagadougou"]
+        },
+        {
+          "q": "Why are good relations between neighbouring countries important?",
+          "options": ["Only for trade", "For trade, peace, and cooperation", "They are not important", "To make war"],
+          "answer": "For trade, peace, and cooperation",
+          "explain": "Good relations help with trade, peace, and cooperation.",
+          "procedure": ["Trade", "Peace", "Cooperation", "Answer: For trade, peace, and cooperation"]
+        },
+        {
+          "q": "What is the African Union?",
+          "options": ["A sports team", "The continental organization of African countries", "A type of music", "A type of government"],
+          "answer": "The continental organization of African countries",
+          "explain": "The African Union is the organization of all African countries.",
+          "procedure": ["Continental organization", "All African nations", "Answer: The continental organization of African countries"]
+        },
+        {
+          "q": "Where is the African Union headquarters?",
+          "options": ["Accra", "Lagos", "Addis Ababa", "Cairo"],
+          "answer": "Addis Ababa",
+          "explain": "The African Union headquarters is in Addis Ababa, Ethiopia.",
+          "procedure": ["Addis Ababa, Ethiopia", "Answer: Addis Ababa"]
+        },
+        {
+          "q": "Which of these countries is NOT bordered by Ghana?",
+          "options": ["Côte d'Ivoire", "Togo", "Nigeria", "Burkina Faso"],
+          "answer": "Nigeria",
+          "explain": "Nigeria does not share a border with Ghana.",
+          "procedure": ["Ghana's borders: CIV, Burkina Faso, Togo", "Nigeria is not a border", "Answer: Nigeria"]
+        },
+        {
+          "q": "What is the primary language of Côte d'Ivoire?",
+          "options": ["English", "French", "Portuguese", "Spanish"],
+          "answer": "French",
+          "explain": "French is the official language of Côte d'Ivoire.",
+          "procedure": ["Former French colony", "French is official", "Answer: French"]
+        },
+        {
+          "q": "What is the primary language of Togo?",
+          "options": ["English", "French", "Portuguese", "Spanish"],
+          "answer": "French",
+          "explain": "French is the official language of Togo.",
+          "procedure": ["Former French colony", "Answer: French"]
+        },
+        {
+          "q": "What is the primary language of Burkina Faso?",
+          "options": ["English", "French", "Portuguese", "Spanish"],
+          "answer": "French",
+          "explain": "French is the official language of Burkina Faso.",
+          "procedure": ["Former French colony", "Answer: French"]
+        },
+        {
+          "q": "What is the currency of Côte d'Ivoire?",
+          "options": ["Cedi", "CFA franc", "Naira", "Dollar"],
+          "answer": "CFA franc",
+          "explain": "Côte d'Ivoire uses the CFA franc.",
+          "procedure": ["West African CFA franc", "Answer: CFA franc"]
+        },
+        {
+          "q": "Why do African countries cooperate?",
+          "options": ["Only for football", "For trade, peace, security, and development", "They don't", "To make war"],
+          "answer": "For trade, peace, security, and development",
+          "explain": "African countries cooperate for trade, peace, security, and development.",
+          "procedure": ["Trade", "Peace", "Security", "Development", "Answer: For trade, peace, security, and development"]
+        },
+        {
+          "q": "Which sea lies on the coast of Ghana, Togo, and Côte d'Ivoire?",
+          "options": ["Indian Ocean", "Atlantic Ocean", "Mediterranean Sea", "Red Sea"],
+          "answer": "Atlantic Ocean",
+          "explain": "The Atlantic Ocean lies on the coast of Ghana, Togo, and Côte d'Ivoire.",
+          "procedure": ["Atlantic Ocean", "All three are on the coast", "Answer: Atlantic Ocean"]
+        },
+        {
+          "q": "What is 'pan-Africanism'?",
+          "options": ["Hatred of Africa", "The belief that all African nations should work together", "A type of food", "A type of music"],
+          "answer": "The belief that all African nations should work together",
+          "explain": "Pan-Africanism is the belief in African unity and cooperation.",
+          "procedure": ["African unity", "Cooperation", "Answer: The belief that all African nations should work together"]
+        }
+      ]
+    },
+    {
+      "id": "citizenship-rights",
+      "name": "Citizenship & Human Rights",
+      "icon": "⚖️",
+      "questions": [
+        {
+          "q": "What is a citizen?",
+          "options": ["A person who lives in a place", "A legal member of a country", "A foreigner", "A visitor"],
+          "answer": "A legal member of a country",
+          "explain": "A citizen is a legal member of a country.",
+          "procedure": ["Legal membership", "Certain rights and responsibilities", "Answer: A legal member of a country"]
+        },
+        {
+          "q": "How can a person become a Ghanaian citizen?",
+          "options": ["Only by birth", "By birth, marriage, naturalization, or registration", "Only by marriage", "Only by buying citizenship"],
+          "answer": "By birth, marriage, naturalization, or registration",
+          "explain": "There are several ways to become Ghanaian.",
+          "procedure": ["Birth", "Marriage", "Naturalization", "Registration", "Answer: By birth, marriage, naturalization, or registration"]
+        },
+        {
+          "q": "What are human rights?",
+          "options": ["Rights only for rich people", "Basic rights belonging to every person", "Rights only for adults", "Rights only for men"],
+          "answer": "Basic rights belonging to every person",
+          "explain": "Human rights belong to every person regardless of background.",
+          "procedure": ["Belong to all humans", "Answer: Basic rights belonging to every person"]
+        },
+        {
+          "q": "What is the right to life?",
+          "options": ["The right to harm others", "The right to live in safety", "The right to die", "The right to violence"],
+          "answer": "The right to live in safety",
+          "explain": "The right to life means everyone has the right to live safely.",
+          "procedure": ["Every human has this right", "Safety of life", "Answer: The right to live in safety"]
+        },
+        {
+          "q": "What is the right to education?",
+          "options": ["Only for the rich", "Every child has a right to free education", "Only for boys", "Only for adults"],
+          "answer": "Every child has a right to free education",
+          "explain": "Every child has the right to free basic education.",
+          "procedure": ["Universal right", "Free basic education in Ghana", "Answer: Every child has a right to free education"]
+        },
+        {
+          "q": "What is the right to freedom of speech?",
+          "options": ["Saying anything without consequences", "The right to express opinions", "The right to hurt others' feelings", "Saying only good things"],
+          "answer": "The right to express opinions",
+          "explain": "Freedom of speech is the right to express opinions.",
+          "procedure": ["Express opinions", "Cannot harm others", "Answer: The right to express opinions"]
+        },
+        {
+          "q": "What is a right?",
+          "options": ["Something you must do", "Something you are entitled to", "A type of food", "A type of game"],
+          "answer": "Something you are entitled to",
+          "explain": "A right is something you are entitled to.",
+          "procedure": ["Entitlement", "Not obligation", "Answer: Something you are entitled to"]
+        },
+        {
+          "q": "What is a responsibility?",
+          "options": ["Something you are entitled to", "Something you must do", "A type of food", "A type of game"],
+          "answer": "Something you must do",
+          "explain": "A responsibility is something you must do.",
+          "procedure": ["Duty", "Obligation", "Answer: Something you must do"]
+        },
+        {
+          "q": "Which of these is a responsibility of a citizen?",
+          "options": ["Only voting", "Paying taxes and obeying the law", "Only owning property", "Only going to school"],
+          "answer": "Paying taxes and obeying the law",
+          "explain": "Paying taxes and obeying the law are citizen responsibilities.",
+          "procedure": ["Pay taxes", "Obey the law", "Vote", "Answer: Paying taxes and obeying the law"]
+        },
+        {
+          "q": "What is the Convention on the Rights of the Child?",
+          "options": ["A type of food", "An international agreement protecting children's rights", "A type of game", "A type of law"],
+          "answer": "An international agreement protecting children's rights",
+          "explain": "The Convention on the Rights of the Child protects children.",
+          "procedure": ["International agreement", "Protects children", "Answer: An international agreement protecting children's rights"]
+        },
+        {
+          "q": "Which of these is a right of the child?",
+          "options": ["The right to work as an adult", "The right to education and protection", "The right to hurt others", "The right to be alone always"],
+          "answer": "The right to education and protection",
+          "explain": "Children have the right to education and protection.",
+          "procedure": ["Education", "Protection", "Answer: The right to education and protection"]
+        },
+        {
+          "q": "What is child labour?",
+          "options": ["Helping parents at home", "Children working in ways that harm their health or education", "Going to school", "Playing football"],
+          "answer": "Children working in ways that harm their health or education",
+          "explain": "Child labour is work that harms children's health or education.",
+          "procedure": ["Harms children", "Child's rights violation", "Answer: Children working in ways that harm their health or education"]
+        },
+        {
+          "q": "What is the right to freedom from discrimination?",
+          "options": ["Treating people unequally", "Being treated equally regardless of background", "Only some people have rights", "Being treated differently by gender"],
+          "answer": "Being treated equally regardless of background",
+          "explain": "Everyone has the right to be treated equally.",
+          "procedure": ["Equality", "No discrimination", "Answer: Being treated equally regardless of background"]
+        },
+        {
+          "q": "What is the right to freedom of religion?",
+          "options": ["Only one religion is allowed", "The right to choose your religion", "The right to force others", "No religion allowed"],
+          "answer": "The right to choose your religion",
+          "explain": "Everyone has the right to choose and practice their religion.",
+          "procedure": ["Freedom to choose", "Freedom to practice", "Answer: The right to choose your religion"]
+        },
+        {
+          "q": "Who protects human rights in Ghana?",
+          "options": ["Only the police", "The Commission on Human Rights and Administrative Justice (CHRAJ)", "Only the President", "Only the courts"],
+          "answer": "The Commission on Human Rights and Administrative Justice (CHRAJ)",
+          "explain": "CHRAJ protects human rights in Ghana.",
+          "procedure": ["CHRAJ's role", "Answer: The Commission on Human Rights and Administrative Justice (CHRAJ)"]
+        },
+        {
+          "q": "What is the right to property?",
+          "options": ["Taking others' things", "Owning property legally", "The right to destroy property", "The right to steal"],
+          "answer": "Owning property legally",
+          "explain": "The right to property means you can legally own things.",
+          "procedure": ["Own things legally", "Answer: Owning property legally"]
+        },
+        {
+          "q": "What is the right to freedom of movement?",
+          "options": ["Being locked in one place", "The right to move around your country and travel", "The right to break the law", "The right to stay home"],
+          "answer": "The right to move around your country and travel",
+          "explain": "Freedom of movement means you can travel around.",
+          "procedure": ["Move freely", "Travel", "Answer: The right to move around your country and travel"]
+        },
+        {
+          "q": "What is the Universal Declaration of Human Rights?",
+          "options": ["A book about cooking", "An international document listing basic human rights", "A type of sports event", "A type of government"],
+          "answer": "An international document listing basic human rights",
+          "explain": "The Universal Declaration of Human Rights lists basic human rights.",
+          "procedure": ["Adopted 1948", "Lists human rights", "Answer: An international document listing basic human rights"]
+        },
+        {
+          "q": "What is the right to privacy?",
+          "options": ["Being watched always", "Having private space and information protected", "Only for celebrities", "Only for adults"],
+          "answer": "Having private space and information protected",
+          "explain": "The right to privacy means your personal space and information are protected.",
+          "procedure": ["Personal space", "Protected information", "Answer: Having private space and information protected"]
+        },
+        {
+          "q": "What is a 'duty'?",
+          "options": ["Something you are entitled to", "Something you must do", "A type of food", "A type of gift"],
+          "answer": "Something you must do",
+          "explain": "A duty is something you must do.",
+          "procedure": ["Obligation", "Answer: Something you must do"]
+        }
+      ]
+    }
+  ]
+}
