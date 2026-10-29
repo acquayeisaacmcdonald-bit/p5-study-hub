@@ -4,7 +4,7 @@
 // Skip caching for data/*.json so the app always gets fresh content.
 // ============================================================
 
-const CACHE_NAME = "p5-study-hub-v6";
+const CACHE_NAME = "p5-study-hub-v7";
 
 // Only static shell assets — no data/*.json
 const SHELL_ASSETS = [
