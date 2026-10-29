@@ -27,12 +27,7 @@
           "options": ["Sepal", "Petal", "Stamen", "Pistil"],
           "answer": "Petal",
           "explain": "Petals are the bright, coloured parts of a flower.",
-          "procedure": [
-            "Look at any flower — the colourful leaves you see are petals",
-            "Petals are usually bright and attractive",
-            "Their colour and scent attract insects and birds",
-            "Answer: Petal"
-          ]
+          "procedure": ["Look at any flower — the colourful leaves you see are petals", "Petals are usually bright and attractive", "Their colour and scent attract insects and birds", "Answer: Petal"]
         },
         {
           "q": "Which part of a flower produces pollen?",
@@ -40,12 +35,7 @@
           "options": ["Sepal", "Petal", "Stamen", "Pistil"],
           "answer": "Stamen",
           "explain": "The stamen is the male part of the flower and produces pollen.",
-          "procedure": [
-            "The stamen is the male part of the flower",
-            "It has two parts: the anther and the filament",
-            "The anther at the top produces the yellow pollen grains",
-            "Answer: Stamen"
-          ]
+          "procedure": ["The stamen is the male part of the flower", "It has two parts: the anther and the filament", "The anther at the top produces the yellow pollen grains", "Answer: Stamen"]
         },
         {
           "q": "Which part of the flower receives pollen during pollination?",
@@ -53,12 +43,7 @@
           "options": ["Anther", "Stigma", "Sepal", "Petal"],
           "answer": "Stigma",
           "explain": "The stigma is the top of the pistil and receives pollen grains.",
-          "procedure": [
-            "The pistil is the female part of the flower",
-            "Its top is called the stigma",
-            "The stigma is sticky, so pollen grains stick to it",
-            "Answer: Stigma"
-          ]
+          "procedure": ["The pistil is the female part of the flower", "Its top is called the stigma", "The stigma is sticky, so pollen grains stick to it", "Answer: Stigma"]
         },
         {
           "q": "What is the male part of a flower called?",
@@ -66,12 +51,7 @@
           "options": ["Pistil", "Stamen", "Petal", "Sepal"],
           "answer": "Stamen",
           "explain": "The stamen is the male part of a flower.",
-          "procedure": [
-            "Flowers have both male and female parts",
-            "The male part is called the stamen",
-            "It produces pollen, which contains the male sex cells",
-            "Answer: Stamen"
-          ]
+          "procedure": ["Flowers have both male and female parts", "The male part is called the stamen", "It produces pollen, which contains the male sex cells", "Answer: Stamen"]
         },
         {
           "q": "What is the female part of a flower called?",
@@ -79,12 +59,7 @@
           "options": ["Stamen", "Pistil", "Petal", "Sepal"],
           "answer": "Pistil",
           "explain": "The pistil is the female part of a flower.",
-          "procedure": [
-            "The female part of a flower is the pistil",
-            "It has three parts: stigma, style, and ovary",
-            "The ovary contains the egg cells (ovules)",
-            "Answer: Pistil"
-          ]
+          "procedure": ["The female part of a flower is the pistil", "It has three parts: stigma, style, and ovary", "The ovary contains the egg cells (ovules)", "Answer: Pistil"]
         },
         {
           "q": "Which part of the pistil contains the egg cells?",
@@ -92,63 +67,35 @@
           "options": ["Stigma", "Style", "Ovary", "Anther"],
           "answer": "Ovary",
           "explain": "The ovary is at the base of the pistil and contains the egg cells.",
-          "procedure": [
-            "The pistil has three parts: stigma (top), style (middle), and ovary (bottom)",
-            "The ovary is the swollen base of the pistil",
-            "Inside the ovary are the ovules (egg cells)",
-            "After fertilization, the ovary becomes the fruit",
-            "Answer: Ovary"
-          ]
+          "procedure": ["The pistil has three parts: stigma (top), style (middle), and ovary (bottom)", "The ovary is the swollen base of the pistil", "Inside the ovary are the ovules (egg cells)", "After fertilization, the ovary becomes the fruit", "Answer: Ovary"]
         },
         {
           "q": "What is the transfer of pollen from the anther to the stigma called?",
           "options": ["Fertilization", "Pollination", "Germination", "Photosynthesis"],
           "answer": "Pollination",
           "explain": "Pollination is the transfer of pollen to the stigma.",
-          "procedure": [
-            "Pollination = movement of pollen from anther to stigma",
-            "It can happen within the same flower or between flowers",
-            "Wind, insects, birds, and water can carry pollen",
-            "Answer: Pollination"
-          ]
+          "procedure": ["Pollination = movement of pollen from anther to stigma", "It can happen within the same flower or between flowers", "Wind, insects, birds, and water can carry pollen", "Answer: Pollination"]
         },
         {
           "q": "After pollination, what happens to the pollen grain on the stigma?",
           "options": ["It dries up", "It grows a tube down to the ovary", "It turns into a seed", "It falls off"],
           "answer": "It grows a tube down to the ovary",
           "explain": "The pollen grain grows a pollen tube down through the style to reach the ovary.",
-          "procedure": [
-            "A pollen grain lands on the sticky stigma",
-            "It grows a long tube called the pollen tube",
-            "The tube grows down through the style to the ovary",
-            "The male sex cell travels down the tube to join the egg cell",
-            "Answer: It grows a tube down to the ovary"
-          ]
+          "procedure": ["A pollen grain lands on the sticky stigma", "It grows a long tube called the pollen tube", "The tube grows down through the style to the ovary", "The male sex cell travels down the tube to join the egg cell", "Answer: It grows a tube down to the ovary"]
         },
         {
           "q": "What is formed when the male and female sex cells join?",
           "options": ["A petal", "A seed", "A sepal", "A stamen"],
           "answer": "A seed",
           "explain": "The joining of male and female cells forms a seed.",
-          "procedure": [
-            "Fertilization = when male and female cells join",
-            "The fertilized egg cell develops into a seed",
-            "The ovary around it becomes the fruit",
-            "Answer: A seed"
-          ]
+          "procedure": ["Fertilization = when male and female cells join", "The fertilized egg cell develops into a seed", "The ovary around it becomes the fruit", "Answer: A seed"]
         },
         {
           "q": "Which part of the flower becomes the fruit after fertilization?",
           "options": ["The sepal", "The petal", "The ovary", "The stigma"],
           "answer": "The ovary",
           "explain": "After fertilization, the ovary grows into the fruit.",
-          "procedure": [
-            "Before fertilization: the ovary holds the ovules (egg cells)",
-            "After fertilization: the ovules become seeds",
-            "The ovary itself grows and becomes the fruit",
-            "This is why every fruit contains seeds",
-            "Answer: The ovary"
-          ]
+          "procedure": ["Before fertilization: the ovary holds the ovules (egg cells)", "After fertilization: the ovules become seeds", "The ovary itself grows and becomes the fruit", "This is why every fruit contains seeds", "Answer: The ovary"]
         },
         {
           "q": "Which of these is NOT a part of the stamen?",
@@ -156,12 +103,7 @@
           "options": ["Anther", "Filament", "Stigma", "Both A and B"],
           "answer": "Stigma",
           "explain": "The stigma is part of the pistil, not the stamen.",
-          "procedure": [
-            "Stamen = anther + filament (male parts)",
-            "Pistil = stigma + style + ovary (female parts)",
-            "The stigma belongs to the pistil, not the stamen",
-            "Answer: Stigma"
-          ]
+          "procedure": ["Stamen = anther + filament (male parts)", "Pistil = stigma + style + ovary (female parts)", "The stigma belongs to the pistil, not the stamen", "Answer: Stigma"]
         },
         {
           "q": "What is the stalk that supports the anther called?",
@@ -169,12 +111,7 @@
           "options": ["Style", "Filament", "Stigma", "Sepal"],
           "answer": "Filament",
           "explain": "The filament is the thin stalk that holds up the anther.",
-          "procedure": [
-            "The stamen has two parts: anther and filament",
-            "The anther is at the top — it holds pollen",
-            "The filament is the thin stalk that supports the anther",
-            "Answer: Filament"
-          ]
+          "procedure": ["The stamen has two parts: anther and filament", "The anther is at the top — it holds pollen", "The filament is the thin stalk that supports the anther", "Answer: Filament"]
         },
         {
           "q": "What is the stalk that supports the stigma called?",
@@ -182,39 +119,21 @@
           "options": ["Filament", "Style", "Sepal", "Anther"],
           "answer": "Style",
           "explain": "The style is the tube that connects the stigma to the ovary.",
-          "procedure": [
-            "The pistil has three parts: stigma, style, ovary",
-            "The stigma is at the top",
-            "The style is the middle tube that connects stigma to ovary",
-            "Answer: Style"
-          ]
+          "procedure": ["The pistil has three parts: stigma, style, ovary", "The stigma is at the top", "The style is the middle tube that connects stigma to ovary", "Answer: Style"]
         },
         {
           "q": "Which of the following is NOT a way pollen can be transferred?",
           "options": ["Wind", "Insects", "Birds", "Electricity"],
           "answer": "Electricity",
           "explain": "Pollen is transferred by wind, insects, birds, or water — not electricity.",
-          "procedure": [
-            "Pollination happens through natural agents",
-            "Wind carries light pollen grains",
-            "Insects and birds carry pollen as they visit flowers",
-            "Water can carry pollen in some water plants",
-            "Electricity is not a pollinating agent",
-            "Answer: Electricity"
-          ]
+          "procedure": ["Pollination happens through natural agents", "Wind carries light pollen grains", "Insects and birds carry pollen as they visit flowers", "Water can carry pollen in some water plants", "Electricity is not a pollinating agent", "Answer: Electricity"]
         },
         {
           "q": "Why are petals usually brightly coloured?",
           "options": ["To make the flower look nice for humans", "To attract insects and birds for pollination", "To protect the flower from rain", "To help the flower grow taller"],
           "answer": "To attract insects and birds for pollination",
           "explain": "Bright petals attract pollinators, which help the flower reproduce.",
-          "procedure": [
-            "Many flowers need insects or birds to carry pollen",
-            "Bright colours and pleasant scents attract these pollinators",
-            "The pollinators come for nectar, but leave with pollen on their bodies",
-            "They carry the pollen to the next flower",
-            "Answer: To attract insects and birds for pollination"
-          ]
+          "procedure": ["Many flowers need insects or birds to carry pollen", "Bright colours and pleasant scents attract these pollinators", "The pollinators come for nectar, but leave with pollen on their bodies", "They carry the pollen to the next flower", "Answer: To attract insects and birds for pollination"]
         },
         {
           "q": "Which part of the flower is usually green and found at the base?",
@@ -222,57 +141,28 @@
           "options": ["Petal", "Sepal", "Stamen", "Stigma"],
           "answer": "Sepal",
           "explain": "The sepal is the green, leaf-like part at the base of the flower.",
-          "procedure": [
-            "Look at a flower from the outside",
-            "The green, leaf-like parts at the bottom are sepals",
-            "They protect the flower bud before it opens",
-            "Answer: Sepal"
-          ]
+          "procedure": ["Look at a flower from the outside", "The green, leaf-like parts at the bottom are sepals", "They protect the flower bud before it opens", "Answer: Sepal"]
         },
         {
           "q": "What do flowers produce that we often enjoy for their beauty and smell?",
           "options": ["Fruits", "Nectar and scent", "Roots", "Leaves"],
           "answer": "Nectar and scent",
           "explain": "Flowers produce nectar and scent that attract pollinators.",
-          "procedure": [
-            "Flowers make nectar (a sweet liquid) inside them",
-            "They also release scent through their petals",
-            "Both are used to attract insects and birds",
-            "Nectar also provides food for the pollinators",
-            "Answer: Nectar and scent"
-          ]
+          "procedure": ["Flowers make nectar (a sweet liquid) inside them", "They also release scent through their petals", "Both are used to attract insects and birds", "Nectar also provides food for the pollinators", "Answer: Nectar and scent"]
         },
         {
           "q": "A bee visits a flower and later visits another. What is the bee doing?",
           "options": ["Making honey only", "Pollinating the flowers", "Eating the petals", "Making a nest"],
           "answer": "Pollinating the flowers",
           "explain": "The bee carries pollen from one flower to another.",
-          "procedure": [
-            "As a bee collects nectar, pollen sticks to its hairy body",
-            "When it visits the next flower, some of that pollen rubs off onto the stigma",
-            "This transfer is called pollination",
-            "The bee is helping the flowers reproduce",
-            "Answer: Pollinating the flowers"
-          ]
+          "procedure": ["As a bee collects nectar, pollen sticks to its hairy body", "When it visits the next flower, some of that pollen rubs off onto the stigma", "This transfer is called pollination", "The bee is helping the flowers reproduce", "Answer: Pollinating the flowers"]
         },
         {
           "q": "Which of the following is the correct order of the flower's life from bud to seed?",
-          "options": [
-            "Seed → Flower → Pollination → Fertilization → Fruit",
-            "Pollination → Bud → Flower → Fruit → Seed",
-            "Flower → Bud → Fruit → Seed → Pollination",
-            "Bud → Flower → Pollination → Fertilization → Fruit and Seed"
-          ],
+          "options": ["Seed → Flower → Pollination → Fertilization → Fruit", "Pollination → Bud → Flower → Fruit → Seed", "Flower → Bud → Fruit → Seed → Pollination", "Bud → Flower → Pollination → Fertilization → Fruit and Seed"],
           "answer": "Bud → Flower → Pollination → Fertilization → Fruit and Seed",
           "explain": "The flower grows from a bud, opens, gets pollinated, fertilized, and produces fruit and seeds.",
-          "procedure": [
-            "1. Bud forms (protected by sepals)",
-            "2. Bud opens into a flower with petals",
-            "3. Pollination happens (pollen reaches stigma)",
-            "4. Fertilization happens (sex cells join)",
-            "5. Ovary becomes fruit, ovules become seeds",
-            "Answer: Bud → Flower → Pollination → Fertilization → Fruit and Seed"
-          ]
+          "procedure": ["1. Bud forms (protected by sepals)", "2. Bud opens into a flower with petals", "3. Pollination happens (pollen reaches stigma)", "4. Fertilization happens (sex cells join)", "5. Ovary becomes fruit, ovules become seeds", "Answer: Bud → Flower → Pollination → Fertilization → Fruit and Seed"]
         }
       ]
     },
@@ -283,21 +173,10 @@
       "questions": [
         {
           "q": "What is the water cycle?",
-          "options": [
-            "Water moving through pipes in a house",
-            "The continuous movement of water between land, sea, and air",
-            "Water being created from nothing",
-            "Water disappearing forever"
-          ],
+          "options": ["Water moving through pipes in a house", "The continuous movement of water between land, sea, and air", "Water being created from nothing", "Water disappearing forever"],
           "answer": "The continuous movement of water between land, sea, and air",
           "explain": "The water cycle is the never-ending movement of water on Earth.",
-          "procedure": [
-            "The water cycle is also called the hydrological cycle",
-            "Water moves between the oceans, the sky, and the land",
-            "It changes form: liquid → gas → liquid",
-            "This movement never stops",
-            "Answer: The continuous movement of water between land, sea, and air"
-          ]
+          "procedure": ["The water cycle is also called the hydrological cycle", "Water moves between the oceans, the sky, and the land", "It changes form: liquid → gas → liquid", "This movement never stops", "Answer: The continuous movement of water between land, sea, and air"]
         },
         {
           "q": "What is it called when water changes from liquid to gas?",
@@ -305,13 +184,7 @@
           "options": ["Condensation", "Evaporation", "Precipitation", "Collection"],
           "answer": "Evaporation",
           "explain": "Evaporation is when water changes from liquid to gas (water vapour).",
-          "procedure": [
-            "The sun heats water in oceans, rivers, and lakes",
-            "When water is heated enough, it changes into water vapour (a gas)",
-            "This process is called evaporation",
-            "You can see it when puddles dry up on a hot day",
-            "Answer: Evaporation"
-          ]
+          "procedure": ["The sun heats water in oceans, rivers, and lakes", "When water is heated enough, it changes into water vapour (a gas)", "This process is called evaporation", "You can see it when puddles dry up on a hot day", "Answer: Evaporation"]
         },
         {
           "q": "What is the main source of energy that drives the water cycle?",
@@ -319,13 +192,7 @@
           "options": ["The moon", "The sun", "Wind", "The stars"],
           "answer": "The sun",
           "explain": "The sun provides the heat energy that powers the water cycle.",
-          "procedure": [
-            "The water cycle needs energy to keep going",
-            "That energy comes from the sun",
-            "The sun heats water in oceans, lakes, and rivers",
-            "This causes evaporation to happen",
-            "Answer: The sun"
-          ]
+          "procedure": ["The water cycle needs energy to keep going", "That energy comes from the sun", "The sun heats water in oceans, lakes, and rivers", "This causes evaporation to happen", "Answer: The sun"]
         },
         {
           "q": "What is it called when water vapour cools and turns back into liquid?",
@@ -333,13 +200,7 @@
           "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
           "answer": "Condensation",
           "explain": "Condensation is when water vapour cools and becomes liquid water.",
-          "procedure": [
-            "Water vapour rises into the sky",
-            "As it goes higher, the air is colder",
-            "The cool air makes the water vapour turn back into tiny droplets",
-            "This process is called condensation",
-            "Answer: Condensation"
-          ]
+          "procedure": ["Water vapour rises into the sky", "As it goes higher, the air is colder", "The cool air makes the water vapour turn back into tiny droplets", "This process is called condensation", "Answer: Condensation"]
         },
         {
           "q": "What do we call the tiny water droplets that form in the sky?",
@@ -347,12 +208,7 @@
           "options": ["Rain", "Clouds", "Steam", "Wind"],
           "answer": "Clouds",
           "explain": "Clouds are made of tiny water droplets that form from condensation.",
-          "procedure": [
-            "When water vapour condenses high in the sky, it forms tiny droplets",
-            "Millions of these droplets together form clouds",
-            "Clouds look white or grey depending on the light and thickness",
-            "Answer: Clouds"
-          ]
+          "procedure": ["When water vapour condenses high in the sky, it forms tiny droplets", "Millions of these droplets together form clouds", "Clouds look white or grey depending on the light and thickness", "Answer: Clouds"]
         },
         {
           "q": "What is it called when water falls from clouds as rain, hail, or snow?",
@@ -360,30 +216,14 @@
           "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
           "answer": "Precipitation",
           "explain": "Precipitation is water falling from clouds to the ground.",
-          "procedure": [
-            "Cloud droplets grow bigger and heavier",
-            "When they become too heavy, they fall as precipitation",
-            "Precipitation can be rain, hail, or snow",
-            "Answer: Precipitation"
-          ]
+          "procedure": ["Cloud droplets grow bigger and heavier", "When they become too heavy, they fall as precipitation", "Precipitation can be rain, hail, or snow", "Answer: Precipitation"]
         },
         {
           "q": "What is transpiration?",
-          "options": [
-            "Water moving from soil to plant roots",
-            "Water vapour released from plant leaves into the air",
-            "Rain falling on plants",
-            "Water freezing on leaves"
-          ],
+          "options": ["Water moving from soil to plant roots", "Water vapour released from plant leaves into the air", "Rain falling on plants", "Water freezing on leaves"],
           "answer": "Water vapour released from plant leaves into the air",
           "explain": "Transpiration is the release of water vapour from plants.",
-          "procedure": [
-            "Plants take in water through their roots",
-            "Some of this water travels up to the leaves",
-            "The leaves release extra water as vapour into the air",
-            "This release is called transpiration",
-            "Answer: Water vapour released from plant leaves into the air"
-          ]
+          "procedure": ["Plants take in water through their roots", "Some of this water travels up to the leaves", "The leaves release extra water as vapour into the air", "This release is called transpiration", "Answer: Water vapour released from plant leaves into the air"]
         },
         {
           "q": "Which of these is NOT part of the water cycle?",
@@ -391,43 +231,21 @@
           "options": ["Evaporation", "Condensation", "Precipitation", "Electricity"],
           "answer": "Electricity",
           "explain": "Electricity is not part of the water cycle.",
-          "procedure": [
-            "The main stages of the water cycle are: evaporation, condensation, precipitation, and collection",
-            "Transpiration is also part of the cycle",
-            "Electricity is not involved in the water cycle",
-            "Answer: Electricity"
-          ]
+          "procedure": ["The main stages of the water cycle are: evaporation, condensation, precipitation, and collection", "Transpiration is also part of the cycle", "Electricity is not involved in the water cycle", "Answer: Electricity"]
         },
         {
           "q": "Where does the water that falls as rain go?",
           "options": ["Nowhere — it disappears", "It is soaked into the ground or flows into rivers and lakes", "It goes to the moon", "It turns into clouds immediately"],
           "answer": "It is soaked into the ground or flows into rivers and lakes",
           "explain": "Rainwater is collected in the ground, rivers, lakes, and oceans.",
-          "procedure": [
-            "When rain falls, some water sinks into the ground",
-            "Some water flows over the land into streams and rivers",
-            "Rivers carry the water into lakes and oceans",
-            "This step is called collection",
-            "Answer: It is soaked into the ground or flows into rivers and lakes"
-          ]
+          "procedure": ["When rain falls, some water sinks into the ground", "Some water flows over the land into streams and rivers", "Rivers carry the water into lakes and oceans", "This step is called collection", "Answer: It is soaked into the ground or flows into rivers and lakes"]
         },
         {
           "q": "Why is the water cycle important for life on Earth?",
-          "options": [
-            "It makes the sky look pretty",
-            "It continuously supplies fresh water for plants, animals, and humans",
-            "It creates wind",
-            "It makes the sun shine"
-          ],
+          "options": ["It makes the sky look pretty", "It continuously supplies fresh water for plants, animals, and humans", "It creates wind", "It makes the sun shine"],
           "answer": "It continuously supplies fresh water for plants, animals, and humans",
           "explain": "The water cycle gives us a constant supply of fresh water.",
-          "procedure": [
-            "All living things need water",
-            "The water cycle moves water from the oceans to the land as rain",
-            "Plants, animals, and humans use this fresh water",
-            "The cycle keeps repeating, so water is never used up",
-            "Answer: It continuously supplies fresh water for plants, animals, and humans"
-          ]
+          "procedure": ["All living things need water", "The water cycle moves water from the oceans to the land as rain", "Plants, animals, and humans use this fresh water", "The cycle keeps repeating, so water is never used up", "Answer: It continuously supplies fresh water for plants, animals, and humans"]
         },
         {
           "q": "Which state of matter is water vapour?",
@@ -435,43 +253,21 @@
           "options": ["Solid", "Liquid", "Gas", "Plasma"],
           "answer": "Gas",
           "explain": "Water vapour is water in its gas form.",
-          "procedure": [
-            "Water can exist in three states: solid (ice), liquid (water), gas (vapour)",
-            "Water vapour is the gas form of water",
-            "It is invisible — you cannot see water vapour directly",
-            "Answer: Gas"
-          ]
+          "procedure": ["Water can exist in three states: solid (ice), liquid (water), gas (vapour)", "Water vapour is the gas form of water", "It is invisible — you cannot see water vapour directly", "Answer: Gas"]
         },
         {
           "q": "When you boil water in a pot, what do you see rising?",
           "options": ["Ice", "Steam (water vapour)", "Dust", "Sand"],
           "answer": "Steam (water vapour)",
           "explain": "Steam rises when water is heated — that's water vapour.",
-          "procedure": [
-            "When water is heated, it changes into gas",
-            "The gas rises as steam",
-            "The white mist you see is actually tiny water droplets that form when steam hits cooler air",
-            "This is a real-life example of evaporation and condensation",
-            "Answer: Steam (water vapour)"
-          ]
+          "procedure": ["When water is heated, it changes into gas", "The gas rises as steam", "The white mist you see is actually tiny water droplets that form when steam hits cooler air", "This is a real-life example of evaporation and condensation", "Answer: Steam (water vapour)"]
         },
         {
           "q": "Why does wet ground dry up faster on a sunny day?",
-          "options": [
-            "Because the sun drinks the water",
-            "Because the heat makes water evaporate faster",
-            "Because wind blows the water away",
-            "Because the ground absorbs it"
-          ],
+          "options": ["Because the sun drinks the water", "Because the heat makes water evaporate faster", "Because wind blows the water away", "Because the ground absorbs it"],
           "answer": "Because the heat makes water evaporate faster",
           "explain": "Heat from the sun speeds up evaporation.",
-          "procedure": [
-            "Evaporation happens all the time, but faster when it's hot",
-            "The sun heats the wet ground",
-            "The heat gives water molecules energy to escape as vapour",
-            "So the water dries up faster on a sunny day",
-            "Answer: Because the heat makes water evaporate faster"
-          ]
+          "procedure": ["Evaporation happens all the time, but faster when it's hot", "The sun heats the wet ground", "The heat gives water molecules energy to escape as vapour", "So the water dries up faster on a sunny day", "Answer: Because the heat makes water evaporate faster"]
         },
         {
           "q": "Where does most evaporation happen on Earth?",
@@ -479,110 +275,49 @@
           "options": ["In the deserts", "In the oceans", "In the forests", "In the mountains"],
           "answer": "In the oceans",
           "explain": "Oceans cover most of Earth, so most evaporation happens there.",
-          "procedure": [
-            "Oceans cover about 71% of Earth's surface",
-            "Because they are so large, most evaporation happens there",
-            "The sun heats the ocean surface, causing water to turn into vapour",
-            "Answer: In the oceans"
-          ]
+          "procedure": ["Oceans cover about 71% of Earth's surface", "Because they are so large, most evaporation happens there", "The sun heats the ocean surface, causing water to turn into vapour", "Answer: In the oceans"]
         },
         {
           "q": "What causes rain to fall from clouds?",
-          "options": [
-            "The clouds open up like doors",
-            "Water droplets in clouds get too heavy and fall",
-            "The moon pulls the rain down",
-            "The clouds get scared"
-          ],
+          "options": ["The clouds open up like doors", "Water droplets in clouds get too heavy and fall", "The moon pulls the rain down", "The clouds get scared"],
           "answer": "Water droplets in clouds get too heavy and fall",
           "explain": "When cloud droplets combine and become heavy, they fall as rain.",
-          "procedure": [
-            "Clouds are made of tiny water droplets",
-            "Droplets bump into each other and join together",
-            "They grow bigger and heavier",
-            "When they become too heavy to float, they fall as rain",
-            "Answer: Water droplets in clouds get too heavy and fall"
-          ]
+          "procedure": ["Clouds are made of tiny water droplets", "Droplets bump into each other and join together", "They grow bigger and heavier", "When they become too heavy to float, they fall as rain", "Answer: Water droplets in clouds get too heavy and fall"]
         },
         {
           "q": "Which process returns water to the sky from plants?",
           "options": ["Precipitation", "Transpiration", "Collection", "Condensation"],
           "answer": "Transpiration",
           "explain": "Transpiration is the release of water vapour from plant leaves.",
-          "procedure": [
-            "Plants absorb water through their roots",
-            "Some water is used for food-making (photosynthesis)",
-            "The rest is released as vapour through small holes in the leaves",
-            "This release is called transpiration",
-            "Answer: Transpiration"
-          ]
+          "procedure": ["Plants absorb water through their roots", "Some water is used for food-making (photosynthesis)", "The rest is released as vapour through small holes in the leaves", "This release is called transpiration", "Answer: Transpiration"]
         },
         {
           "q": "If we cut down too many trees, how does it affect the water cycle?",
-          "options": [
-            "It makes more rain",
-            "Less transpiration happens, which can affect rainfall patterns",
-            "It speeds up evaporation",
-            "It has no effect"
-          ],
+          "options": ["It makes more rain", "Less transpiration happens, which can affect rainfall patterns", "It speeds up evaporation", "It has no effect"],
           "answer": "Less transpiration happens, which can affect rainfall patterns",
           "explain": "Fewer trees means less transpiration and less moisture in the air.",
-          "procedure": [
-            "Trees release water vapour into the air through transpiration",
-            "This vapour helps form clouds and rain",
-            "When many trees are cut down, less vapour is released",
-            "This can lead to less rainfall in the area",
-            "Answer: Less transpiration happens, which can affect rainfall patterns"
-          ]
+          "procedure": ["Trees release water vapour into the air through transpiration", "This vapour helps form clouds and rain", "When many trees are cut down, less vapour is released", "This can lead to less rainfall in the area", "Answer: Less transpiration happens, which can affect rainfall patterns"]
         },
         {
           "q": "Which of these is a good way to conserve water?",
-          "options": [
-            "Leave taps running",
-            "Use a bucket instead of a hose when washing a car",
-            "Wash dishes under running water",
-            "Take very long showers"
-          ],
+          "options": ["Leave taps running", "Use a bucket instead of a hose when washing a car", "Wash dishes under running water", "Take very long showers"],
           "answer": "Use a bucket instead of a hose when washing a car",
           "explain": "Using a bucket uses much less water than a running hose.",
-          "procedure": [
-            "Water conservation means using less water",
-            "A hose can waste many litres per minute",
-            "A bucket uses only a few litres total",
-            "Small choices save a lot of water over time",
-            "Answer: Use a bucket instead of a hose when washing a car"
-          ]
+          "procedure": ["Water conservation means using less water", "A hose can waste many litres per minute", "A bucket uses only a few litres total", "Small choices save a lot of water over time", "Answer: Use a bucket instead of a hose when washing a car"]
         },
         {
           "q": "What happens to water when it freezes?",
           "options": ["It becomes a gas", "It becomes a solid (ice)", "It disappears", "It turns into vapour"],
           "answer": "It becomes a solid (ice)",
           "explain": "When water freezes, it becomes solid ice.",
-          "procedure": [
-            "Water exists in three states: solid, liquid, gas",
-            "When water cools below 0°C, it freezes",
-            "It becomes solid ice",
-            "When it warms up again, it melts back to liquid water",
-            "Answer: It becomes a solid (ice)"
-          ]
+          "procedure": ["Water exists in three states: solid, liquid, gas", "When water cools below 0°C, it freezes", "It becomes solid ice", "When it warms up again, it melts back to liquid water", "Answer: It becomes a solid (ice)"]
         },
         {
           "q": "Which of the following is a real-life example of condensation?",
-          "options": [
-            "Water boiling in a pot",
-            "Water droplets on the outside of a cold glass",
-            "Rain falling",
-            "Ice melting"
-          ],
+          "options": ["Water boiling in a pot", "Water droplets on the outside of a cold glass", "Rain falling", "Ice melting"],
           "answer": "Water droplets on the outside of a cold glass",
           "explain": "Water vapour in the air cools on the cold glass and turns into droplets.",
-          "procedure": [
-            "A cold glass makes the air around it cool",
-            "Water vapour in the air touches the cold glass",
-            "The vapour cools and turns into liquid droplets",
-            "This is condensation — the same process that forms clouds",
-            "Answer: Water droplets on the outside of a cold glass"
-          ]
+          "procedure": ["A cold glass makes the air around it cool", "Water vapour in the air touches the cold glass", "The vapour cools and turns into liquid droplets", "This is condensation — the same process that forms clouds", "Answer: Water droplets on the outside of a cold glass"]
         }
       ]
     },
@@ -597,13 +332,7 @@
           "options": ["To pump blood around the body", "To break down food so the body can use it", "To help us breathe", "To support the body"],
           "answer": "To break down food so the body can use it",
           "explain": "The digestive system breaks down food into nutrients the body can absorb.",
-          "procedure": [
-            "Food enters the body through the mouth",
-            "It travels through the digestive system",
-            "The body breaks it down into nutrients",
-            "These nutrients are absorbed and used for energy and growth",
-            "Answer: To break down food so the body can use it"
-          ]
+          "procedure": ["Food enters the body through the mouth", "It travels through the digestive system", "The body breaks it down into nutrients", "These nutrients are absorbed and used for energy and growth", "Answer: To break down food so the body can use it"]
         },
         {
           "q": "Where does digestion begin?",
@@ -611,13 +340,7 @@
           "options": ["In the stomach", "In the mouth", "In the small intestine", "In the large intestine"],
           "answer": "In the mouth",
           "explain": "Digestion begins in the mouth where teeth chew food and saliva starts breaking it down.",
-          "procedure": [
-            "Food enters the mouth first",
-            "Teeth chew and grind the food into smaller pieces",
-            "Saliva mixes with the food and starts breaking it down",
-            "Then the food is swallowed",
-            "Answer: In the mouth"
-          ]
+          "procedure": ["Food enters the mouth first", "Teeth chew and grind the food into smaller pieces", "Saliva mixes with the food and starts breaking it down", "Then the food is swallowed", "Answer: In the mouth"]
         },
         {
           "q": "What is the oesophagus?",
@@ -625,13 +348,7 @@
           "options": ["A tube that carries food from the mouth to the stomach", "An organ that pumps blood", "The organ that helps us breathe", "The bone that protects the heart"],
           "answer": "A tube that carries food from the mouth to the stomach",
           "explain": "The oesophagus is the food pipe connecting the mouth to the stomach.",
-          "procedure": [
-            "After swallowing, food travels down the oesophagus",
-            "The oesophagus is also called the food pipe",
-            "It connects the mouth to the stomach",
-            "Muscles push the food down to the stomach",
-            "Answer: A tube that carries food from the mouth to the stomach"
-          ]
+          "procedure": ["After swallowing, food travels down the oesophagus", "The oesophagus is also called the food pipe", "It connects the mouth to the stomach", "Muscles push the food down to the stomach", "Answer: A tube that carries food from the mouth to the stomach"]
         },
         {
           "q": "What happens to food inside the stomach?",
@@ -639,13 +356,7 @@
           "options": ["It is stored without change", "It is churned and mixed with digestive juices", "It is sent directly to the heart", "It turns into air"],
           "answer": "It is churned and mixed with digestive juices",
           "explain": "The stomach churns food and mixes it with juices that break it down further.",
-          "procedure": [
-            "Food arrives in the stomach from the oesophagus",
-            "The stomach muscles churn the food",
-            "Digestive juices mix with the food",
-            "The food becomes a thick liquid before moving on",
-            "Answer: It is churned and mixed with digestive juices"
-          ]
+          "procedure": ["Food arrives in the stomach from the oesophagus", "The stomach muscles churn the food", "Digestive juices mix with the food", "The food becomes a thick liquid before moving on", "Answer: It is churned and mixed with digestive juices"]
         },
         {
           "q": "Where are most nutrients absorbed into the body?",
@@ -653,13 +364,7 @@
           "options": ["In the mouth", "In the stomach", "In the small intestine", "In the large intestine"],
           "answer": "In the small intestine",
           "explain": "Most nutrients are absorbed into the blood in the small intestine.",
-          "procedure": [
-            "After the stomach, food moves into the small intestine",
-            "The small intestine is long and coiled",
-            "Its walls absorb nutrients from the food",
-            "These nutrients enter the blood and go to the body",
-            "Answer: In the small intestine"
-          ]
+          "procedure": ["After the stomach, food moves into the small intestine", "The small intestine is long and coiled", "Its walls absorb nutrients from the food", "These nutrients enter the blood and go to the body", "Answer: In the small intestine"]
         },
         {
           "q": "What is the main job of the large intestine?",
@@ -667,26 +372,14 @@
           "options": ["To absorb water from what is left", "To pump blood", "To make food", "To store oxygen"],
           "answer": "To absorb water from what is left",
           "explain": "The large intestine absorbs water and forms solid waste.",
-          "procedure": [
-            "After the small intestine, what is left moves to the large intestine",
-            "The large intestine absorbs water from it",
-            "The remaining waste becomes solid",
-            "It is then removed from the body",
-            "Answer: To absorb water from what is left"
-          ]
+          "procedure": ["After the small intestine, what is left moves to the large intestine", "The large intestine absorbs water from it", "The remaining waste becomes solid", "It is then removed from the body", "Answer: To absorb water from what is left"]
         },
         {
           "q": "What is digestion?",
           "options": ["The process of breathing", "The process of breaking down food into nutrients", "The process of pumping blood", "The process of growing taller"],
           "answer": "The process of breaking down food into nutrients",
           "explain": "Digestion is how the body breaks food into useful nutrients.",
-          "procedure": [
-            "Food must be broken down to be useful",
-            "This happens through chewing, churning, and digestive juices",
-            "The food becomes nutrients small enough to absorb",
-            "This whole process is called digestion",
-            "Answer: The process of breaking down food into nutrients"
-          ]
+          "procedure": ["Food must be broken down to be useful", "This happens through chewing, churning, and digestive juices", "The food becomes nutrients small enough to absorb", "This whole process is called digestion", "Answer: The process of breaking down food into nutrients"]
         },
         {
           "q": "What is the main job of the heart?",
@@ -694,13 +387,7 @@
           "options": ["To digest food", "To pump blood around the body", "To help us breathe", "To protect the brain"],
           "answer": "To pump blood around the body",
           "explain": "The heart pumps blood that carries oxygen and nutrients to every part of the body.",
-          "procedure": [
-            "The heart is a strong muscle in the chest",
-            "It pumps blood through tubes called blood vessels",
-            "Blood carries oxygen and nutrients",
-            "These reach every part of the body",
-            "Answer: To pump blood around the body"
-          ]
+          "procedure": ["The heart is a strong muscle in the chest", "It pumps blood through tubes called blood vessels", "Blood carries oxygen and nutrients", "These reach every part of the body", "Answer: To pump blood around the body"]
         },
         {
           "q": "What is the circulatory system?",
@@ -708,13 +395,7 @@
           "options": ["The bones of the body", "The heart, blood, and blood vessels working together", "The lungs and windpipe", "The stomach and intestines"],
           "answer": "The heart, blood, and blood vessels working together",
           "explain": "The circulatory system moves blood around the body.",
-          "procedure": [
-            "The circulatory system includes the heart, blood, and blood vessels",
-            "The heart pumps the blood",
-            "Blood vessels are the tubes that carry the blood",
-            "Together they move blood around the body",
-            "Answer: The heart, blood, and blood vessels working together"
-          ]
+          "procedure": ["The circulatory system includes the heart, blood, and blood vessels", "The heart pumps the blood", "Blood vessels are the tubes that carry the blood", "Together they move blood around the body", "Answer: The heart, blood, and blood vessels working together"]
         },
         {
           "q": "What do arteries and veins do?",
@@ -722,27 +403,14 @@
           "options": ["They carry food to the stomach", "They carry blood around the body", "They help us see", "They help us hear"],
           "answer": "They carry blood around the body",
           "explain": "Arteries and veins are blood vessels that carry blood.",
-          "procedure": [
-            "Blood vessels are tubes that carry blood",
-            "Arteries carry blood away from the heart",
-            "Veins carry blood back to the heart",
-            "Together they carry blood all around the body",
-            "Answer: They carry blood around the body"
-          ]
+          "procedure": ["Blood vessels are tubes that carry blood", "Arteries carry blood away from the heart", "Veins carry blood back to the heart", "Together they carry blood all around the body", "Answer: They carry blood around the body"]
         },
         {
           "q": "What is circulation?",
           "options": ["The movement of blood around the body", "The movement of food through the body", "The movement of air into the lungs", "The movement of bones at a joint"],
           "answer": "The movement of blood around the body",
           "explain": "Circulation is the continuous movement of blood through the body.",
-          "procedure": [
-            "The heart pumps blood",
-            "Blood travels through blood vessels",
-            "It delivers oxygen and nutrients to the body",
-            "Then it returns to the heart and repeats",
-            "This continuous movement is called circulation",
-            "Answer: The movement of blood around the body"
-          ]
+          "procedure": ["The heart pumps blood", "Blood travels through blood vessels", "It delivers oxygen and nutrients to the body", "Then it returns to the heart and repeats", "This continuous movement is called circulation", "Answer: The movement of blood around the body"]
         },
         {
           "q": "Where does air enter the body?",
@@ -750,13 +418,7 @@
           "options": ["Through the ears", "Through the nose and mouth", "Through the skin", "Through the eyes"],
           "answer": "Through the nose and mouth",
           "explain": "Air enters the body through the nose or mouth.",
-          "procedure": [
-            "We breathe in air through the nose or mouth",
-            "The nose filters and warms the air",
-            "The air then travels down the windpipe",
-            "It eventually reaches the lungs",
-            "Answer: Through the nose and mouth"
-          ]
+          "procedure": ["We breathe in air through the nose or mouth", "The nose filters and warms the air", "The air then travels down the windpipe", "It eventually reaches the lungs", "Answer: Through the nose and mouth"]
         },
         {
           "q": "What is the windpipe?",
@@ -764,13 +426,7 @@
           "options": ["A tube that carries air from the throat to the lungs", "A tube that carries food to the stomach", "A tube that carries blood", "A bone in the chest"],
           "answer": "A tube that carries air from the throat to the lungs",
           "explain": "The windpipe (trachea) carries air from the throat to the lungs.",
-          "procedure": [
-            "After entering the nose or mouth, air goes into the windpipe",
-            "The windpipe is also called the trachea",
-            "It is a tube that leads down to the lungs",
-            "Air passes through it with every breath",
-            "Answer: A tube that carries air from the throat to the lungs"
-          ]
+          "procedure": ["After entering the nose or mouth, air goes into the windpipe", "The windpipe is also called the trachea", "It is a tube that leads down to the lungs", "Air passes through it with every breath", "Answer: A tube that carries air from the throat to the lungs"]
         },
         {
           "q": "What happens inside the lungs?",
@@ -778,26 +434,14 @@
           "options": ["Food is digested", "Oxygen from the air enters the blood", "Blood is pumped", "Bones are made"],
           "answer": "Oxygen from the air enters the blood",
           "explain": "In the lungs, oxygen passes into the blood and carbon dioxide leaves it.",
-          "procedure": [
-            "Air reaches the lungs through the windpipe",
-            "Inside the lungs, air fills tiny air sacs",
-            "Oxygen from the air passes into the blood",
-            "At the same time, carbon dioxide leaves the blood to be breathed out",
-            "Answer: Oxygen from the air enters the blood"
-          ]
+          "procedure": ["Air reaches the lungs through the windpipe", "Inside the lungs, air fills tiny air sacs", "Oxygen from the air passes into the blood", "At the same time, carbon dioxide leaves the blood to be breathed out", "Answer: Oxygen from the air enters the blood"]
         },
         {
           "q": "Why do we need to breathe?",
           "options": ["To make our chest move", "To get oxygen into the body and remove carbon dioxide", "To make us taller", "To keep us awake"],
           "answer": "To get oxygen into the body and remove carbon dioxide",
           "explain": "Breathing brings in oxygen and removes carbon dioxide.",
-          "procedure": [
-            "Every cell in the body needs oxygen",
-            "Oxygen comes from the air we breathe in",
-            "The body also makes carbon dioxide as waste",
-            "Breathing out removes carbon dioxide",
-            "Answer: To get oxygen into the body and remove carbon dioxide"
-          ]
+          "procedure": ["Every cell in the body needs oxygen", "Oxygen comes from the air we breathe in", "The body also makes carbon dioxide as waste", "Breathing out removes carbon dioxide", "Answer: To get oxygen into the body and remove carbon dioxide"]
         },
         {
           "q": "What is the skeleton for?",
@@ -805,13 +449,7 @@
           "options": ["To digest food", "To support the body, protect organs, and help it move", "To pump blood", "To carry oxygen"],
           "answer": "To support the body, protect organs, and help it move",
           "explain": "The skeleton supports the body, protects organs, and works with muscles for movement.",
-          "procedure": [
-            "The skeleton is made of bones",
-            "Bones support the body and give it shape",
-            "They protect important organs — like the skull protects the brain and the ribs protect the heart",
-            "Muscles pull on bones to help us move",
-            "Answer: To support the body, protect organs, and help it move"
-          ]
+          "procedure": ["The skeleton is made of bones", "Bones support the body and give it shape", "They protect important organs — like the skull protects the brain and the ribs protect the heart", "Muscles pull on bones to help us move", "Answer: To support the body, protect organs, and help it move"]
         },
         {
           "q": "What is a joint?",
@@ -819,13 +457,7 @@
           "options": ["A place where two bones meet", "A type of bone", "A muscle in the body", "A blood vessel"],
           "answer": "A place where two bones meet",
           "explain": "A joint is where two bones meet and allow movement.",
-          "procedure": [
-            "Bones join together at joints",
-            "Joints allow the bones to move",
-            "The knee, elbow, shoulder, and neck all have joints",
-            "Without joints, the body could not bend or move",
-            "Answer: A place where two bones meet"
-          ]
+          "procedure": ["Bones join together at joints", "Joints allow the bones to move", "The knee, elbow, shoulder, and neck all have joints", "Without joints, the body could not bend or move", "Answer: A place where two bones meet"]
         },
         {
           "q": "Which of these is a type of joint?",
@@ -833,13 +465,7 @@
           "options": ["Ball-and-socket joint", "Red blood cell", "Windpipe", "Stomach"],
           "answer": "Ball-and-socket joint",
           "explain": "Ball-and-socket is one of the main types of joints in the body.",
-          "procedure": [
-            "There are several types of joints in the body",
-            "Ball-and-socket joints — like at the shoulder — allow movement in all directions",
-            "Hinge joints — like the knee — allow back-and-forth movement",
-            "Pivot joints — like the neck — allow turning",
-            "Answer: Ball-and-socket joint"
-          ]
+          "procedure": ["There are several types of joints in the body", "Ball-and-socket joints — like at the shoulder — allow movement in all directions", "Hinge joints — like the knee — allow back-and-forth movement", "Pivot joints — like the neck — allow turning", "Answer: Ball-and-socket joint"]
         },
         {
           "q": "What does the brain do?",
@@ -847,13 +473,7 @@
           "options": ["It pumps blood", "It controls the whole body and helps us think", "It digests food", "It carries oxygen"],
           "answer": "It controls the whole body and helps us think",
           "explain": "The brain is the control centre of the body — it directs everything we do.",
-          "procedure": [
-            "The brain is inside the skull",
-            "It sends messages through nerves to every part of the body",
-            "It controls movement, breathing, thinking, and feeling",
-            "It is the control centre of the whole body",
-            "Answer: It controls the whole body and helps us think"
-          ]
+          "procedure": ["The brain is inside the skull", "It sends messages through nerves to every part of the body", "It controls movement, breathing, thinking, and feeling", "It is the control centre of the whole body", "Answer: It controls the whole body and helps us think"]
         },
         {
           "q": "How do the body systems work together?",
@@ -861,16 +481,7 @@
           "options": ["They work alone and never help each other", "They work as a team to keep the body alive and healthy", "Only one system works at a time", "They only work when we sleep"],
           "answer": "They work as a team to keep the body alive and healthy",
           "explain": "The body systems work together — for example, the digestive system provides nutrients that the circulatory system delivers to every cell.",
-          "procedure": [
-            "Each body system has its own job",
-            "But no system works alone",
-            "The digestive system provides nutrients",
-            "The circulatory system carries them around",
-            "The respiratory system brings in oxygen",
-            "The nervous system controls everything",
-            "Together they keep the body alive and healthy",
-            "Answer: They work as a team to keep the body alive and healthy"
-          ]
+          "procedure": ["Each body system has its own job", "But no system works alone", "The digestive system provides nutrients", "The circulatory system carries them around", "The respiratory system brings in oxygen", "The nervous system controls everything", "Together they keep the body alive and healthy", "Answer: They work as a team to keep the body alive and healthy"]
         }
       ]
     },
@@ -885,12 +496,7 @@
           "options": ["Energy that is stored", "Energy of movement", "Energy from food", "Energy of sound"],
           "answer": "Energy of movement",
           "explain": "Kinetic energy is the energy an object has because it is moving.",
-          "procedure": [
-            "Kinetic comes from the Greek word for 'motion'",
-            "Anything that moves has kinetic energy",
-            "The faster it moves, the more kinetic energy it has",
-            "Answer: Energy of movement"
-          ]
+          "procedure": ["Kinetic comes from the Greek word for 'motion'", "Anything that moves has kinetic energy", "The faster it moves, the more kinetic energy it has", "Answer: Energy of movement"]
         },
         {
           "q": "Which of these shows kinetic energy?",
@@ -898,12 +504,7 @@
           "options": ["A ball sitting on the ground", "A child running", "A book on a shelf", "A parked car"],
           "answer": "A child running",
           "explain": "Running is movement, so a running child has kinetic energy.",
-          "procedure": [
-            "Kinetic energy = energy of movement",
-            "A child running is moving — so they have kinetic energy",
-            "A ball on the ground, a book on a shelf, and a parked car are all still",
-            "Answer: A child running"
-          ]
+          "procedure": ["Kinetic energy = energy of movement", "A child running is moving — so they have kinetic energy", "A ball on the ground, a book on a shelf, and a parked car are all still", "Answer: A child running"]
         },
         {
           "q": "What is potential energy?",
@@ -911,12 +512,7 @@
           "options": ["Energy of movement", "Stored energy waiting to be used", "Energy of light", "Energy of sound"],
           "answer": "Stored energy waiting to be used",
           "explain": "Potential energy is energy that is stored and ready to be released.",
-          "procedure": [
-            "Potential energy is stored energy",
-            "It is waiting to be used or released",
-            "A ball on a hill has potential energy — it can roll down",
-            "Answer: Stored energy waiting to be used"
-          ]
+          "procedure": ["Potential energy is stored energy", "It is waiting to be used or released", "A ball on a hill has potential energy — it can roll down", "Answer: Stored energy waiting to be used"]
         },
         {
           "q": "Which of these shows potential energy?",
@@ -924,13 +520,7 @@
           "options": ["A ball rolling down a hill", "A ball at the top of a hill", "A car moving fast", "Water flowing in a river"],
           "answer": "A ball at the top of a hill",
           "explain": "A ball at the top of a hill is not moving yet — it has stored (potential) energy.",
-          "procedure": [
-            "A ball at the top of a hill has not started moving yet",
-            "But it has stored energy ready to be released",
-            "This stored energy is potential energy",
-            "Once it starts rolling, the potential energy becomes kinetic energy",
-            "Answer: A ball at the top of a hill"
-          ]
+          "procedure": ["A ball at the top of a hill has not started moving yet", "But it has stored energy ready to be released", "This stored energy is potential energy", "Once it starts rolling, the potential energy becomes kinetic energy", "Answer: A ball at the top of a hill"]
         },
         {
           "q": "What is heat energy?",
@@ -938,12 +528,7 @@
           "options": ["Energy from light", "Energy from warm or hot objects", "Energy from sound", "Energy from electricity"],
           "answer": "Energy from warm or hot objects",
           "explain": "Heat energy comes from warm or hot objects and makes things warmer.",
-          "procedure": [
-            "Heat is a form of energy",
-            "Warm or hot objects give off heat energy",
-            "Heat makes things warmer",
-            "Answer: Energy from warm or hot objects"
-          ]
+          "procedure": ["Heat is a form of energy", "Warm or hot objects give off heat energy", "Heat makes things warmer", "Answer: Energy from warm or hot objects"]
         },
         {
           "q": "Which of these is a source of heat energy?",
@@ -951,12 +536,7 @@
           "options": ["A book", "A fire", "A mirror", "A stone"],
           "answer": "A fire",
           "explain": "Fire produces heat energy.",
-          "procedure": [
-            "Heat energy comes from warm or hot objects",
-            "A fire is very hot — it gives off lots of heat energy",
-            "A book, mirror, and stone at room temperature do not produce noticeable heat",
-            "Answer: A fire"
-          ]
+          "procedure": ["Heat energy comes from warm or hot objects", "A fire is very hot — it gives off lots of heat energy", "A book, mirror, and stone at room temperature do not produce noticeable heat", "Answer: A fire"]
         },
         {
           "q": "What is light energy?",
@@ -964,12 +544,7 @@
           "options": ["Energy that we can see", "Energy that we can hear", "Energy that is stored", "Energy that moves objects"],
           "answer": "Energy that we can see",
           "explain": "Light energy is the energy we can see with our eyes.",
-          "procedure": [
-            "Light is a form of energy",
-            "We can see it with our eyes",
-            "It comes from sources like the sun, bulbs, and candles",
-            "Answer: Energy that we can see"
-          ]
+          "procedure": ["Light is a form of energy", "We can see it with our eyes", "It comes from sources like the sun, bulbs, and candles", "Answer: Energy that we can see"]
         },
         {
           "q": "Which of these is a source of light energy?",
@@ -977,12 +552,7 @@
           "options": ["A stone", "The sun", "A pillow", "A spoon"],
           "answer": "The sun",
           "explain": "The sun is our main natural source of light.",
-          "procedure": [
-            "Light energy comes from light sources",
-            "The sun is the biggest natural light source",
-            "Other sources include torches, bulbs, and candles",
-            "Answer: The sun"
-          ]
+          "procedure": ["Light energy comes from light sources", "The sun is the biggest natural light source", "Other sources include torches, bulbs, and candles", "Answer: The sun"]
         },
         {
           "q": "What is sound energy?",
@@ -990,12 +560,7 @@
           "options": ["Energy we can see", "Energy we can hear", "Energy stored in food", "Energy of heat"],
           "answer": "Energy we can hear",
           "explain": "Sound energy is the energy we hear — produced by vibrations.",
-          "procedure": [
-            "Sound is a form of energy",
-            "It is made when something vibrates",
-            "Our ears pick up these vibrations as sound",
-            "Answer: Energy we can hear"
-          ]
+          "procedure": ["Sound is a form of energy", "It is made when something vibrates", "Our ears pick up these vibrations as sound", "Answer: Energy we can hear"]
         },
         {
           "q": "Which of these produces sound energy?",
@@ -1003,12 +568,7 @@
           "options": ["A silent book", "A drum being beaten", "A still picture", "A quiet room"],
           "answer": "A drum being beaten",
           "explain": "A drum vibrates when beaten, producing sound energy.",
-          "procedure": [
-            "Sound is made when something vibrates",
-            "When a drum is beaten, the skin vibrates",
-            "These vibrations travel through the air as sound",
-            "Answer: A drum being beaten"
-          ]
+          "procedure": ["Sound is made when something vibrates", "When a drum is beaten, the skin vibrates", "These vibrations travel through the air as sound", "Answer: A drum being beaten"]
         },
         {
           "q": "What is electrical energy?",
@@ -1016,12 +576,7 @@
           "options": ["Energy from water", "Energy that flows as electric current", "Energy from food", "Energy of sound"],
           "answer": "Energy that flows as electric current",
           "explain": "Electrical energy is carried by moving electric charges (current).",
-          "procedure": [
-            "Electrical energy is carried by electric current",
-            "It flows through wires and circuits",
-            "Batteries and sockets are sources of electrical energy",
-            "Answer: Energy that flows as electric current"
-          ]
+          "procedure": ["Electrical energy is carried by electric current", "It flows through wires and circuits", "Batteries and sockets are sources of electrical energy", "Answer: Energy that flows as electric current"]
         },
         {
           "q": "Which of these is a source of electrical energy?",
@@ -1029,12 +584,7 @@
           "options": ["A book", "A battery", "A cup of water", "A spoon"],
           "answer": "A battery",
           "explain": "A battery stores chemical energy that can become electrical energy.",
-          "procedure": [
-            "A battery stores energy inside it",
-            "When connected in a circuit, it releases electrical energy",
-            "Other sources include power sockets and generators",
-            "Answer: A battery"
-          ]
+          "procedure": ["A battery stores energy inside it", "When connected in a circuit, it releases electrical energy", "Other sources include power sockets and generators", "Answer: A battery"]
         },
         {
           "q": "What is chemical energy?",
@@ -1042,12 +592,7 @@
           "options": ["Energy from movement", "Energy stored in substances like food and fuel", "Energy of light", "Energy of heat"],
           "answer": "Energy stored in substances like food and fuel",
           "explain": "Chemical energy is stored in the bonds of substances like food and fuel.",
-          "procedure": [
-            "Chemical energy is stored inside substances",
-            "Food contains chemical energy we use when we eat",
-            "Fuel contains chemical energy that is released when it burns",
-            "Answer: Energy stored in substances like food and fuel"
-          ]
+          "procedure": ["Chemical energy is stored inside substances", "Food contains chemical energy we use when we eat", "Fuel contains chemical energy that is released when it burns", "Answer: Energy stored in substances like food and fuel"]
         },
         {
           "q": "Where is chemical energy stored in our body?",
@@ -1055,12 +600,7 @@
           "options": ["In our hair", "In the food we eat", "In our shadow", "In our shoes"],
           "answer": "In the food we eat",
           "explain": "Food contains chemical energy that our body uses.",
-          "procedure": [
-            "The food we eat contains chemical energy",
-            "Our body breaks it down and releases the energy",
-            "We use this energy to move, think, and grow",
-            "Answer: In the food we eat"
-          ]
+          "procedure": ["The food we eat contains chemical energy", "Our body breaks it down and releases the energy", "We use this energy to move, think, and grow", "Answer: In the food we eat"]
         },
         {
           "q": "What is energy conversion?",
@@ -1068,12 +608,7 @@
           "options": ["When energy is destroyed", "When energy changes from one form to another", "When energy is created", "When energy disappears"],
           "answer": "When energy changes from one form to another",
           "explain": "Energy conversion is when energy changes form — like electrical energy becoming light.",
-          "procedure": [
-            "Energy can change from one form to another",
-            "For example, a torch changes chemical energy into light energy",
-            "This change is called energy conversion",
-            "Answer: When energy changes from one form to another"
-          ]
+          "procedure": ["Energy can change from one form to another", "For example, a torch changes chemical energy into light energy", "This change is called energy conversion", "Answer: When energy changes from one form to another"]
         },
         {
           "q": "In a torch, what energy change happens?",
@@ -1081,63 +616,35 @@
           "options": ["Light energy → chemical energy", "Chemical energy → light energy", "Sound energy → light energy", "Heat energy → sound energy"],
           "answer": "Chemical energy → light energy",
           "explain": "A torch converts chemical energy in its battery into light energy.",
-          "procedure": [
-            "The battery in a torch stores chemical energy",
-            "When the torch is switched on, this energy is released",
-            "It changes into light energy (the beam)",
-            "Some is also lost as heat energy",
-            "Answer: Chemical energy → light energy"
-          ]
+          "procedure": ["The battery in a torch stores chemical energy", "When the torch is switched on, this energy is released", "It changes into light energy (the beam)", "Some is also lost as heat energy", "Answer: Chemical energy → light energy"]
         },
         {
           "q": "What is energy?",
           "options": ["A type of food", "The ability to do work or cause change", "A kind of machine", "A form of metal"],
           "answer": "The ability to do work or cause change",
           "explain": "Energy is the ability to do work or make things happen.",
-          "procedure": [
-            "Energy lets things move, warm up, light up, or make sound",
-            "Without energy, nothing would work",
-            "Energy can change form but is never lost",
-            "Answer: The ability to do work or cause change"
-          ]
+          "procedure": ["Energy lets things move, warm up, light up, or make sound", "Without energy, nothing would work", "Energy can change form but is never lost", "Answer: The ability to do work or cause change"]
         },
         {
           "q": "Can energy be created or destroyed?",
           "options": ["Yes, energy can be created", "Yes, energy can be destroyed", "No, energy cannot be created or destroyed — it only changes form", "Energy only exists in the sun"],
           "answer": "No, energy cannot be created or destroyed — it only changes form",
           "explain": "Energy is never created or destroyed — it only converts from one form to another.",
-          "procedure": [
-            "This is called the law of conservation of energy",
-            "Energy cannot be created from nothing",
-            "It cannot be destroyed either",
-            "It only changes from one form to another",
-            "Answer: No, energy cannot be created or destroyed — it only changes form"
-          ]
+          "procedure": ["This is called the law of conservation of energy", "Energy cannot be created from nothing", "It cannot be destroyed either", "It only changes from one form to another", "Answer: No, energy cannot be created or destroyed — it only changes form"]
         },
         {
           "q": "Which form of energy do we get from the sun?",
           "options": ["Sound energy", "Light and heat energy", "Chemical energy only", "Electrical energy"],
           "answer": "Light and heat energy",
           "explain": "The sun gives us both light and heat energy.",
-          "procedure": [
-            "The sun is our main natural source of energy",
-            "It gives off light energy (we can see everything)",
-            "It also gives off heat energy (it warms the Earth)",
-            "Answer: Light and heat energy"
-          ]
+          "procedure": ["The sun is our main natural source of energy", "It gives off light energy (we can see everything)", "It also gives off heat energy (it warms the Earth)", "Answer: Light and heat energy"]
         },
         {
           "q": "Why do we need energy?",
           "options": ["Only to run machines", "To do work, move, grow, and stay alive", "Only to sleep", "Only for plants"],
           "answer": "To do work, move, grow, and stay alive",
           "explain": "All living things need energy to move, grow, and function.",
-          "procedure": [
-            "Everything we do uses energy",
-            "Walking, talking, thinking, and even sleeping use energy",
-            "Plants need energy from sunlight to grow",
-            "Machines need energy to work",
-            "Answer: To do work, move, grow, and stay alive"
-          ]
+          "procedure": ["Everything we do uses energy", "Walking, talking, thinking, and even sleeping use energy", "Plants need energy from sunlight to grow", "Machines need energy to work", "Answer: To do work, move, grow, and stay alive"]
         }
       ]
     },
@@ -1151,12 +658,7 @@
           "options": ["A type of metal", "An object that attracts iron and steel", "A kind of light", "A form of energy"],
           "answer": "An object that attracts iron and steel",
           "explain": "A magnet is an object that attracts magnetic materials like iron and steel.",
-          "procedure": [
-            "A magnet produces a magnetic field around it",
-            "This field attracts certain metals",
-            "Iron and steel are the most common magnetic materials",
-            "Answer: An object that attracts iron and steel"
-          ]
+          "procedure": ["A magnet produces a magnetic field around it", "This field attracts certain metals", "Iron and steel are the most common magnetic materials", "Answer: An object that attracts iron and steel"]
         },
         {
           "q": "Which of these materials is attracted by a magnet?",
@@ -1164,12 +666,7 @@
           "options": ["Wood", "Iron nail", "Plastic", "Glass"],
           "answer": "Iron nail",
           "explain": "Iron is a magnetic material — a magnet will attract it.",
-          "procedure": [
-            "Magnetic materials are attracted to magnets",
-            "Wood, plastic, and glass are NOT magnetic",
-            "Iron is magnetic — a magnet will pull an iron nail",
-            "Answer: Iron nail"
-          ]
+          "procedure": ["Magnetic materials are attracted to magnets", "Wood, plastic, and glass are NOT magnetic", "Iron is magnetic — a magnet will pull an iron nail", "Answer: Iron nail"]
         },
         {
           "q": "Which of these is NOT attracted by a magnet?",
@@ -1177,11 +674,7 @@
           "options": ["Paper clip", "Steel spoon", "Wooden pencil", "Iron key"],
           "answer": "Wooden pencil",
           "explain": "Wood is not magnetic — it is not attracted by magnets.",
-          "procedure": [
-            "Paper clips, steel spoons, and iron keys are all made of magnetic metals",
-            "Wood is not a metal — it is not attracted",
-            "Answer: Wooden pencil"
-          ]
+          "procedure": ["Paper clips, steel spoons, and iron keys are all made of magnetic metals", "Wood is not a metal — it is not attracted", "Answer: Wooden pencil"]
         },
         {
           "q": "How many poles does a bar magnet have?",
@@ -1189,12 +682,7 @@
           "options": ["1", "2", "3", "4"],
           "answer": "2",
           "explain": "A bar magnet has two poles — North and South.",
-          "procedure": [
-            "Every magnet has two poles",
-            "One end is the North pole",
-            "The other end is the South pole",
-            "Answer: 2"
-          ]
+          "procedure": ["Every magnet has two poles", "One end is the North pole", "The other end is the South pole", "Answer: 2"]
         },
         {
           "q": "What are the two poles of a magnet called?",
@@ -1202,12 +690,7 @@
           "options": ["East and West", "North and South", "Left and Right", "Top and Bottom"],
           "answer": "North and South",
           "explain": "The two poles of a magnet are called North and South.",
-          "procedure": [
-            "The poles are the strongest parts of a magnet",
-            "One is called the North pole",
-            "The other is called the South pole",
-            "Answer: North and South"
-          ]
+          "procedure": ["The poles are the strongest parts of a magnet", "One is called the North pole", "The other is called the South pole", "Answer: North and South"]
         },
         {
           "q": "Where is a magnet the strongest?",
@@ -1215,12 +698,7 @@
           "options": ["In the middle", "At the ends (the poles)", "At the sides", "It is the same everywhere"],
           "answer": "At the ends (the poles)",
           "explain": "A magnet is strongest at its two poles — the ends.",
-          "procedure": [
-            "The magnetic force is strongest at the poles",
-            "You can see this if you sprinkle iron filings on a magnet",
-            "Most filings stick to the ends",
-            "Answer: At the ends (the poles)"
-          ]
+          "procedure": ["The magnetic force is strongest at the poles", "You can see this if you sprinkle iron filings on a magnet", "Most filings stick to the ends", "Answer: At the ends (the poles)"]
         },
         {
           "q": "What happens when two North poles are brought together?",
@@ -1228,12 +706,7 @@
           "options": ["They attract each other", "They repel each other", "Nothing happens", "They both disappear"],
           "answer": "They repel each other",
           "explain": "Like poles repel — North repels North, South repels South.",
-          "procedure": [
-            "There is a rule: like poles repel",
-            "Two North poles are the same — so they push apart",
-            "You can feel this if you try it with two magnets",
-            "Answer: They repel each other"
-          ]
+          "procedure": ["There is a rule: like poles repel", "Two North poles are the same — so they push apart", "You can feel this if you try it with two magnets", "Answer: They repel each other"]
         },
         {
           "q": "What happens when a North pole and a South pole are brought together?",
@@ -1241,12 +714,7 @@
           "options": ["They repel each other", "They attract each other", "Nothing happens", "They turn into metal"],
           "answer": "They attract each other",
           "explain": "Opposite poles attract — North attracts South.",
-          "procedure": [
-            "There is a rule: opposite poles attract",
-            "North and South are opposite",
-            "So they pull toward each other",
-            "Answer: They attract each other"
-          ]
+          "procedure": ["There is a rule: opposite poles attract", "North and South are opposite", "So they pull toward each other", "Answer: They attract each other"]
         },
         {
           "q": "What is a magnetic field?",
@@ -1254,13 +722,7 @@
           "options": ["A field where crops grow", "The invisible area around a magnet where its force acts", "A football field with magnets", "A type of metal"],
           "answer": "The invisible area around a magnet where its force acts",
           "explain": "A magnetic field is the invisible space around a magnet where it can attract or repel.",
-          "procedure": [
-            "Magnets have an invisible force around them",
-            "This force is called the magnetic field",
-            "Inside this field, the magnet can pull or push other magnetic materials",
-            "You can see the field's shape with iron filings",
-            "Answer: The invisible area around a magnet where its force acts"
-          ]
+          "procedure": ["Magnets have an invisible force around them", "This force is called the magnetic field", "Inside this field, the magnet can pull or push other magnetic materials", "You can see the field's shape with iron filings", "Answer: The invisible area around a magnet where its force acts"]
         },
         {
           "q": "What is a horseshoe magnet?",
@@ -1268,13 +730,7 @@
           "options": ["A magnet shaped like a horse", "A magnet bent into a U-shape", "A magnet for horses", "A magnet made of horseshoe metal"],
           "answer": "A magnet bent into a U-shape",
           "explain": "A horseshoe magnet is a magnet shaped like a U (or horseshoe).",
-          "procedure": [
-            "A horseshoe magnet is bent into a U-shape",
-            "Both poles are at the ends of the U",
-            "The U-shape brings the poles close together",
-            "This makes the magnetic force stronger between them",
-            "Answer: A magnet bent into a U-shape"
-          ]
+          "procedure": ["A horseshoe magnet is bent into a U-shape", "Both poles are at the ends of the U", "The U-shape brings the poles close together", "This makes the magnetic force stronger between them", "Answer: A magnet bent into a U-shape"]
         },
         {
           "q": "Where are the poles on a horseshoe magnet?",
@@ -1282,12 +738,7 @@
           "options": ["Both on the same end", "At the two ends of the U", "In the middle", "On the sides"],
           "answer": "At the two ends of the U",
           "explain": "The two poles of a horseshoe magnet are at the two ends of the U-shape.",
-          "procedure": [
-            "The horseshoe magnet is bent so both poles face the same way",
-            "One end is the North pole",
-            "The other end is the South pole",
-            "Answer: At the two ends of the U"
-          ]
+          "procedure": ["The horseshoe magnet is bent so both poles face the same way", "One end is the North pole", "The other end is the South pole", "Answer: At the two ends of the U"]
         },
         {
           "q": "What is a compass?",
@@ -1295,13 +746,7 @@
           "options": ["A device for measuring length", "A device that uses a magnet to show direction", "A device for measuring temperature", "A device for weighing objects"],
           "answer": "A device that uses a magnet to show direction",
           "explain": "A compass has a tiny magnet inside that always points north.",
-          "procedure": [
-            "A compass has a small magnetic needle inside",
-            "The needle is free to turn",
-            "It lines up with the Earth's magnetic field",
-            "One end always points North",
-            "Answer: A device that uses a magnet to show direction"
-          ]
+          "procedure": ["A compass has a small magnetic needle inside", "The needle is free to turn", "It lines up with the Earth's magnetic field", "One end always points North", "Answer: A device that uses a magnet to show direction"]
         },
         {
           "q": "Which direction does a compass needle always point?",
@@ -1309,25 +754,14 @@
           "options": ["East", "North", "Up", "Down"],
           "answer": "North",
           "explain": "The compass needle always points toward the North pole.",
-          "procedure": [
-            "Earth itself acts like a giant magnet",
-            "The compass needle lines up with Earth's magnetic field",
-            "Because of this, it always points North",
-            "Answer: North"
-          ]
+          "procedure": ["Earth itself acts like a giant magnet", "The compass needle lines up with Earth's magnetic field", "Because of this, it always points North", "Answer: North"]
         },
         {
           "q": "Why does a compass work?",
           "options": ["It has a tiny battery", "It uses the Earth's magnetic field", "It uses sunlight", "It uses sound waves"],
           "answer": "It uses the Earth's magnetic field",
           "explain": "A compass works because Earth itself has a magnetic field.",
-          "procedure": [
-            "Earth has a magnetic field, like a giant magnet",
-            "This field has a North and a South end",
-            "The compass needle lines up with it",
-            "That is why the needle always points North",
-            "Answer: It uses the Earth's magnetic field"
-          ]
+          "procedure": ["Earth has a magnetic field, like a giant magnet", "This field has a North and a South end", "The compass needle lines up with it", "That is why the needle always points North", "Answer: It uses the Earth's magnetic field"]
         },
         {
           "q": "Which of these is a common use of magnets?",
@@ -1335,12 +769,7 @@
           "options": ["Fridge doors", "Shoelaces", "Pillows", "Pencils"],
           "answer": "Fridge doors",
           "explain": "Fridge doors use magnets to stay closed.",
-          "procedure": [
-            "Fridge doors have magnets in the seal",
-            "This keeps the door closed tight",
-            "Magnets are also used in speakers, motors, and bank cards",
-            "Answer: Fridge doors"
-          ]
+          "procedure": ["Fridge doors have magnets in the seal", "This keeps the door closed tight", "Magnets are also used in speakers, motors, and bank cards", "Answer: Fridge doors"]
         },
         {
           "q": "Which of these uses magnets?",
@@ -1348,13 +777,7 @@
           "options": ["A wooden chair", "A loudspeaker", "A paper bag", "A glass bottle"],
           "answer": "A loudspeaker",
           "explain": "Loudspeakers use magnets to make sound.",
-          "procedure": [
-            "Inside a loudspeaker there is a magnet and a coil",
-            "The magnet and coil work together",
-            "This makes the speaker vibrate",
-            "The vibration makes sound",
-            "Answer: A loudspeaker"
-          ]
+          "procedure": ["Inside a loudspeaker there is a magnet and a coil", "The magnet and coil work together", "This makes the speaker vibrate", "The vibration makes sound", "Answer: A loudspeaker"]
         },
         {
           "q": "Which of these is a magnetic material?",
@@ -1362,13 +785,7 @@
           "options": ["Copper", "Steel", "Aluminium", "Plastic"],
           "answer": "Steel",
           "explain": "Steel is made mostly of iron, so it is magnetic.",
-          "procedure": [
-            "Steel is mostly iron",
-            "Iron is magnetic",
-            "So steel is magnetic too",
-            "Copper, aluminium, and plastic are not magnetic",
-            "Answer: Steel"
-          ]
+          "procedure": ["Steel is mostly iron", "Iron is magnetic", "So steel is magnetic too", "Copper, aluminium, and plastic are not magnetic", "Answer: Steel"]
         },
         {
           "q": "What happens to iron filings sprinkled near a magnet?",
@@ -1376,13 +793,7 @@
           "options": ["They are not affected", "They move and form a pattern around the magnet", "They turn into plastic", "They disappear"],
           "answer": "They move and form a pattern around the magnet",
           "explain": "Iron filings form a pattern that shows the magnetic field.",
-          "procedure": [
-            "Iron filings are tiny bits of iron",
-            "When sprinkled near a magnet, they are attracted",
-            "They form lines and curves around the magnet",
-            "This pattern shows the shape of the magnetic field",
-            "Answer: They move and form a pattern around the magnet"
-          ]
+          "procedure": ["Iron filings are tiny bits of iron", "When sprinkled near a magnet, they are attracted", "They form lines and curves around the magnet", "This pattern shows the shape of the magnetic field", "Answer: They move and form a pattern around the magnet"]
         },
         {
           "q": "Which of these will a magnet NOT attract?",
@@ -1390,25 +801,14 @@
           "options": ["An iron nail", "A steel paper clip", "A copper coin", "An iron key"],
           "answer": "A copper coin",
           "explain": "Copper is not a magnetic material.",
-          "procedure": [
-            "Magnets attract iron, steel, nickel, and cobalt",
-            "Copper is NOT magnetic",
-            "So a magnet will not attract a copper coin",
-            "Answer: A copper coin"
-          ]
+          "procedure": ["Magnets attract iron, steel, nickel, and cobalt", "Copper is NOT magnetic", "So a magnet will not attract a copper coin", "Answer: A copper coin"]
         },
         {
           "q": "If you cut a bar magnet in half, what happens?",
           "options": ["You get one North pole and one South pole", "Each half becomes a smaller magnet with its own North and South poles", "The magnet loses its magnetism", "The magnet becomes non-magnetic"],
           "answer": "Each half becomes a smaller magnet with its own North and South poles",
           "explain": "Every piece of a magnet is itself a magnet with two poles.",
-          "procedure": [
-            "Cut a bar magnet in half",
-            "You might expect one half to be North and the other South",
-            "But no — each half becomes its own complete magnet",
-            "Both halves have a North AND a South pole",
-            "Answer: Each half becomes a smaller magnet with its own North and South poles"
-          ]
+          "procedure": ["Cut a bar magnet in half", "You might expect one half to be North and the other South", "But no — each half becomes its own complete magnet", "Both halves have a North AND a South pole", "Answer: Each half becomes a smaller magnet with its own North and South poles"]
         }
       ]
     },
@@ -1419,21 +819,10 @@
       "questions": [
         {
           "q": "What is a mixture?",
-          "options": [
-            "A single pure substance",
-            "Two or more substances combined but not chemically joined",
-            "A type of chemical reaction",
-            "A type of atom"
-          ],
+          "options": ["A single pure substance", "Two or more substances combined but not chemically joined", "A type of chemical reaction", "A type of atom"],
           "answer": "Two or more substances combined but not chemically joined",
           "explain": "A mixture is made of two or more substances mixed together without a chemical bond.",
-          "procedure": [
-            "A mixture contains two or more substances",
-            "Each substance keeps its own properties",
-            "They are not chemically combined",
-            "They can usually be separated again",
-            "Answer: Two or more substances combined but not chemically joined"
-          ]
+          "procedure": ["A mixture contains two or more substances", "Each substance keeps its own properties", "They are not chemically combined", "They can usually be separated again", "Answer: Two or more substances combined but not chemically joined"]
         },
         {
           "q": "Which of these is an example of a mixture?",
@@ -1441,32 +830,15 @@
           "options": ["Pure water", "Tea with a tea bag", "A gold ring", "A copper wire"],
           "answer": "Tea with a tea bag",
           "explain": "Tea is a mixture of tea leaves and water.",
-          "procedure": [
-            "Pure water is a single substance",
-            "Tea contains tea leaves and water mixed together",
-            "Both substances are still present in tea",
-            "So tea is a mixture",
-            "Answer: Tea with a tea bag"
-          ]
+          "procedure": ["Pure water is a single substance", "Tea contains tea leaves and water mixed together", "Both substances are still present in tea", "So tea is a mixture", "Answer: Tea with a tea bag"]
         },
         {
           "q": "What is a solution?",
           "image": "assets/science/solution.png",
-          "options": [
-            "A mixture where a solid is mixed with a liquid and dissolves",
-            "A type of chemical reaction",
-            "A rock",
-            "A gas"
-          ],
+          "options": ["A mixture where a solid is mixed with a liquid and dissolves", "A type of chemical reaction", "A rock", "A gas"],
           "answer": "A mixture where a solid is mixed with a liquid and dissolves",
           "explain": "A solution is a mixture where one substance dissolves into another.",
-          "procedure": [
-            "In a solution, one substance dissolves into another",
-            "For example, sugar dissolving in water makes a sugar solution",
-            "The sugar is no longer visible but is still there",
-            "The solution looks clear",
-            "Answer: A mixture where a solid is mixed with a liquid and dissolves"
-          ]
+          "procedure": ["In a solution, one substance dissolves into another", "For example, sugar dissolving in water makes a sugar solution", "The sugar is no longer visible but is still there", "The solution looks clear", "Answer: A mixture where a solid is mixed with a liquid and dissolves"]
         },
         {
           "q": "When sugar is stirred into water, what happens?",
@@ -1474,13 +846,7 @@
           "options": ["The sugar disappears forever", "The sugar dissolves and forms a solution", "The water turns solid", "The sugar and water become one new substance"],
           "answer": "The sugar dissolves and forms a solution",
           "explain": "Sugar dissolves in water to form a solution.",
-          "procedure": [
-            "The sugar grains break apart into tiny particles",
-            "These particles mix evenly through the water",
-            "We say the sugar has dissolved",
-            "This forms a sugar solution",
-            "Answer: The sugar dissolves and forms a solution"
-          ]
+          "procedure": ["The sugar grains break apart into tiny particles", "These particles mix evenly through the water", "We say the sugar has dissolved", "This forms a sugar solution", "Answer: The sugar dissolves and forms a solution"]
         },
         {
           "q": "Which method separates stones from sand?",
@@ -1488,32 +854,15 @@
           "options": ["Filtration", "Sieving", "Evaporation", "Boiling"],
           "answer": "Sieving",
           "explain": "Sieving separates solids of different sizes — like stones from sand.",
-          "procedure": [
-            "Sand grains are smaller than stones",
-            "A sieve has small holes",
-            "Fine sand falls through the holes",
-            "Larger stones stay on top",
-            "Answer: Sieving"
-          ]
+          "procedure": ["Sand grains are smaller than stones", "A sieve has small holes", "Fine sand falls through the holes", "Larger stones stay on top", "Answer: Sieving"]
         },
         {
           "q": "What is sieving used for?",
           "image": "assets/science/sieving.png",
-          "options": [
-            "Separating solids of different sizes",
-            "Separating liquids from liquids",
-            "Making new substances",
-            "Cooling things down"
-          ],
+          "options": ["Separating solids of different sizes", "Separating liquids from liquids", "Making new substances", "Cooling things down"],
           "answer": "Separating solids of different sizes",
           "explain": "Sieving separates solid particles by size.",
-          "procedure": [
-            "A sieve has a mesh with holes of a certain size",
-            "Smaller particles pass through the holes",
-            "Larger particles stay on top",
-            "This is used for sand, flour, and gravel",
-            "Answer: Separating solids of different sizes"
-          ]
+          "procedure": ["A sieve has a mesh with holes of a certain size", "Smaller particles pass through the holes", "Larger particles stay on top", "This is used for sand, flour, and gravel", "Answer: Separating solids of different sizes"]
         },
         {
           "q": "Which method separates sand from water?",
@@ -1521,32 +870,15 @@
           "options": ["Sieving", "Filtration", "Evaporation", "Distillation"],
           "answer": "Filtration",
           "explain": "Filtration separates an insoluble solid from a liquid.",
-          "procedure": [
-            "Sand does not dissolve in water",
-            "We can pour the mixture through filter paper",
-            "The filter paper traps the sand",
-            "Clear water passes through",
-            "Answer: Filtration"
-          ]
+          "procedure": ["Sand does not dissolve in water", "We can pour the mixture through filter paper", "The filter paper traps the sand", "Clear water passes through", "Answer: Filtration"]
         },
         {
           "q": "What is filtration?",
           "image": "assets/science/filtration.png",
-          "options": [
-            "Separating a solid from a liquid using filter paper",
-            "Separating two solids of different sizes",
-            "Heating a liquid until it evaporates",
-            "Using a magnet to separate metals"
-          ],
+          "options": ["Separating a solid from a liquid using filter paper", "Separating two solids of different sizes", "Heating a liquid until it evaporates", "Using a magnet to separate metals"],
           "answer": "Separating a solid from a liquid using filter paper",
           "explain": "Filtration uses filter paper to trap solids from a liquid.",
-          "procedure": [
-            "Filter paper has tiny holes",
-            "Liquid can pass through the holes",
-            "Solid particles are too big to pass",
-            "They get trapped in the filter paper",
-            "Answer: Separating a solid from a liquid using filter paper"
-          ]
+          "procedure": ["Filter paper has tiny holes", "Liquid can pass through the holes", "Solid particles are too big to pass", "They get trapped in the filter paper", "Answer: Separating a solid from a liquid using filter paper"]
         },
         {
           "q": "Which method separates salt from salty water?",
@@ -1554,13 +886,7 @@
           "options": ["Filtration", "Sieving", "Evaporation", "Magnetic separation"],
           "answer": "Evaporation",
           "explain": "Evaporation removes the water, leaving the salt behind.",
-          "procedure": [
-            "Salt dissolves in water — you cannot filter it out",
-            "If you heat the salty water, the water evaporates",
-            "The water turns into vapour and goes into the air",
-            "The salt crystals are left behind",
-            "Answer: Evaporation"
-          ]
+          "procedure": ["Salt dissolves in water — you cannot filter it out", "If you heat the salty water, the water evaporates", "The water turns into vapour and goes into the air", "The salt crystals are left behind", "Answer: Evaporation"]
         },
         {
           "q": "What is left behind after evaporating salty water?",
@@ -1568,13 +894,7 @@
           "options": ["Nothing", "Water", "Salt crystals", "Sugar"],
           "answer": "Salt crystals",
           "explain": "When the water evaporates, the salt is left as crystals.",
-          "procedure": [
-            "Salt is dissolved in the water",
-            "When water evaporates, it leaves as vapour",
-            "The salt does not evaporate with it",
-            "Salt crystals form in the container",
-            "Answer: Salt crystals"
-          ]
+          "procedure": ["Salt is dissolved in the water", "When water evaporates, it leaves as vapour", "The salt does not evaporate with it", "Salt crystals form in the container", "Answer: Salt crystals"]
         },
         {
           "q": "Which method separates iron filings from sand?",
@@ -1582,32 +902,15 @@
           "options": ["Sieving", "Filtration", "Evaporation", "Using a magnet"],
           "answer": "Using a magnet",
           "explain": "Iron is magnetic, so a magnet attracts the iron filings, leaving the sand behind.",
-          "procedure": [
-            "Iron is magnetic — sand is not",
-            "Hold a magnet above the mixture",
-            "The iron filings jump to the magnet",
-            "The sand stays on the table",
-            "Answer: Using a magnet"
-          ]
+          "procedure": ["Iron is magnetic — sand is not", "Hold a magnet above the mixture", "The iron filings jump to the magnet", "The sand stays on the table", "Answer: Using a magnet"]
         },
         {
           "q": "What is magnetic separation?",
           "image": "assets/science/magnetic-separation.png",
-          "options": [
-            "Separating magnetic materials using a magnet",
-            "Separating liquids using heat",
-            "Separating solids using a sieve",
-            "Separating colours using light"
-          ],
+          "options": ["Separating magnetic materials using a magnet", "Separating liquids using heat", "Separating solids using a sieve", "Separating colours using light"],
           "answer": "Separating magnetic materials using a magnet",
           "explain": "Magnetic separation uses a magnet to pull out magnetic materials.",
-          "procedure": [
-            "In magnetic separation, we use a magnet",
-            "The magnet attracts iron, steel, or other magnetic materials",
-            "Non-magnetic materials stay behind",
-            "This is used in recycling plants to sort metals",
-            "Answer: Separating magnetic materials using a magnet"
-          ]
+          "procedure": ["In magnetic separation, we use a magnet", "The magnet attracts iron, steel, or other magnetic materials", "Non-magnetic materials stay behind", "This is used in recycling plants to sort metals", "Answer: Separating magnetic materials using a magnet"]
         },
         {
           "q": "Which method uses a magnet?",
@@ -1615,119 +918,56 @@
           "options": ["Evaporation", "Filtration", "Magnetic separation", "Sieving"],
           "answer": "Magnetic separation",
           "explain": "Magnetic separation uses a magnet to remove magnetic materials.",
-          "procedure": [
-            "Only one of the methods uses a magnet",
-            "Evaporation uses heat",
-            "Filtration uses filter paper",
-            "Sieving uses a mesh",
-            "Magnetic separation uses a magnet",
-            "Answer: Magnetic separation"
-          ]
+          "procedure": ["Only one of the methods uses a magnet", "Evaporation uses heat", "Filtration uses filter paper", "Sieving uses a mesh", "Magnetic separation uses a magnet", "Answer: Magnetic separation"]
         },
         {
           "q": "What is the difference between a mixture and a pure substance?",
-          "options": [
-            "A mixture is one substance; a pure substance is many",
-            "A mixture contains two or more substances; a pure substance is only one",
-            "A mixture is always a liquid",
-            "They are the same thing"
-          ],
+          "options": ["A mixture is one substance; a pure substance is many", "A mixture contains two or more substances; a pure substance is only one", "A mixture is always a liquid", "They are the same thing"],
           "answer": "A mixture contains two or more substances; a pure substance is only one",
           "explain": "A mixture has two or more substances, while a pure substance has only one.",
-          "procedure": [
-            "A pure substance is made of only one thing",
-            "A mixture is made of two or more substances",
-            "The substances in a mixture keep their own properties",
-            "Answer: A mixture contains two or more substances; a pure substance is only one"
-          ]
+          "procedure": ["A pure substance is made of only one thing", "A mixture is made of two or more substances", "The substances in a mixture keep their own properties", "Answer: A mixture contains two or more substances; a pure substance is only one"]
         },
         {
           "q": "Is salt water a mixture?",
           "options": ["No, it is a pure substance", "Yes, it is a mixture of salt and water", "Only if it is cold", "Only if you can see the salt"],
           "answer": "Yes, it is a mixture of salt and water",
           "explain": "Salt water is a mixture of salt dissolved in water.",
-          "procedure": [
-            "Salt water contains salt and water",
-            "The salt is dissolved but still there",
-            "They are not chemically joined",
-            "So salt water is a mixture",
-            "Answer: Yes, it is a mixture of salt and water"
-          ]
+          "procedure": ["Salt water contains salt and water", "The salt is dissolved but still there", "They are not chemically joined", "So salt water is a mixture", "Answer: Yes, it is a mixture of salt and water"]
         },
         {
           "q": "When salt dissolves in water, is the salt still there?",
           "options": ["No, it disappears", "Yes, it is still there but dissolved", "Yes, but only when the water is hot", "It depends on the weather"],
           "answer": "Yes, it is still there but dissolved",
           "explain": "The salt is still in the water — you just can't see it.",
-          "procedure": [
-            "The salt grains break into tiny particles",
-            "These mix with the water",
-            "You cannot see them but they are there",
-            "If you evaporate the water, the salt returns",
-            "Answer: Yes, it is still there but dissolved"
-          ]
+          "procedure": ["The salt grains break into tiny particles", "These mix with the water", "You cannot see them but they are there", "If you evaporate the water, the salt returns", "Answer: Yes, it is still there but dissolved"]
         },
         {
           "q": "Which of these is NOT a way to separate a mixture?",
           "options": ["Sieving", "Filtration", "Evaporation", "Adding more ingredients"],
           "answer": "Adding more ingredients",
           "explain": "Adding more ingredients makes the mixture bigger, not separated.",
-          "procedure": [
-            "Separation methods take parts of the mixture apart",
-            "Sieving, filtration, and evaporation all separate mixtures",
-            "Adding more ingredients does the opposite — it makes the mixture larger",
-            "Answer: Adding more ingredients"
-          ]
+          "procedure": ["Separation methods take parts of the mixture apart", "Sieving, filtration, and evaporation all separate mixtures", "Adding more ingredients does the opposite — it makes the mixture larger", "Answer: Adding more ingredients"]
         },
         {
           "q": "What happens to the water during evaporation?",
           "options": ["It becomes ice", "It becomes water vapour and goes into the air", "It turns into salt", "It disappears completely"],
           "answer": "It becomes water vapour and goes into the air",
           "explain": "During evaporation, water turns into vapour and escapes into the air.",
-          "procedure": [
-            "When water is heated, it changes into gas",
-            "The gas is called water vapour",
-            "The vapour rises into the air",
-            "The solid that was dissolved is left behind",
-            "Answer: It becomes water vapour and goes into the air"
-          ]
+          "procedure": ["When water is heated, it changes into gas", "The gas is called water vapour", "The vapour rises into the air", "The solid that was dissolved is left behind", "Answer: It becomes water vapour and goes into the air"]
         },
         {
           "q": "Why is it useful to know how to separate mixtures?",
-          "options": [
-            "So we can mix more things together",
-            "So we can purify water, sort recycling, and get useful substances",
-            "So we can make mixtures more complicated",
-            "It has no real use"
-          ],
+          "options": ["So we can mix more things together", "So we can purify water, sort recycling, and get useful substances", "So we can make mixtures more complicated", "It has no real use"],
           "answer": "So we can purify water, sort recycling, and get useful substances",
           "explain": "Separating mixtures is used to purify water, recycle materials, and extract useful substances.",
-          "procedure": [
-            "Filtration purifies drinking water",
-            "Magnetic separation sorts metals in recycling plants",
-            "Evaporation is used to get salt from sea water",
-            "Answer: So we can purify water, sort recycling, and get useful substances"
-          ]
+          "procedure": ["Filtration purifies drinking water", "Magnetic separation sorts metals in recycling plants", "Evaporation is used to get salt from sea water", "Answer: So we can purify water, sort recycling, and get useful substances"]
         },
         {
           "q": "How can you separate a mixture of salt and sand?",
-          "options": [
-            "Add water, then filter and evaporate",
-            "Use a magnet",
-            "Use a sieve",
-            "Use a spoon"
-          ],
+          "options": ["Add water, then filter and evaporate", "Use a magnet", "Use a sieve", "Use a spoon"],
           "answer": "Add water, then filter and evaporate",
           "explain": "Salt dissolves in water but sand does not, so we can filter and evaporate to separate them.",
-          "procedure": [
-            "First, add water to the salt and sand mixture and stir",
-            "The salt dissolves in the water, but the sand does not",
-            "Pour the mixture through filter paper",
-            "The sand stays in the filter paper; the salty water passes through",
-            "Then heat the salty water to evaporate it",
-            "The water becomes vapour and the salt crystals are left behind",
-            "Answer: Add water, then filter and evaporate"
-          ]
+          "procedure": ["First, add water to the salt and sand mixture and stir", "The salt dissolves in the water, but the sand does not", "Pour the mixture through filter paper", "The sand stays in the filter paper; the salty water passes through", "Then heat the salty water to evaporate it", "The water becomes vapour and the salt crystals are left behind", "Answer: Add water, then filter and evaporate"]
         }
       ]
     },
@@ -1738,21 +978,10 @@
       "questions": [
         {
           "q": "What is a water-related disease?",
-          "options": [
-            "A disease caused by drinking clean water",
-            "A disease caused by drinking or touching dirty water",
-            "A disease caused by too much water",
-            "A disease caused by rain"
-          ],
+          "options": ["A disease caused by drinking clean water", "A disease caused by drinking or touching dirty water", "A disease caused by too much water", "A disease caused by rain"],
           "answer": "A disease caused by drinking or touching dirty water",
           "explain": "Water-related diseases come from dirty water that contains germs.",
-          "procedure": [
-            "Dirty water contains tiny germs (bacteria and viruses)",
-            "When people drink or touch dirty water, germs enter the body",
-            "The germs cause illness",
-            "These illnesses are called water-related diseases",
-            "Answer: A disease caused by drinking or touching dirty water"
-          ]
+          "procedure": ["Dirty water contains tiny germs (bacteria and viruses)", "When people drink or touch dirty water, germs enter the body", "The germs cause illness", "These illnesses are called water-related diseases", "Answer: A disease caused by drinking or touching dirty water"]
         },
         {
           "q": "Which of these is a water-related disease?",
@@ -1760,353 +989,150 @@
           "options": ["Malaria", "Cholera", "Measles", "Chickenpox"],
           "answer": "Cholera",
           "explain": "Cholera is a serious disease spread through dirty water.",
-          "procedure": [
-            "Cholera is caused by bacteria in dirty water",
-            "People get it by drinking contaminated water",
-            "It causes severe diarrhoea and vomiting",
-            "It can be prevented by drinking clean water",
-            "Answer: Cholera"
-          ]
+          "procedure": ["Cholera is caused by bacteria in dirty water", "People get it by drinking contaminated water", "It causes severe diarrhoea and vomiting", "It can be prevented by drinking clean water", "Answer: Cholera"]
         },
         {
           "q": "How do most water-related diseases spread?",
           "image": "assets/science/dirty-water.png",
-          "options": [
-            "Through the air",
-            "Through drinking or touching dirty water",
-            "Through sunlight",
-            "Through music"
-          ],
+          "options": ["Through the air", "Through drinking or touching dirty water", "Through sunlight", "Through music"],
           "answer": "Through drinking or touching dirty water",
           "explain": "Water-related diseases spread when germs in dirty water enter the body.",
-          "procedure": [
-            "Dirty water contains germs",
-            "People drink the water or wash with it",
-            "The germs enter the body through the mouth or skin",
-            "This is how the disease spreads",
-            "Answer: Through drinking or touching dirty water"
-          ]
+          "procedure": ["Dirty water contains germs", "People drink the water or wash with it", "The germs enter the body through the mouth or skin", "This is how the disease spreads", "Answer: Through drinking or touching dirty water"]
         },
         {
           "q": "Which water is safe to drink?",
           "image": "assets/science/dirty-water.png",
-          "options": [
-            "Water from a dirty pond",
-            "Water from a river with leaves and mud",
-            "Clean water that has been boiled or treated",
-            "Rainwater collected from the roof without treatment"
-          ],
+          "options": ["Water from a dirty pond", "Water from a river with leaves and mud", "Clean water that has been boiled or treated", "Rainwater collected from the roof without treatment"],
           "answer": "Clean water that has been boiled or treated",
           "explain": "Only clean, boiled, or treated water is safe to drink.",
-          "procedure": [
-            "Dirty water contains germs",
-            "Boiling water kills the germs",
-            "Treating water (with chlorine tablets) also kills germs",
-            "Only treated or boiled water is safe",
-            "Answer: Clean water that has been boiled or treated"
-          ]
+          "procedure": ["Dirty water contains germs", "Boiling water kills the germs", "Treating water (with chlorine tablets) also kills germs", "Only treated or boiled water is safe", "Answer: Clean water that has been boiled or treated"]
         },
         {
           "q": "Why is it dangerous to drink water from a dirty pond?",
           "image": "assets/science/dirty-water.png",
-          "options": [
-            "It tastes bad",
-            "It contains germs that can make you sick",
-            "It is too cold",
-            "It is too much water"
-          ],
+          "options": ["It tastes bad", "It contains germs that can make you sick", "It is too cold", "It is too much water"],
           "answer": "It contains germs that can make you sick",
           "explain": "Dirty pond water has germs that cause disease.",
-          "procedure": [
-            "Ponds collect water from many places",
-            "The water picks up germs from animals and waste",
-            "The germs stay in the water",
-            "Drinking it puts those germs into your body",
-            "Answer: It contains germs that can make you sick"
-          ]
+          "procedure": ["Ponds collect water from many places", "The water picks up germs from animals and waste", "The germs stay in the water", "Drinking it puts those germs into your body", "Answer: It contains germs that can make you sick"]
         },
         {
           "q": "What is the best way to kill germs in drinking water?",
           "image": "assets/science/boiling-water.png",
-          "options": [
-            "Add sugar",
-            "Boil the water",
-            "Stir it well",
-            "Leave it in the sun"
-          ],
+          "options": ["Add sugar", "Boil the water", "Stir it well", "Leave it in the sun"],
           "answer": "Boil the water",
           "explain": "Boiling water kills the germs that cause disease.",
-          "procedure": [
-            "Heating water to boiling point (100°C) kills most germs",
-            "Boil the water for at least 1 minute",
-            "Let it cool before drinking",
-            "The water is now safe",
-            "Answer: Boil the water"
-          ]
+          "procedure": ["Heating water to boiling point (100°C) kills most germs", "Boil the water for at least 1 minute", "Let it cool before drinking", "The water is now safe", "Answer: Boil the water"]
         },
         {
           "q": "Why should we boil water before drinking it?",
           "image": "assets/science/boiling-water.png",
-          "options": [
-            "To make it taste better",
-            "To kill the germs in the water",
-            "To make it cold",
-            "To change its colour"
-          ],
+          "options": ["To make it taste better", "To kill the germs in the water", "To make it cold", "To change its colour"],
           "answer": "To kill the germs in the water",
           "explain": "Boiling water kills germs and makes it safe to drink.",
-          "procedure": [
-            "Raw water can contain germs",
-            "Germs cannot survive at high temperatures",
-            "Boiling for 1 minute kills them",
-            "This makes the water safe to drink",
-            "Answer: To kill the germs in the water"
-          ]
+          "procedure": ["Raw water can contain germs", "Germs cannot survive at high temperatures", "Boiling for 1 minute kills them", "This makes the water safe to drink", "Answer: To kill the germs in the water"]
         },
         {
           "q": "How should you store drinking water at home?",
           "image": "assets/science/covered-container.png",
-          "options": [
-            "In an open bucket",
-            "In a clean container with a lid",
-            "In a dirty pot",
-            "In a hole in the ground"
-          ],
+          "options": ["In an open bucket", "In a clean container with a lid", "In a dirty pot", "In a hole in the ground"],
           "answer": "In a clean container with a lid",
           "explain": "Water should be stored in a clean, covered container to keep it safe.",
-          "procedure": [
-            "Covered containers keep out dust and flies",
-            "Flies carry germs that can fall into open water",
-            "A lid keeps the water clean",
-            "Always use a clean container with a lid",
-            "Answer: In a clean container with a lid"
-          ]
+          "procedure": ["Covered containers keep out dust and flies", "Flies carry germs that can fall into open water", "A lid keeps the water clean", "Always use a clean container with a lid", "Answer: In a clean container with a lid"]
         },
         {
           "q": "Why should drinking water containers be covered?",
           "image": "assets/science/covered-container.png",
-          "options": [
-            "To make them look nice",
-            "To keep out dust and germs",
-            "To make the water cold",
-            "To make the water hot"
-          ],
+          "options": ["To make them look nice", "To keep out dust and germs", "To make the water cold", "To make the water hot"],
           "answer": "To keep out dust and germs",
           "explain": "Covering water keeps dust, flies, and germs out.",
-          "procedure": [
-            "Open water collects dust and dirt",
-            "Flies land on the water and leave germs",
-            "A lid keeps them out",
-            "This keeps the water safe to drink",
-            "Answer: To keep out dust and germs"
-          ]
+          "procedure": ["Open water collects dust and dirt", "Flies land on the water and leave germs", "A lid keeps them out", "This keeps the water safe to drink", "Answer: To keep out dust and germs"]
         },
         {
           "q": "When should you wash your hands?",
           "image": "assets/science/handwashing.png",
-          "options": [
-            "Only in the morning",
-            "Before eating and after using the toilet",
-            "Only after playing",
-            "Only once a week"
-          ],
+          "options": ["Only in the morning", "Before eating and after using the toilet", "Only after playing", "Only once a week"],
           "answer": "Before eating and after using the toilet",
           "explain": "Washing hands at these key times prevents the spread of disease.",
-          "procedure": [
-            "Germs get on our hands from many places",
-            "The toilet and dirty surfaces have many germs",
-            "If we eat without washing, the germs go into our food",
-            "Washing before eating and after the toilet stops this",
-            "Answer: Before eating and after using the toilet"
-          ]
+          "procedure": ["Germs get on our hands from many places", "The toilet and dirty surfaces have many germs", "If we eat without washing, the germs go into our food", "Washing before eating and after the toilet stops this", "Answer: Before eating and after using the toilet"]
         },
         {
           "q": "Why is washing your hands important?",
           "image": "assets/science/handwashing.png",
-          "options": [
-            "To make hands look clean",
-            "To remove germs that can cause disease",
-            "To keep hands warm",
-            "To make hands softer"
-          ],
+          "options": ["To make hands look clean", "To remove germs that can cause disease", "To keep hands warm", "To make hands softer"],
           "answer": "To remove germs that can cause disease",
           "explain": "Soap and water remove germs from hands.",
-          "procedure": [
-            "Our hands carry germs from many places",
-            "Soap and water wash the germs away",
-            "This prevents germs entering the mouth",
-            "Washing hands protects us from disease",
-            "Answer: To remove germs that can cause disease"
-          ]
+          "procedure": ["Our hands carry germs from many places", "Soap and water wash the germs away", "This prevents germs entering the mouth", "Washing hands protects us from disease", "Answer: To remove germs that can cause disease"]
         },
         {
           "q": "How long should you wash your hands?",
           "image": "assets/science/handwashing.png",
-          "options": [
-            "1 second",
-            "About 20 seconds",
-            "About 5 minutes",
-            "10 seconds"
-          ],
+          "options": ["1 second", "About 20 seconds", "About 5 minutes", "10 seconds"],
           "answer": "About 20 seconds",
           "explain": "Washing for about 20 seconds with soap removes most germs.",
-          "procedure": [
-            "Wet your hands with clean water",
-            "Apply soap",
-            "Rub hands together for about 20 seconds",
-            "Rinse with clean water",
-            "Answer: About 20 seconds"
-          ]
+          "procedure": ["Wet your hands with clean water", "Apply soap", "Rub hands together for about 20 seconds", "Rinse with clean water", "Answer: About 20 seconds"]
         },
         {
           "q": "Why are clean toilets important?",
           "image": "assets/science/proper-toilet.png",
-          "options": [
-            "They look nice",
-            "They stop germs from spreading in the community",
-            "They cost a lot of money",
-            "They make the house bigger"
-          ],
+          "options": ["They look nice", "They stop germs from spreading in the community", "They cost a lot of money", "They make the house bigger"],
           "answer": "They stop germs from spreading in the community",
           "explain": "Clean toilets keep human waste away from drinking water and food.",
-          "procedure": [
-            "Human waste contains many germs",
-            "If waste gets into water or food, it causes disease",
-            "Clean toilets keep waste in one safe place",
-            "This stops germs spreading in the community",
-            "Answer: They stop germs from spreading in the community"
-          ]
+          "procedure": ["Human waste contains many germs", "If waste gets into water or food, it causes disease", "Clean toilets keep waste in one safe place", "This stops germs spreading in the community", "Answer: They stop germs from spreading in the community"]
         },
         {
           "q": "What makes a toilet safe to use?",
           "image": "assets/science/proper-toilet.png",
-          "options": [
-            "It is far from the house",
-            "It is clean and has a cover or lid",
-            "It has no walls",
-            "It is in a river"
-          ],
+          "options": ["It is far from the house", "It is clean and has a cover or lid", "It has no walls", "It is in a river"],
           "answer": "It is clean and has a cover or lid",
           "explain": "A safe toilet keeps waste covered and away from people.",
-          "procedure": [
-            "A safe toilet has a proper cover or lid",
-            "It keeps flies and smells inside",
-            "It is cleaned regularly",
-            "It keeps waste away from water sources",
-            "Answer: It is clean and has a cover or lid"
-          ]
+          "procedure": ["A safe toilet has a proper cover or lid", "It keeps flies and smells inside", "It is cleaned regularly", "It keeps waste away from water sources", "Answer: It is clean and has a cover or lid"]
         },
         {
           "q": "What are common symptoms of a water-related disease?",
           "image": "assets/science/sick-child.png",
-          "options": [
-            "Strong bones and muscles",
-            "Diarrhoea, vomiting, and dehydration",
-            "Sharp eyesight",
-            "Long hair"
-          ],
+          "options": ["Strong bones and muscles", "Diarrhoea, vomiting, and dehydration", "Sharp eyesight", "Long hair"],
           "answer": "Diarrhoea, vomiting, and dehydration",
           "explain": "Water-related diseases often cause diarrhoea, vomiting, and dehydration.",
-          "procedure": [
-            "Water-related germs attack the stomach and intestines",
-            "This causes diarrhoea (frequent loose stools)",
-            "Vomiting may also happen",
-            "The body loses water and becomes dehydrated",
-            "Answer: Diarrhoea, vomiting, and dehydration"
-          ]
+          "procedure": ["Water-related germs attack the stomach and intestines", "This causes diarrhoea (frequent loose stools)", "Vomiting may also happen", "The body loses water and becomes dehydrated", "Answer: Diarrhoea, vomiting, and dehydration"]
         },
         {
           "q": "What should you do if a child has diarrhoea?",
           "image": "assets/science/sick-child.png",
-          "options": [
-            "Give them less water",
-            "Give them plenty of safe water or ORS and see a health worker",
-            "Leave them alone",
-            "Give them soda"
-          ],
+          "options": ["Give them less water", "Give them plenty of safe water or ORS and see a health worker", "Leave them alone", "Give them soda"],
           "answer": "Give them plenty of safe water or ORS and see a health worker",
           "explain": "Diarrhoea causes the body to lose water, so the child needs to drink and see a health worker.",
-          "procedure": [
-            "Diarrhoea drains water from the body",
-            "The child needs to drink safe water",
-            "ORS (Oral Rehydration Solution) replaces lost salts",
-            "Always take the child to a health worker",
-            "Answer: Give them plenty of safe water or ORS and see a health worker"
-          ]
+          "procedure": ["Diarrhoea drains water from the body", "The child needs to drink safe water", "ORS (Oral Rehydration Solution) replaces lost salts", "Always take the child to a health worker", "Answer: Give them plenty of safe water or ORS and see a health worker"]
         },
         {
           "q": "What is ORS used for?",
-          "options": [
-            "To make water taste sweet",
-            "To replace lost water and salts in the body",
-            "To clean clothes",
-            "To cool the body"
-          ],
+          "options": ["To make water taste sweet", "To replace lost water and salts in the body", "To clean clothes", "To cool the body"],
           "answer": "To replace lost water and salts in the body",
           "explain": "ORS replaces water and salts lost during diarrhoea or vomiting.",
-          "procedure": [
-            "ORS stands for Oral Rehydration Solution",
-            "It contains water, sugar, and salt",
-            "It replaces what the body loses",
-            "It is used to treat dehydration",
-            "Answer: To replace lost water and salts in the body"
-          ]
+          "procedure": ["ORS stands for Oral Rehydration Solution", "It contains water, sugar, and salt", "It replaces what the body loses", "It is used to treat dehydration", "Answer: To replace lost water and salts in the body"]
         },
         {
           "q": "Which of these is a good way to prevent water-related diseases?",
           "image": "assets/science/proper-toilet.png",
-          "options": [
-            "Drink water from any source",
-            "Drink only clean or boiled water",
-            "Store water in open buckets",
-            "Skip washing hands"
-          ],
+          "options": ["Drink water from any source", "Drink only clean or boiled water", "Store water in open buckets", "Skip washing hands"],
           "answer": "Drink only clean or boiled water",
           "explain": "Drinking clean or boiled water prevents most water-related diseases.",
-          "procedure": [
-            "Clean or boiled water has no germs",
-            "Germs cannot enter the body through clean water",
-            "This prevents many diseases",
-            "Answer: Drink only clean or boiled water"
-          ]
+          "procedure": ["Clean or boiled water has no germs", "Germs cannot enter the body through clean water", "This prevents many diseases", "Answer: Drink only clean or boiled water"]
         },
         {
           "q": "Why should we keep our surroundings clean?",
           "image": "assets/science/proper-toilet.png",
-          "options": [
-            "To look good for visitors",
-            "To stop germs and pests from spreading disease",
-            "To have more space",
-            "To grow more food"
-          ],
+          "options": ["To look good for visitors", "To stop germs and pests from spreading disease", "To have more space", "To grow more food"],
           "answer": "To stop germs and pests from spreading disease",
           "explain": "A clean environment keeps away germs, flies, and mosquitoes.",
-          "procedure": [
-            "Dirty surroundings attract flies and mosquitoes",
-            "These insects carry germs",
-            "They can land on food and water",
-            "Cleaning up removes their breeding places",
-            "Answer: To stop germs and pests from spreading disease"
-          ]
+          "procedure": ["Dirty surroundings attract flies and mosquitoes", "These insects carry germs", "They can land on food and water", "Cleaning up removes their breeding places", "Answer: To stop germs and pests from spreading disease"]
         },
         {
           "q": "Why is clean water important for the whole community?",
           "image": "assets/science/dirty-water.png",
-          "options": [
-            "Only for drinking",
-            "For drinking, cooking, washing, and staying healthy",
-            "Only for cooking",
-            "Only for washing clothes"
-          ],
+          "options": ["Only for drinking", "For drinking, cooking, washing, and staying healthy", "Only for cooking", "Only for washing clothes"],
           "answer": "For drinking, cooking, washing, and staying healthy",
           "explain": "Clean water is needed for many daily activities that keep us healthy.",
-          "procedure": [
-            "We use water for drinking",
-            "We use water for cooking",
-            "We use water for washing and cleaning",
-            "Without clean water, the whole community gets sick",
-            "Answer: For drinking, cooking, washing, and staying healthy"
-          ]
+          "procedure": ["We use water for drinking", "We use water for cooking", "We use water for washing and cleaning", "Without clean water, the whole community gets sick", "Answer: For drinking, cooking, washing, and staying healthy"]
         }
       ]
     },
@@ -2121,259 +1147,109 @@
           "options": ["Solid, liquid, and gas", "Hot, cold, and warm", "Big, medium, and small", "Hard, soft, and smooth"],
           "answer": "Solid, liquid, and gas",
           "explain": "Matter exists in three states: solid, liquid, and gas.",
-          "procedure": [
-            "Matter is anything that has mass and takes up space",
-            "It can exist in three states",
-            "Solid — has a fixed shape (like ice)",
-            "Liquid — takes the shape of its container (like water)",
-            "Gas — spreads out to fill any space (like steam)",
-            "Answer: Solid, liquid, and gas"
-          ]
+          "procedure": ["Matter is anything that has mass and takes up space", "It can exist in three states", "Solid — has a fixed shape (like ice)", "Liquid — takes the shape of its container (like water)", "Gas — spreads out to fill any space (like steam)", "Answer: Solid, liquid, and gas"]
         },
         {
           "q": "What is melting?",
           "image": "assets/science/melting.png",
-          "options": [
-            "When a solid changes to a liquid",
-            "When a liquid changes to a solid",
-            "When a liquid changes to a gas",
-            "When a gas changes to a liquid"
-          ],
+          "options": ["When a solid changes to a liquid", "When a liquid changes to a solid", "When a liquid changes to a gas", "When a gas changes to a liquid"],
           "answer": "When a solid changes to a liquid",
           "explain": "Melting is when a solid turns into a liquid by heating.",
-          "procedure": [
-            "When a solid is heated, it can turn into a liquid",
-            "This change is called melting",
-            "Example: ice melts into water",
-            "The temperature at which this happens is called the melting point",
-            "Answer: When a solid changes to a liquid"
-          ]
+          "procedure": ["When a solid is heated, it can turn into a liquid", "This change is called melting", "Example: ice melts into water", "The temperature at which this happens is called the melting point", "Answer: When a solid changes to a liquid"]
         },
         {
           "q": "What is freezing?",
           "image": "assets/science/freezing.png",
-          "options": [
-            "When a solid changes to a liquid",
-            "When a liquid changes to a solid",
-            "When a liquid changes to a gas",
-            "When a gas changes to a liquid"
-          ],
+          "options": ["When a solid changes to a liquid", "When a liquid changes to a solid", "When a liquid changes to a gas", "When a gas changes to a liquid"],
           "answer": "When a liquid changes to a solid",
           "explain": "Freezing is when a liquid turns into a solid by cooling.",
-          "procedure": [
-            "When a liquid is cooled, it can turn into a solid",
-            "This change is called freezing",
-            "Example: water freezes into ice",
-            "The temperature at which this happens is called the freezing point",
-            "Answer: When a liquid changes to a solid"
-          ]
+          "procedure": ["When a liquid is cooled, it can turn into a solid", "This change is called freezing", "Example: water freezes into ice", "The temperature at which this happens is called the freezing point", "Answer: When a liquid changes to a solid"]
         },
         {
           "q": "What is evaporation?",
           "image": "assets/science/evaporation-state.png",
-          "options": [
-            "When a solid changes to a liquid",
-            "When a liquid changes to a solid",
-            "When a liquid changes to a gas",
-            "When a gas changes to a liquid"
-          ],
+          "options": ["When a solid changes to a liquid", "When a liquid changes to a solid", "When a liquid changes to a gas", "When a gas changes to a liquid"],
           "answer": "When a liquid changes to a gas",
           "explain": "Evaporation is when a liquid turns into a gas by heating.",
-          "procedure": [
-            "When a liquid is heated, it can turn into a gas",
-            "This change is called evaporation",
-            "Example: water in a pot turns into steam when heated",
-            "The gas formed is called water vapour",
-            "Answer: When a liquid changes to a gas"
-          ]
+          "procedure": ["When a liquid is heated, it can turn into a gas", "This change is called evaporation", "Example: water in a pot turns into steam when heated", "The gas formed is called water vapour", "Answer: When a liquid changes to a gas"]
         },
         {
           "q": "What is condensation?",
           "image": "assets/science/condensation-state.png",
-          "options": [
-            "When a solid changes to a liquid",
-            "When a liquid changes to a solid",
-            "When a liquid changes to a gas",
-            "When a gas changes to a liquid"
-          ],
+          "options": ["When a solid changes to a liquid", "When a liquid changes to a solid", "When a liquid changes to a gas", "When a gas changes to a liquid"],
           "answer": "When a gas changes to a liquid",
           "explain": "Condensation is when a gas turns into a liquid by cooling.",
-          "procedure": [
-            "When a gas is cooled, it can turn back into a liquid",
-            "This change is called condensation",
-            "Example: steam from a kettle touches a cold mirror and forms water droplets",
-            "The liquid that forms is water",
-            "Answer: When a gas changes to a liquid"
-          ]
+          "procedure": ["When a gas is cooled, it can turn back into a liquid", "This change is called condensation", "Example: steam from a kettle touches a cold mirror and forms water droplets", "The liquid that forms is water", "Answer: When a gas changes to a liquid"]
         },
         {
           "q": "What happens when ice is left outside on a hot day?",
           "image": "assets/science/melting.png",
-          "options": [
-            "It stays the same",
-            "It melts into water",
-            "It becomes steam directly",
-            "It grows bigger"
-          ],
+          "options": ["It stays the same", "It melts into water", "It becomes steam directly", "It grows bigger"],
           "answer": "It melts into water",
           "explain": "Heat from the sun makes the ice melt into liquid water.",
-          "procedure": [
-            "Ice is the solid form of water",
-            "The sun provides heat",
-            "When ice is heated, it changes to liquid water",
-            "This process is called melting",
-            "Answer: It melts into water"
-          ]
+          "procedure": ["Ice is the solid form of water", "The sun provides heat", "When ice is heated, it changes to liquid water", "This process is called melting", "Answer: It melts into water"]
         },
         {
           "q": "What happens when water is placed in a freezer?",
           "image": "assets/science/freezing.png",
-          "options": [
-            "It stays liquid",
-            "It becomes steam",
-            "It freezes into ice",
-            "It turns into gas"
-          ],
+          "options": ["It stays liquid", "It becomes steam", "It freezes into ice", "It turns into gas"],
           "answer": "It freezes into ice",
           "explain": "The cold temperature in the freezer causes water to freeze into ice.",
-          "procedure": [
-            "The freezer is very cold (below 0°C)",
-            "When liquid water is cooled below 0°C, it changes into a solid",
-            "This solid is called ice",
-            "This process is called freezing",
-            "Answer: It freezes into ice"
-          ]
+          "procedure": ["The freezer is very cold (below 0°C)", "When liquid water is cooled below 0°C, it changes into a solid", "This solid is called ice", "This process is called freezing", "Answer: It freezes into ice"]
         },
         {
           "q": "What happens to water when you boil it in a pot?",
           "image": "assets/science/evaporation-state.png",
-          "options": [
-            "It freezes",
-            "It evaporates into steam",
-            "It turns into ice",
-            "It disappears completely"
-          ],
+          "options": ["It freezes", "It evaporates into steam", "It turns into ice", "It disappears completely"],
           "answer": "It evaporates into steam",
           "explain": "Boiling water turns into steam (water vapour).",
-          "procedure": [
-            "Boiling heats the water to 100°C",
-            "At this temperature, water changes from liquid to gas",
-            "The gas is called water vapour or steam",
-            "This process is called evaporation",
-            "Answer: It evaporates into steam"
-          ]
+          "procedure": ["Boiling heats the water to 100°C", "At this temperature, water changes from liquid to gas", "The gas is called water vapour or steam", "This process is called evaporation", "Answer: It evaporates into steam"]
         },
         {
           "q": "Where do you see condensation in everyday life?",
           "image": "assets/science/condensation-state.png",
-          "options": [
-            "Ice melting in a glass",
-            "Water droplets on a cold glass",
-            "Water boiling in a pot",
-            "Rain falling from clouds"
-          ],
+          "options": ["Ice melting in a glass", "Water droplets on a cold glass", "Water boiling in a pot", "Rain falling from clouds"],
           "answer": "Water droplets on a cold glass",
           "explain": "Water vapour in the air touches a cold surface and turns into droplets — that's condensation.",
-          "procedure": [
-            "The air around us contains water vapour",
-            "When air touches a cold surface (like a glass of cold water), the vapour cools",
-            "Cool vapour turns into liquid water droplets",
-            "These droplets form on the outside of the glass",
-            "Answer: Water droplets on a cold glass"
-          ]
+          "procedure": ["The air around us contains water vapour", "When air touches a cold surface (like a glass of cold water), the vapour cools", "Cool vapour turns into liquid water droplets", "These droplets form on the outside of the glass", "Answer: Water droplets on a cold glass"]
         },
         {
           "q": "How are the particles arranged in a solid?",
           "image": "assets/science/solid-particles.png",
-          "options": [
-            "Tightly packed in fixed positions",
-            "Loosely packed and sliding past each other",
-            "Far apart and moving freely",
-            "Randomly scattered with no pattern"
-          ],
+          "options": ["Tightly packed in fixed positions", "Loosely packed and sliding past each other", "Far apart and moving freely", "Randomly scattered with no pattern"],
           "answer": "Tightly packed in fixed positions",
           "explain": "In a solid, particles are tightly packed and only vibrate in place.",
-          "procedure": [
-            "Particles in a solid are packed very close together",
-            "They are arranged in a fixed pattern",
-            "They vibrate but do not move from place to place",
-            "This is why solids have a fixed shape",
-            "Answer: Tightly packed in fixed positions"
-          ]
+          "procedure": ["Particles in a solid are packed very close together", "They are arranged in a fixed pattern", "They vibrate but do not move from place to place", "This is why solids have a fixed shape", "Answer: Tightly packed in fixed positions"]
         },
         {
           "q": "How are the particles arranged in a liquid?",
           "image": "assets/science/liquid-particles.png",
-          "options": [
-            "Tightly packed in fixed positions",
-            "Loosely packed and sliding past each other",
-            "Far apart and moving freely",
-            "Randomly scattered with no pattern"
-          ],
+          "options": ["Tightly packed in fixed positions", "Loosely packed and sliding past each other", "Far apart and moving freely", "Randomly scattered with no pattern"],
           "answer": "Loosely packed and sliding past each other",
           "explain": "In a liquid, particles are close but can slide past each other.",
-          "procedure": [
-            "Particles in a liquid are close together",
-            "But they are not in fixed positions",
-            "They can slide past each other",
-            "This is why liquids take the shape of their container",
-            "Answer: Loosely packed and sliding past each other"
-          ]
+          "procedure": ["Particles in a liquid are close together", "But they are not in fixed positions", "They can slide past each other", "This is why liquids take the shape of their container", "Answer: Loosely packed and sliding past each other"]
         },
         {
           "q": "How are the particles arranged in a gas?",
           "image": "assets/science/gas-particles.png",
-          "options": [
-            "Tightly packed in fixed positions",
-            "Loosely packed and sliding past each other",
-            "Far apart and moving freely",
-            "Randomly scattered with no pattern"
-          ],
+          "options": ["Tightly packed in fixed positions", "Loosely packed and sliding past each other", "Far apart and moving freely", "Randomly scattered with no pattern"],
           "answer": "Far apart and moving freely",
           "explain": "In a gas, particles are far apart and move quickly in all directions.",
-          "procedure": [
-            "Particles in a gas are very far apart",
-            "They move quickly in all directions",
-            "There is lots of empty space between them",
-            "This is why gases spread out to fill any container",
-            "Answer: Far apart and moving freely"
-          ]
+          "procedure": ["Particles in a gas are very far apart", "They move quickly in all directions", "There is lots of empty space between them", "This is why gases spread out to fill any container", "Answer: Far apart and moving freely"]
         },
         {
           "q": "What happens to particles when a solid is heated?",
-          "options": [
-            "They stop moving",
-            "They vibrate faster and move further apart",
-            "They disappear",
-            "They turn into light"
-          ],
+          "options": ["They stop moving", "They vibrate faster and move further apart", "They disappear", "They turn into light"],
           "answer": "They vibrate faster and move further apart",
           "explain": "Heating gives particles more energy, so they vibrate faster and spread apart.",
-          "procedure": [
-            "Heating gives particles more energy",
-            "They vibrate faster and faster",
-            "Eventually they break free from their fixed positions",
-            "This is what causes melting",
-            "Answer: They vibrate faster and move further apart"
-          ]
+          "procedure": ["Heating gives particles more energy", "They vibrate faster and faster", "Eventually they break free from their fixed positions", "This is what causes melting", "Answer: They vibrate faster and move further apart"]
         },
         {
           "q": "What happens to particles when a gas is cooled?",
-          "options": [
-            "They move faster",
-            "They slow down and come closer together",
-            "They turn into light",
-            "They disappear"
-          ],
+          "options": ["They move faster", "They slow down and come closer together", "They turn into light", "They disappear"],
           "answer": "They slow down and come closer together",
           "explain": "Cooling removes energy from particles, so they slow down and pack closer.",
-          "procedure": [
-            "Cooling removes energy from particles",
-            "They slow down and lose their free movement",
-            "They come closer together",
-            "Eventually they form a liquid — this is condensation",
-            "Answer: They slow down and come closer together"
-          ]
+          "procedure": ["Cooling removes energy from particles", "They slow down and lose their free movement", "They come closer together", "Eventually they form a liquid — this is condensation", "Answer: They slow down and come closer together"]
         },
         {
           "q": "Which of these is an example of a solid?",
@@ -2381,13 +1257,7 @@
           "options": ["Water", "Steam", "Ice block", "Air"],
           "answer": "Ice block",
           "explain": "An ice block is a solid — it has a fixed shape and volume.",
-          "procedure": [
-            "Solids have a fixed shape and volume",
-            "Water is a liquid",
-            "Steam and air are gases",
-            "An ice block is a solid — it keeps its shape",
-            "Answer: Ice block"
-          ]
+          "procedure": ["Solids have a fixed shape and volume", "Water is a liquid", "Steam and air are gases", "An ice block is a solid — it keeps its shape", "Answer: Ice block"]
         },
         {
           "q": "Which of these is an example of a liquid?",
@@ -2395,13 +1265,7 @@
           "options": ["Rock", "Ice", "Water", "Steam"],
           "answer": "Water",
           "explain": "Water is a liquid — it takes the shape of its container.",
-          "procedure": [
-            "Liquids take the shape of their container",
-            "Rocks and ice are solids",
-            "Steam is a gas",
-            "Water is a liquid",
-            "Answer: Water"
-          ]
+          "procedure": ["Liquids take the shape of their container", "Rocks and ice are solids", "Steam is a gas", "Water is a liquid", "Answer: Water"]
         },
         {
           "q": "Which of these is an example of a gas?",
@@ -2409,37 +1273,21 @@
           "options": ["Sand", "Milk", "Steam", "Ice"],
           "answer": "Steam",
           "explain": "Steam is a gas — it spreads out to fill space.",
-          "procedure": [
-            "Gases spread out to fill any container",
-            "Sand and ice are solids",
-            "Milk is a liquid",
-            "Steam is a gas",
-            "Answer: Steam"
-          ]
+          "procedure": ["Gases spread out to fill any container", "Sand and ice are solids", "Milk is a liquid", "Steam is a gas", "Answer: Steam"]
         },
         {
           "q": "What is the melting point of ice?",
           "options": ["0°C", "100°C", "50°C", "-10°C"],
           "answer": "0°C",
           "explain": "Ice melts at 0°C — that is its melting point.",
-          "procedure": [
-            "The melting point is the temperature at which a solid turns into a liquid",
-            "For ice, this is 0°C",
-            "At 0°C, ice changes into liquid water",
-            "Answer: 0°C"
-          ]
+          "procedure": ["The melting point is the temperature at which a solid turns into a liquid", "For ice, this is 0°C", "At 0°C, ice changes into liquid water", "Answer: 0°C"]
         },
         {
           "q": "What is the boiling point of water?",
           "options": ["0°C", "50°C", "100°C", "200°C"],
           "answer": "100°C",
           "explain": "Water boils at 100°C — at this temperature, it turns into steam.",
-          "procedure": [
-            "The boiling point is the temperature at which a liquid turns into a gas",
-            "For water, this is 100°C",
-            "At 100°C, water changes into steam (water vapour)",
-            "Answer: 100°C"
-          ]
+          "procedure": ["The boiling point is the temperature at which a liquid turns into a gas", "For water, this is 100°C", "At 100°C, water changes into steam (water vapour)", "Answer: 100°C"]
         },
         {
           "q": "Which process happens when water vapour turns back into liquid water?",
@@ -2447,13 +1295,333 @@
           "options": ["Evaporation", "Condensation", "Melting", "Freezing"],
           "answer": "Condensation",
           "explain": "When water vapour cools, it condenses back into liquid water.",
-          "procedure": [
-            "Water vapour is a gas",
-            "When the gas cools, it loses energy",
-            "The particles slow down and come together",
-            "The gas turns into a liquid — this is condensation",
-            "Answer: Condensation"
-          ]
+          "procedure": ["Water vapour is a gas", "When the gas cools, it loses energy", "The particles slow down and come together", "The gas turns into a liquid — this is condensation", "Answer: Condensation"]
+        }
+      ]
+    },
+    {
+      "id": "basic-electronics",
+      "name": "Basic Electronics",
+      "icon": "⚡",
+      "questions": [
+        {
+          "q": "What is a circuit?",
+          "image": "assets/science/simple-circuit.png",
+          "options": ["A path that lets electricity flow around and around", "A type of battery", "A kind of wire", "A light bulb"],
+          "answer": "A path that lets electricity flow around and around",
+          "explain": "A circuit is a complete path that electricity can travel through.",
+          "procedure": ["A circuit is a closed loop", "Electricity travels from the battery, through the wires, and back again", "If the loop is broken, the electricity stops flowing", "Answer: A path that lets electricity flow around and around"]
+        },
+        {
+          "q": "What are the parts of a simple circuit?",
+          "image": "assets/science/simple-circuit.png",
+          "options": ["Battery, wires, and a bulb", "Only a battery", "Only a wire", "A battery and a spoon"],
+          "answer": "Battery, wires, and a bulb",
+          "explain": "A simple circuit needs a power source (battery), wires, and something to use the power (bulb).",
+          "procedure": ["The battery provides electrical energy", "The wires carry the electricity", "The bulb uses the electricity to make light", "Together they form a simple circuit", "Answer: Battery, wires, and a bulb"]
+        },
+        {
+          "q": "What is a conductor?",
+          "image": "assets/science/conductors.png",
+          "options": ["A material that lets electricity pass through it", "A material that blocks electricity", "A type of battery", "A kind of light"],
+          "answer": "A material that lets electricity pass through it",
+          "explain": "Conductors are materials that electricity can flow through easily.",
+          "procedure": ["Conductors allow electric current to flow", "Metals like copper and iron are good conductors", "That's why wires are made of copper", "Answer: A material that lets electricity pass through it"]
+        },
+        {
+          "q": "Which of these is a good conductor?",
+          "image": "assets/science/conductors.png",
+          "options": ["Copper", "Rubber", "Plastic", "Wood"],
+          "answer": "Copper",
+          "explain": "Copper is a metal and a very good conductor of electricity.",
+          "procedure": ["Metals are good conductors", "Copper is one of the best conductors", "That's why electrical wires are made of copper", "Rubber, plastic, and wood are insulators", "Answer: Copper"]
+        },
+        {
+          "q": "What is an insulator?",
+          "image": "assets/science/insulators.png",
+          "options": ["A material that lets electricity pass through", "A material that does not let electricity pass through", "A type of battery", "A kind of bulb"],
+          "answer": "A material that does not let electricity pass through",
+          "explain": "Insulators are materials that block electricity.",
+          "procedure": ["Insulators do NOT let electricity flow through them", "Rubber, plastic, glass, and wood are good insulators", "That's why wires are covered in plastic or rubber", "Answer: A material that does not let electricity pass through"]
+        },
+        {
+          "q": "Which of these is a good insulator?",
+          "image": "assets/science/insulators.png",
+          "options": ["Iron nail", "Rubber", "Copper wire", "Steel spoon"],
+          "answer": "Rubber",
+          "explain": "Rubber is an insulator — it does not let electricity pass through.",
+          "procedure": ["Insulators block electricity", "Rubber is a very good insulator", "That's why electricians wear rubber gloves", "Iron, copper, and steel are conductors", "Answer: Rubber"]
+        },
+        {
+          "q": "Why are electrical wires covered with plastic?",
+          "options": ["To make them look nice", "To stop electricity from leaking out and hurting people", "To make them heavier", "To make them cheaper"],
+          "answer": "To stop electricity from leaking out and hurting people",
+          "explain": "The plastic coating is an insulator — it keeps us safe from electric shocks.",
+          "procedure": ["The wire inside is copper, a conductor", "If you touch bare copper, electricity could flow through you", "The plastic coating is an insulator", "It stops electricity from leaking out — so we stay safe", "Answer: To stop electricity from leaking out and hurting people"]
+        },
+        {
+          "q": "What is a switch?",
+          "image": "assets/science/switch.png",
+          "options": ["Something that opens or closes a circuit", "A type of battery", "A kind of bulb", "A material that conducts"],
+          "answer": "Something that opens or closes a circuit",
+          "explain": "A switch lets you turn the electricity on or off.",
+          "procedure": ["A switch is a small gap in the circuit", "When the switch is closed, the circuit is complete — electricity flows", "When the switch is open, the circuit is broken — electricity stops", "Answer: Something that opens or closes a circuit"]
+        },
+        {
+          "q": "What happens when a switch is open?",
+          "image": "assets/science/switch.png",
+          "options": ["The bulb lights up", "Electricity cannot flow and the bulb goes off", "The battery gets stronger", "Nothing changes"],
+          "answer": "Electricity cannot flow and the bulb goes off",
+          "explain": "An open switch breaks the circuit — no electricity can flow.",
+          "procedure": ["When the switch is open, there is a gap", "Electricity cannot jump the gap", "The circuit is broken", "The bulb goes off", "Answer: Electricity cannot flow and the bulb goes off"]
+        },
+        {
+          "q": "What does a battery do in a circuit?",
+          "image": "assets/science/circuit-symbols.png",
+          "options": ["It provides electrical energy", "It blocks electricity", "It makes sound", "It makes water flow"],
+          "answer": "It provides electrical energy",
+          "explain": "A battery is the power source — it provides the electrical energy.",
+          "procedure": ["A battery stores chemical energy", "When connected in a circuit, it releases electrical energy", "This energy flows through the circuit", "The battery is the source of power", "Answer: It provides electrical energy"]
+        },
+        {
+          "q": "What does the bulb symbol look like in a circuit diagram?",
+          "image": "assets/science/circuit-symbols.png",
+          "options": ["A circle with an X inside", "A straight line", "A rectangle", "A triangle"],
+          "answer": "A circle with an X inside",
+          "explain": "The bulb is shown as a circle with an X inside.",
+          "procedure": ["In circuit diagrams, each part has a symbol", "The bulb symbol is a circle with an X (or a cross) inside", "This represents a small lamp", "Answer: A circle with an X inside"]
+        },
+        {
+          "q": "What does the battery symbol look like in a circuit diagram?",
+          "image": "assets/science/circuit-symbols.png",
+          "options": ["A circle with an X", "Two short lines, one long one short", "A single straight line", "A triangle"],
+          "answer": "Two short lines, one long one short",
+          "explain": "The battery (or cell) symbol is two parallel lines — one long, one short.",
+          "procedure": ["The long line is the positive (+) end", "The short line is the negative (−) end", "Together they represent a cell or battery", "Answer: Two short lines, one long one short"]
+        },
+        {
+          "q": "Which of these is NOT a good way to use electricity safely?",
+          "image": "assets/science/electricity-safety.png",
+          "options": ["Touching a switch with dry hands", "Touching a switch with wet hands", "Plugging a cord by holding the plug", "Keeping water away from electricity"],
+          "answer": "Touching a switch with wet hands",
+          "explain": "Wet hands conduct electricity much better than dry hands — it's very dangerous.",
+          "procedure": ["Water is a good conductor", "Wet hands can carry electricity into your body", "This can cause a serious electric shock", "Always dry your hands before touching switches", "Answer: Touching a switch with wet hands"]
+        },
+        {
+          "q": "What is the safest way to unplug an electrical cord?",
+          "image": "assets/science/electricity-safety.png",
+          "options": ["Pull the cord", "Hold the plug and pull it out", "Cut the wire", "Kick the plug out"],
+          "answer": "Hold the plug and pull it out",
+          "explain": "Always hold the plug, not the cord — pulling the cord can damage it.",
+          "procedure": ["Pulling the cord can break the wires inside", "Broken wires can cause electric shock or fire", "Always hold the plug firmly", "Pull the plug straight out of the socket", "Answer: Hold the plug and pull it out"]
+        },
+        {
+          "q": "What should you do if you see someone being electrocuted?",
+          "image": "assets/science/electricity-safety.png",
+          "options": ["Touch them to help", "Turn off the power first, then call for help", "Throw water on them", "Ignore it"],
+          "answer": "Turn off the power first, then call for help",
+          "explain": "Never touch someone being electrocuted — the electricity could pass through you.",
+          "procedure": ["If someone is being electrocuted, do NOT touch them", "Electricity can flow through them and into you", "First, turn off the main power switch", "Then call for help — 112, or an adult", "Answer: Turn off the power first, then call for help"]
+        },
+        {
+          "q": "What are some ways we use electricity at home?",
+          "options": ["Only for lights", "For lights, fans, TVs, phones, and cooking", "Only for cooking", "Only for phones"],
+          "answer": "For lights, fans, TVs, phones, and cooking",
+          "explain": "We use electricity for many things at home — lights, fans, TVs, phones, and cooking.",
+          "procedure": ["Electricity powers many things in our homes", "It gives us light (bulbs, lamps)", "It cools us (fans, air-conditioners)", "It entertains us (TVs, radios)", "It charges our phones", "It helps us cook (electric stoves, microwaves)", "Answer: For lights, fans, TVs, phones, and cooking"]
+        },
+        {
+          "q": "Why is electricity dangerous if not used carefully?",
+          "image": "assets/science/electricity-safety.png",
+          "options": ["It can give you a shock and hurt you", "It is too slow", "It makes too much noise", "It makes things too cold"],
+          "answer": "It can give you a shock and hurt you",
+          "explain": "Electricity can hurt or kill if it flows through your body.",
+          "procedure": ["Electricity can flow through your body", "This is called an electric shock", "It can cause serious injury or even death", "That's why we must always use electricity safely", "Answer: It can give you a shock and hurt you"]
+        },
+        {
+          "q": "Which of these is a renewable source of electricity?",
+          "options": ["Coal", "Solar (from the sun)", "Petrol", "Diesel"],
+          "answer": "Solar (from the sun)",
+          "explain": "Solar panels turn sunlight into electricity — it's renewable and clean.",
+          "procedure": ["Some sources of electricity are renewable (never run out)", "Solar energy comes from the sun", "It never runs out — that's why it's renewable", "Coal, petrol, and diesel run out — they are not renewable", "Answer: Solar (from the sun)"]
+        },
+        {
+          "q": "What does a solar panel do?",
+          "options": ["Turns sunlight into electricity", "Stores water", "Makes food", "Cooks food directly"],
+          "answer": "Turns sunlight into electricity",
+          "explain": "Solar panels capture sunlight and convert it into electrical energy.",
+          "procedure": ["Solar panels are made of special materials", "They capture sunlight", "They convert the sunlight into electricity", "This electricity can power homes", "Answer: Turns sunlight into electricity"]
+        },
+        {
+          "q": "What is the difference between a circuit in series and a circuit in parallel?",
+          "options": ["There is no difference", "In series, components are in one loop; in parallel, they are in branches", "Series is only for bulbs", "Parallel is only for batteries"],
+          "answer": "In series, components are in one loop; in parallel, they are in branches",
+          "explain": "In a series circuit, electricity flows through one path. In a parallel circuit, it has multiple paths.",
+          "procedure": ["In a series circuit, there is only ONE path", "If one bulb breaks, the whole circuit stops working", "In a parallel circuit, there are MULTIPLE paths", "If one bulb breaks, the others still work", "Answer: In series, components are in one loop; in parallel, they are in branches"]
+        }
+      ]
+    },
+    {
+      "id": "environmental-care",
+      "name": "Environmental Care",
+      "icon": "🌍",
+      "questions": [
+        {
+          "q": "What is the environment?",
+          "options": ["Only trees", "Everything around us — living and non-living", "Only water", "Only animals"],
+          "answer": "Everything around us — living and non-living",
+          "explain": "The environment is everything around us — the air, water, land, plants, and animals.",
+          "procedure": ["The environment includes air, water, and land", "It also includes all living things (plants, animals, humans)", "Everything around us is part of the environment", "Answer: Everything around us — living and non-living"]
+        },
+        {
+          "q": "What is pollution?",
+          "image": "assets/science/pollution-types.png",
+          "options": ["Adding harmful substances to the environment", "Planting trees", "Cleaning the air", "Making clean water"],
+          "answer": "Adding harmful substances to the environment",
+          "explain": "Pollution is when harmful substances get into the air, water, or land.",
+          "procedure": ["Pollution happens when harmful things enter the environment", "These harmful things are called pollutants", "Pollution can harm plants, animals, and people", "Answer: Adding harmful substances to the environment"]
+        },
+        {
+          "q": "Which of these is a type of pollution?",
+          "image": "assets/science/pollution-types.png",
+          "options": ["Air, water, land, and noise pollution", "Only air pollution", "Only water pollution", "Only land pollution"],
+          "answer": "Air, water, land, and noise pollution",
+          "explain": "There are many types of pollution — air, water, land, and noise are the main ones.",
+          "procedure": ["Air pollution — smoke and gases in the air", "Water pollution — dirty water with harmful things", "Land pollution — rubbish on the ground", "Noise pollution — too much loud noise", "Answer: Air, water, land, and noise pollution"]
+        },
+        {
+          "q": "What causes air pollution?",
+          "image": "assets/science/pollution-types.png",
+          "options": ["Trees growing", "Smoke from factories, cars, and burning rubbish", "Clean rivers", "Rain"],
+          "answer": "Smoke from factories, cars, and burning rubbish",
+          "explain": "Smoke and harmful gases from factories, cars, and burning rubbish cause air pollution.",
+          "procedure": ["Factories release smoke into the air", "Cars and buses release exhaust gas", "Burning rubbish creates smoke", "All of these pollute the air", "Answer: Smoke from factories, cars, and burning rubbish"]
+        },
+        {
+          "q": "What causes water pollution?",
+          "image": "assets/science/pollution-types.png",
+          "options": ["Clean rain", "Throwing rubbish into rivers and streams", "Fish swimming", "Plants growing near water"],
+          "answer": "Throwing rubbish into rivers and streams",
+          "explain": "When we throw rubbish or chemicals into water, we pollute it.",
+          "procedure": ["Water pollution is when harmful things enter water", "Rubbish thrown into rivers pollutes them", "Chemicals from factories can leak into water", "Polluted water is unsafe for drinking and for animals", "Answer: Throwing rubbish into rivers and streams"]
+        },
+        {
+          "q": "What is recycling?",
+          "image": "assets/science/recycling-bins.png",
+          "options": ["Throwing everything in one bin", "Turning old things into new things", "Burning rubbish", "Burying rubbish"],
+          "answer": "Turning old things into new things",
+          "explain": "Recycling means turning old items like paper, plastic, and metal into new useful things.",
+          "procedure": ["Recycling is when we take old things", "Instead of throwing them away, we process them", "We turn them into new products", "This saves resources and reduces waste", "Answer: Turning old things into new things"]
+        },
+        {
+          "q": "Which of these things can be recycled?",
+          "image": "assets/science/recycling-bins.png",
+          "options": ["Paper, plastic, metal, and glass", "Only paper", "Only plastic", "Nothing can be recycled"],
+          "answer": "Paper, plastic, metal, and glass",
+          "explain": "Paper, plastic, metal, and glass are all recyclable materials.",
+          "procedure": ["Many materials can be recycled", "Paper can be recycled into new paper", "Plastic can be recycled into new products", "Metal (like tin cans) can be recycled", "Glass can be melted and reused", "Answer: Paper, plastic, metal, and glass"]
+        },
+        {
+          "q": "What are the 3 Rs of the environment?",
+          "image": "assets/science/reduce-reuse-recycle.png",
+          "options": ["Reduce, Reuse, Recycle", "Run, Rest, Relax", "Read, Write, Rest", "Rain, Rivers, Rocks"],
+          "answer": "Reduce, Reuse, Recycle",
+          "explain": "The 3 Rs are Reduce, Reuse, Recycle — three ways to protect the environment.",
+          "procedure": ["Reduce — use less", "Reuse — use things again", "Recycle — turn old things into new things", "These 3 Rs help us protect the environment", "Answer: Reduce, Reuse, Recycle"]
+        },
+        {
+          "q": "What does 'Reduce' mean in the 3 Rs?",
+          "options": ["Use less of things", "Use more of things", "Throw things away", "Buy more things"],
+          "answer": "Use less of things",
+          "explain": "Reduce means using fewer resources so we create less waste.",
+          "procedure": ["Reduce is the first R", "It means using less — less water, less electricity, less plastic", "Less waste means less pollution", "Answer: Use less of things"]
+        },
+        {
+          "q": "What does 'Reuse' mean in the 3 Rs?",
+          "options": ["Use things once and throw away", "Use things again instead of throwing them away", "Buy new things", "Bury old things"],
+          "answer": "Use things again instead of throwing them away",
+          "explain": "Reuse means finding new ways to use old things instead of throwing them out.",
+          "procedure": ["Reuse is the second R", "Instead of throwing away a plastic bottle, refill it", "Instead of buying a new bag, use a reusable one", "This reduces waste", "Answer: Use things again instead of throwing them away"]
+        },
+        {
+          "q": "What is composting?",
+          "image": "assets/science/waste-sorting.png",
+          "options": ["Throwing food in the bin", "Turning food scraps into soil", "Burning rubbish", "Recycling plastic"],
+          "answer": "Turning food scraps into soil",
+          "explain": "Composting turns food waste (like fruit peels) into rich soil for plants.",
+          "procedure": ["Food scraps like fruit peels can be composted", "Composting means letting them break down", "They turn into rich soil (compost)", "This soil helps plants grow", "Answer: Turning food scraps into soil"]
+        },
+        {
+          "q": "Which of these is a good environmental practice?",
+          "image": "assets/science/clean-vs-dirty.png",
+          "options": ["Dropping rubbish on the ground", "Planting trees", "Burning rubbish in the street", "Wasting water"],
+          "answer": "Planting trees",
+          "explain": "Planting trees helps clean the air and protect the environment.",
+          "procedure": ["Trees clean the air by absorbing harmful gases", "They provide shade and homes for animals", "They help prevent soil erosion", "Planting trees is a great environmental practice", "Answer: Planting trees"]
+        },
+        {
+          "q": "Why should we save water?",
+          "image": "assets/science/conservation.png",
+          "options": ["Only because it's expensive", "Because clean water is limited and needed by everyone", "Because water is too cold", "There is no reason"],
+          "answer": "Because clean water is limited and needed by everyone",
+          "explain": "Clean water is limited, and everyone — humans, animals, and plants — needs it.",
+          "procedure": ["Clean fresh water is limited", "Only a small amount of Earth's water is fresh and drinkable", "Plants, animals, and humans all need it", "So we must use it carefully", "Answer: Because clean water is limited and needed by everyone"]
+        },
+        {
+          "q": "How can we save water at home?",
+          "image": "assets/science/conservation.png",
+          "options": ["Leave taps running", "Turn off taps when not in use", "Wash cars with a hose", "Take long showers"],
+          "answer": "Turn off taps when not in use",
+          "explain": "Turning off taps when not in use is a simple way to save water.",
+          "procedure": ["Small actions save water", "Turn off the tap while brushing teeth", "Fix leaking taps", "Use a bucket instead of a hose", "Answer: Turn off taps when not in use"]
+        },
+        {
+          "q": "What is conservation?",
+          "image": "assets/science/conservation.png",
+          "options": ["Wasting resources", "Protecting and using resources wisely", "Destroying the environment", "Buying more things"],
+          "answer": "Protecting and using resources wisely",
+          "explain": "Conservation means protecting nature and using resources carefully.",
+          "procedure": ["Conservation is about protecting natural resources", "It means using them wisely so they last", "Conservation protects animals, plants, and their homes", "Answer: Protecting and using resources wisely"]
+        },
+        {
+          "q": "How can we protect wildlife?",
+          "image": "assets/science/conservation.png",
+          "options": ["Hunt all animals", "Protect their habitats and don't harm them", "Cut down all trees", "Pollute rivers"],
+          "answer": "Protect their habitats and don't harm them",
+          "explain": "We protect animals by keeping their homes safe and never harming them.",
+          "procedure": ["Wildlife needs safe habitats (homes)", "We must not destroy their forests and rivers", "We must not hunt or harm them", "Protecting their habitats helps them survive", "Answer: Protect their habitats and don't harm them"]
+        },
+        {
+          "q": "Which is cleaner?",
+          "image": "assets/science/clean-vs-dirty.png",
+          "options": ["A street with litter", "A street with trees and no litter", "A street with smoking fires", "A street with dumped rubbish"],
+          "answer": "A street with trees and no litter",
+          "explain": "A clean street with trees and no litter is safer and healthier.",
+          "procedure": ["A clean street is free of litter", "It has trees and plants", "It's safer and healthier", "A dirty street has rubbish, insects, and bad smells", "Answer: A street with trees and no litter"]
+        },
+        {
+          "q": "What is the best way to dispose of plastic bottles?",
+          "image": "assets/science/recycling-bins.png",
+          "options": ["Throw them in the river", "Burn them", "Put them in a recycling bin", "Leave them on the ground"],
+          "answer": "Put them in a recycling bin",
+          "explain": "Plastic bottles should be recycled, not thrown away or burned.",
+          "procedure": ["Plastic takes hundreds of years to break down", "Burning plastic releases harmful smoke", "Throwing plastic in rivers pollutes water", "Recycling is the best option", "Answer: Put them in a recycling bin"]
+        },
+        {
+          "q": "Why should we not burn plastic?",
+          "image": "assets/science/pollution-types.png",
+          "options": ["It smells nice", "Burning plastic releases harmful chemicals into the air", "It makes plastic disappear", "It's good for the environment"],
+          "answer": "Burning plastic releases harmful chemicals into the air",
+          "explain": "Burning plastic releases dangerous gases that harm the air and our health.",
+          "procedure": ["Burning plastic releases toxic gases", "These gases pollute the air", "They can harm people who breathe them", "They also pollute the environment", "Answer: Burning plastic releases harmful chemicals into the air"]
+        },
+        {
+          "q": "What can we do to keep our school clean?",
+          "image": "assets/science/clean-vs-dirty.png",
+          "options": ["Throw rubbish anywhere", "Use bins, clean up after ourselves, and plant trees", "Write on walls", "Dump rubbish behind classrooms"],
+          "answer": "Use bins, clean up after ourselves, and plant trees",
+          "explain": "Keeping our school clean needs small daily actions from everyone.",
+          "procedure": ["Always use rubbish bins", "Clean up after yourself", "Don't drop litter", "Plant and care for trees in the school compound", "Answer: Use bins, clean up after ourselves, and plant trees"]
         }
       ]
     }

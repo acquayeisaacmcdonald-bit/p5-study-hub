@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Safety — Study Hub</title>
+  <link rel="icon" type="image/png" href="assets/immanuel.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .safety-hero {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15), transparent 60%);
+    }
+    .safety-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; line-height: 1.15; }
+    .safety-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 640px; margin: 0 auto; line-height: 1.6; }
+    .safety-hero .safety-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(16,185,129,0.2); border: 1px solid rgba(16,185,129,0.4); color: #34d399; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+
+    .safety-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+
+    .emergency-panel { background: linear-gradient(135deg, rgba(220,38,38,0.15), rgba(220,38,38,0.05)); border: 2px solid rgba(220,38,38,0.4); border-radius: 20px; padding: 24px 20px; margin-bottom: 40px; text-align: center; }
+    .emergency-panel h2 { color: #f87171; font-size: 1.15rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .emergency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+    .emergency-card { background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 16px 12px; text-decoration: none; color: #fff; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: transform 0.15s, border-color 0.15s; cursor: pointer; }
+    .emergency-card:hover { transform: translateY(-2px); border-color: #f87171; }
+    .emergency-icon { font-size: 1.6rem; }
+    .emergency-label { font-size: 0.72rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.5px; }
+    .emergency-number { font-size: 1.3rem; font-weight: 800; color: #fff; }
+    .emergency-note { margin-top: 16px; font-size: 0.82rem; color: rgba(255,255,255,0.65); font-style: italic; }
+
+    .safety-section-title { font-size: 1.4rem; font-weight: 800; margin: 40px 0 18px; display: flex; align-items: center; gap: 10px; }
+    .safety-section-title span:first-child { font-size: 1.8rem; }
+
+    .safety-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 700px) { .safety-grid { grid-template-columns: 1fr 1fr; } }
+
+    .safety-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; overflow: hidden; transition: border-color 0.2s, background 0.2s; }
+    .safety-card.open { border-color: var(--accent); background: rgba(255,255,255,0.09); }
+    .safety-card-header { display: flex; align-items: center; gap: 14px; padding: 18px 20px; cursor: pointer; user-select: none; }
+    .safety-card-icon { font-size: 1.9rem; flex-shrink: 0; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 14px; }
+    .safety-card-title { flex: 1; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+    .safety-card-subtitle { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 3px; font-weight: 400; }
+    .safety-card-arrow { font-size: 1.2rem; color: rgba(255,255,255,0.5); transition: transform 0.25s; }
+    .safety-card.open .safety-card-arrow { transform: rotate(90deg); }
+
+    .safety-card-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .safety-card.open .safety-card-body { max-height: 3000px; }
+    .safety-card-content { padding: 0 20px 22px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 4px; }
+    .safety-card-content h4 { font-size: 0.95rem; font-weight: 700; margin: 18px 0 8px; color: #facc15; }
+    .safety-card-content p { font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+    .safety-card-content ul { list-style: none; padding: 0; margin: 0 0 10px; }
+    .safety-card-content ul li { padding: 6px 0 6px 26px; position: relative; font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.85); }
+    .safety-card-content ul li::before { content: "✓"; position: absolute; left: 0; color: #34d399; font-weight: 800; }
+    .safety-card-content ul li.no::before { content: "✗"; color: #f87171; }
+
+    .safety-tip { background: rgba(250,204,21,0.12); border-left: 3px solid #facc15; padding: 12px 14px; border-radius: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.9); margin-top: 14px; line-height: 1.6; }
+    .safety-tip strong { color: #facc15; }
+
+    .safety-quiz { margin-top: 18px; padding: 16px; background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
+    .safety-quiz-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #facc15; margin-bottom: 10px; }
+    .safety-quiz-q { font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; line-height: 1.5; }
+    .safety-quiz-options { display: flex; flex-direction: column; gap: 8px; }
+    .safety-quiz-option { padding: 11px 14px; border-radius: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; text-align: left; font-family: inherit; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+    .safety-quiz-option:hover:not(:disabled) { background: rgba(255,255,255,0.12); border-color: var(--accent); }
+    .safety-quiz-option.correct { background: rgba(16,185,129,0.25); border-color: #34d399; color: #fff; }
+    .safety-quiz-option.wrong { background: rgba(220,38,38,0.25); border-color: #f87171; color: #fff; }
+    .safety-quiz-option:disabled { cursor: default; }
+    .safety-quiz-feedback { margin-top: 10px; font-size: 0.86rem; font-weight: 600; min-height: 20px; }
+    .safety-quiz-feedback.correct { color: #34d399; }
+    .safety-quiz-feedback.wrong { color: #f87171; }
+
+    .safety-footer-note { max-width: 900px; margin: 40px auto 0; padding: 24px 20px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); border-radius: 16px; font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.85); text-align: center; }
+    .safety-footer-note strong { color: #60a5fa; }
+
+    @media (max-width: 500px) {
+      .safety-hero h1 { font-size: 1.7rem; }
+      .safety-hero p { font-size: 0.95rem; }
+      .emergency-number { font-size: 1.1rem; }
+      .safety-card-header { padding: 14px 16px; gap: 10px; }
+      .safety-card-icon { width: 42px; height: 42px; font-size: 1.5rem; }
+      .safety-card-title { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="profile-picker.html" class="site-logo">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text">
+          <strong>Study Hub</strong>
+          <small>Child Safety</small>
+        </span>
+      </a>
+      <nav class="site-nav" id="siteNav">
+        <a href="profile-picker.html">← Back</a>
+        <a href="stories.html">📖 Stories</a>
+        <a href="timetable.html">📅 Timetable</a>
+        <a href="kg-curriculum.html">🎓 KG</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="profile-picker.html" class="site-header-cta">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="safety-hero">
+    <div class="safety-badge">🛡️ Stay Safe</div>
+    <h1>Child Safety</h1>
+    <p>Learn how to keep yourself safe at home, at school, online, and everywhere you go. Read each lesson, take the quiz, and remember — <strong>you are never alone.</strong></p>
+  </section>
+
+  <main class="safety-wrap">
+
+    <div class="emergency-panel">
+      <h2>🚨 In an Emergency — Call These Numbers</h2>
+      <div class="emergency-grid">
+        <a href="tel:112" class="emergency-card">
+          <span class="emergency-icon">📞</span>
+          <span class="emergency-label">All Emergencies</span>
+          <span class="emergency-number">112</span>
+        </a>
+        <a href="tel:191" class="emergency-card">
+          <span class="emergency-icon">👮</span>
+          <span class="emergency-label">Police</span>
+          <span class="emergency-number">191</span>
+        </a>
+        <a href="tel:192" class="emergency-card">
+          <span class="emergency-icon">🚒</span>
+          <span class="emergency-label">Fire Service</span>
+          <span class="emergency-number">192</span>
+        </a>
+        <a href="tel:193" class="emergency-card">
+          <span class="emergency-icon">🚑</span>
+          <span class="emergency-label">Ambulance</span>
+          <span class="emergency-number">193</span>
+        </a>
+        <a href="tel:1800111222" class="emergency-card">
+          <span class="emergency-icon">💚</span>
+          <span class="emergency-label">ChildLine Ghana</span>
+          <span class="emergency-number">1800 11 222</span>
+        </a>
+      </div>
+      <p class="emergency-note">These numbers are free. You can call them from any phone, even without airtime.</p>
+    </div>
+
+    <h2 class="safety-section-title"><span>📚</span> <span>Safety Lessons</span></h2>
+    <div class="safety-grid" id="safetyGrid"></div>
+
+    <div class="safety-footer-note">
+      <strong>Remember:</strong> If something feels wrong, it probably is. Tell a trusted adult — a parent, a teacher, an aunt, an uncle, or any grown-up who makes you feel safe. You will never be in trouble for telling the truth.
+      <br><br>
+      <strong>You matter. You are loved. You deserve to be safe.</strong>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-bottom">
+      © 2026 Study Hub. Child Safety for every Ghanaian child. Free. Always.
+    </div>
+  </footer>
+
+  <script>
+    const SAFETY_TOPICS = [
+      {
+        icon: "🧍",
+        title: "Personal Safety",
+        subtitle: "Strangers, safe adults, and trust",
+        body: `
+          <h4>Who is a stranger?</h4>
+          <p>A stranger is someone you don't know. Most strangers are good people — but we still have to be careful until we know someone well.</p>
+          <h4>Safe adults</h4>
+          <ul>
+            <li>Parents, guardians, and close family</li>
+            <li>Teachers and school staff you know</li>
+            <li>Police officers in uniform</li>
+            <li>Doctors and nurses in hospitals</li>
+          </ul>
+          <h4>If a stranger approaches you</h4>
+          <ul>
+            <li>Stay calm and keep distance</li>
+            <li>Never go with them, even if they offer sweets or money</li>
+            <li>Never accept gifts or rides from someone you don't know</li>
+            <li>Say NO loudly, run to a safe adult, and tell someone you trust</li>
+          </ul>
+          <h4>Trust your feelings</h4>
+          <p>If something feels "wrong" or "off", it probably is. Trust that feeling. Leave the situation and tell an adult immediately.</p>
+          <div class="safety-tip"><strong>Tip:</strong> Before you go anywhere, always tell a parent or guardian: where you are going, who you are with, and when you will be back.</div>
+        `,
+        quiz: {
+          q: "A stranger in a car offers you a ride home. What do you do?",
+          options: ["Accept the ride — it's faster", "Say no, walk away, and tell a trusted adult", "Ask for their name first", "Get in but keep the door open"],
+          correct: 1,
+          explain: "Never accept a ride from a stranger, no matter how friendly they seem. Walk away to a safe place and tell an adult."
+        }
+      },
+      {
+        icon: "🤝",
+        title: "Body Safety — Good Touch, Bad Touch",
+        subtitle: "Your body belongs to you",
+        body: `
+          <h4>Your body belongs to you</h4>
+          <p>No one has the right to touch your body in a way that makes you feel uncomfortable, scared, or confused. This is called a <strong>bad touch</strong>.</p>
+          <h4>Good touches</h4>
+          <ul>
+            <li>A hug from a parent when you want one</li>
+            <li>A high-five from a friend</li>
+            <li>A doctor's check-up with a parent in the room</li>
+          </ul>
+          <h4>Bad touches</h4>
+          <ul class="no">
+            <li>Anyone touching your private parts</li>
+            <li>Anyone asking you to touch their private parts</li>
+            <li>Anyone showing you pictures of private parts</li>
+            <li>Any touch that makes you feel scared, confused, or ashamed</li>
+          </ul>
+          <h4>The 4 rules of body safety</h4>
+          <ul>
+            <li><strong>Say NO</strong> loudly and clearly</li>
+            <li><strong>Run away</strong> to a safe place</li>
+            <li><strong>Tell</strong> a trusted adult immediately</li>
+            <li><strong>Keep telling</strong> until someone believes you and helps</li>
+          </ul>
+          <div class="safety-tip"><strong>Very important:</strong> If someone tells you to keep a bad touch a "secret", that is a warning sign. Secrets about touching should <em>never</em> be kept. Telling is always the right thing to do.</div>
+        `,
+        quiz: {
+          q: "Someone touches you in a way that feels wrong and says 'don't tell anyone'. What do you do?",
+          options: ["Keep the secret as promised", "Tell a trusted adult right away", "Wait and see if it happens again", "Only tell if it happens a second time"],
+          correct: 1,
+          explain: "Tell a trusted adult IMMEDIATELY. No one has the right to ask you to keep a bad touch secret. You are never in trouble for telling the truth."
+        }
+      },
+      {
+        icon: "🌐",
+        title: "Online Safety",
+        subtitle: "Staying safe on phones and the internet",
+        body: `
+          <h4>The internet is like a big city</h4>
+          <p>It has lots of good things — but also some dangerous places. You need to know how to stay safe.</p>
+          <h4>Rules for staying safe online</h4>
+          <ul>
+            <li>Never share your full name, address, school, or phone number</li>
+            <li>Never send photos of yourself to strangers</li>
+            <li>Never meet someone you met online in real life</li>
+            <li>Use strong passwords and don't share them (except with a parent)</li>
+            <li>Tell a parent if anything feels wrong or scary</li>
+          </ul>
+          <h4>Watch out for</h4>
+          <ul class="no">
+            <li>People who ask too many personal questions</li>
+            <li>People who say "don't tell your parents"</li>
+            <li>Links, games, or apps that ask for money</li>
+            <li>Anyone asking for photos or videos</li>
+          </ul>
+          <div class="safety-tip"><strong>Rule:</strong> If someone online wants to keep your chat a secret from your parents — that's a red flag. Stop talking and tell an adult.</div>
+        `,
+        quiz: {
+          q: "Someone you met in an online game asks for your home address. What do you do?",
+          options: ["Give it to them — they're your friend", "Give it only if they give theirs first", "Refuse and tell a parent", "Give a fake address as a joke"],
+          correct: 2,
+          explain: "Never share personal information online. Refuse, and tell a parent immediately. Even 'friends' online can be dangerous."
+        }
+      },
+      {
+        icon: "🛣️",
+        title: "Road Safety",
+        subtitle: "Crossing, walking, and travelling safely",
+        body: `
+          <h4>Before you cross</h4>
+          <ul>
+            <li>Stop at the edge of the road</li>
+            <li>Look right, look left, look right again</li>
+            <li>Listen for cars, motorbikes, and bicycles</li>
+            <li>Cross only when the road is clear</li>
+            <li>Walk — never run — across the road</li>
+          </ul>
+          <h4>Walking on the road</h4>
+          <ul>
+            <li>Use the pavement (sidewalk) if there is one</li>
+            <li>If no pavement, walk facing oncoming traffic</li>
+            <li>Wear bright clothes at night if possible</li>
+            <li>Never play on or near the road</li>
+          </ul>
+          <h4>In a car or bus</h4>
+          <ul>
+            <li>Always wear your seatbelt</li>
+            <li>Never put your head or arms outside a moving vehicle</li>
+            <li>Don't distract the driver</li>
+            <li>Enter and exit on the side away from traffic</li>
+          </ul>
+          <div class="safety-tip"><strong>Remember:</strong> It is always better to be late than to be hurt. Never rush across a road.</div>
+        `,
+        quiz: {
+          q: "There is no pavement. Which side of the road should you walk on?",
+          options: ["The same direction as traffic", "Facing oncoming traffic", "In the middle of the road", "Doesn't matter"],
+          correct: 1,
+          explain: "Walk facing oncoming traffic so you can see cars coming toward you and step aside if needed."
+        }
+      },
+      {
+        icon: "🏠",
+        title: "Home Safety",
+        subtitle: "Fire, electricity, and hazards",
+        body: `
+          <h4>Fire safety</h4>
+          <ul>
+            <li>Never play with matches, lighters, or candles</li>
+            <li>Never leave cooking unattended</li>
+            <li>If there's a fire, GET OUT, STAY OUT, and call for help</li>
+            <li>Stop, drop, and roll if your clothes catch fire</li>
+          </ul>
+          <h4>Electricity safety</h4>
+          <ul>
+            <li>Never touch switches or plugs with wet hands</li>
+            <li>Never stick objects into sockets</li>
+            <li>Don't pull plugs by the cord — hold the plug</li>
+            <li>Tell an adult if you see a damaged wire</li>
+          </ul>
+          <h4>Kitchen safety</h4>
+          <ul>
+            <li>Ask an adult before using knives or the stove</li>
+            <li>Turn pot handles inward so they don't get knocked over</li>
+            <li>Watch out for hot water and oil</li>
+          </ul>
+          <h4>Other hazards</h4>
+          <ul>
+            <li>Never touch medicine unless a parent gives it to you</li>
+            <li>Stay away from bleach, insecticide, and other chemicals</li>
+            <li>Don't play near wells, pits, or open water</li>
+          </ul>
+          <div class="safety-tip"><strong>Know your exits:</strong> In every room, know two ways to get out in case of fire.</div>
+        `,
+        quiz: {
+          q: "Your clothes catch fire. What should you do?",
+          options: ["Run to the bathroom", "Stop, drop, and roll", "Wave your arms to put out the flame", "Wait for help"],
+          correct: 1,
+          explain: "Stop, drop to the ground, and roll to smother the flames. Running makes fire spread faster."
+        }
+      },
+      {
+        icon: "🚫",
+        title: "Bullying",
+        subtitle: "What it is and what to do",
+        body: `
+          <h4>What is bullying?</h4>
+          <p>Bullying is when someone repeatedly hurts, threatens, or leaves out another person on purpose. It can be:</p>
+          <ul class="no">
+            <li>Physical — hitting, pushing, kicking</li>
+            <li>Verbal — name-calling, teasing, threats</li>
+            <li>Social — leaving someone out, spreading rumours</li>
+            <li>Online — nasty messages, embarrassing photos (cyberbullying)</li>
+          </ul>
+          <h4>If you are being bullied</h4>
+          <ul>
+            <li>Tell a teacher or parent — you are not "telling on" anyone</li>
+            <li>Stay with friends — bullies often target children alone</li>
+            <li>Don't fight back — you could get hurt or in trouble</li>
+            <li>Keep a record of online bullying (screenshots)</li>
+          </ul>
+          <h4>If you see someone being bullied</h4>
+          <ul>
+            <li>Don't laugh or join in</li>
+            <li>Tell a teacher right away</li>
+            <li>Be kind to the person being bullied — sit with them, talk to them</li>
+            <li>Never share or forward mean posts</li>
+          </ul>
+          <div class="safety-tip"><strong>Remember:</strong> Bullying is never the victim's fault. Telling an adult is brave and it is the right thing to do.</div>
+        `,
+        quiz: {
+          q: "You see a classmate being bullied every day. What should you do?",
+          options: ["Ignore it — it's not your problem", "Join in so they don't pick on you", "Tell a teacher and be kind to the person being bullied", "Laugh so the bully thinks you're cool"],
+          correct: 2,
+          explain: "Tell a teacher immediately. Also be kind to the person being bullied — your friendship can make a huge difference."
+        }
+      },
+      {
+        icon: "📢",
+        title: "Reporting Abuse",
+        subtitle: "How to speak up and who to tell",
+        body: `
+          <h4>You can always tell someone</h4>
+          <p>If anyone — even a family member, teacher, or family friend — hurts you, touches you wrongly, threatens you, or makes you feel unsafe, you must tell someone. <strong>It is never your fault.</strong></p>
+          <h4>Who to tell</h4>
+          <ul>
+            <li>A parent or guardian</li>
+            <li>A trusted teacher or school counsellor</li>
+            <li>A trusted aunt, uncle, or older sibling</li>
+            <li>A pastor, imam, or community leader</li>
+            <li>ChildLine Ghana — <strong>1800 11 222</strong> (free, confidential)</li>
+            <li>The Police — <strong>191</strong></li>
+          </ul>
+          <h4>If the first person doesn't listen</h4>
+          <p>Don't give up. <strong>Keep telling</strong> until someone believes you and helps. You deserve to be heard and to be safe.</p>
+          <div class="safety-tip"><strong>Save these numbers:</strong> ChildLine Ghana — <strong>1800 11 222</strong> &nbsp;•&nbsp; Police — <strong>191</strong> &nbsp;•&nbsp; Emergency — <strong>112</strong></div>
+        `,
+        quiz: {
+          q: "You tell an adult about being hurt and they don't believe you. What should you do?",
+          options: ["Give up — no one will believe you", "Keep telling other trusted adults until someone helps", "Handle it alone", "Wait a year and try again"],
+          correct: 1,
+          explain: "Keep telling. Different adults may respond differently. Never stop until someone helps and you are safe."
+        }
+      }
+    ];
+
+    function renderSafetyCards() {
+      const grid = document.getElementById("safetyGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      SAFETY_TOPICS.forEach((topic, idx) => {
+        const card = document.createElement("div");
+        card.className = "safety-card";
+        card.dataset.index = idx;
+        card.innerHTML = `
+          <div class="safety-card-header" data-toggle="${idx}">
+            <div class="safety-card-icon">${topic.icon}</div>
+            <div style="flex:1;">
+              <div class="safety-card-title">${topic.title}</div>
+              <div class="safety-card-subtitle">${topic.subtitle}</div>
+            </div>
+            <div class="safety-card-arrow">›</div>
+          </div>
+          <div class="safety-card-body">
+            <div class="safety-card-content">
+              ${topic.body}
+              <div class="safety-quiz" data-quiz="${idx}">
+                <div class="safety-quiz-label">🧠 Quick Quiz</div>
+                <div class="safety-quiz-q">${topic.quiz.q}</div>
+                <div class="safety-quiz-options"></div>
+                <div class="safety-quiz-feedback"></div>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.querySelectorAll("[data-toggle]").forEach(header => {
+        header.addEventListener("click", () => {
+          const card = header.closest(".safety-card");
+          card.classList.toggle("open");
+        });
+      });
+
+      document.querySelectorAll(".safety-quiz").forEach(quizEl => {
+        const idx = parseInt(quizEl.dataset.quiz, 10);
+        const topic = SAFETY_TOPICS[idx];
+        const optionsEl = quizEl.querySelector(".safety-quiz-options");
+        const feedbackEl = quizEl.querySelector(".safety-quiz-feedback");
+
+        topic.quiz.options.forEach((opt, i) => {
+          const btn = document.createElement("button");
+          btn.className = "safety-quiz-option";
+          btn.textContent = opt;
+          btn.addEventListener("click", () => {
+            const allBtns = optionsEl.querySelectorAll(".safety-quiz-option");
+            allBtns.forEach(b => { b.disabled = true; b.classList.remove("correct", "wrong"); });
+            const isRight = i === topic.quiz.correct;
+            if (isRight) {
+              btn.classList.add("correct");
+              feedbackEl.textContent = "✅ Correct! " + topic.quiz.explain;
+              feedbackEl.className = "safety-quiz-feedback correct";
+            } else {
+              btn.classList.add("wrong");
+              allBtns[topic.quiz.correct].classList.add("correct");
+              feedbackEl.textContent = "❌ " + topic.quiz.explain;
+              feedbackEl.className = "safety-quiz-feedback wrong";
+            }
+          });
+          optionsEl.appendChild(btn);
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", renderSafetyCards);
+  </script>
+</body>
+</html>

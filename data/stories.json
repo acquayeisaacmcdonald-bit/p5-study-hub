@@ -1,0 +1,162 @@
+{
+  "stories": [
+    {
+      "id": "tortoise-and-friends",
+      "title": "The Tortoise and His Friends",
+      "class": ["p1", "p2", "p3"],
+      "type": "text",
+      "cover": "assets/stories/covers/tortoise.jpg",
+      "description": "A short Ghanaian folktale about kindness and teamwork.",
+      "ageMin": 5,
+      "ageMax": 9,
+      "duration": "3 min read",
+      "author": "Traditional",
+      "content": [
+        "Once upon a time, in a small village near the Volta River, there lived a tortoise named Kwaku.",
+        "Kwaku was slow, but he was very clever. One day, he found a large mango tree full of ripe fruit.",
+        "The fruit was too high for him to reach. He called his friend Ama the ant.",
+        "\"Ama, can you help me?\" asked Kwaku. \"There is fruit up high, but I cannot climb.\"",
+        "Ama the ant climbed quickly up the tree and dropped a mango down to Kwaku.",
+        "Kwaku was so happy. He shared the mango with Ama, and they became the best of friends.",
+        "Moral: Even the smallest friend can help the biggest problem."
+      ]
+    },
+    {
+      "id": "why-tortoise-has-cracks",
+      "title": "Why the Tortoise Has a Cracked Shell",
+      "class": ["p3", "p4", "p5"],
+      "type": "text",
+      "cover": "assets/stories/covers/cracked-shell.jpg",
+      "description": "A classic African tale explaining the crack on a tortoise's shell.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "5 min read",
+      "author": "Traditional",
+      "content": [
+        "Long ago, when the world was young, Tortoise had no cracks on his shell. It was smooth and beautiful.",
+        "One year, there was a great famine. The birds decided to fly up to the sky to a feast, and Tortoise begged to come along.",
+        "\"I will give each of you a feather,\" said Tortoise, \"and with all of them together, I can fly too.\"",
+        "The birds agreed. They gave him feathers, and together they all flew up to the feast.",
+        "At the feast, Tortoise ate and ate. He was so full, he could barely move.",
+        "When they returned to the ground, Tortoise jumped — and fell hard on the rocks.",
+        "His beautiful smooth shell cracked into many pieces. His wife tried to glue it back with gum, but she could not put all the pieces back in the right order.",
+        "And that is why, to this very day, the tortoise's shell is not smooth — it has a pattern of cracks."
+      ]
+    },
+    {
+      "id": "anansi-and-the-pot",
+      "title": "Anansi and the Pot of Wisdom",
+      "class": ["p4", "p5", "p6"],
+      "type": "text",
+      "cover": "assets/stories/covers/anansi.jpg",
+      "description": "Anansi the spider tries to keep all the world's wisdom for himself.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "6 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "Long ago, all the wisdom in the world belonged to one spider — Anansi. He kept it in a large clay pot.",
+        "Anansi wanted to hide the pot at the top of the tallest tree, so no one else could ever find it.",
+        "He tied the pot to his belly and began to climb. But the pot kept slipping and getting in his way.",
+        "His son, Ntikuma, watched from below. \"Father,\" he said, \"why not tie the pot to your back? Then it won't get in your way.\"",
+        "Anansi stopped. He was angry — his son had shown more wisdom than him!",
+        "In his anger, he dropped the pot. It fell to the ground and shattered. All the wisdom inside scattered across the land.",
+        "And that is why, to this very day, wisdom is not held by one person — it is shared by everyone."
+      ]
+    },
+    {
+      "id": "the-girl-who-found-her-voice",
+      "title": "The Girl Who Found Her Voice",
+      "class": ["jhs1", "jhs2", "jhs3"],
+      "type": "text",
+      "cover": "assets/stories/covers/voice.jpg",
+      "description": "A story about courage, standing up for what's right, and finding your voice.",
+      "ageMin": 12,
+      "ageMax": 16,
+      "duration": "7 min read",
+      "author": "Study Hub",
+      "content": [
+        "Adwoa was the quietest girl in her class. She sat at the back, never raising her hand, never speaking up.",
+        "But Adwoa noticed things. She noticed when someone was being left out. She noticed when a teacher was unfair. She noticed when something was wrong.",
+        "One day, a new girl arrived at school. Her name was Efua, and she had come from a different region. She spoke with a different accent.",
+        "Some students began to tease Efua. They laughed at her accent, at her clothes, at the way she said certain words.",
+        "Adwoa watched. She felt a familiar tightness in her chest — she had felt it many times before, but had always stayed silent.",
+        "That afternoon, the teasing got worse. Efua was crying.",
+        "Adwoa stood up. Her voice was small at first, but it grew.",
+        "\"Stop it,\" she said. \"Just stop. She hasn't done anything to any of you.\"",
+        "The room went silent. Everyone turned to look at Adwoa — quiet Adwoa, who never spoke.",
+        "Then something surprising happened. Two other students stood up too. \"Adwoa is right,\" said one.",
+        "The next day, Efua sat next to Adwoa at lunch. \"Thank you,\" she said quietly.",
+        "\"You don't have to thank me,\" Adwoa replied. \"It was the right thing to do.\"",
+        "From that day on, Adwoa still spoke quietly. But she never stayed silent again when something was wrong.",
+        "And Efua? She found her own voice too — and used it to help the next new student who arrived."
+      ]
+    },
+    {
+      "id": "the-lion-and-the-mouse",
+      "title": "The Lion and the Mouse",
+      "class": ["p1", "p2"],
+      "type": "text",
+      "cover": "assets/stories/covers/lion-mouse.jpg",
+      "description": "How even a tiny mouse can help a mighty lion.",
+      "ageMin": 4,
+      "ageMax": 8,
+      "duration": "2 min read",
+      "author": "Aesop",
+      "content": [
+        "A lion was sleeping in the forest. A tiny mouse ran across his nose and woke him up.",
+        "The lion caught the mouse in his big paw. \"How dare you wake me!\" he roared.",
+        "\"Please let me go,\" begged the mouse. \"One day I will help you.\"",
+        "The lion laughed. \"You? A tiny mouse? Help me, the king of the jungle?\" But he let the mouse go anyway.",
+        "Days later, the lion was caught in a hunter's net. He roared and struggled, but he could not escape.",
+        "The mouse heard the roaring. He ran to the lion and chewed through the ropes, one by one, until the lion was free.",
+        "\"You were right,\" said the lion. \"Even a tiny mouse can help a mighty lion.\"",
+        "Moral: No act of kindness, no matter how small, is ever wasted."
+      ]
+    },
+    {
+      "id": "the-hare-and-the-tortoise",
+      "title": "The Hare and the Tortoise",
+      "class": ["p2", "p3", "p4"],
+      "type": "text",
+      "cover": "assets/stories/covers/hare-tortoise.jpg",
+      "description": "Slow and steady wins the race.",
+      "ageMin": 6,
+      "ageMax": 10,
+      "duration": "3 min read",
+      "author": "Aesop",
+      "content": [
+        "A hare once laughed at a tortoise for being so slow.",
+        "\"I may be slow,\" said the tortoise, \"but I can beat you in a race.\"",
+        "The hare thought this was a joke. But he agreed to race, and all the animals came to watch.",
+        "The race began. The hare ran fast and was soon far ahead. He looked back, saw no sign of the tortoise, and decided to take a nap under a tree.",
+        "\"That slow tortoise will never catch me,\" he thought, and closed his eyes.",
+        "The tortoise kept walking. Slowly. Steadily. One step at a time.",
+        "When the hare woke up, he saw the tortoise crossing the finish line. The tortoise had won!",
+        "Moral: Slow and steady wins the race."
+      ]
+    },
+    {
+      "id": "the-boy-who-cried-wolf",
+      "title": "The Boy Who Cried Wolf",
+      "class": ["p4", "p5", "p6"],
+      "type": "text",
+      "cover": "assets/stories/covers/cried-wolf.jpg",
+      "description": "Why telling the truth matters.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "3 min read",
+      "author": "Aesop",
+      "content": [
+        "A shepherd boy watched over his flock of sheep near a village.",
+        "One day, he thought it would be fun to play a trick. He ran to the village shouting, \"Wolf! Wolf! A wolf is attacking my sheep!\"",
+        "The villagers ran to help. But when they arrived, there was no wolf. The boy laughed at them.",
+        "The next day, he did it again. The villagers ran to help. Again, no wolf. They were very angry.",
+        "Then one evening, a real wolf came. The boy cried out, \"Wolf! Wolf!\"",
+        "But this time, no one came. The villagers thought he was playing another trick.",
+        "The wolf scattered the flock, and the boy learned a hard lesson.",
+        "Moral: No one believes a liar — even when they tell the truth."
+      ]
+    }
+  ]
+}
