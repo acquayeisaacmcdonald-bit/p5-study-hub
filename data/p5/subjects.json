@@ -20,7 +20,7 @@
       "name": "English Language",
       "icon": "📖",
       "file": "english.json",
-      "available": false
+      "available": true
     },
     {
       "id": "social",

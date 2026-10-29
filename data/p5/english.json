@@ -1,0 +1,1189 @@
+{
+  "subject": "English Language",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "parts-of-speech",
+      "name": "Parts of Speech",
+      "icon": "📝",
+      "questions": [
+        {
+          "q": "What is a noun?",
+          "options": ["An action word", "A naming word — a person, place, or thing", "A describing word", "A joining word"],
+          "answer": "A naming word — a person, place, or thing",
+          "explain": "A noun names a person, place, thing, or idea.",
+          "procedure": ["A noun is a naming word", "It names a person (teacher, boy)", "It names a place (Accra, school)", "It names a thing (book, table)", "Answer: A naming word — a person, place, or thing"]
+        },
+        {
+          "q": "Which of these is a noun?",
+          "options": ["Quickly", "Beautiful", "Teacher", "Run"],
+          "answer": "Teacher",
+          "explain": "'Teacher' is a noun — it names a person.",
+          "procedure": ["Nouns name people, places, or things", "Teacher = a person", "Quickly = an adverb", "Beautiful = an adjective", "Run = a verb", "Answer: Teacher"]
+        },
+        {
+          "q": "What is a verb?",
+          "options": ["A naming word", "An action word or state of being", "A describing word", "A joining word"],
+          "answer": "An action word or state of being",
+          "explain": "A verb shows action or state of being.",
+          "procedure": ["Verbs are action words", "They show what someone or something does", "Examples: run, eat, write, sleep", "Verbs also show states of being (is, are, was)", "Answer: An action word or state of being"]
+        },
+        {
+          "q": "Which of these is a verb?",
+          "options": ["Happy", "Chair", "Dance", "Blue"],
+          "answer": "Dance",
+          "explain": "'Dance' is a verb — it shows an action.",
+          "procedure": ["Verbs are action words", "Dance = an action", "Happy = an adjective", "Chair = a noun", "Blue = an adjective", "Answer: Dance"]
+        },
+        {
+          "q": "What is an adjective?",
+          "options": ["A word that describes a noun", "A word that describes a verb", "An action word", "A joining word"],
+          "answer": "A word that describes a noun",
+          "explain": "Adjectives describe or add meaning to nouns.",
+          "procedure": ["Adjectives describe nouns", "They tell us what kind, how many, or which one", "Examples: big, red, happy, three", "Answer: A word that describes a noun"]
+        },
+        {
+          "q": "Which word is an adjective in this sentence: 'The tall boy ran quickly.'",
+          "options": ["The", "tall", "boy", "ran"],
+          "answer": "tall",
+          "explain": "'Tall' describes the noun 'boy' — so it's an adjective.",
+          "procedure": ["Adjectives describe nouns", "The noun is 'boy'", "What kind of boy? A 'tall' boy", "So 'tall' is the adjective", "Answer: tall"]
+        },
+        {
+          "q": "What is an adverb?",
+          "options": ["A word that describes a noun", "A word that describes a verb, adjective, or another adverb", "A joining word", "A naming word"],
+          "answer": "A word that describes a verb, adjective, or another adverb",
+          "explain": "Adverbs describe how, when, or where an action happens.",
+          "procedure": ["Adverbs describe verbs, adjectives, or other adverbs", "They often end in -ly (quickly, slowly)", "They can answer: how? when? where?", "Answer: A word that describes a verb, adjective, or another adverb"]
+        },
+        {
+          "q": "Which word is an adverb in this sentence: 'She sang beautifully.'",
+          "options": ["She", "sang", "beautifully"],
+          "answer": "beautifully",
+          "explain": "'Beautifully' describes how she sang — so it's an adverb.",
+          "procedure": ["Adverbs tell us HOW something happened", "She sang — how? — 'beautifully'", "So 'beautifully' is the adverb", "Answer: beautifully"]
+        },
+        {
+          "q": "What is a pronoun?",
+          "options": ["A word that replaces a noun", "A naming word", "An action word", "A describing word"],
+          "answer": "A word that replaces a noun",
+          "explain": "Pronouns replace nouns — like he, she, it, they, we.",
+          "procedure": ["A pronoun stands in place of a noun", "Instead of saying 'Kofi ran', we say 'He ran'", "Examples: I, you, he, she, it, we, they", "Answer: A word that replaces a noun"]
+        },
+        {
+          "q": "Which of these is a pronoun?",
+          "options": ["Chair", "Quickly", "She", "Run"],
+          "answer": "She",
+          "explain": "'She' is a pronoun — it replaces a female person's name.",
+          "procedure": ["Pronouns replace nouns", "Instead of 'Ama', we say 'she'", "Chair = noun", "Quickly = adverb", "Run = verb", "Answer: She"]
+        },
+        {
+          "q": "What is a preposition?",
+          "options": ["A word that shows the position or relationship between things", "An action word", "A naming word", "A joining word"],
+          "answer": "A word that shows the position or relationship between things",
+          "explain": "Prepositions show relationships — in, on, under, beside, between.",
+          "procedure": ["Prepositions show position or relationship", "Examples: in, on, under, beside, between", "The cat is UNDER the table", "Answer: A word that shows the position or relationship between things"]
+        },
+        {
+          "q": "Which of these is a preposition?",
+          "options": ["Beautiful", "Under", "Run", "Happy"],
+          "answer": "Under",
+          "explain": "'Under' is a preposition — it shows position.",
+          "procedure": ["Prepositions show position", "Under = below something", "Beautiful = adjective", "Run = verb", "Happy = adjective", "Answer: Under"]
+        },
+        {
+          "q": "What is a conjunction?",
+          "options": ["A joining word", "A describing word", "A naming word", "An action word"],
+          "answer": "A joining word",
+          "explain": "Conjunctions join words, phrases, or sentences — and, but, or, because.",
+          "procedure": ["Conjunctions join things together", "Examples: and, but, or, because, so", "I like rice AND beans", "Answer: A joining word"]
+        },
+        {
+          "q": "Which of these is a conjunction?",
+          "options": ["and", "quickly", "beautiful", "under"],
+          "answer": "and",
+          "explain": "'And' joins two ideas together — it's a conjunction.",
+          "procedure": ["Conjunctions join words or phrases", "'I ran AND jumped'", "So 'and' is a conjunction", "Answer: and"]
+        },
+        {
+          "q": "Which word is a noun in the sentence: 'The red car is fast.'",
+          "options": ["The", "red", "car", "fast"],
+          "answer": "car",
+          "explain": "'Car' is a noun — it names a thing.",
+          "procedure": ["Nouns name things", "Car = a thing", "Red = adjective", "Fast = adjective", "The = article", "Answer: car"]
+        },
+        {
+          "q": "What is the noun in: 'They live in Kumasi.'",
+          "options": ["They", "live", "in", "Kumasi"],
+          "answer": "Kumasi",
+          "explain": "'Kumasi' is a noun — it names a place.",
+          "procedure": ["Nouns name people, places, or things", "Kumasi = a place", "They = pronoun", "Live = verb", "In = preposition", "Answer: Kumasi"]
+        },
+        {
+          "q": "Which of these sentences uses an adjective?",
+          "options": ["She runs.", "The dog barks.", "The big dog barks loudly.", "They sleep."],
+          "answer": "The big dog barks loudly.",
+          "explain": "'Big' describes 'dog' — so it's an adjective.",
+          "procedure": ["Adjectives describe nouns", "In 'The big dog barks loudly'", "'Big' describes the noun 'dog'", "Answer: The big dog barks loudly."]
+        },
+        {
+          "q": "Identify the verb in: 'The children play football.'",
+          "options": ["The", "children", "play", "football"],
+          "answer": "play",
+          "explain": "'Play' is a verb — it's the action the children do.",
+          "procedure": ["Verbs are action words", "What are the children doing? Playing", "So 'play' is the verb", "Answer: play"]
+        },
+        {
+          "q": "Identify the adverb in: 'They arrived late.'",
+          "options": ["They", "arrived", "late"],
+          "answer": "late",
+          "explain": "'Late' describes when they arrived — so it's an adverb.",
+          "procedure": ["Adverbs tell us WHEN, HOW, or WHERE", "They arrived — when? — 'late'", "So 'late' is the adverb", "Answer: late"]
+        },
+        {
+          "q": "Which part of speech is the word 'quickly'?",
+          "options": ["Noun", "Verb", "Adjective", "Adverb"],
+          "answer": "Adverb",
+          "explain": "'Quickly' tells us HOW something is done — it's an adverb.",
+          "procedure": ["Quickly ends in -ly", "It describes how something is done", "Example: 'She runs quickly'", "Answer: Adverb"]
+        },
+        {
+          "q": "Which part of speech is the word 'happy'?",
+          "options": ["Noun", "Verb", "Adjective", "Conjunction"],
+          "answer": "Adjective",
+          "explain": "'Happy' is an adjective — it describes a noun (a happy person).",
+          "procedure": ["Adjectives describe nouns", "A 'happy' person = happy describes the person", "So 'happy' is an adjective", "Answer: Adjective"]
+        }
+      ]
+    },
+    {
+      "id": "tenses",
+      "name": "Tenses",
+      "icon": "⏰",
+      "questions": [
+        {
+          "q": "What is the present tense?",
+          "options": ["It shows actions happening now", "It shows actions in the past", "It shows actions in the future", "It shows actions that never happen"],
+          "answer": "It shows actions happening now",
+          "explain": "The present tense describes actions happening now.",
+          "procedure": ["Present tense = now", "Example: 'I eat rice'", "The action is happening in the present", "Answer: It shows actions happening now"]
+        },
+        {
+          "q": "What is the past tense?",
+          "options": ["It shows actions that already happened", "It shows actions happening now", "It shows future actions", "It shows imaginary actions"],
+          "answer": "It shows actions that already happened",
+          "explain": "The past tense describes actions that already happened.",
+          "procedure": ["Past tense = before now", "Example: 'I ate rice yesterday'", "The action is finished", "Answer: It shows actions that already happened"]
+        },
+        {
+          "q": "What is the future tense?",
+          "options": ["It shows actions that have not yet happened", "It shows past actions", "It shows current actions", "It shows impossible actions"],
+          "answer": "It shows actions that have not yet happened",
+          "explain": "The future tense describes actions that will happen.",
+          "procedure": ["Future tense = after now", "Example: 'I will eat rice tomorrow'", "The action hasn't happened yet", "Answer: It shows actions that have not yet happened"]
+        },
+        {
+          "q": "Choose the correct past tense: 'Yesterday, I ____ to school.'",
+          "options": ["go", "went", "will go", "going"],
+          "answer": "went",
+          "explain": "'Went' is the past tense of 'go'.",
+          "procedure": ["Yesterday = past tense", "The past tense of 'go' is 'went'", "'I went to school yesterday'", "Answer: went"]
+        },
+        {
+          "q": "Choose the correct future tense: 'Tomorrow, she ____ her grandmother.'",
+          "options": ["visits", "visited", "will visit", "visiting"],
+          "answer": "will visit",
+          "explain": "'Will visit' is the future tense — it shows what will happen tomorrow.",
+          "procedure": ["Tomorrow = future", "Future uses 'will' + verb", "'She will visit her grandmother'", "Answer: will visit"]
+        },
+        {
+          "q": "Which sentence is in the present tense?",
+          "options": ["I walked home.", "I walk home.", "I will walk home.", "I was walking home."],
+          "answer": "I walk home.",
+          "explain": "'Walk' is present tense — the action happens now.",
+          "procedure": ["Present tense uses the base verb", "'I walk home' = happening now", "Answer: I walk home."]
+        },
+        {
+          "q": "What is the present continuous tense?",
+          "options": ["It shows an action happening right now", "It shows an action in the past", "It shows an action in the future", "It shows an action that never happened"],
+          "answer": "It shows an action happening right now",
+          "explain": "Present continuous shows actions happening right now — I am walking.",
+          "procedure": ["Present continuous = am/is/are + verb-ing", "Example: 'I am walking'", "The action is happening RIGHT NOW", "Answer: It shows an action happening right now"]
+        },
+        {
+          "q": "Choose the correct present continuous: 'Look! The baby ____.'",
+          "options": ["cries", "cried", "is crying", "will cry"],
+          "answer": "is crying",
+          "explain": "'Is crying' is present continuous — the baby is crying right now.",
+          "procedure": ["Present continuous = am/is/are + verb-ing", "'Look!' means right now", "'The baby is crying'", "Answer: is crying"]
+        },
+        {
+          "q": "Which is the past tense of 'eat'?",
+          "options": ["eated", "ate", "eat", "eating"],
+          "answer": "ate",
+          "explain": "'Ate' is the correct past tense of 'eat'.",
+          "procedure": ["'Eat' is an irregular verb", "Its past tense is 'ate'", "Example: 'I ate rice yesterday'", "Answer: ate"]
+        },
+        {
+          "q": "Which is the past tense of 'run'?",
+          "options": ["runned", "ran", "run", "running"],
+          "answer": "ran",
+          "explain": "'Ran' is the correct past tense of 'run'.",
+          "procedure": ["'Run' is an irregular verb", "Its past tense is 'ran'", "Example: 'She ran fast yesterday'", "Answer: ran"]
+        },
+        {
+          "q": "Which of these is a future tense sentence?",
+          "options": ["I am eating.", "I ate.", "I will eat.", "I was eating."],
+          "answer": "I will eat.",
+          "explain": "'Will eat' shows a future action.",
+          "procedure": ["Future tense uses 'will' + verb", "'I will eat' = future", "Answer: I will eat."]
+        },
+        {
+          "q": "Which is correct: 'She ____ her homework already.'",
+          "options": ["do", "did", "will do", "doing"],
+          "answer": "did",
+          "explain": "'Already' suggests the action is complete — past tense.",
+          "procedure": ["'Already' suggests something finished", "Past tense is needed", "'She did her homework already'", "Answer: did"]
+        },
+        {
+          "q": "What is the correct present continuous of 'sleep' in: 'The cat ____ on the sofa.'",
+          "options": ["sleeps", "slept", "is sleeping", "will sleep"],
+          "answer": "is sleeping",
+          "explain": "The cat is sleeping — present continuous, happening right now.",
+          "procedure": ["Present continuous = am/is/are + verb-ing", "'The cat is sleeping'", "The action is happening now", "Answer: is sleeping"]
+        },
+        {
+          "q": "Which is the past continuous tense?",
+          "options": ["I was walking", "I walk", "I will walk", "I walk quickly"],
+          "answer": "I was walking",
+          "explain": "Past continuous uses 'was/were + verb-ing'.",
+          "procedure": ["Past continuous = was/were + verb-ing", "'I was walking' = an action that was happening in the past", "Answer: I was walking"]
+        },
+        {
+          "q": "Choose the correct form: 'By next year, I ____ in this school for three years.'",
+          "options": ["am", "was", "will be", "be"],
+          "answer": "will be",
+          "explain": "'By next year' means the future — so 'will be' is correct.",
+          "procedure": ["'By next year' is a future phrase", "Future uses 'will' + verb", "'I will be in this school'", "Answer: will be"]
+        },
+        {
+          "q": "Which sentence uses the present tense correctly?",
+          "options": ["She go to school every day.", "She goes to school every day.", "She going to school every day.", "She gone to school every day."],
+          "answer": "She goes to school every day.",
+          "explain": "'She' is singular, so the verb needs 's' — goes.",
+          "procedure": ["With he/she/it, present verbs add -s", "So 'go' becomes 'goes'", "'She goes to school every day' is correct", "Answer: She goes to school every day."]
+        },
+        {
+          "q": "Which is the correct past tense: 'They ____ football yesterday.'",
+          "options": ["play", "plays", "played", "will play"],
+          "answer": "played",
+          "explain": "'Yesterday' needs past tense — 'played'.",
+          "procedure": ["'Yesterday' = past", "Regular verbs add -ed", "'Play' → 'played'", "Answer: played"]
+        },
+        {
+          "q": "What does 'has eaten' show?",
+          "options": ["Present perfect — action completed before now", "Future action", "Ongoing action", "Impossible action"],
+          "answer": "Present perfect — action completed before now",
+          "explain": "'Has eaten' is present perfect — an action finished at some point before now.",
+          "procedure": ["Present perfect = has/have + past participle", "'Has eaten' = finished eating at some point", "It's already completed", "Answer: Present perfect — action completed before now"]
+        },
+        {
+          "q": "Which is correct: 'I ____ to Accra next week.'",
+          "options": ["go", "went", "am going", "gone"],
+          "answer": "am going",
+          "explain": "'Am going' can be used for planned future events.",
+          "procedure": ["'Next week' is future", "For planned future, use 'am/is/are going to'", "'I am going to Accra next week'", "Answer: am going"]
+        },
+        {
+          "q": "Choose the correct past tense: 'The birds ____ away when I opened the door.'",
+          "options": ["fly", "flies", "flew", "will fly"],
+          "answer": "flew",
+          "explain": "'Flew' is the past tense of 'fly'.",
+          "procedure": ["'Opened' is past, so 'fly' should also be past", "Past of 'fly' is 'flew'", "'The birds flew away'", "Answer: flew"]
+        }
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "name": "Vocabulary",
+      "icon": "📚",
+      "questions": [
+        {
+          "q": "What is a synonym?",
+          "options": ["A word with the opposite meaning", "A word with the same or similar meaning", "A word with no meaning", "A word borrowed from another language"],
+          "answer": "A word with the same or similar meaning",
+          "explain": "Synonyms are words with similar meanings.",
+          "procedure": ["Synonyms have similar meanings", "Example: happy and glad", "Big and large", "Answer: A word with the same or similar meaning"]
+        },
+        {
+          "q": "Which word is a synonym for 'happy'?",
+          "options": ["Sad", "Angry", "Glad", "Tired"],
+          "answer": "Glad",
+          "explain": "'Glad' is a synonym for 'happy'.",
+          "procedure": ["Synonyms have similar meanings", "Happy and glad both mean joyful", "So 'glad' is a synonym for 'happy'", "Answer: Glad"]
+        },
+        {
+          "q": "Which word is a synonym for 'big'?",
+          "options": ["Small", "Tiny", "Huge", "Short"],
+          "answer": "Huge",
+          "explain": "'Huge' is a synonym for 'big'.",
+          "procedure": ["Big and huge both mean large", "So 'huge' is a synonym for 'big'", "Answer: Huge"]
+        },
+        {
+          "q": "What is an antonym?",
+          "options": ["A word with the same meaning", "A word with the opposite meaning", "A word with no meaning", "A word with two meanings"],
+          "answer": "A word with the opposite meaning",
+          "explain": "Antonyms are words with opposite meanings.",
+          "procedure": ["Antonyms have opposite meanings", "Example: hot and cold", "Big and small", "Answer: A word with the opposite meaning"]
+        },
+        {
+          "q": "Which is an antonym for 'hot'?",
+          "options": ["Warm", "Boiling", "Cold", "Burning"],
+          "answer": "Cold",
+          "explain": "'Cold' is the antonym of 'hot'.",
+          "procedure": ["Antonyms are opposite words", "The opposite of hot is cold", "Answer: Cold"]
+        },
+        {
+          "q": "Which is an antonym for 'brave'?",
+          "options": ["Bold", "Fearless", "Cowardly", "Courageous"],
+          "answer": "Cowardly",
+          "explain": "'Cowardly' is the antonym of 'brave'.",
+          "procedure": ["Brave = having courage", "Its opposite is cowardly = lacking courage", "Answer: Cowardly"]
+        },
+        {
+          "q": "What are homophones?",
+          "options": ["Words that sound the same but are spelled differently", "Words with the same spelling but different meanings", "Words with opposite meanings", "Words with the same meaning"],
+          "answer": "Words that sound the same but are spelled differently",
+          "explain": "Homophones sound the same but have different spellings and meanings.",
+          "procedure": ["Homophones = same sound", "Different spelling", "Different meaning", "Example: to, too, two", "Answer: Words that sound the same but are spelled differently"]
+        },
+        {
+          "q": "Which pair are homophones?",
+          "options": ["Big and small", "There and their", "Run and walk", "Happy and sad"],
+          "answer": "There and their",
+          "explain": "'There' and 'their' sound the same — they're homophones.",
+          "procedure": ["Homophones sound the same", "'There' (place) and 'their' (belonging)", "Both sound like 'thair'", "Answer: There and their"]
+        },
+        {
+          "q": "Which word is a synonym for 'quick'?",
+          "options": ["Slow", "Fast", "Lazy", "Late"],
+          "answer": "Fast",
+          "explain": "'Fast' is a synonym for 'quick'.",
+          "procedure": ["Quick and fast mean the same thing", "So 'fast' is a synonym for 'quick'", "Answer: Fast"]
+        },
+        {
+          "q": "Which word is an antonym for 'strong'?",
+          "options": ["Powerful", "Tough", "Weak", "Mighty"],
+          "answer": "Weak",
+          "explain": "'Weak' is the opposite of 'strong'.",
+          "procedure": ["Strong = having power", "The opposite is weak", "Answer: Weak"]
+        },
+        {
+          "q": "What is the meaning of 'ancient'?",
+          "options": ["Very new", "Very old", "Very fast", "Very slow"],
+          "answer": "Very old",
+          "explain": "'Ancient' means very old — from a long time ago.",
+          "procedure": ["Ancient = from long ago", "Very old", "Example: ancient Egypt = Egypt from a very long time ago", "Answer: Very old"]
+        },
+        {
+          "q": "What is the meaning of 'enormous'?",
+          "options": ["Very small", "Very large", "Very fast", "Very slow"],
+          "answer": "Very large",
+          "explain": "'Enormous' means very large or huge.",
+          "procedure": ["Enormous = very big", "An enormous elephant = a huge elephant", "Answer: Very large"]
+        },
+        {
+          "q": "What does 'brave' mean?",
+          "options": ["Afraid of everything", "Ready to face danger without fear", "Very tired", "Very hungry"],
+          "answer": "Ready to face danger without fear",
+          "explain": "'Brave' means having courage to face danger.",
+          "procedure": ["Brave = having courage", "Ready to face danger", "Answer: Ready to face danger without fear"]
+        },
+        {
+          "q": "What is the meaning of 'gather'?",
+          "options": ["To spread out", "To bring together", "To lose something", "To run away"],
+          "answer": "To bring together",
+          "explain": "'Gather' means to bring things or people together.",
+          "procedure": ["Gather = bring together", "People gather = come together", "She gathered stones = collected them together", "Answer: To bring together"]
+        },
+        {
+          "q": "Which word means 'to look at something carefully'?",
+          "options": ["Ignore", "Examine", "Sleep", "Eat"],
+          "answer": "Examine",
+          "explain": "'Examine' means to look at something carefully.",
+          "procedure": ["Examine = look closely", "Doctors examine patients — look at them carefully", "Answer: Examine"]
+        },
+        {
+          "q": "What is the meaning of 'difficult'?",
+          "options": ["Very easy", "Not easy — hard to do", "Very fast", "Very colorful"],
+          "answer": "Not easy — hard to do",
+          "explain": "'Difficult' means hard — not easy.",
+          "procedure": ["Difficult = not easy", "A difficult question = a hard question", "Answer: Not easy — hard to do"]
+        },
+        {
+          "q": "What is the meaning of 'furious'?",
+          "options": ["Very happy", "Very angry", "Very sleepy", "Very hungry"],
+          "answer": "Very angry",
+          "explain": "'Furious' means extremely angry.",
+          "procedure": ["Furious = very angry", "He was furious = he was very angry", "Answer: Very angry"]
+        },
+        {
+          "q": "What does 'curious' mean?",
+          "options": ["Not interested", "Wanting to know or learn something", "Angry", "Sleepy"],
+          "answer": "Wanting to know or learn something",
+          "explain": "'Curious' means wanting to know or learn more.",
+          "procedure": ["Curious = wanting to know", "A curious child asks many questions", "Answer: Wanting to know or learn something"]
+        },
+        {
+          "q": "Which word means 'to say sorry'?",
+          "options": ["Apologize", "Celebrate", "Congratulate", "Blame"],
+          "answer": "Apologize",
+          "explain": "'Apologize' means to say sorry.",
+          "procedure": ["Apologize = say sorry", "I apologize for being late = I am sorry for being late", "Answer: Apologize"]
+        },
+        {
+          "q": "What is the meaning of 'immediately'?",
+          "options": ["Later", "Soon", "At once — right now", "Tomorrow"],
+          "answer": "At once — right now",
+          "explain": "'Immediately' means right now, without delay.",
+          "procedure": ["Immediately = at once", "Come immediately = come right now", "Answer: At once — right now"]
+        }
+      ]
+    },
+    {
+      "id": "punctuation",
+      "name": "Punctuation",
+      "icon": "❗",
+      "questions": [
+        {
+          "q": "What does a full stop (.) show?",
+          "options": ["That a sentence has ended", "That a question is being asked", "That someone is shouting", "That something is missing"],
+          "answer": "That a sentence has ended",
+          "explain": "A full stop marks the end of a sentence.",
+          "procedure": ["A full stop is a small dot (.)", "It marks the end of a statement", "Example: 'I went to school.'", "Answer: That a sentence has ended"]
+        },
+        {
+          "q": "Which sentence needs a full stop?",
+          "options": ["What is your name", "I love mangoes", "Help", "All of these"],
+          "answer": "All of these",
+          "explain": "All three need punctuation — 'What is your name?' (question mark), 'I love mangoes.' (full stop), 'Help!' (exclamation mark).",
+          "procedure": ["Every sentence needs an end punctuation", "Statements end with a full stop", "Questions end with a question mark", "Exclamations end with an exclamation mark", "Answer: All of these"]
+        },
+        {
+          "q": "What does a question mark (?) show?",
+          "options": ["That a sentence has ended", "That a question is being asked", "That someone is angry", "That someone is happy"],
+          "answer": "That a question is being asked",
+          "explain": "A question mark shows that a question is being asked.",
+          "procedure": ["Question mark = ?", "It goes at the end of a question", "Example: 'What is your name?'", "Answer: That a question is being asked"]
+        },
+        {
+          "q": "Which sentence needs a question mark?",
+          "options": ["I am happy", "Where are you going", "The dog barks", "She sings"],
+          "answer": "Where are you going",
+          "explain": "'Where are you going' is a question — it needs a question mark.",
+          "procedure": ["Questions need question marks", "'Where are you going?' is a question", "So it needs a question mark", "Answer: Where are you going"]
+        },
+        {
+          "q": "What does an exclamation mark (!) show?",
+          "options": ["That a sentence is a statement", "That a sentence is a question", "Strong emotion — surprise, excitement, or a command", "That something is missing"],
+          "answer": "Strong emotion — surprise, excitement, or a command",
+          "explain": "An exclamation mark shows strong emotion or a command.",
+          "procedure": ["Exclamation mark = !", "It shows strong emotion", "Surprise: 'Wow!'", "Excitement: 'I won!'", "Command: 'Stop!'", "Answer: Strong emotion — surprise, excitement, or a command"]
+        },
+        {
+          "q": "Which sentence needs an exclamation mark?",
+          "options": ["I like cats", "Help me", "Wow that is amazing", "The sun is hot"],
+          "answer": "Wow that is amazing",
+          "explain": "'Wow that is amazing' shows surprise — it needs an exclamation mark.",
+          "procedure": ["Exclamation marks show strong emotion", "'Wow' shows surprise", "So: 'Wow, that is amazing!'", "Answer: Wow that is amazing"]
+        },
+        {
+          "q": "What does a comma (,) do?",
+          "options": ["Shows the end of a sentence", "Separates items in a list or pauses a sentence", "Shows a question", "Shows excitement"],
+          "answer": "Separates items in a list or pauses a sentence",
+          "explain": "A comma separates items in a list or creates a small pause.",
+          "procedure": ["Comma = ,", "It separates list items", "Example: 'I bought apples, oranges, and bananas.'", "It also creates pauses in longer sentences", "Answer: Separates items in a list or pauses a sentence"]
+        },
+        {
+          "q": "Which sentence uses commas correctly?",
+          "options": ["I like red blue and green.", "I like red, blue, and green.", "I like red, blue and, green.", "I like, red blue green."],
+          "answer": "I like red, blue, and green.",
+          "explain": "Commas separate list items — 'red, blue, and green'.",
+          "procedure": ["Commas go between list items", "Correct: 'red, blue, and green'", "The comma before 'and' is optional but common", "Answer: I like red, blue, and green."]
+        },
+        {
+          "q": "What does an apostrophe (') show?",
+          "options": ["That something is missing or belongs to someone", "That a sentence has ended", "That someone is excited", "That someone is asking a question"],
+          "answer": "That something is missing or belongs to someone",
+          "explain": "Apostrophes show possession or missing letters.",
+          "procedure": ["Apostrophe = '", "Two main uses:", "1. Possession: 'Kofi's book' (the book belongs to Kofi)", "2. Contraction: 'don't' (missing letter from 'do not')", "Answer: That something is missing or belongs to someone"]
+        },
+        {
+          "q": "Which is correct?",
+          "options": ["Kofis book", "Kofi's book", "Kofis' book", "Kofi book"],
+          "answer": "Kofi's book",
+          "explain": "'Kofi's book' shows the book belongs to Kofi — using an apostrophe.",
+          "procedure": ["For possession, add 's after the noun", "Kofi + 's = Kofi's", "'Kofi's book' = the book belongs to Kofi", "Answer: Kofi's book"]
+        },
+        {
+          "q": "What does 'don't' stand for?",
+          "options": ["Do not", "Done not", "Does not", "Did not"],
+          "answer": "Do not",
+          "explain": "'Don't' is a contraction — the apostrophe replaces the missing 'o' in 'not'.",
+          "procedure": ["Contractions use apostrophes", "'Don't' = 'do' + 'not'", "The apostrophe stands for the missing 'o'", "Answer: Do not"]
+        },
+        {
+          "q": "Which sentence has correct punctuation?",
+          "options": ["What is your name.", "What is your name?", "What is your name!", "What is your name,"],
+          "answer": "What is your name?",
+          "explain": "'What is your name' is a question — it needs a question mark.",
+          "procedure": ["Questions need question marks", "'What is your name?' is a question", "So it needs a question mark", "Answer: What is your name?"]
+        },
+        {
+          "q": "Where does a comma belong in this sentence: 'I bought bread milk and eggs.'",
+          "options": ["After 'bought'", "After 'bread' and after 'milk'", "After 'and'", "Nowhere — it's correct as is"],
+          "answer": "After 'bread' and after 'milk'",
+          "explain": "Commas separate list items: 'bread, milk, and eggs.'",
+          "procedure": ["Lists need commas", "Correct: 'I bought bread, milk, and eggs.'", "Commas go after each item except the last", "Answer: After 'bread' and after 'milk'"]
+        },
+        {
+          "q": "What is the correct contraction of 'it is'?",
+          "options": ["Its", "It's", "Its'", "It is"],
+          "answer": "It's",
+          "explain": "'It's' with an apostrophe is the contraction of 'it is'.",
+          "procedure": ["'It is' contracts to 'it's'", "The apostrophe replaces the missing 'i' in 'is'", "Note: 'its' (no apostrophe) is a different word — it shows possession", "Answer: It's"]
+        },
+        {
+          "q": "Which sentence uses an apostrophe correctly?",
+          "options": ["The dog's tail wagged.", "The dogs tail wagged.", "The dogs' tail wagged.", "The dog tail wagged."],
+          "answer": "The dog's tail wagged.",
+          "explain": "'Dog's' shows the tail belongs to the dog — correct apostrophe usage.",
+          "procedure": ["Possession needs an apostrophe + s", "'Dog's tail' = the tail of the dog", "Answer: The dog's tail wagged."]
+        },
+        {
+          "q": "What does a colon (:) do?",
+          "options": ["Shows a pause before a list or explanation", "Shows a question", "Shows excitement", "Shows a possessive"],
+          "answer": "Shows a pause before a list or explanation",
+          "explain": "A colon introduces a list, explanation, or quotation.",
+          "procedure": ["Colon = :", "It introduces a list or explanation", "Example: 'I need three things: bread, milk, and eggs.'", "Answer: Shows a pause before a list or explanation"]
+        },
+        {
+          "q": "What does a semicolon (;) do?",
+          "options": ["Joins two closely related sentences", "Separates list items", "Shows a question", "Shows excitement"],
+          "answer": "Joins two closely related sentences",
+          "explain": "A semicolon joins two related complete sentences.",
+          "procedure": ["Semicolon = ;", "It joins two complete sentences that are related", "Example: 'I like tea; my brother likes coffee.'", "Answer: Joins two closely related sentences"]
+        },
+        {
+          "q": "Which sentence uses capital letters correctly?",
+          "options": ["my name is ama.", "My name is ama.", "My name is Ama.", "my Name is Ama."],
+          "answer": "My name is Ama.",
+          "explain": "Capitalise the first word and names of people.",
+          "procedure": ["Start sentences with capital letters", "Capitalise names of people, places, days", "So: 'My name is Ama.'", "Answer: My name is Ama."]
+        },
+        {
+          "q": "Which of these should be capitalised?",
+          "options": ["Monday", "monday", "monDay", "MONDAY"],
+          "answer": "Monday",
+          "explain": "Days of the week are always capitalised: Monday.",
+          "procedure": ["Days, months, and places need capital first letters", "Monday is a day", "So: 'Monday'", "Answer: Monday"]
+        },
+        {
+          "q": "What does a hyphen (-) do?",
+          "options": ["Joins words together", "Shows a question", "Shows a possessive", "Shows a pause"],
+          "answer": "Joins words together",
+          "explain": "A hyphen joins words — like 'well-known' or 'twenty-one'.",
+          "procedure": ["Hyphen = -", "It joins words that work together", "Example: 'well-known teacher' or 'twenty-one'", "Answer: Joins words together"]
+        }
+      ]
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading Comprehension",
+      "icon": "📖",
+      "questions": [
+        {
+          "q": "Passage: 'Kofi woke up early on Monday. He ate his breakfast quickly because he did not want to be late for school. He wore his blue uniform and walked to school with his sister.'\n\nWhy did Kofi eat breakfast quickly?",
+          "options": ["He was very hungry", "He did not want to be late for school", "He did not like the food", "His sister told him to"],
+          "answer": "He did not want to be late for school",
+          "explain": "The passage says 'because he did not want to be late for school.'",
+          "procedure": ["Read the passage carefully", "Find the sentence that explains WHY", "The passage says: 'He ate his breakfast quickly because he did not want to be late for school.'", "Answer: He did not want to be late for school"]
+        },
+        {
+          "q": "Passage: 'Kofi woke up early on Monday. He ate his breakfast quickly because he did not want to be late for school. He wore his blue uniform and walked to school with his sister.'\n\nWhat colour was Kofi's uniform?",
+          "options": ["Red", "Blue", "Green", "Yellow"],
+          "answer": "Blue",
+          "explain": "The passage says 'he wore his blue uniform'.",
+          "procedure": ["Scan the passage for the word 'uniform'", "'He wore his blue uniform'", "Answer: Blue"]
+        },
+        {
+          "q": "Passage: 'Kofi woke up early on Monday. He ate his breakfast quickly because he did not want to be late for school. He wore his blue uniform and walked to school with his sister.'\n\nWho did Kofi walk to school with?",
+          "options": ["His brother", "His sister", "His friend", "His mother"],
+          "answer": "His sister",
+          "explain": "The passage says 'walked to school with his sister'.",
+          "procedure": ["Find the part about walking to school", "'He walked to school with his sister'", "Answer: His sister"]
+        },
+        {
+          "q": "Passage: 'Ama loves animals. She has a dog named Rex and two cats. Every morning, she feeds them before school. She wants to be a vet when she grows up.'\n\nWhy does Ama want to be a vet?",
+          "options": ["She wants to make money", "She loves animals", "Her parents told her to", "She hates animals"],
+          "answer": "She loves animals",
+          "explain": "The passage says 'Ama loves animals' — that's why she wants to be a vet.",
+          "procedure": ["Read the whole passage", "Look for the reason she wants to be a vet", "The first line says: 'Ama loves animals'", "A vet helps animals — she wants to be one because she loves them", "Answer: She loves animals"]
+        },
+        {
+          "q": "Passage: 'Ama loves animals. She has a dog named Rex and two cats. Every morning, she feeds them before school. She wants to be a vet when she grows up.'\n\nHow many pets does Ama have?",
+          "options": ["One", "Two", "Three", "Four"],
+          "answer": "Three",
+          "explain": "She has one dog (Rex) + two cats = three pets.",
+          "procedure": ["Count the animals mentioned", "One dog: Rex", "Two cats", "Total: 1 + 2 = 3", "Answer: Three"]
+        },
+        {
+          "q": "Passage: 'The rain fell heavily for three days. The river near the village began to rise. The villagers worried that it might flood their homes.'\n\nWhy were the villagers worried?",
+          "options": ["They did not like rain", "They thought their homes might be flooded", "They wanted more rain", "They had no umbrellas"],
+          "answer": "They thought their homes might be flooded",
+          "explain": "The passage says they worried the river might flood their homes.",
+          "procedure": ["Read the passage", "The last sentence explains the worry", "'The villagers worried that it might flood their homes'", "Answer: They thought their homes might be flooded"]
+        },
+        {
+          "q": "Passage: 'The rain fell heavily for three days. The river near the village began to rise. The villagers worried that it might flood their homes.'\n\nHow long did the rain fall?",
+          "options": ["One day", "Two days", "Three days", "A week"],
+          "answer": "Three days",
+          "explain": "The passage says 'the rain fell heavily for three days'.",
+          "procedure": ["Find how long the rain lasted", "'The rain fell heavily for three days'", "Answer: Three days"]
+        },
+        {
+          "q": "Passage: 'Akosua is a hardworking student. She wakes up at 5 AM every day to study. Her teachers say she is the best student in her class.'\n\nWhat time does Akosua wake up?",
+          "options": ["4 AM", "5 AM", "6 AM", "7 AM"],
+          "answer": "5 AM",
+          "explain": "The passage says 'she wakes up at 5 AM every day'.",
+          "procedure": ["Look for the time mentioned", "'She wakes up at 5 AM every day'", "Answer: 5 AM"]
+        },
+        {
+          "q": "Passage: 'Akosua is a hardworking student. She wakes up at 5 AM every day to study. Her teachers say she is the best student in her class.'\n\nWhat do her teachers say about her?",
+          "options": ["She is lazy", "She is the best student in her class", "She is always late", "She is noisy"],
+          "answer": "She is the best student in her class",
+          "explain": "The passage says 'her teachers say she is the best student in her class'.",
+          "procedure": ["Find what teachers say", "'Her teachers say she is the best student in her class'", "Answer: She is the best student in her class"]
+        },
+        {
+          "q": "Passage: 'It was market day in Kumasi. The market was full of people. Traders were selling yams, plantains, tomatoes, and fish. Everyone was busy and happy.'\n\nWhere did this story take place?",
+          "options": ["Accra", "Kumasi", "Tamale", "Cape Coast"],
+          "answer": "Kumasi",
+          "explain": "The passage says 'It was market day in Kumasi'.",
+          "procedure": ["Look for a place name", "'It was market day in Kumasi'", "Answer: Kumasi"]
+        },
+        {
+          "q": "Passage: 'It was market day in Kumasi. The market was full of people. Traders were selling yams, plantains, tomatoes, and fish. Everyone was busy and happy.'\n\nWhat were the traders selling?",
+          "options": ["Books", "Yams, plantains, tomatoes, and fish", "Clothes", "Cars"],
+          "answer": "Yams, plantains, tomatoes, and fish",
+          "explain": "The passage says 'traders were selling yams, plantains, tomatoes, and fish'.",
+          "procedure": ["Look for what's being sold", "The passage lists four items", "Answer: Yams, plantains, tomatoes, and fish"]
+        },
+        {
+          "q": "Passage: 'Kojo was afraid of the dark. One night, the power went out. His mother gave him a torch. He held it tight and felt brave. From that day, he was no longer afraid.'\n\nWhat was Kojo afraid of?",
+          "options": ["The rain", "The dark", "Dogs", "Heights"],
+          "answer": "The dark",
+          "explain": "The passage says 'Kojo was afraid of the dark'.",
+          "procedure": ["Look for what he was afraid of", "'Kojo was afraid of the dark'", "Answer: The dark"]
+        },
+        {
+          "q": "Passage: 'Kojo was afraid of the dark. One night, the power went out. His mother gave him a torch. He held it tight and felt brave. From that day, he was no longer afraid.'\n\nWhat did his mother give him?",
+          "options": ["A book", "A torch", "A phone", "A candle"],
+          "answer": "A torch",
+          "explain": "The passage says 'his mother gave him a torch'.",
+          "procedure": ["Look for what she gave him", "'His mother gave him a torch'", "Answer: A torch"]
+        },
+        {
+          "q": "Passage: 'The football match was exciting. In the last minute, Kwame scored the winning goal. The crowd cheered loudly. His team won the cup.'\n\nWho scored the winning goal?",
+          "options": ["The goalkeeper", "Kwame", "The coach", "A player from the other team"],
+          "answer": "Kwame",
+          "explain": "The passage says 'Kwame scored the winning goal'.",
+          "procedure": ["Look for who scored", "'Kwame scored the winning goal'", "Answer: Kwame"]
+        },
+        {
+          "q": "Passage: 'The football match was exciting. In the last minute, Kwame scored the winning goal. The crowd cheered loudly. His team won the cup.'\n\nWhen did Kwame score?",
+          "options": ["At the start", "In the middle", "In the last minute", "After the game"],
+          "answer": "In the last minute",
+          "explain": "The passage says 'in the last minute, Kwame scored'.",
+          "procedure": ["Look for the time", "'In the last minute'", "Answer: In the last minute"]
+        },
+        {
+          "q": "Passage: 'Nana has a small garden behind her house. She grows tomatoes, pepper, and okra. Every evening, she waters the plants. She sells the vegetables at the market.'\n\nWhat does Nana grow?",
+          "options": ["Flowers", "Tomatoes, pepper, and okra", "Rice", "Maize"],
+          "answer": "Tomatoes, pepper, and okra",
+          "explain": "The passage lists what she grows.",
+          "procedure": ["Look for what she grows", "'She grows tomatoes, pepper, and okra'", "Answer: Tomatoes, pepper, and okra"]
+        },
+        {
+          "q": "Passage: 'Nana has a small garden behind her house. She grows tomatoes, pepper, and okra. Every evening, she waters the plants. She sells the vegetables at the market.'\n\nWhen does she water the plants?",
+          "options": ["Every morning", "Every evening", "Every night", "Once a week"],
+          "answer": "Every evening",
+          "explain": "The passage says 'every evening, she waters the plants'.",
+          "procedure": ["Look for the time", "'Every evening, she waters the plants'", "Answer: Every evening"]
+        },
+        {
+          "q": "Passage: 'The library is a quiet place. Students come to read and study. The librarian helps them find books. Everyone must be silent in the library.'\n\nWhat is the main rule in the library?",
+          "options": ["You must eat", "You must be silent", "You must run", "You must sing"],
+          "answer": "You must be silent",
+          "explain": "The passage says 'everyone must be silent in the library'.",
+          "procedure": ["Look for the rule", "'Everyone must be silent in the library'", "Answer: You must be silent"]
+        },
+        {
+          "q": "Passage: 'The library is a quiet place. Students come to read and study. The librarian helps them find books. Everyone must be silent in the library.'\n\nWho helps students find books?",
+          "options": ["The teacher", "The librarian", "The headmaster", "Other students"],
+          "answer": "The librarian",
+          "explain": "The passage says 'the librarian helps them find books'.",
+          "procedure": ["Look for who helps", "'The librarian helps them find books'", "Answer: The librarian"]
+        },
+        {
+          "q": "Passage: 'The library is a quiet place. Students come to read and study. The librarian helps them find books. Everyone must be silent in the library.'\n\nWhat is the main idea of this passage?",
+          "options": ["Librarians earn a lot of money", "The library is a place for quiet reading and study", "Students dislike libraries", "Books are expensive"],
+          "answer": "The library is a place for quiet reading and study",
+          "explain": "The whole passage is about what the library is for — reading, studying, and being quiet.",
+          "procedure": ["Think about what the whole passage is about", "It describes the library, what people do there, and the rules", "The main idea is: it's a place for quiet reading and study", "Answer: The library is a place for quiet reading and study"]
+        }
+      ]
+    },
+    {
+      "id": "spelling",
+      "name": "Spelling",
+      "icon": "🔤",
+      "questions": [
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Recieve", "Receive", "Receeve", "Riceive"],
+          "answer": "Receive",
+          "explain": "The correct spelling is R-E-C-E-I-V-E.",
+          "procedure": ["Remember the rule: i before e except after c", "'Receive' has 'ei' after 'c'", "Correct spelling: R-E-C-E-I-V-E", "Answer: Receive"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Necessary", "Neccessary", "Necesary", "Necessery"],
+          "answer": "Necessary",
+          "explain": "The correct spelling is N-E-C-E-S-S-A-R-Y.",
+          "procedure": ["'Necessary' has one 'c' and two 's's", "N-E-C-E-S-S-A-R-Y", "Answer: Necessary"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Definately", "Definitely", "Defenitely", "Definitley"],
+          "answer": "Definitely",
+          "explain": "The correct spelling is D-E-F-I-N-I-T-E-L-Y.",
+          "procedure": ["The word is 'definite' + 'ly'", "'Definite' is D-E-F-I-N-I-T-E", "Add -ly: D-E-F-I-N-I-T-E-L-Y", "Answer: Definitely"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Seperate", "Separate", "Seperete", "Separete"],
+          "answer": "Separate",
+          "explain": "The correct spelling is S-E-P-A-R-A-T-E.",
+          "procedure": ["'Separate' has 'par' in the middle", "Think: sep-PAR-ate", "S-E-P-A-R-A-T-E", "Answer: Separate"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Accomodation", "Accommodation", "Acommodation", "Accommadation"],
+          "answer": "Accommodation",
+          "explain": "The correct spelling is A-C-C-O-M-M-O-D-A-T-I-O-N.",
+          "procedure": ["'Accommodation' has double 'c' and double 'm'", "A-C-C-O-M-M-O-D-A-T-I-O-N", "Answer: Accommodation"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Becuase", "Because", "Becuse", "Becourse"],
+          "answer": "Because",
+          "explain": "The correct spelling is B-E-C-A-U-S-E.",
+          "procedure": ["Common mistake: adding extra letters", "Correct spelling: B-E-C-A-U-S-E", "Answer: Because"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Freind", "Friend", "Freind", "Frend"],
+          "answer": "Friend",
+          "explain": "The correct spelling is F-R-I-E-N-D.",
+          "procedure": ["'Friend' ends with 'end'", "F-R-I-E-N-D", "Answer: Friend"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Togather", "Together", "Togther", "Togethere"],
+          "answer": "Together",
+          "explain": "The correct spelling is T-O-G-E-T-H-E-R.",
+          "procedure": ["'Together' = to + gether", "T-O-G-E-T-H-E-R", "Answer: Together"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Beautifull", "Beutiful", "Beautiful", "Beautifull"],
+          "answer": "Beautiful",
+          "explain": "The correct spelling is B-E-A-U-T-I-F-U-L — one 'l' at the end.",
+          "procedure": ["'Beauty' + 'ful'", "B-E-A-U-T-I-F-U-L", "Only one 'l' at the end", "Answer: Beautiful"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Wich", "Which", "Whitch", "Wihch"],
+          "answer": "Which",
+          "explain": "The correct spelling is W-H-I-C-H.",
+          "procedure": ["'Which' sounds like 'witch' but is spelled differently", "W-H-I-C-H", "Answer: Which"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Enviroment", "Environment", "Envirnment", "Envierment"],
+          "answer": "Environment",
+          "explain": "The correct spelling is E-N-V-I-R-O-N-M-E-N-T.",
+          "procedure": ["'Environment' has 'iron' in the middle", "E-N-V-I-R-O-N-M-E-N-T", "Answer: Environment"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Goverment", "Government", "Govenment", "Govermant"],
+          "answer": "Government",
+          "explain": "The correct spelling is G-O-V-E-R-N-M-E-N-T.",
+          "procedure": ["'Government' includes an 'n' after 'r'", "G-O-V-E-R-N-M-E-N-T", "Answer: Government"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Febuary", "February", "Feburary", "Februery"],
+          "answer": "February",
+          "explain": "The correct spelling is F-E-B-R-U-A-R-Y.",
+          "procedure": ["'February' has an 'r' after 'b'", "F-E-B-R-U-A-R-Y", "Answer: February"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Wedensday", "Wednesday", "Wensday", "Wednseday"],
+          "answer": "Wednesday",
+          "explain": "The correct spelling is W-E-D-N-E-S-D-A-Y.",
+          "procedure": ["'Wednesday' has a silent 'd'", "W-E-D-N-E-S-D-A-Y", "Answer: Wednesday"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Untill", "Until", "Untile", "Untille"],
+          "answer": "Until",
+          "explain": "The correct spelling is U-N-T-I-L — only one 'l'.",
+          "procedure": ["'Until' ends with one 'l'", "U-N-T-I-L", "Answer: Until"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Suprise", "Surprise", "Supprise", "Surprice"],
+          "answer": "Surprise",
+          "explain": "The correct spelling is S-U-R-P-R-I-S-E.",
+          "procedure": ["'Surprise' has two 'r's", "S-U-R-P-R-I-S-E", "Answer: Surprise"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Diffrent", "Different", "Diferent", "Diffrent"],
+          "answer": "Different",
+          "explain": "The correct spelling is D-I-F-F-E-R-E-N-T.",
+          "procedure": ["'Different' has double 'f'", "D-I-F-F-E-R-E-N-T", "Answer: Different"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Agian", "Again", "Agaian", "Agian"],
+          "answer": "Again",
+          "explain": "The correct spelling is A-G-A-I-N.",
+          "procedure": ["'Again' has 'ai' in the middle", "A-G-A-I-N", "Answer: Again"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Enouph", "Enough", "Enogh", "Enuf"],
+          "answer": "Enough",
+          "explain": "The correct spelling is E-N-O-U-G-H.",
+          "procedure": ["'Enough' ends in 'ough'", "E-N-O-U-G-H", "Answer: Enough"]
+        },
+        {
+          "q": "Which is the correct spelling?",
+          "options": ["Aswell", "As well", "Aswel", "As wel"],
+          "answer": "As well",
+          "explain": "'As well' is two separate words — not one.",
+          "procedure": ["'As well' is a phrase, not one word", "Two separate words: 'as' and 'well'", "Answer: As well"]
+        }
+      ]
+    },
+    {
+      "id": "idioms-proverbs",
+      "name": "Idioms & Proverbs",
+      "icon": "💭",
+      "questions": [
+        {
+          "q": "What is an idiom?",
+          "options": ["A phrase whose meaning is different from its literal words", "A type of noun", "A spelling rule", "A punctuation mark"],
+          "answer": "A phrase whose meaning is different from its literal words",
+          "explain": "An idiom is a phrase whose actual meaning is different from the literal words.",
+          "procedure": ["Idioms are phrases", "Their meaning is NOT the literal meaning", "Example: 'It's raining cats and dogs' = raining heavily", "Answer: A phrase whose meaning is different from its literal words"]
+        },
+        {
+          "q": "What does 'It's raining cats and dogs' mean?",
+          "options": ["Cats and dogs are falling from the sky", "It's raining very heavily", "It's a sunny day", "Animals are running around"],
+          "answer": "It's raining very heavily",
+          "explain": "'Raining cats and dogs' is an idiom for very heavy rain.",
+          "procedure": ["This is an idiom", "The literal meaning is impossible (cats and dogs don't fall from the sky)", "Actual meaning: it's raining very heavily", "Answer: It's raining very heavily"]
+        },
+        {
+          "q": "What does 'a piece of cake' mean?",
+          "options": ["A delicious dessert", "Something very easy to do", "A birthday party", "A type of food"],
+          "answer": "Something very easy to do",
+          "explain": "'A piece of cake' means something is very easy.",
+          "procedure": ["This is an idiom", "Literal: a slice of cake", "Actual meaning: something very easy", "Example: 'The test was a piece of cake' = the test was very easy", "Answer: Something very easy to do"]
+        },
+        {
+          "q": "What does 'break a leg' mean?",
+          "options": ["Actually break a bone", "Good luck", "Fall down", "Run away"],
+          "answer": "Good luck",
+          "explain": "'Break a leg' is a way to wish someone good luck — especially before a performance.",
+          "procedure": ["This is an idiom", "It does NOT mean break a bone", "Actual meaning: good luck", "Used before performances or exams", "Answer: Good luck"]
+        },
+        {
+          "q": "What does 'let the cat out of the bag' mean?",
+          "options": ["Free an actual cat", "Reveal a secret", "Buy a pet", "Clean a bag"],
+          "answer": "Reveal a secret",
+          "explain": "'Let the cat out of the bag' means to reveal a secret.",
+          "procedure": ["This is an idiom", "Literal meaning: freeing a cat from a bag", "Actual meaning: reveal a secret", "Answer: Reveal a secret"]
+        },
+        {
+          "q": "What does 'under the weather' mean?",
+          "options": ["Standing in the rain", "Feeling sick", "Very happy", "Very hungry"],
+          "answer": "Feeling sick",
+          "explain": "'Under the weather' means feeling unwell or sick.",
+          "procedure": ["This is an idiom", "Literal: being under weather", "Actual meaning: feeling sick or unwell", "Example: 'I'm feeling under the weather' = I'm feeling sick", "Answer: Feeling sick"]
+        },
+        {
+          "q": "What is a proverb?",
+          "options": ["A short saying that gives advice or a truth", "A type of verb", "A long story", "A punctuation mark"],
+          "answer": "A short saying that gives advice or a truth",
+          "explain": "A proverb is a short wise saying that gives advice or expresses a truth.",
+          "procedure": ["Proverbs are short sayings", "They give advice or wisdom", "They teach a lesson", "Example: 'Actions speak louder than words'", "Answer: A short saying that gives advice or a truth"]
+        },
+        {
+          "q": "What does the proverb 'Actions speak louder than words' mean?",
+          "options": ["People should talk more", "What people do matters more than what they say", "Actions are noisy", "Words are more important than actions"],
+          "answer": "What people do matters more than what they say",
+          "explain": "'Actions speak louder than words' means what you DO matters more than what you SAY.",
+          "procedure": ["This is a proverb", "It compares actions and words", "It says actions are MORE important", "Actual meaning: what people do matters more than what they say", "Answer: What people do matters more than what they say"]
+        },
+        {
+          "q": "What does the proverb 'A stitch in time saves nine' mean?",
+          "options": ["Sewing is important", "Fixing problems early prevents bigger problems later", "You need nine stitches", "Never sew"],
+          "answer": "Fixing problems early prevents bigger problems later",
+          "explain": "This proverb means dealing with a problem early saves effort later.",
+          "procedure": ["This is a proverb", "Literal: sewing one stitch now saves nine stitches later", "Actual meaning: fix small problems early", "Answer: Fixing problems early prevents bigger problems later"]
+        },
+        {
+          "q": "What does the proverb 'Practice makes perfect' mean?",
+          "options": ["You must practice at everything", "Practising a lot leads to improvement", "Practice is boring", "Nobody is perfect"],
+          "answer": "Practising a lot leads to improvement",
+          "explain": "This proverb means the more you practise, the better you get.",
+          "procedure": ["This is a proverb", "It says practice → perfection", "Actual meaning: the more you practise, the better you become", "Answer: Practising a lot leads to improvement"]
+        },
+        {
+          "q": "What does the proverb 'Birds of a feather flock together' mean?",
+          "options": ["All birds look the same", "People with similar interests tend to spend time together", "Birds cannot fly alone", "Feathers are important"],
+          "answer": "People with similar interests tend to spend time together",
+          "explain": "This proverb means people who are similar tend to be friends.",
+          "procedure": ["This is a proverb", "Literal: birds with the same feathers stay together", "Actual meaning: people who are similar tend to be friends", "Answer: People with similar interests tend to spend time together"]
+        },
+        {
+          "q": "What does the proverb 'Don't judge a book by its cover' mean?",
+          "options": ["Don't read books", "Don't judge people by their appearance", "All books look the same", "Books are important"],
+          "answer": "Don't judge people by their appearance",
+          "explain": "This proverb means don't judge people by how they look — look at who they really are.",
+          "procedure": ["This is a proverb", "Literal: don't judge a book by its cover", "Actual meaning: don't judge people by their appearance", "Answer: Don't judge people by their appearance"]
+        },
+        {
+          "q": "What does 'Once bitten, twice shy' mean?",
+          "options": ["Biting is dangerous", "You become more careful after a bad experience", "Never try anything", "Always be afraid"],
+          "answer": "You become more careful after a bad experience",
+          "explain": "This proverb means after being hurt once, you become more careful.",
+          "procedure": ["This is a proverb", "Literal: once bitten (once), twice shy (careful)", "Actual meaning: after a bad experience, you become more careful", "Answer: You become more careful after a bad experience"]
+        },
+        {
+          "q": "What does 'Better late than never' mean?",
+          "options": ["Always be late", "It's better to do something late than not at all", "Never be late", "Time doesn't matter"],
+          "answer": "It's better to do something late than not at all",
+          "explain": "This proverb means it's better to do something — even late — than never do it.",
+          "procedure": ["This is a proverb", "It compares 'late' and 'never'", "Actual meaning: doing something late is better than never doing it", "Answer: It's better to do something late than not at all"]
+        },
+        {
+          "q": "What does 'The early bird catches the worm' mean?",
+          "options": ["Birds eat worms", "People who start early succeed", "Sleeping late is good", "Worms are delicious"],
+          "answer": "People who start early succeed",
+          "explain": "This proverb means people who act early have an advantage.",
+          "procedure": ["This is a proverb", "Literal: the bird that wakes up early gets the worm", "Actual meaning: people who start early succeed", "Answer: People who start early succeed"]
+        },
+        {
+          "q": "What does 'All that glitters is not gold' mean?",
+          "options": ["Gold is not valuable", "Not everything that looks good is actually good", "Glitter is dangerous", "Gold shines brightly"],
+          "answer": "Not everything that looks good is actually good",
+          "explain": "This proverb means not everything that looks valuable or attractive is truly valuable.",
+          "procedure": ["This is a proverb", "Literal: shiny things are not always gold", "Actual meaning: not everything that looks good is actually good", "Answer: Not everything that looks good is actually good"]
+        },
+        {
+          "q": "What does 'Many hands make light work' mean?",
+          "options": ["Many hands are heavy", "When people work together, the work is easier", "Hands are important", "Work is always hard"],
+          "answer": "When people work together, the work is easier",
+          "explain": "This proverb means teamwork makes difficult tasks easier.",
+          "procedure": ["This is a proverb", "Literal: many hands (people) make work light (easy)", "Actual meaning: teamwork makes difficult tasks easier", "Answer: When people work together, the work is easier"]
+        },
+        {
+          "q": "What does 'A friend in need is a friend indeed' mean?",
+          "options": ["All friends are good", "A true friend helps you when you need it most", "You need many friends", "Friends are hard to find"],
+          "answer": "A true friend helps you when you need it most",
+          "explain": "This proverb means you know who your true friends are when you're in trouble.",
+          "procedure": ["This is a proverb", "Literal: a friend in need (when you need) is a friend indeed (truly a friend)", "Actual meaning: a true friend helps you when you need it most", "Answer: A true friend helps you when you need it most"]
+        },
+        {
+          "q": "What does 'Look before you leap' mean?",
+          "options": ["Always look at the ground", "Think carefully before acting", "Never jump", "Jumping is dangerous"],
+          "answer": "Think carefully before acting",
+          "explain": "This proverb means think before you act — don't rush into things.",
+          "procedure": ["This is a proverb", "Literal: look before you jump", "Actual meaning: think carefully before acting", "Answer: Think carefully before acting"]
+        },
+        {
+          "q": "What does 'Where there's a will, there's a way' mean?",
+          "options": ["Wills are important", "If you really want something, you'll find a way to achieve it", "Ways are everywhere", "Nothing is possible"],
+          "answer": "If you really want something, you'll find a way to achieve it",
+          "explain": "This proverb means determination leads to solutions.",
+          "procedure": ["This is a proverb", "Literal: 'will' = determination, 'way' = path to success", "Actual meaning: if you really want something, you'll find a way", "Answer: If you really want something, you'll find a way to achieve it"]
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "name": "Composition",
+      "icon": "✍️",
+      "questions": [
+        {
+          "q": "What is a paragraph?",
+          "options": ["A single sentence", "A group of sentences about one topic", "A whole composition", "A punctuation mark"],
+          "answer": "A group of sentences about one topic",
+          "explain": "A paragraph is a group of sentences that focus on one idea or topic.",
+          "procedure": ["A paragraph is more than one sentence", "All sentences in a paragraph relate to the same topic", "Usually has a topic sentence + supporting sentences", "Answer: A group of sentences about one topic"]
+        },
+        {
+          "q": "What is a topic sentence?",
+          "options": ["The longest sentence in a paragraph", "The sentence that tells the main idea of a paragraph", "The last sentence in a paragraph", "A question mark"],
+          "answer": "The sentence that tells the main idea of a paragraph",
+          "explain": "A topic sentence states the main idea of a paragraph.",
+          "procedure": ["The topic sentence tells what the paragraph is about", "It usually comes first", "Supporting sentences explain the topic", "Answer: The sentence that tells the main idea of a paragraph"]
+        },
+        {
+          "q": "What should every composition have?",
+          "options": ["Only one sentence", "A beginning, middle, and end", "No punctuation", "Only capital letters"],
+          "answer": "A beginning, middle, and end",
+          "explain": "A good composition has a clear beginning (introduction), middle (body), and end (conclusion).",
+          "procedure": ["Every composition needs structure", "Beginning: introduces the topic", "Middle: develops the idea with details", "End: summarises and concludes", "Answer: A beginning, middle, and end"]
+        },
+        {
+          "q": "What is an introduction?",
+          "options": ["The ending of a composition", "The beginning — it introduces the topic", "A type of punctuation", "A long word"],
+          "answer": "The beginning — it introduces the topic",
+          "explain": "An introduction is the opening of a composition that sets the topic.",
+          "procedure": ["The introduction is the start of a composition", "It tells the reader what the composition is about", "It should be interesting enough to make the reader want to continue", "Answer: The beginning — it introduces the topic"]
+        },
+        {
+          "q": "What is a conclusion?",
+          "options": ["The beginning of a composition", "The ending — it wraps up the composition", "A type of noun", "A poem"],
+          "answer": "The ending — it wraps up the composition",
+          "explain": "A conclusion is the ending of a composition that summarises the main points.",
+          "procedure": ["The conclusion is the end", "It summarises the main points", "It gives the reader a final thought", "Answer: The ending — it wraps up the composition"]
+        },
+        {
+          "q": "What is an informal letter?",
+          "options": ["A letter to a friend or family member", "A letter to a company", "A letter to a school principal", "A letter with no address"],
+          "answer": "A letter to a friend or family member",
+          "explain": "An informal letter is casual — written to friends or family.",
+          "procedure": ["Informal = casual", "Written to friends or family", "Tone is friendly and relaxed", "Structure is less strict than formal letters", "Answer: A letter to a friend or family member"]
+        },
+        {
+          "q": "What is a formal letter?",
+          "options": ["A letter to a friend", "A letter to a company, official, or organisation", "A short note", "A poem"],
+          "answer": "A letter to a company, official, or organisation",
+          "explain": "A formal letter is official — written to someone in a professional context.",
+          "procedure": ["Formal = professional", "Written to companies, officials, schools", "Uses formal language", "Follows a specific format", "Answer: A letter to a company, official, or organisation"]
+        },
+        {
+          "q": "How should an informal letter end?",
+          "options": ["Yours faithfully", "Yours sincerely", "Best wishes / Yours friend", "Respectfully"],
+          "answer": "Best wishes / Yours friend",
+          "explain": "Informal letters end with casual phrases like 'Best wishes' or 'Yours friend'.",
+          "procedure": ["Informal letters use informal endings", "Common endings: 'Best wishes', 'Yours friend', 'Love'", "'Yours faithfully' and 'Yours sincerely' are for formal letters", "Answer: Best wishes / Yours friend"]
+        },
+        {
+          "q": "How should a formal letter end?",
+          "options": ["Best wishes", "Love", "Yours faithfully / Yours sincerely", "See you soon"],
+          "answer": "Yours faithfully / Yours sincerely",
+          "explain": "Formal letters end with 'Yours faithfully' or 'Yours sincerely'.",
+          "procedure": ["Formal letters use formal endings", "Use 'Yours faithfully' if you don't know the person's name", "Use 'Yours sincerely' if you know the name", "Answer: Yours faithfully / Yours sincerely"]
+        },
+        {
+          "q": "What is a narrative composition?",
+          "options": ["A story — describing events that happened", "A description of a person", "An argument about a topic", "A letter"],
+          "answer": "A story — describing events that happened",
+          "explain": "A narrative composition tells a story with characters and events.",
+          "procedure": ["Narrative = story-telling", "It has characters, events, and usually a plot", "Example: 'A Day I Will Never Forget'", "Answer: A story — describing events that happened"]
+        },
+        {
+          "q": "What is a descriptive composition?",
+          "options": ["A story", "A composition that describes something in detail", "An argument", "A letter"],
+          "answer": "A composition that describes something in detail",
+          "explain": "A descriptive composition paints a picture with words.",
+          "procedure": ["Descriptive = describing", "It describes a person, place, or thing", "Uses sensory details (sight, sound, smell, taste, touch)", "Example: 'My Favourite Place'", "Answer: A composition that describes something in detail"]
+        },
+        {
+          "q": "What is an argumentative composition?",
+          "options": ["A story", "A composition that argues for or against an opinion", "A description", "A letter"],
+          "answer": "A composition that argues for or against an opinion",
+          "explain": "An argumentative composition presents a view and supports it with reasons.",
+          "procedure": ["Argumentative = arguing a point", "It takes a position (for or against)", "It gives reasons and examples", "Example: 'Should students wear uniforms?'", "Answer: A composition that argues for or against an opinion"]
+        },
+        {
+          "q": "What does a good composition have at the start?",
+          "options": ["The ending", "An interesting opening that hooks the reader", "Only dialogue", "A list of facts"],
+          "answer": "An interesting opening that hooks the reader",
+          "explain": "A good composition starts with an interesting opening that grabs attention.",
+          "procedure": ["The opening is the first impression", "It should make the reader want to continue", "Options: a question, an interesting fact, a quote, a description", "Answer: An interesting opening that hooks the reader"]
+        },
+        {
+          "q": "How many paragraphs should a short composition have?",
+          "options": ["One", "At least three", "Ten", "No paragraphs"],
+          "answer": "At least three",
+          "explain": "A short composition should have at least three paragraphs — introduction, body, and conclusion.",
+          "procedure": ["Each paragraph should have one main idea", "Introduction (1 paragraph)", "Body (1+ paragraphs)", "Conclusion (1 paragraph)", "Answer: At least three"]
+        },
+        {
+          "q": "What should you do before writing a composition?",
+          "options": ["Start writing immediately", "Plan the main points", "Copy from a book", "Ask a friend to write it"],
+          "answer": "Plan the main points",
+          "explain": "Planning helps you organise your thoughts before writing.",
+          "procedure": ["Before writing, plan", "Think about the main points", "List what you'll cover in each paragraph", "This makes writing clearer and easier", "Answer: Plan the main points"]
+        },
+        {
+          "q": "What is a title?",
+          "options": ["The last sentence", "The name of a composition", "A type of punctuation", "A paragraph"],
+          "answer": "The name of a composition",
+          "explain": "A title is the name of a composition — it tells the reader what the piece is about.",
+          "procedure": ["The title is at the top", "It's the name of the composition", "It should interest the reader", "Answer: The name of a composition"]
+        },
+        {
+          "q": "What should every sentence in a composition begin with?",
+          "options": ["A lowercase letter", "A capital letter", "A number", "A symbol"],
+          "answer": "A capital letter",
+          "explain": "Every sentence must start with a capital letter.",
+          "procedure": ["Sentences start with capital letters", "This is basic punctuation", "Example: 'The sun was hot.'", "Answer: A capital letter"]
+        },
+        {
+          "q": "What is the purpose of a dialogue in a composition?",
+          "options": ["To make the composition longer", "To show characters speaking to each other", "To confuse the reader", "To replace the ending"],
+          "answer": "To show characters speaking to each other",
+          "explain": "Dialogue is when characters speak — it's shown with quotation marks.",
+          "procedure": ["Dialogue = characters speaking", "Shown with quotation marks: \"Hello,\" she said.", "It makes stories more alive and interesting", "Answer: To show characters speaking to each other"]
+        },
+        {
+          "q": "Which is the correct way to write dialogue?",
+          "options": ["Hello, she said.", "\"Hello,\" she said.", "Hello she said.", "Hello - she said."],
+          "answer": "\"Hello,\" she said.",
+          "explain": "Dialogue needs quotation marks around the spoken words.",
+          "procedure": ["Spoken words go in quotation marks", "\"Hello,\" she said.", "The comma goes inside the quotation marks", "Answer: \"Hello,\" she said."]
+        },
+        {
+          "q": "Why should we read our composition after writing it?",
+          "options": ["To find and fix mistakes", "To count the words", "To memorise it", "To copy it"],
+          "answer": "To find and fix mistakes",
+          "explain": "Reading over your work helps you catch spelling, grammar, and punctuation mistakes.",
+          "procedure": ["After writing, read it out loud or silently", "Look for errors in spelling, grammar, punctuation", "Fix them before submitting", "Answer: To find and fix mistakes"]
+        }
+      ]
+    }
+  ]
+}
