@@ -26,6 +26,7 @@
       "id": "social",
       "name": "Social Studies",
       "icon": "🌍",
+      "file": "social.json",
       "available": true
     },
     {
