@@ -33,18 +33,21 @@
       "id": "rme",
       "name": "Religious & Moral Education",
       "icon": "🕊️",
-      "available": false
+      "file": "rme.json",
+      "available": true
     },
     {
       "id": "computing",
       "name": "Computing",
       "icon": "💻",
+      "file": "computing.json",
       "available": false
     },
     {
       "id": "ghanaian",
       "name": "Ghanaian Language",
       "icon": "🗣️",
+      "file": "ghanaian.json",
       "available": false
     }
   ]
