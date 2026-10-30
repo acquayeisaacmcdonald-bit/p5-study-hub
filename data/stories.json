@@ -3,7 +3,11 @@
     {
       "id": "tortoise-and-friends",
       "title": "The Tortoise and His Friends",
-      "class": ["p1", "p2", "p3"],
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/tortoise.jpg",
       "description": "A short Ghanaian folktale about kindness and teamwork.",
@@ -24,7 +28,11 @@
     {
       "id": "why-tortoise-has-cracks",
       "title": "Why the Tortoise Has a Cracked Shell",
-      "class": ["p3", "p4", "p5"],
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/cracked-shell.jpg",
       "description": "A classic African tale explaining the crack on a tortoise's shell.",
@@ -46,7 +54,11 @@
     {
       "id": "anansi-and-the-pot",
       "title": "Anansi and the Pot of Wisdom",
-      "class": ["p4", "p5", "p6"],
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/anansi.jpg",
       "description": "Anansi the spider tries to keep all the world's wisdom for himself.",
@@ -67,7 +79,11 @@
     {
       "id": "the-girl-who-found-her-voice",
       "title": "The Girl Who Found Her Voice",
-      "class": ["jhs1", "jhs2", "jhs3"],
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/voice.jpg",
       "description": "A story about courage, standing up for what's right, and finding your voice.",
@@ -95,7 +111,10 @@
     {
       "id": "the-lion-and-the-mouse",
       "title": "The Lion and the Mouse",
-      "class": ["p1", "p2"],
+      "class": [
+        "p1",
+        "p2"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/lion-mouse.jpg",
       "description": "How even a tiny mouse can help a mighty lion.",
@@ -117,7 +136,11 @@
     {
       "id": "the-hare-and-the-tortoise",
       "title": "The Hare and the Tortoise",
-      "class": ["p2", "p3", "p4"],
+      "class": [
+        "p2",
+        "p3",
+        "p4"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/hare-tortoise.jpg",
       "description": "Slow and steady wins the race.",
@@ -139,7 +162,11 @@
     {
       "id": "the-boy-who-cried-wolf",
       "title": "The Boy Who Cried Wolf",
-      "class": ["p4", "p5", "p6"],
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
       "type": "text",
       "cover": "assets/stories/covers/cried-wolf.jpg",
       "description": "Why telling the truth matters.",
@@ -156,6 +183,130 @@
         "But this time, no one came. The villagers thought he was playing another trick.",
         "The wolf scattered the flock, and the boy learned a hard lesson.",
         "Moral: No one believes a liar — even when they tell the truth."
+      ]
+    },
+    {
+      "id": "tower-to-heaven",
+      "title": "Tower to Heaven",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "text",
+      "description": "Yaa and the villagers build a tower to reach the sky god, Onyankopon.",
+      "ageMin": 5,
+      "ageMax": 9,
+      "duration": "4 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "Long ago, the sky god Onyankopon lived very close to the earth. The people could reach up and touch him.",
+        "But one day, an old woman named Yaa was pounding fufu. Her pestle hit the sky and hurt Onyankopon. He was angry and moved far away, up into the sky.",
+        "The people were sad. They could no longer talk to their sky god. So Yaa said, \"Let us build a tower of mortar and pestle to reach him.\"",
+        "Everyone brought their wooden mortars and pestles. They stacked them higher and higher. The tower grew tall, but it was still not high enough.",
+        "They needed one more mortar. \"Take one from the bottom,\" said Yaa. But when they pulled the bottom mortar, the whole tower fell down.",
+        "And that is why, to this day, the sky is far away, and we cannot build a tower to reach it.",
+        "Moral: Sometimes, we must be patient and find the right way, not just a quick way."
+      ]
+    },
+    {
+      "id": "yaa-foriwa",
+      "title": "Yaa Foriwa",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "text",
+      "description": "A beautiful village girl rejects all suitors, but marries a stranger who hides a terrible secret.",
+      "ageMin": 9,
+      "ageMax": 12,
+      "duration": "6 min read",
+      "author": "Michael Ofori-Mankata (1995)",
+      "content": [
+        "Yaa Foriwa was the most beautiful girl in her village. Many young men asked to marry her, but she rejected them all.",
+        "One day, a handsome stranger named Sasa came from a distant village called Bonsam. Yaa Foriwa fell in love and agreed to marry him.",
+        "Her family warned her. They did not know Sasa or his people. But Yaa Foriwa would not listen.",
+        "After the wedding, Yaa Foriwa went to live with Sasa in his village. But she soon discovered a terrible secret. Sasa was not a man. He was a dragon.",
+        "At night, Sasa would shed his human skin and become a monster. Yaa Foriwa was trapped and afraid.",
+        "She sent a message to her brothers. They came with swords and fire. They fought the dragon and saved their sister.",
+        "Yaa Foriwa returned home, wiser and humbler. She had learned that beauty is not enough, and that we must listen to those who love us.",
+        "Moral: Do not be fooled by appearances. Listen to the wisdom of your family."
+      ]
+    },
+    {
+      "id": "talk-talk",
+      "title": "Talk, Talk",
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "type": "text",
+      "description": "A farmer finds a talking yam and rushes to tell the Chief.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "3 min read",
+      "author": "Ashanti Legend (1993)",
+      "content": [
+        "Jumaani the farmer was digging in his yam field when he heard a strange voice. \"Jumaani! Jumaani!\"",
+        "He looked around. No one was there. Then he realised the voice was coming from a yam. A talking yam!",
+        "Jumaani was so excited. He ran all the way to the village to tell the Chief. \"Chief! Chief! My yam can talk!\"",
+        "The Chief and the elders followed Jumaani back to his farm. But when they got there, the yam was silent.",
+        "Jumaani was embarrassed. The Chief laughed. \"A talking yam? Jumaani, you have been in the sun too long!\"",
+        "But as they walked away, the yam whispered, \"Jumaani, Jumaani...\" The Chief did not hear it. Only Jumaani did.",
+        "Moral: Sometimes, the truth is heard only by those who are willing to listen."
+      ]
+    },
+    {
+      "id": "anase-and-queen-crocodile",
+      "title": "Kwaku Ananse and the Queenmother Crocodile",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "text",
+      "description": "Ananse the trickster tries to outsmart the Queenmother of the crocodiles, but is caught in his own trap.",
+      "ageMin": 12,
+      "ageMax": 16,
+      "duration": "7 min read",
+      "author": "Akan Folktale",
+      "content": [
+        "Kwaku Ananse was a cunning spider. He lived in the village with his family, but he was always looking for a way to get more than his share.",
+        "Ananse began trapping the animals of the kingdom one by one, killing them for his own gain. The animals were afraid.",
+        "Amoakua the squirrel watched from the border between the village and the bush. He saw what Ananse was doing and decided to stop him.",
+        "Amoakua caught Ananse in a trap and tied him up. \"You have killed too many of our brothers,\" said Amoakua. \"Now you will pay.\"",
+        "But Ananse cried out to the Queenmother Crocodile, who lived in the river. \"Great Queenmother, please help me! I am your servant!\"",
+        "The Queenmother Crocodile pleaded for Ananse's release. \"Let us give him another chance,\" she said. Amoakua warned her, but she did not listen.",
+        "Ananse was freed. But instead of thanking the Queenmother, he played a trick on her. He tricked her into coming onto land, where she was weak.",
+        "But the trick backfired. Ananse was caught and punished. His body was disfigured, and he was banned from ever becoming a chief.",
+        "Moral: Trickery may work for a time, but it always comes back to the trickster."
+      ]
+    },
+    {
+      "id": "mpotse-mpotse",
+      "title": "Mpotse-mpotse, Eguamba na Feow",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "text",
+      "description": "A mysterious tree, a mysterious visitor, and a mysterious thief. A Ghanaian folktale retold for young readers.",
+      "ageMin": 11,
+      "ageMax": 15,
+      "duration": "6 min read",
+      "author": "J.O. de Graft Hanson (1995)",
+      "content": [
+        "There was a great tree in the middle of the village. No one knew who planted it, or how old it was. The elders said it had always been there.",
+        "One night, a stranger came to the village. He wore a long cloak and carried a bag. He asked for a place to sleep, and the chief welcomed him.",
+        "In the morning, the stranger was gone. But so was the chief's golden stool. The village was in an uproar. A thief had come in the night.",
+        "The chief called for the fastest runner and the cleverest tracker. They followed the stranger's footprints to the great tree. But the footprints stopped at the trunk.",
+        "They searched the tree. They climbed it, they dug around its roots. Nothing. No stranger, no golden stool.",
+        "Then a small child spoke. \"Look at the leaves,\" she said. The leaves of the tree were different that day. They were made of gold.",
+        "The stranger had not stolen the stool. He had turned it into leaves, and the tree had grown them. The golden stool was hidden in plain sight.",
+        "Moral: What we seek is sometimes right in front of us, hidden in plain sight."
       ]
     }
   ]
