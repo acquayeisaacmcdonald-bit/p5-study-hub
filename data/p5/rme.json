@@ -1,0 +1,3359 @@
+{
+  "subject": "Religious & Moral Education",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "god-the-creator",
+      "name": "God the Creator",
+      "icon": "🌍",
+      "questions": [
+        {
+          "q": "Who is God in the three major religions of Ghana?",
+          "options": [
+            "An ordinary person",
+            "The Supreme Being who created everything",
+            "A spirit in the forest only",
+            "Only the president"
+          ],
+          "answer": "The Supreme Being who created everything",
+          "explain": "In all three religions (Christianity, Islam, Traditional), God is the Supreme Being.",
+          "procedure": [
+            "Ghana's three major religions: Christianity, Islam, Traditional",
+            "All believe in one Supreme Being",
+            "God is the creator of all things",
+            "Answer: The Supreme Being who created everything"
+          ]
+        },
+        {
+          "q": "What does 'creation' mean?",
+          "image": "assets/rme/creation.png",
+          "options": [
+            "Anything made by humans",
+            "Everything God made — the universe, earth, and life",
+            "Only animals",
+            "Only plants"
+          ],
+          "answer": "Everything God made — the universe, earth, and life",
+          "explain": "Creation refers to everything that God made.",
+          "procedure": [
+            "Creation = what God made",
+            "Includes universe, earth, plants, animals, humans",
+            "Everything around us is part of creation",
+            "Answer: Everything God made — the universe, earth, and life"
+          ]
+        },
+        {
+          "q": "According to Christianity and Islam, on which day did God rest after creating the world?",
+          "options": [
+            "The first day",
+            "The seventh day",
+            "The third day",
+            "There is no rest day"
+          ],
+          "answer": "The seventh day",
+          "explain": "Both the Bible and the Quran mention that God rested on the seventh day.",
+          "procedure": [
+            "God created the world in six days",
+            "Rested on the seventh day",
+            "This is why some people observe a day of rest",
+            "Answer: The seventh day"
+          ]
+        },
+        {
+          "q": "What is one thing that shows God's creation?",
+          "image": "assets/rme/gods-creation.png",
+          "options": [
+            "A plastic bottle",
+            "A mountain",
+            "A computer",
+            "A car"
+          ],
+          "answer": "A mountain",
+          "explain": "Mountains are part of God's natural creation.",
+          "procedure": [
+            "Mountains are natural formations",
+            "Not made by humans",
+            "Part of God's creation",
+            "Answer: A mountain"
+          ]
+        },
+        {
+          "q": "In traditional Ghanaian religion, who is the Supreme Being often called?",
+          "options": [
+            "Nyame",
+            "The President",
+            "Mallam",
+            "Bishop"
+          ],
+          "answer": "Nyame",
+          "explain": "In the Akan traditional religion, God is called Nyame.",
+          "procedure": [
+            "Akan traditional name for God: Nyame",
+            "Also called Onyankopon",
+            "Means 'the Supreme Being'",
+            "Answer: Nyame"
+          ]
+        },
+        {
+          "q": "Why do people worship God?",
+          "options": [
+            "Only to get money",
+            "Because He is the creator and deserves honour",
+            "Only because of fear",
+            "Only for fun"
+          ],
+          "answer": "Because He is the creator and deserves honour",
+          "explain": "People worship God because He created all things.",
+          "procedure": [
+            "God is the creator",
+            "Worship shows respect and gratitude",
+            "Answer: Because He is the creator and deserves honour"
+          ]
+        },
+        {
+          "q": "What does the Bible say God created first?",
+          "options": [
+            "Animals",
+            "Light",
+            "Humans",
+            "The sun"
+          ],
+          "answer": "Light",
+          "explain": "In the Bible (Genesis), God created light first.",
+          "procedure": [
+            "Book of Genesis, chapter 1",
+            "First creation: light",
+            "Let there be light",
+            "Answer: Light"
+          ]
+        },
+        {
+          "q": "In Islam, what is God called in Arabic?",
+          "options": [
+            "Allah",
+            "Jesus",
+            "Mohammed",
+            "Mary"
+          ],
+          "answer": "Allah",
+          "explain": "In Islam, God is called Allah.",
+          "procedure": [
+            "Arabic word for God",
+            "Used by Muslims worldwide",
+            "Answer: Allah"
+          ]
+        },
+        {
+          "q": "What are some things God created?",
+          "options": [
+            "Only humans",
+            "Only animals",
+            "Sun, moon, stars, earth, plants, animals, humans",
+            "Only plants"
+          ],
+          "answer": "Sun, moon, stars, earth, plants, animals, humans",
+          "explain": "God created everything in the universe.",
+          "procedure": [
+            "Sun, moon, stars",
+            "Earth and its features",
+            "Plants and animals",
+            "Humans",
+            "Answer: Sun, moon, stars, earth, plants, animals, humans"
+          ]
+        },
+        {
+          "q": "How should we treat God's creation?",
+          "options": [
+            "Destroy it",
+            "Waste it",
+            "Care for and protect it",
+            "Ignore it"
+          ],
+          "answer": "Care for and protect it",
+          "explain": "Since God created the world, we should protect it.",
+          "procedure": [
+            "Creation is God's gift",
+            "We should protect nature",
+            "Not waste or destroy it",
+            "Answer: Care for and protect it"
+          ]
+        },
+        {
+          "q": "Which of these is NOT part of God's creation?",
+          "options": [
+            "Trees",
+            "Rivers",
+            "Mountains",
+            "A plastic bottle"
+          ],
+          "answer": "A plastic bottle",
+          "explain": "Plastic bottles are made by humans, not directly by God.",
+          "procedure": [
+            "Trees, rivers, and mountains are natural",
+            "Plastic bottles are manufactured",
+            "Answer: A plastic bottle"
+          ]
+        },
+        {
+          "q": "Who created the sun, moon, and stars?",
+          "options": [
+            "Humans",
+            "Scientists",
+            "God",
+            "The government"
+          ],
+          "answer": "God",
+          "explain": "According to religious belief, God created all of these.",
+          "procedure": [
+            "Sun, moon, and stars are natural",
+            "Not made by humans",
+            "God created them",
+            "Answer: God"
+          ]
+        },
+        {
+          "q": "What does 'Onyankopon' mean in the Akan language?",
+          "options": [
+            "The Supreme Being / God",
+            "A type of food",
+            "A traditional dance",
+            "A festival"
+          ],
+          "answer": "The Supreme Being / God",
+          "explain": "'Onyankopon' is the Akan name for God.",
+          "procedure": [
+            "Akan word for God",
+            "Onyankopon = Supreme Being",
+            "Answer: The Supreme Being / God"
+          ]
+        },
+        {
+          "q": "What are the first words of the Bible?",
+          "options": [
+            "Once upon a time",
+            "In the beginning God created the heavens and the earth",
+            "Long ago",
+            "Let me tell you"
+          ],
+          "answer": "In the beginning God created the heavens and the earth",
+          "explain": "The Bible begins with these words in Genesis 1:1.",
+          "procedure": [
+            "Book of Genesis",
+            "First verse",
+            "Answer: In the beginning God created the heavens and the earth"
+          ]
+        },
+        {
+          "q": "What does Islam teach about creation?",
+          "options": [
+            "Universe was always here",
+            "Allah created everything in six days",
+            "Only humans were created",
+            "Creation was by accident"
+          ],
+          "answer": "Allah created everything in six days",
+          "explain": "The Quran teaches that Allah created everything in six days.",
+          "procedure": [
+            "Quran teaches creation",
+            "Six days of creation",
+            "Answer: Allah created everything in six days"
+          ]
+        },
+        {
+          "q": "Why should we thank God?",
+          "options": [
+            "Never",
+            "Only when we get money",
+            "For creating us and providing for our needs",
+            "Only at Christmas"
+          ],
+          "answer": "For creating us and providing for our needs",
+          "explain": "We thank God for creating us and providing for us.",
+          "procedure": [
+            "God created us",
+            "Provides food, water, shelter",
+            "Answer: For creating us and providing for our needs"
+          ]
+        },
+        {
+          "q": "What is 'worship'?",
+          "options": [
+            "Going to school",
+            "Showing deep respect and honour to God",
+            "Playing music",
+            "Cooking food"
+          ],
+          "answer": "Showing deep respect and honour to God",
+          "explain": "Worship means showing deep respect and honour to God.",
+          "procedure": [
+            "Worship = respect + honour to God",
+            "Done through prayer, song, and action",
+            "Answer: Showing deep respect and honour to God"
+          ]
+        },
+        {
+          "q": "What is a common belief about God in all Ghanaian religions?",
+          "options": [
+            "God is human",
+            "God is the all-powerful creator",
+            "God only exists at night",
+            "God is only for one tribe"
+          ],
+          "answer": "God is the all-powerful creator",
+          "explain": "All three religions agree that God is the all-powerful creator.",
+          "procedure": [
+            "Christianity, Islam, Traditional all share this",
+            "God is all-powerful",
+            "God is the creator",
+            "Answer: God is the all-powerful creator"
+          ]
+        },
+        {
+          "q": "What do traditional Ghanaian religions believe about God?",
+          "options": [
+            "God doesn't exist",
+            "God is far away but all-knowing",
+            "Only spirits exist",
+            "Only humans exist"
+          ],
+          "answer": "God is far away but all-knowing",
+          "explain": "Traditional Ghanaian religions often see God as all-knowing and all-powerful, though distant.",
+          "procedure": [
+            "God is all-knowing",
+            "All-powerful",
+            "Often approached through spirits and ancestors",
+            "Answer: God is far away but all-knowing"
+          ]
+        },
+        {
+          "q": "What are three things every Ghanaian religion teaches about God?",
+          "options": [
+            "God is weak, limited, and forgetful",
+            "God is the creator, all-knowing, and all-powerful",
+            "God is a person, a king, and a warrior",
+            "God is only visible at night"
+          ],
+          "answer": "God is the creator, all-knowing, and all-powerful",
+          "procedure": [
+            "All three religions agree",
+            "God = creator",
+            "God = all-knowing",
+            "God = all-powerful",
+            "Answer: God is the creator, all-knowing, and all-powerful"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caring-for-environment",
+      "name": "The Environment — God's Creation",
+      "icon": "🌳",
+      "questions": [
+        {
+          "q": "Why is the environment important in RME?",
+          "options": [
+            "It has no importance",
+            "It is God's creation and should be protected",
+            "It belongs only to the government",
+            "It is only for animals"
+          ],
+          "answer": "It is God's creation and should be protected",
+          "explain": "The environment is God's creation and should be cared for.",
+          "procedure": [
+            "Environment is part of creation",
+            "God gave humans responsibility to care for it",
+            "Answer: It is God's creation and should be protected"
+          ]
+        },
+        {
+          "q": "In the Bible, who was given responsibility to care for the earth?",
+          "image": "assets/rme/caring-for-earth.png",
+          "options": [
+            "Angels only",
+            "Humans",
+            "Only animals",
+            "Only plants"
+          ],
+          "answer": "Humans",
+          "explain": "In Genesis, God gave humans responsibility to care for the earth.",
+          "procedure": [
+            "Genesis 1:26-28",
+            "God told humans to care for the earth",
+            "Answer: Humans"
+          ]
+        },
+        {
+          "q": "What is one way to care for God's creation?",
+          "image": "assets/rme/clean-environment.png",
+          "options": [
+            "Litter everywhere",
+            "Plant trees and keep surroundings clean",
+            "Burn forests",
+            "Waste water"
+          ],
+          "answer": "Plant trees and keep surroundings clean",
+          "explain": "Planting trees and keeping clean are ways to care for creation.",
+          "procedure": [
+            "Plant trees",
+            "Keep surroundings clean",
+            "Protect wildlife",
+            "Answer: Plant trees and keep surroundings clean"
+          ]
+        },
+        {
+          "q": "What does the Quran teach about the environment?",
+          "options": [
+            "It should be ignored",
+            "Humans are guardians (khalifa) of the earth",
+            "Only Muslims can use it",
+            "It has no value"
+          ],
+          "answer": "Humans are guardians (khalifa) of the earth",
+          "explain": "The Quran teaches that humans are guardians (khalifa) of the earth.",
+          "procedure": [
+            "Khalifa = guardian",
+            "Humans must protect the earth",
+            "Answer: Humans are guardians (khalifa) of the earth"
+          ]
+        },
+        {
+          "q": "What do many traditional religions teach about nature?",
+          "options": [
+            "Nature is evil",
+            "Nature is sacred and should be respected",
+            "Nature has no value",
+            "Only humans matter"
+          ],
+          "answer": "Nature is sacred and should be respected",
+          "explain": "Many traditional religions teach that nature is sacred.",
+          "procedure": [
+            "Nature is sacred",
+            "Trees, rivers, animals often treated with respect",
+            "Answer: Nature is sacred and should be respected"
+          ]
+        },
+        {
+          "q": "Why should we not cut down trees carelessly?",
+          "options": [
+            "They are expensive",
+            "Trees are part of God's creation and provide oxygen",
+            "Only because they look nice",
+            "No reason"
+          ],
+          "answer": "Trees are part of God's creation and provide oxygen",
+          "explain": "Trees provide oxygen and are part of creation — we should not destroy them.",
+          "procedure": [
+            "Trees give oxygen",
+            "Part of God's creation",
+            "Cutting carelessly harms the environment",
+            "Answer: Trees are part of God's creation and provide oxygen"
+          ]
+        },
+        {
+          "q": "What is 'stewardship' in religious terms?",
+          "options": [
+            "Owning everything",
+            "Caring for what has been entrusted to you",
+            "Using everything up",
+            "Never touching anything"
+          ],
+          "answer": "Caring for what has been entrusted to you",
+          "explain": "Stewardship is caring for what God has entrusted to us.",
+          "procedure": [
+            "Stewardship = caring for what's entrusted",
+            "Applied to the earth",
+            "God entrusted the earth to humans",
+            "Answer: Caring for what has been entrusted to you"
+          ]
+        },
+        {
+          "q": "What are some things we should protect in the environment?",
+          "options": [
+            "Only cars",
+            "Only buildings",
+            "Water, air, land, animals, plants",
+            "Only money"
+          ],
+          "answer": "Water, air, land, animals, plants",
+          "explain": "We should protect all elements of creation.",
+          "procedure": [
+            "Water",
+            "Air",
+            "Land",
+            "Animals",
+            "Plants",
+            "Answer: Water, air, land, animals, plants"
+          ]
+        },
+        {
+          "q": "How does wasting water harm God's creation?",
+          "options": [
+            "It doesn't",
+            "Clean water is limited and needed by all life",
+            "Water is infinite",
+            "Only for the rich"
+          ],
+          "answer": "Clean water is limited and needed by all life",
+          "explain": "Clean water is a limited resource that all life needs.",
+          "procedure": [
+            "Fresh water is limited",
+            "Plants, animals, humans all need it",
+            "Wasting it harms creation",
+            "Answer: Clean water is limited and needed by all life"
+          ]
+        },
+        {
+          "q": "What does the Islamic concept 'khalifa' mean?",
+          "options": [
+            "A type of food",
+            "Guardian or steward of the earth",
+            "A type of dance",
+            "A festival"
+          ],
+          "answer": "Guardian or steward of the earth",
+          "explain": "In Islam, humans are khalifa — guardians or stewards of the earth.",
+          "procedure": [
+            "Arabic word",
+            "Means guardian or steward",
+            "Humans tasked with caring for the earth",
+            "Answer: Guardian or steward of the earth"
+          ]
+        },
+        {
+          "q": "What is a good religious response to littering?",
+          "options": [
+            "Ignore it",
+            "Litter more",
+            "Pick up litter and keep places clean",
+            "Blame others"
+          ],
+          "answer": "Pick up litter and keep places clean",
+          "explain": "Caring for creation means keeping places clean.",
+          "procedure": [
+            "Littering harms creation",
+            "Picking up shows responsibility",
+            "Answer: Pick up litter and keep places clean"
+          ]
+        },
+        {
+          "q": "Why do some traditional religions consider certain trees sacred?",
+          "options": [
+            "They look pretty",
+            "They are believed to have spiritual significance",
+            "They are expensive",
+            "No reason"
+          ],
+          "answer": "They are believed to have spiritual significance",
+          "explain": "Some trees are considered sacred and are protected.",
+          "procedure": [
+            "Some trees are sacred",
+            "Believed to have spiritual significance",
+            "Protected from cutting",
+            "Answer: They are believed to have spiritual significance"
+          ]
+        },
+        {
+          "q": "What does 'creation care' mean?",
+          "options": [
+            "Destroying nature",
+            "Protecting and caring for the natural world",
+            "Ignoring the environment",
+            "Only using natural resources"
+          ],
+          "answer": "Protecting and caring for the natural world",
+          "explain": "Creation care means protecting the world God made.",
+          "procedure": [
+            "Creation care = protecting nature",
+            "Religious duty",
+            "Answer: Protecting and caring for the natural world"
+          ]
+        },
+        {
+          "q": "What role do humans play in creation, according to most religions?",
+          "options": [
+            "Rulers who can destroy it",
+            "Stewards/guardians who care for it",
+            "Complete bystanders",
+            "Only animals matter"
+          ],
+          "answer": "Stewards/guardians who care for it",
+          "explain": "Most religions teach that humans are stewards of creation.",
+          "procedure": [
+            "Humans are caretakers",
+            "Given responsibility by God",
+            "Answer: Stewards/guardians who care for it"
+          ]
+        },
+        {
+          "q": "Which of these is a religious reason to protect animals?",
+          "options": [
+            "Only some animals matter",
+            "Animals are part of God's creation",
+            "Only pets matter",
+            "Animals have no value"
+          ],
+          "answer": "Animals are part of God's creation",
+          "explain": "Animals are part of God's creation and should be protected.",
+          "procedure": [
+            "All animals are part of creation",
+            "Should be treated kindly",
+            "Answer: Animals are part of God's creation"
+          ]
+        },
+        {
+          "q": "What does the Bible say about how humans should treat animals?",
+          "options": [
+            "Cruelly",
+            "With kindness and care",
+            "Never interact",
+            "Animals don't matter"
+          ],
+          "answer": "With kindness and care",
+          "explain": "The Bible teaches kindness to animals.",
+          "procedure": [
+            "Proverbs 12:10 — a righteous man cares for his animal",
+            "Answer: With kindness and care"
+          ]
+        },
+        {
+          "q": "How can families teach children to care for the environment?",
+          "options": [
+            "Never mention it",
+            "Through example — showing them how to care for nature",
+            "Only in theory",
+            "Only in church/mosque"
+          ],
+          "answer": "Through example — showing them how to care for nature",
+          "explain": "Children learn by watching their parents.",
+          "procedure": [
+            "Parents are role models",
+            "Children follow what they see",
+            "Answer: Through example — showing them how to care for nature"
+          ]
+        },
+        {
+          "q": "What is one connection between religion and the environment?",
+          "options": [
+            "No connection",
+            "Many religions teach that nature is sacred",
+            "Religion teaches to destroy nature",
+            "Only scientists care about the environment"
+          ],
+          "answer": "Many religions teach that nature is sacred",
+          "explain": "Many religions teach that nature is sacred.",
+          "procedure": [
+            "Religions have environmental teachings",
+            "Nature is often seen as sacred",
+            "Answer: Many religions teach that nature is sacred"
+          ]
+        },
+        {
+          "q": "What does 'sustainable' mean?",
+          "options": [
+            "Use everything up now",
+            "Use resources wisely so they last for the future",
+            "Never use anything",
+            "Only for the rich"
+          ],
+          "answer": "Use resources wisely so they last for the future",
+          "explain": "Sustainable means using resources wisely.",
+          "procedure": [
+            "Sustainable = lasting",
+            "Use wisely",
+            "Answer: Use resources wisely so they last for the future"
+          ]
+        },
+        {
+          "q": "What are three practical ways to care for creation?",
+          "options": [
+            "Waste, burn, destroy",
+            "Plant trees, save water, reduce waste",
+            "Only pray",
+            "Only read the Bible/Quran"
+          ],
+          "answer": "Plant trees, save water, reduce waste",
+          "explain": "Practical actions include planting trees, saving water, and reducing waste.",
+          "procedure": [
+            "Plant trees",
+            "Save water",
+            "Reduce waste",
+            "Answer: Plant trees, save water, reduce waste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religious-worship",
+      "name": "Religious Worship",
+      "icon": "🙏",
+      "questions": [
+        {
+          "q": "What is worship?",
+          "options": [
+            "A type of food",
+            "Showing respect and honour to God",
+            "A game",
+            "A dance"
+          ],
+          "answer": "Showing respect and honour to God",
+          "explain": "Worship is showing respect and honour to God.",
+          "procedure": [
+            "Worship = respect + honour to God",
+            "Done through prayer, song, and actions",
+            "Answer: Showing respect and honour to God"
+          ]
+        },
+        {
+          "q": "Where do Christians worship?",
+          "image": "assets/rme/church.png",
+          "options": [
+            "In a school",
+            "In a church",
+            "In a market",
+            "In a hospital"
+          ],
+          "answer": "In a church",
+          "explain": "Christians worship in churches.",
+          "procedure": [
+            "Christian place of worship = church",
+            "Services held there",
+            "Answer: In a church"
+          ]
+        },
+        {
+          "q": "Where do Muslims worship?",
+          "image": "assets/rme/mosque.png",
+          "options": [
+            "In a church",
+            "In a mosque",
+            "In a school",
+            "In a library"
+          ],
+          "answer": "In a mosque",
+          "explain": "Muslims worship in mosques.",
+          "procedure": [
+            "Muslim place of worship = mosque",
+            "Also called masjid in Arabic",
+            "Answer: In a mosque"
+          ]
+        },
+        {
+          "q": "Where do followers of traditional African religions often worship?",
+          "image": "assets/rme/traditional-shrine.png",
+          "options": [
+            "In a church",
+            "In a mosque",
+            "At shrines and in nature",
+            "In a library"
+          ],
+          "answer": "At shrines and in nature",
+          "explain": "Traditional African worship often happens at shrines and in natural settings.",
+          "procedure": [
+            "Traditional worship at shrines",
+            "Often in natural settings",
+            "Trees, rivers, mountains may be significant",
+            "Answer: At shrines and in nature"
+          ]
+        },
+        {
+          "q": "What is prayer?",
+          "image": "assets/rme/prayer.png",
+          "options": [
+            "A type of food",
+            "Talking to God / communicating with God",
+            "A type of dance",
+            "A type of game"
+          ],
+          "answer": "Talking to God / communicating with God",
+          "explain": "Prayer is talking to God / communicating with God.",
+          "procedure": [
+            "Prayer = talking to God",
+            "Done through words, silence, or actions",
+            "Part of worship",
+            "Answer: Talking to God / communicating with God"
+          ]
+        },
+        {
+          "q": "What is the Christian holy book?",
+          "image": "assets/rme/bible.png",
+          "options": [
+            "The Quran",
+            "The Bible",
+            "The Vedas",
+            "The Book of Changes"
+          ],
+          "answer": "The Bible",
+          "explain": "The Bible is the Christian holy book.",
+          "procedure": [
+            "Christian holy book = Bible",
+            "Contains Old and New Testaments",
+            "Answer: The Bible"
+          ]
+        },
+        {
+          "q": "What is the Muslim holy book?",
+          "image": "assets/rme/quran.png",
+          "options": [
+            "The Bible",
+            "The Quran",
+            "The Bhagavad Gita",
+            "The Book of Psalms"
+          ],
+          "answer": "The Quran",
+          "explain": "The Quran is the Muslim holy book.",
+          "procedure": [
+            "Muslim holy book = Quran",
+            "Also spelled Koran",
+            "Answer: The Quran"
+          ]
+        },
+        {
+          "q": "What day do most Christians worship?",
+          "options": [
+            "Monday",
+            "Sunday",
+            "Friday",
+            "Wednesday"
+          ],
+          "answer": "Sunday",
+          "explain": "Most Christians worship on Sunday.",
+          "procedure": [
+            "Sunday = Christian worship day",
+            "Marks the resurrection of Jesus",
+            "Answer: Sunday"
+          ]
+        },
+        {
+          "q": "What day do most Muslims worship?",
+          "options": [
+            "Monday",
+            "Sunday",
+            "Friday",
+            "Wednesday"
+          ],
+          "answer": "Friday",
+          "explain": "Most Muslims worship on Friday (Jumu'ah).",
+          "procedure": [
+            "Friday = Muslim worship day",
+            "Called Jumu'ah prayer",
+            "Answer: Friday"
+          ]
+        },
+        {
+          "q": "What is the call to prayer in Islam called?",
+          "options": [
+            "A hymn",
+            "Adhan",
+            "A song",
+            "A chant"
+          ],
+          "answer": "Adhan",
+          "explain": "The call to prayer in Islam is called the Adhan.",
+          "procedure": [
+            "Arabic: Adhan (or Azan)",
+            "Called from the mosque",
+            "Announces prayer time",
+            "Answer: Adhan"
+          ]
+        },
+        {
+          "q": "What is the Christian ceremony that uses water?",
+          "options": [
+            "Wedding",
+            "Baptism",
+            "Funeral",
+            "Confirmation"
+          ],
+          "answer": "Baptism",
+          "explain": "Baptism is a Christian ceremony that uses water.",
+          "procedure": [
+            "Christian sacrament",
+            "Uses water",
+            "Symbolises spiritual cleansing",
+            "Answer: Baptism"
+          ]
+        },
+        {
+          "q": "What is the Islamic ritual of washing before prayer called?",
+          "options": [
+            "Baptism",
+            "Wudu",
+            "Shahada",
+            "Salat"
+          ],
+          "answer": "Wudu",
+          "explain": "Wudu is the Islamic ritual washing before prayer.",
+          "procedure": [
+            "Arabic: Wudu",
+            "Washing of hands, face, arms, feet",
+            "Done before prayer",
+            "Answer: Wudu"
+          ]
+        },
+        {
+          "q": "What is Salat in Islam?",
+          "options": [
+            "A type of food",
+            "The five daily prayers",
+            "A type of dance",
+            "A festival"
+          ],
+          "answer": "The five daily prayers",
+          "explain": "Salat refers to the five daily prayers in Islam.",
+          "procedure": [
+            "Arabic: Salat (or Salah)",
+            "Five daily prayers",
+            "One of the Five Pillars of Islam",
+            "Answer: The five daily prayers"
+          ]
+        },
+        {
+          "q": "How do Christians and Muslims both show respect in worship?",
+          "options": [
+            "Dancing only",
+            "Through prayer, singing, and reading holy books",
+            "Only by eating",
+            "Only by sleeping"
+          ],
+          "answer": "Through prayer, singing, and reading holy books",
+          "explain": "Both religions use prayer, singing, and reading their holy books.",
+          "procedure": [
+            "Prayer",
+            "Singing",
+            "Reading holy books",
+            "These are shared practices",
+            "Answer: Through prayer, singing, and reading holy books"
+          ]
+        },
+        {
+          "q": "What is a Sabbath?",
+          "options": [
+            "A type of food",
+            "A day of rest and worship",
+            "A type of prayer",
+            "A type of song"
+          ],
+          "answer": "A day of rest and worship",
+          "explain": "Sabbath is a day of rest and worship.",
+          "procedure": [
+            "Day of rest and worship",
+            "Saturday (Jewish) or Sunday (Christian)",
+            "Answer: A day of rest and worship"
+          ]
+        },
+        {
+          "q": "What does fasting mean?",
+          "options": [
+            "Eating lots of food",
+            "Avoiding food and drink for a period",
+            "Sleeping all day",
+            "Never eating at all"
+          ],
+          "answer": "Avoiding food and drink for a period",
+          "explain": "Fasting is avoiding food and drink for a period, often for religious reasons.",
+          "procedure": [
+            "Avoiding food and drink",
+            "For a period",
+            "Practised in many religions",
+            "Answer: Avoiding food and drink for a period"
+          ]
+        },
+        {
+          "q": "What is Ramadan?",
+          "options": [
+            "A type of food",
+            "The Islamic month of fasting",
+            "A Christian holiday",
+            "A traditional festival"
+          ],
+          "answer": "The Islamic month of fasting",
+          "explain": "Ramadan is the Islamic month of fasting.",
+          "procedure": [
+            "Ninth month of the Islamic calendar",
+            "Muslims fast during daylight hours",
+            "Answer: The Islamic month of fasting"
+          ]
+        },
+        {
+          "q": "What is Lent in Christianity?",
+          "options": [
+            "A type of food",
+            "A period of fasting and reflection before Easter",
+            "A festival",
+            "A type of prayer"
+          ],
+          "answer": "A period of fasting and reflection before Easter",
+          "explain": "Lent is a Christian period of fasting and reflection.",
+          "procedure": [
+            "40-day period",
+            "Before Easter",
+            "Fasting and reflection",
+            "Answer: A period of fasting and reflection before Easter"
+          ]
+        },
+        {
+          "q": "What is puja in some religious traditions?",
+          "options": [
+            "A type of food",
+            "A form of worship in some Eastern religions",
+            "A type of dance",
+            "A type of song"
+          ],
+          "answer": "A form of worship in some Eastern religions",
+          "explain": "Puja is a form of worship in some Eastern religious traditions.",
+          "procedure": [
+            "Sanskrit term",
+            "Form of worship",
+            "Common in Hinduism",
+            "Answer: A form of worship in some Eastern religions"
+          ]
+        },
+        {
+          "q": "What does religious worship look like across different faiths?",
+          "options": [
+            "It is always identical",
+            "It varies but often includes prayer, sacred texts, and gathering together",
+            "Nobody worships",
+            "Only singing"
+          ],
+          "answer": "It varies but often includes prayer, sacred texts, and gathering together",
+          "explain": "Worship varies across faiths but has common elements.",
+          "procedure": [
+            "Prayer",
+            "Sacred texts",
+            "Gathering together",
+            "These are common elements",
+            "Answer: It varies but often includes prayer, sacred texts, and gathering together"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religious-festivals",
+      "name": "Festivals in the Three Religions",
+      "icon": "🎉",
+      "questions": [
+        {
+          "q": "What is a religious festival?",
+          "options": [
+            "A workday",
+            "A special day for celebration and worship",
+            "A type of food",
+            "A type of punishment"
+          ],
+          "answer": "A special day for celebration and worship",
+          "explain": "A religious festival is a special day for celebration and worship.",
+          "procedure": [
+            "Special day",
+            "For celebration and worship",
+            "Each religion has festivals",
+            "Answer: A special day for celebration and worship"
+          ]
+        },
+        {
+          "q": "What is the main Christian festival celebrating Jesus birth?",
+          "image": "assets/rme/christmas.png",
+          "options": [
+            "Easter",
+            "Christmas",
+            "Lent",
+            "Palm Sunday"
+          ],
+          "answer": "Christmas",
+          "explain": "Christmas celebrates the birth of Jesus.",
+          "procedure": [
+            "Christian festival",
+            "Celebrates Jesus birth",
+            "25 December",
+            "Answer: Christmas"
+          ]
+        },
+        {
+          "q": "What Christian festival celebrates Jesus resurrection?",
+          "options": [
+            "Christmas",
+            "Easter",
+            "Lent",
+            "Advent"
+          ],
+          "answer": "Easter",
+          "explain": "Easter celebrates the resurrection of Jesus.",
+          "procedure": [
+            "Easter = resurrection",
+            "After Good Friday",
+            "Major Christian festival",
+            "Answer: Easter"
+          ]
+        },
+        {
+          "q": "What is the main Islamic festival celebrating the end of Ramadan?",
+          "image": "assets/rme/eid.png",
+          "options": [
+            "Eid ul-Fitr",
+            "Eid ul-Adha",
+            "Mawlid",
+            "Ashura"
+          ],
+          "answer": "Eid ul-Fitr",
+          "explain": "Eid ul-Fitr celebrates the end of Ramadan.",
+          "procedure": [
+            "Eid ul-Fitr = end of Ramadan",
+            "Celebrated with prayers and feasting",
+            "Answer: Eid ul-Fitr"
+          ]
+        },
+        {
+          "q": "What is Eid ul-Adha?",
+          "options": [
+            "A Christian festival",
+            "A Muslim festival of sacrifice",
+            "A traditional festival",
+            "A school holiday"
+          ],
+          "answer": "A Muslim festival of sacrifice",
+          "explain": "Eid ul-Adha is the Muslim festival of sacrifice.",
+          "procedure": [
+            "Islamic festival of sacrifice",
+            "Commemorates Ibrahim willingness to sacrifice",
+            "Answer: A Muslim festival of sacrifice"
+          ]
+        },
+        {
+          "q": "Which traditional Ghanaian festival is celebrated by the Ga people?",
+          "options": [
+            "Odwira",
+            "Homowo",
+            "Aboakyer",
+            "Damba"
+          ],
+          "answer": "Homowo",
+          "explain": "Homowo is the traditional Ga festival celebrated in Accra.",
+          "procedure": [
+            "Ga people of Accra",
+            "Celebrates the harvest",
+            "Means hooting at hunger",
+            "Answer: Homowo"
+          ]
+        },
+        {
+          "q": "Which traditional Ghanaian festival is celebrated by the Ashanti people?",
+          "image": "assets/rme/odwira-festival.png",
+          "options": [
+            "Homowo",
+            "Odwira",
+            "Damba",
+            "Aboakyer"
+          ],
+          "answer": "Odwira",
+          "explain": "Odwira is a major Ashanti festival.",
+          "procedure": [
+            "Ashanti people",
+            "Celebrates purification and harvest",
+            "Answer: Odwira"
+          ]
+        },
+        {
+          "q": "Which traditional festival is celebrated by the Effutu people of Winneba?",
+          "options": [
+            "Odwira",
+            "Homowo",
+            "Aboakyer",
+            "Damba"
+          ],
+          "answer": "Aboakyer",
+          "explain": "Aboakyer is the deer-hunting festival of the Effutu people.",
+          "procedure": [
+            "Effutu people of Winneba",
+            "Deer-hunting festival",
+            "Answer: Aboakyer"
+          ]
+        },
+        {
+          "q": "Which traditional festival is celebrated by the Dagomba people in Northern Ghana?",
+          "options": [
+            "Odwira",
+            "Homowo",
+            "Aboakyer",
+            "Damba"
+          ],
+          "answer": "Damba",
+          "explain": "Damba is a major festival of the Dagomba people in the Northern Region.",
+          "procedure": [
+            "Dagomba people",
+            "Northern Ghana",
+            "Answer: Damba"
+          ]
+        },
+        {
+          "q": "Why do people celebrate religious festivals?",
+          "options": [
+            "Only to eat",
+            "To remember important religious events and show gratitude",
+            "Only to get gifts",
+            "Only to rest"
+          ],
+          "answer": "To remember important religious events and show gratitude",
+          "explain": "Festivals help people remember important events and show gratitude.",
+          "procedure": [
+            "Remembering important events",
+            "Showing gratitude",
+            "Building community",
+            "Answer: To remember important religious events and show gratitude"
+          ]
+        },
+        {
+          "q": "What is Mawlid?",
+          "options": [
+            "A Christian festival",
+            "The Islamic celebration of the Prophet Muhammad birthday",
+            "A traditional Ghanaian festival",
+            "A Jewish festival"
+          ],
+          "answer": "The Islamic celebration of the Prophet Muhammad birthday",
+          "explain": "Mawlid celebrates the birthday of the Prophet Muhammad.",
+          "procedure": [
+            "Islamic festival",
+            "Prophet Muhammad birthday",
+            "Also called Mawlid al-Nabi",
+            "Answer: The Islamic celebration of the Prophet Muhammad birthday"
+          ]
+        },
+        {
+          "q": "What is Good Friday?",
+          "options": [
+            "The day Jesus was born",
+            "The day Jesus was crucified",
+            "The day Jesus was baptized",
+            "A Muslim festival"
+          ],
+          "answer": "The day Jesus was crucified",
+          "explain": "Good Friday commemorates the crucifixion of Jesus.",
+          "procedure": [
+            "Christian holy day",
+            "Crucifixion of Jesus",
+            "Before Easter Sunday",
+            "Answer: The day Jesus was crucified"
+          ]
+        },
+        {
+          "q": "What does the Christian festival of Easter celebrate?",
+          "options": [
+            "The birth of Jesus",
+            "The resurrection of Jesus",
+            "The baptism of Jesus",
+            "The ascension of Jesus"
+          ],
+          "answer": "The resurrection of Jesus",
+          "explain": "Easter celebrates the resurrection of Jesus.",
+          "procedure": [
+            "Resurrection of Jesus",
+            "Central Christian festival",
+            "Celebrated on Sunday",
+            "Answer: The resurrection of Jesus"
+          ]
+        },
+        {
+          "q": "How do people celebrate Eid ul-Fitr?",
+          "options": [
+            "By fasting all day",
+            "With special prayers, feasting, and giving to the poor",
+            "By staying indoors",
+            "By working all day"
+          ],
+          "answer": "With special prayers, feasting, and giving to the poor",
+          "explain": "Eid ul-Fitr is celebrated with prayers, feasting, and charity.",
+          "procedure": [
+            "Special prayers",
+            "Feasting",
+            "Giving to the poor (Zakat)",
+            "Answer: With special prayers, feasting, and giving to the poor"
+          ]
+        },
+        {
+          "q": "What is a common element of traditional Ghanaian festivals?",
+          "options": [
+            "Sitting quietly",
+            "Drumming, dancing, and community gatherings",
+            "Only eating",
+            "Only working"
+          ],
+          "answer": "Drumming, dancing, and community gatherings",
+          "explain": "Traditional festivals often include drumming, dancing, and community gathering.",
+          "procedure": [
+            "Drumming",
+            "Dancing",
+            "Community gatherings",
+            "Answer: Drumming, dancing, and community gatherings"
+          ]
+        },
+        {
+          "q": "What do traditional Ghanaian festivals often honour?",
+          "options": [
+            "Only money",
+            "Ancestors, gods, and the harvest",
+            "Only the government",
+            "Only the president"
+          ],
+          "answer": "Ancestors, gods, and the harvest",
+          "explain": "Traditional festivals often honour ancestors, gods, and the harvest.",
+          "procedure": [
+            "Ancestors",
+            "Gods",
+            "Harvest",
+            "Answer: Ancestors, gods, and the harvest"
+          ]
+        },
+        {
+          "q": "Why are festivals important in religion?",
+          "options": [
+            "They bring people together in worship and celebration",
+            "They are just for fun",
+            "They have no meaning",
+            "They are for children only"
+          ],
+          "answer": "They bring people together in worship and celebration",
+          "explain": "Festivals bring communities together in worship and celebration.",
+          "procedure": [
+            "Unity",
+            "Worship",
+            "Celebration",
+            "Answer: They bring people together in worship and celebration"
+          ]
+        },
+        {
+          "q": "What does Christmas celebrate?",
+          "options": [
+            "The birth of Jesus",
+            "The death of Jesus",
+            "The resurrection of Jesus",
+            "The baptism of Jesus"
+          ],
+          "answer": "The birth of Jesus",
+          "explain": "Christmas celebrates the birth of Jesus.",
+          "procedure": [
+            "Birth of Jesus",
+            "25 December",
+            "Major Christian festival",
+            "Answer: The birth of Jesus"
+          ]
+        },
+        {
+          "q": "What is Advent in Christianity?",
+          "options": [
+            "A type of food",
+            "The period of preparation before Christmas",
+            "A festival after Christmas",
+            "A type of prayer"
+          ],
+          "answer": "The period of preparation before Christmas",
+          "explain": "Advent is the period of preparation before Christmas.",
+          "procedure": [
+            "Four weeks before Christmas",
+            "Preparation for Christmas",
+            "Answer: The period of preparation before Christmas"
+          ]
+        },
+        {
+          "q": "Why do Ghanaians celebrate festivals like Homowo and Odwira?",
+          "options": [
+            "To honour ancestors and give thanks for harvest",
+            "To work more",
+            "To travel only",
+            "To buy food"
+          ],
+          "answer": "To honour ancestors and give thanks for harvest",
+          "explain": "Traditional festivals like Homowo and Odwira honour ancestors and give thanks.",
+          "procedure": [
+            "Honour ancestors",
+            "Give thanks for harvest",
+            "Preserve culture",
+            "Answer: To honour ancestors and give thanks for harvest"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religious-leaders",
+      "name": "Religious Leaders",
+      "icon": "⛪",
+      "questions": [
+        {
+          "q": "Who is the founder of Christianity?",
+          "image": "assets/rme/jesus.png",
+          "options": [
+            "Muhammad",
+            "Jesus Christ",
+            "Abraham",
+            "Moses"
+          ],
+          "answer": "Jesus Christ",
+          "explain": "Jesus Christ is the founder and central figure of Christianity.",
+          "procedure": [
+            "Christianity is named after Christ",
+            "Jesus is the Son of God in Christian belief",
+            "Answer: Jesus Christ"
+          ]
+        },
+        {
+          "q": "Who is the founder of Islam?",
+          "image": "assets/rme/muhammad.png",
+          "options": [
+            "Jesus",
+            "Muhammad",
+            "Moses",
+            "David"
+          ],
+          "answer": "Muhammad",
+          "explain": "Prophet Muhammad is the founder of Islam.",
+          "procedure": [
+            "Prophet Muhammad (peace be upon him)",
+            "Received the Quran from Allah",
+            "Answer: Muhammad"
+          ]
+        },
+        {
+          "q": "What is the role of an Imam in Islam?",
+          "options": [
+            "Leads prayers at the mosque",
+            "Cooks food",
+            "Teaches math",
+            "Builds houses"
+          ],
+          "answer": "Leads prayers at the mosque",
+          "explain": "An Imam leads prayers and guides the Muslim community.",
+          "procedure": [
+            "Imam = prayer leader",
+            "Guides the community",
+            "Answer: Leads prayers at the mosque"
+          ]
+        },
+        {
+          "q": "What is the role of a Pastor or Reverend in Christianity?",
+          "options": [
+            "Leads the church and teaches",
+            "Farms only",
+            "Fights wars",
+            "Judges cases"
+          ],
+          "answer": "Leads the church and teaches",
+          "explain": "Pastors/Reverends lead the church and teach the Bible.",
+          "procedure": [
+            "Leads church services",
+            "Teaches the Bible",
+            "Cares for the congregation",
+            "Answer: Leads the church and teaches"
+          ]
+        },
+        {
+          "q": "Who is a traditional priest in Ghana?",
+          "image": "assets/rme/traditional-priest.png",
+          "options": [
+            "A politician",
+            "A spiritual leader who serves at a shrine",
+            "A police officer",
+            "A teacher"
+          ],
+          "answer": "A spiritual leader who serves at a shrine",
+          "explain": "Traditional priests serve at shrines and guide spiritual practices.",
+          "procedure": [
+            "Serves at shrines",
+            "Guides spiritual practices",
+            "Intermediary between people and spirits",
+            "Answer: A spiritual leader who serves at a shrine"
+          ]
+        },
+        {
+          "q": "What is an Apostle in Christianity?",
+          "options": [
+            "An early follower of Jesus sent to spread his teachings",
+            "A type of food",
+            "A building",
+            "A song"
+          ],
+          "answer": "An early follower of Jesus sent to spread his teachings",
+          "explain": "Apostles were early followers of Jesus who spread his teachings.",
+          "procedure": [
+            "Early followers of Jesus",
+            "Sent to spread teachings",
+            "Answer: An early follower of Jesus sent to spread his teachings"
+          ]
+        },
+        {
+          "q": "What is a Prophet in Islam?",
+          "options": [
+            "A person chosen by Allah to deliver messages",
+            "A king",
+            "A teacher",
+            "A judge"
+          ],
+          "answer": "A person chosen by Allah to deliver messages",
+          "explain": "A Prophet in Islam is chosen by Allah to deliver messages.",
+          "procedure": [
+            "Chosen by Allah",
+            "Delivers messages",
+            "Muhammad is the final prophet",
+            "Answer: A person chosen by Allah to deliver messages"
+          ]
+        },
+        {
+          "q": "What is a Mallam in the Ghanaian Muslim community?",
+          "options": [
+            "A traditional chief",
+            "A Muslim teacher and religious leader",
+            "A farmer",
+            "A fisherman"
+          ],
+          "answer": "A Muslim teacher and religious leader",
+          "explain": "A Mallam is a Muslim teacher and religious leader in Ghana.",
+          "procedure": [
+            "Muslim scholar/teacher",
+            "Guides the community",
+            "Answer: A Muslim teacher and religious leader"
+          ]
+        },
+        {
+          "q": "What is the role of a Catechist in the Catholic Church?",
+          "options": [
+            "Teaches the faith and helps the priest",
+            "Cooks for the church",
+            "Builds the church",
+            "Cleans the church"
+          ],
+          "answer": "Teaches the faith and helps the priest",
+          "explain": "A Catechist teaches the faith and helps the priest.",
+          "procedure": [
+            "Helper to the priest",
+            "Teaches the faith",
+            "Answer: Teaches the faith and helps the priest"
+          ]
+        },
+        {
+          "q": "Why are religious leaders important?",
+          "options": [
+            "They only wear special clothes",
+            "They guide their followers and teach moral values",
+            "They make money",
+            "They build houses"
+          ],
+          "answer": "They guide their followers and teach moral values",
+          "explain": "Religious leaders guide their followers and teach moral values.",
+          "procedure": [
+            "Guide followers",
+            "Teach moral values",
+            "Answer: They guide their followers and teach moral values"
+          ]
+        },
+        {
+          "q": "Who is a prophet in Christianity and Islam?",
+          "options": [
+            "A person who delivers messages from God",
+            "A king",
+            "A farmer",
+            "A politician"
+          ],
+          "answer": "A person who delivers messages from God",
+          "explain": "A prophet delivers messages from God.",
+          "procedure": [
+            "Delivers God's messages",
+            "Found in both religions",
+            "Answer: A person who delivers messages from God"
+          ]
+        },
+        {
+          "q": "Who is a traditional chief in Ghana?",
+          "options": [
+            "A politician",
+            "A leader of a traditional community who works with traditional priests",
+            "A police officer",
+            "A teacher"
+          ],
+          "answer": "A leader of a traditional community who works with traditional priests",
+          "explain": "A traditional chief leads a community and often works with traditional priests.",
+          "procedure": [
+            "Community leader",
+            "Works with traditional priests",
+            "Answer: A leader of a traditional community who works with traditional priests"
+          ]
+        },
+        {
+          "q": "What is a Bishop in Christianity?",
+          "options": [
+            "A senior church leader overseeing many churches",
+            "A type of food",
+            "A farming tool",
+            "A king"
+          ],
+          "answer": "A senior church leader overseeing many churches",
+          "explain": "A Bishop is a senior church leader overseeing many churches.",
+          "procedure": [
+            "Senior church leader",
+            "Oversees multiple churches",
+            "Answer: A senior church leader overseeing many churches"
+          ]
+        },
+        {
+          "q": "What is the role of a Reverend in Christianity?",
+          "options": [
+            "A title for an ordained minister or pastor",
+            "A type of song",
+            "A building",
+            "A festival"
+          ],
+          "answer": "A title for an ordained minister or pastor",
+          "explain": "Reverend is a title for an ordained minister or pastor.",
+          "procedure": [
+            "Ordained minister",
+            "Title of respect",
+            "Answer: A title for an ordained minister or pastor"
+          ]
+        },
+        {
+          "q": "Who was the last Prophet in Islam?",
+          "options": [
+            "Adam",
+            "Muhammad",
+            "Jesus",
+            "Moses"
+          ],
+          "answer": "Muhammad",
+          "explain": "Muhammad is considered the last Prophet in Islam.",
+          "procedure": [
+            "Seal of the Prophets",
+            "Final messenger",
+            "Answer: Muhammad"
+          ]
+        },
+        {
+          "q": "What do traditional priests do during ceremonies?",
+          "options": [
+            "Cook food",
+            "Lead prayers, offer sacrifices, and guide rituals",
+            "Run sports",
+            "Teach math"
+          ],
+          "answer": "Lead prayers, offer sacrifices, and guide rituals",
+          "explain": "Traditional priests lead prayers and guide rituals during ceremonies.",
+          "procedure": [
+            "Lead prayers",
+            "Offer sacrifices",
+            "Guide rituals",
+            "Answer: Lead prayers, offer sacrifices, and guide rituals"
+          ]
+        },
+        {
+          "q": "How should you treat religious leaders?",
+          "options": [
+            "Rudely",
+            "With respect",
+            "With mockery",
+            "Ignore them"
+          ],
+          "answer": "With respect",
+          "explain": "Religious leaders should be treated with respect.",
+          "procedure": [
+            "Show respect",
+            "Listen to their guidance",
+            "Answer: With respect"
+          ]
+        },
+        {
+          "q": "Who is the founder of the Catholic Church?",
+          "options": [
+            "Muhammad",
+            "Jesus Christ",
+            "Peter",
+            "Paul"
+          ],
+          "answer": "Jesus Christ",
+          "explain": "Jesus Christ is the founder of the Catholic Church.",
+          "procedure": [
+            "Christianity = founded by Jesus",
+            "Catholic = one branch of Christianity",
+            "Answer: Jesus Christ"
+          ]
+        },
+        {
+          "q": "Who is considered a spokesperson for God in traditional religions?",
+          "options": [
+            "The chief",
+            "The traditional priest",
+            "The chief wife",
+            "The youth leader"
+          ],
+          "answer": "The traditional priest",
+          "explain": "Traditional priests act as spokespersons for God or spirits.",
+          "procedure": [
+            "Speaks on behalf of spirits/gods",
+            "Intermediary between humans and spirits",
+            "Answer: The traditional priest"
+          ]
+        },
+        {
+          "q": "What is a congregation in a church?",
+          "options": [
+            "The group of worshippers in a church",
+            "A type of building",
+            "A musical instrument",
+            "A festival"
+          ],
+          "answer": "The group of worshippers in a church",
+          "explain": "A congregation is the group of worshippers in a church.",
+          "procedure": [
+            "Group of worshippers",
+            "Gathers for services",
+            "Answer: The group of worshippers in a church"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family-community",
+      "name": "The Family & Community",
+      "icon": "👨‍👩‍👧",
+      "questions": [
+        {
+          "q": "What is the first social unit a person belongs to?",
+          "options": [
+            "The family",
+            "The school",
+            "The community",
+            "The government"
+          ],
+          "answer": "The family",
+          "explain": "The family is the first social unit a person belongs to.",
+          "procedure": [
+            "Family = first social unit",
+            "Where life starts",
+            "Answer: The family"
+          ]
+        },
+        {
+          "q": "What is the role of parents in the family?",
+          "image": "assets/rme/family-prayer.png",
+          "options": [
+            "To only work",
+            "To provide, protect, and give moral guidance",
+            "To punish only",
+            "To leave children alone"
+          ],
+          "answer": "To provide, protect, and give moral guidance",
+          "explain": "Parents provide, protect, and give moral guidance.",
+          "procedure": [
+            "Provide food, shelter",
+            "Protect from danger",
+            "Give moral guidance",
+            "Answer: To provide, protect, and give moral guidance"
+          ]
+        },
+        {
+          "q": "What is the role of children in the family?",
+          "options": [
+            "To boss parents around",
+            "To respect their parents and help at home",
+            "To only play",
+            "To never help"
+          ],
+          "answer": "To respect their parents and help at home",
+          "explain": "Children should respect their parents and help at home.",
+          "procedure": [
+            "Respect parents",
+            "Help at home",
+            "Answer: To respect their parents and help at home"
+          ]
+        },
+        {
+          "q": "Why is family prayer important?",
+          "image": "assets/rme/community.png",
+          "options": [
+            "It brings the family closer together and to God",
+            "It is a chore",
+            "It is not important",
+            "It is a punishment"
+          ],
+          "answer": "It brings the family closer together and to God",
+          "explain": "Family prayer brings the family closer together.",
+          "procedure": [
+            "Brings family together",
+            "Deepens faith",
+            "Answer: It brings the family closer together and to God"
+          ]
+        },
+        {
+          "q": "What is the extended family?",
+          "options": [
+            "Only parents and children",
+            "All relatives including grandparents, aunts, uncles, cousins",
+            "Only brothers",
+            "Only grandparents"
+          ],
+          "answer": "All relatives including grandparents, aunts, uncles, cousins",
+          "explain": "The extended family includes all relatives.",
+          "procedure": [
+            "All relatives",
+            "Beyond parents and children",
+            "Answer: All relatives including grandparents, aunts, uncles, cousins"
+          ]
+        },
+        {
+          "q": "What does communal living mean?",
+          "options": [
+            "Living alone",
+            "Sharing resources and working together in a community",
+            "Never helping anyone",
+            "Living only for money"
+          ],
+          "answer": "Sharing resources and working together in a community",
+          "explain": "Communal living means sharing resources and working together.",
+          "procedure": [
+            "Shared resources",
+            "Working together",
+            "Answer: Sharing resources and working together in a community"
+          ]
+        },
+        {
+          "q": "What is one way to show respect to elders?",
+          "options": [
+            "Ignoring them",
+            "Greeting them and listening to their advice",
+            "Laughing at them",
+            "Walking away"
+          ],
+          "answer": "Greeting them and listening to their advice",
+          "explain": "Respect for elders means greeting them and listening to their advice.",
+          "procedure": [
+            "Greet them",
+            "Listen to advice",
+            "Answer: Greeting them and listening to their advice"
+          ]
+        },
+        {
+          "q": "What is a responsibility of family members?",
+          "options": [
+            "Fighting each other",
+            "Helping and caring for one another",
+            "Only taking, not giving",
+            "Ignoring each other"
+          ],
+          "answer": "Helping and caring for one another",
+          "explain": "Family members should help and care for one another.",
+          "procedure": [
+            "Help each other",
+            "Care for one another",
+            "Answer: Helping and caring for one another"
+          ]
+        },
+        {
+          "q": "How does a family teach moral values?",
+          "options": [
+            "By example and discipline",
+            "By ignoring the child",
+            "By only providing money",
+            "By giving gifts only"
+          ],
+          "answer": "By example and discipline",
+          "explain": "Families teach moral values by example and loving discipline.",
+          "procedure": [
+            "By example",
+            "Loving discipline",
+            "Answer: By example and discipline"
+          ]
+        },
+        {
+          "q": "What is the role of grandparents in the family?",
+          "options": [
+            "To only sleep",
+            "To share wisdom and traditions with grandchildren",
+            "To only work",
+            "To be left alone"
+          ],
+          "answer": "To share wisdom and traditions with grandchildren",
+          "explain": "Grandparents share wisdom and traditions with grandchildren.",
+          "procedure": [
+            "Share wisdom",
+            "Share traditions",
+            "Answer: To share wisdom and traditions with grandchildren"
+          ]
+        },
+        {
+          "q": "What does honouring your father and mother mean?",
+          "options": [
+            "Obeying them and treating them with respect",
+            "Ignoring them",
+            "Only giving them money",
+            "Only talking to them at Christmas"
+          ],
+          "answer": "Obeying them and treating them with respect",
+          "explain": "Honouring parents means obeying them and treating them with respect.",
+          "procedure": [
+            "Obey parents",
+            "Respect parents",
+            "Answer: Obeying them and treating them with respect"
+          ]
+        },
+        {
+          "q": "What is a community?",
+          "options": [
+            "Only one family",
+            "A group of people living in the same area and sharing resources",
+            "Only a school",
+            "Only a church"
+          ],
+          "answer": "A group of people living in the same area and sharing resources",
+          "explain": "A community is a group living in the same area and sharing resources.",
+          "procedure": [
+            "Same area",
+            "Shared resources",
+            "Answer: A group of people living in the same area and sharing resources"
+          ]
+        },
+        {
+          "q": "What are some examples of community cooperation?",
+          "options": [
+            "Everyone staying at home",
+            "Community cleanup, shared schools, festivals",
+            "Fighting with neighbours",
+            "Never helping anyone"
+          ],
+          "answer": "Community cleanup, shared schools, festivals",
+          "explain": "Community cooperation includes cleanup projects, shared schools, and festivals.",
+          "procedure": [
+            "Cleanup projects",
+            "Shared schools",
+            "Festivals",
+            "Answer: Community cleanup, shared schools, festivals"
+          ]
+        },
+        {
+          "q": "Why do communities need rules?",
+          "options": [
+            "To limit freedom",
+            "To keep peace, order, and safety",
+            "To cause conflicts",
+            "They do not need rules"
+          ],
+          "answer": "To keep peace, order, and safety",
+          "explain": "Communities need rules to maintain peace, order, and safety.",
+          "procedure": [
+            "Peace",
+            "Order",
+            "Safety",
+            "Answer: To keep peace, order, and safety"
+          ]
+        },
+        {
+          "q": "How do religious groups support families?",
+          "options": [
+            "They do not",
+            "Through counselling, charity, and spiritual guidance",
+            "By only taking money",
+            "By ignoring them"
+          ],
+          "answer": "Through counselling, charity, and spiritual guidance",
+          "explain": "Religious groups support families through counselling, charity, and guidance.",
+          "procedure": [
+            "Counselling",
+            "Charity",
+            "Spiritual guidance",
+            "Answer: Through counselling, charity, and spiritual guidance"
+          ]
+        },
+        {
+          "q": "What is a value that families should teach?",
+          "options": [
+            "Selfishness",
+            "Honesty",
+            "Dishonesty",
+            "Irresponsibility"
+          ],
+          "answer": "Honesty",
+          "explain": "Honesty is an important value families should teach.",
+          "procedure": [
+            "Core value",
+            "Family teaches values",
+            "Answer: Honesty"
+          ]
+        },
+        {
+          "q": "What is a rite of passage?",
+          "options": [
+            "A school exam",
+            "A ceremony marking an important life change",
+            "A type of food",
+            "A type of game"
+          ],
+          "answer": "A ceremony marking an important life change",
+          "explain": "A rite of passage marks an important life change.",
+          "procedure": [
+            "Marks important life change",
+            "Birth, puberty, marriage",
+            "Answer: A ceremony marking an important life change"
+          ]
+        },
+        {
+          "q": "What is outdooring in Ghana?",
+          "options": [
+            "A type of farming",
+            "A ceremony where a baby is officially presented to the community",
+            "A type of dance",
+            "A type of school"
+          ],
+          "answer": "A ceremony where a baby is officially presented to the community",
+          "explain": "Outdooring is a ceremony that presents a baby to the community.",
+          "procedure": [
+            "Baby presentation ceremony",
+            "Usually in the first week after birth",
+            "Answer: A ceremony where a baby is officially presented to the community"
+          ]
+        },
+        {
+          "q": "What is communal labour?",
+          "options": [
+            "Sitting at home",
+            "People in a community working together on shared projects",
+            "A type of music",
+            "A type of food"
+          ],
+          "answer": "People in a community working together on shared projects",
+          "explain": "Communal labour is when a community works together.",
+          "procedure": [
+            "Working together",
+            "Shared projects",
+            "Answer: People in a community working together on shared projects"
+          ]
+        },
+        {
+          "q": "What is respect for elders?",
+          "options": [
+            "Ignoring old people",
+            "Treating older people with honour and listening to their advice",
+            "Only obeying parents",
+            "Only obeying teachers"
+          ],
+          "answer": "Treating older people with honour and listening to their advice",
+          "explain": "Respect for elders means treating older people with honour.",
+          "procedure": [
+            "Honour elders",
+            "Listen to their advice",
+            "Answer: Treating older people with honour and listening to their advice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "authority-obedience",
+      "name": "Authority & Obedience",
+      "icon": "👮",
+      "questions": [
+        {
+          "q": "What is authority?",
+          "options": [
+            "The right to give orders and make decisions",
+            "A type of food",
+            "A type of dance",
+            "A type of coin"
+          ],
+          "answer": "The right to give orders and make decisions",
+          "explain": "Authority is the right to give orders and make decisions.",
+          "procedure": [
+            "Right to give orders",
+            "Right to make decisions",
+            "Answer: The right to give orders and make decisions"
+          ]
+        },
+        {
+          "q": "Why is obedience important?",
+          "options": [
+            "It causes chaos",
+            "It maintains order and safety",
+            "It is not important",
+            "It removes freedom"
+          ],
+          "answer": "It maintains order and safety",
+          "explain": "Obedience maintains order and safety in society.",
+          "procedure": [
+            "Order",
+            "Safety",
+            "Answer: It maintains order and safety"
+          ]
+        },
+        {
+          "q": "Who has authority in the home?",
+          "options": [
+            "The youngest child",
+            "Parents and guardians",
+            "Neighbours",
+            "Strangers"
+          ],
+          "answer": "Parents and guardians",
+          "explain": "Parents and guardians have authority in the home.",
+          "procedure": [
+            "Adults in the home",
+            "Parents/guardians",
+            "Answer: Parents and guardians"
+          ]
+        },
+        {
+          "q": "Who has authority in the school?",
+          "options": [
+            "Students",
+            "Teachers and headteacher",
+            "The cleaner",
+            "Other parents"
+          ],
+          "answer": "Teachers and headteacher",
+          "explain": "Teachers and the headteacher have authority in school.",
+          "procedure": [
+            "Teachers",
+            "Headteacher",
+            "Answer: Teachers and headteacher"
+          ]
+        },
+        {
+          "q": "Who has authority in the community?",
+          "options": [
+            "Children",
+            "Chiefs, elders, and assembly members",
+            "Foreigners",
+            "Strangers"
+          ],
+          "answer": "Chiefs, elders, and assembly members",
+          "explain": "Chiefs, elders, and assembly members have authority in the community.",
+          "procedure": [
+            "Chiefs",
+            "Elders",
+            "Assembly members",
+            "Answer: Chiefs, elders, and assembly members"
+          ]
+        },
+        {
+          "q": "Who has authority in the country?",
+          "options": [
+            "Only the President",
+            "The government and law enforcement",
+            "Only the military",
+            "Only traditional rulers"
+          ],
+          "answer": "The government and law enforcement",
+          "explain": "The government (with police and courts) has national authority.",
+          "procedure": [
+            "Government",
+            "Police",
+            "Courts",
+            "Answer: The government and law enforcement"
+          ]
+        },
+        {
+          "q": "What are the police responsible for?",
+          "options": [
+            "Teaching in schools",
+            "Keeping law and order",
+            "Farming",
+            "Running businesses"
+          ],
+          "answer": "Keeping law and order",
+          "explain": "The police maintain law and order.",
+          "procedure": [
+            "Law and order",
+            "Protect people",
+            "Answer: Keeping law and order"
+          ]
+        },
+        {
+          "q": "What does a traffic warden do?",
+          "options": [
+            "Cooks food",
+            "Controls traffic to keep people safe",
+            "Teaches school",
+            "Farms"
+          ],
+          "answer": "Controls traffic to keep people safe",
+          "explain": "Traffic wardens control traffic for safety.",
+          "procedure": [
+            "Traffic control",
+            "Safety",
+            "Answer: Controls traffic to keep people safe"
+          ]
+        },
+        {
+          "q": "What is the role of the headteacher?",
+          "options": [
+            "To teach students only",
+            "To lead the school and ensure discipline",
+            "To cook for students",
+            "To sell books"
+          ],
+          "answer": "To lead the school and ensure discipline",
+          "explain": "The headteacher leads the school and ensures discipline.",
+          "procedure": [
+            "Leads the school",
+            "Ensures discipline",
+            "Answer: To lead the school and ensure discipline"
+          ]
+        },
+        {
+          "q": "What does obeying the law mean?",
+          "options": [
+            "Doing only what you want",
+            "Following the rules set by the government",
+            "Ignoring rules",
+            "Making your own rules"
+          ],
+          "answer": "Following the rules set by the government",
+          "explain": "Obeying the law means following the rules set by the government.",
+          "procedure": [
+            "Follow government rules",
+            "Answer: Following the rules set by the government"
+          ]
+        },
+        {
+          "q": "What are consequences of disobeying the law?",
+          "options": [
+            "Rewards",
+            "Punishment or fines",
+            "Nothing",
+            "Praise"
+          ],
+          "answer": "Punishment or fines",
+          "explain": "Disobeying the law brings punishment or fines.",
+          "procedure": [
+            "Punishment",
+            "Fines",
+            "Answer: Punishment or fines"
+          ]
+        },
+        {
+          "q": "What should you do if a police officer gives you instructions?",
+          "options": [
+            "Run away",
+            "Obey respectfully",
+            "Ignore them",
+            "Argue"
+          ],
+          "answer": "Obey respectfully",
+          "explain": "You should obey police instructions respectfully.",
+          "procedure": [
+            "Respect authority",
+            "Follow instructions",
+            "Answer: Obey respectfully"
+          ]
+        },
+        {
+          "q": "Why should children obey their parents?",
+          "options": [
+            "Because parents are annoying",
+            "Because parents guide and protect them",
+            "Because children have no choice",
+            "Only if they get money"
+          ],
+          "answer": "Because parents guide and protect them",
+          "explain": "Children obey parents because parents guide and protect them.",
+          "procedure": [
+            "Guidance",
+            "Protection",
+            "Answer: Because parents guide and protect them"
+          ]
+        },
+        {
+          "q": "What is a traditional authority in Ghana?",
+          "options": [
+            "The President",
+            "Chiefs and elders",
+            "Parliament",
+            "The military"
+          ],
+          "answer": "Chiefs and elders",
+          "explain": "Chiefs and elders hold traditional authority.",
+          "procedure": [
+            "Traditional leaders",
+            "Answer: Chiefs and elders"
+          ]
+        },
+        {
+          "q": "What is a result of obedience?",
+          "options": [
+            "Chaos",
+            "Harmony and peace",
+            "Conflict",
+            "Confusion"
+          ],
+          "answer": "Harmony and peace",
+          "explain": "Obedience creates harmony and peace.",
+          "procedure": [
+            "Harmony",
+            "Peace",
+            "Answer: Harmony and peace"
+          ]
+        },
+        {
+          "q": "What should you do if you see someone breaking the law?",
+          "options": [
+            "Join them",
+            "Report to the police or a trusted adult",
+            "Ignore it",
+            "Laugh"
+          ],
+          "answer": "Report to the police or a trusted adult",
+          "explain": "Report lawbreakers to the police or a trusted adult.",
+          "procedure": [
+            "Do not join",
+            "Report",
+            "Answer: Report to the police or a trusted adult"
+          ]
+        },
+        {
+          "q": "What is the role of the military?",
+          "options": [
+            "Teaching in schools",
+            "Protecting the country from external threats",
+            "Controlling traffic",
+            "Running schools"
+          ],
+          "answer": "Protecting the country from external threats",
+          "explain": "The military protects the country from external threats.",
+          "procedure": [
+            "National defence",
+            "Answer: Protecting the country from external threats"
+          ]
+        },
+        {
+          "q": "Why do schools have rules?",
+          "options": [
+            "To punish students",
+            "To maintain order and effective learning",
+            "To make students unhappy",
+            "They do not need rules"
+          ],
+          "answer": "To maintain order and effective learning",
+          "explain": "School rules maintain order and allow effective learning.",
+          "procedure": [
+            "Order",
+            "Learning",
+            "Answer: To maintain order and effective learning"
+          ]
+        },
+        {
+          "q": "What is respect for authority?",
+          "options": [
+            "Ignoring authority",
+            "Treating leaders with honour and following their instructions",
+            "Fearing authority",
+            "Only obeying when watched"
+          ],
+          "answer": "Treating leaders with honour and following their instructions",
+          "explain": "Respect for authority means honouring leaders and following their instructions.",
+          "procedure": [
+            "Honour leaders",
+            "Follow instructions",
+            "Answer: Treating leaders with honour and following their instructions"
+          ]
+        },
+        {
+          "q": "Who is the head of Ghana military?",
+          "options": [
+            "The Chief of Defence Staff",
+            "The President",
+            "The Inspector General of Police",
+            "The Speaker"
+          ],
+          "answer": "The Chief of Defence Staff",
+          "explain": "The Chief of Defence Staff heads Ghana military.",
+          "procedure": [
+            "Highest military officer",
+            "Answer: The Chief of Defence Staff"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moral-values",
+      "name": "Moral Values",
+      "icon": "⚖️",
+      "questions": [
+        {
+          "q": "What are moral values?",
+          "options": [
+            "Principles that guide right and wrong behaviour",
+            "Types of food",
+            "Types of games",
+            "Types of coins"
+          ],
+          "answer": "Principles that guide right and wrong behaviour",
+          "explain": "Moral values guide right and wrong behaviour.",
+          "procedure": [
+            "Guide behaviour",
+            "Distinguish right from wrong",
+            "Answer: Principles that guide right and wrong behaviour"
+          ]
+        },
+        {
+          "q": "What is honesty?",
+          "options": [
+            "Telling lies",
+            "Telling the truth and being trustworthy",
+            "Stealing",
+            "Cheating"
+          ],
+          "answer": "Telling the truth and being trustworthy",
+          "explain": "Honesty is telling the truth and being trustworthy.",
+          "procedure": [
+            "Tell the truth",
+            "Be trustworthy",
+            "Answer: Telling the truth and being trustworthy"
+          ]
+        },
+        {
+          "q": "What is kindness?",
+          "options": [
+            "Being mean",
+            "Being caring and helpful to others",
+            "Ignoring people",
+            "Being rude"
+          ],
+          "answer": "Being caring and helpful to others",
+          "explain": "Kindness is being caring and helpful to others.",
+          "procedure": [
+            "Care for others",
+            "Help others",
+            "Answer: Being caring and helpful to others"
+          ]
+        },
+        {
+          "q": "What is respect?",
+          "options": [
+            "Treating others with honour and consideration",
+            "Treating others badly",
+            "Ignoring others",
+            "Being selfish"
+          ],
+          "answer": "Treating others with honour and consideration",
+          "explain": "Respect is treating others with honour and consideration.",
+          "procedure": [
+            "Honour others",
+            "Be considerate",
+            "Answer: Treating others with honour and consideration"
+          ]
+        },
+        {
+          "q": "What is forgiveness?",
+          "options": [
+            "Holding grudges forever",
+            "Letting go of anger and forgiving those who hurt you",
+            "Revenge",
+            "Punishing others"
+          ],
+          "answer": "Letting go of anger and forgiving those who hurt you",
+          "explain": "Forgiveness is letting go of anger and forgiving.",
+          "procedure": [
+            "Let go of anger",
+            "Forgive others",
+            "Answer: Letting go of anger and forgiving those who hurt you"
+          ]
+        },
+        {
+          "q": "What is responsibility?",
+          "options": [
+            "Ignoring your duties",
+            "Doing what you are supposed to do",
+            "Blaming others",
+            "Avoiding work"
+          ],
+          "answer": "Doing what you are supposed to do",
+          "explain": "Responsibility is doing what you are supposed to do.",
+          "procedure": [
+            "Do your duty",
+            "Accept consequences",
+            "Answer: Doing what you are supposed to do"
+          ]
+        },
+        {
+          "q": "What is cooperation?",
+          "options": [
+            "Working alone",
+            "Working together with others for a common goal",
+            "Fighting",
+            "Ignoring others"
+          ],
+          "answer": "Working together with others for a common goal",
+          "explain": "Cooperation is working together for a common goal.",
+          "procedure": [
+            "Work together",
+            "Common goal",
+            "Answer: Working together with others for a common goal"
+          ]
+        },
+        {
+          "q": "What is fairness?",
+          "options": [
+            "Treating people unequally",
+            "Treating everyone equally and justly",
+            "Playing favourites",
+            "Cheating"
+          ],
+          "answer": "Treating everyone equally and justly",
+          "explain": "Fairness is treating everyone equally and justly.",
+          "procedure": [
+            "Equality",
+            "Justice",
+            "Answer: Treating everyone equally and justly"
+          ]
+        },
+        {
+          "q": "What is courage?",
+          "options": [
+            "Being afraid of everything",
+            "Facing danger or difficulty with bravery",
+            "Running away",
+            "Being weak"
+          ],
+          "answer": "Facing danger or difficulty with bravery",
+          "explain": "Courage is facing danger or difficulty with bravery.",
+          "procedure": [
+            "Bravery",
+            "Facing difficulty",
+            "Answer: Facing danger or difficulty with bravery"
+          ]
+        },
+        {
+          "q": "What is humility?",
+          "options": [
+            "Being proud and boastful",
+            "Being humble and not boastful",
+            "Being arrogant",
+            "Being rude"
+          ],
+          "answer": "Being humble and not boastful",
+          "explain": "Humility is being humble and not boastful.",
+          "procedure": [
+            "Humble",
+            "Not boastful",
+            "Answer: Being humble and not boastful"
+          ]
+        },
+        {
+          "q": "Which moral value helps build trust?",
+          "options": [
+            "Lying",
+            "Honesty",
+            "Stealing",
+            "Cheating"
+          ],
+          "answer": "Honesty",
+          "explain": "Honesty builds trust between people.",
+          "procedure": [
+            "Honesty builds trust",
+            "Answer: Honesty"
+          ]
+        },
+        {
+          "q": "What is generosity?",
+          "options": [
+            "Keeping everything for yourself",
+            "Willingness to give and share with others",
+            "Being selfish",
+            "Wasting resources"
+          ],
+          "answer": "Willingness to give and share with others",
+          "explain": "Generosity is the willingness to give and share.",
+          "procedure": [
+            "Give freely",
+            "Share with others",
+            "Answer: Willingness to give and share with others"
+          ]
+        },
+        {
+          "q": "What is self-control?",
+          "options": [
+            "Doing whatever you want",
+            "Managing your emotions and actions",
+            "Losing your temper",
+            "Being impulsive"
+          ],
+          "answer": "Managing your emotions and actions",
+          "explain": "Self-control is managing your emotions and actions.",
+          "procedure": [
+            "Manage emotions",
+            "Manage actions",
+            "Answer: Managing your emotions and actions"
+          ]
+        },
+        {
+          "q": "What is loyalty?",
+          "options": [
+            "Betraying friends",
+            "Being faithful and devoted to someone or something",
+            "Changing sides often",
+            "Being selfish"
+          ],
+          "answer": "Being faithful and devoted to someone or something",
+          "explain": "Loyalty is being faithful and devoted.",
+          "procedure": [
+            "Faithful",
+            "Devoted",
+            "Answer: Being faithful and devoted to someone or something"
+          ]
+        },
+        {
+          "q": "Why are moral values important?",
+          "options": [
+            "They cause chaos",
+            "They guide good behaviour and peaceful living",
+            "They are not important",
+            "They cause conflict"
+          ],
+          "answer": "They guide good behaviour and peaceful living",
+          "explain": "Moral values guide good behaviour and peace.",
+          "procedure": [
+            "Guide good behaviour",
+            "Promote peace",
+            "Answer: They guide good behaviour and peaceful living"
+          ]
+        },
+        {
+          "q": "What does empathy mean?",
+          "options": [
+            "Ignoring others feelings",
+            "Understanding and sharing others feelings",
+            "Being rude",
+            "Being selfish"
+          ],
+          "answer": "Understanding and sharing others feelings",
+          "explain": "Empathy is understanding and sharing others feelings.",
+          "procedure": [
+            "Understand others",
+            "Share their feelings",
+            "Answer: Understanding and sharing others feelings"
+          ]
+        },
+        {
+          "q": "What is integrity?",
+          "options": [
+            "Being dishonest",
+            "Being honest and having strong moral principles",
+            "Cheating",
+            "Lying"
+          ],
+          "answer": "Being honest and having strong moral principles",
+          "explain": "Integrity is being honest with strong moral principles.",
+          "procedure": [
+            "Honest",
+            "Strong moral principles",
+            "Answer: Being honest and having strong moral principles"
+          ]
+        },
+        {
+          "q": "Which value should guide our actions when no one is watching?",
+          "options": [
+            "Doing whatever we want",
+            "Integrity — doing the right thing always",
+            "Ignoring rules",
+            "Being selfish"
+          ],
+          "answer": "Integrity — doing the right thing always",
+          "explain": "Integrity means doing the right thing even when no one is watching.",
+          "procedure": [
+            "Do right always",
+            "Even when unobserved",
+            "Answer: Integrity — doing the right thing always"
+          ]
+        },
+        {
+          "q": "What is patience?",
+          "options": [
+            "Getting angry quickly",
+            "Waiting calmly without getting upset",
+            "Rushing always",
+            "Being rude"
+          ],
+          "answer": "Waiting calmly without getting upset",
+          "explain": "Patience is waiting calmly without getting upset.",
+          "procedure": [
+            "Wait calmly",
+            "No anger",
+            "Answer: Waiting calmly without getting upset"
+          ]
+        },
+        {
+          "q": "What are two moral values often taught in RME?",
+          "options": [
+            "Dishonesty and disrespect",
+            "Honesty and kindness",
+            "Greed and hatred",
+            "Selfishness and lying"
+          ],
+          "answer": "Honesty and kindness",
+          "explain": "Honesty and kindness are core moral values taught in RME.",
+          "procedure": [
+            "Honesty",
+            "Kindness",
+            "Both are core values",
+            "Answer: Honesty and kindness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religious-songs",
+      "name": "Religious Songs & Recitations",
+      "icon": "🎵",
+      "questions": [
+        {
+          "q": "Why do people sing in religious worship?",
+          "options": [
+            "To make noise",
+            "To praise God and express faith",
+            "To show off",
+            "To annoy others"
+          ],
+          "answer": "To praise God and express faith",
+          "explain": "People sing to praise God and express their faith.",
+          "procedure": [
+            "Praise God",
+            "Express faith",
+            "Answer: To praise God and express faith"
+          ]
+        },
+        {
+          "q": "What is a hymn?",
+          "options": [
+            "A type of food",
+            "A religious song of praise",
+            "A type of dance",
+            "A type of prayer"
+          ],
+          "answer": "A religious song of praise",
+          "explain": "A hymn is a religious song of praise.",
+          "procedure": [
+            "Religious song",
+            "Usually sung in worship",
+            "Answer: A religious song of praise"
+          ]
+        },
+        {
+          "q": "What are the Psalms in the Bible?",
+          "options": [
+            "A book of songs and prayers",
+            "A book of laws",
+            "A book of history",
+            "A book of letters"
+          ],
+          "answer": "A book of songs and prayers",
+          "explain": "The Psalms are a book of songs and prayers in the Bible.",
+          "procedure": [
+            "Old Testament book",
+            "Contains songs and prayers",
+            "Often sung in worship",
+            "Answer: A book of songs and prayers"
+          ]
+        },
+        {
+          "q": "What is the Islamic call to prayer?",
+          "options": [
+            "Adhan",
+            "Hymn",
+            "Psalm",
+            "Chant"
+          ],
+          "answer": "Adhan",
+          "explain": "The Adhan is the Islamic call to prayer.",
+          "procedure": [
+            "Arabic: Adhan",
+            "Announces prayer time",
+            "Sung from the mosque",
+            "Answer: Adhan"
+          ]
+        },
+        {
+          "q": "How do traditional Ghanaian religions use music?",
+          "options": [
+            "They do not",
+            "Drumming and singing to honour ancestors and spirits",
+            "Only for entertainment",
+            "Only for weddings"
+          ],
+          "answer": "Drumming and singing to honour ancestors and spirits",
+          "explain": "Traditional religions use drumming and singing to honour ancestors and spirits.",
+          "procedure": [
+            "Drumming",
+            "Singing",
+            "Honour ancestors/spirits",
+            "Answer: Drumming and singing to honour ancestors and spirits"
+          ]
+        },
+        {
+          "q": "What is a chant?",
+          "options": [
+            "A rhythmic way of singing prayers",
+            "A type of food",
+            "A dance",
+            "A game"
+          ],
+          "answer": "A rhythmic way of singing prayers",
+          "explain": "A chant is a rhythmic way of singing prayers.",
+          "procedure": [
+            "Rhythmic singing",
+            "Often used in prayers",
+            "Answer: A rhythmic way of singing prayers"
+          ]
+        },
+        {
+          "q": "What is gospel music?",
+          "options": [
+            "Christian music that praises God and spreads the gospel",
+            "Music for dancing",
+            "Music for parties",
+            "Music for farming"
+          ],
+          "answer": "Christian music that praises God and spreads the gospel",
+          "explain": "Gospel music is Christian music that praises God.",
+          "procedure": [
+            "Christian music",
+            "Praises God",
+            "Spreads gospel",
+            "Answer: Christian music that praises God and spreads the gospel"
+          ]
+        },
+        {
+          "q": "What is a Nasheed in Islam?",
+          "options": [
+            "A type of food",
+            "A vocal song or chant about Islamic faith",
+            "A type of dance",
+            "A type of prayer"
+          ],
+          "answer": "A vocal song or chant about Islamic faith",
+          "explain": "A Nasheed is a vocal song or chant about Islamic faith.",
+          "procedure": [
+            "Islamic vocal music",
+            "No instruments in traditional nasheeds",
+            "Praises Allah and the Prophet",
+            "Answer: A vocal song or chant about Islamic faith"
+          ]
+        },
+        {
+          "q": "Why are songs important in religious worship?",
+          "options": [
+            "They are just for fun",
+            "They help people express devotion and teach faith",
+            "They are only for children",
+            "They cause confusion"
+          ],
+          "answer": "They help people express devotion and teach faith",
+          "explain": "Songs help people express devotion and teach faith.",
+          "procedure": [
+            "Express devotion",
+            "Teach faith",
+            "Answer: They help people express devotion and teach faith"
+          ]
+        },
+        {
+          "q": "What is a choir?",
+          "options": [
+            "A group of singers",
+            "A type of prayer",
+            "A building",
+            "A festival"
+          ],
+          "answer": "A group of singers",
+          "explain": "A choir is a group of singers.",
+          "procedure": [
+            "Group of singers",
+            "Often in churches",
+            "Answer: A group of singers"
+          ]
+        },
+        {
+          "q": "What are Negro Spirituals?",
+          "options": [
+            "Traditional African drumming",
+            "Christian songs created by African slaves in America",
+            "A type of dance",
+            "A type of food"
+          ],
+          "answer": "Christian songs created by African slaves in America",
+          "explain": "Negro Spirituals are Christian songs created by African slaves.",
+          "procedure": [
+            "Created by African slaves in America",
+            "Expressed hope and faith",
+            "Answer: Christian songs created by African slaves in America"
+          ]
+        },
+        {
+          "q": "How do children learn religious songs?",
+          "options": [
+            "By listening and practising with others",
+            "They do not",
+            "By reading books only",
+            "By playing alone"
+          ],
+          "answer": "By listening and practising with others",
+          "explain": "Children learn religious songs by listening and practising.",
+          "procedure": [
+            "Listening",
+            "Practising",
+            "With others",
+            "Answer: By listening and practising with others"
+          ]
+        },
+        {
+          "q": "What is call and response in singing?",
+          "options": [
+            "One person sings, a group responds",
+            "Only one person sings",
+            "Everyone sings the same",
+            "Nobody sings"
+          ],
+          "answer": "One person sings, a group responds",
+          "explain": "Call and response is a common pattern where one person sings and a group responds.",
+          "procedure": [
+            "Leader sings",
+            "Group responds",
+            "Common in many cultures",
+            "Answer: One person sings, a group responds"
+          ]
+        },
+        {
+          "q": "What is a recitation?",
+          "options": [
+            "Reading or saying something aloud from memory or a text",
+            "Silent reading",
+            "Writing",
+            "Playing"
+          ],
+          "answer": "Reading or saying something aloud from memory or a text",
+          "explain": "A recitation is reading or saying something aloud from memory.",
+          "procedure": [
+            "Saying aloud",
+            "From memory or text",
+            "Answer: Reading or saying something aloud from memory or a text"
+          ]
+        },
+        {
+          "q": "How do Muslims use recitations in worship?",
+          "options": [
+            "They recite verses from the Quran",
+            "They only sing",
+            "They only dance",
+            "They do not recite"
+          ],
+          "answer": "They recite verses from the Quran",
+          "explain": "Muslims recite verses from the Quran in worship.",
+          "procedure": [
+            "Recite Quran",
+            "Part of prayer",
+            "Answer: They recite verses from the Quran"
+          ]
+        },
+        {
+          "q": "What is Tahajjud prayer in Islam?",
+          "options": [
+            "A night prayer, often with recitation",
+            "A morning prayer",
+            "A food festival",
+            "A type of song"
+          ],
+          "answer": "A night prayer, often with recitation",
+          "explain": "Tahajjud is a night prayer that often includes recitation.",
+          "procedure": [
+            "Night prayer",
+            "Often with recitation",
+            "Answer: A night prayer, often with recitation"
+          ]
+        },
+        {
+          "q": "Why do religious people memorise sacred texts?",
+          "options": [
+            "To show off",
+            "To preserve the teachings and recite them in worship",
+            "To forget them",
+            "To hide them"
+          ],
+          "answer": "To preserve the teachings and recite them in worship",
+          "explain": "Memorisation preserves teachings and allows recitation in worship.",
+          "procedure": [
+            "Preserve teachings",
+            "Recite in worship",
+            "Answer: To preserve the teachings and recite them in worship"
+          ]
+        },
+        {
+          "q": "What type of song is often sung at Christmas?",
+          "options": [
+            "Carols",
+            "Rock songs",
+            "Pop songs",
+            "Rap"
+          ],
+          "answer": "Carols",
+          "explain": "Christmas carols are songs sung at Christmas.",
+          "procedure": [
+            "Christmas carols",
+            "Celebrate the birth of Jesus",
+            "Answer: Carols"
+          ]
+        },
+        {
+          "q": "What is a Kpanlogo song in Ghana?",
+          "options": [
+            "A traditional Ga musical style often used in ceremonies",
+            "A type of food",
+            "A school subject",
+            "A type of prayer"
+          ],
+          "answer": "A traditional Ga musical style often used in ceremonies",
+          "explain": "Kpanlogo is a traditional Ga music style.",
+          "procedure": [
+            "Traditional Ga music",
+            "Used in ceremonies",
+            "Answer: A traditional Ga musical style often used in ceremonies"
+          ]
+        },
+        {
+          "q": "Why do some religious groups use drums in worship?",
+          "options": [
+            "To make loud noise",
+            "To accompany singing and honour God",
+            "To scare people away",
+            "To replace prayers"
+          ],
+          "answer": "To accompany singing and honour God",
+          "explain": "Drums and instruments are used to accompany singing and add joy to worship.",
+          "procedure": [
+            "Drums accompany singing",
+            "They add rhythm and joy",
+            "Used to honour God",
+            "Answer: To accompany singing and honour God"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rites-of-passage",
+      "name": "Rites of Passage",
+      "icon": "🌱",
+      "questions": [
+        {
+          "q": "What is a rite of passage?",
+          "options": [
+            "A school exam",
+            "A ceremony marking an important life change",
+            "A type of food",
+            "A type of game"
+          ],
+          "answer": "A ceremony marking an important life change",
+          "explain": "A rite of passage is a ceremony marking an important life change.",
+          "procedure": [
+            "Ceremony",
+            "Marks important life change",
+            "Answer: A ceremony marking an important life change"
+          ]
+        },
+        {
+          "q": "What are the main rites of passage in Ghana?",
+          "options": [
+            "Only weddings",
+            "Birth, puberty, marriage, and death",
+            "Only birth",
+            "Only death"
+          ],
+          "answer": "Birth, puberty, marriage, and death",
+          "explain": "The main rites of passage are birth, puberty, marriage, and death.",
+          "procedure": [
+            "Birth",
+            "Puberty",
+            "Marriage",
+            "Death",
+            "Answer: Birth, puberty, marriage, and death"
+          ]
+        },
+        {
+          "q": "What is outdooring in Ghana?",
+          "options": [
+            "A type of farming",
+            "A ceremony where a baby is officially presented to the community",
+            "A type of dance",
+            "A type of school"
+          ],
+          "answer": "A ceremony where a baby is officially presented to the community",
+          "explain": "Outdooring presents a baby to the community.",
+          "procedure": [
+            "Baby presentation ceremony",
+            "Usually in the first week after birth",
+            "Answer: A ceremony where a baby is officially presented to the community"
+          ]
+        },
+        {
+          "q": "Why is outdooring important?",
+          "options": [
+            "It formally welcomes the baby into the family and community",
+            "It is a chore",
+            "It is not important",
+            "It is for money"
+          ],
+          "answer": "It formally welcomes the baby into the family and community",
+          "explain": "Outdooring formally welcomes the baby into the community.",
+          "procedure": [
+            "Formal welcome",
+            "Into family and community",
+            "Answer: It formally welcomes the baby into the family and community"
+          ]
+        },
+        {
+          "q": "What is a puberty rite?",
+          "options": [
+            "A ceremony marking the transition from childhood to adulthood",
+            "A type of food",
+            "A game",
+            "A type of dance"
+          ],
+          "answer": "A ceremony marking the transition from childhood to adulthood",
+          "explain": "A puberty rite marks the transition from childhood to adulthood.",
+          "procedure": [
+            "Marks transition",
+            "Childhood to adulthood",
+            "Answer: A ceremony marking the transition from childhood to adulthood"
+          ]
+        },
+        {
+          "q": "What is Dipo?",
+          "options": [
+            "A Ga festival",
+            "A puberty rite practised by the Krobo people",
+            "A type of food",
+            "A type of song"
+          ],
+          "answer": "A puberty rite practised by the Krobo people",
+          "explain": "Dipo is a puberty rite practised by the Krobo people.",
+          "procedure": [
+            "Krobo people",
+            "Puberty rite",
+            "Answer: A puberty rite practised by the Krobo people"
+          ]
+        },
+        {
+          "q": "What is a traditional marriage ceremony called in Ghana?",
+          "options": [
+            "Only a wedding",
+            "Traditional marriage (or engagement)",
+            "Only a church wedding",
+            "Only a court wedding"
+          ],
+          "answer": "Traditional marriage (or engagement)",
+          "explain": "Traditional marriage is a formal rite of passage.",
+          "procedure": [
+            "Traditional marriage",
+            "Involves family and community",
+            "Answer: Traditional marriage (or engagement)"
+          ]
+        },
+        {
+          "q": "What is a funeral rite?",
+          "options": [
+            "A celebration of a person life after death",
+            "A wedding",
+            "A birthday party",
+            "A school event"
+          ],
+          "answer": "A celebration of a person life after death",
+          "explain": "A funeral rite celebrates a person life after death.",
+          "procedure": [
+            "Celebration of life",
+            "After death",
+            "Answer: A celebration of a person life after death"
+          ]
+        },
+        {
+          "q": "Why are rites of passage important?",
+          "options": [
+            "They mark important life events and bring communities together",
+            "They are for fun",
+            "They cause problems",
+            "They have no meaning"
+          ],
+          "answer": "They mark important life events and bring communities together",
+          "explain": "Rites of passage mark important events and bring communities together.",
+          "procedure": [
+            "Mark life events",
+            "Bring communities together",
+            "Answer: They mark important life events and bring communities together"
+          ]
+        },
+        {
+          "q": "What religious ceremony marks a baby entry into Christianity?",
+          "options": [
+            "Baptism",
+            "Outdooring",
+            "Wedding",
+            "Funeral"
+          ],
+          "answer": "Baptism",
+          "explain": "Baptism is the Christian ceremony marking a baby entry into the faith.",
+          "procedure": [
+            "Christian ceremony",
+            "Marks entry into faith",
+            "Answer: Baptism"
+          ]
+        },
+        {
+          "q": "What religious ceremony is common for Muslim babies?",
+          "options": [
+            "Aqiqah (naming ceremony)",
+            "Baptism",
+            "Wedding",
+            "Funeral"
+          ],
+          "answer": "Aqiqah (naming ceremony)",
+          "explain": "Aqiqah is the Islamic naming ceremony for babies.",
+          "procedure": [
+            "Islamic naming ceremony",
+            "Often on 7th day after birth",
+            "Answer: Aqiqah (naming ceremony)"
+          ]
+        },
+        {
+          "q": "What is a naming ceremony?",
+          "options": [
+            "A ceremony where a baby is given their name",
+            "A type of food",
+            "A type of dance",
+            "A type of game"
+          ],
+          "answer": "A ceremony where a baby is given their name",
+          "explain": "A naming ceremony gives a baby their name.",
+          "procedure": [
+            "Formal naming",
+            "For babies",
+            "Answer: A ceremony where a baby is given their name"
+          ]
+        },
+        {
+          "q": "What is Bar Mitzvah?",
+          "options": [
+            "A Jewish coming-of-age ceremony for boys",
+            "A Christian festival",
+            "A Muslim festival",
+            "A traditional festival"
+          ],
+          "answer": "A Jewish coming-of-age ceremony for boys",
+          "explain": "Bar Mitzvah is a Jewish coming-of-age ceremony for boys.",
+          "procedure": [
+            "Jewish ceremony",
+            "Boys at age 13",
+            "Answer: A Jewish coming-of-age ceremony for boys"
+          ]
+        },
+        {
+          "q": "How do rites of passage differ across religions and cultures?",
+          "options": [
+            "They are all the same",
+            "They vary but all mark important life events",
+            "They do not exist",
+            "They are only for adults"
+          ],
+          "answer": "They vary but all mark important life events",
+          "explain": "Rites of passage vary but mark important life events.",
+          "procedure": [
+            "Variety",
+            "Common purpose",
+            "Answer: They vary but all mark important life events"
+          ]
+        },
+        {
+          "q": "What is the purpose of a funeral rite?",
+          "options": [
+            "To celebrate the deceased and support the family",
+            "To celebrate the deceased birthday",
+            "To plan a trip",
+            "To make money"
+          ],
+          "answer": "To celebrate the deceased and support the family",
+          "explain": "Funeral rites celebrate the deceased and support the family.",
+          "procedure": [
+            "Celebrate the deceased",
+            "Support family",
+            "Answer: To celebrate the deceased and support the family"
+          ]
+        },
+        {
+          "q": "What does the Krobo Dipo rite of passage celebrate?",
+          "options": [
+            "The transition from childhood to womanhood",
+            "A wedding",
+            "A funeral",
+            "A harvest"
+          ],
+          "answer": "The transition from childhood to womanhood",
+          "explain": "Dipo celebrates the transition from childhood to womanhood.",
+          "procedure": [
+            "Childhood to womanhood",
+            "Krobo puberty rite",
+            "Answer: The transition from childhood to womanhood"
+          ]
+        },
+        {
+          "q": "How do rites of passage help young people?",
+          "options": [
+            "They give them a sense of identity and belonging",
+            "They cause confusion",
+            "They are not helpful",
+            "They only cause stress"
+          ],
+          "answer": "They give them a sense of identity and belonging",
+          "explain": "Rites of passage give young people a sense of identity and belonging.",
+          "procedure": [
+            "Identity",
+            "Belonging",
+            "Answer: They give them a sense of identity and belonging"
+          ]
+        },
+        {
+          "q": "What is a baby dedication in some Christian churches?",
+          "options": [
+            "A ceremony dedicating a baby to God",
+            "A type of food",
+            "A type of song",
+            "A type of dance"
+          ],
+          "answer": "A ceremony dedicating a baby to God",
+          "explain": "Baby dedication is a ceremony dedicating a baby to God.",
+          "procedure": [
+            "Christian ceremony",
+            "Dedicates baby to God",
+            "Answer: A ceremony dedicating a baby to God"
+          ]
+        },
+        {
+          "q": "What is Aqiqah in Islam?",
+          "options": [
+            "A naming ceremony for newborns",
+            "A wedding",
+            "A funeral",
+            "A festival"
+          ],
+          "answer": "A naming ceremony for newborns",
+          "explain": "Aqiqah is the Islamic naming ceremony for newborns.",
+          "procedure": [
+            "Naming ceremony",
+            "Islamic tradition",
+            "Answer: A naming ceremony for newborns"
+          ]
+        },
+        {
+          "q": "Why is respect for the dead important?",
+          "options": [
+            "It has no meaning",
+            "It shows respect for life and gives comfort to the living",
+            "It is a chore",
+            "It is for money"
+          ],
+          "answer": "It shows respect for life and gives comfort to the living",
+          "explain": "Respect for the dead shows respect for life and comforts the living.",
+          "procedure": [
+            "Respect for life",
+            "Comforts the living",
+            "Answer: It shows respect for life and gives comfort to the living"
+          ]
+        }
+      ]
+    }
+  ]
+}
