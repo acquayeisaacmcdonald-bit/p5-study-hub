@@ -1,0 +1,3316 @@
+{
+  "subject": "Computing",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "intro-to-computers",
+      "name": "Introduction to Computers",
+      "icon": "🖥️",
+      "questions": [
+        {
+          "q": "What is a computer?",
+          "options": [
+            "A machine that processes data into information",
+            "A type of television",
+            "A machine that only plays games",
+            "A device that only does math"
+          ],
+          "answer": "A machine that processes data into information",
+          "explain": "A computer is an electronic device that processes data.",
+          "procedure": [
+            "Takes input (data)",
+            "Processes it",
+            "Gives output (information)",
+            "Answer: A machine that processes data into information"
+          ],
+          "image": "assets/computing/computer-overview.png"
+        },
+        {
+          "q": "What is the main part of the computer that does the thinking?",
+          "options": [
+            "Monitor",
+            "CPU (Central Processing Unit)",
+            "Keyboard",
+            "Mouse"
+          ],
+          "answer": "CPU (Central Processing Unit)",
+          "explain": "The CPU is the brain of the computer.",
+          "procedure": [
+            "CPU stands for Central Processing Unit",
+            "It processes all instructions",
+            "Answer: CPU (Central Processing Unit)"
+          ],
+          "image": "assets/computing/cpu.png"
+        },
+        {
+          "q": "Which of these is an input device?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Keyboard",
+            "Speaker"
+          ],
+          "answer": "Keyboard",
+          "explain": "A keyboard is used to input data into the computer.",
+          "procedure": [
+            "Input devices put data IN",
+            "Keyboard types letters",
+            "Monitor is output",
+            "Answer: Keyboard"
+          ],
+          "image": "assets/computing/input-devices.png"
+        },
+        {
+          "q": "Which of these is an output device?",
+          "options": [
+            "Mouse",
+            "Monitor",
+            "Keyboard",
+            "Scanner"
+          ],
+          "answer": "Monitor",
+          "explain": "A monitor displays output from the computer.",
+          "procedure": [
+            "Output devices show results",
+            "Monitor shows the screen",
+            "Mouse is input",
+            "Answer: Monitor"
+          ],
+          "image": "assets/computing/output-devices.png"
+        },
+        {
+          "q": "What does a mouse do?",
+          "options": [
+            "Prints documents",
+            "Controls the cursor on the screen",
+            "Plays sound",
+            "Stores files"
+          ],
+          "answer": "Controls the cursor on the screen",
+          "explain": "A mouse is a pointing device that controls the cursor.",
+          "procedure": [
+            "Move the mouse",
+            "Cursor moves on screen",
+            "Click to select",
+            "Answer: Controls the cursor on the screen"
+          ]
+        },
+        {
+          "q": "What does a scanner do?",
+          "options": [
+            "Prints pictures",
+            "Converts paper documents into digital files",
+            "Plays music",
+            "Cools the computer"
+          ],
+          "answer": "Converts paper documents into digital files",
+          "explain": "A scanner takes a physical document and makes a digital copy.",
+          "procedure": [
+            "Place paper on scanner",
+            "It reads the image",
+            "Sends it to computer as a file",
+            "Answer: Converts paper documents into digital files"
+          ]
+        },
+        {
+          "q": "What is a laptop?",
+          "options": [
+            "A desktop computer",
+            "A portable computer",
+            "A type of phone",
+            "A printer"
+          ],
+          "answer": "A portable computer",
+          "explain": "A laptop is a portable computer that can be carried around.",
+          "procedure": [
+            "Has screen, keyboard, and battery",
+            "Can be carried",
+            "Answer: A portable computer"
+          ]
+        },
+        {
+          "q": "What is the difference between a desktop and a laptop?",
+          "options": [
+            "Desktops are portable, laptops are not",
+            "Laptops are portable, desktops are stationary",
+            "They are exactly the same",
+            "Desktops have no screen"
+          ],
+          "answer": "Laptops are portable, desktops are stationary",
+          "explain": "Desktops stay in one place, laptops are portable.",
+          "procedure": [
+            "Desktop = fixed in place",
+            "Laptop = can be moved",
+            "Answer: Laptops are portable, desktops are stationary"
+          ]
+        },
+        {
+          "q": "What is a smartphone?",
+          "options": [
+            "A phone that can only make calls",
+            "A small computer that also makes calls",
+            "A type of desktop",
+            "A printer"
+          ],
+          "answer": "A small computer that also makes calls",
+          "explain": "A smartphone is a small computer that also makes calls.",
+          "procedure": [
+            "Runs apps",
+            "Connects to internet",
+            "Also makes calls",
+            "Answer: A small computer that also makes calls"
+          ]
+        },
+        {
+          "q": "What is a tablet?",
+          "options": [
+            "A flat device with a touchscreen, larger than a phone",
+            "A desktop computer",
+            "A keyboard",
+            "A mouse"
+          ],
+          "answer": "A flat device with a touchscreen, larger than a phone",
+          "explain": "A tablet is a flat computer with a touchscreen.",
+          "procedure": [
+            "Flat, portable",
+            "Touchscreen",
+            "Larger than a phone",
+            "Answer: A flat device with a touchscreen, larger than a phone"
+          ]
+        },
+        {
+          "q": "What does a CPU do?",
+          "options": [
+            "Processes instructions and does calculations",
+            "Prints documents",
+            "Displays images",
+            "Stores music"
+          ],
+          "answer": "Processes instructions and does calculations",
+          "explain": "The CPU is the brain of the computer, processing instructions.",
+          "procedure": [
+            "CPU = Central Processing Unit",
+            "Does all calculations",
+            "Processes data",
+            "Answer: Processes instructions and does calculations"
+          ]
+        },
+        {
+          "q": "What is RAM?",
+          "options": [
+            "Memory that stores data temporarily",
+            "A type of printer",
+            "A type of screen",
+            "A type of mouse"
+          ],
+          "answer": "Memory that stores data temporarily",
+          "explain": "RAM is temporary memory that holds data while the computer is on.",
+          "procedure": [
+            "RAM = Random Access Memory",
+            "Temporary storage",
+            "Lost when computer is off",
+            "Answer: Memory that stores data temporarily"
+          ]
+        },
+        {
+          "q": "What is a hard drive?",
+          "options": [
+            "Stores data permanently",
+            "Displays images",
+            "Prints documents",
+            "Controls the cursor"
+          ],
+          "answer": "Stores data permanently",
+          "explain": "A hard drive stores data permanently, unlike RAM.",
+          "procedure": [
+            "Permanent storage",
+            "Holds files and programs",
+            "Data survives restart",
+            "Answer: Stores data permanently"
+          ]
+        },
+        {
+          "q": "Which of these is an example of a computer?",
+          "options": [
+            "A refrigerator",
+            "A smartphone",
+            "A bicycle",
+            "A book"
+          ],
+          "answer": "A smartphone",
+          "explain": "A smartphone is a small, powerful computer.",
+          "procedure": [
+            "Has CPU, memory, screen",
+            "Runs programs",
+            "Answer: A smartphone"
+          ]
+        },
+        {
+          "q": "What does a printer do?",
+          "options": [
+            "Displays images on screen",
+            "Produces physical copies of documents",
+            "Plays music",
+            "Controls the cursor"
+          ],
+          "answer": "Produces physical copies of documents",
+          "explain": "A printer creates physical paper copies of digital documents.",
+          "procedure": [
+            "Takes digital file",
+            "Prints onto paper",
+            "Answer: Produces physical copies of documents"
+          ]
+        },
+        {
+          "q": "What is a speaker used for?",
+          "options": [
+            "Inputting data",
+            "Outputting sound",
+            "Storing data",
+            "Processing data"
+          ],
+          "answer": "Outputting sound",
+          "explain": "A speaker is an output device that produces sound.",
+          "procedure": [
+            "Speaker outputs audio",
+            "Part of output devices",
+            "Answer: Outputting sound"
+          ]
+        },
+        {
+          "q": "What is the purpose of a computer?",
+          "options": [
+            "To process data and make work easier",
+            "To only play games",
+            "To cook food",
+            "To drive cars"
+          ],
+          "answer": "To process data and make work easier",
+          "explain": "Computers process data to help us work faster and easier.",
+          "procedure": [
+            "Computers do many tasks",
+            "Process data",
+            "Make work easier",
+            "Answer: To process data and make work easier"
+          ]
+        },
+        {
+          "q": "What does the term computer literacy mean?",
+          "options": [
+            "Knowing how to fix computers",
+            "Knowing how to use computers safely and effectively",
+            "Knowing how to build computers",
+            "Knowing how to sell computers"
+          ],
+          "answer": "Knowing how to use computers safely and effectively",
+          "explain": "Computer literacy is the ability to use computers well.",
+          "procedure": [
+            "It is the skill of using computers",
+            "Includes safety",
+            "Answer: Knowing how to use computers safely and effectively"
+          ]
+        },
+        {
+          "q": "Which of these is a mobile computer?",
+          "options": [
+            "Desktop",
+            "Laptop",
+            "Server",
+            "Mainframe"
+          ],
+          "answer": "Laptop",
+          "explain": "Laptops are mobile computers that can be carried anywhere.",
+          "procedure": [
+            "Desktops are stationary",
+            "Laptops are mobile",
+            "Answer: Laptop"
+          ]
+        },
+        {
+          "q": "What is a touchscreen?",
+          "options": [
+            "A screen that responds to touch",
+            "A type of keyboard",
+            "A mouse",
+            "A printer"
+          ],
+          "answer": "A screen that responds to touch",
+          "explain": "A touchscreen is a screen that responds to finger touch.",
+          "procedure": [
+            "Used in phones and tablets",
+            "Responds to touch",
+            "Answer: A screen that responds to touch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parts-of-computer",
+      "name": "Parts of a Computer",
+      "icon": "⌨️",
+      "questions": [
+        {
+          "q": "What are the main parts of a computer?",
+          "options": [
+            "CPU, monitor, keyboard, mouse",
+            "Only the screen",
+            "Only the keyboard",
+            "Only the CPU"
+          ],
+          "answer": "CPU, monitor, keyboard, mouse",
+          "explain": "The main parts are CPU, monitor, keyboard, and mouse.",
+          "procedure": [
+            "CPU = brain",
+            "Monitor = display",
+            "Keyboard = typing",
+            "Mouse = pointing",
+            "Answer: CPU, monitor, keyboard, mouse"
+          ],
+          "image": "assets/computing/computer-overview.png"
+        },
+        {
+          "q": "What is a keyboard used for?",
+          "options": [
+            "Typing letters and numbers",
+            "Displaying images",
+            "Printing documents",
+            "Playing sound"
+          ],
+          "answer": "Typing letters and numbers",
+          "explain": "Keyboards are used to type letters, numbers, and commands.",
+          "procedure": [
+            "Input device",
+            "Types data into the computer",
+            "Answer: Typing letters and numbers"
+          ]
+        },
+        {
+          "q": "What does a monitor do?",
+          "options": [
+            "Shows images and text",
+            "Types letters",
+            "Prints pages",
+            "Stores data"
+          ],
+          "answer": "Shows images and text",
+          "explain": "The monitor is the screen that displays visual output.",
+          "procedure": [
+            "Output device",
+            "Displays what the computer is doing",
+            "Answer: Shows images and text"
+          ],
+          "image": "assets/computing/monitor.png"
+        },
+        {
+          "q": "What is the function of a mouse?",
+          "options": [
+            "Pointing and clicking on things on the screen",
+            "Typing letters",
+            "Printing documents",
+            "Making sound"
+          ],
+          "answer": "Pointing and clicking on things on the screen",
+          "explain": "A mouse is used to point and click on screen objects.",
+          "procedure": [
+            "Move the mouse",
+            "Click to select",
+            "Answer: Pointing and clicking on things on the screen"
+          ]
+        },
+        {
+          "q": "What does the CPU do?",
+          "options": [
+            "Processes instructions",
+            "Displays images",
+            "Prints documents",
+            "Controls the cursor"
+          ],
+          "answer": "Processes instructions",
+          "explain": "The CPU is the brain that processes all instructions.",
+          "procedure": [
+            "CPU = Central Processing Unit",
+            "Processes everything",
+            "Answer: Processes instructions"
+          ],
+          "image": "assets/computing/cpu.png"
+        },
+        {
+          "q": "What is a hard drive used for?",
+          "options": [
+            "Storing data permanently",
+            "Displaying images",
+            "Printing documents",
+            "Typing letters"
+          ],
+          "answer": "Storing data permanently",
+          "explain": "A hard drive stores data permanently, even when the computer is off.",
+          "procedure": [
+            "Permanent storage",
+            "Holds files, programs",
+            "Answer: Storing data permanently"
+          ],
+          "image": "assets/computing/storage.png"
+        },
+        {
+          "q": "What is a scanner used for?",
+          "options": [
+            "Converting physical paper to digital files",
+            "Printing documents",
+            "Playing music",
+            "Typing letters"
+          ],
+          "answer": "Converting physical paper to digital files",
+          "explain": "A scanner takes a paper document and saves it as a digital file.",
+          "procedure": [
+            "Input device",
+            "Turns paper into digital",
+            "Answer: Converting physical paper to digital files"
+          ]
+        },
+        {
+          "q": "What is a printer used for?",
+          "options": [
+            "Printing digital files onto paper",
+            "Displaying images",
+            "Typing letters",
+            "Playing sound"
+          ],
+          "answer": "Printing digital files onto paper",
+          "explain": "A printer produces paper copies of digital files.",
+          "procedure": [
+            "Output device",
+            "Turns digital into paper",
+            "Answer: Printing digital files onto paper"
+          ]
+        },
+        {
+          "q": "What are speakers used for?",
+          "options": [
+            "Outputting sound",
+            "Displaying images",
+            "Storing data",
+            "Processing data"
+          ],
+          "answer": "Outputting sound",
+          "explain": "Speakers output audio from the computer.",
+          "procedure": [
+            "Output device",
+            "Produces sound",
+            "Answer: Outputting sound"
+          ]
+        },
+        {
+          "q": "What is a microphone?",
+          "options": [
+            "Records sound as input",
+            "Prints documents",
+            "Displays images",
+            "Stores data"
+          ],
+          "answer": "Records sound as input",
+          "explain": "A microphone is an input device that captures sound.",
+          "procedure": [
+            "Input device",
+            "Captures sound",
+            "Answer: Records sound as input"
+          ]
+        },
+        {
+          "q": "What is a webcam?",
+          "options": [
+            "A video camera that connects to the computer",
+            "A type of keyboard",
+            "A printer",
+            "A speaker"
+          ],
+          "answer": "A video camera that connects to the computer",
+          "explain": "A webcam captures video input for the computer.",
+          "procedure": [
+            "Input device",
+            "Captures video",
+            "Answer: A video camera that connects to the computer"
+          ]
+        },
+        {
+          "q": "What is a USB port?",
+          "options": [
+            "A connection point for external devices",
+            "A type of keyboard",
+            "A printer",
+            "A speaker"
+          ],
+          "answer": "A connection point for external devices",
+          "explain": "USB ports allow external devices to connect to the computer.",
+          "procedure": [
+            "USB = Universal Serial Bus",
+            "Connects flash drives, mice, etc.",
+            "Answer: A connection point for external devices"
+          ]
+        },
+        {
+          "q": "What is a graphics card?",
+          "options": [
+            "Processes images and video",
+            "Prints documents",
+            "Plays sound",
+            "Stores data"
+          ],
+          "answer": "Processes images and video",
+          "explain": "A graphics card (GPU) processes visual data for display.",
+          "procedure": [
+            "Handles visuals",
+            "Needed for games and videos",
+            "Answer: Processes images and video"
+          ]
+        },
+        {
+          "q": "What is the motherboard?",
+          "options": [
+            "The main circuit board that connects all parts",
+            "The screen",
+            "The mouse",
+            "The keyboard"
+          ],
+          "answer": "The main circuit board that connects all parts",
+          "explain": "The motherboard connects all the components of the computer.",
+          "procedure": [
+            "Main circuit board",
+            "Connects everything",
+            "Answer: The main circuit board that connects all parts"
+          ]
+        },
+        {
+          "q": "What is a power supply?",
+          "options": [
+            "Provides electricity to the computer",
+            "Prints documents",
+            "Displays images",
+            "Stores data"
+          ],
+          "answer": "Provides electricity to the computer",
+          "explain": "The power supply provides electricity to the computer.",
+          "procedure": [
+            "Converts wall power",
+            "Powers all components",
+            "Answer: Provides electricity to the computer"
+          ]
+        },
+        {
+          "q": "What is a cooling fan used for?",
+          "options": [
+            "Keeps the computer from overheating",
+            "Prints documents",
+            "Plays sound",
+            "Stores data"
+          ],
+          "answer": "Keeps the computer from overheating",
+          "explain": "The cooling fan keeps computer parts from getting too hot.",
+          "procedure": [
+            "Moves air",
+            "Cools the CPU and parts",
+            "Answer: Keeps the computer from overheating"
+          ]
+        },
+        {
+          "q": "What is a touchpad?",
+          "options": [
+            "A touch-sensitive pad on laptops used as a mouse",
+            "A printer",
+            "A speaker",
+            "A keyboard"
+          ],
+          "answer": "A touch-sensitive pad on laptops used as a mouse",
+          "explain": "A touchpad on laptops replaces the mouse.",
+          "procedure": [
+            "Touch-sensitive",
+            "Used for navigation",
+            "Answer: A touch-sensitive pad on laptops used as a mouse"
+          ]
+        },
+        {
+          "q": "What is a flash drive?",
+          "options": [
+            "A small portable storage device",
+            "A monitor",
+            "A keyboard",
+            "A printer"
+          ],
+          "answer": "A small portable storage device",
+          "explain": "A flash drive stores and transfers files.",
+          "procedure": [
+            "USB storage",
+            "Portable",
+            "Answer: A small portable storage device"
+          ]
+        },
+        {
+          "q": "What is a CD/DVD drive used for?",
+          "options": [
+            "Reading and writing CDs and DVDs",
+            "Printing documents",
+            "Displaying images",
+            "Typing letters"
+          ],
+          "answer": "Reading and writing CDs and DVDs",
+          "explain": "A CD/DVD drive reads and writes data on discs.",
+          "procedure": [
+            "Optical drive",
+            "Reads/writes CDs, DVDs",
+            "Answer: Reading and writing CDs and DVDs"
+          ]
+        },
+        {
+          "q": "What is the role of a monitor cable?",
+          "options": [
+            "Connects the monitor to the computer",
+            "Prints documents",
+            "Plays sound",
+            "Stores data"
+          ],
+          "answer": "Connects the monitor to the computer",
+          "explain": "The monitor cable carries video signals from the computer to the monitor.",
+          "procedure": [
+            "Cable connects monitor",
+            "Carries video signals",
+            "Answer: Connects the monitor to the computer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hardware-software",
+      "name": "Hardware & Software",
+      "icon": "⚙️",
+      "questions": [
+        {
+          "q": "What is computer hardware?",
+          "options": [
+            "The physical parts of a computer you can touch",
+            "Only the software",
+            "Only the keyboard",
+            "Only the internet"
+          ],
+          "answer": "The physical parts of a computer you can touch",
+          "explain": "Hardware is the physical parts of a computer you can touch.",
+          "procedure": [
+            "Hardware = physical parts",
+            "Monitor, keyboard, CPU, mouse",
+            "Answer: The physical parts of a computer you can touch"
+          ],
+          "image": "assets/computing/hardware.png"
+        },
+        {
+          "q": "What is computer software?",
+          "options": [
+            "The programs and apps that run on a computer",
+            "The physical parts",
+            "Only the monitor",
+            "Only the keyboard"
+          ],
+          "answer": "The programs and apps that run on a computer",
+          "explain": "Software is the programs and apps that run on a computer.",
+          "procedure": [
+            "Software = programs",
+            "Apps, games, operating systems",
+            "Answer: The programs and apps that run on a computer"
+          ],
+          "image": "assets/computing/software.png"
+        },
+        {
+          "q": "Which of these is hardware?",
+          "options": [
+            "Microsoft Word",
+            "Keyboard",
+            "Google Chrome",
+            "Windows 10"
+          ],
+          "answer": "Keyboard",
+          "explain": "A keyboard is a physical part, so it is hardware.",
+          "procedure": [
+            "Keyboard is physical",
+            "Software is programs",
+            "Answer: Keyboard"
+          ]
+        },
+        {
+          "q": "Which of these is software?",
+          "options": [
+            "Mouse",
+            "Monitor",
+            "Microsoft Word",
+            "CPU"
+          ],
+          "answer": "Microsoft Word",
+          "explain": "Microsoft Word is a program, so it is software.",
+          "procedure": [
+            "Word is a program",
+            "Software runs on hardware",
+            "Answer: Microsoft Word"
+          ]
+        },
+        {
+          "q": "What is an operating system?",
+          "options": [
+            "The main software that runs the computer",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "The main software that runs the computer",
+          "explain": "The operating system manages all other programs and hardware.",
+          "procedure": [
+            "OS runs the computer",
+            "Examples: Windows, macOS, Linux",
+            "Answer: The main software that runs the computer"
+          ],
+          "image": "assets/computing/os.png"
+        },
+        {
+          "q": "Which of these is an operating system?",
+          "options": [
+            "Windows",
+            "Microsoft Word",
+            "Google Chrome",
+            "WhatsApp"
+          ],
+          "answer": "Windows",
+          "explain": "Windows is an operating system made by Microsoft.",
+          "procedure": [
+            "Windows = OS",
+            "Manages hardware and software",
+            "Answer: Windows"
+          ]
+        },
+        {
+          "q": "Which of these is NOT an operating system?",
+          "options": [
+            "Windows",
+            "macOS",
+            "Linux",
+            "Microsoft Excel"
+          ],
+          "answer": "Microsoft Excel",
+          "explain": "Excel is a spreadsheet program, not an operating system.",
+          "procedure": [
+            "Excel is software for spreadsheets",
+            "Not an OS",
+            "Answer: Microsoft Excel"
+          ]
+        },
+        {
+          "q": "What is an application software?",
+          "options": [
+            "Software made for a specific task",
+            "The main software",
+            "Hardware",
+            "A printer"
+          ],
+          "answer": "Software made for a specific task",
+          "explain": "Application software is designed for specific tasks like typing or drawing.",
+          "procedure": [
+            "Apps do specific jobs",
+            "Word, Excel, Chrome",
+            "Answer: Software made for a specific task"
+          ]
+        },
+        {
+          "q": "Which of these is application software?",
+          "options": [
+            "Windows",
+            "Linux",
+            "Microsoft Word",
+            "macOS"
+          ],
+          "answer": "Microsoft Word",
+          "explain": "Microsoft Word is an application for creating documents.",
+          "procedure": [
+            "Word is an app",
+            "For typing documents",
+            "Answer: Microsoft Word"
+          ]
+        },
+        {
+          "q": "What is system software?",
+          "options": [
+            "Software that runs the computer system",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "Software that runs the computer system",
+          "explain": "System software manages the computer system itself.",
+          "procedure": [
+            "System software runs the system",
+            "OS is system software",
+            "Answer: Software that runs the computer system"
+          ]
+        },
+        {
+          "q": "What does an antivirus program do?",
+          "options": [
+            "Protects the computer from viruses",
+            "Prints documents",
+            "Displays images",
+            "Types letters"
+          ],
+          "answer": "Protects the computer from viruses",
+          "explain": "Antivirus programs protect the computer from viruses and malware.",
+          "procedure": [
+            "Detects and removes viruses",
+            "Keeps the computer safe",
+            "Answer: Protects the computer from viruses"
+          ]
+        },
+        {
+          "q": "What is the difference between hardware and software?",
+          "options": [
+            "Hardware is physical, software is programs",
+            "They are the same",
+            "Software is physical, hardware is programs",
+            "Hardware is only the screen"
+          ],
+          "answer": "Hardware is physical, software is programs",
+          "explain": "Hardware is physical parts, software is programs.",
+          "procedure": [
+            "Hardware = physical",
+            "Software = programs",
+            "Answer: Hardware is physical, software is programs"
+          ]
+        },
+        {
+          "q": "What happens if you have hardware but no software?",
+          "options": [
+            "The computer will run fine",
+            "The computer cannot do anything useful",
+            "The computer will type by itself",
+            "The computer will only print"
+          ],
+          "answer": "The computer cannot do anything useful",
+          "explain": "Without software, hardware cannot perform any tasks.",
+          "procedure": [
+            "Hardware needs software",
+            "Software gives instructions",
+            "Answer: The computer cannot do anything useful"
+          ]
+        },
+        {
+          "q": "What happens if you have software but no hardware?",
+          "options": [
+            "The computer will still run",
+            "The software has nothing to run on",
+            "The software will do the work",
+            "The computer will still work"
+          ],
+          "answer": "The software has nothing to run on",
+          "explain": "Software needs hardware to run.",
+          "procedure": [
+            "Software requires hardware",
+            "Hardware is physical",
+            "Answer: The software has nothing to run on"
+          ]
+        },
+        {
+          "q": "What is a web browser?",
+          "options": [
+            "Software used to access the internet",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "Software used to access the internet",
+          "explain": "A web browser is software used to access websites.",
+          "procedure": [
+            "Browsers access the internet",
+            "Examples: Chrome, Firefox, Edge",
+            "Answer: Software used to access the internet"
+          ]
+        },
+        {
+          "q": "Which of these is a web browser?",
+          "options": [
+            "Microsoft Word",
+            "Google Chrome",
+            "Excel",
+            "Windows"
+          ],
+          "answer": "Google Chrome",
+          "explain": "Google Chrome is a web browser used to access the internet.",
+          "procedure": [
+            "Chrome is a browser",
+            "Accesses websites",
+            "Answer: Google Chrome"
+          ]
+        },
+        {
+          "q": "What is a video game?",
+          "options": [
+            "Hardware",
+            "Software",
+            "A type of keyboard",
+            "A type of monitor"
+          ],
+          "answer": "Software",
+          "explain": "Video games are software programs.",
+          "procedure": [
+            "Games are software",
+            "Run on hardware",
+            "Answer: Software"
+          ]
+        },
+        {
+          "q": "What is an installer?",
+          "options": [
+            "A program that installs software on a computer",
+            "A type of keyboard",
+            "A printer",
+            "A type of screen"
+          ],
+          "answer": "A program that installs software on a computer",
+          "explain": "An installer copies software files onto the computer.",
+          "procedure": [
+            "Installer sets up software",
+            "Used during installation",
+            "Answer: A program that installs software on a computer"
+          ]
+        },
+        {
+          "q": "What is a software update?",
+          "options": [
+            "A new version of software that fixes problems or adds features",
+            "A type of keyboard",
+            "A printer",
+            "A hardware upgrade"
+          ],
+          "answer": "A new version of software that fixes problems or adds features",
+          "explain": "Updates improve software and fix problems.",
+          "procedure": [
+            "Updates improve software",
+            "Fix bugs, add features",
+            "Answer: A new version of software that fixes problems or adds features"
+          ]
+        },
+        {
+          "q": "Why should you update your software regularly?",
+          "options": [
+            "To keep it safe and working properly",
+            "To make it heavier",
+            "To make it slower",
+            "To waste time"
+          ],
+          "answer": "To keep it safe and working properly",
+          "explain": "Regular updates keep software safe and working correctly.",
+          "procedure": [
+            "Updates fix bugs",
+            "Add safety patches",
+            "Answer: To keep it safe and working properly"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage-devices",
+      "name": "Storage Devices",
+      "icon": "💾",
+      "questions": [
+        {
+          "q": "What is a storage device?",
+          "options": [
+            "A device used to save data for later use",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A device used to save data for later use",
+          "explain": "Storage devices save data so it can be used later.",
+          "procedure": [
+            "Storage = saving data",
+            "Examples: hard drive, USB, CD",
+            "Answer: A device used to save data for later use"
+          ],
+          "image": "assets/computing/storage.png"
+        },
+        {
+          "q": "Which of these is a storage device?",
+          "options": [
+            "Monitor",
+            "USB flash drive",
+            "Keyboard",
+            "Mouse"
+          ],
+          "answer": "USB flash drive",
+          "explain": "A USB flash drive is a portable storage device.",
+          "procedure": [
+            "USB drive stores data",
+            "It is storage",
+            "Answer: USB flash drive"
+          ]
+        },
+        {
+          "q": "What is a hard drive?",
+          "options": [
+            "A storage device that saves data permanently inside a computer",
+            "A printer",
+            "A mouse",
+            "A speaker"
+          ],
+          "answer": "A storage device that saves data permanently inside a computer",
+          "explain": "Hard drives store data permanently inside computers.",
+          "procedure": [
+            "Internal storage",
+            "Saves files permanently",
+            "Answer: A storage device that saves data permanently inside a computer"
+          ]
+        },
+        {
+          "q": "What is a USB flash drive used for?",
+          "options": [
+            "Storing and transferring files between computers",
+            "Printing documents",
+            "Displaying images",
+            "Playing music"
+          ],
+          "answer": "Storing and transferring files between computers",
+          "explain": "USB flash drives are used to store and move files between computers.",
+          "procedure": [
+            "Portable storage",
+            "Transfer files",
+            "Answer: Storing and transferring files between computers"
+          ]
+        },
+        {
+          "q": "What is a CD?",
+          "options": [
+            "A storage device that holds data on a round disc",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A storage device that holds data on a round disc",
+          "explain": "A CD (Compact Disc) stores data on a round disc.",
+          "procedure": [
+            "CD = Compact Disc",
+            "Stores data on disc",
+            "Answer: A storage device that holds data on a round disc"
+          ]
+        },
+        {
+          "q": "What is a DVD?",
+          "options": [
+            "A disc that holds more data than a CD",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A disc that holds more data than a CD",
+          "explain": "DVDs hold much more data than CDs.",
+          "procedure": [
+            "DVD = Digital Versatile Disc",
+            "Holds more than CD",
+            "Answer: A disc that holds more data than a CD"
+          ]
+        },
+        {
+          "q": "What is a memory card?",
+          "options": [
+            "A small storage device used in phones and cameras",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A small storage device used in phones and cameras",
+          "explain": "Memory cards store data in small devices like phones and cameras.",
+          "procedure": [
+            "Small portable storage",
+            "Used in phones/cameras",
+            "Answer: A small storage device used in phones and cameras"
+          ]
+        },
+        {
+          "q": "What is cloud storage?",
+          "options": [
+            "Saving files on internet servers",
+            "A type of printer",
+            "A type of keyboard",
+            "A type of mouse"
+          ],
+          "answer": "Saving files on internet servers",
+          "explain": "Cloud storage saves files on the internet instead of a local device.",
+          "procedure": [
+            "Files saved online",
+            "Examples: Google Drive, iCloud",
+            "Answer: Saving files on internet servers"
+          ],
+          "image": "assets/computing/cloud-storage.png"
+        },
+        {
+          "q": "What is the difference between RAM and a hard drive?",
+          "options": [
+            "RAM is temporary, hard drive is permanent",
+            "They are the same",
+            "RAM is permanent, hard drive is temporary",
+            "They are both temporary"
+          ],
+          "answer": "RAM is temporary, hard drive is permanent",
+          "explain": "RAM is temporary memory, a hard drive is permanent storage.",
+          "procedure": [
+            "RAM = temporary",
+            "Hard drive = permanent",
+            "Answer: RAM is temporary, hard drive is permanent"
+          ]
+        },
+        {
+          "q": "What is a backup?",
+          "options": [
+            "A copy of data saved in case the original is lost",
+            "A type of keyboard",
+            "A type of monitor",
+            "A printer"
+          ],
+          "answer": "A copy of data saved in case the original is lost",
+          "explain": "A backup is a copy of data for safety.",
+          "procedure": [
+            "Copy of data",
+            "For safety",
+            "Answer: A copy of data saved in case the original is lost"
+          ]
+        },
+        {
+          "q": "Why is it important to back up files?",
+          "options": [
+            "To recover them if something goes wrong",
+            "To make them slower",
+            "To make them heavier",
+            "To make them invisible"
+          ],
+          "answer": "To recover them if something goes wrong",
+          "explain": "Backups protect against data loss.",
+          "procedure": [
+            "Backups protect data",
+            "Recover if lost",
+            "Answer: To recover them if something goes wrong"
+          ]
+        },
+        {
+          "q": "What is a file?",
+          "options": [
+            "A collection of data saved with a name",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A collection of data saved with a name",
+          "explain": "A file is a collection of data with a name.",
+          "procedure": [
+            "Files store data",
+            "Have names and extensions",
+            "Answer: A collection of data saved with a name"
+          ]
+        },
+        {
+          "q": "What is a folder?",
+          "options": [
+            "A place to organize files",
+            "A type of monitor",
+            "A printer",
+            "A keyboard"
+          ],
+          "answer": "A place to organize files",
+          "explain": "Folders organize files on a computer.",
+          "procedure": [
+            "Folders hold files",
+            "Keep data organized",
+            "Answer: A place to organize files"
+          ]
+        },
+        {
+          "q": "Which is NOT a storage device?",
+          "options": [
+            "Hard drive",
+            "USB flash drive",
+            "CD",
+            "Monitor"
+          ],
+          "answer": "Monitor",
+          "explain": "A monitor displays images, it does not store data.",
+          "procedure": [
+            "Monitor is output",
+            "Not storage",
+            "Answer: Monitor"
+          ]
+        },
+        {
+          "q": "What is the difference between a file and a folder?",
+          "options": [
+            "A file stores data, a folder holds files",
+            "They are the same",
+            "A folder stores data, a file holds folders",
+            "A file is bigger than a folder"
+          ],
+          "answer": "A file stores data, a folder holds files",
+          "explain": "Files store data, folders organize files.",
+          "procedure": [
+            "Files = data",
+            "Folders = organization",
+            "Answer: A file stores data, a folder holds files"
+          ]
+        },
+        {
+          "q": "What does saving mean in computing?",
+          "options": [
+            "Storing data to use again later",
+            "Deleting data",
+            "Printing data",
+            "Copying data to a screen"
+          ],
+          "answer": "Storing data to use again later",
+          "explain": "Saving means storing data for later use.",
+          "procedure": [
+            "Save = store data",
+            "Used later",
+            "Answer: Storing data to use again later"
+          ]
+        },
+        {
+          "q": "What is a file extension?",
+          "options": [
+            "Letters after a dot showing the file type (like .txt or .docx)",
+            "A type of keyboard",
+            "A type of mouse",
+            "A printer"
+          ],
+          "answer": "Letters after a dot showing the file type (like .txt or .docx)",
+          "explain": "File extensions tell you the file type.",
+          "procedure": [
+            "Examples: .txt, .docx, .jpg",
+            "Tells the type",
+            "Answer: Letters after a dot showing the file type (like .txt or .docx)"
+          ]
+        },
+        {
+          "q": "What does .jpg or .png extension indicate?",
+          "options": [
+            "An image file",
+            "A music file",
+            "A document file",
+            "A video file"
+          ],
+          "answer": "An image file",
+          "explain": ".jpg and .png are image file extensions.",
+          "procedure": [
+            "Images use .jpg, .png",
+            "Tells the file type",
+            "Answer: An image file"
+          ]
+        },
+        {
+          "q": "What does .docx or .txt extension indicate?",
+          "options": [
+            "A document file",
+            "An image file",
+            "A music file",
+            "A video file"
+          ],
+          "answer": "A document file",
+          "explain": ".docx and .txt are document file extensions.",
+          "procedure": [
+            "Documents use .docx, .txt",
+            "Text files",
+            "Answer: A document file"
+          ]
+        },
+        {
+          "q": "What is a storage capacity?",
+          "options": [
+            "The amount of data a storage device can hold",
+            "The size of the monitor",
+            "The type of keyboard",
+            "The color of the mouse"
+          ],
+          "answer": "The amount of data a storage device can hold",
+          "explain": "Storage capacity measures how much data a device can hold.",
+          "procedure": [
+            "Measures data holding",
+            "Examples: 32GB, 1TB",
+            "Answer: The amount of data a storage device can hold"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-information",
+      "name": "Data & Information",
+      "icon": "📊",
+      "questions": [
+        {
+          "q": "What is data?",
+          "options": [
+            "Raw, unprocessed facts and figures",
+            "Processed information",
+            "A type of computer",
+            "A type of software"
+          ],
+          "answer": "Raw, unprocessed facts and figures",
+          "explain": "Data is raw, unprocessed facts.",
+          "procedure": [
+            "Data = raw facts",
+            "Not yet processed",
+            "Answer: Raw, unprocessed facts and figures"
+          ]
+        },
+        {
+          "q": "What is information?",
+          "options": [
+            "Raw facts",
+            "Processed data that is useful",
+            "A type of computer",
+            "A type of keyboard"
+          ],
+          "answer": "Processed data that is useful",
+          "explain": "Information is processed data that has meaning.",
+          "procedure": [
+            "Information = processed data",
+            "Has meaning",
+            "Answer: Processed data that is useful"
+          ]
+        },
+        {
+          "q": "What is the relationship between data and information?",
+          "options": [
+            "They are the same",
+            "Data is processed into information",
+            "Information is processed into data",
+            "They are unrelated"
+          ],
+          "answer": "Data is processed into information",
+          "explain": "Data is processed to become information.",
+          "procedure": [
+            "Raw data → Process → Information",
+            "Answer: Data is processed into information"
+          ]
+        },
+        {
+          "q": "Which of these is an example of data?",
+          "options": [
+            "A list of numbers: 5, 12, 8",
+            "A report that says the average is 8.3",
+            "A conclusion",
+            "A recommendation"
+          ],
+          "answer": "A list of numbers: 5, 12, 8",
+          "explain": "Raw numbers are data.",
+          "procedure": [
+            "Raw numbers = data",
+            "Not yet processed",
+            "Answer: A list of numbers: 5, 12, 8"
+          ]
+        },
+        {
+          "q": "Which of these is an example of information?",
+          "options": [
+            "The numbers 5, 12, 8",
+            "The report says the average score is 8.3",
+            "Random typing",
+            "A blank page"
+          ],
+          "answer": "The report says the average score is 8.3",
+          "explain": "The processed average is information.",
+          "procedure": [
+            "Average = processed",
+            "Has meaning",
+            "Answer: The report says the average score is 8.3"
+          ]
+        },
+        {
+          "q": "What is a computer file?",
+          "options": [
+            "A collection of data stored with a name",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A collection of data stored with a name",
+          "explain": "A computer file stores data with a name.",
+          "procedure": [
+            "Files store data",
+            "Have names",
+            "Answer: A collection of data stored with a name"
+          ]
+        },
+        {
+          "q": "What does processing data mean?",
+          "options": [
+            "Doing calculations or operations on data",
+            "Deleting data",
+            "Printing data",
+            "Typing data"
+          ],
+          "answer": "Doing calculations or operations on data",
+          "explain": "Processing means performing operations on data.",
+          "procedure": [
+            "Calculate",
+            "Sort",
+            "Summarize",
+            "Answer: Doing calculations or operations on data"
+          ]
+        },
+        {
+          "q": "Which of these is NOT a type of data?",
+          "options": [
+            "Text",
+            "Numbers",
+            "Images",
+            "A printer"
+          ],
+          "answer": "A printer",
+          "explain": "A printer is a device, not a type of data.",
+          "procedure": [
+            "Data types: text, numbers, images, audio, video",
+            "Printer is a device",
+            "Answer: A printer"
+          ]
+        },
+        {
+          "q": "What is a database?",
+          "options": [
+            "An organized collection of data",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "An organized collection of data",
+          "explain": "A database stores and organizes data.",
+          "procedure": [
+            "Organized data",
+            "Can be searched",
+            "Answer: An organized collection of data"
+          ]
+        },
+        {
+          "q": "What does sorting data mean?",
+          "options": [
+            "Arranging data in a certain order",
+            "Deleting data",
+            "Printing data",
+            "Drawing data"
+          ],
+          "answer": "Arranging data in a certain order",
+          "explain": "Sorting arranges data in order.",
+          "procedure": [
+            "Sort = arrange in order",
+            "Alphabetical or numerical",
+            "Answer: Arranging data in a certain order"
+          ]
+        },
+        {
+          "q": "What is a spreadsheet?",
+          "options": [
+            "A program that organizes data in rows and columns",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A program that organizes data in rows and columns",
+          "explain": "Spreadsheets arrange data in tables.",
+          "procedure": [
+            "Grid of rows and columns",
+            "Used for calculations",
+            "Answer: A program that organizes data in rows and columns"
+          ]
+        },
+        {
+          "q": "Why is information more useful than raw data?",
+          "options": [
+            "Information has meaning and can guide decisions",
+            "They are equally useful",
+            "Data is always more useful",
+            "They are both useless"
+          ],
+          "answer": "Information has meaning and can guide decisions",
+          "explain": "Information is processed data that has meaning.",
+          "procedure": [
+            "Information = processed",
+            "Has meaning",
+            "Guides decisions",
+            "Answer: Information has meaning and can guide decisions"
+          ]
+        },
+        {
+          "q": "What is coding data?",
+          "options": [
+            "Converting data into a specific format",
+            "Copying data",
+            "Printing data",
+            "Deleting data"
+          ],
+          "answer": "Converting data into a specific format",
+          "explain": "Coding converts data into a format computers can understand.",
+          "procedure": [
+            "Converts data",
+            "To a computer format",
+            "Answer: Converting data into a specific format"
+          ]
+        },
+        {
+          "q": "What does a computer do with data?",
+          "options": [
+            "It processes data into information",
+            "It destroys data",
+            "It only stores data",
+            "It only prints data"
+          ],
+          "answer": "It processes data into information",
+          "explain": "Computers process data into information.",
+          "procedure": [
+            "Input data",
+            "Process",
+            "Output information",
+            "Answer: It processes data into information"
+          ]
+        },
+        {
+          "q": "What is an example of processing data?",
+          "options": [
+            "Calculating the total of numbers",
+            "Typing data",
+            "Printing data",
+            "Drawing a picture"
+          ],
+          "answer": "Calculating the total of numbers",
+          "explain": "Calculating is processing data.",
+          "procedure": [
+            "Adding numbers",
+            "Calculating totals",
+            "Answer: Calculating the total of numbers"
+          ]
+        },
+        {
+          "q": "What is the first step in processing data?",
+          "options": [
+            "Input the data",
+            "Print the data",
+            "Delete the data",
+            "Save the data"
+          ],
+          "answer": "Input the data",
+          "explain": "Data must be input before it can be processed.",
+          "procedure": [
+            "First input data",
+            "Then process",
+            "Then output",
+            "Answer: Input the data"
+          ]
+        },
+        {
+          "q": "What is the last step in processing data?",
+          "options": [
+            "Input data",
+            "Output information",
+            "Delete data",
+            "Draw data"
+          ],
+          "answer": "Output information",
+          "explain": "The final step is outputting information.",
+          "procedure": [
+            "Input",
+            "Process",
+            "Output",
+            "Answer: Output information"
+          ]
+        },
+        {
+          "q": "What is data entry?",
+          "options": [
+            "Typing data into a computer",
+            "Calculating data",
+            "Deleting data",
+            "Printing data"
+          ],
+          "answer": "Typing data into a computer",
+          "explain": "Data entry is typing data into a computer.",
+          "procedure": [
+            "Typing data",
+            "Entering data",
+            "Answer: Typing data into a computer"
+          ]
+        },
+        {
+          "q": "What is a table?",
+          "options": [
+            "A way to display data in rows and columns",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A way to display data in rows and columns",
+          "explain": "Tables organize data into rows and columns.",
+          "procedure": [
+            "Rows and columns",
+            "Organizes data",
+            "Answer: A way to display data in rows and columns"
+          ]
+        },
+        {
+          "q": "What is a chart or graph?",
+          "options": [
+            "A visual way to display data",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A visual way to display data",
+          "explain": "Charts and graphs display data visually.",
+          "procedure": [
+            "Visual representation",
+            "Shows data patterns",
+            "Answer: A visual way to display data"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "word-processing",
+      "name": "Word Processing",
+      "icon": "📝",
+      "questions": [
+        {
+          "q": "What is word processing?",
+          "options": [
+            "Using software to create and edit documents",
+            "Writing words by hand",
+            "Playing games",
+            "Editing photos"
+          ],
+          "answer": "Using software to create and edit documents",
+          "explain": "Word processing is using software to create and edit documents.",
+          "procedure": [
+            "Typing text in a program",
+            "Editing documents",
+            "Answer: Using software to create and edit documents"
+          ],
+          "image": "assets/computing/word-processing.png"
+        },
+        {
+          "q": "Which of these is a word processing program?",
+          "options": [
+            "Microsoft Word",
+            "Microsoft Excel",
+            "Google Chrome",
+            "Windows"
+          ],
+          "answer": "Microsoft Word",
+          "explain": "Microsoft Word is a word processing program.",
+          "procedure": [
+            "Word processes documents",
+            "Type and edit text",
+            "Answer: Microsoft Word"
+          ]
+        },
+        {
+          "q": "What is a document?",
+          "options": [
+            "A file created in a word processing program",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A file created in a word processing program",
+          "explain": "A document is a file created in a word processor.",
+          "procedure": [
+            "Files made in Word",
+            "Can be saved and printed",
+            "Answer: A file created in a word processing program"
+          ]
+        },
+        {
+          "q": "What does the Save button do?",
+          "options": [
+            "Stores the document for later use",
+            "Deletes the document",
+            "Prints the document",
+            "Closes the program"
+          ],
+          "answer": "Stores the document for later use",
+          "explain": "Saving stores a document so you can open it later.",
+          "procedure": [
+            "Save = store",
+            "For later use",
+            "Answer: Stores the document for later use"
+          ]
+        },
+        {
+          "q": "What does the Print button do?",
+          "options": [
+            "Sends the document to a printer",
+            "Saves the document",
+            "Deletes the document",
+            "Closes the program"
+          ],
+          "answer": "Sends the document to a printer",
+          "explain": "Printing sends the document to a printer.",
+          "procedure": [
+            "Sends to printer",
+            "Makes paper copy",
+            "Answer: Sends the document to a printer"
+          ]
+        },
+        {
+          "q": "What is the Undo feature used for?",
+          "options": [
+            "To reverse the last action",
+            "To delete the whole document",
+            "To print the document",
+            "To save the document"
+          ],
+          "answer": "To reverse the last action",
+          "explain": "Undo reverses the last change you made.",
+          "procedure": [
+            "Undo reverses action",
+            "Example: Undo deleting text",
+            "Answer: To reverse the last action"
+          ]
+        },
+        {
+          "q": "What does Copy do?",
+          "options": [
+            "Makes a duplicate of selected text",
+            "Deletes text",
+            "Prints text",
+            "Saves text"
+          ],
+          "answer": "Makes a duplicate of selected text",
+          "explain": "Copy duplicates selected content.",
+          "procedure": [
+            "Copy = duplicate",
+            "Used with Paste",
+            "Answer: Makes a duplicate of selected text"
+          ]
+        },
+        {
+          "q": "What does Paste do?",
+          "options": [
+            "Inserts copied or cut content",
+            "Deletes content",
+            "Saves content",
+            "Prints content"
+          ],
+          "answer": "Inserts copied or cut content",
+          "explain": "Paste inserts content that was copied or cut.",
+          "procedure": [
+            "Paste inserts",
+            "Used after Copy or Cut",
+            "Answer: Inserts copied or cut content"
+          ]
+        },
+        {
+          "q": "What does Cut do?",
+          "options": [
+            "Removes selected content to paste elsewhere",
+            "Prints content",
+            "Saves content",
+            "Duplicates content"
+          ],
+          "answer": "Removes selected content to paste elsewhere",
+          "explain": "Cut removes content so you can paste it elsewhere.",
+          "procedure": [
+            "Cut removes",
+            "Paste puts it elsewhere",
+            "Answer: Removes selected content to paste elsewhere"
+          ]
+        },
+        {
+          "q": "How do you make text bold?",
+          "options": [
+            "Click the B button",
+            "Click the I button",
+            "Click the U button",
+            "Click the S button"
+          ],
+          "answer": "Click the B button",
+          "explain": "The B button makes text bold.",
+          "procedure": [
+            "B = Bold",
+            "Makes text thicker",
+            "Answer: Click the B button"
+          ]
+        },
+        {
+          "q": "How do you make text italic?",
+          "options": [
+            "Click the B button",
+            "Click the I button",
+            "Click the U button",
+            "Click the S button"
+          ],
+          "answer": "Click the I button",
+          "explain": "The I button makes text italic (slanted).",
+          "procedure": [
+            "I = Italic",
+            "Slants text",
+            "Answer: Click the I button"
+          ]
+        },
+        {
+          "q": "How do you underline text?",
+          "options": [
+            "Click the B button",
+            "Click the I button",
+            "Click the U button",
+            "Click the S button"
+          ],
+          "answer": "Click the U button",
+          "explain": "The U button underlines text.",
+          "procedure": [
+            "U = Underline",
+            "Adds a line under text",
+            "Answer: Click the U button"
+          ]
+        },
+        {
+          "q": "What is font size?",
+          "options": [
+            "The size of the text",
+            "The color of the text",
+            "The font type",
+            "The position of the text"
+          ],
+          "answer": "The size of the text",
+          "explain": "Font size controls how big or small the text is.",
+          "procedure": [
+            "Font size = text size",
+            "Measured in points",
+            "Answer: The size of the text"
+          ]
+        },
+        {
+          "q": "What is font color?",
+          "options": [
+            "The color of the text",
+            "The size of the text",
+            "The style of the text",
+            "The position of the text"
+          ],
+          "answer": "The color of the text",
+          "explain": "Font color changes the color of the text.",
+          "procedure": [
+            "Font color = text color",
+            "Red, blue, etc.",
+            "Answer: The color of the text"
+          ]
+        },
+        {
+          "q": "What does Align Left do?",
+          "options": [
+            "Lines up text on the left side",
+            "Centers text",
+            "Lines up on the right",
+            "Justifies text"
+          ],
+          "answer": "Lines up text on the left side",
+          "explain": "Align left lines up text on the left margin.",
+          "procedure": [
+            "Lines up left",
+            "Default in most documents",
+            "Answer: Lines up text on the left side"
+          ]
+        },
+        {
+          "q": "What does Align Center do?",
+          "options": [
+            "Lines up text in the center",
+            "Lines up on the left",
+            "Lines up on the right",
+            "Justifies text"
+          ],
+          "answer": "Lines up text in the center",
+          "explain": "Align center centers the text.",
+          "procedure": [
+            "Centers text",
+            "Good for titles",
+            "Answer: Lines up text in the center"
+          ]
+        },
+        {
+          "q": "What is a spell checker?",
+          "options": [
+            "A tool that finds and corrects spelling mistakes",
+            "A type of printer",
+            "A keyboard",
+            "A monitor"
+          ],
+          "answer": "A tool that finds and corrects spelling mistakes",
+          "explain": "Spell checkers find and correct spelling mistakes.",
+          "procedure": [
+            "Checks spelling",
+            "Suggests corrections",
+            "Answer: A tool that finds and corrects spelling mistakes"
+          ]
+        },
+        {
+          "q": "What is the difference between Save and Save As?",
+          "options": [
+            "Save updates the current file; Save As makes a copy with a new name",
+            "They are the same",
+            "Save As deletes the file",
+            "Save always makes a new file"
+          ],
+          "answer": "Save updates the current file; Save As makes a copy with a new name",
+          "explain": "Save keeps the same file, Save As creates a new file.",
+          "procedure": [
+            "Save = update current",
+            "Save As = new file",
+            "Answer: Save updates the current file; Save As makes a copy with a new name"
+          ]
+        },
+        {
+          "q": "What is a header in a document?",
+          "options": [
+            "Text at the top of every page",
+            "Text at the bottom of every page",
+            "The title page",
+            "A type of printer"
+          ],
+          "answer": "Text at the top of every page",
+          "explain": "A header appears at the top of every page.",
+          "procedure": [
+            "At the top",
+            "Every page",
+            "Answer: Text at the top of every page"
+          ]
+        },
+        {
+          "q": "What is a footer in a document?",
+          "options": [
+            "Text at the top of every page",
+            "Text at the bottom of every page",
+            "The title page",
+            "A type of printer"
+          ],
+          "answer": "Text at the bottom of every page",
+          "explain": "A footer appears at the bottom of every page.",
+          "procedure": [
+            "At the bottom",
+            "Every page",
+            "Answer: Text at the bottom of every page"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-internet",
+      "name": "The Internet",
+      "icon": "🌐",
+      "questions": [
+        {
+          "q": "What is the internet?",
+          "options": [
+            "A global network of connected computers",
+            "A single computer",
+            "A type of software",
+            "A type of printer"
+          ],
+          "answer": "A global network of connected computers",
+          "explain": "The internet is a worldwide network of computers connected together.",
+          "procedure": [
+            "Network of computers",
+            "Connected globally",
+            "Answer: A global network of connected computers"
+          ],
+          "image": "assets/computing/internet.png"
+        },
+        {
+          "q": "What is the World Wide Web (WWW)?",
+          "options": [
+            "A system of websites and pages accessed through the internet",
+            "The same as the internet",
+            "A type of computer",
+            "A type of software"
+          ],
+          "answer": "A system of websites and pages accessed through the internet",
+          "explain": "The World Wide Web is the collection of websites on the internet.",
+          "procedure": [
+            "WWW = websites",
+            "Accessed via internet",
+            "Answer: A system of websites and pages accessed through the internet"
+          ]
+        },
+        {
+          "q": "What is a website?",
+          "options": [
+            "A collection of related web pages",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A collection of related web pages",
+          "explain": "A website is a collection of related web pages.",
+          "procedure": [
+            "Multiple pages",
+            "Under one address",
+            "Answer: A collection of related web pages"
+          ]
+        },
+        {
+          "q": "What is a web page?",
+          "options": [
+            "A single page on a website",
+            "A type of keyboard",
+            "A printer",
+            "A mouse"
+          ],
+          "answer": "A single page on a website",
+          "explain": "A web page is one page of a website.",
+          "procedure": [
+            "One page",
+            "Part of a website",
+            "Answer: A single page on a website"
+          ]
+        },
+        {
+          "q": "What is a web browser?",
+          "options": [
+            "Software used to access and view websites",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "Software used to access and view websites",
+          "explain": "A web browser is software used to view websites.",
+          "procedure": [
+            "Browsers view websites",
+            "Chrome, Firefox, Edge",
+            "Answer: Software used to access and view websites"
+          ]
+        },
+        {
+          "q": "Which of these is a web browser?",
+          "options": [
+            "Google Chrome",
+            "Microsoft Word",
+            "Excel",
+            "Windows"
+          ],
+          "answer": "Google Chrome",
+          "explain": "Google Chrome is a popular web browser.",
+          "procedure": [
+            "Chrome = browser",
+            "Views websites",
+            "Answer: Google Chrome"
+          ]
+        },
+        {
+          "q": "What is a URL?",
+          "options": [
+            "The address of a website",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "The address of a website",
+          "explain": "A URL (Uniform Resource Locator) is the address of a web page.",
+          "procedure": [
+            "URL = website address",
+            "Example: www.google.com",
+            "Answer: The address of a website"
+          ]
+        },
+        {
+          "q": "What does www stand for?",
+          "options": [
+            "World Wide Web",
+            "Web Wide World",
+            "Wide World Web",
+            "World Web Wide"
+          ],
+          "answer": "World Wide Web",
+          "explain": "WWW stands for World Wide Web.",
+          "procedure": [
+            "W-W-W = World Wide Web",
+            "Part of website addresses",
+            "Answer: World Wide Web"
+          ]
+        },
+        {
+          "q": "What is an email?",
+          "options": [
+            "A message sent electronically over the internet",
+            "A type of printer",
+            "A type of keyboard",
+            "A monitor"
+          ],
+          "answer": "A message sent electronically over the internet",
+          "explain": "Email is a message sent electronically over the internet.",
+          "procedure": [
+            "Electronic message",
+            "Sent via internet",
+            "Answer: A message sent electronically over the internet"
+          ]
+        },
+        {
+          "q": "What is a search engine?",
+          "options": [
+            "A tool that helps you find information on the internet",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A tool that helps you find information on the internet",
+          "explain": "Search engines help you find information online.",
+          "procedure": [
+            "Search tools",
+            "Google, Bing",
+            "Answer: A tool that helps you find information on the internet"
+          ]
+        },
+        {
+          "q": "Which of these is a search engine?",
+          "options": [
+            "Google",
+            "Microsoft Word",
+            "Excel",
+            "Windows"
+          ],
+          "answer": "Google",
+          "explain": "Google is the most popular search engine.",
+          "procedure": [
+            "Google = search engine",
+            "Finds information",
+            "Answer: Google"
+          ]
+        },
+        {
+          "q": "What is downloading?",
+          "options": [
+            "Copying a file from the internet to your computer",
+            "Deleting a file",
+            "Printing a file",
+            "Saving a file"
+          ],
+          "answer": "Copying a file from the internet to your computer",
+          "explain": "Downloading copies a file from the internet to your computer.",
+          "procedure": [
+            "From internet to computer",
+            "Copies files",
+            "Answer: Copying a file from the internet to your computer"
+          ]
+        },
+        {
+          "q": "What is uploading?",
+          "options": [
+            "Copying a file from your computer to the internet",
+            "Deleting a file",
+            "Printing a file",
+            "Saving a file"
+          ],
+          "answer": "Copying a file from your computer to the internet",
+          "explain": "Uploading copies a file from your computer to the internet.",
+          "procedure": [
+            "From computer to internet",
+            "Sends files",
+            "Answer: Copying a file from your computer to the internet"
+          ]
+        },
+        {
+          "q": "What is Wi-Fi?",
+          "options": [
+            "A wireless way to connect to the internet",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A wireless way to connect to the internet",
+          "explain": "Wi-Fi is a wireless connection to the internet.",
+          "procedure": [
+            "Wireless connection",
+            "Used for internet",
+            "Answer: A wireless way to connect to the internet"
+          ]
+        },
+        {
+          "q": "What is a network?",
+          "options": [
+            "Two or more computers connected together",
+            "A single computer",
+            "A type of printer",
+            "A type of software"
+          ],
+          "answer": "Two or more computers connected together",
+          "explain": "A network is two or more computers connected together.",
+          "procedure": [
+            "Multiple computers",
+            "Connected",
+            "Answer: Two or more computers connected together"
+          ]
+        },
+        {
+          "q": "What is a video call?",
+          "options": [
+            "A phone call with video over the internet",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A phone call with video over the internet",
+          "explain": "A video call lets you see and talk to someone over the internet.",
+          "procedure": [
+            "Video + audio",
+            "Over the internet",
+            "Answer: A phone call with video over the internet"
+          ]
+        },
+        {
+          "q": "What is social media?",
+          "options": [
+            "Websites and apps for sharing content and connecting with others",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "Websites and apps for sharing content and connecting with others",
+          "explain": "Social media lets people share content and connect online.",
+          "procedure": [
+            "Share content",
+            "Connect with others",
+            "Answer: Websites and apps for sharing content and connecting with others"
+          ]
+        },
+        {
+          "q": "Which of these is a social media platform?",
+          "options": [
+            "Facebook",
+            "Microsoft Word",
+            "Excel",
+            "Windows"
+          ],
+          "answer": "Facebook",
+          "explain": "Facebook is a popular social media platform.",
+          "procedure": [
+            "Facebook = social media",
+            "Shares content",
+            "Answer: Facebook"
+          ]
+        },
+        {
+          "q": "What is an IP address?",
+          "options": [
+            "A unique number that identifies a device on a network",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A unique number that identifies a device on a network",
+          "explain": "An IP address identifies a device on a network.",
+          "procedure": [
+            "Unique number",
+            "Identifies device",
+            "Answer: A unique number that identifies a device on a network"
+          ]
+        },
+        {
+          "q": "What is a website domain?",
+          "options": [
+            "The name of a website (like google.com)",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "The name of a website (like google.com)",
+          "explain": "A domain is the name of a website.",
+          "procedure": [
+            "Domain = website name",
+            "Example: google.com",
+            "Answer: The name of a website (like google.com)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "internet-safety",
+      "name": "Internet Safety",
+      "icon": "🛡️",
+      "questions": [
+        {
+          "q": "Why is internet safety important?",
+          "options": [
+            "To protect yourself and your information online",
+            "To make the internet slower",
+            "To stop using the internet",
+            "To delete all websites"
+          ],
+          "answer": "To protect yourself and your information online",
+          "explain": "Internet safety protects you and your information online.",
+          "procedure": [
+            "Protects you",
+            "Protects your information",
+            "Answer: To protect yourself and your information online"
+          ],
+          "image": "assets/computing/internet-safety.png"
+        },
+        {
+          "q": "What should you do if a stranger online asks for your home address?",
+          "options": [
+            "Give it to them",
+            "Refuse and tell a trusted adult",
+            "Give a fake address",
+            "Ask for their address"
+          ],
+          "answer": "Refuse and tell a trusted adult",
+          "explain": "Never share personal information with strangers online.",
+          "procedure": [
+            "Do not share",
+            "Tell an adult",
+            "Answer: Refuse and tell a trusted adult"
+          ]
+        },
+        {
+          "q": "What is a strong password?",
+          "options": [
+            "A password with letters, numbers, and symbols",
+            "Your name",
+            "123456",
+            "password"
+          ],
+          "answer": "A password with letters, numbers, and symbols",
+          "explain": "Strong passwords mix letters, numbers, and symbols.",
+          "procedure": [
+            "Mix letters, numbers, symbols",
+            "Long",
+            "Answer: A password with letters, numbers, and symbols"
+          ]
+        },
+        {
+          "q": "Should you share your password with friends?",
+          "options": [
+            "Yes, always",
+            "No, never (except a parent)",
+            "Yes, if they ask",
+            "Only for a day"
+          ],
+          "answer": "No, never (except a parent)",
+          "explain": "Passwords should only be shared with parents or guardians.",
+          "procedure": [
+            "Do not share",
+            "Except with parent",
+            "Answer: No, never (except a parent)"
+          ]
+        },
+        {
+          "q": "What is cyberbullying?",
+          "options": [
+            "Using the internet to hurt or bully someone",
+            "A type of computer",
+            "A type of software",
+            "A printer"
+          ],
+          "answer": "Using the internet to hurt or bully someone",
+          "explain": "Cyberbullying is bullying that happens online.",
+          "procedure": [
+            "Bullying online",
+            "Uses the internet",
+            "Answer: Using the internet to hurt or bully someone"
+          ]
+        },
+        {
+          "q": "What should you do if someone cyberbullies you?",
+          "options": [
+            "Bully them back",
+            "Tell a trusted adult and report the bully",
+            "Ignore it forever",
+            "Post angry messages"
+          ],
+          "answer": "Tell a trusted adult and report the bully",
+          "explain": "Report cyberbullying to an adult and the platform.",
+          "procedure": [
+            "Do not respond",
+            "Tell an adult",
+            "Report",
+            "Answer: Tell a trusted adult and report the bully"
+          ]
+        },
+        {
+          "q": "Should you meet an online friend in person alone?",
+          "options": [
+            "Yes, always",
+            "No, never without a parent or trusted adult",
+            "Only if they seem nice",
+            "Only at night"
+          ],
+          "answer": "No, never without a parent or trusted adult",
+          "explain": "Never meet online friends alone — tell a trusted adult first.",
+          "procedure": [
+            "Never meet alone",
+            "Always with an adult",
+            "Answer: No, never without a parent or trusted adult"
+          ]
+        },
+        {
+          "q": "What is a scam?",
+          "options": [
+            "A trick to steal money or information online",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A trick to steal money or information online",
+          "explain": "A scam is a trick used to steal money or personal information.",
+          "procedure": [
+            "Trick",
+            "Steals money/info",
+            "Answer: A trick to steal money or information online"
+          ]
+        },
+        {
+          "q": "What should you do if you get a suspicious email?",
+          "options": [
+            "Click every link",
+            "Delete it and do not reply",
+            "Forward it to friends",
+            "Give your password"
+          ],
+          "answer": "Delete it and do not reply",
+          "explain": "Suspicious emails should be deleted without clicking links.",
+          "procedure": [
+            "Do not click",
+            "Delete",
+            "Answer: Delete it and do not reply"
+          ]
+        },
+        {
+          "q": "What is a virus in computing?",
+          "options": [
+            "Harmful software that can damage your computer",
+            "A type of printer",
+            "A type of keyboard",
+            "A monitor"
+          ],
+          "answer": "Harmful software that can damage your computer",
+          "explain": "A computer virus is harmful software.",
+          "procedure": [
+            "Harmful software",
+            "Damages computer",
+            "Answer: Harmful software that can damage your computer"
+          ]
+        },
+        {
+          "q": "How do you protect your computer from viruses?",
+          "options": [
+            "Install antivirus software and keep it updated",
+            "Click every link",
+            "Download from unknown sites",
+            "Turn off the computer"
+          ],
+          "answer": "Install antivirus software and keep it updated",
+          "explain": "Antivirus software protects against viruses.",
+          "procedure": [
+            "Install antivirus",
+            "Keep it updated",
+            "Answer: Install antivirus software and keep it updated"
+          ]
+        },
+        {
+          "q": "What is phishing?",
+          "options": [
+            "A trick to get you to give personal information online",
+            "A type of fish",
+            "A type of printer",
+            "A type of keyboard"
+          ],
+          "answer": "A trick to get you to give personal information online",
+          "explain": "Phishing tricks you into giving personal information.",
+          "procedure": [
+            "Tricks for information",
+            "Fake emails/websites",
+            "Answer: A trick to get you to give personal information online"
+          ]
+        },
+        {
+          "q": "What should you do before downloading software?",
+          "options": [
+            "Check if the website is trusted and safe",
+            "Download from anywhere",
+            "Give your password",
+            "Click everything"
+          ],
+          "answer": "Check if the website is trusted and safe",
+          "explain": "Only download software from trusted sources.",
+          "procedure": [
+            "Check the source",
+            "Trusted sites only",
+            "Answer: Check if the website is trusted and safe"
+          ]
+        },
+        {
+          "q": "What is a firewall?",
+          "options": [
+            "Software that blocks harmful traffic on a network",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "Software that blocks harmful traffic on a network",
+          "explain": "A firewall blocks harmful traffic on a network.",
+          "procedure": [
+            "Blocks harmful traffic",
+            "Protects network",
+            "Answer: Software that blocks harmful traffic on a network"
+          ]
+        },
+        {
+          "q": "Should you post photos of yourself online to strangers?",
+          "options": [
+            "Yes, always",
+            "No, never without a parent’s permission",
+            "Only if you are smiling",
+            "Only at school"
+          ],
+          "answer": "No, never without a parent’s permission",
+          "explain": "Never post photos of yourself online without a parent’s permission.",
+          "procedure": [
+            "Do not post",
+            "Ask parent first",
+            "Answer: No, never without a parent’s permission"
+          ]
+        },
+        {
+          "q": "What is a digital footprint?",
+          "options": [
+            "The trail of information you leave behind online",
+            "A type of printer",
+            "A type of keyboard",
+            "A monitor"
+          ],
+          "answer": "The trail of information you leave behind online",
+          "explain": "Your digital footprint is the information you leave online.",
+          "procedure": [
+            "Information trail",
+            "Left online",
+            "Answer: The trail of information you leave behind online"
+          ]
+        },
+        {
+          "q": "Should you be careful what you post online?",
+          "options": [
+            "Yes, because posts stay online and can be seen by anyone",
+            "No, post anything",
+            "Only if someone is watching",
+            "Only if you are famous"
+          ],
+          "answer": "Yes, because posts stay online and can be seen by anyone",
+          "explain": "Be careful — posts are permanent and public.",
+          "procedure": [
+            "Think before posting",
+            "Posts stay online",
+            "Answer: Yes, because posts stay online and can be seen by anyone"
+          ]
+        },
+        {
+          "q": "What is two-factor authentication (2FA)?",
+          "options": [
+            "An extra security step to log in (like a code to your phone)",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "An extra security step to log in (like a code to your phone)",
+          "explain": "2FA adds extra security by requiring an extra step.",
+          "procedure": [
+            "Extra security step",
+            "Often a code",
+            "Answer: An extra security step to log in (like a code to your phone)"
+          ]
+        },
+        {
+          "q": "If a website asks for personal info and you are not sure it is safe, what should you do?",
+          "options": [
+            "Close the page and tell a parent",
+            "Give the info anyway",
+            "Give fake info",
+            "Share with friends"
+          ],
+          "answer": "Close the page and tell a parent",
+          "explain": "If a website seems unsafe, close it and tell a parent.",
+          "procedure": [
+            "Do not give info",
+            "Close the page",
+            "Tell a parent",
+            "Answer: Close the page and tell a parent"
+          ]
+        },
+        {
+          "q": "What should you do if someone online asks you to keep a secret from your parents?",
+          "options": [
+            "Keep the secret",
+            "Tell your parents right away",
+            "Do as they say",
+            "Ignore them forever"
+          ],
+          "answer": "Tell your parents right away",
+          "explain": "Strangers should never ask you to keep secrets from parents — always tell.",
+          "procedure": [
+            "Do not keep secrets",
+            "Tell parents",
+            "Answer: Tell your parents right away"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algorithms-programming",
+      "name": "Algorithms & Programming",
+      "icon": "🤖",
+      "questions": [
+        {
+          "q": "What is an algorithm?",
+          "options": [
+            "A step-by-step set of instructions to solve a problem",
+            "A type of computer",
+            "A type of software",
+            "A printer"
+          ],
+          "answer": "A step-by-step set of instructions to solve a problem",
+          "explain": "An algorithm is a step-by-step set of instructions.",
+          "procedure": [
+            "Step-by-step instructions",
+            "Solves a problem",
+            "Answer: A step-by-step set of instructions to solve a problem"
+          ],
+          "image": "assets/computing/algorithm.png"
+        },
+        {
+          "q": "Which of these is an example of an algorithm?",
+          "options": [
+            "A recipe for baking a cake",
+            "A picture of a cake",
+            "A video about cakes",
+            "A type of cake"
+          ],
+          "answer": "A recipe for baking a cake",
+          "explain": "A recipe is a step-by-step instruction, like an algorithm.",
+          "procedure": [
+            "Recipe = step-by-step",
+            "Like an algorithm",
+            "Answer: A recipe for baking a cake"
+          ]
+        },
+        {
+          "q": "What is programming?",
+          "options": [
+            "Writing instructions for a computer to follow",
+            "Typing a document",
+            "Drawing a picture",
+            "Playing a game"
+          ],
+          "answer": "Writing instructions for a computer to follow",
+          "explain": "Programming is writing instructions for a computer.",
+          "procedure": [
+            "Writing instructions",
+            "For a computer",
+            "Answer: Writing instructions for a computer to follow"
+          ]
+        },
+        {
+          "q": "What is a program?",
+          "options": [
+            "A set of instructions that a computer executes",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A set of instructions that a computer executes",
+          "explain": "A program is a set of instructions that a computer executes.",
+          "procedure": [
+            "Set of instructions",
+            "Executed by computer",
+            "Answer: A set of instructions that a computer executes"
+          ]
+        },
+        {
+          "q": "What is a programming language?",
+          "options": [
+            "A language used to write computer programs",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A language used to write computer programs",
+          "explain": "Programming languages are used to write programs.",
+          "procedure": [
+            "Language for programs",
+            "Examples: Python, Scratch",
+            "Answer: A language used to write computer programs"
+          ]
+        },
+        {
+          "q": "Which of these is a programming language?",
+          "options": [
+            "Python",
+            "Microsoft Word",
+            "Excel",
+            "Windows"
+          ],
+          "answer": "Python",
+          "explain": "Python is a popular programming language.",
+          "procedure": [
+            "Python = programming language",
+            "Used for coding",
+            "Answer: Python"
+          ]
+        },
+        {
+          "q": "What is Scratch?",
+          "options": [
+            "A visual programming language for beginners",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A visual programming language for beginners",
+          "explain": "Scratch is a visual language that helps beginners learn to code.",
+          "procedure": [
+            "Visual language",
+            "For beginners",
+            "Answer: A visual programming language for beginners"
+          ]
+        },
+        {
+          "q": "What is a bug in programming?",
+          "options": [
+            "An error in a program",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "An error in a program",
+          "explain": "A bug is an error in a program.",
+          "procedure": [
+            "Bug = error",
+            "Causes problems",
+            "Answer: An error in a program"
+          ]
+        },
+        {
+          "q": "What does debugging mean?",
+          "options": [
+            "Fixing errors in a program",
+            "Adding more bugs",
+            "Running a program",
+            "Deleting a program"
+          ],
+          "answer": "Fixing errors in a program",
+          "explain": "Debugging means fixing errors in a program.",
+          "procedure": [
+            "Finding bugs",
+            "Fixing them",
+            "Answer: Fixing errors in a program"
+          ]
+        },
+        {
+          "q": "What is a loop in programming?",
+          "options": [
+            "Repeating instructions multiple times",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "Repeating instructions multiple times",
+          "explain": "A loop repeats instructions multiple times.",
+          "procedure": [
+            "Repeat instructions",
+            "Loop = repeat",
+            "Answer: Repeating instructions multiple times"
+          ]
+        },
+        {
+          "q": "What is a variable?",
+          "options": [
+            "A place in memory to store data",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "A place in memory to store data",
+          "explain": "A variable stores data that can change.",
+          "procedure": [
+            "Stores data",
+            "Can change",
+            "Answer: A place in memory to store data"
+          ]
+        },
+        {
+          "q": "What does the if statement do?",
+          "options": [
+            "Checks a condition and does something if true",
+            "Deletes data",
+            "Prints data",
+            "Stops the program"
+          ],
+          "answer": "Checks a condition and does something if true",
+          "explain": "An if statement checks a condition.",
+          "procedure": [
+            "Checks condition",
+            "Does action if true",
+            "Answer: Checks a condition and does something if true"
+          ]
+        },
+        {
+          "q": "What is an input in programming?",
+          "options": [
+            "Data given to a program",
+            "The output of a program",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "Data given to a program",
+          "explain": "Input is data given to a program.",
+          "procedure": [
+            "Data given to program",
+            "Used to compute",
+            "Answer: Data given to a program"
+          ]
+        },
+        {
+          "q": "What is an output in programming?",
+          "options": [
+            "The result produced by a program",
+            "Data given to a program",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "The result produced by a program",
+          "explain": "Output is the result a program produces.",
+          "procedure": [
+            "Result of program",
+            "Shown to user",
+            "Answer: The result produced by a program"
+          ]
+        },
+        {
+          "q": "What is pseudocode?",
+          "options": [
+            "A simplified way of writing algorithms in plain language",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "A simplified way of writing algorithms in plain language",
+          "explain": "Pseudocode writes algorithms in plain language.",
+          "procedure": [
+            "Plain language",
+            "Describes algorithms",
+            "Answer: A simplified way of writing algorithms in plain language"
+          ]
+        },
+        {
+          "q": "What is a flowchart?",
+          "options": [
+            "A diagram that shows the steps of an algorithm",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "A diagram that shows the steps of an algorithm",
+          "explain": "A flowchart uses diagrams to show algorithm steps.",
+          "procedure": [
+            "Diagram of steps",
+            "Uses shapes",
+            "Answer: A diagram that shows the steps of an algorithm"
+          ]
+        },
+        {
+          "q": "What does sequence mean in programming?",
+          "options": [
+            "Executing instructions in order",
+            "Skipping instructions",
+            "Repeating instructions",
+            "Deleting instructions"
+          ],
+          "answer": "Executing instructions in order",
+          "explain": "Sequence means instructions run in order.",
+          "procedure": [
+            "In order",
+            "One after another",
+            "Answer: Executing instructions in order"
+          ]
+        },
+        {
+          "q": "What is a function in programming?",
+          "options": [
+            "A reusable block of code that does a specific task",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "A reusable block of code that does a specific task",
+          "explain": "A function is a reusable block of code.",
+          "procedure": [
+            "Reusable code",
+            "Does specific task",
+            "Answer: A reusable block of code that does a specific task"
+          ]
+        },
+        {
+          "q": "What is an event in programming?",
+          "options": [
+            "An action that triggers code to run",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "An action that triggers code to run",
+          "explain": "An event triggers code to run.",
+          "procedure": [
+            "Action triggers code",
+            "Like a mouse click",
+            "Answer: An action that triggers code to run"
+          ]
+        },
+        {
+          "q": "What is a sprite in Scratch?",
+          "options": [
+            "A character or object in a Scratch project",
+            "A type of computer",
+            "A type of keyboard",
+            "A printer"
+          ],
+          "answer": "A character or object in a Scratch project",
+          "explain": "A sprite is a character or object in Scratch.",
+          "procedure": [
+            "Character in Scratch",
+            "Can move and speak",
+            "Answer: A character or object in a Scratch project"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spreadsheets-presentations",
+      "name": "Spreadsheets & Presentations",
+      "icon": "📈",
+      "questions": [
+        {
+          "q": "What is a spreadsheet?",
+          "options": [
+            "A program that organizes data in rows and columns",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A program that organizes data in rows and columns",
+          "explain": "Spreadsheets organize data in rows and columns.",
+          "procedure": [
+            "Grid of rows and columns",
+            "Used for calculations",
+            "Answer: A program that organizes data in rows and columns"
+          ],
+          "image": "assets/computing/spreadsheet.png"
+        },
+        {
+          "q": "Which of these is a spreadsheet program?",
+          "options": [
+            "Microsoft Excel",
+            "Microsoft Word",
+            "Google Chrome",
+            "Windows"
+          ],
+          "answer": "Microsoft Excel",
+          "explain": "Microsoft Excel is a spreadsheet program.",
+          "procedure": [
+            "Excel = spreadsheet",
+            "Organizes data",
+            "Answer: Microsoft Excel"
+          ]
+        },
+        {
+          "q": "What is a cell in a spreadsheet?",
+          "options": [
+            "A single box where data is entered",
+            "A whole row",
+            "A whole column",
+            "A type of printer"
+          ],
+          "answer": "A single box where data is entered",
+          "explain": "A cell is a single box in a spreadsheet.",
+          "procedure": [
+            "Box in the grid",
+            "Where data is entered",
+            "Answer: A single box where data is entered"
+          ]
+        },
+        {
+          "q": "What is a row in a spreadsheet?",
+          "options": [
+            "A horizontal line of cells",
+            "A vertical line of cells",
+            "A single cell",
+            "A type of printer"
+          ],
+          "answer": "A horizontal line of cells",
+          "explain": "Rows are horizontal lines of cells.",
+          "procedure": [
+            "Horizontal line",
+            "Goes across",
+            "Answer: A horizontal line of cells"
+          ]
+        },
+        {
+          "q": "What is a column in a spreadsheet?",
+          "options": [
+            "A vertical line of cells",
+            "A horizontal line of cells",
+            "A single cell",
+            "A type of printer"
+          ],
+          "answer": "A vertical line of cells",
+          "explain": "Columns are vertical lines of cells.",
+          "procedure": [
+            "Vertical line",
+            "Goes down",
+            "Answer: A vertical line of cells"
+          ]
+        },
+        {
+          "q": "What is a formula in a spreadsheet?",
+          "options": [
+            "A calculation that works on cell data",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A calculation that works on cell data",
+          "explain": "A formula calculates values from cells.",
+          "procedure": [
+            "Starts with =",
+            "Performs calculations",
+            "Answer: A calculation that works on cell data"
+          ]
+        },
+        {
+          "q": "Which formula adds cells A1 and A2?",
+          "options": [
+            "=A1+A2",
+            "A1+A2",
+            "ADD A1 A2",
+            "A1+A2="
+          ],
+          "answer": "=A1+A2",
+          "explain": "Formulas start with = and use cell names.",
+          "procedure": [
+            "= sign first",
+            "Then A1+A2",
+            "Answer: =A1+A2"
+          ]
+        },
+        {
+          "q": "What is a chart in a spreadsheet?",
+          "options": [
+            "A visual way to show data",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A visual way to show data",
+          "explain": "Charts show data visually.",
+          "procedure": [
+            "Visual display",
+            "Bar charts, pie charts",
+            "Answer: A visual way to show data"
+          ]
+        },
+        {
+          "q": "Why are charts useful?",
+          "options": [
+            "They make data easier to understand",
+            "They make data harder to read",
+            "They delete data",
+            "They print data"
+          ],
+          "answer": "They make data easier to understand",
+          "explain": "Charts make data easy to compare and understand.",
+          "procedure": [
+            "Visual comparison",
+            "Easier to understand",
+            "Answer: They make data easier to understand"
+          ]
+        },
+        {
+          "q": "What is a presentation?",
+          "options": [
+            "A way to show information to an audience",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A way to show information to an audience",
+          "explain": "A presentation shows information to an audience.",
+          "procedure": [
+            "Shows information",
+            "To an audience",
+            "Answer: A way to show information to an audience"
+          ],
+          "image": "assets/computing/presentation.png"
+        },
+        {
+          "q": "Which of these is a presentation program?",
+          "options": [
+            "Microsoft PowerPoint",
+            "Microsoft Word",
+            "Microsoft Excel",
+            "Windows"
+          ],
+          "answer": "Microsoft PowerPoint",
+          "explain": "Microsoft PowerPoint is a presentation program.",
+          "procedure": [
+            "PowerPoint = presentations",
+            "Creates slide shows",
+            "Answer: Microsoft PowerPoint"
+          ]
+        },
+        {
+          "q": "What is a slide?",
+          "options": [
+            "A single page in a presentation",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A single page in a presentation",
+          "explain": "A slide is one page in a presentation.",
+          "procedure": [
+            "One page",
+            "In a presentation",
+            "Answer: A single page in a presentation"
+          ]
+        },
+        {
+          "q": "What is a slide show?",
+          "options": [
+            "A series of slides presented one after another",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A series of slides presented one after another",
+          "explain": "A slide show runs slides one after another.",
+          "procedure": [
+            "Slides in order",
+            "Shown to audience",
+            "Answer: A series of slides presented one after another"
+          ]
+        },
+        {
+          "q": "What is a transition in a presentation?",
+          "options": [
+            "The effect when moving from one slide to the next",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "The effect when moving from one slide to the next",
+          "explain": "A transition is an effect between slides.",
+          "procedure": [
+            "Effect between slides",
+            "Fade, slide, etc.",
+            "Answer: The effect when moving from one slide to the next"
+          ]
+        },
+        {
+          "q": "What is an animation in a presentation?",
+          "options": [
+            "Movement of objects on a slide",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "Movement of objects on a slide",
+          "explain": "Animations add movement to objects on a slide.",
+          "procedure": [
+            "Movement",
+            "Of objects",
+            "Answer: Movement of objects on a slide"
+          ]
+        },
+        {
+          "q": "What is the best way to make a presentation interesting?",
+          "options": [
+            "Use pictures, charts, and not too much text",
+            "Use only text",
+            "Use no text at all",
+            "Use small fonts"
+          ],
+          "answer": "Use pictures, charts, and not too much text",
+          "explain": "Pictures and charts make a presentation interesting.",
+          "procedure": [
+            "Use pictures",
+            "Use charts",
+            "Keep text short",
+            "Answer: Use pictures, charts, and not too much text"
+          ]
+        },
+        {
+          "q": "What does the Insert tab do in a spreadsheet?",
+          "options": [
+            "Adds charts, tables, and pictures",
+            "Deletes data",
+            "Prints the file",
+            "Saves the file"
+          ],
+          "answer": "Adds charts, tables, and pictures",
+          "explain": "Insert lets you add charts and other objects.",
+          "procedure": [
+            "Add charts",
+            "Add tables",
+            "Add pictures",
+            "Answer: Adds charts, tables, and pictures"
+          ]
+        },
+        {
+          "q": "What is a cell reference?",
+          "options": [
+            "A cell’s address (like A1 or B3)",
+            "A type of keyboard",
+            "A printer",
+            "A monitor"
+          ],
+          "answer": "A cell’s address (like A1 or B3)",
+          "explain": "A cell reference is the address of a cell.",
+          "procedure": [
+            "Column letter + row number",
+            "Example: A1",
+            "Answer: A cell’s address (like A1 or B3)"
+          ]
+        },
+        {
+          "q": "What does the SUM formula do?",
+          "options": [
+            "Adds numbers together",
+            "Multiplies numbers",
+            "Divides numbers",
+            "Subtracts numbers"
+          ],
+          "answer": "Adds numbers together",
+          "explain": "SUM adds numbers together.",
+          "procedure": [
+            "SUM = add",
+            "Example: =SUM(A1:A5)",
+            "Answer: Adds numbers together"
+          ]
+        },
+        {
+          "q": "Why is saving your work important in spreadsheets and presentations?",
+          "options": [
+            "So you do not lose your work",
+            "So you can delete it",
+            "So you can print it",
+            "So you can share it"
+          ],
+          "answer": "So you do not lose your work",
+          "explain": "Saving prevents you from losing your work.",
+          "procedure": [
+            "Save regularly",
+            "Prevents data loss",
+            "Answer: So you do not lose your work"
+          ]
+        }
+      ]
+    }
+  ]
+}
