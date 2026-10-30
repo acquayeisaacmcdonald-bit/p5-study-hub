@@ -41,7 +41,7 @@
       "name": "Computing",
       "icon": "💻",
       "file": "computing.json",
-      "available": false
+      "available": true
     },
     {
       "id": "ghanaian",
