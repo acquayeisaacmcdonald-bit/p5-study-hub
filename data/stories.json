@@ -308,6 +308,245 @@
         "The stranger had not stolen the stool. He had turned it into leaves, and the tree had grown them. The golden stool was hidden in plain sight.",
         "Moral: What we seek is sometimes right in front of us, hidden in plain sight."
       ]
+    },
+    {
+      "id": "why-the-sky-is-high",
+      "title": "Why the Sky is High",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "text",
+      "description": "A story about a greedy woman who wanted too much from the sky.",
+      "ageMin": 5,
+      "ageMax": 9,
+      "duration": "4 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "Long ago, the sky was very close to the earth. People could reach up and touch it.",
+        "The sky gave the people everything they needed. If they were hungry, they could just break off a piece of the sky and eat it. It tasted like the sweetest food.",
+        "But one day, a greedy woman named Ama wanted more. She took a long stick and broke off a huge piece of the sky to feed her family.",
+        "The sky was hurt and saddened by her greed. It moved up, higher and higher, away from the earth.",
+        "Now, the sky is far away. The people have to work hard to grow their food, and they can no longer just reach up and take from the sky.",
+        "Moral: Greed takes away blessings. Be grateful for what you have."
+      ]
+    },
+    {
+      "id": "the-empty-pot",
+      "title": "The Empty Pot",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "text",
+      "description": "A young boy teaches the emperor the value of honesty and hard work.",
+      "ageMin": 9,
+      "ageMax": 12,
+      "duration": "5 min read",
+      "author": "Traditional",
+      "content": [
+        "The Emperor of China loved flowers. He announced a contest: whoever grew the most beautiful flower from the seeds he gave them would become the next emperor.",
+        "A young boy named Ping loved flowers and planted his seed carefully. He watered it and waited. But the seed never grew.",
+        "On the day of the contest, children from all over came with beautiful flowers. Ping came with an empty pot. The emperor looked at all the flowers, then called Ping forward.",
+        "\"Why do you have an empty pot?\" asked the emperor. \"I watered my seed, but it never grew,\" said Ping, sadly.",
+        "The emperor smiled. \"I boiled all the seeds. They could not grow. Everyone else brought fake flowers, but you had the courage and honesty to bring an empty pot. You will be the next emperor.\"",
+        "Moral: Honesty is more valuable than any prize. Do your best, even when it seems it is not working."
+      ]
+    },
+    {
+      "id": "anansi-and-the-ear-of-corn",
+      "title": "Anansi and the Ear of Corn",
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "type": "text",
+      "description": "Anansi teaches the village about the value of hard work.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "5 min read",
+      "author": "Akan Folktale",
+      "content": [
+        "Anansi the spider loved to eat but hated to work. One day, he found a single ear of corn and decided to give it to his friends in exchange for work.",
+        "He gave the corn to Ama the hen and asked her to clear a piece of land for a farm. But Ama the hen did not work; she ate the corn instead.",
+        "Anansi was angry and asked Ama to return the corn. But the corn was gone. Ama offered him her egg instead.",
+        "Anansi took the egg to his friend Kofi, who took the egg in exchange for a favor. Kofi did not do the favor; he ate the egg.",
+        "Anansi asked for the egg back. Kofi gave him a chicken instead. Anansi took the chicken and traded it for a goat. He took the goat and traded it for a cow.",
+        "Anansi then traded the cow for a piece of land. On the land, he grew a large farm. He learned that trade and hard work could bring more than greed and tricks.",
+        "Moral: Honesty and hard work are better than shortcuts."
+      ]
+    },
+    {
+      "id": "the-lazy-farmer",
+      "title": "The Lazy Farmer",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "text",
+      "description": "A farmer learns that hard work pays off, while laziness leads to hunger.",
+      "ageMin": 9,
+      "ageMax": 12,
+      "duration": "4 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "There was a farmer named Kojo. He wanted to be rich, but he did not want to work. Every day, he sat under a tree and dreamed of gold.",
+        "His neighbors worked hard in their fields. They grew yams, corn, and cassava. But Kojo just sat and dreamed.",
+        "When harvest season came, Kojo had nothing to harvest. His neighbors had plenty. Kojo was hungry and sad.",
+        "He went to his neighbor, Ama, and asked for food. Ama gave him some yam but said, \"Next season, you must work too.\"",
+        "Kojo learned his lesson. The next season, he worked hard in his field. By the end of the year, he had his own harvest and was able to feed his family.",
+        "Moral: Hard work pays off. Laziness leads to hunger."
+      ]
+    },
+    {
+      "id": "the-elders-wisdom",
+      "title": "The Elder's Wisdom",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "text",
+      "description": "A young man learns that wisdom comes with age and experience.",
+      "ageMin": 11,
+      "ageMax": 15,
+      "duration": "5 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "A young man named Kofi laughed at an old man. \"You are too slow, too weak,\" he said. \"I am faster and stronger than you.\"",
+        "The old man smiled. \"I may be slow,\" he said. \"But I have walked these paths for many years. I know where the potholes are.\"",
+        "One day, Kofi decided to race the old man to the next village. Kofi ran fast and disappeared. The old man walked slowly and steadily.",
+        "But Kofi did not know the way. He got lost. He fell into a hole. He was stuck.",
+        "The old man came slowly and found Kofi. \"You see,\" he said, \"I may be slow. But I know the path. I know where the dangers are. That is what wisdom is.\"",
+        "Kofi learned to respect his elders. He learned that strength without wisdom is useless.",
+        "Moral: Respect your elders. Their wisdom comes from experience."
+      ]
+    },
+    {
+      "id": "the-arrogant-lion",
+      "title": "The Arrogant Lion",
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "type": "text",
+      "description": "A lion learns humility when he meets a clever ant.",
+      "ageMin": 7,
+      "ageMax": 10,
+      "duration": "4 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "The lion was the king of the jungle. He was strong and brave, but he was also very proud.",
+        "One day, the lion boasted, \"I am the strongest, the bravest, the greatest of all animals! No one can defeat me!\"",
+        "An ant heard this. She walked up to the lion and said, \"You are not the greatest. You are just big.\"",
+        "The lion laughed. \"You? A tiny ant? You cannot defeat me!\"",
+        "The ant crawled into the lion's ear and bit him. The lion roared in pain. He could not get the ant out.",
+        "Finally, the ant came out and said, \"You see, big does not always mean strong. Even a tiny creature can defeat a giant if she is clever.\"",
+        "The lion learned humility. He never boasted again.",
+        "Moral: Do not be proud. Even the smallest creature can teach you a lesson."
+      ]
+    },
+    {
+      "id": "the-golden-stool",
+      "title": "The Golden Stool",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "text",
+      "description": "A story about humility and the value of respect for traditions.",
+      "ageMin": 12,
+      "ageMax": 16,
+      "duration": "6 min read",
+      "author": "Ashanti Legend",
+      "content": [
+        "Long ago, the great priest Okomfo Anokye called down a golden stool from the sky. It landed on the lap of Osei Tutu, the first Asantehene.",
+        "The Golden Stool was the soul of the Ashanti nation. The people were told to protect it and treat it with respect.",
+        "Years later, a British governor demanded to sit on the Golden Stool. He did not respect the traditions of the Ashanti people.",
+        "The Ashanti queenmother, Yaa Asantewaa, stood up. \"If you do not defend the Golden Stool, I will lead the fight myself,\" she said.",
+        "She led the Ashanti in a war against the British. They fought bravely to protect the Golden Stool and their traditions.",
+        "The Golden Stool was never captured. It became a symbol of respect, pride, and the importance of honouring our traditions.",
+        "Moral: Respect your culture and traditions. They are the soul of your people."
+      ]
+    },
+    {
+      "id": "the-loving-mother",
+      "title": "The Loving Mother",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "text",
+      "description": "A mother bird teaches her child about love and care.",
+      "ageMin": 5,
+      "ageMax": 9,
+      "duration": "3 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "A mother bird had a little chick. She loved him very much. Every morning, she woke up early to find food for him.",
+        "The little chick was playful. One day, he flew too far from the nest. He got lost.",
+        "The mother bird searched for him everywhere. She flew over the trees, the river, the mountains. She called his name.",
+        "Finally, she found him near a big rock. He was crying. She wrapped him in her wings and held him close.",
+        "\"I thought you were lost forever,\" she said. \"I will always find you. Because I love you.\"",
+        "The little chick learned that a mother's love knows no bounds. She will always be there to protect and care for her child.",
+        "Moral: A mother's love is the strongest love of all."
+      ]
+    },
+    {
+      "id": "the-boy-who-did-his-homework",
+      "title": "The Boy Who Did His Homework",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "text",
+      "description": "A boy learns that doing your homework with care makes you smarter.",
+      "ageMin": 8,
+      "ageMax": 12,
+      "duration": "4 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "There was a boy named Kwame. He hated homework. Every day, he would rush through it so he could play football.",
+        "One day, his teacher gave the class a difficult math problem. Kwame rushed through it, made mistakes, and got a bad grade.",
+        "His mother saw his sad face. \"Kwame,\" she said, \"homework is not just for school. It is for you. When you do your homework carefully, you are learning. You are becoming smarter.\"",
+        "Kwame decided to change. He started doing his homework slowly and carefully. He asked questions when he did not understand. He checked his work before turning it in.",
+        "His grades improved. He started to enjoy learning. The next time there was a tough math problem, Kwame solved it easily.",
+        "His teacher praised him. \"Kwame, you have done well. You have learned that doing your homework with care makes you smarter.\"",
+        "Moral: Do your homework carefully. It is the key to learning and growing."
+      ]
+    },
+    {
+      "id": "the-kings-empty-bowl",
+      "title": "The King's Empty Bowl",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "text",
+      "description": "A story about the value of humility and the danger of pride.",
+      "ageMin": 11,
+      "ageMax": 15,
+      "duration": "5 min read",
+      "author": "Ghanaian Folktale",
+      "content": [
+        "The king was very proud. He had everything: gold, silver, food, and servants. He never shared with anyone.",
+        "One day, a poor old man came to the palace gates. He was hungry and tired. He asked for a bowl of water.",
+        "The king laughed. \"Why should I give you water? You are poor and dirty. Go away!\"",
+        "The old man left. But a few weeks later, the kingdom was hit by a terrible drought. The rivers dried up. The crops died. The king had no water.",
+        "The old man returned. He had a small bowl of water. He offered it to the king. \"You refused me water once,\" the old man said. \"Now I offer it to you.\"",
+        "The king was ashamed. He realized that pride had blinded him. He had forgotten that everyone, rich or poor, is equal in the eyes of the gods.",
+        "From that day on, the king shared his wealth with all who came. He built wells and gave food to the poor. The kingdom became a place of peace and abundance.",
+        "Moral: Pride goes before a fall. Be humble and kind to all, no matter who they are."
+      ]
     }
   ]
 }
