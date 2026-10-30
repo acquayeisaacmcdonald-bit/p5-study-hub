@@ -1,0 +1,3302 @@
+{
+  "subject": "Ghanaian Language (Fante)",
+  "class": "P5",
+  "topics": [
+    {
+      "id": "oral-conversation",
+      "name": "Oral Conversation",
+      "icon": "🗣️",
+      "questions": [
+        {
+          "q": "What is the Fante word for \"Good morning\"?",
+          "options": [
+            "Mema wo akye",
+            "Mema wo aha",
+            "Mema wo adwo",
+            "Aane"
+          ],
+          "answer": "Mema wo akye",
+          "explain": "\"Mema wo akye\" means Good morning in Fante.",
+          "procedure": [
+            "Morning greeting = Mema wo akye",
+            "Used before noon",
+            "Answer: Mema wo akye"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Thank you\"?",
+          "options": [
+            "Medaase",
+            "Mepa wo kyɛw",
+            "Aane",
+            "Yoo"
+          ],
+          "answer": "Medaase",
+          "explain": "\"Medaase\" means Thank you in Fante.",
+          "procedure": [
+            "Thank you = Medaase",
+            "Common in Fante",
+            "Answer: Medaase"
+          ]
+        },
+        {
+          "q": "How do you say \"Please\" in Fante?",
+          "options": [
+            "Mepa wo kyɛw",
+            "Medaase",
+            "Mema wo akye",
+            "Kafra"
+          ],
+          "answer": "Mepa wo kyɛw",
+          "explain": "\"Mepa wo kyɛw\" means Please in Fante.",
+          "procedure": [
+            "Please = Mepa wo kyɛw",
+            "Polite word",
+            "Answer: Mepa wo kyɛw"
+          ]
+        },
+        {
+          "q": "What does \"Aane\" mean in Fante?",
+          "options": [
+            "Yes",
+            "No",
+            "Maybe",
+            "Hello"
+          ],
+          "answer": "Yes",
+          "explain": "\"Aane\" means Yes in Fante.",
+          "procedure": [
+            "Aane = Yes",
+            "Affirmative",
+            "Answer: Yes"
+          ]
+        },
+        {
+          "q": "What does \"Daabi\" mean in Fante?",
+          "options": [
+            "Yes",
+            "No",
+            "Maybe",
+            "Hello"
+          ],
+          "answer": "No",
+          "explain": "\"Daabi\" means No in Fante.",
+          "procedure": [
+            "Daabi = No",
+            "Negative",
+            "Answer: No"
+          ]
+        },
+        {
+          "q": "How do you say \"Good afternoon\" in Fante?",
+          "options": [
+            "Mema wo akye",
+            "Mema wo aha",
+            "Mema wo adwo",
+            "Medaase"
+          ],
+          "answer": "Mema wo aha",
+          "explain": "\"Mema wo aha\" means Good afternoon in Fante.",
+          "procedure": [
+            "Afternoon = Mema wo aha",
+            "Used after noon",
+            "Answer: Mema wo aha"
+          ]
+        },
+        {
+          "q": "How do you say \"Good evening\" in Fante?",
+          "options": [
+            "Mema wo akye",
+            "Mema wo aha",
+            "Mema wo adwo",
+            "Aane"
+          ],
+          "answer": "Mema wo adwo",
+          "explain": "\"Mema wo adwo\" means Good evening in Fante.",
+          "procedure": [
+            "Evening = Mema wo adwo",
+            "Used in the evening",
+            "Answer: Mema wo adwo"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Water\"?",
+          "options": [
+            "Nsu",
+            "Aduane",
+            "Fie",
+            "Nyimpa"
+          ],
+          "answer": "Nsu",
+          "explain": "\"Nsu\" means Water in Fante.",
+          "procedure": [
+            "Water = Nsu",
+            "Common word",
+            "Answer: Nsu"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Book\"?",
+          "options": [
+            "Nwoma",
+            "Nsu",
+            "Aduane",
+            "Fie"
+          ],
+          "answer": "Nwoma",
+          "explain": "\"Nwoma\" means Book in Fante.",
+          "procedure": [
+            "Book = Nwoma",
+            "Used for reading",
+            "Answer: Nwoma"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"House\"?",
+          "options": [
+            "Fie",
+            "Nsu",
+            "Aduane",
+            "Nwoma"
+          ],
+          "answer": "Fie",
+          "explain": "\"Fie\" means House in Fante.",
+          "procedure": [
+            "House = Fie",
+            "Place to live",
+            "Answer: Fie"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Food\"?",
+          "options": [
+            "Aduane",
+            "Nsu",
+            "Fie",
+            "Nwoma"
+          ],
+          "answer": "Aduane",
+          "explain": "\"Aduane\" means Food in Fante.",
+          "procedure": [
+            "Food = Aduane",
+            "Something we eat",
+            "Answer: Aduane"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Person\"?",
+          "options": [
+            "Nyimpa",
+            "Nsu",
+            "Fie",
+            "Nwoma"
+          ],
+          "answer": "Nyimpa",
+          "explain": "\"Nyimpa\" means Person in Fante.",
+          "procedure": [
+            "Person = Nyimpa",
+            "Singular form",
+            "Answer: Nyimpa"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Sister\"?",
+          "options": [
+            "Nkyɛrba",
+            "Nua",
+            "Egya",
+            "Ɛna"
+          ],
+          "answer": "Nkyɛrba",
+          "explain": "\"Nkyɛrba\" means Sister in Fante.",
+          "procedure": [
+            "Sister = Nkyɛrba",
+            "Family member",
+            "Answer: Nkyɛrba"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Brother\"?",
+          "options": [
+            "Nkyɛrnyin",
+            "Nua",
+            "Egya",
+            "Ɛna"
+          ],
+          "answer": "Nkyɛrnyin",
+          "explain": "\"Nkyɛrnyin\" means Brother in Fante.",
+          "procedure": [
+            "Brother = Nkyɛrnyin",
+            "Family member",
+            "Answer: Nkyɛrnyin"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Mother\"?",
+          "options": [
+            "Ɛna",
+            "Egya",
+            "Nua",
+            "Onua"
+          ],
+          "answer": "Ɛna",
+          "explain": "\"Ɛna\" means Mother in Fante.",
+          "procedure": [
+            "Mother = Ɛna",
+            "Parent",
+            "Answer: Ɛna"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Father\"?",
+          "options": [
+            "Egya",
+            "Ɛna",
+            "Nua",
+            "Onua"
+          ],
+          "answer": "Egya",
+          "explain": "\"Egya\" means Father in Fante.",
+          "procedure": [
+            "Father = Egya",
+            "Parent",
+            "Answer: Egya"
+          ]
+        },
+        {
+          "q": "How do you say \"How are you?\" in Fante?",
+          "options": [
+            "Wo ho tse dɛn?",
+            "Yɛbɛhyia",
+            "Medaase",
+            "Aane"
+          ],
+          "answer": "Wo ho tse dɛn?",
+          "explain": "\"Wo ho tse dɛn?\" means How are you? in Fante.",
+          "procedure": [
+            "Greeting question",
+            "Wo ho tse dɛn? = How are you?",
+            "Answer: Wo ho tse dɛn?"
+          ]
+        },
+        {
+          "q": "What does \"Yɛbɛhyia\" mean in Fante?",
+          "options": [
+            "Goodbye (We will meet)",
+            "Hello",
+            "Thank you",
+            "Please"
+          ],
+          "answer": "Goodbye (We will meet)",
+          "explain": "\"Yɛbɛhyia\" means We will meet (Goodbye) in Fante.",
+          "procedure": [
+            "Farewell = Yɛbɛhyia",
+            "Literally: We will meet",
+            "Answer: Goodbye (We will meet)"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"School\"?",
+          "options": [
+            "Skuul",
+            "Fie",
+            "Nsu",
+            "Aduane"
+          ],
+          "answer": "Skuul",
+          "explain": "\"Skuul\" means School in Fante.",
+          "procedure": [
+            "School = Skuul",
+            "Place of learning",
+            "Answer: Skuul"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Teacher\"?",
+          "options": [
+            "Ɔkyerɛkyerɛnyi",
+            "Skuul",
+            "Nyimpa",
+            "Egya"
+          ],
+          "answer": "Ɔkyerɛkyerɛnyi",
+          "explain": "\"Ɔkyerɛkyerɛnyi\" means Teacher in Fante.",
+          "procedure": [
+            "Teacher = Ɔkyerɛkyerɛnyi",
+            "One who teaches",
+            "Answer: Ɔkyerɛkyerɛnyi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phonology",
+      "name": "Phonology (Sounds)",
+      "icon": "🔊",
+      "questions": [
+        {
+          "q": "What is phonology?",
+          "options": [
+            "The study of sounds in a language",
+            "The study of grammar",
+            "The study of writing",
+            "The study of numbers"
+          ],
+          "answer": "The study of sounds in a language",
+          "explain": "Phonology is the study of sounds in a language.",
+          "procedure": [
+            "Study of sounds",
+            "How sounds work",
+            "Answer: The study of sounds in a language"
+          ]
+        },
+        {
+          "q": "How many letters are in the Fante alphabet?",
+          "options": [
+            "22",
+            "26",
+            "20",
+            "30"
+          ],
+          "answer": "22",
+          "explain": "The Fante alphabet has 22 letters.",
+          "procedure": [
+            "Fante alphabet: 22 letters",
+            "Fewer than English (26)",
+            "Answer: 22"
+          ]
+        },
+        {
+          "q": "Which letter is NOT in the Fante alphabet?",
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ],
+          "answer": "C",
+          "explain": "Fante does not have the letter C.",
+          "procedure": [
+            "Fante alphabet excludes C",
+            "C is not used in Fante",
+            "Answer: C"
+          ]
+        },
+        {
+          "q": "Which letter is NOT in the Fante alphabet?",
+          "options": [
+            "Q",
+            "A",
+            "B",
+            "M"
+          ],
+          "answer": "Q",
+          "explain": "Fante does not have the letter Q.",
+          "procedure": [
+            "Fante alphabet excludes Q",
+            "Q is not used in Fante",
+            "Answer: Q"
+          ]
+        },
+        {
+          "q": "Which letter is NOT in the Fante alphabet?",
+          "options": [
+            "X",
+            "A",
+            "B",
+            "N"
+          ],
+          "answer": "X",
+          "explain": "Fante does not have the letter X.",
+          "procedure": [
+            "Fante alphabet excludes X",
+            "Answer: X"
+          ]
+        },
+        {
+          "q": "Which letter is NOT in the Fante alphabet?",
+          "options": [
+            "V",
+            "A",
+            "B",
+            "M"
+          ],
+          "answer": "V",
+          "explain": "Fante does not have the letter V.",
+          "procedure": [
+            "Fante alphabet excludes V",
+            "Answer: V"
+          ]
+        },
+        {
+          "q": "Which letter is NOT in the Fante alphabet?",
+          "options": [
+            "Z",
+            "A",
+            "B",
+            "E"
+          ],
+          "answer": "Z",
+          "explain": "Fante does not have the letter Z.",
+          "procedure": [
+            "Fante alphabet excludes Z",
+            "Answer: Z"
+          ]
+        },
+        {
+          "q": "What are vowels in Fante?",
+          "options": [
+            "A, E, Ɛ, I, O, Ɔ, U",
+            "A, B, C, D, E",
+            "Only A",
+            "Only E"
+          ],
+          "answer": "A, E, Ɛ, I, O, Ɔ, U",
+          "explain": "Fante has 7 vowels: A, E, Ɛ, I, O, Ɔ, U.",
+          "procedure": [
+            "7 vowels",
+            "A, E, Ɛ, I, O, Ɔ, U",
+            "Answer: A, E, Ɛ, I, O, Ɔ, U"
+          ]
+        },
+        {
+          "q": "How many vowels does Fante have?",
+          "options": [
+            "5",
+            "7",
+            "6",
+            "8"
+          ],
+          "answer": "7",
+          "explain": "Fante has 7 vowels.",
+          "procedure": [
+            "7 vowels in Fante",
+            "More than English (5)",
+            "Answer: 7"
+          ]
+        },
+        {
+          "q": "What is a syllable?",
+          "options": [
+            "A unit of sound with one vowel sound",
+            "A full word",
+            "A sentence",
+            "A paragraph"
+          ],
+          "answer": "A unit of sound with one vowel sound",
+          "explain": "A syllable is a unit of sound with one vowel sound.",
+          "procedure": [
+            "Unit of sound",
+            "One vowel sound",
+            "Answer: A unit of sound with one vowel sound"
+          ]
+        },
+        {
+          "q": "How many syllables are in the Fante word \"Akwaaba\"?",
+          "options": [
+            "3",
+            "2",
+            "4",
+            "1"
+          ],
+          "answer": "3",
+          "explain": "\"Akwaaba\" has 3 syllables: A-kwaa-ba.",
+          "procedure": [
+            "Break it down",
+            "A-kwaa-ba",
+            "Answer: 3"
+          ]
+        },
+        {
+          "q": "What is a consonant?",
+          "options": [
+            "A sound that is not a vowel",
+            "A vowel sound",
+            "A full word",
+            "A type of sentence"
+          ],
+          "answer": "A sound that is not a vowel",
+          "explain": "A consonant is any sound that is not a vowel.",
+          "procedure": [
+            "Consonants are non-vowels",
+            "Examples: b, d, f, g",
+            "Answer: A sound that is not a vowel"
+          ]
+        },
+        {
+          "q": "What is tone in Fante?",
+          "options": [
+            "The pitch of a syllable that changes meaning",
+            "The speed of speaking",
+            "The loudness of speech",
+            "The length of a word"
+          ],
+          "answer": "The pitch of a syllable that changes meaning",
+          "explain": "Tone is the pitch that can change word meaning in Fante.",
+          "procedure": [
+            "High and low tones",
+            "Changes meaning",
+            "Answer: The pitch of a syllable that changes meaning"
+          ]
+        },
+        {
+          "q": "Why are tones important in Fante?",
+          "options": [
+            "They change the meaning of words",
+            "They make words longer",
+            "They make words shorter",
+            "They have no effect"
+          ],
+          "answer": "They change the meaning of words",
+          "explain": "Tones change word meaning in Fante.",
+          "procedure": [
+            "Tone changes meaning",
+            "Example: papa (father) vs papá",
+            "Answer: They change the meaning of words"
+          ]
+        },
+        {
+          "q": "What is a digraph?",
+          "options": [
+            "Two letters that make one sound",
+            "A single letter",
+            "A whole word",
+            "A punctuation mark"
+          ],
+          "answer": "Two letters that make one sound",
+          "explain": "A digraph is two letters that make one sound.",
+          "procedure": [
+            "Example: \"kw\" in Fante",
+            "Two letters, one sound",
+            "Answer: Two letters that make one sound"
+          ]
+        },
+        {
+          "q": "Which of these is a Fante digraph?",
+          "options": [
+            "Kw",
+            "A",
+            "B",
+            "E"
+          ],
+          "answer": "Kw",
+          "explain": "\"Kw\" is a digraph in Fante (two letters, one sound).",
+          "procedure": [
+            "Kw = digraph",
+            "Makes one sound",
+            "Answer: Kw"
+          ]
+        },
+        {
+          "q": "What is a nasal sound?",
+          "options": [
+            "A sound made partly through the nose",
+            "A loud sound",
+            "A quiet sound",
+            "A whistle"
+          ],
+          "answer": "A sound made partly through the nose",
+          "explain": "A nasal sound is made partly through the nose (like m, n).",
+          "procedure": [
+            "Air through the nose",
+            "Examples: m, n",
+            "Answer: A sound made partly through the nose"
+          ]
+        },
+        {
+          "q": "Which of these is a nasal sound?",
+          "options": [
+            "M",
+            "B",
+            "P",
+            "T"
+          ],
+          "answer": "M",
+          "explain": "\"M\" is a nasal sound in Fante.",
+          "procedure": [
+            "M = nasal",
+            "Through the nose",
+            "Answer: M"
+          ]
+        },
+        {
+          "q": "What does \"phoneme\" mean?",
+          "options": [
+            "The smallest unit of sound in a language",
+            "A full word",
+            "A sentence",
+            "A paragraph"
+          ],
+          "answer": "The smallest unit of sound in a language",
+          "explain": "A phoneme is the smallest unit of sound.",
+          "procedure": [
+            "Smallest sound unit",
+            "Basic unit of sound",
+            "Answer: The smallest unit of sound in a language"
+          ]
+        },
+        {
+          "q": "Why is pronunciation important in Fante?",
+          "options": [
+            "Correct pronunciation helps people understand you",
+            "It makes you talk louder",
+            "It makes you talk faster",
+            "It is not important"
+          ],
+          "answer": "Correct pronunciation helps people understand you",
+          "explain": "Correct pronunciation ensures clear communication.",
+          "procedure": [
+            "Clear communication",
+            "Better understanding",
+            "Answer: Correct pronunciation helps people understand you"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-comprehension",
+      "name": "Reading & Comprehension",
+      "icon": "📖",
+      "questions": [
+        {
+          "q": "What is reading comprehension?",
+          "options": [
+            "Understanding what you read",
+            "Reading very fast",
+            "Reading only aloud",
+            "Reading only silently"
+          ],
+          "answer": "Understanding what you read",
+          "explain": "Reading comprehension is understanding what you read.",
+          "procedure": [
+            "Read the text",
+            "Understand the meaning",
+            "Answer: Understanding what you read"
+          ]
+        },
+        {
+          "q": "What does \"Akwaaba\" mean in Fante?",
+          "options": [
+            "Welcome",
+            "Goodbye",
+            "Thank you",
+            "Please"
+          ],
+          "answer": "Welcome",
+          "explain": "\"Akwaaba\" means Welcome in Fante.",
+          "procedure": [
+            "Akwaaba = Welcome",
+            "Common greeting",
+            "Answer: Welcome"
+          ]
+        },
+        {
+          "q": "What does \"Medaase\" mean?",
+          "options": [
+            "Thank you",
+            "Hello",
+            "Goodbye",
+            "Please"
+          ],
+          "answer": "Thank you",
+          "explain": "\"Medaase\" means Thank you in Fante.",
+          "procedure": [
+            "Medaase = Thank you",
+            "Polite phrase",
+            "Answer: Thank you"
+          ]
+        },
+        {
+          "q": "What does \"Ɛyɛ\" mean in Fante?",
+          "options": [
+            "It is good",
+            "It is bad",
+            "Hello",
+            "Goodbye"
+          ],
+          "answer": "It is good",
+          "explain": "\"Ɛyɛ\" means It is good in Fante.",
+          "procedure": [
+            "Ɛyɛ = It is good",
+            "Positive expression",
+            "Answer: It is good"
+          ]
+        },
+        {
+          "q": "Read this Fante sentence: \"Me pɛ aduane.\" What does it mean?",
+          "options": [
+            "I like food",
+            "I eat food",
+            "I cook food",
+            "I see food"
+          ],
+          "answer": "I like food",
+          "explain": "\"Me pɛ aduane\" means I like food in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "aduane = food",
+            "Answer: I like food"
+          ]
+        },
+        {
+          "q": "Read this Fante sentence: \"Me kɔ skuul.\" What does it mean?",
+          "options": [
+            "I go to school",
+            "I like school",
+            "I see school",
+            "I clean school"
+          ],
+          "answer": "I go to school",
+          "explain": "\"Me kɔ skuul\" means I go to school in Fante.",
+          "procedure": [
+            "Me = I",
+            "kɔ = go",
+            "skuul = school",
+            "Answer: I go to school"
+          ]
+        },
+        {
+          "q": "Read this Fante sentence: \"Me maame yɛ ɔkyerɛkyerɛnyi.\" What does it mean?",
+          "options": [
+            "My mother is a teacher",
+            "My mother is a doctor",
+            "My mother is a farmer",
+            "My mother is a trader"
+          ],
+          "answer": "My mother is a teacher",
+          "explain": "It means My mother is a teacher in Fante.",
+          "procedure": [
+            "Me maame = my mother",
+            "yɛ = is",
+            "ɔkyerɛkyerɛnyi = teacher",
+            "Answer: My mother is a teacher"
+          ]
+        },
+        {
+          "q": "What does \"Me ba\" mean in Fante?",
+          "options": [
+            "My child",
+            "My house",
+            "My friend",
+            "My teacher"
+          ],
+          "answer": "My child",
+          "explain": "\"Me ba\" means My child in Fante.",
+          "procedure": [
+            "Me = my",
+            "ba = child",
+            "Answer: My child"
+          ]
+        },
+        {
+          "q": "What does \"Wo dzin de dɛn?\" mean?",
+          "options": [
+            "What is your name?",
+            "Where are you going?",
+            "How old are you?",
+            "Where do you live?"
+          ],
+          "answer": "What is your name?",
+          "explain": "\"Wo dzin de dɛn?\" means What is your name? in Fante.",
+          "procedure": [
+            "Wo = your",
+            "dzin = name",
+            "de dɛn = is what",
+            "Answer: What is your name?"
+          ]
+        },
+        {
+          "q": "What does \"Me dzin de Kofi\" mean?",
+          "options": [
+            "My name is Kofi",
+            "I am Kofi",
+            "Hello Kofi",
+            "Goodbye Kofi"
+          ],
+          "answer": "My name is Kofi",
+          "explain": "\"Me dzin de Kofi\" means My name is Kofi in Fante.",
+          "procedure": [
+            "Me dzin = my name",
+            "de = is",
+            "Kofi = Kofi",
+            "Answer: My name is Kofi"
+          ]
+        },
+        {
+          "q": "What does \"Wote Fante?\" mean?",
+          "options": [
+            "Do you speak Fante?",
+            "Do you like Fante?",
+            "Do you eat Fante?",
+            "Do you see Fante?"
+          ],
+          "answer": "Do you speak Fante?",
+          "explain": "\"Wote Fante?\" means Do you speak Fante? in Fante.",
+          "procedure": [
+            "Wo = you",
+            "te = understand/speak",
+            "Fante = Fante",
+            "Answer: Do you speak Fante?"
+          ]
+        },
+        {
+          "q": "What does \"Yɛte Fante kakra\" mean?",
+          "options": [
+            "We speak a little Fante",
+            "We speak no Fante",
+            "We speak all Fante",
+            "We speak Fante well"
+          ],
+          "answer": "We speak a little Fante",
+          "explain": "\"Yɛte Fante kakra\" means We speak a little Fante.",
+          "procedure": [
+            "Yɛte = we speak/understand",
+            "Fante = Fante",
+            "kakra = a little",
+            "Answer: We speak a little Fante"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ Fante kasa\" mean?",
+          "options": [
+            "I like the Fante language",
+            "I hate Fante",
+            "I speak Fante",
+            "I hear Fante"
+          ],
+          "answer": "I like the Fante language",
+          "explain": "\"Me pɛ Fante kasa\" means I like the Fante language.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "Fante kasa = Fante language",
+            "Answer: I like the Fante language"
+          ]
+        },
+        {
+          "q": "Why is reading important in learning Fante?",
+          "options": [
+            "It helps understand Fante words and sentences",
+            "It makes you tired",
+            "It is not important",
+            "It is only for English"
+          ],
+          "answer": "It helps understand Fante words and sentences",
+          "explain": "Reading helps build Fante vocabulary and understanding.",
+          "procedure": [
+            "Practice reading",
+            "Learn new words",
+            "Answer: It helps understand Fante words and sentences"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ akenkan\" mean?",
+          "options": [
+            "I like reading",
+            "I like writing",
+            "I like singing",
+            "I like dancing"
+          ],
+          "answer": "I like reading",
+          "explain": "\"Me pɛ akenkan\" means I like reading in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "akenkan = reading",
+            "Answer: I like reading"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ akyerɛw\" mean?",
+          "options": [
+            "I like writing",
+            "I like reading",
+            "I like singing",
+            "I like dancing"
+          ],
+          "answer": "I like writing",
+          "explain": "\"Me pɛ akyerɛw\" means I like writing in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "akyerɛw = writing",
+            "Answer: I like writing"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ ndwom\" mean?",
+          "options": [
+            "I like songs",
+            "I like food",
+            "I like books",
+            "I like school"
+          ],
+          "answer": "I like songs",
+          "explain": "\"Me pɛ ndwom\" means I like songs in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "ndwom = songs",
+            "Answer: I like songs"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ agor\" mean?",
+          "options": [
+            "I like playing",
+            "I like reading",
+            "I like eating",
+            "I like singing"
+          ],
+          "answer": "I like playing",
+          "explain": "\"Me pɛ agor\" means I like playing in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "agor = playing",
+            "Answer: I like playing"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ adzesua\" mean?",
+          "options": [
+            "I like learning",
+            "I like reading",
+            "I like playing",
+            "I like eating"
+          ],
+          "answer": "I like learning",
+          "explain": "\"Me pɛ adzesua\" means I like learning in Fante.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "adzesua = learning",
+            "Answer: I like learning"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ me nuanom\" mean?",
+          "options": [
+            "I love my siblings",
+            "I love my parents",
+            "I love my school",
+            "I love my house"
+          ],
+          "answer": "I love my siblings",
+          "explain": "\"Me pɛ me nuanom\" means I love my siblings.",
+          "procedure": [
+            "Me = I",
+            "pɛ = love",
+            "me nuanom = my siblings",
+            "Answer: I love my siblings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-usage",
+      "name": "Grammar & Usage",
+      "icon": "📝",
+      "questions": [
+        {
+          "q": "What are nouns in Fante called?",
+          "options": [
+            "Dzin",
+            "Adɔe",
+            "Ndwom",
+            "Akenkan"
+          ],
+          "answer": "Dzin",
+          "explain": "Nouns are called \"dzin\" in Fante.",
+          "procedure": [
+            "Nouns = dzin",
+            "Names of things",
+            "Answer: Dzin"
+          ]
+        },
+        {
+          "q": "What are verbs in Fante called?",
+          "options": [
+            "Adɔe (action words)",
+            "Dzin",
+            "Ndwom",
+            "Akenkan"
+          ],
+          "answer": "Adɔe (action words)",
+          "explain": "Verbs are action words in Fante.",
+          "procedure": [
+            "Verbs = action words",
+            "Show actions",
+            "Answer: Adɔe (action words)"
+          ]
+        },
+        {
+          "q": "What is the Fante pronoun for \"I\"?",
+          "options": [
+            "Me",
+            "Wo",
+            "Ɔ",
+            "Yɛ"
+          ],
+          "answer": "Me",
+          "explain": "\"Me\" means I in Fante.",
+          "procedure": [
+            "Me = I",
+            "First person singular",
+            "Answer: Me"
+          ]
+        },
+        {
+          "q": "What is the Fante pronoun for \"You\"?",
+          "options": [
+            "Me",
+            "Wo",
+            "Ɔ",
+            "Yɛ"
+          ],
+          "answer": "Wo",
+          "explain": "\"Wo\" means You in Fante.",
+          "procedure": [
+            "Wo = You",
+            "Second person",
+            "Answer: Wo"
+          ]
+        },
+        {
+          "q": "What is the Fante pronoun for \"He/She\"?",
+          "options": [
+            "Me",
+            "Wo",
+            "Ɔ",
+            "Yɛ"
+          ],
+          "answer": "Ɔ",
+          "explain": "\"Ɔ\" means He/She in Fante.",
+          "procedure": [
+            "Ɔ = He/She",
+            "Third person",
+            "Answer: Ɔ"
+          ]
+        },
+        {
+          "q": "What is the Fante pronoun for \"We\"?",
+          "options": [
+            "Me",
+            "Wo",
+            "Ɔ",
+            "Yɛ"
+          ],
+          "answer": "Yɛ",
+          "explain": "\"Yɛ\" means We in Fante.",
+          "procedure": [
+            "Yɛ = We",
+            "First person plural",
+            "Answer: Yɛ"
+          ]
+        },
+        {
+          "q": "What does \"Me kɔ\" mean?",
+          "options": [
+            "I go",
+            "I come",
+            "I eat",
+            "I see"
+          ],
+          "answer": "I go",
+          "explain": "\"Me kɔ\" means I go in Fante.",
+          "procedure": [
+            "Me = I",
+            "kɔ = go",
+            "Answer: I go"
+          ]
+        },
+        {
+          "q": "What does \"Ɔba\" mean?",
+          "options": [
+            "He comes",
+            "He goes",
+            "He eats",
+            "He sees"
+          ],
+          "answer": "He comes",
+          "explain": "\"Ɔba\" means He comes in Fante.",
+          "procedure": [
+            "Ɔ = he/she",
+            "ba = comes",
+            "Answer: He comes"
+          ]
+        },
+        {
+          "q": "What does \"Yɛkɔ\" mean?",
+          "options": [
+            "We go",
+            "We come",
+            "We eat",
+            "We see"
+          ],
+          "answer": "We go",
+          "explain": "\"Yɛkɔ\" means We go in Fante.",
+          "procedure": [
+            "Yɛ = we",
+            "kɔ = go",
+            "Answer: We go"
+          ]
+        },
+        {
+          "q": "What does \"Me dzi\" mean?",
+          "options": [
+            "I eat",
+            "I go",
+            "I come",
+            "I see"
+          ],
+          "answer": "I eat",
+          "explain": "\"Me dzi\" means I eat in Fante.",
+          "procedure": [
+            "Me = I",
+            "dzi = eat",
+            "Answer: I eat"
+          ]
+        },
+        {
+          "q": "What does \"Me nom\" mean?",
+          "options": [
+            "I drink",
+            "I eat",
+            "I go",
+            "I come"
+          ],
+          "answer": "I drink",
+          "explain": "\"Me nom\" means I drink in Fante.",
+          "procedure": [
+            "Me = I",
+            "nom = drink",
+            "Answer: I drink"
+          ]
+        },
+        {
+          "q": "What does \"Me da\" mean?",
+          "options": [
+            "I sleep",
+            "I eat",
+            "I go",
+            "I come"
+          ],
+          "answer": "I sleep",
+          "explain": "\"Me da\" means I sleep in Fante.",
+          "procedure": [
+            "Me = I",
+            "da = sleep",
+            "Answer: I sleep"
+          ]
+        },
+        {
+          "q": "What does \"Me kasa\" mean?",
+          "options": [
+            "I speak",
+            "I eat",
+            "I sleep",
+            "I come"
+          ],
+          "answer": "I speak",
+          "explain": "\"Me kasa\" means I speak in Fante.",
+          "procedure": [
+            "Me = I",
+            "kasa = speak",
+            "Answer: I speak"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"and\"?",
+          "options": [
+            "Na",
+            "Ne",
+            "Ana",
+            "De"
+          ],
+          "answer": "Na",
+          "explain": "\"Na\" means and in Fante.",
+          "procedure": [
+            "Na = and",
+            "Joins words",
+            "Answer: Na"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"but\"?",
+          "options": [
+            "Nanso",
+            "Na",
+            "Ne",
+            "De"
+          ],
+          "answer": "Nanso",
+          "explain": "\"Nanso\" means but in Fante.",
+          "procedure": [
+            "Nanso = but",
+            "Joins contrasting ideas",
+            "Answer: Nanso"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"because\"?",
+          "options": [
+            "Ɛfiri sɛ",
+            "Na",
+            "Ne",
+            "De"
+          ],
+          "answer": "Ɛfiri sɛ",
+          "explain": "\"Ɛfiri sɛ\" means because in Fante.",
+          "procedure": [
+            "Ɛfiri sɛ = because",
+            "Gives reasons",
+            "Answer: Ɛfiri sɛ"
+          ]
+        },
+        {
+          "q": "What is the Fante question word for \"What?\"",
+          "options": [
+            "Dɛn",
+            "Hwan",
+            "He",
+            "Ɛhe"
+          ],
+          "answer": "Dɛn",
+          "explain": "\"Dɛn\" means What in Fante.",
+          "procedure": [
+            "Dɛn = what",
+            "Asks for information",
+            "Answer: Dɛn"
+          ]
+        },
+        {
+          "q": "What is the Fante question word for \"Who?\"",
+          "options": [
+            "Hwan",
+            "Dɛn",
+            "He",
+            "Ɛhe"
+          ],
+          "answer": "Hwan",
+          "explain": "\"Hwan\" means Who in Fante.",
+          "procedure": [
+            "Hwan = who",
+            "Asks about people",
+            "Answer: Hwan"
+          ]
+        },
+        {
+          "q": "What is the Fante question word for \"Where?\"",
+          "options": [
+            "Ɛhe",
+            "Dɛn",
+            "Hwan",
+            "He"
+          ],
+          "answer": "Ɛhe",
+          "explain": "\"Ɛhe\" means Where in Fante.",
+          "procedure": [
+            "Ɛhe = where",
+            "Asks about place",
+            "Answer: Ɛhe"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"good\"?",
+          "options": [
+            "Papa",
+            "Bɔn",
+            "Kɛse",
+            "Ketsewa"
+          ],
+          "answer": "Papa",
+          "explain": "\"Papa\" means good in Fante.",
+          "procedure": [
+            "Papa = good",
+            "Positive adjective",
+            "Answer: Papa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-rules",
+      "name": "Writing Rules",
+      "icon": "✍️",
+      "questions": [
+        {
+          "q": "What does every Fante sentence need to start with?",
+          "options": [
+            "A capital letter",
+            "A lowercase letter",
+            "A number",
+            "A symbol"
+          ],
+          "answer": "A capital letter",
+          "explain": "Every sentence in Fante starts with a capital letter.",
+          "procedure": [
+            "Sentence begins with a capital",
+            "Basic punctuation rule",
+            "Answer: A capital letter"
+          ]
+        },
+        {
+          "q": "What punctuation mark ends a statement in Fante?",
+          "options": [
+            "Full stop (.)",
+            "Question mark (?)",
+            "Exclamation mark (!)",
+            "Comma (,)"
+          ],
+          "answer": "Full stop (.)",
+          "explain": "A statement ends with a full stop.",
+          "procedure": [
+            "Statements end with (.)",
+            "Ends the sentence",
+            "Answer: Full stop (.)"
+          ]
+        },
+        {
+          "q": "What punctuation mark ends a question in Fante?",
+          "options": [
+            "Full stop (.)",
+            "Question mark (?)",
+            "Exclamation mark (!)",
+            "Comma (,)"
+          ],
+          "answer": "Question mark (?)",
+          "explain": "A question ends with a question mark.",
+          "procedure": [
+            "Questions end with (?)",
+            "Asks for information",
+            "Answer: Question mark (?)"
+          ]
+        },
+        {
+          "q": "What punctuation mark ends an exclamation in Fante?",
+          "options": [
+            "Full stop (.)",
+            "Question mark (?)",
+            "Exclamation mark (!)",
+            "Comma (,)"
+          ],
+          "answer": "Exclamation mark (!)",
+          "explain": "An exclamation ends with an exclamation mark.",
+          "procedure": [
+            "Exclamations end with (!)",
+            "Shows strong emotion",
+            "Answer: Exclamation mark (!)"
+          ]
+        },
+        {
+          "q": "What is a comma used for in Fante writing?",
+          "options": [
+            "To separate items in a list",
+            "To end a sentence",
+            "To ask a question",
+            "To show excitement"
+          ],
+          "answer": "To separate items in a list",
+          "explain": "Commas separate items in a list.",
+          "procedure": [
+            "Comma separates list items",
+            "Example: me, wo, ɔ",
+            "Answer: To separate items in a list"
+          ]
+        },
+        {
+          "q": "What does an apostrophe (') show in Fante?",
+          "options": [
+            "Missing letters or possession",
+            "The end of a sentence",
+            "A question",
+            "An exclamation"
+          ],
+          "answer": "Missing letters or possession",
+          "explain": "Apostrophes show missing letters or possession.",
+          "procedure": [
+            "Apostrophe shows missing/possession",
+            "Used in contractions",
+            "Answer: Missing letters or possession"
+          ]
+        },
+        {
+          "q": "Which is the correct way to write a Fante name?",
+          "options": [
+            "Capitalise the first letter",
+            "Use all lowercase",
+            "Use all capitals",
+            "Use no capitals"
+          ],
+          "answer": "Capitalise the first letter",
+          "explain": "Names start with a capital letter.",
+          "procedure": [
+            "Names = capital first letter",
+            "Example: Kofi",
+            "Answer: Capitalise the first letter"
+          ]
+        },
+        {
+          "q": "What is a paragraph?",
+          "options": [
+            "A group of sentences about the same idea",
+            "A single letter",
+            "A single word",
+            "A punctuation mark"
+          ],
+          "answer": "A group of sentences about the same idea",
+          "explain": "A paragraph is a group of sentences about one idea.",
+          "procedure": [
+            "Same idea",
+            "Group of sentences",
+            "Answer: A group of sentences about the same idea"
+          ]
+        },
+        {
+          "q": "What is the best way to start a new paragraph in Fante?",
+          "options": [
+            "Indent the first line",
+            "Leave no space",
+            "Write everything as one",
+            "Never use paragraphs"
+          ],
+          "answer": "Indent the first line",
+          "explain": "A new paragraph usually starts with an indent.",
+          "procedure": [
+            "Indent the first line",
+            "Shows a new paragraph",
+            "Answer: Indent the first line"
+          ]
+        },
+        {
+          "q": "What is a title in a piece of writing?",
+          "options": [
+            "The name of the piece",
+            "The last word",
+            "A punctuation mark",
+            "A type of sentence"
+          ],
+          "answer": "The name of the piece",
+          "explain": "A title is the name of a piece of writing.",
+          "procedure": [
+            "Title = name",
+            "Appears at the top",
+            "Answer: The name of the piece"
+          ]
+        },
+        {
+          "q": "Why is punctuation important in Fante writing?",
+          "options": [
+            "It makes writing clear and easy to understand",
+            "It makes writing longer",
+            "It is not important",
+            "It is only for English"
+          ],
+          "answer": "It makes writing clear and easy to understand",
+          "explain": "Punctuation makes writing clear and readable.",
+          "procedure": [
+            "Clear writing",
+            "Easy to understand",
+            "Answer: It makes writing clear and easy to understand"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"sentence\"?",
+          "options": [
+            "Nsɛm",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Nsɛm",
+          "explain": "\"Nsɛm\" can mean sentence or words in Fante.",
+          "procedure": [
+            "Nsɛm = sentence/words",
+            "Group of words",
+            "Answer: Nsɛm"
+          ]
+        },
+        {
+          "q": "What is a full stop in Fante used for?",
+          "options": [
+            "To end a statement",
+            "To ask a question",
+            "To show excitement",
+            "To separate items"
+          ],
+          "answer": "To end a statement",
+          "explain": "A full stop ends a statement.",
+          "procedure": [
+            "Ends a statement",
+            "Basic punctuation",
+            "Answer: To end a statement"
+          ]
+        },
+        {
+          "q": "What is a question mark in Fante used for?",
+          "options": [
+            "To ask a question",
+            "To end a statement",
+            "To show excitement",
+            "To separate items"
+          ],
+          "answer": "To ask a question",
+          "explain": "A question mark ends a question.",
+          "procedure": [
+            "Ends a question",
+            "Asks for information",
+            "Answer: To ask a question"
+          ]
+        },
+        {
+          "q": "Which is the correct way to write the Fante word for Good Morning?",
+          "options": [
+            "Mema wo akye",
+            "mema wo akye",
+            "MEMA WO AKYE",
+            "mema Wo Akye"
+          ],
+          "answer": "Mema wo akye",
+          "explain": "Start sentences and greetings with a capital letter.",
+          "procedure": [
+            "First word capital",
+            "Rest lowercase",
+            "Answer: Mema wo akye"
+          ]
+        },
+        {
+          "q": "What is a full stop in a text called?",
+          "options": [
+            "Period",
+            "Comma",
+            "Question mark",
+            "Exclamation mark"
+          ],
+          "answer": "Period",
+          "explain": "A full stop is also called a period.",
+          "procedure": [
+            "Full stop = period",
+            "Ends statement",
+            "Answer: Period"
+          ]
+        },
+        {
+          "q": "How should you begin the name of a town or city in Fante writing?",
+          "options": [
+            "With a capital letter",
+            "With a lowercase letter",
+            "With a number",
+            "With a symbol"
+          ],
+          "answer": "With a capital letter",
+          "explain": "Names of places start with a capital letter.",
+          "procedure": [
+            "Place names = capital",
+            "Example: Cape Coast",
+            "Answer: With a capital letter"
+          ]
+        },
+        {
+          "q": "What is the correct way to write a list of items in Fante?",
+          "options": [
+            "Separate with commas",
+            "Separate with full stops",
+            "Use no punctuation",
+            "Use exclamation marks"
+          ],
+          "answer": "Separate with commas",
+          "explain": "Lists use commas between items.",
+          "procedure": [
+            "Commas separate items",
+            "Example: a, b, na c",
+            "Answer: Separate with commas"
+          ]
+        },
+        {
+          "q": "What is a hyphen used for in Fante writing?",
+          "options": [
+            "To join words",
+            "To end a sentence",
+            "To ask a question",
+            "To show excitement"
+          ],
+          "answer": "To join words",
+          "explain": "A hyphen joins words together.",
+          "procedure": [
+            "Joins words",
+            "Example: well-known",
+            "Answer: To join words"
+          ]
+        },
+        {
+          "q": "Why should we use proper spacing in Fante writing?",
+          "options": [
+            "To make writing easy to read",
+            "To make writing longer",
+            "It is not needed",
+            "Only in English"
+          ],
+          "answer": "To make writing easy to read",
+          "explain": "Proper spacing makes writing readable.",
+          "procedure": [
+            "Easy to read",
+            "Standard writing rule",
+            "Answer: To make writing easy to read"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "name": "Composition",
+      "icon": "📄",
+      "questions": [
+        {
+          "q": "What is a composition?",
+          "options": [
+            "A piece of writing about a topic",
+            "A type of book",
+            "A sentence",
+            "A punctuation mark"
+          ],
+          "answer": "A piece of writing about a topic",
+          "explain": "A composition is a written piece about a topic.",
+          "procedure": [
+            "Written on a topic",
+            "Usually multiple paragraphs",
+            "Answer: A piece of writing about a topic"
+          ]
+        },
+        {
+          "q": "What should every composition have?",
+          "options": [
+            "Introduction, body, and conclusion",
+            "Only introduction",
+            "Only a conclusion",
+            "Only one sentence"
+          ],
+          "answer": "Introduction, body, and conclusion",
+          "explain": "Every composition has three parts.",
+          "procedure": [
+            "Introduction",
+            "Body",
+            "Conclusion",
+            "Answer: Introduction, body, and conclusion"
+          ]
+        },
+        {
+          "q": "What is the introduction of a composition?",
+          "options": [
+            "The opening paragraph that introduces the topic",
+            "The middle paragraph",
+            "The last paragraph",
+            "A title"
+          ],
+          "answer": "The opening paragraph that introduces the topic",
+          "explain": "The introduction opens the composition.",
+          "procedure": [
+            "First paragraph",
+            "Introduces the topic",
+            "Answer: The opening paragraph that introduces the topic"
+          ]
+        },
+        {
+          "q": "What is the body of a composition?",
+          "options": [
+            "The middle paragraphs that explain the topic",
+            "The first paragraph",
+            "The last paragraph",
+            "The title"
+          ],
+          "answer": "The middle paragraphs that explain the topic",
+          "explain": "The body explains the topic in detail.",
+          "procedure": [
+            "Middle paragraphs",
+            "Explains the topic",
+            "Answer: The middle paragraphs that explain the topic"
+          ]
+        },
+        {
+          "q": "What is the conclusion of a composition?",
+          "options": [
+            "The closing paragraph that summarises the topic",
+            "The opening paragraph",
+            "The title",
+            "The first sentence"
+          ],
+          "answer": "The closing paragraph that summarises the topic",
+          "explain": "The conclusion wraps up the composition.",
+          "procedure": [
+            "Last paragraph",
+            "Summarises the topic",
+            "Answer: The closing paragraph that summarises the topic"
+          ]
+        },
+        {
+          "q": "What is the best way to start a composition?",
+          "options": [
+            "With an interesting opening",
+            "With the conclusion",
+            "With no introduction",
+            "With a full stop"
+          ],
+          "answer": "With an interesting opening",
+          "explain": "An interesting opening makes readers want to keep reading.",
+          "procedure": [
+            "Interesting opening",
+            "Grabs the reader",
+            "Answer: With an interesting opening"
+          ]
+        },
+        {
+          "q": "What should you do before writing a composition?",
+          "options": [
+            "Plan your ideas",
+            "Start writing immediately",
+            "Copy from a book",
+            "Skip the plan"
+          ],
+          "answer": "Plan your ideas",
+          "explain": "Planning helps organize your composition.",
+          "procedure": [
+            "Plan first",
+            "Organize ideas",
+            "Answer: Plan your ideas"
+          ]
+        },
+        {
+          "q": "How many paragraphs should a short composition have?",
+          "options": [
+            "At least three",
+            "Only one",
+            "Only two",
+            "As many as possible"
+          ],
+          "answer": "At least three",
+          "explain": "A short composition should have at least three paragraphs.",
+          "procedure": [
+            "At least three",
+            "Intro, body, conclusion",
+            "Answer: At least three"
+          ]
+        },
+        {
+          "q": "What is a narrative composition?",
+          "options": [
+            "A composition that tells a story",
+            "A composition about a person",
+            "A composition that argues a point",
+            "A poem"
+          ],
+          "answer": "A composition that tells a story",
+          "explain": "A narrative composition tells a story.",
+          "procedure": [
+            "Tells a story",
+            "Has characters and events",
+            "Answer: A composition that tells a story"
+          ]
+        },
+        {
+          "q": "What is a descriptive composition?",
+          "options": [
+            "A composition that describes something",
+            "A story",
+            "An argument",
+            "A poem"
+          ],
+          "answer": "A composition that describes something",
+          "explain": "A descriptive composition describes a person, place, or thing.",
+          "procedure": [
+            "Describes",
+            "Uses sensory details",
+            "Answer: A composition that describes something"
+          ]
+        },
+        {
+          "q": "What is an argumentative composition?",
+          "options": [
+            "A composition that argues for or against an idea",
+            "A story",
+            "A description",
+            "A poem"
+          ],
+          "answer": "A composition that argues for or against an idea",
+          "explain": "An argumentative composition argues a point.",
+          "procedure": [
+            "Argues a point",
+            "Gives reasons",
+            "Answer: A composition that argues for or against an idea"
+          ]
+        },
+        {
+          "q": "Why is it important to use proper spelling in a composition?",
+          "options": [
+            "It makes the composition clear and easy to read",
+            "It makes it longer",
+            "It is not important",
+            "Only in English"
+          ],
+          "answer": "It makes the composition clear and easy to read",
+          "explain": "Proper spelling makes writing clear.",
+          "procedure": [
+            "Clear writing",
+            "Easier to read",
+            "Answer: It makes the composition clear and easy to read"
+          ]
+        },
+        {
+          "q": "What is the best way to end a composition?",
+          "options": [
+            "With a strong conclusion",
+            "With no conclusion",
+            "With a question mark",
+            "With the title"
+          ],
+          "answer": "With a strong conclusion",
+          "explain": "A strong conclusion wraps up the composition.",
+          "procedure": [
+            "Strong conclusion",
+            "Summarises the topic",
+            "Answer: With a strong conclusion"
+          ]
+        },
+        {
+          "q": "What should every sentence in a composition begin with?",
+          "options": [
+            "A capital letter",
+            "A lowercase letter",
+            "A number",
+            "A symbol"
+          ],
+          "answer": "A capital letter",
+          "explain": "Every sentence starts with a capital letter.",
+          "procedure": [
+            "Capital letter",
+            "Basic punctuation",
+            "Answer: A capital letter"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"story\"?",
+          "options": [
+            "Anansesɛm",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Anansesɛm",
+          "explain": "\"Anansesɛm\" means story (especially folktale) in Fante.",
+          "procedure": [
+            "Story = anansesɛm",
+            "Traditional story",
+            "Answer: Anansesɛm"
+          ]
+        },
+        {
+          "q": "What does \"Me bɛkyerɛw asɛm\" mean?",
+          "options": [
+            "I will write a story",
+            "I will read a story",
+            "I will eat a story",
+            "I will sing a story"
+          ],
+          "answer": "I will write a story",
+          "explain": "\"Me bɛkyerɛw asɛm\" means I will write a story.",
+          "procedure": [
+            "Me = I",
+            "bɛkyerɛw = will write",
+            "asɛm = story",
+            "Answer: I will write a story"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ anansesɛm\" mean?",
+          "options": [
+            "I like folktales",
+            "I like songs",
+            "I like books",
+            "I like school"
+          ],
+          "answer": "I like folktales",
+          "explain": "\"Me pɛ anansesɛm\" means I like folktales.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "anansesɛm = folktales",
+            "Answer: I like folktales"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"paragraph\"?",
+          "options": [
+            "Nsɛm kuw",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Nsɛm kuw",
+          "explain": "\"Nsɛm kuw\" means paragraph (group of sentences).",
+          "procedure": [
+            "Nsɛm kuw = paragraph",
+            "Group of sentences",
+            "Answer: Nsɛm kuw"
+          ]
+        },
+        {
+          "q": "What is the best title for a story about a trip?",
+          "options": [
+            "A title that describes the trip",
+            "A random word",
+            "The word \"Story\"",
+            "No title"
+          ],
+          "answer": "A title that describes the trip",
+          "explain": "A title should describe the content.",
+          "procedure": [
+            "Descriptive title",
+            "Relates to content",
+            "Answer: A title that describes the trip"
+          ]
+        },
+        {
+          "q": "Why should we read our composition after writing it?",
+          "options": [
+            "To find and fix mistakes",
+            "To make it longer",
+            "To memorize it",
+            "It is not necessary"
+          ],
+          "answer": "To find and fix mistakes",
+          "explain": "Reading over helps find mistakes.",
+          "procedure": [
+            "Read after writing",
+            "Fix errors",
+            "Answer: To find and fix mistakes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "translation-interpretation",
+      "name": "Translation & Interpretation",
+      "icon": "🔄",
+      "questions": [
+        {
+          "q": "What is translation?",
+          "options": [
+            "Changing words from one language to another",
+            "Speaking very fast",
+            "Writing a story",
+            "Reading aloud"
+          ],
+          "answer": "Changing words from one language to another",
+          "explain": "Translation is changing words from one language to another.",
+          "procedure": [
+            "Change language",
+            "Keep the meaning",
+            "Answer: Changing words from one language to another"
+          ]
+        },
+        {
+          "q": "What is interpretation?",
+          "options": [
+            "Translating spoken words in real-time",
+            "Writing a book",
+            "Reading a poem",
+            "Singing a song"
+          ],
+          "answer": "Translating spoken words in real-time",
+          "explain": "Interpretation is translating spoken words in real-time.",
+          "procedure": [
+            "Spoken translation",
+            "Happens live",
+            "Answer: Translating spoken words in real-time"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"Good morning\"",
+          "options": [
+            "Mema wo akye",
+            "Mema wo aha",
+            "Medaase",
+            "Aane"
+          ],
+          "answer": "Mema wo akye",
+          "explain": "\"Good morning\" in Fante is Mema wo akye.",
+          "procedure": [
+            "Good morning = Mema wo akye",
+            "Common greeting",
+            "Answer: Mema wo akye"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"Thank you\"",
+          "options": [
+            "Medaase",
+            "Mepa wo kyɛw",
+            "Aane",
+            "Daabi"
+          ],
+          "answer": "Medaase",
+          "explain": "\"Thank you\" in Fante is Medaase.",
+          "procedure": [
+            "Thank you = Medaase",
+            "Polite phrase",
+            "Answer: Medaase"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"How are you?\"",
+          "options": [
+            "Wo ho tse dɛn?",
+            "Medaase",
+            "Aane",
+            "Mepa wo kyɛw"
+          ],
+          "answer": "Wo ho tse dɛn?",
+          "explain": "\"How are you?\" in Fante is Wo ho tse dɛn?",
+          "procedure": [
+            "How are you = Wo ho tse dɛn?",
+            "Common question",
+            "Answer: Wo ho tse dɛn?"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me pɛ aduane\"",
+          "options": [
+            "I like food",
+            "I hate food",
+            "I cook food",
+            "I see food"
+          ],
+          "answer": "I like food",
+          "explain": "\"Me pɛ aduane\" means I like food.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "aduane = food",
+            "Answer: I like food"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me kɔ skuul\"",
+          "options": [
+            "I go to school",
+            "I like school",
+            "I see school",
+            "I hate school"
+          ],
+          "answer": "I go to school",
+          "explain": "\"Me kɔ skuul\" means I go to school.",
+          "procedure": [
+            "Me = I",
+            "kɔ = go",
+            "skuul = school",
+            "Answer: I go to school"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me maame\"",
+          "options": [
+            "My mother",
+            "My father",
+            "My sister",
+            "My brother"
+          ],
+          "answer": "My mother",
+          "explain": "\"Me maame\" means My mother.",
+          "procedure": [
+            "Me = my",
+            "maame = mother",
+            "Answer: My mother"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me egya\"",
+          "options": [
+            "My father",
+            "My mother",
+            "My sister",
+            "My brother"
+          ],
+          "answer": "My father",
+          "explain": "\"Me egya\" means My father.",
+          "procedure": [
+            "Me = my",
+            "egya = father",
+            "Answer: My father"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me nua\"",
+          "options": [
+            "My sibling",
+            "My parent",
+            "My friend",
+            "My teacher"
+          ],
+          "answer": "My sibling",
+          "explain": "\"Me nua\" means My sibling (brother or sister).",
+          "procedure": [
+            "Me = my",
+            "nua = sibling",
+            "Answer: My sibling"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"I love you\"",
+          "options": [
+            "Me pɛ wo",
+            "Me kɔ wo",
+            "Me dzi wo",
+            "Me nom wo"
+          ],
+          "answer": "Me pɛ wo",
+          "explain": "\"I love you\" in Fante is Me pɛ wo.",
+          "procedure": [
+            "Me = I",
+            "pɛ = love",
+            "wo = you",
+            "Answer: Me pɛ wo"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"I am going to school\"",
+          "options": [
+            "Me rekɔ skuul",
+            "Me roko skuul",
+            "Me bɛkɔ skuul",
+            "Me kɔɔ skuul"
+          ],
+          "answer": "Me rekɔ skuul",
+          "explain": "\"I am going to school\" is Me rekɔ skuul.",
+          "procedure": [
+            "Me = I",
+            "rekɔ = am going",
+            "skuul = school",
+            "Answer: Me rekɔ skuul"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"What is your name?\"",
+          "options": [
+            "Wo dzin de dɛn?",
+            "Wo ho tse dɛn?",
+            "Ɛhe na wo wɔ?",
+            "Dɛn na wo pɛ?"
+          ],
+          "answer": "Wo dzin de dɛn?",
+          "explain": "\"What is your name?\" in Fante is Wo dzin de dɛn?",
+          "procedure": [
+            "Wo dzin = your name",
+            "de dɛn = is what",
+            "Answer: Wo dzin de dɛn?"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me pɛ ndwom\"",
+          "options": [
+            "I like songs",
+            "I like food",
+            "I like books",
+            "I like school"
+          ],
+          "answer": "I like songs",
+          "explain": "\"Me pɛ ndwom\" means I like songs.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "ndwom = songs",
+            "Answer: I like songs"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"Please\"?",
+          "options": [
+            "Mepa wo kyɛw",
+            "Medaase",
+            "Aane",
+            "Daabi"
+          ],
+          "answer": "Mepa wo kyɛw",
+          "explain": "\"Please\" in Fante is Mepa wo kyɛw.",
+          "procedure": [
+            "Please = Mepa wo kyɛw",
+            "Polite word",
+            "Answer: Mepa wo kyɛw"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"Good evening\"",
+          "options": [
+            "Mema wo adwo",
+            "Mema wo akye",
+            "Mema wo aha",
+            "Medaase"
+          ],
+          "answer": "Mema wo adwo",
+          "explain": "\"Good evening\" in Fante is Mema wo adwo.",
+          "procedure": [
+            "Evening = Mema wo adwo",
+            "Used in the evening",
+            "Answer: Mema wo adwo"
+          ]
+        },
+        {
+          "q": "Translate to English: \"Me pɛ agor\"",
+          "options": [
+            "I like playing",
+            "I like eating",
+            "I like reading",
+            "I like singing"
+          ],
+          "answer": "I like playing",
+          "explain": "\"Me pɛ agor\" means I like playing.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "agor = playing",
+            "Answer: I like playing"
+          ]
+        },
+        {
+          "q": "What does \"Yɛbɛhyia\" mean?",
+          "options": [
+            "We will meet (Goodbye)",
+            "Hello",
+            "Thank you",
+            "Please"
+          ],
+          "answer": "We will meet (Goodbye)",
+          "explain": "\"Yɛbɛhyia\" means We will meet (Goodbye).",
+          "procedure": [
+            "Farewell phrase",
+            "Literally: We will meet",
+            "Answer: We will meet (Goodbye)"
+          ]
+        },
+        {
+          "q": "Translate to Fante: \"My name is Kofi\"",
+          "options": [
+            "Me dzin de Kofi",
+            "Me dzin Kofi",
+            "Kofi dzin",
+            "Me din Kofi"
+          ],
+          "answer": "Me dzin de Kofi",
+          "explain": "\"My name is Kofi\" in Fante is Me dzin de Kofi.",
+          "procedure": [
+            "Me dzin = my name",
+            "de = is",
+            "Kofi = Kofi",
+            "Answer: Me dzin de Kofi"
+          ]
+        },
+        {
+          "q": "Why is translation important?",
+          "options": [
+            "It helps people understand different languages",
+            "It makes languages harder",
+            "It is not important",
+            "It is only for English"
+          ],
+          "answer": "It helps people understand different languages",
+          "explain": "Translation helps people understand different languages.",
+          "procedure": [
+            "Communication between languages",
+            "Shared understanding",
+            "Answer: It helps people understand different languages"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cultural-practices",
+      "name": "Cultural Practices",
+      "icon": "🎭",
+      "questions": [
+        {
+          "q": "What is a naming ceremony called in Fante?",
+          "options": [
+            "Dzin to",
+            "Agor",
+            "Ndwom",
+            "Akwaaba"
+          ],
+          "answer": "Dzin to",
+          "explain": "A naming ceremony in Fante is called \"Dzin to\".",
+          "procedure": [
+            "Dzin to = naming ceremony",
+            "Names the baby",
+            "Answer: Dzin to"
+          ]
+        },
+        {
+          "q": "What does \"Akwaaba\" mean in Fante culture?",
+          "options": [
+            "Welcome",
+            "Goodbye",
+            "Thank you",
+            "Please"
+          ],
+          "answer": "Welcome",
+          "explain": "\"Akwaaba\" means Welcome in Fante culture.",
+          "procedure": [
+            "Greeting for guests",
+            "Hospitality",
+            "Answer: Welcome"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"festival\"?",
+          "options": [
+            "Afahye",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Afahye",
+          "explain": "\"Afahye\" means festival in Fante.",
+          "procedure": [
+            "Afahye = festival",
+            "Celebration",
+            "Answer: Afahye"
+          ]
+        },
+        {
+          "q": "Which famous festival is celebrated by the Fante people?",
+          "options": [
+            "Aboakyer",
+            "Homowo",
+            "Damba",
+            "Odwira"
+          ],
+          "answer": "Aboakyer",
+          "explain": "Aboakyer is a famous festival celebrated by the Effutu people, who are part of the Fante ethnic group.",
+          "procedure": [
+            "Effutu = Fante group",
+            "Deer-hunting festival",
+            "Answer: Aboakyer"
+          ]
+        },
+        {
+          "q": "What is a traditional Fante dance called?",
+          "options": [
+            "Adzewa",
+            "Adowa",
+            "Agbadza",
+            "Kpanlogo"
+          ],
+          "answer": "Adzewa",
+          "explain": "\"Adzewa\" is a traditional Fante dance.",
+          "procedure": [
+            "Adzewa = Fante dance",
+            "Performed at ceremonies",
+            "Answer: Adzewa"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"chief\"?",
+          "options": [
+            "Ɔhene",
+            "Ɔbaa",
+            "Egya",
+            "Ɛna"
+          ],
+          "answer": "Ɔhene",
+          "explain": "\"Ɔhene\" means chief in Fante.",
+          "procedure": [
+            "Ɔhene = chief",
+            "Community leader",
+            "Answer: Ɔhene"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"family\"?",
+          "options": [
+            "Ebusua",
+            "Fie",
+            "Aduane",
+            "Nsu"
+          ],
+          "answer": "Ebusua",
+          "explain": "\"Ebusua\" means family in Fante.",
+          "procedure": [
+            "Ebusua = family",
+            "Group of relatives",
+            "Answer: Ebusua"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"elder\"?",
+          "options": [
+            "Ɔpanyin",
+            "Ɔbaa",
+            "Abofra",
+            "Nyimpa"
+          ],
+          "answer": "Ɔpanyin",
+          "explain": "\"Ɔpanyin\" means elder in Fante.",
+          "procedure": [
+            "Ɔpanyin = elder",
+            "Respected older person",
+            "Answer: Ɔpanyin"
+          ]
+        },
+        {
+          "q": "What does \"Ebusua\" mean in Fante?",
+          "options": [
+            "Family",
+            "School",
+            "Market",
+            "Church"
+          ],
+          "answer": "Family",
+          "explain": "\"Ebusua\" means family in Fante.",
+          "procedure": [
+            "Family group",
+            "Important social unit",
+            "Answer: Family"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"respect\"?",
+          "options": [
+            "Obupa",
+            "Akorɔ",
+            "Ndwom",
+            "Dzin"
+          ],
+          "answer": "Obupa",
+          "explain": "\"Obupa\" means respect in Fante.",
+          "procedure": [
+            "Obupa = respect",
+            "Shown to elders",
+            "Answer: Obupa"
+          ]
+        },
+        {
+          "q": "What is a traditional Fante marriage ceremony called?",
+          "options": [
+            "Awarbɔ",
+            "Dzin to",
+            "Afahye",
+            "Adzewa"
+          ],
+          "answer": "Awarbɔ",
+          "explain": "\"Awarbɔ\" is a traditional marriage in Fante.",
+          "procedure": [
+            "Awarbɔ = traditional marriage",
+            "Formal union",
+            "Answer: Awarbɔ"
+          ]
+        },
+        {
+          "q": "What does \"Awarbɔ\" mean?",
+          "options": [
+            "Traditional marriage",
+            "Festival",
+            "Song",
+            "Dance"
+          ],
+          "answer": "Traditional marriage",
+          "explain": "\"Awarbɔ\" means traditional marriage in Fante.",
+          "procedure": [
+            "Awarbɔ = marriage",
+            "Traditional ceremony",
+            "Answer: Traditional marriage"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"dance\"?",
+          "options": [
+            "Asaw",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Asaw",
+          "explain": "\"Asaw\" means dance in Fante.",
+          "procedure": [
+            "Asaw = dance",
+            "Traditional dance",
+            "Answer: Asaw"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"music\"?",
+          "options": [
+            "Ndwom",
+            "Asaw",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Ndwom",
+          "explain": "\"Ndwom\" can mean music or song in Fante.",
+          "procedure": [
+            "Ndwom = music/song",
+            "Traditional music",
+            "Answer: Ndwom"
+          ]
+        },
+        {
+          "q": "What does the Fante word \"Ndwom\" mean?",
+          "options": [
+            "Song/Music",
+            "Dance",
+            "Story",
+            "Respect"
+          ],
+          "answer": "Song/Music",
+          "explain": "\"Ndwom\" means song or music in Fante.",
+          "procedure": [
+            "Ndwom = song/music",
+            "Used in ceremonies",
+            "Answer: Song/Music"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"praise\"?",
+          "options": [
+            "Ayɛyi",
+            "Obupa",
+            "Akorɔ",
+            "Ndwom"
+          ],
+          "answer": "Ayɛyi",
+          "explain": "\"Ayɛyi\" means praise in Fante.",
+          "procedure": [
+            "Ayɛyi = praise",
+            "Used in worship",
+            "Answer: Ayɛyi"
+          ]
+        },
+        {
+          "q": "Why are cultural practices important?",
+          "options": [
+            "They keep traditions alive and bring people together",
+            "They make people tired",
+            "They have no value",
+            "They only exist in English"
+          ],
+          "answer": "They keep traditions alive and bring people together",
+          "explain": "Cultural practices preserve traditions and build community.",
+          "procedure": [
+            "Preserve traditions",
+            "Bring community together",
+            "Answer: They keep traditions alive and bring people together"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"tradition\"?",
+          "options": [
+            "Amanne",
+            "Afahye",
+            "Awarbɔ",
+            "Asaw"
+          ],
+          "answer": "Amanne",
+          "explain": "\"Amanne\" means tradition in Fante.",
+          "procedure": [
+            "Amanne = tradition",
+            "Cultural practices",
+            "Answer: Amanne"
+          ]
+        },
+        {
+          "q": "What is a Fante \"Asafo\" company?",
+          "options": [
+            "A traditional warrior group",
+            "A type of dance",
+            "A type of food",
+            "A type of song"
+          ],
+          "answer": "A traditional warrior group",
+          "explain": "\"Asafo\" is a traditional warrior group in Fante culture.",
+          "procedure": [
+            "Asafo = warrior group",
+            "Traditional",
+            "Answer: A traditional warrior group"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"community\"?",
+          "options": [
+            "Mpanyim",
+            "Ebusua",
+            "Asafo",
+            "Amanne"
+          ],
+          "answer": "Mpanyim",
+          "explain": "The term for community in Fante is often \"Mpanyim\" or \"Kuro\" (town).",
+          "procedure": [
+            "Community in Fante",
+            "Group of people",
+            "Answer: Mpanyim"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oral-literature",
+      "name": "Oral Literature",
+      "icon": "📜",
+      "questions": [
+        {
+          "q": "What is oral literature?",
+          "options": [
+            "Stories, songs, and proverbs passed down by speaking",
+            "Written stories in books",
+            "A type of dance",
+            "A type of food"
+          ],
+          "answer": "Stories, songs, and proverbs passed down by speaking",
+          "explain": "Oral literature is passed down by speaking, not writing.",
+          "procedure": [
+            "Passed by speaking",
+            "Stories, songs, proverbs",
+            "Answer: Stories, songs, and proverbs passed down by speaking"
+          ]
+        },
+        {
+          "q": "What is a folktale called in Fante?",
+          "options": [
+            "Anansesɛm",
+            "Ndwom",
+            "Dzin",
+            "Akenkan"
+          ],
+          "answer": "Anansesɛm",
+          "explain": "\"Anansesɛm\" means folktale in Fante.",
+          "procedure": [
+            "Anansesɛm = folktale",
+            "Traditional story",
+            "Answer: Anansesɛm"
+          ]
+        },
+        {
+          "q": "Who is Ananse in Fante folktales?",
+          "options": [
+            "A clever spider",
+            "A lion",
+            "A turtle",
+            "A bird"
+          ],
+          "answer": "A clever spider",
+          "explain": "Ananse is a clever spider in Fante folktales.",
+          "procedure": [
+            "Ananse = spider",
+            "Clever trickster",
+            "Answer: A clever spider"
+          ]
+        },
+        {
+          "q": "What are proverbs in Fante called?",
+          "options": [
+            "Mpanim nsɛm",
+            "Anansesɛm",
+            "Ndwom",
+            "Akenkan"
+          ],
+          "answer": "Mpanim nsɛm",
+          "explain": "\"Mpanim nsɛm\" means proverbs in Fante.",
+          "procedure": [
+            "Proverbs = mpanim nsɛm",
+            "Wise sayings",
+            "Answer: Mpanim nsɛm"
+          ]
+        },
+        {
+          "q": "What is a \"mpanim nsɛm\"?",
+          "options": [
+            "A proverb (wise saying)",
+            "A story",
+            "A song",
+            "A dance"
+          ],
+          "answer": "A proverb (wise saying)",
+          "explain": "\"Mpanim nsɛm\" is a proverb.",
+          "procedure": [
+            "Mpanim nsɛm = proverb",
+            "Wise saying",
+            "Answer: A proverb (wise saying)"
+          ]
+        },
+        {
+          "q": "What is a riddle called in Fante?",
+          "options": [
+            "Abe",
+            "Anansesɛm",
+            "Mpanim nsɛm",
+            "Ndwom"
+          ],
+          "answer": "Abe",
+          "explain": "\"Abe\" means riddle in Fante.",
+          "procedure": [
+            "Abe = riddle",
+            "Puzzle in words",
+            "Answer: Abe"
+          ]
+        },
+        {
+          "q": "Why are folktales important?",
+          "options": [
+            "They teach morals and cultural values",
+            "They waste time",
+            "They are only for children",
+            "They have no purpose"
+          ],
+          "answer": "They teach morals and cultural values",
+          "explain": "Folktales teach morals and cultural values.",
+          "procedure": [
+            "Teach morals",
+            "Share culture",
+            "Answer: They teach morals and cultural values"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"song\"?",
+          "options": [
+            "Ndwom",
+            "Anansesɛm",
+            "Abe",
+            "Mpanim nsɛm"
+          ],
+          "answer": "Ndwom",
+          "explain": "\"Ndwom\" means song in Fante.",
+          "procedure": [
+            "Ndwom = song",
+            "Used in ceremonies",
+            "Answer: Ndwom"
+          ]
+        },
+        {
+          "q": "What is a traditional Fante song about the community?",
+          "options": [
+            "Adzewa",
+            "Anansesɛm",
+            "Abe",
+            "Mpanim nsɛm"
+          ],
+          "answer": "Adzewa",
+          "explain": "\"Adzewa\" is a traditional Fante song and dance.",
+          "procedure": [
+            "Adzewa = Fante song",
+            "Traditional",
+            "Answer: Adzewa"
+          ]
+        },
+        {
+          "q": "What do proverbs teach?",
+          "options": [
+            "Wisdom and life lessons",
+            "Nonsense",
+            "Only songs",
+            "Only dances"
+          ],
+          "answer": "Wisdom and life lessons",
+          "explain": "Proverbs teach wisdom and life lessons.",
+          "procedure": [
+            "Wisdom",
+            "Life lessons",
+            "Answer: Wisdom and life lessons"
+          ]
+        },
+        {
+          "q": "What does the Fante word \"Abe\" mean?",
+          "options": [
+            "Riddle",
+            "Story",
+            "Song",
+            "Dance"
+          ],
+          "answer": "Riddle",
+          "explain": "\"Abe\" means riddle in Fante.",
+          "procedure": [
+            "Abe = riddle",
+            "Puzzle",
+            "Answer: Riddle"
+          ]
+        },
+        {
+          "q": "What is a folktale?",
+          "options": [
+            "A traditional story passed down by word of mouth",
+            "A modern novel",
+            "A type of poem",
+            "A play"
+          ],
+          "answer": "A traditional story passed down by word of mouth",
+          "explain": "A folktale is a traditional story passed down orally.",
+          "procedure": [
+            "Traditional story",
+            "Passed orally",
+            "Answer: A traditional story passed down by word of mouth"
+          ]
+        },
+        {
+          "q": "Who tells folktales in Fante culture?",
+          "options": [
+            "Elders and grandparents",
+            "Only children",
+            "Only teachers",
+            "Only chiefs"
+          ],
+          "answer": "Elders and grandparents",
+          "explain": "Elders and grandparents traditionally tell folktales.",
+          "procedure": [
+            "Elders tell tales",
+            "Grandparents share",
+            "Answer: Elders and grandparents"
+          ]
+        },
+        {
+          "q": "Why are oral traditions important in Fante culture?",
+          "options": [
+            "They preserve history and culture without writing",
+            "They waste time",
+            "They are only for older people",
+            "They have no purpose"
+          ],
+          "answer": "They preserve history and culture without writing",
+          "explain": "Oral traditions preserve history without writing.",
+          "procedure": [
+            "Preserve history",
+            "Pass on culture",
+            "Answer: They preserve history and culture without writing"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"wise saying\"?",
+          "options": [
+            "Mpanim nsɛm",
+            "Ndwom",
+            "Abe",
+            "Anansesɛm"
+          ],
+          "answer": "Mpanim nsɛm",
+          "explain": "\"Mpanim nsɛm\" means wise saying (proverb) in Fante.",
+          "procedure": [
+            "Mpanim nsɛm = wise saying",
+            "Proverb",
+            "Answer: Mpanim nsɛm"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"storyteller\"?",
+          "options": [
+            "Anansesɛm kyerɛwfo",
+            "Ɔkyerɛkyerɛnyi",
+            "Ɔbaa",
+            "Egya"
+          ],
+          "answer": "Anansesɛm kyerɛwfo",
+          "explain": "\"Anansesɛm kyerɛwfo\" means storyteller in Fante.",
+          "procedure": [
+            "Storyteller",
+            "Tells folktales",
+            "Answer: Anansesɛm kyerɛwfo"
+          ]
+        },
+        {
+          "q": "What is the role of songs in Fante culture?",
+          "options": [
+            "They tell stories, teach lessons, and celebrate",
+            "They make noise",
+            "They are only for children",
+            "They have no meaning"
+          ],
+          "answer": "They tell stories, teach lessons, and celebrate",
+          "explain": "Songs tell stories, teach, and celebrate in Fante culture.",
+          "procedure": [
+            "Tell stories",
+            "Teach lessons",
+            "Celebrate",
+            "Answer: They tell stories, teach lessons, and celebrate"
+          ]
+        },
+        {
+          "q": "What is a common lesson from Ananse stories?",
+          "options": [
+            "Cleverness has value, but greed and trickery have consequences",
+            "Being slow is best",
+            "Never help others",
+            "Always be greedy"
+          ],
+          "answer": "Cleverness has value, but greed and trickery have consequences",
+          "explain": "Ananse stories teach that cleverness must be used wisely.",
+          "procedure": [
+            "Lessons in stories",
+            "Consequences of trickery",
+            "Answer: Cleverness has value, but greed and trickery have consequences"
+          ]
+        },
+        {
+          "q": "Why should children learn oral literature?",
+          "options": [
+            "To understand their culture and values",
+            "To waste time",
+            "To only learn English",
+            "To ignore their heritage"
+          ],
+          "answer": "To understand their culture and values",
+          "explain": "Children learn culture and values from oral literature.",
+          "procedure": [
+            "Learn culture",
+            "Understand values",
+            "Answer: To understand their culture and values"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"wisdom\"?",
+          "options": [
+            "Nyansa",
+            "Abe",
+            "Anansesɛm",
+            "Mpanim nsɛm"
+          ],
+          "answer": "Nyansa",
+          "explain": "\"Nyansa\" means wisdom in Fante.",
+          "procedure": [
+            "Nyansa = wisdom",
+            "Taught by proverbs",
+            "Answer: Nyansa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "written-literature",
+      "name": "Written Literature",
+      "icon": "📚",
+      "questions": [
+        {
+          "q": "What is written literature?",
+          "options": [
+            "Stories, poems, and plays written down",
+            "Only songs",
+            "Only dances",
+            "Only spoken stories"
+          ],
+          "answer": "Stories, poems, and plays written down",
+          "explain": "Written literature is written down, not spoken.",
+          "procedure": [
+            "Written down",
+            "Stories, poems, plays",
+            "Answer: Stories, poems, and plays written down"
+          ]
+        },
+        {
+          "q": "What is a novel?",
+          "options": [
+            "A long written story",
+            "A short poem",
+            "A song",
+            "A play"
+          ],
+          "answer": "A long written story",
+          "explain": "A novel is a long written story.",
+          "procedure": [
+            "Long story",
+            "Written",
+            "Answer: A long written story"
+          ]
+        },
+        {
+          "q": "What is a poem?",
+          "options": [
+            "A piece of writing with rhythm and often rhyme",
+            "A long story",
+            "A play",
+            "A song"
+          ],
+          "answer": "A piece of writing with rhythm and often rhyme",
+          "explain": "A poem uses rhythm and sometimes rhyme.",
+          "procedure": [
+            "Rhythm",
+            "Often rhyme",
+            "Answer: A piece of writing with rhythm and often rhyme"
+          ]
+        },
+        {
+          "q": "What is a play?",
+          "options": [
+            "A story written to be performed on stage",
+            "A long story",
+            "A poem",
+            "A song"
+          ],
+          "answer": "A story written to be performed on stage",
+          "explain": "A play is written to be performed on stage.",
+          "procedure": [
+            "Performed on stage",
+            "Written drama",
+            "Answer: A story written to be performed on stage"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"book\"?",
+          "options": [
+            "Nwoma",
+            "Ndwom",
+            "Dzin",
+            "Anansesɛm"
+          ],
+          "answer": "Nwoma",
+          "explain": "\"Nwoma\" means book in Fante.",
+          "procedure": [
+            "Nwoma = book",
+            "Written work",
+            "Answer: Nwoma"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"writer\"?",
+          "options": [
+            "Ɔkyerɛwfo",
+            "Ɔkyerɛkyerɛnyi",
+            "Egya",
+            "Ɛna"
+          ],
+          "answer": "Ɔkyerɛwfo",
+          "explain": "\"Ɔkyerɛwfo\" means writer in Fante.",
+          "procedure": [
+            "Writer",
+            "Author",
+            "Answer: Ɔkyerɛwfo"
+          ]
+        },
+        {
+          "q": "What is the difference between oral and written literature?",
+          "options": [
+            "Oral is spoken; written is written down",
+            "They are the same",
+            "Written is spoken; oral is written",
+            "Neither exists"
+          ],
+          "answer": "Oral is spoken; written is written down",
+          "explain": "Oral is spoken, written is written.",
+          "procedure": [
+            "Oral = spoken",
+            "Written = written",
+            "Answer: Oral is spoken; written is written down"
+          ]
+        },
+        {
+          "q": "What is a short story?",
+          "options": [
+            "A brief written narrative",
+            "A long novel",
+            "A poem",
+            "A play"
+          ],
+          "answer": "A brief written narrative",
+          "explain": "A short story is a brief written narrative.",
+          "procedure": [
+            "Brief",
+            "Written",
+            "Answer: A brief written narrative"
+          ]
+        },
+        {
+          "q": "What is a fable?",
+          "options": [
+            "A short story with a moral, often with animals",
+            "A long novel",
+            "A play",
+            "A song"
+          ],
+          "answer": "A short story with a moral, often with animals",
+          "explain": "A fable is a short story with a moral.",
+          "procedure": [
+            "Short",
+            "With a moral",
+            "Often animals",
+            "Answer: A short story with a moral, often with animals"
+          ]
+        },
+        {
+          "q": "Who writes folktales down for others to read?",
+          "options": [
+            "Authors and writers",
+            "Only children",
+            "Only chiefs",
+            "Only teachers"
+          ],
+          "answer": "Authors and writers",
+          "explain": "Authors and writers record folktales in books.",
+          "procedure": [
+            "Writers",
+            "Authors",
+            "Answer: Authors and writers"
+          ]
+        },
+        {
+          "q": "What is a legend?",
+          "options": [
+            "A traditional story about a hero or event",
+            "A novel",
+            "A poem",
+            "A play"
+          ],
+          "answer": "A traditional story about a hero or event",
+          "explain": "A legend is a traditional story about a hero.",
+          "procedure": [
+            "Traditional",
+            "Hero or event",
+            "Answer: A traditional story about a hero or event"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"story\"?",
+          "options": [
+            "Asɛm",
+            "Ndwom",
+            "Nwoma",
+            "Abe"
+          ],
+          "answer": "Asɛm",
+          "explain": "\"Asɛm\" means story or matter in Fante.",
+          "procedure": [
+            "Asɛm = story",
+            "Narrative",
+            "Answer: Asɛm"
+          ]
+        },
+        {
+          "q": "What does \"Me pɛ akenkan nwoma\" mean?",
+          "options": [
+            "I like reading books",
+            "I like writing books",
+            "I like eating books",
+            "I like seeing books"
+          ],
+          "answer": "I like reading books",
+          "explain": "\"Me pɛ akenkan nwoma\" means I like reading books.",
+          "procedure": [
+            "Me = I",
+            "pɛ = like",
+            "akenkan = reading",
+            "nwoma = book",
+            "Answer: I like reading books"
+          ]
+        },
+        {
+          "q": "What does \"Me bɛkyerɛw nwoma\" mean?",
+          "options": [
+            "I will write a book",
+            "I will read a book",
+            "I will eat a book",
+            "I will see a book"
+          ],
+          "answer": "I will write a book",
+          "explain": "\"Me bɛkyerɛw nwoma\" means I will write a book.",
+          "procedure": [
+            "Me = I",
+            "bɛkyerɛw = will write",
+            "nwoma = book",
+            "Answer: I will write a book"
+          ]
+        },
+        {
+          "q": "What is a biography?",
+          "options": [
+            "A written story of someone’s life",
+            "A poem",
+            "A play",
+            "A song"
+          ],
+          "answer": "A written story of someone’s life",
+          "explain": "A biography is the written story of someone’s life.",
+          "procedure": [
+            "Written",
+            "Life story",
+            "Answer: A written story of someone’s life"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"poem\"?",
+          "options": [
+            "Ekyir",
+            "Abe",
+            "Anansesɛm",
+            "Nwoma"
+          ],
+          "answer": "Ekyir",
+          "explain": "A poem in Fante can be referred to as \"Ekyir\" or \"Ndwom\".",
+          "procedure": [
+            "Ekyir = poem",
+            "Rhyming words",
+            "Answer: Ekyir"
+          ]
+        },
+        {
+          "q": "Why is written literature important?",
+          "options": [
+            "It preserves stories for future generations",
+            "It wastes time",
+            "It has no value",
+            "It is only for children"
+          ],
+          "answer": "It preserves stories for future generations",
+          "explain": "Written literature preserves stories for the future.",
+          "procedure": [
+            "Preserves stories",
+            "For future generations",
+            "Answer: It preserves stories for future generations"
+          ]
+        },
+        {
+          "q": "What is a novel in Fante called?",
+          "options": [
+            "Nwoma kɛse",
+            "Nwoma ketsewa",
+            "Abe",
+            "Anansesɛm"
+          ],
+          "answer": "Nwoma kɛse",
+          "explain": "\"Nwoma kɛse\" means big book (novel) in Fante.",
+          "procedure": [
+            "Nwoma kɛse = big book",
+            "Long story",
+            "Answer: Nwoma kɛse"
+          ]
+        },
+        {
+          "q": "What should you do after reading a book?",
+          "options": [
+            "Think about what you read and share it",
+            "Forget it",
+            "Throw it away",
+            "Ignore it"
+          ],
+          "answer": "Think about what you read and share it",
+          "explain": "After reading, reflect and share what you learned.",
+          "procedure": [
+            "Reflect",
+            "Share",
+            "Answer: Think about what you read and share it"
+          ]
+        },
+        {
+          "q": "What is the Fante word for \"reading\"?",
+          "options": [
+            "Akenkan",
+            "Akyerɛw",
+            "Ndwom",
+            "Abe"
+          ],
+          "answer": "Akenkan",
+          "explain": "\"Akenkan\" means reading in Fante.",
+          "procedure": [
+            "Akenkan = reading",
+            "Reading books",
+            "Answer: Akenkan"
+          ]
+        }
+      ]
+    }
+  ]
+}

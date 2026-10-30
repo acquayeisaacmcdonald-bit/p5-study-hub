@@ -48,7 +48,7 @@
       "name": "Ghanaian Language",
       "icon": "🗣️",
       "file": "ghanaian.json",
-      "available": false
+      "available": true
     }
   ]
 }
