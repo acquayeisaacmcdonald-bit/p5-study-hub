@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplication Tables — Study Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #fff; min-height: 100vh; }
+    .mt-hero { padding: 60px 20px 30px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(59,130,246,0.15), transparent 60%); }
+    .mt-hero .mt-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(59,130,246,0.2); border: 1px solid rgba(59,130,246,0.4); color: #60a5fa; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .mt-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; }
+    .mt-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; }
+
+    .mt-tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 20px; max-width: 800px; margin: 0 auto; }
+    .mt-tab { padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; min-width: 50px; }
+    .mt-tab:hover { background: rgba(255,255,255,0.14); }
+    .mt-tab.active { background: #3b82f6; border-color: #3b82f6; }
+
+    .mt-grid-wrap { max-width: 700px; margin: 20px auto 60px; padding: 0 20px; }
+    .mt-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .mt-row { display: flex; align-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 16px 20px; font-size: 1.1rem; }
+    .mt-row:hover { background: rgba(255,255,255,0.1); border-color: #3b82f6; }
+    .mt-row-num { font-weight: 700; color: #facc15; min-width: 60px; font-size: 1.2rem; }
+    .mt-row-eq { font-weight: 600; flex: 1; }
+    .mt-row-ans { font-weight: 800; color: #34d399; font-size: 1.2rem; }
+
+    .mt-controls { display: flex; gap: 10px; justify-content: center; margin: 20px 0; }
+    .mt-btn { padding: 12px 24px; border-radius: 12px; border: none; background: #3b82f6; color: #fff; font-family: inherit; font-weight: 700; font-size: 0.95rem; cursor: pointer; }
+    .mt-btn:hover { background: #2563eb; }
+    .mt-btn.secondary { background: rgba(255,255,255,0.1); }
+    .mt-btn.secondary:hover { background: rgba(255,255,255,0.18); }
+
+    .mt-quiz-card { max-width: 500px; margin: 20px auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 30px 24px; text-align: center; }
+    .mt-quiz-q { font-size: 2rem; font-weight: 800; margin-bottom: 20px; color: #facc15; }
+    .mt-quiz-input { width: 120px; padding: 16px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff; font-size: 1.5rem; text-align: center; font-weight: 700; font-family: inherit; margin-right: 10px; outline: none; }
+    .mt-quiz-input:focus { border-color: #3b82f6; }
+    .mt-quiz-feedback { margin-top: 20px; font-size: 1.1rem; font-weight: 700; min-height: 24px; }
+    .mt-quiz-feedback.correct { color: #34d399; }
+    .mt-quiz-feedback.wrong { color: #f87171; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="profile-picker.html" class="site-logo">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text"><strong>Study Hub</strong><small>Multiplication Tables</small></span>
+      </a>
+      <div class="site-header-actions"><a href="profile-picker.html" class="site-header-cta">← Home</a></div>
+    </div>
+  </header>
+
+  <section class="mt-hero">
+    <div class="mt-badge">🧮 Times Tables</div>
+    <h1>Master Your Multiplication</h1>
+    <p>Learn, practice, and quiz yourself on times tables from 1 to 12.</p>
+  </section>
+
+  <div class="mt-tabs" id="mtTabs"></div>
+
+  <div class="mt-grid-wrap">
+    <div class="mt-grid" id="mtGrid"></div>
+  </div>
+
+  <div class="mt-controls">
+    <button class="mt-btn" onclick="startQuiz()">🎯 Start Quiz</button>
+  </div>
+
+  <div class="mt-quiz-card" id="mtQuizCard" style="display:none;">
+    <div class="mt-quiz-q" id="mtQuizQ">?</div>
+    <input type="number" class="mt-quiz-input" id="mtQuizInput" placeholder="?" autocomplete="off" />
+    <button class="mt-btn" onclick="submitQuiz()">Check</button>
+    <div class="mt-quiz-feedback" id="mtQuizFeedback"></div>
+    <div style="margin-top: 20px;">
+      <button class="mt-btn secondary" onclick="nextQuiz()">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    let activeTable = 2;
+    let quizAnswer = null;
+    let quizTable = null;
+    let quizMultiplier = null;
+
+    function renderTabs() {
+      const wrap = document.getElementById("mtTabs");
+      wrap.innerHTML = "";
+      for (let i = 1; i <= 12; i++) {
+        const btn = document.createElement("button");
+        btn.className = "mt-tab" + (i === activeTable ? " active" : "");
+        btn.textContent = "×" + i;
+        btn.onclick = () => {
+          activeTable = i;
+          renderTabs();
+          renderGrid();
+        };
+        wrap.appendChild(btn);
+      }
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById("mtGrid");
+      grid.innerHTML = "";
+      for (let i = 1; i <= 12; i++) {
+        const row = document.createElement("div");
+        row.className = "mt-row";
+        row.innerHTML = `
+          <div class="mt-row-num">${activeTable} × ${i}</div>
+          <div class="mt-row-eq">=</div>
+          <div class="mt-row-ans">${activeTable * i}</div>
+        `;
+        grid.appendChild(row);
+      }
+    }
+
+    function startQuiz() {
+      document.getElementById("mtQuizCard").style.display = "block";
+      nextQuiz();
+      document.getElementById("mtQuizInput").focus();
+      document.getElementById("mtQuizCard").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function nextQuiz() {
+      quizTable = Math.floor(Math.random() * 12) + 1;
+      quizMultiplier = Math.floor(Math.random() * 12) + 1;
+      quizAnswer = quizTable * quizMultiplier;
+      
+      document.getElementById("mtQuizQ").textContent = `${quizTable} × ${quizMultiplier} = ?`;
+      document.getElementById("mtQuizInput").value = "";
+      document.getElementById("mtQuizFeedback").textContent = "";
+      document.getElementById("mtQuizFeedback").className = "mt-quiz-feedback";
+      document.getElementById("mtQuizInput").focus();
+    }
+
+    function submitQuiz() {
+      const userAnswer = parseInt(document.getElementById("mtQuizInput").value, 10);
+      const feedback = document.getElementById("mtQuizFeedback");
+      
+      if (isNaN(userAnswer)) {
+        feedback.textContent = "Please enter a number.";
+        feedback.className = "mt-quiz-feedback wrong";
+        return;
+      }
+
+      if (userAnswer === quizAnswer) {
+        feedback.textContent = "✅ Correct!";
+        feedback.className = "mt-quiz-feedback correct";
+        setTimeout(nextQuiz, 1000);
+      } else {
+        feedback.textContent = `❌ Wrong. The answer is ${quizAnswer}.`;
+        feedback.className = "mt-quiz-feedback wrong";
+      }
+    }
+
+    document.getElementById("mtQuizInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") submitQuiz();
+    });
+
+    renderTabs();
+    renderGrid();
+  </script>
+</body>
+</html>

@@ -696,12 +696,14 @@ function renderTools() {
   if (!grid) return;
   grid.innerHTML = "";
   const tools = [
-    { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
-    { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Ready", available: true },
-    { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Ready", available: true },
-    { id: "typing",     icon: "⌨️", name: "Typing Course", tag: typingData ? "Ready" : "Unavailable", available: !!typingData },
-    { id: "games",      icon: "🎮", name: "Games", tag: isGamesUnlocked() ? "Unlocked" : "Locked", available: true }
-  ];
+  { id: "calculator", icon: "🧮", name: "Calculator", tag: "Ready", available: true },
+  { id: "dictionary", icon: "📖", name: "Dictionary", tag: "Ready", available: true },
+  { id: "pronounce",  icon: "🔊", name: "Pronunciator", tag: "Ready", available: true },
+  { id: "typing",     icon: "⌨️", name: "Typing Course", tag: typingData ? "Ready" : "Unavailable", available: !!typingData },
+  { id: "times",      icon: "✖️", name: "Times Tables", tag: "Ready", available: true },
+  { id: "formulas",   icon: "📐", name: "JHS Formulas", tag: "Ready", available: true },
+  { id: "games",      icon: "🎮", name: "Games", tag: isGamesUnlocked() ? "Unlocked" : "Locked", available: true }
+];
   tools.forEach(t => {
     const card = el("button", "tool-card" + (t.available ? "" : " disabled"));
     card.disabled = !t.available;
@@ -730,6 +732,12 @@ function renderTools() {
     }
     if (t.available && t.id === "typing") {
       card.addEventListener("click", () => { showScreen("screen-typing"); openTyping(); });
+    }
+    if (t.available && t.id === "times") {
+      card.addEventListener("click", () => { window.location.href = "multiplication-tables.html"; });
+    }
+    if (t.available && t.id === "formulas") {
+      card.addEventListener("click", () => { window.location.href = "jhs-maths-formulas.html"; });
     }
     if (t.available && t.id === "games") {
       card.addEventListener("click", () => {

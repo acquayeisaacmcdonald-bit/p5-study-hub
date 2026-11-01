@@ -132,7 +132,9 @@
       grid.innerHTML = "";
       
       let filtered = allStories;
-      if (activeFilter !== "all") {
+      if (activeFilter === "riddles") {
+        filtered = allStories.filter(s => s.type === "riddle");
+      } else if (activeFilter !== "all") {
         filtered = allStories.filter(s => s.class && s.class.includes(activeFilter));
       }
 

@@ -1,0 +1,374 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Portal — Study Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding: 20px; }
+    .tp-wrap { max-width: 900px; margin: 0 auto; }
+    .tp-header { text-align: center; margin-bottom: 30px; }
+    .tp-header h1 { font-size: 2rem; margin-bottom: 8px; }
+    .tp-header p { color: rgba(255,255,255,0.7); }
+
+    .tp-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+    .tp-tab {
+      padding: 12px 20px; border-radius: 12px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      color: #fff; font-family: inherit; font-weight: 600; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .tp-tab.active { background: #3b82f6; border-color: #3b82f6; }
+    .tp-tab:hover:not(.active) { background: rgba(255,255,255,0.12); }
+
+    .tp-panel { display: none; }
+    .tp-panel.active { display: block; }
+
+    .tp-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .tp-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+
+    .tp-input, .tp-select, .tp-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+    .tp-input:focus, .tp-select:focus, .tp-textarea:focus {
+      border-color: #3b82f6;
+      background: rgba(255,255,255,0.1);
+      outline: none;
+    }
+    .tp-textarea { min-height: 100px; resize: vertical; }
+
+    .tp-btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: none;
+      background: #3b82f6;
+      color: #fff;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .tp-btn:hover { background: #2563eb; }
+    .tp-btn.secondary { background: rgba(255,255,255,0.1); }
+    .tp-btn.secondary:hover { background: rgba(255,255,255,0.18); }
+
+    .tp-hint {
+      background: rgba(59,130,246,0.12);
+      border-left: 3px solid #3b82f6;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .tp-timetable-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 700px) {
+      .tp-timetable-grid { grid-template-columns: 1fr; }
+    }
+
+    .tp-day-col {
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .tp-day-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+      color: #facc15;
+    }
+    .tp-day-input {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #fff;
+      font-size: 0.75rem;
+      margin-bottom: 4px;
+      font-family: inherit;
+    }
+    .tp-day-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .tp-announcement-item {
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid #facc15;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .tp-announcement-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .tp-announcement-body {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .tp-announcement-meta {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .tp-announcement-delete {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(220,38,38,0.2);
+      border: 1px solid rgba(220,38,38,0.4);
+      color: #f87171;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tp-wrap">
+
+    <header class="tp-header">
+      <h1>👩‍🏫 Teacher Portal</h1>
+      <p>Manage timetables and announcements for your class</p>
+    </header>
+
+    <div class="tp-tabs">
+      <button class="tp-tab active" data-tab="timetable">📅 Timetable</button>
+      <button class="tp-tab" data-tab="announcements">📢 Announcements</button>
+    </div>
+
+    <!-- TIMETABLE TAB -->
+    <div class="tp-panel active" id="panel-timetable">
+      <div class="tp-card">
+        <div class="tp-hint">
+          <strong>📌 Note:</strong> This is a demo version that saves to your local browser. In the real version, teachers will save to a shared database so all students see updates.
+        </div>
+
+        <label class="tp-label">Choose your class</label>
+        <select class="tp-select" id="timetableClass">
+          <option value="p1">Primary 1</option>
+          <option value="p2">Primary 2</option>
+          <option value="p3">Primary 3</option>
+          <option value="p4">Primary 4</option>
+          <option value="p5" selected>Primary 5</option>
+          <option value="p6">Primary 6</option>
+          <option value="jhs1">JHS 1</option>
+          <option value="jhs2">JHS 2</option>
+          <option value="jhs3">JHS 3</option>
+        </select>
+
+        <label class="tp-label">Weekly timetable (one subject per row)</label>
+        <div class="tp-timetable-grid" id="timetableGrid">
+          <!-- injected by JS -->
+        </div>
+
+        <button class="tp-btn" onclick="saveTimetable()">💾 Save Timetable</button>
+        <button class="tp-btn secondary" onclick="loadTimetable()">🔄 Reload</button>
+      </div>
+    </div>
+
+    <!-- ANNOUNCEMENTS TAB -->
+    <div class="tp-panel" id="panel-announcements">
+      <div class="tp-card">
+        <label class="tp-label">Write a new announcement</label>
+        <input class="tp-input" id="annTitle" placeholder="Announcement title (e.g., Sports Day)" />
+        <textarea class="tp-textarea" id="annBody" placeholder="Type the full message..."></textarea>
+        <input class="tp-input" id="annClass" placeholder="Target class (e.g., All, P5, JHS 2)" />
+        <button class="tp-btn" onclick="addAnnouncement()">📢 Post Announcement</button>
+      </div>
+
+      <div class="tp-card">
+        <label class="tp-label">Existing announcements</label>
+        <div id="announcementList">
+          <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">No announcements yet.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ==============================
+    // TABS
+    // ==============================
+    document.querySelectorAll(".tp-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".tp-tab").forEach(t => t.classList.remove("active"));
+        document.querySelectorAll(".tp-panel").forEach(p => p.classList.remove("active"));
+        tab.classList.add("active");
+        document.getElementById("panel-" + tab.dataset.tab).classList.add("active");
+      });
+    });
+
+    // ==============================
+    // TIMETABLE
+    // ==============================
+    const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    const PERIODS = 6;
+
+    function renderTimetableGrid(data) {
+      const grid = document.getElementById("timetableGrid");
+      grid.innerHTML = "";
+      DAYS.forEach(day => {
+        const col = document.createElement("div");
+        col.className = "tp-day-col";
+        const title = document.createElement("div");
+        title.className = "tp-day-title";
+        title.textContent = day;
+        col.appendChild(title);
+        for (let i = 0; i < PERIODS; i++) {
+          const input = document.createElement("input");
+          input.className = "tp-day-input";
+          input.dataset.day = day;
+          input.dataset.period = i;
+          input.placeholder = "Subject " + (i + 1);
+          input.value = (data[day] && data[day][i]) || "";
+          col.appendChild(input);
+        }
+        grid.appendChild(col);
+      });
+    }
+
+    function loadTimetable() {
+      const cls = document.getElementById("timetableClass").value;
+      const stored = localStorage.getItem("timetable_" + cls);
+      const data = stored ? JSON.parse(stored) : {};
+      renderTimetableGrid(data);
+    }
+
+    function saveTimetable() {
+      const cls = document.getElementById("timetableClass").value;
+      const inputs = document.querySelectorAll(".tp-day-input");
+      const data = {};
+      inputs.forEach(input => {
+        const day = input.dataset.day;
+        const period = parseInt(input.dataset.period, 10);
+        if (!data[day]) data[day] = [];
+        data[day][period] = input.value.trim();
+      });
+      localStorage.setItem("timetable_" + cls, JSON.stringify(data));
+      alert("✅ Timetable saved for " + cls.toUpperCase() + "!\n\nStudents will see it on the timetable page.");
+    }
+
+    document.getElementById("timetableClass").addEventListener("change", loadTimetable);
+
+    // ==============================
+    // ANNOUNCEMENTS
+    // ==============================
+    function getAnnouncements() {
+      try {
+        return JSON.parse(localStorage.getItem("announcements") || "[]");
+      } catch { return []; }
+    }
+
+    function saveAnnouncements(list) {
+      localStorage.setItem("announcements", JSON.stringify(list));
+    }
+
+    function renderAnnouncements() {
+      const list = document.getElementById("announcementList");
+      const all = getAnnouncements();
+      if (all.length === 0) {
+        list.innerHTML = '<p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">No announcements yet.</p>';
+        return;
+      }
+      list.innerHTML = "";
+      all.forEach((ann, i) => {
+        const item = document.createElement("div");
+        item.className = "tp-announcement-item";
+        item.innerHTML = `
+          <div class="tp-announcement-title">${ann.title}</div>
+          <div class="tp-announcement-body">${ann.body}</div>
+          <div class="tp-announcement-meta">👥 ${ann.target || "All"} • ${new Date(ann.date).toLocaleString()}</div>
+          <button class="tp-announcement-delete" onclick="deleteAnnouncement(${i})">Delete</button>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    function addAnnouncement() {
+      const title = document.getElementById("annTitle").value.trim();
+      const body = document.getElementById("annBody").value.trim();
+      const target = document.getElementById("annClass").value.trim() || "All";
+
+      if (!title || !body) {
+        alert("Please fill in both title and message.");
+        return;
+      }
+
+      const all = getAnnouncements();
+      all.unshift({
+        title,
+        body,
+        target,
+        date: Date.now()
+      });
+      saveAnnouncements(all);
+
+      document.getElementById("annTitle").value = "";
+      document.getElementById("annBody").value = "";
+      document.getElementById("annClass").value = "";
+
+      renderAnnouncements();
+      alert("✅ Announcement posted!");
+    }
+
+    function deleteAnnouncement(i) {
+      if (!confirm("Delete this announcement?")) return;
+      const all = getAnnouncements();
+      all.splice(i, 1);
+      saveAnnouncements(all);
+      renderAnnouncements();
+    }
+
+    // ==============================
+    // INIT
+    // ==============================
+    loadTimetable();
+    renderAnnouncements();
+  </script>
+
+</body>
+</html>

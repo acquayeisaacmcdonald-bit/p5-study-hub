@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Announcements — Study Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ann-hero { padding: 60px 20px 30px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(250, 204, 21, 0.15), transparent 60%); }
+    .ann-hero .ann-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(250,204,21,0.2); border: 1px solid rgba(250,204,21,0.4); color: #facc15; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .ann-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; }
+    .ann-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; }
+
+    .ann-list { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .ann-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-left: 4px solid #facc15;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .ann-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+    .ann-body { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 10px; }
+    .ann-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); display: flex; gap: 14px; }
+    .ann-empty { text-align: center; padding: 60px 20px; color: rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="profile-picker.html" class="site-logo">
+        <span class="site-logo-icon">📚</span>
+        <span class="site-logo-text"><strong>Study Hub</strong><small>Announcements</small></span>
+      </a>
+      <div class="site-header-actions">
+        <a href="profile-picker.html" class="site-header-cta">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="ann-hero">
+    <div class="ann-badge">📢 Announcements</div>
+    <h1>Latest from your teachers</h1>
+    <p>Stay updated on news, events, and reminders for your class.</p>
+  </section>
+
+  <main>
+    <div class="ann-list" id="annList"></div>
+  </main>
+
+  <script>
+    function render() {
+      const list = document.getElementById("annList");
+      const all = JSON.parse(localStorage.getItem("announcements") || "[]");
+
+      if (all.length === 0) {
+        list.innerHTML = '<div class="ann-empty">📭 No announcements yet. Check back soon!</div>';
+        return;
+      }
+
+      list.innerHTML = "";
+      all.forEach(ann => {
+        const item = document.createElement("div");
+        item.className = "ann-item";
+        const date = new Date(ann.date).toLocaleString();
+        item.innerHTML = `
+          <div class="ann-title">${ann.title}</div>
+          <div class="ann-body">${ann.body}</div>
+          <div class="ann-meta">
+            <span>👥 ${ann.target || "All"}</span>
+            <span>📅 ${date}</span>
+          </div>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>

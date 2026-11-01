@@ -547,6 +547,326 @@
         "From that day on, the king shared his wealth with all who came. He built wells and gave food to the poor. The kingdom became a place of peace and abundance.",
         "Moral: Pride goes before a fall. Be humble and kind to all, no matter who they are."
       ]
+    },
+    {
+      "id": "riddle-1",
+      "title": "I have a house but no door",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I have a house but no door. What am I?",
+        "Answer: An egg. The shell is the house, but there is no door to enter."
+      ]
+    },
+    {
+      "id": "riddle-2",
+      "title": "The chief's cloth covers the town",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "The chief's cloth covers the whole town. What is it?",
+        "Answer: The sky. The sky covers everything."
+      ]
+    },
+    {
+      "id": "riddle-3",
+      "title": "I walk without legs",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I walk without legs and cry without eyes. What am I?",
+        "Answer: A river. It flows like walking and makes sounds like crying."
+      ]
+    },
+    {
+      "id": "riddle-4",
+      "title": "Tall when young, short when old",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I am tall when I am young and short when I am old. What am I?",
+        "Answer: A candle. It is tall when new and gets shorter as it burns."
+      ]
+    },
+    {
+      "id": "riddle-5",
+      "title": "It has teeth but cannot bite",
+      "class": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "What has teeth but cannot bite?",
+        "Answer: A comb. It has teeth for combing hair but cannot bite."
+      ]
+    },
+    {
+      "id": "riddle-6",
+      "title": "I go up but never come down",
+      "class": [
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I go up but never come down. What am I?",
+        "Answer: Smoke. Smoke rises from fire and disappears into the sky."
+      ]
+    },
+    {
+      "id": "riddle-7",
+      "title": "A thousand eyes but cannot see",
+      "class": [
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I have a thousand eyes but cannot see. What am I?",
+        "Answer: A pineapple. Its skin has many spots that look like eyes."
+      ]
+    },
+    {
+      "id": "riddle-8",
+      "title": "Full of holes but holds water",
+      "class": [
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "What is full of holes but still holds water?",
+        "Answer: A sponge. It has many holes but can absorb and hold water."
+      ]
+    },
+    {
+      "id": "riddle-9",
+      "title": "I have a mouth but never speak",
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I have a mouth but never speak. What am I?",
+        "Answer: A river. It has a mouth where it meets the sea, but it cannot speak."
+      ]
+    },
+    {
+      "id": "riddle-10",
+      "title": "It belongs to you but others use it",
+      "class": [
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "It belongs to you, but other people use it more than you do. What is it?",
+        "Answer: Your name. Others call you by it."
+      ]
+    },
+    {
+      "id": "riddle-11",
+      "title": "The more you take, the more you leave behind",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "The more you take, the more you leave behind. What are they?",
+        "Answer: Footsteps. Each step takes you forward but leaves a print behind."
+      ]
+    },
+    {
+      "id": "riddle-12",
+      "title": "I am always in front of you but cannot be seen",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I am always in front of you but cannot be seen. What am I?",
+        "Answer: The future. It is ahead of us but we cannot see it."
+      ]
+    },
+    {
+      "id": "riddle-13",
+      "title": "I fly without wings",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I fly without wings and cry without eyes. What am I?",
+        "Answer: A cloud. Clouds move through the sky and rain falls from them."
+      ]
+    },
+    {
+      "id": "riddle-14",
+      "title": "I have a bed but never sleep",
+      "class": [
+        "p5",
+        "p6",
+        "jhs1"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I have a bed but never sleep. What am I?",
+        "Answer: A river. The riverbed is where it rests, but it never sleeps."
+      ]
+    },
+    {
+      "id": "riddle-15",
+      "title": "People buy me to eat but never eat me",
+      "class": [
+        "p5",
+        "p6",
+        "jhs1"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "People buy me to eat but never actually eat me. What am I?",
+        "Answer: A plate. We buy plates to put food on, but we never eat the plate."
+      ]
+    },
+    {
+      "id": "riddle-16",
+      "title": "What has a head but no brain",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "What has a head but no brain?",
+        "Answer: A coin. It has a head side, but no brain."
+      ]
+    },
+    {
+      "id": "riddle-17",
+      "title": "It speaks all languages",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "What speaks every language in the world?",
+        "Answer: An echo. It repeats whatever is said to it."
+      ]
+    },
+    {
+      "id": "riddle-18",
+      "title": "The more you have, the less you see",
+      "class": [
+        "jhs1",
+        "jhs2",
+        "jhs3"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "The more of it you have, the less you see. What is it?",
+        "Answer: Darkness. The more darkness there is, the less you can see."
+      ]
+    },
+    {
+      "id": "riddle-19",
+      "title": "No one can see me but I am everywhere",
+      "class": [
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "No one can see me, but I am everywhere. I can be felt, but not held. What am I?",
+        "Answer: The wind. It is invisible but you can feel it everywhere."
+      ]
+    },
+    {
+      "id": "riddle-20",
+      "title": "I have a neck but no head",
+      "class": [
+        "p5",
+        "p6",
+        "jhs1"
+      ],
+      "type": "riddle",
+      "author": "Ghanaian Folklore",
+      "duration": "1 min",
+      "content": [
+        "I have a neck but no head. What am I?",
+        "Answer: A bottle. It has a neck but no head."
+      ]
     }
   ]
 }
