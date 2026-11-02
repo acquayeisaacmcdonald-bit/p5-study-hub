@@ -2274,6 +2274,16 @@ function attachTimesTablesListeners() {
 // SITE NAV
 // ===================================================
 function attachSiteNavListeners() {
+  // Timetable Navigation
+  document.querySelectorAll('[data-nav="timetable"]').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const urlParams = new URLSearchParams(window.location.search);
+      const cls = urlParams.get("class") || "p5";
+      window.location.href = "timetable.html?class=" + cls;
+    });
+  });
+
   const logo = $("logoLink");
   if (logo) {
     logo.addEventListener("click", (e) => {
@@ -2459,3 +2469,5 @@ function shuffle(arr) {
 // GO
 // ===================================================
 boot();
+
+

@@ -183,7 +183,7 @@
     <div class="tp-panel active" id="panel-timetable">
       <div class="tp-card">
         <div class="tp-hint">
-          <strong>📌 Note:</strong> This is a demo version that saves to your local browser. In the real version, teachers will save to a shared database so all students see updates.
+          <strong>📌 Note:</strong> You are editing the live database. When you click Save, the timetable is instantly sent to all students in that class.
         </div>
 
         <label class="tp-label">Choose your class</label>
@@ -200,11 +200,27 @@
         </select>
 
         <label class="tp-label">Weekly timetable (one subject per row)</label>
-        <div class="tp-timetable-grid" id="timetableGrid">
-          <!-- injected by JS -->
+        
+        <div style="overflow-x: auto; margin-bottom: 16px;">
+          <table style="width: 100%; border-collapse: collapse; min-width: 800px;" id="timetableTable">
+            <thead>
+              <tr style="background: rgba(255,255,255,0.1); text-align: left;">
+                <th style="padding: 8px; font-size: 0.8rem; width: 100px;">Day</th>
+                <th style="padding: 8px; font-size: 0.8rem; width: 70px;">Period</th>
+                <th style="padding: 8px; font-size: 0.8rem; width: 90px;">Start</th>
+                <th style="padding: 8px; font-size: 0.8rem; width: 90px;">End</th>
+                <th style="padding: 8px; font-size: 0.8rem;">Subject</th>
+                <th style="padding: 8px; font-size: 0.8rem;">Teacher</th>
+                <th style="padding: 8px; font-size: 0.8rem;">Room</th>
+              </tr>
+            </thead>
+            <tbody id="timetableBody">
+              <!-- injected by JS -->
+            </tbody>
+          </table>
         </div>
 
-        <button class="tp-btn" onclick="saveTimetable()">💾 Save Timetable</button>
+        <button class="tp-btn" onclick="saveTimetableToGoogle()">💾 Save Timetable</button>
         <button class="tp-btn secondary" onclick="loadTimetable()">🔄 Reload</button>
       </div>
     </div>
@@ -248,49 +264,113 @@
     const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
     const PERIODS = 6;
 
+    
     function renderTimetableGrid(data) {
-      const grid = document.getElementById("timetableGrid");
-      grid.innerHTML = "";
-      DAYS.forEach(day => {
-        const col = document.createElement("div");
-        col.className = "tp-day-col";
-        const title = document.createElement("div");
-        title.className = "tp-day-title";
-        title.textContent = day;
-        col.appendChild(title);
-        for (let i = 0; i < PERIODS; i++) {
-          const input = document.createElement("input");
-          input.className = "tp-day-input";
-          input.dataset.day = day;
-          input.dataset.period = i;
-          input.placeholder = "Subject " + (i + 1);
-          input.value = (data[day] && data[day][i]) || "";
-          col.appendChild(input);
+      const tbody = document.getElementById("timetableBody");
+      tbody.innerHTML = "";
+      
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+      
+      days.forEach(day => {
+        for (let period = 1; period <= 6; period++) {
+          const tr = document.createElement("tr");
+          tr.style.borderBottom = "1px solid rgba(255,255,255,0.1)";
+          
+          // Get existing data if any
+          const rowData = (data[day] && data[day][period-1]) || {};
+          
+          tr.innerHTML = `
+            <td style="padding: 4px;"><input type="text" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="day" value="${day}" readonly style="opacity: 0.7;"></td>
+            <td style="padding: 4px;"><input type="text" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="period" value="${period}" readonly style="opacity: 0.7;"></td>
+            <td style="padding: 4px;"><input type="time" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="start" value="${rowData.start || ''}"></td>
+            <td style="padding: 4px;"><input type="time" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="end" value="${rowData.end || ''}"></td>
+            <td style="padding: 4px;"><input type="text" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="subject" value="${rowData.subject || ''}" placeholder="Subject"></td>
+            <td style="padding: 4px;"><input type="text" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="teacher" value="${rowData.teacher || ''}" placeholder="Teacher"></td>
+            <td style="padding: 4px;"><input type="text" class="tp-day-input" data-day="${day}" data-period="${period-1}" data-field="room" value="${rowData.room || ''}" placeholder="Room"></td>
+          `;
+          tbody.appendChild(tr);
         }
-        grid.appendChild(col);
       });
     }
+    
 
     function loadTimetable() {
-      const cls = document.getElementById("timetableClass").value;
+      const cls = document.getElementById("timetableClass").value.toLowerCase().trim();
       const stored = localStorage.getItem("timetable_" + cls);
       const data = stored ? JSON.parse(stored) : {};
       renderTimetableGrid(data);
     }
 
-    function saveTimetable() {
-      const cls = document.getElementById("timetableClass").value;
+    
+    const GOOGLE_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbz4wg4zS_3Ua-yW5HvA-sv1SUmg8-jptTLiz4EBBFZF-Pl5x8r9dMzb2U0Xg1R-CZce/exec";
+
+    async function saveTimetableToGoogle() {
+      const cls = document.getElementById("timetableClass").value.toLowerCase().trim();
+      
       const inputs = document.querySelectorAll(".tp-day-input");
-      const data = {};
+      
+      // Group by Day and Period
+      const grouped = {};
       inputs.forEach(input => {
         const day = input.dataset.day;
-        const period = parseInt(input.dataset.period, 10);
-        if (!data[day]) data[day] = [];
-        data[day][period] = input.value.trim();
+        const period = parseInt(input.dataset.period, 10) + 1;
+        const field = input.dataset.field;
+        
+        if (!grouped[day]) grouped[day] = {};
+        if (!grouped[day][period]) grouped[day][period] = { day, period, start: "", end: "", subject: "", teacher: "", room: "" };
+        
+        grouped[day][period][field] = input.value.trim();
       });
-      localStorage.setItem("timetable_" + cls, JSON.stringify(data));
-      alert("✅ Timetable saved for " + cls.toUpperCase() + "!\n\nStudents will see it on the timetable page.");
+
+      const rows = [];
+      for (const day in grouped) {
+        for (const period in grouped[day]) {
+          const r = grouped[day][period];
+          if (r.subject !== "") {
+            rows.push(r);
+          }
+        }
+      }
+
+      const payload = {
+        class: cls,
+        teacher: "Class Teacher",
+        rows: rows
+      };
+    
+
+      const btn = document.querySelector('button[onclick="saveTimetableToGoogle()"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = "⏳ Saving...";
+
+      try {
+        const formData = new URLSearchParams();
+        formData.append("payload", JSON.stringify(payload));
+        
+        await fetch(GOOGLE_WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          body: formData
+        });
+        
+        // Save locally too, just so the teacher portal remembers it
+        const data = {};
+        inputs.forEach(input => {
+          const day = input.dataset.day;
+          const period = parseInt(input.dataset.period, 10);
+          if (!data[day]) data[day] = [];
+          data[day][period] = input.value.trim();
+        });
+        localStorage.setItem("timetable_" + cls, JSON.stringify(data));
+
+        alert("✅ Timetable saved successfully! Students will see it immediately.");
+      } catch (e) {
+        alert("❌ Error saving: " + e.message);
+      } finally {
+        btn.innerHTML = originalText;
+      }
     }
+
 
     document.getElementById("timetableClass").addEventListener("change", loadTimetable);
 
